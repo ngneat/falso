@@ -1,0 +1,40 @@
+import { rand } from './core';
+
+export function bird() {
+  return rand([
+    "Orchard Oriole",
+    "Hooded Oriole",
+    "Streak-backed Oriole",
+    "Spot-breasted Oriole",
+    "Altamira Oriole",
+    "Audubon's Oriole",
+    "Baltimore Oriole",
+    "Bullock's Oriole",
+    "Scott's Oriole",
+    "Common Chaffinch",
+    "Brambling",
+    "Gray-crowned Rosy-Finch",
+    "Black Rosy-Finch",
+    "Brown-capped Rosy-Finch",
+    "Pine Grosbeak",
+    "Common Rosefinch",
+    "Purple Finch",
+    "Cassin's Finch",
+    "House Finch",
+    "Red Crossbill",
+    "White-winged Crossbill",
+    "Common Redpoll",
+    "Hoary Redpoll",
+    "Eurasian Siskin",
+    "Pine Siskin",
+    "Lesser Goldfinch",
+    "Lawrence's Goldfinch",
+    "American Goldfinch",
+    "Oriental Greenfinch",
+    "Eurasian Bullfinch",
+    "Evening Grosbeak",
+    "Hawfinch",
+    "House Sparrow",
+    "Eurasian Tree Sparrow"
+  ]);
+}

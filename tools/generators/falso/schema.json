@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "falso",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Falso name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "project": {
+      "type": "string",
+      "default": "falso",
+      "description": "Project name"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
