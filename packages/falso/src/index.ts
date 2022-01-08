@@ -37,3 +37,5 @@ export { nameSuffix } from './lib/name-suffix';
 export { job } from './lib/job';
 export { dirPath } from './lib/dir-path';
 export { rgba } from './lib/rgba';
+export { email } from './lib/email';
+export { fullName } from './lib/full-name';
