@@ -1,4 +1,30 @@
 {
   "name": "@ngneat/falso",
-  "version": "0.0.1"
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "",
+  "keywords": [
+    "fake",
+    "fake data",
+    "random data",
+    "mock data",
+    "js mock",
+    "mocks"
+  ],
+  "sideEffects": false,
+  "author": {
+    "name": "Netanel Basal",
+    "url": "https://netbasal.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/ngneat/falso/issues"
+  },
+  "homepage": "https://github.com/ngneat/falso#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngneat/falso"
+  }
 }
