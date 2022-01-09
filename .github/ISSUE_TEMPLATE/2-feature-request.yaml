@@ -13,15 +13,11 @@ body:
     id: proposed-solution
     attributes:
       label: Proposed solution
-    validations:
-      required: true
 
   - type: textarea
     id: alternatives-considered
     attributes:
       label: Alternatives considered
-    validations:
-      required: true
   
   - type: dropdown
     id: contribute
