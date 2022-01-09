@@ -14,7 +14,6 @@ export default async function (tree: Tree, { name, project }: { name: string, pr
       
       export function ${n.propertyName}() {
         return rand([
-
         ])
       }
     `)

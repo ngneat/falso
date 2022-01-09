@@ -1,0 +1,37 @@
+import { rand } from './core';
+
+export function vehicleColor() {
+  return rand([
+    'olive',
+    'salmon',
+    'pink',
+    'lime',
+    'blue',
+    'yellow',
+    'silver',
+    'cyan',
+    'black',
+    'plum',
+    'orchid',
+    'azure',
+    'magenta',
+    'violet',
+    'grey',
+    'lavender',
+    'turquoise',
+    'red',
+    'fuchsia',
+    'purple',
+    'white',
+    'maroon',
+    'green',
+    'gold',
+    'teal',
+    'indigo',
+    'tan',
+    'orange',
+    'mint green',
+    'ivory',
+    'sky blue',
+  ]);
+}
