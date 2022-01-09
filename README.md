@@ -6,6 +6,8 @@
 
 > All the Fake Data for All Your Real Needs 🙂
 
+Run it on [Stackblitz](https://stackblitz.com/edit/typescript-pjao1u?file=index.ts)
+
 <br />
 
 ## Methods
