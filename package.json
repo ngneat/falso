@@ -3,14 +3,19 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "c": "nx workspace-generator falso"
+    "f": "nx workspace-generator falso",
+    "c": "cz",
+    "prepare": "husky install",
+    "test": "echo 'test'"
   },
-  "private": true,
   "dependencies": {
-    "faker": "^5.5.3",
-    "tslib": "^2.0.0"
+    "tslib": "2.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-angular": "16.0.0",
+    "@commitlint/config-conventional": "12.1.4",
+    "@jscutlery/semver": "2.13.3",
     "@nrwl/cli": "13.4.3",
     "@nrwl/devkit": "13.4.3",
     "@nrwl/eslint-plugin-nx": "13.4.3",
@@ -21,13 +26,31 @@
     "@nrwl/workspace": "13.4.3",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
-    "@typescript-eslint/eslint-plugin": "~5.3.0",
-    "@typescript-eslint/parser": "~5.3.0",
+    "@typescript-eslint/eslint-plugin": "5.3.0",
+    "@typescript-eslint/parser": "5.3.0",
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.1.0",
+    "git-cz": "4.8.0",
+    "husky": "6.0.0",
     "jest": "27.2.3",
-    "prettier": "^2.3.1",
+    "lint-staged": "11.1.2",
+    "prettier": "2.3.1",
     "ts-jest": "27.0.5",
-    "typescript": "~4.4.3"
+    "typescript": "4.4.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,json,html,tsx}": "prettier --write"
   }
 }
