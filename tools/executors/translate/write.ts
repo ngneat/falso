@@ -22,8 +22,8 @@ export function writeExportStatements(
     const outputDir = join(options.output, language);
     const languageIndex = join(outputDir, `index.ts`);
     if (existsSync(outputDir) && existsSync(languageIndex)) {
-      const exportStatement = `export * from './${language}';\n`;
-
+      const exportStatement = `// THIS FILE IS AUTO-GENERATED THROUGH \`npm run translate\`
+export * as ${language} from './${language}';\n`;
       appendFileSync(translationIndex, exportStatement, {
         encoding: 'utf-8',
       });
@@ -52,6 +52,9 @@ export async function writeTranslation(
     return String.fromCharCode(parseInt(grp, 16));
   });
 
+  content =
+    `// THIS FILE IS AUTO-GENERATED THROUGH \`npm run translate\`\n` + content;
+
   const fileNameWExt = basename(filePath);
 
   const outputFilePath = join(outputDir, fileNameWExt);
@@ -65,7 +68,8 @@ export async function writeTranslation(
 
   const fileNameWOExt = basename(filePath, '.ts');
 
-  const exportStatement = `export * from './${fileNameWOExt}';\n`;
+  const exportStatement = `// THIS FILE IS AUTO-GENERATED THROUGH \`npm run translate\`
+export * from './${fileNameWOExt}';\n`;
 
   console.info(`Writing export statement at: ${index}`);
 

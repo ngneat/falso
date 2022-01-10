@@ -192,4 +192,4 @@ export { productDescription } from './lib/product-description';
 export { rgb } from './lib/rgb';
 
 // TRANSLATIONS
-export * from './lib/translations';
+export * as translations from './lib/translations';

@@ -1,3 +1,4 @@
+// THIS FILE IS AUTO-GENERATED THROUGH `npm run translate`
 import { rand } from "../../core";
 export function abbreviation() {
     return rand([
