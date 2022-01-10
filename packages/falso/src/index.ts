@@ -189,3 +189,4 @@ export { productAdjective } from './lib/product-adjective';
 export { productMaterial } from './lib/product-material';
 export { product } from './lib/product';
 export { productDescription } from './lib/product-description';
+export { rgb } from './lib/rgb';
