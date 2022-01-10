@@ -11,7 +11,7 @@ describe('rgb', () => {
     const expected =
       /rgba\((\d{1,3}), (\d{1,3}), (\d{1,3}), \s*(\d*(?:\.\d+)?)\)$/;
 
-    expect(rgb(true)).toEqual(expect.stringMatching(expected));
+    expect(rgb({ alpha: true })).toEqual(expect.stringMatching(expected));
   });
 
   it('should return red value between 0 and 255', () => {
@@ -36,7 +36,7 @@ describe('rgb', () => {
   });
 
   it('should return alpha value between 0.1 and 1', () => {
-    const colourValues = rgb(true)
+    const colourValues = rgb({ alpha: true })
       .match(/\d*(?:\.\d+)/)
       ?.map(Number);
 
