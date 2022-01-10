@@ -10,6 +10,12 @@ Run it on [Stackblitz](https://stackblitz.com/edit/typescript-pjao1u?file=index.
 
 <br />
 
+## Installation
+```
+npm i @ngneat/falso
+yarn add @ngneat/falso
+```
+
 ## Methods
 
 
