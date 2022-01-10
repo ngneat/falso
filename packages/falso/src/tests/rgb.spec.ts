@@ -1,4 +1,4 @@
-import { rgb } from "./lib/rgb";
+import { rgb } from "../lib/rgb";
 
 describe('rgb', () => {
   it('should return a rgb string in the correct format', () => {
