@@ -1354,10 +1354,22 @@ import { randomNumber } from '@ngneat/falso';
 randomNumber();
 ```
 
-#### `randomFloat({ min: number; max: number: fraction?: number })`
+#### `randomFloat({ min?: number; max?: number: fractions?: number })`
 
 ```ts
 import { randomFloat } from '@ngneat/falso';
+
+// 3212.9
+randomFloat();
+
+// 123.93
+randomFloat({ min: 110.12 });
+
+// 12.75
+randomFloat({ max: 14.12 });
+
+// 5478.12365
+randomFloat({ fractions: 5 });
 
 // 12.93
 randomFloat({ min: 8.85, max: 22.25 });
