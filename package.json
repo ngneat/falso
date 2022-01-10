@@ -28,7 +28,6 @@
     "@nrwl/workspace": "13.4.3",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
-    "@types/punycode": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
     "commitizen": "4.2.4",
