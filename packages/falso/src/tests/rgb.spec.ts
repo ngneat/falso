@@ -28,6 +28,13 @@ describe('rgb', () => {
     expect(colourValues?.[1]).toBeLessThanOrEqual(255);
   });
 
+  it('should return blue value between 0 and 255', () => {
+    const colourValues = rgb().match(/\d+/g)?.map(Number);
+
+    expect(colourValues?.[2]).toBeGreaterThanOrEqual(0);
+    expect(colourValues?.[2]).toBeLessThanOrEqual(255);
+  });
+
   it('should return alpha value between 0.1 and 1', () => {
     const colourValues = rgb(true)
       .match(/\d*(?:\.\d+)/)
