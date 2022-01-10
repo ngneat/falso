@@ -1354,13 +1354,16 @@ import { randomNumber } from '@ngneat/falso';
 randomNumber();
 ```
 
-#### `randomFloat()`
+#### `randomFloat({ min: number; max: number: fractions?: number })`
 
 ```ts
 import { randomFloat } from '@ngneat/falso';
 
-// 72607.07
-randomFloat();
+// 12.93
+randomFloat({ min: 8.85, max: 22.25 });
+
+// 32.5555
+randomFloat({ min: 8.85, max: 40.25, fractions: 4 });
 ```
 
 #### `randomArrayElement()`
@@ -1768,7 +1771,7 @@ import { productDescription } from '@ngneat/falso';
 productDescription();
 ```
 
-#### `rgb(alpha?: boolean)`
+#### `rgb({ alpha: boolean })`
 
 ```ts
 import { rgb } from '@ngneat/falso';
@@ -1777,7 +1780,7 @@ import { rgb } from '@ngneat/falso';
 rgb();
 
 // rgba(255,255,255,0.5)
-rgb(true);
+rgb({ alpha: true });
 ```
 
 #### `hex()`
