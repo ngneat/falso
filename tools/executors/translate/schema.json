@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "cli": "nx",
+  "properties": {
+    "path": {
+      "type": "array",
+      "description": "Files to translate",
+      "items": {
+        "type": "string"
+      }
+    },
+    "languages": {
+      "type": "array",
+      "description": "Languages",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "output": {
+      "type": "string",
+      "description": "The output dir path"
+    }
+  },
+  "required": ["path", "languages", "output"]
+}

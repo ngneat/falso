@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './city-prefix.json';
 
 export function cityPrefix() {
-  return rand(['Port', 'New', 'Lake', 'North', 'East', 'South', 'West']);
+  return rand(data);
 }
