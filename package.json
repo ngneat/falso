@@ -6,7 +6,8 @@
     "new": "nx workspace-generator falso",
     "c": "cz",
     "prepare": "husky install",
-    "test": "echo 'test'"
+    "test": "echo 'test'",
+    "translate": "nx run falso:translate"
   },
   "dependencies": {
     "tslib": "2.0.0"
@@ -15,6 +16,7 @@
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-angular": "16.0.0",
     "@commitlint/config-conventional": "12.1.4",
+    "@google-cloud/translate": "^6.3.1",
     "@jscutlery/semver": "2.13.3",
     "@nrwl/cli": "13.4.3",
     "@nrwl/devkit": "13.4.3",
@@ -26,6 +28,7 @@
     "@nrwl/workspace": "13.4.3",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
+    "@types/punycode": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
     "commitizen": "4.2.4",
