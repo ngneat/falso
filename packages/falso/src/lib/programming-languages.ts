@@ -1,0 +1,35 @@
+import { rand } from './core';
+
+export function programmingLanguages() {
+  return rand([
+    'Python',
+    'Java',	
+    'JavaScript',	
+    'C',
+    'C++',	
+    'C#',
+    'PHP',	
+    'Kotlin',
+    'R',	
+    'TypeScript',
+    'Abap',	
+    'Swift',
+    'Objective-C',	
+    'VBA',	
+    'Matlab',
+    'Go',	
+    'Scala',
+    'Ruby',
+    'Groovy',	
+    'Dart',	
+    'Cobol',	
+    'Visual Basic',
+    'Perl',
+    'Julia',
+    'Rust',
+    'Lua',
+    'Lisp',
+    'Haskell',	
+    'Delphi',
+  ]);
+}
