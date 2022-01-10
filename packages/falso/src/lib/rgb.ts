@@ -1,20 +1,7 @@
-import { rand } from './core';
+function randomValue() {
+  return Math.floor(Math.random() * (255 + 1));
+}
 
 export function rgb() {
-  return rand([
-    'rgb(193, 66, 66)',
-    'rgb(63, 191, 63)',
-    'rgb(191, 63, 127)',
-    'rgb(0,0,128)',
-    'rgb(0,255,0)',
-    'rgb(0,255,255)',
-    'rgb(128,0,0)',
-    'rgb(128,0,128)',
-    'rgb(128,128,0)',
-    'rgb(128,128,128)',
-    'rgb(192,192,192)',
-    'rgb(255,0,255)',
-    'rgb(255,255,0)',
-    'rgb(255,255,255)'
-  ]);
+  return `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
 }
