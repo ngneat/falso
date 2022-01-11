@@ -10,10 +10,13 @@ import {
 import { basename, join } from 'path';
 import { format } from 'prettier';
 import * as ts from 'typescript';
-import { COMMENT, UNICODE_REGEXP } from './constants';
+import { COMMENT } from './constants';
 import { EchoExecutorOptions } from './options';
 import { translateText } from './translate';
 
+/**
+ * Write export statements for each generated file to language's index file
+ */
 export function writeExportStatements(
   options: EchoExecutorOptions,
   translationIndex: string
@@ -91,18 +94,23 @@ function createI18NJsonFile(
 }
 
 function updateDefaultFiles(outputFilePath: string, JSONfileNameWExt: string) {
+  // Get original ts content
   let tsFileContent = readFileSync(outputFilePath, {
     encoding: 'utf-8',
   }).toString();
+
+  // update it only if not already updated
   if (!tsFileContent.includes('data')) {
     tsFileContent = tsFileContent
-      .replace(/(?:\s)\s/g, '')
+      .replace(/(?:\s)\s/g, '') // remove white spaces
       .replace(
         `import { rand } from './core';`,
         `import { rand } from './core';\nimport { data } from './${JSONfileNameWExt}';\n\n`
-      )
-      .replace(new RegExp(/(\[(.*)\])/g), 'data');
+      ) // add import data statement
+      .replace(new RegExp(/(\[(.*)\])/g), 'data'); // replace array literal with `data`
+
     tsFileContent = format(tsFileContent, { singleQuote: true });
+
     writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
   }
 }
@@ -115,29 +123,34 @@ function createLanguageFiles(
   filePath: string
 ) {
   const ast = tsquery.ast(sourceFile.getFullText());
-  const identifierName = tsquery<ts.Identifier>(
+
+  // start - get function name and prepare ts content
+  const functionIdentifier = tsquery<ts.Identifier>(
     ast,
     'FunctionDeclaration>Identifier'
   )[0];
-  let tsFileContent = `import { rand } from '../../core';
-import { data } from './${JSONfileNameWExt}';
+  if (functionIdentifier) {
+    let tsFileContent = `import { rand } from '../../core';
+  import { data } from './${JSONfileNameWExt}';
+  
+  export function ${functionIdentifier.text}() {
+    return rand(data);
+  }
+      `;
+    // end
 
-export function ${identifierName.text}() {
-  return rand(data);
-}
-    `;
+    tsFileContent = format(tsFileContent, { singleQuote: true });
 
-  tsFileContent = format(tsFileContent, { singleQuote: true });
+    writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
 
-  writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
+    const index = join(outputDir, `index.ts`);
 
-  const index = join(outputDir, `index.ts`);
+    const fileNameWOExt = basename(filePath, '.ts');
 
-  const fileNameWOExt = basename(filePath, '.ts');
+    const exportStatement = `${COMMENT}\nexport * from './${fileNameWOExt}';\n`;
 
-  const exportStatement = `${COMMENT}\nexport * from './${fileNameWOExt}';\n`;
-
-  appendFileSync(index, exportStatement, { encoding: 'utf-8' });
+    appendFileSync(index, exportStatement, { encoding: 'utf-8' });
+  }
 }
 
 export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
@@ -153,24 +166,4 @@ export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
       }
     }
   }
-}
-
-function translateTransformer<T extends ts.Node>(
-  stringLiterals: string[]
-): ts.TransformerFactory<T> {
-  return (context) => {
-    const visit: ts.Visitor = (node) => {
-      if (ts.isStringLiteral(node) && node.getText() === "'./core'") {
-        return ts.factory.createStringLiteral('../../core');
-      } else if (ts.isArrayLiteralExpression(node)) {
-        return ts.factory.updateArrayLiteralExpression(
-          node,
-          stringLiterals.map((s) => ts.factory.createStringLiteral(s, true))
-        );
-      }
-      return ts.visitEachChild(node, (child) => visit(child), context);
-    };
-
-    return (node) => ts.visitNode(node, visit);
-  };
 }

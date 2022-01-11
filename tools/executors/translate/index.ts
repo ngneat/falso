@@ -42,7 +42,10 @@ export default async function translateExecutor(
           generateStringLiteralsAndSourceFile(rootFilePath);
 
         if (stringLiterals?.length) {
+          // create i18n.json for existing files
           await writeTranslation(options, stringLiterals, sourceFile, filePath);
+
+          // and then for languages
           for (const language of options.languages) {
             await writeTranslation(
               options,
@@ -60,11 +63,13 @@ export default async function translateExecutor(
       }
     }
 
+    // delete translations/index.ts file if present
     const translationIndex = join(options.output, `index.ts`);
     if (existsSync(translationIndex)) {
       unlinkSync(translationIndex);
     }
 
+    // write export statements everywhere
     writeExportStatements(options, translationIndex);
 
     console.info(
