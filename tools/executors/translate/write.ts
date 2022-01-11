@@ -7,7 +7,7 @@ import {
 } from 'fs';
 import { basename, join } from 'path';
 import * as ts from 'typescript';
-import { UNICODE_REGEXP } from './constants';
+import { COMMENT, UNICODE_REGEXP } from './constants';
 import { EchoExecutorOptions } from './options';
 import { translateText } from './translate';
 
@@ -22,7 +22,7 @@ export function writeExportStatements(
     const outputDir = join(options.output, language);
     const languageIndex = join(outputDir, `index.ts`);
     if (existsSync(outputDir) && existsSync(languageIndex)) {
-      const exportStatement = `// THIS FILE IS AUTO-GENERATED THROUGH \`npm run translate\`
+      const exportStatement = `${COMMENT}
 export * as ${language} from './${language}';\n`;
       appendFileSync(translationIndex, exportStatement, {
         encoding: 'utf-8',
@@ -52,8 +52,7 @@ export async function writeTranslation(
     return String.fromCharCode(parseInt(grp, 16));
   });
 
-  content =
-    `// THIS FILE IS AUTO-GENERATED THROUGH \`npm run translate\`\n` + content;
+  content = `${COMMENT}\n` + content;
 
   const fileNameWExt = basename(filePath);
 
@@ -68,7 +67,7 @@ export async function writeTranslation(
 
   const fileNameWOExt = basename(filePath, '.ts');
 
-  const exportStatement = `// THIS FILE IS AUTO-GENERATED THROUGH \`npm run translate\`
+  const exportStatement = `${COMMENT}
 export * from './${fileNameWOExt}';\n`;
 
   console.info(`Writing export statement at: ${index}`);
@@ -76,7 +75,7 @@ export * from './${fileNameWOExt}';\n`;
   appendFileSync(index, exportStatement, { encoding: 'utf-8' });
 }
 
-export function deleteLanguageIndexFiles(options: EchoExecutorOptions) {
+export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
   for (const language of options.languages) {
     console.info(`Deleting index file for language: ${language}`);
     const outputDir = join(options.output, language);

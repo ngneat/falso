@@ -2,10 +2,11 @@ import { ExecutorContext } from '@nrwl/devkit';
 import { existsSync, statSync, unlinkSync } from 'fs';
 import { join } from 'path';
 import * as ts from 'typescript';
+import { TYPE_SCRIPT_FILE_EXTENSION } from './constants';
 import { generateStringLiteralsAndSourceFile } from './generate';
 import { EchoExecutorOptions } from './options';
 import {
-  deleteLanguageIndexFiles,
+  manageLanguageIndexFiles,
   writeExportStatements,
   writeTranslation,
 } from './write';
@@ -20,13 +21,20 @@ export default async function translateExecutor(
   try {
     const success = true;
     const printer = ts.createPrinter();
+    const projectLibPath = join(
+      context.root,
+      context.workspace.projects[context.projectName].sourceRoot,
+      'lib'
+    );
+    options.path = options.path.map((p) => p + TYPE_SCRIPT_FILE_EXTENSION);
+    options.output = join(projectLibPath, options.output);
 
-    deleteLanguageIndexFiles(options);
+    manageLanguageIndexFiles(options);
 
     console.info(`Will be translating ${options.path.length} files.\n`);
 
     for (let filePath of options.path) {
-      const rootFilePath = join(context.root, filePath);
+      const rootFilePath = join(projectLibPath, filePath);
       const fileStats = statSync(rootFilePath);
 
       const isFile = fileStats.isFile();

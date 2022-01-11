@@ -2,16 +2,16 @@
   "version": 2,
   "projects": {
     "falso": {
-      "root": "packages/false",
-      "sourceRoot": "packages/false/src",
+      "root": "packages/falso",
+      "sourceRoot": "packages/falso/src",
       "projectType": "package",
       "targets": {
         "translate": {
           "executor": "./tools/executors/translate:translate",
           "options": {
-            "path": ["packages/falso/src/lib/abbreviation.ts"],
+            "path": ["abbreviation"],
             "languages": ["ru"],
-            "output": "packages/falso/src/lib/translations"
+            "output": "translations"
           }
         }
       }
