@@ -28,7 +28,9 @@
     "url": "https://github.com/ngneat/falso"
   },
   "dependencies": {
-    "@types/seedrandom": "3.0.1",
     "seedrandom": "3.0.5"
+  },
+  "devDependencies": {
+    "@types/seedrandom": "3.0.1"
   }
 }
