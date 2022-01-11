@@ -1354,7 +1354,7 @@ import { randomNumber } from '@ngneat/falso';
 randomNumber();
 ```
 
-#### `randomFloat({ min: number; max: number: fractions?: number })`
+#### `randomFloat({ min: number; max: number: fraction?: number })`
 
 ```ts
 import { randomFloat } from '@ngneat/falso';
