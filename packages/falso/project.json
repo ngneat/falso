@@ -4,36 +4,38 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/falso",
-        "main": "packages/falso/src/index.ts",
         "tsConfig": "packages/falso/tsconfig.lib.json",
+        "project": "packages/falso/package.json",
+        "entryFile": "packages/falso/src/index.ts",
+        "format": ["esm", "cjs"],
         "assets": [
-          "README.md",
-          "logo.png"
+          {
+            "glob": "logo.png",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "README.md",
+            "input": ".",
+            "output": "."
+          }
         ]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/falso/**/*.ts"
-        ]
+        "lintFilePatterns": ["packages/falso/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/packages/falso"
-      ],
+      "outputs": ["coverage/packages/falso"],
       "options": {
         "jestConfig": "packages/falso/jest.config.js",
         "passWithNoTests": true

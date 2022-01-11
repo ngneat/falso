@@ -1,4 +1,4 @@
-import * as seedRandom from 'seedrandom';
+import seedRandom from 'seedrandom';
 
 let prng = seedRandom();
 
