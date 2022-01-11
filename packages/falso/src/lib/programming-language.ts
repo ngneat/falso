@@ -1,6 +1,6 @@
 import { rand } from './core';
 
-export function programmingLanguages() {
+export function programmingLanguage() {
   return rand([
     'Python',
     'Java',	

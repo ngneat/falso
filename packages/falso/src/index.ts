@@ -190,4 +190,4 @@ export { productMaterial } from './lib/product-material';
 export { product } from './lib/product';
 export { productDescription } from './lib/product-description';
 export { rgb } from './lib/rgb';
-export { programmingLanguages } from './lib/programming-languages';
+export { programmingLanguage } from './lib/programming-language';
