@@ -6,7 +6,7 @@
     "new": "nx workspace-generator falso",
     "c": "cz",
     "prepare": "husky install",
-    "test": "echo 'test'"
+    "test": "npx nx test falso"
   },
   "workspaces": [
     "packages/falso"
