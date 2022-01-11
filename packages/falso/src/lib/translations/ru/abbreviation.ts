@@ -1,34 +1,6 @@
-// THIS FILE IS AUTO-GENERATED THROUGH `npm run translate`
-import { rand } from "../../core";
+import { rand } from '../../core';
+import { data } from './abbreviation.i18n.json';
+
 export function abbreviation() {
-    return rand([
-        'SCSI',
-        'SMTP',
-        'АДФ',
-        'TCP',
-        'PNG',
-        'EXE',
-        'К',
-        'ОЗУ',
-        'RSS',
-        'ГБ',
-        'SSL',
-        'CSS',
-        'САС',
-        'SDD',
-        'PCI',
-        'IB',
-        'SQL',
-        'XML',
-        'Спасибо',
-        'АГП',
-        'HTTP',
-        'смс',
-        'FTP',
-        'JBOD',
-        'XSS',
-        'жесткий диск',
-        'JSON',
-        'С УЧАСТИЕМ'
-    ]);
+  return rand(data);
 }

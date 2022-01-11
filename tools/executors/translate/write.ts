@@ -1,11 +1,14 @@
+import { tsquery } from '@phenomnomnominal/tsquery';
 import {
   appendFileSync,
   existsSync,
   mkdirSync,
+  readFileSync,
   unlinkSync,
   writeFileSync,
 } from 'fs';
 import { basename, join } from 'path';
+import { format } from 'prettier';
 import * as ts from 'typescript';
 import { COMMENT, UNICODE_REGEXP } from './constants';
 import { EchoExecutorOptions } from './options';
@@ -16,14 +19,10 @@ export function writeExportStatements(
   translationIndex: string
 ) {
   for (const language of options.languages) {
-    console.info(
-      `Appending export statement for language ${language} in ${translationIndex}`
-    );
     const outputDir = join(options.output, language);
     const languageIndex = join(outputDir, `index.ts`);
     if (existsSync(outputDir) && existsSync(languageIndex)) {
-      const exportStatement = `${COMMENT}
-export * as ${language} from './${language}';\n`;
+      const exportStatement = `${COMMENT}\nexport * as ${language} from './${language}';\n`;
       appendFileSync(translationIndex, exportStatement, {
         encoding: 'utf-8',
       });
@@ -33,51 +32,116 @@ export * as ${language} from './${language}';\n`;
 
 export async function writeTranslation(
   options: EchoExecutorOptions,
-  language: string,
   stringLiterals: string[],
   sourceFile: ts.SourceFile,
-  printer: ts.Printer,
-  filePath: string
+  filePath: string,
+  language?: string
 ) {
-  const outputDir = join(options.output, language);
+  let outputDir: string, tText: string[];
+  if (language) {
+    outputDir = join(options.output, language);
+    tText = await translateText(stringLiterals, language);
+  } else {
+    outputDir = options.output.substring(0, options.output.lastIndexOf('/'));
+    tText = stringLiterals;
+  }
 
-  const tText = await translateText(stringLiterals, language);
+  // Generate i18n.json file content
+  const { JSONfileNameWExt, outputFilePath } = createI18NJsonFile(
+    tText,
+    filePath,
+    outputDir
+  );
 
-  const result = ts.transform(sourceFile, [translateTransformer(tText)]);
+  if (language) {
+    createLanguageFiles(
+      sourceFile,
+      JSONfileNameWExt,
+      outputFilePath,
+      outputDir,
+      filePath
+    );
+  } else {
+    updateDefaultFiles(outputFilePath, JSONfileNameWExt);
+  }
+}
 
-  let content = printer.printFile(result.transformed[0]);
+function createI18NJsonFile(
+  tText: string[],
+  filePath: string,
+  outputDir: string
+) {
+  const JSONContent = JSON.stringify({ data: tText }, null, 2);
 
-  // convert unicodes to string
-  content = content.replace(UNICODE_REGEXP, (match, grp) => {
-    return String.fromCharCode(parseInt(grp, 16));
-  });
+  // JSON File name
+  const JSONfileNameWExt = basename(filePath, '.ts') + '.i18n.json';
 
-  content = `${COMMENT}\n` + content;
+  // Output JSON File path
+  const outputJSONFilePath = join(outputDir, JSONfileNameWExt);
 
+  // Write json content
+  writeFileSync(outputJSONFilePath, JSONContent);
+
+  // TS File name
   const fileNameWExt = basename(filePath);
 
+  // Output TS File path
   const outputFilePath = join(outputDir, fileNameWExt);
+  return { JSONfileNameWExt, outputFilePath };
+}
 
-  console.info(`Writing translated file at: ${outputFilePath}`);
+function updateDefaultFiles(outputFilePath: string, JSONfileNameWExt: string) {
+  let tsFileContent = readFileSync(outputFilePath, {
+    encoding: 'utf-8',
+  }).toString();
+  if (!tsFileContent.includes('data')) {
+    tsFileContent = tsFileContent
+      .replace(/(?:\s)\s/g, '')
+      .replace(
+        `import { rand } from './core';`,
+        `import { rand } from './core';\nimport { data } from './${JSONfileNameWExt}';\n\n`
+      )
+      .replace(new RegExp(/(\[(.*)\])/g), 'data');
+    tsFileContent = format(tsFileContent, { singleQuote: true });
+    writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
+  }
+}
 
-  // Write pretty printed transformed typescript to output directory
-  writeFileSync(outputFilePath, content);
+function createLanguageFiles(
+  sourceFile: ts.SourceFile,
+  JSONfileNameWExt: string,
+  outputFilePath: string,
+  outputDir: string,
+  filePath: string
+) {
+  const ast = tsquery.ast(sourceFile.getFullText());
+  const identifierName = tsquery<ts.Identifier>(
+    ast,
+    'FunctionDeclaration>Identifier'
+  )[0];
+  let tsFileContent = `import { rand } from '../../core';
+import { data } from './${JSONfileNameWExt}';
+
+export function ${identifierName.text}() {
+  return rand(data);
+}
+    `;
+
+  tsFileContent = format(tsFileContent, { singleQuote: true });
+
+  writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
 
   const index = join(outputDir, `index.ts`);
 
   const fileNameWOExt = basename(filePath, '.ts');
 
-  const exportStatement = `${COMMENT}
-export * from './${fileNameWOExt}';\n`;
-
-  console.info(`Writing export statement at: ${index}`);
+  const exportStatement = `${COMMENT}\nexport * from './${fileNameWOExt}';\n`;
 
   appendFileSync(index, exportStatement, { encoding: 'utf-8' });
 }
 
 export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
   for (const language of options.languages) {
-    console.info(`Deleting index file for language: ${language}`);
     const outputDir = join(options.output, language);
     if (!existsSync(outputDir)) {
       mkdirSync(outputDir);

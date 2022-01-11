@@ -20,7 +20,6 @@ export default async function translateExecutor(
 
   try {
     const success = true;
-    const printer = ts.createPrinter();
     const projectLibPath = join(
       context.root,
       context.workspace.projects[context.projectName].sourceRoot,
@@ -39,20 +38,18 @@ export default async function translateExecutor(
 
       const isFile = fileStats.isFile();
       if (isFile) {
-        console.info(`Reading content from ${rootFilePath}`);
-
         const { stringLiterals, sourceFile } =
           generateStringLiteralsAndSourceFile(rootFilePath);
 
         if (stringLiterals?.length) {
+          await writeTranslation(options, stringLiterals, sourceFile, filePath);
           for (const language of options.languages) {
             await writeTranslation(
               options,
-              language,
               stringLiterals,
               sourceFile,
-              printer,
-              filePath
+              filePath,
+              language
             );
           }
         } else {
@@ -64,7 +61,6 @@ export default async function translateExecutor(
     }
 
     const translationIndex = join(options.output, `index.ts`);
-    console.info(`Deleting translations index file from : ${translationIndex}`);
     if (existsSync(translationIndex)) {
       unlinkSync(translationIndex);
     }
