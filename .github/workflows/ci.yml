@@ -9,5 +9,5 @@ jobs:
         with:
           node-version: '12'
           cache: 'npm'
-      - run: npm i
+      - run: npm ci
       - run: npm run test
