@@ -8,6 +8,9 @@
     "prepare": "husky install",
     "test": "echo 'test'"
   },
+  "workspaces": [
+    "packages/falso"
+  ],
   "dependencies": {
     "tslib": "2.0.0"
   },
@@ -51,6 +54,6 @@
     ]
   },
   "lint-staged": {
-    "*.{ts,json,html,tsx}": "prettier --write"
+    "*.{ts,json,html,tsx,md}": "prettier --write"
   }
 }
