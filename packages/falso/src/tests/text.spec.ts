@@ -1,25 +1,14 @@
 import { text } from "../lib/text";
-import SpyInstance = jest.SpyInstance;
 
 describe('text', () => {
-  let consoleSpy: SpyInstance;
-
-  beforeAll(() => {
-    consoleSpy = jest.spyOn(console, 'error');
-  });
-
-  beforeEach(() => {
-    consoleSpy.mockReset();
-  });
-
   describe('charCount IS passed', () => {
     describe('charCount of 0', () => {
       it('should trigger console error', () => {
-
-        const result = text({ charCount: 0 });
-
-        expect(consoleSpy).toBeCalledWith('Character count must be greater than 0')
-        expect(result).toBeUndefined();
+        try {
+          text({ charCount: 0 });
+        } catch (error) {
+          expect(error).toEqual('Character count must be greater than 0');
+        }
       });
     });
 
@@ -52,11 +41,11 @@ describe('text', () => {
 
     describe('charCount of 5001', () => {
       it('should trigger console error', () => {
-
-        const result = text({ charCount: 5001 });
-
-        expect(consoleSpy).toBeCalledWith('Character count must be less than 5000')
-        expect(result).toBeUndefined();
+        try {
+          text({ charCount: 5001 });
+        } catch (error) {
+          expect(error).toEqual('Character count must be less than 5000');
+        }
       });
     });
   });
