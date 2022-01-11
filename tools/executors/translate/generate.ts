@@ -40,7 +40,6 @@ function getStringLiterals(node: ts.Node) {
       e.getText().replace(/['"]+/g, '')
     );
   } else {
-    console.info('No ArrayLiteralExpression present in the file!');
     return [];
   }
 }

@@ -44,7 +44,7 @@ export default async function translateExecutor(
         const { stringLiterals, sourceFile } =
           generateStringLiteralsAndSourceFile(rootFilePath);
 
-        if (stringLiterals && stringLiterals.length) {
+        if (stringLiterals?.length) {
           for (const language of options.languages) {
             await writeTranslation(
               options,
