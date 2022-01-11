@@ -10,7 +10,6 @@ jobs:
           node-version: '12'
           cache: 'npm'
       - run: npm ci
-      # bellow 2 instructions are for npm that don't support workspaces
-      - run: cd packages/falso
-      - run: npm ci
+      # bellow instruction is for npm that don't support workspaces
+      - run: cd packages/falso && npm ci
       - run: npm run test
