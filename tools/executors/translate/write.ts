@@ -3,6 +3,7 @@ import {
   appendFileSync,
   existsSync,
   mkdirSync,
+  readdirSync,
   readFileSync,
   unlinkSync,
   writeFileSync,
@@ -10,7 +11,7 @@ import {
 import { basename, join } from 'path';
 import { format } from 'prettier';
 import * as ts from 'typescript';
-import { COMMENT } from './constants';
+import { COMMENT, TYPE_SCRIPT_FILE_EXTENSION } from './constants';
 import { EchoExecutorOptions } from './options';
 import { translateText } from './translate';
 
@@ -21,15 +22,16 @@ export function writeExportStatements(
   options: EchoExecutorOptions,
   translationIndex: string
 ) {
+  appendFileSync(translationIndex, `${COMMENT}\n`, {
+    encoding: 'utf-8',
+  });
   for (const language of options.languages) {
     const outputDir = join(options.output, language);
-    const languageIndex = join(outputDir, `index.ts`);
-    if (existsSync(outputDir) && existsSync(languageIndex)) {
-      const exportStatement = `${COMMENT}\nexport * as ${language} from './${language}';\n`;
-      appendFileSync(translationIndex, exportStatement, {
-        encoding: 'utf-8',
-      });
-    }
+    createLanguageIndexFile(outputDir);
+    const exportStatement = `export * as ${language} from './${language}';\n`;
+    appendFileSync(translationIndex, exportStatement, {
+      encoding: 'utf-8',
+    });
   }
 }
 
@@ -142,15 +144,26 @@ function createLanguageFiles(
     tsFileContent = format(tsFileContent, { singleQuote: true });
 
     writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
-
-    const index = join(outputDir, `index.ts`);
-
-    const fileNameWOExt = basename(filePath, '.ts');
-
-    const exportStatement = `${COMMENT}\nexport * from './${fileNameWOExt}';\n`;
-
-    appendFileSync(index, exportStatement, { encoding: 'utf-8' });
   }
+}
+
+export function createLanguageIndexFile(outputDir: string) {
+  const index = join(outputDir, `index.ts`);
+
+  appendFileSync(index, `${COMMENT}\n`, { encoding: 'utf-8' });
+
+  readdirSync(outputDir)
+    .filter(
+      (filePath) =>
+        filePath.includes(TYPE_SCRIPT_FILE_EXTENSION) && filePath !== 'index.ts'
+    )
+    .forEach((filePath) => {
+      const fileNameWOExt = basename(filePath, TYPE_SCRIPT_FILE_EXTENSION);
+
+      const exportStatement = `export * from './${fileNameWOExt}';\n`;
+
+      appendFileSync(index, exportStatement, { encoding: 'utf-8' });
+    });
 }
 
 export function manageLanguageIndexFiles(options: EchoExecutorOptions) {

@@ -35,7 +35,9 @@ function getStringLiterals(node: ts.Node) {
     'ArrayLiteralExpression'
   )[0];
 
-  if (arrayLiteralExpressionNode.elements.every((n) => ts.isStringLiteral(n))) {
+  if (
+    arrayLiteralExpressionNode?.elements.every((n) => ts.isStringLiteral(n))
+  ) {
     return arrayLiteralExpressionNode.elements.map((e) =>
       e.getText().replace(/['"]+/g, '')
     );

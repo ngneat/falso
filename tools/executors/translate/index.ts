@@ -1,5 +1,5 @@
 import { ExecutorContext } from '@nrwl/devkit';
-import { existsSync, statSync, unlinkSync } from 'fs';
+import { existsSync, readFileSync, statSync, unlinkSync } from 'fs';
 import { join } from 'path';
 import * as ts from 'typescript';
 import { TYPE_SCRIPT_FILE_EXTENSION } from './constants';
@@ -38,25 +38,30 @@ export default async function translateExecutor(
 
       const isFile = fileStats.isFile();
       if (isFile) {
-        const { stringLiterals, sourceFile } =
+        let { stringLiterals, sourceFile } =
           generateStringLiteralsAndSourceFile(rootFilePath);
 
-        if (stringLiterals?.length) {
-          // create i18n.json for existing files
-          await writeTranslation(options, stringLiterals, sourceFile, filePath);
-
-          // and then for languages
-          for (const language of options.languages) {
-            await writeTranslation(
-              options,
-              stringLiterals,
-              sourceFile,
-              filePath,
-              language
-            );
-          }
-        } else {
+        if (!stringLiterals?.length) {
           console.info(`No string-literals found in file ${rootFilePath}\n`);
+
+          stringLiterals = JSON.parse(
+            readFileSync(
+              rootFilePath.replace(TYPE_SCRIPT_FILE_EXTENSION, '.i18n.json')
+            ).toString()
+          ).data;
+        }
+        // create i18n.json for existing files
+        await writeTranslation(options, stringLiterals, sourceFile, filePath);
+
+        // and then for languages
+        for (const language of options.languages) {
+          await writeTranslation(
+            options,
+            stringLiterals,
+            sourceFile,
+            filePath,
+            language
+          );
         }
       } else {
         console.error(`File: ${rootFilePath} does not exist or is not file!`);

@@ -12,6 +12,10 @@ export async function translateText(text: string[], target: string) {
   // Translates the text into the target language. "text" can be a string for
   // translating a single piece of text, or an array of strings for translating
   // multiple texts.
-  let [translations] = await translate.translate(text, target);
+  // Un-comment below once you have google-cloud-secret.json file ready
+  // let [translations] = await translate.translate(text, target);
+
+  // Comment below once you have google-cloud-secret.json file ready
+  const translations = text.map((t) => 'Translated ' + t);
   return translations;
 }
