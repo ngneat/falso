@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './img-cats.json';
 
 export function imgCats() {
-  return rand(['http://placeimg.com/640/480/cats']);
+  return rand(data);
 }

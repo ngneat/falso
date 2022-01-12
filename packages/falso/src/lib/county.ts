@@ -1,12 +1,6 @@
 import { rand } from './core';
+import { data } from './county.json';
 
 export function county() {
-  return rand([
-    'Avon',
-    'Berkshire',
-    'Buckinghamshire',
-    'Borders',
-    'Cambridgeshire',
-    'Bedfordshire',
-  ]);
+  return rand(data);
 }

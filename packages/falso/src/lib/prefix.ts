@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './prefix.json';
 
 export function prefix() {
-  return rand(['Dr.', 'Miss', 'Mr.', 'Mrs.', 'Ms.']);
+  return rand(data);
 }

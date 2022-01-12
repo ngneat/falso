@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './street-prefix.json';
 
 export function streetPrefix() {
-  return rand(['b', 'c', 'a']);
+  return rand(data);
 }
