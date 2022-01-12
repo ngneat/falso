@@ -1,19 +1,6 @@
 import { rand } from './core';
+import { data } from './animal-type.json';
 
 export function animalType() {
-  return rand([
-    'bird',
-    'cetacean',
-    'rabbit',
-    'bear',
-    'cat',
-    'snake',
-    'cow',
-    'insect',
-    'crocodilia',
-    'horse',
-    'fish',
-    'dog',
-    'lion',
-  ]);
+  return rand(data);
 }
