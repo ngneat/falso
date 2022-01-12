@@ -1,0 +1,2995 @@
+<!DOCTYPE html>
+<html class="default">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>@ngneat/falso</title>
+    <meta name="description" content="Documentation for @ngneat/falso" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/highlight.css" />
+    <script async src="assets/search.js" id="search-script"></script>
+  </head>
+  <body>
+    <script>
+      document.body.classList.add(localStorage.getItem('tsd-theme') || 'os');
+    </script>
+    <header>
+      <div class="tsd-page-toolbar">
+        <div class="container">
+          <div class="table-wrap">
+            <div class="table-cell" id="tsd-search" data-base=".">
+              <div class="field">
+                <label
+                  for="tsd-search-field"
+                  class="tsd-widget search no-caption"
+                  >Search</label
+                ><input type="text" id="tsd-search-field" />
+              </div>
+              <ul class="results">
+                <li class="state loading">Preparing search index...</li>
+                <li class="state failure">The search index is not available</li>
+              </ul>
+              <a href="index.html" class="title">@ngneat/falso</a>
+            </div>
+            <div class="table-cell" id="tsd-widgets">
+              <div id="tsd-filter">
+                <a
+                  href="#"
+                  class="tsd-widget options no-caption"
+                  data-toggle="options"
+                  >Options</a
+                >
+                <div class="tsd-filter-group">
+                  <div class="tsd-select" id="tsd-filter-visibility">
+                    <span class="tsd-select-label">All</span>
+                    <ul class="tsd-select-list">
+                      <li data-value="public">Public</li>
+                      <li data-value="protected">Public/Protected</li>
+                      <li data-value="private" class="selected">All</li>
+                    </ul>
+                  </div>
+                  <input
+                    type="checkbox"
+                    id="tsd-filter-inherited"
+                    checked
+                  /><label class="tsd-widget" for="tsd-filter-inherited"
+                    >Inherited</label
+                  ><input
+                    type="checkbox"
+                    id="tsd-filter-externals"
+                    checked
+                  /><label class="tsd-widget" for="tsd-filter-externals"
+                    >Externals</label
+                  >
+                </div>
+              </div>
+              <a href="#" class="tsd-widget menu no-caption" data-toggle="menu"
+                >Menu</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tsd-page-title">
+        <div class="container"><h1>@ngneat/falso</h1></div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="row">
+        <div class="col-8 col-content">
+          <div class="tsd-panel tsd-typography">
+            <p align="center">
+              <img width="20%" height="20%" src="logo.png" />
+            </p>
+
+            <br />
+
+            <blockquote>
+              <p>All the Fake Data for All Your Real Needs 🙂</p>
+            </blockquote>
+            <p>
+              Run it on
+              <a
+                href="https://stackblitz.com/edit/typescript-pjao1u?file=index.ts"
+                >Stackblitz</a
+              >
+            </p>
+            <br />
+
+            <a
+              href="#installation"
+              id="installation"
+              style="color: inherit; text-decoration: none"
+            >
+              <h2>Installation</h2>
+            </a>
+            <pre><code><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">i</span><span class="hl-1"> @</span><span class="hl-0">ngneat</span><span class="hl-1">/</span><span class="hl-0">falso</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> @</span><span class="hl-0">ngneat</span><span class="hl-1">/</span><span class="hl-0">falso</span>
+</code></pre>
+
+            <a
+              href="#methods"
+              id="methods"
+              style="color: inherit; text-decoration: none"
+            >
+              <h2>Methods</h2>
+            </a>
+
+            <a
+              href="#randlttgtarr-t-t"
+              id="randlttgtarr-t-t"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>rand&lt;T&gt;(arr: T[]): T</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">rand</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Random item from array</span><br/><span class="hl-5">rand</span><span class="hl-1">([</span><span class="hl-6">1</span><span class="hl-1">, </span><span class="hl-6">2</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">4</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">]);</span>
+</code></pre>
+
+            <a
+              href="#seedvalue-string"
+              id="seedvalue-string"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>seed(value?: string)</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">rand</span><span class="hl-1">, </span><span class="hl-0">seed</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-5">seed</span><span class="hl-1">(</span><span class="hl-3">&#39;some-constant-seed&#39;</span><span class="hl-1">);</span><br/><span class="hl-4">// Always returns 2</span><br/><span class="hl-5">rand</span><span class="hl-1">([</span><span class="hl-6">1</span><span class="hl-1">, </span><span class="hl-6">2</span><span class="hl-1">, </span><span class="hl-6">3</span><span class="hl-1">, </span><span class="hl-6">4</span><span class="hl-1">, </span><span class="hl-6">5</span><span class="hl-1">]);</span><br/><span class="hl-4">// Reset random seed</span><br/><span class="hl-5">seed</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#zipcode"
+              id="zipcode"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>zipCode()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">zipCode</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 53911</span><br/><span class="hl-5">zipCode</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#zipcodebystate"
+              id="zipcodebystate"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>zipCodeByState()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">zipCodeByState</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 78062</span><br/><span class="hl-5">zipCodeByState</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#city"
+              id="city"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>city()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">city</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// South Verdieton</span><br/><span class="hl-5">city</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#cityprefix"
+              id="cityprefix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>cityPrefix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">cityPrefix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// West</span><br/><span class="hl-5">cityPrefix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#citysuffix"
+              id="citysuffix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>citySuffix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">citySuffix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// town</span><br/><span class="hl-5">citySuffix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#cityname"
+              id="cityname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>cityName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">cityName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Lake Charles</span><br/><span class="hl-5">cityName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#streetname"
+              id="streetname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>streetName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">streetName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Cronin Shoal</span><br/><span class="hl-5">streetName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#streetaddress"
+              id="streetaddress"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>streetAddress()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">streetAddress</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 58739 Bridie Mission</span><br/><span class="hl-5">streetAddress</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#streetsuffix"
+              id="streetsuffix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>streetSuffix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">streetSuffix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Square</span><br/><span class="hl-5">streetSuffix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#streetprefix"
+              id="streetprefix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>streetPrefix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">streetPrefix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// c</span><br/><span class="hl-5">streetPrefix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#secondaryaddress"
+              id="secondaryaddress"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>secondaryAddress()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">secondaryAddress</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Apt. 977</span><br/><span class="hl-5">secondaryAddress</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#county"
+              id="county"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>county()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">county</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Berkshire</span><br/><span class="hl-5">county</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#country"
+              id="country"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>country()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">country</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Saint Kitts and Nevis</span><br/><span class="hl-5">country</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#countrycode"
+              id="countrycode"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>countryCode()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">countryCode</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// BN</span><br/><span class="hl-5">countryCode</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#state"
+              id="state"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>state()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">state</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Kentucky</span><br/><span class="hl-5">state</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#stateabbr"
+              id="stateabbr"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>stateAbbr()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">stateAbbr</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// OK</span><br/><span class="hl-5">stateAbbr</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#latitude"
+              id="latitude"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>latitude()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">latitude</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 46.1515</span><br/><span class="hl-5">latitude</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#longitude"
+              id="longitude"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>longitude()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">longitude</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// -162.0090</span><br/><span class="hl-5">longitude</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#direction"
+              id="direction"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>direction()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">direction</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// West</span><br/><span class="hl-5">direction</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#cardinaldirection"
+              id="cardinaldirection"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>cardinalDirection()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">cardinalDirection</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// North</span><br/><span class="hl-5">cardinalDirection</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#ordinaldirection"
+              id="ordinaldirection"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>ordinalDirection()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">ordinalDirection</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Northwest</span><br/><span class="hl-5">ordinalDirection</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#nearbygpscoordinate"
+              id="nearbygpscoordinate"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>nearbyGPSCoordinate()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">nearbyGPSCoordinate</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 55.6541,53.7382</span><br/><span class="hl-5">nearbyGPSCoordinate</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#timezone"
+              id="timezone"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>timeZone()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">timeZone</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Europe/Minsk</span><br/><span class="hl-5">timeZone</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#dog"
+              id="dog"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>dog()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">dog</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Newfoundland</span><br/><span class="hl-5">dog</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#cat"
+              id="cat"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>cat()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">cat</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Singapura</span><br/><span class="hl-5">cat</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#snake"
+              id="snake"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>snake()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">snake</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Whip snake</span><br/><span class="hl-5">snake</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#bear"
+              id="bear"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>bear()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bear</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Sloth bear</span><br/><span class="hl-5">bear</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#lion"
+              id="lion"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>lion()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">lion</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Asiatic Lion</span><br/><span class="hl-5">lion</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#cetacean"
+              id="cetacean"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>cetacean()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">cetacean</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Rough-Toothed Dolphin</span><br/><span class="hl-5">cetacean</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#horse"
+              id="horse"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>horse()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">horse</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Mezőhegyesi Sport Horse</span><br/><span class="hl-5">horse</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#bird"
+              id="bird"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>bird()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bird</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Oriental Greenfinch</span><br/><span class="hl-5">bird</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#cow"
+              id="cow"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>cow()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">cow</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Fleckvieh</span><br/><span class="hl-5">cow</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#fish"
+              id="fish"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>fish()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">fish</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Silver carp</span><br/><span class="hl-5">fish</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#crocodilia"
+              id="crocodilia"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>crocodilia()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">crocodilia</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Australian Freshwater Crocodile</span><br/><span class="hl-5">crocodilia</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#insect"
+              id="insect"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>insect()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">insect</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Tramp ant</span><br/><span class="hl-5">insect</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#rabbit"
+              id="rabbit"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>rabbit()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">rabbit</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Thrianta</span><br/><span class="hl-5">rabbit</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#animaltype"
+              id="animaltype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>animalType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">animalType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// lion</span><br/><span class="hl-5">animalType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#databasecolumn"
+              id="databasecolumn"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>databaseColumn()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">databaseColumn</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// name</span><br/><span class="hl-5">databaseColumn</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#databasetype"
+              id="databasetype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>databaseType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">databaseType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// blob</span><br/><span class="hl-5">databaseType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#databasecollation"
+              id="databasecollation"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>databaseCollation()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">databaseCollation</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// ascii_bin</span><br/><span class="hl-5">databaseCollation</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#databaseengine"
+              id="databaseengine"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>databaseEngine()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">databaseEngine</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// CSV</span><br/><span class="hl-5">databaseEngine</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#account"
+              id="account"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>account()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">account</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 20671518</span><br/><span class="hl-5">account</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#accountname"
+              id="accountname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>accountName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">accountName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Auto Loan Account</span><br/><span class="hl-5">accountName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#routingnumber"
+              id="routingnumber"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>routingNumber()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">routingNumber</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 388938496</span><br/><span class="hl-5">routingNumber</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#mask"
+              id="mask"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>mask()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">mask</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 0512</span><br/><span class="hl-5">mask</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#amount"
+              id="amount"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>amount()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">amount</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 106.53</span><br/><span class="hl-5">amount</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#transactiontype"
+              id="transactiontype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>transactionType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">transactionType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// payment</span><br/><span class="hl-5">transactionType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#currencycode"
+              id="currencycode"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>currencyCode()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">currencyCode</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// BRL</span><br/><span class="hl-5">currencyCode</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#currencyname"
+              id="currencyname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>currencyName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">currencyName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Cedi</span><br/><span class="hl-5">currencyName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#currencysymbol"
+              id="currencysymbol"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>currencySymbol()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">currencySymbol</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Bs</span><br/><span class="hl-5">currencySymbol</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#bitcoinaddress"
+              id="bitcoinaddress"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>bitcoinAddress()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bitcoinAddress</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 1G9dhM9ff8N6cgDZCgSnibB1no57H7J9</span><br/><span class="hl-5">bitcoinAddress</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#litecoinaddress"
+              id="litecoinaddress"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>litecoinAddress()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">litecoinAddress</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// LckeY4qm4fQ3Ak6D9GcjCxSw4VfWM9Mb</span><br/><span class="hl-5">litecoinAddress</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#creditcardnumber"
+              id="creditcardnumber"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>creditCardNumber()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">creditCardNumber</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 6767-7396-3947-1726</span><br/><span class="hl-5">creditCardNumber</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#creditcardcvv"
+              id="creditcardcvv"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>creditCardCVV()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">creditCardCVV</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 000</span><br/><span class="hl-5">creditCardCVV</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#ethereumaddress"
+              id="ethereumaddress"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>ethereumAddress()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">ethereumAddress</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 0xfeff5fc09fc64ddde1cb09cdbba9d5aa1bd60028</span><br/><span class="hl-5">ethereumAddress</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#iban"
+              id="iban"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>iban()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">iban</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// GE17XK9613803086740003</span><br/><span class="hl-5">iban</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#bic"
+              id="bic"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>bic()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bic</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// PQHACYL1</span><br/><span class="hl-5">bic</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#transactiondescription"
+              id="transactiondescription"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>transactionDescription()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">transactionDescription</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// payment transaction at Sporer, Russel and Johns using card ending with ***8561 for BSD 49.46 in account ***40753949</span><br/><span class="hl-5">transactionDescription</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#gitbranch"
+              id="gitbranch"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>gitBranch()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">gitBranch</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// card-quantify</span><br/><span class="hl-5">gitBranch</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#gitcommitentry"
+              id="gitcommitentry"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>gitCommitEntry()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">gitCommitEntry</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// commit 891053aa674ab65bb014687554ac559d0118a29a</span><br/><span class="hl-7">Author</span><span class="hl-1">: </span><span class="hl-0">Josiane</span><span class="hl-1"> </span><span class="hl-0">Bernhard</span><span class="hl-1"> &lt;</span><span class="hl-0">Hubert55</span><span class="hl-1">@</span><span class="hl-0">gmail</span><span class="hl-1">.</span><span class="hl-0">com</span><span class="hl-1">&gt;</span><br/><span class="hl-7">Date</span><span class="hl-1">: </span><span class="hl-0">Sat</span><span class="hl-1"> </span><span class="hl-0">Jan</span><span class="hl-1"> </span><span class="hl-6">08</span><span class="hl-1"> </span><span class="hl-6">2022</span><span class="hl-1"> </span><span class="hl-6">11</span><span class="hl-1">:</span><span class="hl-6">38</span><span class="hl-1">:</span><span class="hl-6">54</span><span class="hl-1"> </span><span class="hl-8">GMT</span><span class="hl-1">+</span><span class="hl-6">0200</span><span class="hl-1"> (</span><span class="hl-0">Israel</span><span class="hl-1"> </span><span class="hl-0">Standard</span><span class="hl-1"> </span><span class="hl-0">Time</span><span class="hl-1">)</span><br/><br/><span class="hl-1">    </span><span class="hl-0">copy</span><span class="hl-1"> </span><span class="hl-0">online</span><span class="hl-1"> </span><span class="hl-0">firewall</span><br/><br/><span class="hl-5">gitCommitEntry</span><span class="hl-1">()</span>
+</code></pre>
+
+            <a
+              href="#gitcommitmessage"
+              id="gitcommitmessage"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>gitCommitMessage()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">gitCommitMessage</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// calculate wireless capacitor</span><br/><span class="hl-5">gitCommitMessage</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#gitcommitsha"
+              id="gitcommitsha"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>gitCommitSha()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">gitCommitSha</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 90740f1b9840ad81c49601fee57fad2aaffc4b75</span><br/><span class="hl-5">gitCommitSha</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#gitshortsha"
+              id="gitshortsha"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>gitShortSha()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">gitShortSha</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 391f6d5</span><br/><span class="hl-5">gitShortSha</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#createcard"
+              id="createcard"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>createCard()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">createCard</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// [object Object]</span><br/><span class="hl-5">createCard</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#contextualcard"
+              id="contextualcard"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>contextualCard()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">contextualCard</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// [object Object]</span><br/><span class="hl-5">contextualCard</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#usercard"
+              id="usercard"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>userCard()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">userCard</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// [object Object]</span><br/><span class="hl-5">userCard</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#createtransaction"
+              id="createtransaction"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>createTransaction()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">createTransaction</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// [object Object]</span><br/><span class="hl-5">createTransaction</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#img"
+              id="img"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>img()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">img</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/city</span><br/><span class="hl-5">img</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgavatar"
+              id="imgavatar"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgAvatar()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgAvatar</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// https://cdn.fakercloud.com/avatars/baluli_128.jpg</span><br/><span class="hl-5">imgAvatar</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgimageurl"
+              id="imgimageurl"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgImageUrl()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgImageUrl</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480</span><br/><span class="hl-5">imgImageUrl</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgabstract"
+              id="imgabstract"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgAbstract()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgAbstract</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/abstract</span><br/><span class="hl-5">imgAbstract</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imganimals"
+              id="imganimals"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgAnimals()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgAnimals</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/animals</span><br/><span class="hl-5">imgAnimals</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgbusiness"
+              id="imgbusiness"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgBusiness()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgBusiness</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/business</span><br/><span class="hl-5">imgBusiness</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgcats"
+              id="imgcats"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgCats()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgCats</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/cats</span><br/><span class="hl-5">imgCats</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgcity"
+              id="imgcity"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgCity()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgCity</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/city</span><br/><span class="hl-5">imgCity</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgfood"
+              id="imgfood"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgFood()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgFood</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/food</span><br/><span class="hl-5">imgFood</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgnightlife"
+              id="imgnightlife"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgNightlife()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgNightlife</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/nightlife</span><br/><span class="hl-5">imgNightlife</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgfashion"
+              id="imgfashion"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgFashion()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgFashion</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/fashion</span><br/><span class="hl-5">imgFashion</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgpeople"
+              id="imgpeople"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgPeople()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgPeople</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/people</span><br/><span class="hl-5">imgPeople</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgnature"
+              id="imgnature"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgNature()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgNature</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/nature</span><br/><span class="hl-5">imgNature</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgsports"
+              id="imgsports"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgSports()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgSports</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/sports</span><br/><span class="hl-5">imgSports</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgtechnics"
+              id="imgtechnics"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgTechnics()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgTechnics</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/technics</span><br/><span class="hl-5">imgTechnics</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgtransport"
+              id="imgtransport"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgTransport()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgTransport</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/transport</span><br/><span class="hl-5">imgTransport</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imgdatauri"
+              id="imgdatauri"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgDataUri()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgDataUri</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20baseProfile%3D%22full%22%20width%3D%22undefined%22%20height%3D%22undefined%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22grey%22%2F%3E%3Ctext%20x%3D%22NaN%22%20y%3D%22NaN%22%20font-size%3D%2220%22%20alignment-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%3Eundefinedxundefined%3C%2Ftext%3E%3C%2Fsvg%3E</span><br/><span class="hl-5">imgDataUri</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#imglorempixel"
+              id="imglorempixel"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>imgLorempixel()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">imgLorempixel</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// undefined</span><br/><span class="hl-5">imgLorempixel</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#avatar"
+              id="avatar"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>avatar()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">avatar</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// https://i.pravatar.cc/300</span><br/><span class="hl-5">avatar</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#email"
+              id="email"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>email()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">email</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Eliezer.Powlowski87@yahoo.com</span><br/><span class="hl-5">email</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#exampleemail"
+              id="exampleemail"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>exampleEmail()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">exampleEmail</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Obie.Mohr@example.org</span><br/><span class="hl-5">exampleEmail</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#username"
+              id="username"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>userName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">userName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Edwina19</span><br/><span class="hl-5">userName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#protocol"
+              id="protocol"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>protocol()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">protocol</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// https</span><br/><span class="hl-5">protocol</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#httpmethod"
+              id="httpmethod"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>httpMethod()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">httpMethod</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// PUT</span><br/><span class="hl-5">httpMethod</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#url"
+              id="url"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>url()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">url</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://shaniya.name</span><br/><span class="hl-5">url</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#domainname"
+              id="domainname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>domainName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">domainName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// lue.info</span><br/><span class="hl-5">domainName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#domainsuffix"
+              id="domainsuffix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>domainSuffix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">domainSuffix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// name</span><br/><span class="hl-5">domainSuffix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#domainword"
+              id="domainword"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>domainWord()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">domainWord</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// nikki</span><br/><span class="hl-5">domainWord</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a href="#ip" id="ip" style="color: inherit; text-decoration: none">
+              <h4><code>ip()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">ip</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 106.192.20.47</span><br/><span class="hl-5">ip</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#ipv6"
+              id="ipv6"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>ipv6()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">ipv6</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// ac87:88aa:10e7:8e96:e597:c246:f80f:ce28</span><br/><span class="hl-5">ipv6</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#port"
+              id="port"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>port()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">port</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 50806</span><br/><span class="hl-5">port</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#useragent"
+              id="useragent"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>userAgent()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">userAgent</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Mozilla/5.0 (Windows; U; Windows NT 6.1) AppleWebKit/534.1.0 (KHTML, like Gecko) Chrome/26.0.884.0 Safari/534.1.0</span><br/><span class="hl-5">userAgent</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#color"
+              id="color"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>color()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">color</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// #3b3a35</span><br/><span class="hl-5">color</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#mac"
+              id="mac"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>mac()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">mac</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 93:be:c6:bd:51:dc</span><br/><span class="hl-5">mac</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#password"
+              id="password"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>password()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">password</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// ot88Rrqu3c8sxc1</span><br/><span class="hl-5">password</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#word"
+              id="word"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>word()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">word</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// possimus</span><br/><span class="hl-5">word</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#words"
+              id="words"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>words()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">words</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// nemo saepe quas</span><br/><span class="hl-5">words</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#sentence"
+              id="sentence"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>sentence()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">sentence</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Quam illo amet ipsa.</span><br/><span class="hl-5">sentence</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#slug"
+              id="slug"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>slug()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">slug</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// necessitatibus-vitae-ut</span><br/><span class="hl-5">slug</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#sentences"
+              id="sentences"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>sentences()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">sentences</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Et voluptas sit et tempora officiis vitae. Non laboriosam qui quos sit itaque voluptas aperiam. Fuga rem ducimus pariatur atque excepturi.</span><br/><span class="hl-5">sentences</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#paragraph"
+              id="paragraph"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>paragraph()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">paragraph</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Odit consequatur nobis aut quo dolores in adipisci praesentium. Quod rerum ducimus ad. Ut autem velit consequatur nihil animi animi architecto. Quaerat et sed.</span><br/><span class="hl-5">paragraph</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#paragraphs"
+              id="paragraphs"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>paragraphs()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">paragraphs</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Similique unde asperiores ea dignissimos eligendi et perferendis nemo aperiam. Assumenda delectus deleniti quaerat necessitatibus omnis sed ex. Ab cum voluptates consequatur excepturi ut laboriosam voluptate. Ipsum ex ad nihil et.</span><br/><br/><span class="hl-0">Est</span><span class="hl-1"> </span><span class="hl-0">ut</span><span class="hl-1"> </span><span class="hl-0">delectus</span><span class="hl-1"> </span><span class="hl-0">qui</span><span class="hl-1"> </span><span class="hl-0">at</span><span class="hl-1"> </span><span class="hl-0">ab</span><span class="hl-1"> </span><span class="hl-0">ratione</span><span class="hl-1">. </span><span class="hl-0">Vel</span><span class="hl-1"> </span><span class="hl-0">porro</span><span class="hl-1"> </span><span class="hl-0">consequatur</span><span class="hl-1"> </span><span class="hl-0">inventore</span><span class="hl-1"> </span><span class="hl-0">vel</span><span class="hl-1"> </span><span class="hl-0">tempore</span><span class="hl-1"> </span><span class="hl-0">quibusdam</span><span class="hl-1"> </span><span class="hl-0">expedita</span><span class="hl-1"> </span><span class="hl-0">nihil</span><span class="hl-1"> </span><span class="hl-0">ipsam</span><span class="hl-1">. </span><span class="hl-0">Alias</span><span class="hl-1"> </span><span class="hl-0">hic</span><span class="hl-1"> </span><span class="hl-0">eos</span><span class="hl-1"> </span><span class="hl-0">perferendis</span><span class="hl-1"> </span><span class="hl-0">omnis</span><span class="hl-1"> </span><span class="hl-0">architecto</span><span class="hl-1"> </span><span class="hl-0">natus</span><span class="hl-1"> </span><span class="hl-0">quidem</span><span class="hl-1">. </span><span class="hl-0">Magni</span><span class="hl-1"> </span><span class="hl-0">magnam</span><span class="hl-1"> </span><span class="hl-0">magnam</span><span class="hl-1"> </span><span class="hl-0">commodi</span><span class="hl-1"> </span><span class="hl-0">et</span><span class="hl-1"> </span><span class="hl-9">in</span><span class="hl-1"> </span><span class="hl-0">molestiae</span><span class="hl-1">. </span><span class="hl-0">Qui</span><span class="hl-1"> </span><span class="hl-0">fugiat</span><span class="hl-1"> </span><span class="hl-0">doloremque</span><span class="hl-1">.</span><br/><br/><span class="hl-0">Fugiat</span><span class="hl-1"> </span><span class="hl-0">excepturi</span><span class="hl-1"> </span><span class="hl-0">fugiat</span><span class="hl-1">. </span><span class="hl-0">Velit</span><span class="hl-1"> </span><span class="hl-0">itaque</span><span class="hl-1"> </span><span class="hl-0">expedita</span><span class="hl-1"> </span><span class="hl-0">doloribus</span><span class="hl-1"> </span><span class="hl-0">aut</span><span class="hl-1"> </span><span class="hl-0">ut</span><span class="hl-1"> </span><span class="hl-0">non</span><span class="hl-1"> </span><span class="hl-0">mollitia</span><span class="hl-1"> </span><span class="hl-0">provident</span><span class="hl-1">. </span><span class="hl-0">Expedita</span><span class="hl-1"> </span><span class="hl-0">error</span><span class="hl-1"> </span><span class="hl-0">quia</span><span class="hl-1"> </span><span class="hl-0">labore</span><span class="hl-1"> </span><span class="hl-0">cum</span><span class="hl-1"> </span><span class="hl-0">non</span><span class="hl-1"> </span><span class="hl-0">voluptatem</span><span class="hl-1">. </span><span class="hl-0">Est</span><span class="hl-1"> </span><span class="hl-0">et</span><span class="hl-1"> </span><span class="hl-0">corporis</span><span class="hl-1"> </span><span class="hl-0">quibusdam</span><span class="hl-1"> </span><span class="hl-0">voluptatem</span><span class="hl-1"> </span><span class="hl-0">magnam</span><span class="hl-1"> </span><span class="hl-0">aliquam</span><span class="hl-1"> </span><span class="hl-0">est</span><span class="hl-1">. </span><span class="hl-0">Quis</span><span class="hl-1"> </span><span class="hl-0">dignissimos</span><span class="hl-1"> </span><span class="hl-0">ex</span><span class="hl-1"> </span><span class="hl-0">est</span><span class="hl-1"> </span><span class="hl-0">fugit</span><span class="hl-1"> </span><span class="hl-0">ullam</span><span class="hl-1"> </span><span class="hl-0">dignissimos</span><span class="hl-1"> </span><span class="hl-0">non</span><span class="hl-1"> </span><span class="hl-0">laboriosam</span><span class="hl-1">.</span><br/><span class="hl-5">paragraphs</span><span class="hl-1">()</span>
+</code></pre>
+
+            <a
+              href="#text"
+              id="text"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>text()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">text</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Architecto et modi. Dolorem delectus quod eos facere architecto tempore.</span><br/><span class="hl-5">text</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#lines"
+              id="lines"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>lines()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">lines</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Voluptatibus harum ullam odio sed animi corporis.</span><br/><span class="hl-5">lines</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#genre"
+              id="genre"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>genre()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">genre</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Jazz</span><br/><span class="hl-5">genre</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#firstname"
+              id="firstname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>firstName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">firstName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Xavier</span><br/><span class="hl-5">firstName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#lastname"
+              id="lastname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>lastName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">lastName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Schuster</span><br/><span class="hl-5">lastName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#middlename"
+              id="middlename"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>middleName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">middleName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// a</span><br/><span class="hl-5">middleName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#findname"
+              id="findname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>findName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">findName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Freda Satterfield</span><br/><span class="hl-5">findName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#jobtitle"
+              id="jobtitle"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>jobTitle()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">jobTitle</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// International Brand Associate</span><br/><span class="hl-5">jobTitle</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#gender"
+              id="gender"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>gender()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">gender</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Male to female trans woman</span><br/><span class="hl-5">gender</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#prefix"
+              id="prefix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>prefix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">prefix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Mrs.</span><br/><span class="hl-5">prefix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#suffix"
+              id="suffix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>suffix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">suffix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// II</span><br/><span class="hl-5">suffix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#title"
+              id="title"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>title()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">title</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// International Security Administrator</span><br/><span class="hl-5">title</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#jobdescriptor"
+              id="jobdescriptor"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>jobDescriptor()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">jobDescriptor</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Human</span><br/><span class="hl-5">jobDescriptor</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#jobarea"
+              id="jobarea"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>jobArea()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">jobArea</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Integration</span><br/><span class="hl-5">jobArea</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#jobtype"
+              id="jobtype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>jobType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">jobType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Agent</span><br/><span class="hl-5">jobType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#phonenumber"
+              id="phonenumber"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>phoneNumber()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">phoneNumber</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// (663) 807-0501</span><br/><span class="hl-5">phoneNumber</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#phonenumberformat"
+              id="phonenumberformat"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>phoneNumberFormat()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">phoneNumberFormat</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 768-523-3116</span><br/><span class="hl-5">phoneNumberFormat</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#filename"
+              id="filename"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>fileName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">fileName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// extensible_up.skm</span><br/><span class="hl-5">fileName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#commonfilename"
+              id="commonfilename"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>commonFileName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">commonFileName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// tools_vatu.m2a</span><br/><span class="hl-5">commonFileName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#mimetype"
+              id="mimetype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>mimeType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">mimeType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// audio/vnd.dts.hd</span><br/><span class="hl-5">mimeType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#commonfiletype"
+              id="commonfiletype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>commonFileType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">commonFileType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// text</span><br/><span class="hl-5">commonFileType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#commonfileext"
+              id="commonfileext"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>commonFileExt()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">commonFileExt</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// gif</span><br/><span class="hl-5">commonFileExt</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#filetype"
+              id="filetype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>fileType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">fileType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// x-shader</span><br/><span class="hl-5">fileType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#fileext"
+              id="fileext"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>fileExt()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">fileExt</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// meta4</span><br/><span class="hl-5">fileExt</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#directorypath"
+              id="directorypath"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>directoryPath()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">directoryPath</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// /home/user</span><br/><span class="hl-5">directoryPath</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#filepath"
+              id="filepath"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>filePath()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">filePath</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// /lib/ports_calculating.ogg.wm</span><br/><span class="hl-5">filePath</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#semver"
+              id="semver"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>semver()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">semver</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 3.2.0</span><br/><span class="hl-5">semver</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehicle"
+              id="vehicle"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicle()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicle</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Jaguar Beetle</span><br/><span class="hl-5">vehicle</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehiclemanufacturer"
+              id="vehiclemanufacturer"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicleManufacturer()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicleManufacturer</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Mazda</span><br/><span class="hl-5">vehicleManufacturer</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehiclemodel"
+              id="vehiclemodel"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicleModel()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicleModel</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Escalade</span><br/><span class="hl-5">vehicleModel</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehicletype"
+              id="vehicletype"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicleType()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicleType</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Hatchback</span><br/><span class="hl-5">vehicleType</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehiclefuel"
+              id="vehiclefuel"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicleFuel()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicleFuel</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Gasoline</span><br/><span class="hl-5">vehicleFuel</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehiclevin"
+              id="vehiclevin"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicleVin()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicleVin</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// L91TRNWFV4TV61435</span><br/><span class="hl-5">vehicleVin</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehiclecolor"
+              id="vehiclecolor"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicleColor()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicleColor</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// blue</span><br/><span class="hl-5">vehicleColor</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#vehiclevrm"
+              id="vehiclevrm"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>vehicleVrm()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">vehicleVrm</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// GZ51DDM</span><br/><span class="hl-5">vehicleVrm</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomnumber"
+              id="randomnumber"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomNumber()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomNumber</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 25895</span><br/><span class="hl-5">randomNumber</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomfloat-min-number-max-number-fraction-number-"
+              id="randomfloat-min-number-max-number-fraction-number-"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4>
+                <code
+                  >randomFloat({ min?: number; max?: number: fraction?: number
+                  })</code
+                >
+              </h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomFloat</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 3212.9</span><br/><span class="hl-5">randomFloat</span><span class="hl-1">();</span><br/><br/><span class="hl-4">// 123.93</span><br/><span class="hl-5">randomFloat</span><span class="hl-1">({ </span><span class="hl-0">min:</span><span class="hl-1"> </span><span class="hl-6">110.12</span><span class="hl-1"> });</span><br/><br/><span class="hl-4">// 12.75</span><br/><span class="hl-5">randomFloat</span><span class="hl-1">({ </span><span class="hl-0">max:</span><span class="hl-1"> </span><span class="hl-6">14.12</span><span class="hl-1"> });</span><br/><br/><span class="hl-4">// 5478.12365</span><br/><span class="hl-5">randomFloat</span><span class="hl-1">({ </span><span class="hl-0">fraction:</span><span class="hl-1"> </span><span class="hl-6">5</span><span class="hl-1"> });</span><br/><br/><span class="hl-4">// 12.93</span><br/><span class="hl-5">randomFloat</span><span class="hl-1">({ </span><span class="hl-0">min:</span><span class="hl-1"> </span><span class="hl-6">8.85</span><span class="hl-1">, </span><span class="hl-0">max:</span><span class="hl-1"> </span><span class="hl-6">22.25</span><span class="hl-1"> });</span><br/><br/><span class="hl-4">// 32.5555</span><br/><span class="hl-5">randomFloat</span><span class="hl-1">({ </span><span class="hl-0">min:</span><span class="hl-1"> </span><span class="hl-6">8.85</span><span class="hl-1">, </span><span class="hl-0">max:</span><span class="hl-1"> </span><span class="hl-6">40.25</span><span class="hl-1">, </span><span class="hl-0">fraction:</span><span class="hl-1"> </span><span class="hl-6">4</span><span class="hl-1"> });</span>
+</code></pre>
+
+            <a
+              href="#randomarrayelement"
+              id="randomarrayelement"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomArrayElement()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomArrayElement</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// c</span><br/><span class="hl-5">randomArrayElement</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomarrayelements"
+              id="randomarrayelements"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomArrayElements()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomArrayElements</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// b</span><br/><span class="hl-5">randomArrayElements</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomobjectelement"
+              id="randomobjectelement"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomObjectElement()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomObjectElement</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// car</span><br/><span class="hl-5">randomObjectElement</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomuuid"
+              id="randomuuid"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomUuid()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomUuid</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 8c858281-f3bd-4547-89a1-d5422d552f49</span><br/><span class="hl-5">randomUuid</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomboolean"
+              id="randomboolean"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomBoolean()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomBoolean</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// true</span><br/><span class="hl-5">randomBoolean</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomword"
+              id="randomword"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomWord()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomWord</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Lane</span><br/><span class="hl-5">randomWord</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomwords"
+              id="randomwords"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomWords()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomWords</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// calculating engineer Paradigm</span><br/><span class="hl-5">randomWords</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomimage"
+              id="randomimage"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomImage()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomImage</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// http://placeimg.com/640/480/fashion</span><br/><span class="hl-5">randomImage</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomlocale"
+              id="randomlocale"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomLocale()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomLocale</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// es</span><br/><span class="hl-5">randomLocale</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomalpha"
+              id="randomalpha"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomAlpha()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomAlpha</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// a</span><br/><span class="hl-5">randomAlpha</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomalphanumeric"
+              id="randomalphanumeric"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomAlphaNumeric()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomAlphaNumeric</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// n</span><br/><span class="hl-5">randomAlphaNumeric</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#randomhexadecimal"
+              id="randomhexadecimal"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>randomHexaDecimal()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">randomHexaDecimal</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 0x9</span><br/><span class="hl-5">randomHexaDecimal</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#abbreviation"
+              id="abbreviation"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>abbreviation()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">abbreviation</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// IB</span><br/><span class="hl-5">abbreviation</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#adjective"
+              id="adjective"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>adjective()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">adjective</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// open-source</span><br/><span class="hl-5">adjective</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#noun"
+              id="noun"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>noun()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">noun</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// program</span><br/><span class="hl-5">noun</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#verb"
+              id="verb"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>verb()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">verb</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// transmit</span><br/><span class="hl-5">verb</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#ingverb"
+              id="ingverb"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>ingverb()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">ingverb</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// generating</span><br/><span class="hl-5">ingverb</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#phrase"
+              id="phrase"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>phrase()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">phrase</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Use the redundant AGP transmitter, then you can generate the 1080p circuit!</span><br/><span class="hl-5">phrase</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypenumber"
+              id="datatypenumber"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeNumber()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeNumber</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 78512</span><br/><span class="hl-5">datatypeNumber</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypefloat"
+              id="datatypefloat"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeFloat()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeFloat</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 10850.48</span><br/><span class="hl-5">datatypeFloat</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypedatetime"
+              id="datatypedatetime"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeDatetime()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeDatetime</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 2044-03-01T02:44:38.858Z</span><br/><span class="hl-5">datatypeDatetime</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypestring"
+              id="datatypestring"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeString()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeString</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 9l;Cczuop:</span><br/><span class="hl-5">datatypeString</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypeuuid"
+              id="datatypeuuid"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeUuid()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeUuid</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 2db5df9a-d57f-467d-aff1-f4f55003ffec</span><br/><span class="hl-5">datatypeUuid</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypeboolean"
+              id="datatypeboolean"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeBoolean()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeBoolean</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// false</span><br/><span class="hl-5">datatypeBoolean</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypehexadecimal"
+              id="datatypehexadecimal"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeHexaDecimal()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeHexaDecimal</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 0x1</span><br/><span class="hl-5">datatypeHexaDecimal</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypejson"
+              id="datatypejson"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeJson()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeJson</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// {&quot;foo&quot;:961,&quot;bar&quot;:15395,&quot;bike&quot;:84052,&quot;a&quot;:&quot;q{nV`XZSL:&quot;,&quot;b&quot;:&quot;Jf+!S%L7|a&quot;,&quot;name&quot;:44555,&quot;prop&quot;:&quot;1kZqZtUCi;&quot;}</span><br/><span class="hl-5">datatypeJson</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#datatypearray"
+              id="datatypearray"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>datatypeArray()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">datatypeArray</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// rcLGl`\39?,75339,]EY4r9w+oZ,Fo]JU&#39;!.6z,75966,37122,45736,s5G|iKoXEh,4I?g!H?|D!,gX2wM4w*SM</span><br/><span class="hl-5">datatypeArray</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#suffixes"
+              id="suffixes"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>suffixes()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">suffixes</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Inc,and Sons,LLC,Group</span><br/><span class="hl-5">suffixes</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#companyname"
+              id="companyname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>companyName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">companyName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Maggio, Wisoky and Blick</span><br/><span class="hl-5">companyName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#companysuffix"
+              id="companysuffix"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>companySuffix()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">companySuffix</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// and Sons</span><br/><span class="hl-5">companySuffix</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#catchphrase"
+              id="catchphrase"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>catchPhrase()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">catchPhrase</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Universal empowering product</span><br/><span class="hl-5">catchPhrase</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a href="#bs" id="bs" style="color: inherit; text-decoration: none">
+              <h4><code>bs()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bs</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// productize visionary mindshare</span><br/><span class="hl-5">bs</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#catchphraseadjective"
+              id="catchphraseadjective"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>catchPhraseAdjective()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">catchPhraseAdjective</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Persevering</span><br/><span class="hl-5">catchPhraseAdjective</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#catchphrasedescriptor"
+              id="catchphrasedescriptor"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>catchPhraseDescriptor()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">catchPhraseDescriptor</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// web-enabled</span><br/><span class="hl-5">catchPhraseDescriptor</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#catchphrasenoun"
+              id="catchphrasenoun"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>catchPhraseNoun()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">catchPhraseNoun</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// process improvement</span><br/><span class="hl-5">catchPhraseNoun</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#bsadjective"
+              id="bsadjective"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>bsAdjective()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bsAdjective</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// best-of-breed</span><br/><span class="hl-5">bsAdjective</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#bsbuzz"
+              id="bsbuzz"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>bsBuzz()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bsBuzz</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// synergize</span><br/><span class="hl-5">bsBuzz</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#bsnoun"
+              id="bsnoun"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>bsNoun()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">bsNoun</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// action-items</span><br/><span class="hl-5">bsNoun</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#department"
+              id="department"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>department()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">department</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Beauty</span><br/><span class="hl-5">department</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#productname"
+              id="productname"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>productName()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">productName</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Handmade Plastic Tuna</span><br/><span class="hl-5">productName</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#price"
+              id="price"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>price()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">price</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// 315.00</span><br/><span class="hl-5">price</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#productadjective"
+              id="productadjective"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>productAdjective()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">productAdjective</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Intelligent</span><br/><span class="hl-5">productAdjective</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#productmaterial"
+              id="productmaterial"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>productMaterial()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">productMaterial</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Concrete</span><br/><span class="hl-5">productMaterial</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#product"
+              id="product"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>product()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">product</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// Soap</span><br/><span class="hl-5">product</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#productdescription"
+              id="productdescription"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>productDescription()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">productDescription</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients</span><br/><span class="hl-5">productDescription</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#rgb-alpha-boolean-"
+              id="rgb-alpha-boolean-"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>rgb({ alpha: boolean })</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">rgb</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// rgb(255,255,255)</span><br/><span class="hl-5">rgb</span><span class="hl-1">();</span><br/><br/><span class="hl-4">// rgba(255,255,255,0.5)</span><br/><span class="hl-5">rgb</span><span class="hl-1">({ </span><span class="hl-0">alpha:</span><span class="hl-1"> </span><span class="hl-9">true</span><span class="hl-1"> });</span>
+</code></pre>
+
+            <a
+              href="#hex"
+              id="hex"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>hex()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">hex</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">// #ffffff</span><br/><span class="hl-5">hex</span><span class="hl-1">();</span>
+</code></pre>
+
+            <a
+              href="#programminglanguage"
+              id="programminglanguage"
+              style="color: inherit; text-decoration: none"
+            >
+              <h4><code>programmingLanguage()</code></h4>
+            </a>
+            <pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">programmingLanguage</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@ngneat/falso&#39;</span><span class="hl-1">;</span><br/><span class="hl-1">        </span><br/><span class="hl-4">// TypeScript</span><br/><span class="hl-5">programmingLanguage</span><span class="hl-1">()</span>
+</code></pre>
+            <p>Credit: Some of the data was generated by faker.js</p>
+            <div>
+              Icons made by
+              <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+              <a href="https://www.flaticon.com/" title="Flaticon"
+                >www.flaticon.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+          <nav class="tsd-navigation primary">
+            <ul>
+              <li class="current"><a href="modules.html">Exports</a></li>
+            </ul>
+          </nav>
+          <nav class="tsd-navigation secondary menu-sticky">
+            <ul>
+              <li class="tsd-kind-function">
+                <a href="modules.html#abbreviation" class="tsd-kind-icon"
+                  >abbreviation</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#account" class="tsd-kind-icon">account</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#accountName" class="tsd-kind-icon"
+                  >account<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#adjective" class="tsd-kind-icon"
+                  >adjective</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#amount" class="tsd-kind-icon">amount</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#animalType" class="tsd-kind-icon"
+                  >animal<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#avatar" class="tsd-kind-icon">avatar</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bear" class="tsd-kind-icon">bear</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bic" class="tsd-kind-icon">bic</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bird" class="tsd-kind-icon">bird</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bitcoinAddress" class="tsd-kind-icon"
+                  >bitcoin<wbr />Address</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bs" class="tsd-kind-icon">bs</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bsAdjective" class="tsd-kind-icon"
+                  >bs<wbr />Adjective</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bsBuzz" class="tsd-kind-icon"
+                  >bs<wbr />Buzz</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#bsNoun" class="tsd-kind-icon"
+                  >bs<wbr />Noun</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#cardinalDirection" class="tsd-kind-icon"
+                  >cardinal<wbr />Direction</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#cat" class="tsd-kind-icon">cat</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#catchPhrase" class="tsd-kind-icon"
+                  >catch<wbr />Phrase</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a
+                  href="modules.html#catchPhraseAdjective"
+                  class="tsd-kind-icon"
+                  >catch<wbr />Phrase<wbr />Adjective</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a
+                  href="modules.html#catchPhraseDescriptor"
+                  class="tsd-kind-icon"
+                  >catch<wbr />Phrase<wbr />Descriptor</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#catchPhraseNoun" class="tsd-kind-icon"
+                  >catch<wbr />Phrase<wbr />Noun</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#cetacean" class="tsd-kind-icon"
+                  >cetacean</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#city" class="tsd-kind-icon">city</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#cityName" class="tsd-kind-icon"
+                  >city<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#cityPrefix" class="tsd-kind-icon"
+                  >city<wbr />Prefix</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#citySuffix" class="tsd-kind-icon"
+                  >city<wbr />Suffix</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#color" class="tsd-kind-icon">color</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#commonFileExt" class="tsd-kind-icon"
+                  >common<wbr />File<wbr />Ext</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#commonFileName" class="tsd-kind-icon"
+                  >common<wbr />File<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#commonFileType" class="tsd-kind-icon"
+                  >common<wbr />File<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#companyName" class="tsd-kind-icon"
+                  >company<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#companySuffix" class="tsd-kind-icon"
+                  >company<wbr />Suffix</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#contextualCard" class="tsd-kind-icon"
+                  >contextual<wbr />Card</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#country" class="tsd-kind-icon">country</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#countryCode" class="tsd-kind-icon"
+                  >country<wbr />Code</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#county" class="tsd-kind-icon">county</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#cow" class="tsd-kind-icon">cow</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#createCard" class="tsd-kind-icon"
+                  >create<wbr />Card</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#createTransaction" class="tsd-kind-icon"
+                  >create<wbr />Transaction</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#creditCardCVV" class="tsd-kind-icon"
+                  >credit<wbr />CardCVV</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#creditCardNumber" class="tsd-kind-icon"
+                  >credit<wbr />Card<wbr />Number</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#crocodilia" class="tsd-kind-icon"
+                  >crocodilia</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#currencyCode" class="tsd-kind-icon"
+                  >currency<wbr />Code</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#currencyName" class="tsd-kind-icon"
+                  >currency<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#currencySymbol" class="tsd-kind-icon"
+                  >currency<wbr />Symbol</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#databaseCollation" class="tsd-kind-icon"
+                  >database<wbr />Collation</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#databaseColumn" class="tsd-kind-icon"
+                  >database<wbr />Column</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#databaseEngine" class="tsd-kind-icon"
+                  >database<wbr />Engine</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#databaseType" class="tsd-kind-icon"
+                  >database<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeArray" class="tsd-kind-icon"
+                  >datatype<wbr />Array</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeBoolean" class="tsd-kind-icon"
+                  >datatype<wbr />Boolean</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeDatetime" class="tsd-kind-icon"
+                  >datatype<wbr />Datetime</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeFloat" class="tsd-kind-icon"
+                  >datatype<wbr />Float</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeHexaDecimal" class="tsd-kind-icon"
+                  >datatype<wbr />Hexa<wbr />Decimal</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeJson" class="tsd-kind-icon"
+                  >datatype<wbr />Json</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeNumber" class="tsd-kind-icon"
+                  >datatype<wbr />Number</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeString" class="tsd-kind-icon"
+                  >datatype<wbr />String</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#datatypeUuid" class="tsd-kind-icon"
+                  >datatype<wbr />Uuid</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#department" class="tsd-kind-icon"
+                  >department</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#direction" class="tsd-kind-icon"
+                  >direction</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#directoryPath" class="tsd-kind-icon"
+                  >directory<wbr />Path</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#dog" class="tsd-kind-icon">dog</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#domainName" class="tsd-kind-icon"
+                  >domain<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#domainSuffix" class="tsd-kind-icon"
+                  >domain<wbr />Suffix</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#domainWord" class="tsd-kind-icon"
+                  >domain<wbr />Word</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#email" class="tsd-kind-icon">email</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#ethereumAddress" class="tsd-kind-icon"
+                  >ethereum<wbr />Address</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#exampleEmail" class="tsd-kind-icon"
+                  >example<wbr />Email</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#fileExt" class="tsd-kind-icon"
+                  >file<wbr />Ext</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#fileName" class="tsd-kind-icon"
+                  >file<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#filePath" class="tsd-kind-icon"
+                  >file<wbr />Path</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#fileType" class="tsd-kind-icon"
+                  >file<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#findName" class="tsd-kind-icon"
+                  >find<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#firstName" class="tsd-kind-icon"
+                  >first<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#fish" class="tsd-kind-icon">fish</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#gender" class="tsd-kind-icon">gender</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#genre" class="tsd-kind-icon">genre</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#gitBranch" class="tsd-kind-icon"
+                  >git<wbr />Branch</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#gitCommitEntry" class="tsd-kind-icon"
+                  >git<wbr />Commit<wbr />Entry</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#gitCommitMessage" class="tsd-kind-icon"
+                  >git<wbr />Commit<wbr />Message</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#gitCommitSha" class="tsd-kind-icon"
+                  >git<wbr />Commit<wbr />Sha</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#gitShortSha" class="tsd-kind-icon"
+                  >git<wbr />Short<wbr />Sha</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#horse" class="tsd-kind-icon">horse</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#httpMethod" class="tsd-kind-icon"
+                  >http<wbr />Method</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#iban" class="tsd-kind-icon">iban</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#img" class="tsd-kind-icon">img</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgAbstract" class="tsd-kind-icon"
+                  >img<wbr />Abstract</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgAnimals" class="tsd-kind-icon"
+                  >img<wbr />Animals</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgAvatar" class="tsd-kind-icon"
+                  >img<wbr />Avatar</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgBusiness" class="tsd-kind-icon"
+                  >img<wbr />Business</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgCats" class="tsd-kind-icon"
+                  >img<wbr />Cats</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgCity" class="tsd-kind-icon"
+                  >img<wbr />City</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgDataUri" class="tsd-kind-icon"
+                  >img<wbr />Data<wbr />Uri</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgFashion" class="tsd-kind-icon"
+                  >img<wbr />Fashion</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgFood" class="tsd-kind-icon"
+                  >img<wbr />Food</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgImageUrl" class="tsd-kind-icon"
+                  >img<wbr />Image<wbr />Url</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgLorempixel" class="tsd-kind-icon"
+                  >img<wbr />Lorempixel</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgNature" class="tsd-kind-icon"
+                  >img<wbr />Nature</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgNightlife" class="tsd-kind-icon"
+                  >img<wbr />Nightlife</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgPeople" class="tsd-kind-icon"
+                  >img<wbr />People</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgSports" class="tsd-kind-icon"
+                  >img<wbr />Sports</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgTechnics" class="tsd-kind-icon"
+                  >img<wbr />Technics</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#imgTransport" class="tsd-kind-icon"
+                  >img<wbr />Transport</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#ingverb" class="tsd-kind-icon">ingverb</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#insect" class="tsd-kind-icon">insect</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#ip" class="tsd-kind-icon">ip</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#ipv6" class="tsd-kind-icon">ipv6</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#jobArea" class="tsd-kind-icon"
+                  >job<wbr />Area</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#jobDescriptor" class="tsd-kind-icon"
+                  >job<wbr />Descriptor</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#jobTitle" class="tsd-kind-icon"
+                  >job<wbr />Title</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#jobType" class="tsd-kind-icon"
+                  >job<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#lastName" class="tsd-kind-icon"
+                  >last<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#latitude" class="tsd-kind-icon"
+                  >latitude</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#lines" class="tsd-kind-icon">lines</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#lion" class="tsd-kind-icon">lion</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#litecoinAddress" class="tsd-kind-icon"
+                  >litecoin<wbr />Address</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#longitude" class="tsd-kind-icon"
+                  >longitude</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#mac" class="tsd-kind-icon">mac</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#mask" class="tsd-kind-icon">mask</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#middleName" class="tsd-kind-icon"
+                  >middle<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#mimeType" class="tsd-kind-icon"
+                  >mime<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#nearbyGPSCoordinate" class="tsd-kind-icon"
+                  >nearbyGPSCoordinate</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#noun" class="tsd-kind-icon">noun</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#ordinalDirection" class="tsd-kind-icon"
+                  >ordinal<wbr />Direction</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#paragraph" class="tsd-kind-icon"
+                  >paragraph</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#paragraphs" class="tsd-kind-icon"
+                  >paragraphs</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#password" class="tsd-kind-icon"
+                  >password</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#phoneNumber" class="tsd-kind-icon"
+                  >phone<wbr />Number</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#phoneNumberFormat" class="tsd-kind-icon"
+                  >phone<wbr />Number<wbr />Format</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#phrase" class="tsd-kind-icon">phrase</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#port" class="tsd-kind-icon">port</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#prefix" class="tsd-kind-icon">prefix</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#price" class="tsd-kind-icon">price</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#product" class="tsd-kind-icon">product</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#productAdjective" class="tsd-kind-icon"
+                  >product<wbr />Adjective</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#productDescription" class="tsd-kind-icon"
+                  >product<wbr />Description</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#productMaterial" class="tsd-kind-icon"
+                  >product<wbr />Material</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#productName" class="tsd-kind-icon"
+                  >product<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#programmingLanguage" class="tsd-kind-icon"
+                  >programming<wbr />Language</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#protocol" class="tsd-kind-icon"
+                  >protocol</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#rabbit" class="tsd-kind-icon">rabbit</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomAlpha" class="tsd-kind-icon"
+                  >random<wbr />Alpha</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomAlphaNumeric" class="tsd-kind-icon"
+                  >random<wbr />Alpha<wbr />Numeric</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomArrayElement" class="tsd-kind-icon"
+                  >random<wbr />Array<wbr />Element</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomArrayElements" class="tsd-kind-icon"
+                  >random<wbr />Array<wbr />Elements</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomBoolean" class="tsd-kind-icon"
+                  >random<wbr />Boolean</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomFloat" class="tsd-kind-icon"
+                  >random<wbr />Float</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomHexaDecimal" class="tsd-kind-icon"
+                  >random<wbr />Hexa<wbr />Decimal</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomImage" class="tsd-kind-icon"
+                  >random<wbr />Image</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomLocale" class="tsd-kind-icon"
+                  >random<wbr />Locale</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomNumber" class="tsd-kind-icon"
+                  >random<wbr />Number</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomObjectElement" class="tsd-kind-icon"
+                  >random<wbr />Object<wbr />Element</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomUuid" class="tsd-kind-icon"
+                  >random<wbr />Uuid</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomWord" class="tsd-kind-icon"
+                  >random<wbr />Word</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#randomWords" class="tsd-kind-icon"
+                  >random<wbr />Words</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#rgb" class="tsd-kind-icon">rgb</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#routingNumber" class="tsd-kind-icon"
+                  >routing<wbr />Number</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#secondaryAddress" class="tsd-kind-icon"
+                  >secondary<wbr />Address</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#seed" class="tsd-kind-icon">seed</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#semver" class="tsd-kind-icon">semver</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#sentence" class="tsd-kind-icon"
+                  >sentence</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#sentences" class="tsd-kind-icon"
+                  >sentences</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#slug" class="tsd-kind-icon">slug</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#snake" class="tsd-kind-icon">snake</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#state" class="tsd-kind-icon">state</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#stateAbbr" class="tsd-kind-icon"
+                  >state<wbr />Abbr</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#streetAddress" class="tsd-kind-icon"
+                  >street<wbr />Address</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#streetName" class="tsd-kind-icon"
+                  >street<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#streetPrefix" class="tsd-kind-icon"
+                  >street<wbr />Prefix</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#streetSuffix" class="tsd-kind-icon"
+                  >street<wbr />Suffix</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#suffix" class="tsd-kind-icon">suffix</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#suffixes" class="tsd-kind-icon"
+                  >suffixes</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#text" class="tsd-kind-icon">text</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#timeZone" class="tsd-kind-icon"
+                  >time<wbr />Zone</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#title" class="tsd-kind-icon">title</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a
+                  href="modules.html#transactionDescription"
+                  class="tsd-kind-icon"
+                  >transaction<wbr />Description</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#transactionType" class="tsd-kind-icon"
+                  >transaction<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#url" class="tsd-kind-icon">url</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#userAgent" class="tsd-kind-icon"
+                  >user<wbr />Agent</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#userCard" class="tsd-kind-icon"
+                  >user<wbr />Card</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#userName" class="tsd-kind-icon"
+                  >user<wbr />Name</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicle" class="tsd-kind-icon">vehicle</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicleColor" class="tsd-kind-icon"
+                  >vehicle<wbr />Color</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicleFuel" class="tsd-kind-icon"
+                  >vehicle<wbr />Fuel</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicleManufacturer" class="tsd-kind-icon"
+                  >vehicle<wbr />Manufacturer</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicleModel" class="tsd-kind-icon"
+                  >vehicle<wbr />Model</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicleType" class="tsd-kind-icon"
+                  >vehicle<wbr />Type</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicleVin" class="tsd-kind-icon"
+                  >vehicle<wbr />Vin</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#vehicleVrm" class="tsd-kind-icon"
+                  >vehicle<wbr />Vrm</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#verb" class="tsd-kind-icon">verb</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#word" class="tsd-kind-icon">word</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#words" class="tsd-kind-icon">words</a>
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#zipCode" class="tsd-kind-icon"
+                  >zip<wbr />Code</a
+                >
+              </li>
+              <li class="tsd-kind-function">
+                <a href="modules.html#zipCodeByState" class="tsd-kind-icon"
+                  >zip<wbr />Code<wbr />By<wbr />State</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <footer class="with-border-bottom">
+      <div class="container">
+        <h2>Settings</h2>
+        <p>
+          Theme
+          <select id="theme">
+            <option value="os">OS</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </p>
+      </div>
+    </footer>
+    <div class="container tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+    <script src="assets/main.js"></script>
+  </body>
+</html>

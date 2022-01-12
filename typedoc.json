@@ -1,0 +1,4 @@
+{
+  "entryPoints": ["packages/falso/src/index.ts"],
+  "out": "doc"
+}
