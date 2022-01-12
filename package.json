@@ -7,8 +7,7 @@
     "new": "nx workspace-generator falso",
     "c": "cz",
     "prepare": "husky install",
-    "test": "nx test falso",
-    "translate": " npx tsc tools/executors/translate/index && nx run falso:translate"
+    "test": "nx test falso"
   },
   "workspaces": [
     "packages/falso"
