@@ -13,9 +13,7 @@
     "packages/falso"
   ],
   "dependencies": {
-    "seedrandom": "^3.0.5",
-    "tslib": "2.0.0",
-    "uuid": "^8.3.2"
+    "tslib": "2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
@@ -36,8 +34,6 @@
     "@types/estree": "^0.0.50",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
-    "@types/seedrandom": "^3.0.1",
-    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
     "commitizen": "4.2.4",
