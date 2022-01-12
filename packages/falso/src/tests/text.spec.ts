@@ -33,14 +33,6 @@ describe('text', () => {
         expect(result?.length).toEqual(5000);
       });
     });
-
-    describe('charCount of 5001', () => {
-      it('should throw max value error', () => {
-        const result = () => text({ charCount: 5001 });
-
-        expect(result).toThrow('Character count must be less than 5000');
-      });
-    });
   });
 
   describe('charCount is NOT passed', () => {
