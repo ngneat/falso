@@ -1,4 +1,3 @@
-
 <p align="center">
  <img width="20%" height="20%" src="logo.png">
 </p>
@@ -1036,16 +1035,16 @@ paragraphs()
 ```ts
 import { text } from '@ngneat/falso';
 
-// Lorem ipsu
+// fugiat qua
 text();
 
-// Lorem ipsum dolor sit amet, co
-text({ charCount: 30 });
-
+// unde doloribus maiores vel ipsum, occaecati a omni
+text({ charCount: 50 });
 ```
-| Property               | Type   | Description                                                                                  |
-|------------------------|--------|----------------------------------------------------------------------------------------------|
-| charCount _(optional)_ | number | This takes an integer between 1 and 5000 and will dictate the total characters in the string |
+
+| Property               | Type   | Description                                                                             |
+| ---------------------- | ------ | --------------------------------------------------------------------------------------- |
+| charCount _(optional)_ | number | This takes an integer to set the total characters in the returned string (Min value: 1) |
 
 #### `lines()`
 
