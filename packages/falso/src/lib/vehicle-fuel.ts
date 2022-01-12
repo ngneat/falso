@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './vehicle-fuel.json';
 
 export function vehicleFuel() {
-  return rand(['Gasoline', 'Hybrid', 'Electric', 'Diesel']);
+  return rand(data);
 }

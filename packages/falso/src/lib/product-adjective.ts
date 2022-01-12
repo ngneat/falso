@@ -1,23 +1,6 @@
 import { rand } from './core';
+import { data } from './product-adjective.json';
 
 export function productAdjective() {
-  return rand([
-    'Awesome',
-    'Rustic',
-    'Small',
-    'Gorgeous',
-    'Fantastic',
-    'Sleek',
-    'Intelligent',
-    'Unbranded',
-    'Refined',
-    'Licensed',
-    'Generic',
-    'Practical',
-    'Ergonomic',
-    'Handcrafted',
-    'Tasty',
-    'Handmade',
-    'Incredible',
-  ]);
+  return rand(data);
 }

@@ -1,17 +1,6 @@
 import { rand } from './core';
+import { data } from './vehicle-type.json';
 
 export function vehicleType() {
-  return rand([
-    'Sedan',
-    'Crew Cab Pickup',
-    'Minivan',
-    'Extended Cab Pickup',
-    'Wagon',
-    'SUV',
-    'Cargo Van',
-    'Coupe',
-    'Hatchback',
-    'Convertible',
-    'Passenger Van',
-  ]);
+  return rand(data);
 }

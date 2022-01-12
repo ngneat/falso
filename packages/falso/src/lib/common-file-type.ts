@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './common-file-type.json';
 
 export function commonFileType() {
-  return rand(['video', 'application', 'text', 'image', 'audio']);
+  return rand(data);
 }

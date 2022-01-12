@@ -1,14 +1,6 @@
 import { rand } from './core';
+import { data } from './account-name.json';
 
 export function accountName() {
-  return rand([
-    'Personal Loan Account',
-    'Home Loan Account',
-    'Investment Account',
-    'Savings Account',
-    'Credit Card Account',
-    'Checking Account',
-    'Auto Loan Account',
-    'Money Market Account',
-  ]);
+  return rand(data);
 }

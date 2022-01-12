@@ -40,6 +40,11 @@ export default async function translateExecutor(
 
     // for (let filePath of options.path) {
     for (let filePath of readdirSync(projectLibPath)) {
+      await new Promise<void>((resolve, reject) =>
+        setTimeout(() => {
+          resolve();
+        }, 100)
+      );
       const rootFilePath = join(projectLibPath, filePath);
       const fileStats = statSync(rootFilePath);
 
@@ -53,12 +58,12 @@ export default async function translateExecutor(
 
           if (
             existsSync(
-              rootFilePath.replace(TYPE_SCRIPT_FILE_EXTENSION, '.i18n.json')
+              rootFilePath.replace(TYPE_SCRIPT_FILE_EXTENSION, '.json')
             )
           ) {
             stringLiterals = JSON.parse(
               readFileSync(
-                rootFilePath.replace(TYPE_SCRIPT_FILE_EXTENSION, '.i18n.json')
+                rootFilePath.replace(TYPE_SCRIPT_FILE_EXTENSION, '.json')
               ).toString()
             ).data;
           }
