@@ -1,18 +1,6 @@
 import { rand } from './core';
+import { data } from './month.json';
 
 export function month() {
-  return rand([
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ]);
+  return rand(data);
 }

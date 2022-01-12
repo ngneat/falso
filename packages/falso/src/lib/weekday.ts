@@ -1,13 +1,6 @@
 import { rand } from './core';
+import { data } from './weekday.json';
 
 export function weekday() {
-  return rand([
-    'Monday',
-    'Tuesday',
-    'Wedneday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday',
-  ]);
+  return rand(data);
 }
