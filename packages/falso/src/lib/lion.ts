@@ -1,13 +1,6 @@
 import { rand } from './core';
+import { data } from './lion.i18n.json';
 
 export function lion() {
-  return rand([
-    'Cape lion',
-    'Transvaal lion',
-    'Masai Lion',
-    'Barbary Lion',
-    'West African Lion',
-    'Northeast Congo Lion',
-    'Asiatic Lion',
-  ]);
+  return rand(data);
 }

@@ -1,44 +1,6 @@
 import { rand } from './core';
+import { data } from './currency-symbol.i18n.json';
 
 export function currencySymbol() {
-  return rand([
-    'B/.',
-    '£',
-    'Ls',
-    '₡',
-    'NT$',
-    'лв',
-    '$',
-    'R',
-    'Lt',
-    '﷼',
-    'kr',
-    'KM',
-    '៛',
-    'Bs',
-    '₹',
-    'Q',
-    'ƒ',
-    'R$',
-    '₨',
-    'ден',
-    'p.',
-    '₺',
-    'Дин.',
-    'P',
-    'RD$',
-    'L',
-    'Ft',
-    'CHF',
-    '₩',
-    'Php',
-    'S/.',
-    '₭',
-    'RM',
-    '€',
-    'Lek',
-    '¥',
-    '؋',
-    '₦',
-  ]);
+  return rand(data);
 }

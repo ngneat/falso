@@ -1,18 +1,6 @@
 import { rand } from './core';
+import { data } from './file-type.i18n.json';
 
 export function fileType() {
-  return rand([
-    'model',
-    'x-conference',
-    'x-shader',
-    'video',
-    'application',
-    'message',
-    'multipart',
-    'font',
-    'audio',
-    'image',
-    'chemical',
-    'text',
-  ]);
+  return rand(data);
 }

@@ -1,41 +1,6 @@
 import { rand } from './core';
+import { data } from './job-area.i18n.json';
 
 export function jobArea() {
-  return rand([
-    'Brand',
-    'Tactics',
-    'Markets',
-    'Usability',
-    'Operations',
-    'Integration',
-    'Identity',
-    'Marketing',
-    'Creative',
-    'Response',
-    'Branding',
-    'Quality',
-    'Program',
-    'Accounts',
-    'Accountability',
-    'Interactions',
-    'Security',
-    'Applications',
-    'Configuration',
-    'Factors',
-    'Paradigm',
-    'Division',
-    'Group',
-    'Data',
-    'Directives',
-    'Optimization',
-    'Web',
-    'Functionality',
-    'Research',
-    'Intranet',
-    'Solutions',
-    'Mobility',
-    'Communications',
-    'Metrics',
-    'Assurance',
-  ]);
+  return rand(data);
 }

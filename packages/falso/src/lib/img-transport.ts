@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './img-transport.i18n.json';
 
 export function imgTransport() {
-  return rand(['http://placeimg.com/640/480/transport']);
+  return rand(data);
 }

@@ -44,24 +44,33 @@ export default async function translateExecutor(
         if (!stringLiterals?.length) {
           console.info(`No string-literals found in file ${rootFilePath}\n`);
 
-          stringLiterals = JSON.parse(
-            readFileSync(
+          if (
+            existsSync(
               rootFilePath.replace(TYPE_SCRIPT_FILE_EXTENSION, '.i18n.json')
-            ).toString()
-          ).data;
+            )
+          ) {
+            stringLiterals = JSON.parse(
+              readFileSync(
+                rootFilePath.replace(TYPE_SCRIPT_FILE_EXTENSION, '.i18n.json')
+              ).toString()
+            ).data;
+          }
         }
-        // create i18n.json for existing files
-        await writeTranslation(options, stringLiterals, sourceFile, filePath);
 
-        // and then for languages
-        for (const language of options.languages) {
-          await writeTranslation(
-            options,
-            stringLiterals,
-            sourceFile,
-            filePath,
-            language
-          );
+        if (stringLiterals?.length) {
+          // create i18n.json for existing files
+          await writeTranslation(options, stringLiterals, sourceFile, filePath);
+
+          // and then for languages
+          for (const language of options.languages) {
+            await writeTranslation(
+              options,
+              stringLiterals,
+              sourceFile,
+              filePath,
+              language
+            );
+          }
         }
       } else {
         console.error(`File: ${rootFilePath} does not exist or is not file!`);
@@ -75,6 +84,7 @@ export default async function translateExecutor(
     }
 
     // write export statements everywhere
+    // TODO: Un-comment below
     writeExportStatements(options, translationIndex);
 
     console.info(

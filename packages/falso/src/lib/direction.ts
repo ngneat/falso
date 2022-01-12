@@ -1,14 +1,6 @@
 import { rand } from './core';
+import { data } from './direction.i18n.json';
 
 export function direction() {
-  return rand([
-    'Southwest',
-    'North',
-    'Northeast',
-    'Northwest',
-    'South',
-    'West',
-    'East',
-    'Southeast',
-  ]);
+  return rand(data);
 }

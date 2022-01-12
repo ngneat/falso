@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './img-food.i18n.json';
 
 export function imgFood() {
-  return rand(['http://placeimg.com/640/480/food']);
+  return rand(data);
 }

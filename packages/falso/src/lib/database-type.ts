@@ -1,29 +1,6 @@
 import { rand } from './core';
+import { data } from './database-type.i18n.json';
 
 export function databaseType() {
-  return rand([
-    'tinyint',
-    'date',
-    'timestamp',
-    'set',
-    'datetime',
-    'enum',
-    'binary',
-    'bigint',
-    'point',
-    'smallint',
-    'text',
-    'bit',
-    'decimal',
-    'varchar',
-    'mediumint',
-    'double',
-    'time',
-    'blob',
-    'geometry',
-    'boolean',
-    'serial',
-    'real',
-    'float',
-  ]);
+  return rand(data);
 }

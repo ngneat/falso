@@ -1,30 +1,6 @@
 import { rand } from './core';
+import { data } from './noun.i18n.json';
 
 export function noun() {
-  return rand([
-    'monitor',
-    'application',
-    'panel',
-    'card',
-    'transmitter',
-    'bandwidth',
-    'driver',
-    'capacitor',
-    'feed',
-    'firewall',
-    'hard drive',
-    'system',
-    'bus',
-    'circuit',
-    'interface',
-    'matrix',
-    'program',
-    'sensor',
-    'alarm',
-    'array',
-    'microchip',
-    'port',
-    'pixel',
-    'protocol',
-  ]);
+  return rand(data);
 }

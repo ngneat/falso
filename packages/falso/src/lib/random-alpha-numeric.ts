@@ -1,39 +1,6 @@
 import { rand } from './core';
+import { data } from './random-alpha-numeric.i18n.json';
 
 export function randomAlphaNumeric() {
-  return rand([
-    'l',
-    'c',
-    '8',
-    'k',
-    '1',
-    's',
-    'p',
-    '5',
-    'd',
-    '6',
-    'y',
-    'g',
-    'e',
-    '0',
-    'n',
-    '2',
-    'h',
-    'j',
-    'w',
-    't',
-    'i',
-    'x',
-    'f',
-    '3',
-    'm',
-    'r',
-    'b',
-    'q',
-    'u',
-    '7',
-    'a',
-    'z',
-    'o',
-  ]);
+  return rand(data);
 }

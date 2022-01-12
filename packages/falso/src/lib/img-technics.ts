@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './img-technics.i18n.json';
 
 export function imgTechnics() {
-  return rand(['http://placeimg.com/640/480/technics']);
+  return rand(data);
 }

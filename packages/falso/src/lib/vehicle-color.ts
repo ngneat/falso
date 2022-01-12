@@ -1,37 +1,6 @@
 import { rand } from './core';
+import { data } from './vehicle-color.i18n.json';
 
 export function vehicleColor() {
-  return rand([
-    'olive',
-    'salmon',
-    'pink',
-    'lime',
-    'blue',
-    'yellow',
-    'silver',
-    'cyan',
-    'black',
-    'plum',
-    'orchid',
-    'azure',
-    'magenta',
-    'violet',
-    'grey',
-    'lavender',
-    'turquoise',
-    'red',
-    'fuchsia',
-    'purple',
-    'white',
-    'maroon',
-    'green',
-    'gold',
-    'teal',
-    'indigo',
-    'tan',
-    'orange',
-    'mint green',
-    'ivory',
-    'sky blue',
-  ]);
+  return rand(data);
 }

@@ -1,23 +1,6 @@
 import { rand } from './core';
+import { data } from './city-suffix.i18n.json';
 
 export function citySuffix() {
-  return rand([
-    'side',
-    'fort',
-    'furt',
-    'view',
-    'burgh',
-    'bury',
-    'ton',
-    'land',
-    'mouth',
-    'port',
-    'ville',
-    'stad',
-    'chester',
-    'borough',
-    'haven',
-    'shire',
-    'town',
-  ]);
+  return rand(data);
 }

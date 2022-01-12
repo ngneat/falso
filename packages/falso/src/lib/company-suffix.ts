@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './company-suffix.i18n.json';
 
 export function companySuffix() {
-  return rand(['LLC', 'and Sons', 'Group', 'Inc']);
+  return rand(data);
 }

@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './domain-suffix.i18n.json';
 
 export function domainSuffix() {
-  return rand(['org', 'biz', 'com', 'net', 'name', 'info']);
+  return rand(data);
 }

@@ -1,20 +1,6 @@
 import { rand } from './core';
+import { data } from './database-column.i18n.json';
 
 export function databaseColumn() {
-  return rand([
-    'comment',
-    'group',
-    'password',
-    'token',
-    'phone',
-    'title',
-    'status',
-    'id',
-    'name',
-    'updatedAt',
-    'category',
-    'email',
-    'avatar',
-    'createdAt',
-  ]);
+  return rand(data);
 }

@@ -1,28 +1,6 @@
 import { rand } from './core';
+import { data } from './department.i18n.json';
 
 export function department() {
-  return rand([
-    'Games',
-    'Automotive',
-    'Music',
-    'Home',
-    'Movies',
-    'Health',
-    'Sports',
-    'Garden',
-    'Baby',
-    'Kids',
-    'Toys',
-    'Computers',
-    'Clothing',
-    'Outdoors',
-    'Shoes',
-    'Jewelery',
-    'Industrial',
-    'Electronics',
-    'Tools',
-    'Grocery',
-    'Beauty',
-    'Books',
-  ]);
+  return rand(data);
 }

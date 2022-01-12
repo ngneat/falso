@@ -1,45 +1,6 @@
 import { rand } from './core';
+import { data } from './bs-noun.i18n.json';
 
 export function bsNoun() {
-  return rand([
-    'technologies',
-    'e-tailers',
-    'solutions',
-    'models',
-    'markets',
-    'eyeballs',
-    'users',
-    'systems',
-    'web services',
-    'channels',
-    'functionalities',
-    'metrics',
-    'mindshare',
-    'schemas',
-    'partnerships',
-    'infomediaries',
-    'web-readiness',
-    'action-items',
-    'supply-chains',
-    'applications',
-    'relationships',
-    'platforms',
-    'e-services',
-    'vortals',
-    'interfaces',
-    'architectures',
-    'communities',
-    'deliverables',
-    'paradigms',
-    'niches',
-    'bandwidth',
-    'e-commerce',
-    'synergies',
-    'networks',
-    'e-markets',
-    'convergence',
-    'initiatives',
-    'portals',
-    'blockchains',
-  ]);
+  return rand(data);
 }

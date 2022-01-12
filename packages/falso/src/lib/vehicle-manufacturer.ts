@@ -1,37 +1,6 @@
 import { rand } from './core';
+import { data } from './vehicle-manufacturer.i18n.json';
 
 export function vehicleManufacturer() {
-  return rand([
-    'Hyundai',
-    'Volvo',
-    'Smart',
-    'Rolls Royce',
-    'Dodge',
-    'Honda',
-    'Porsche',
-    'Mercedes Benz',
-    'Volkswagen',
-    'Aston Martin',
-    'Bugatti',
-    'Chrysler',
-    'Audi',
-    'Bentley',
-    'Nissan',
-    'Ford',
-    'Ferrari',
-    'Mazda',
-    'Maserati',
-    'Jaguar',
-    'Lamborghini',
-    'Jeep',
-    'Toyota',
-    'Land Rover',
-    'Cadillac',
-    'Fiat',
-    'Polestar',
-    'Kia',
-    'Chevrolet',
-    'Tesla',
-    'Mini',
-  ]);
+  return rand(data);
 }

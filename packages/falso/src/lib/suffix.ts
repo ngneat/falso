@@ -1,17 +1,6 @@
 import { rand } from './core';
+import { data } from './suffix.i18n.json';
 
 export function suffix() {
-  return rand([
-    'PhD',
-    'III',
-    'II',
-    'Sr.',
-    'V',
-    'DDS',
-    'MD',
-    'I',
-    'Jr.',
-    'IV',
-    'DVM',
-  ]);
+  return rand(data);
 }

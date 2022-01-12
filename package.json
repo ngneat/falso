@@ -7,7 +7,7 @@
     "c": "cz",
     "prepare": "husky install",
     "test": "echo 'test'",
-    "translate": "nx run falso:translate"
+    "translate": "npx tsc tools/executors/translate/index && nx run falso:translate"
   },
   "dependencies": {
     "tslib": "2.0.0"
