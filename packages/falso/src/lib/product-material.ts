@@ -1,17 +1,6 @@
 import { rand } from './core';
+import { data } from './product-material.json';
 
 export function productMaterial() {
-  return rand([
-    'Metal',
-    'Plastic',
-    'Rubber',
-    'Frozen',
-    'Soft',
-    'Concrete',
-    'Granite',
-    'Fresh',
-    'Steel',
-    'Cotton',
-    'Wooden',
-  ]);
+  return rand(data);
 }

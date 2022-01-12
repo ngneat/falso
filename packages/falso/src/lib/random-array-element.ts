@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './random-array-element.json';
 
 export function randomArrayElement() {
-  return rand(['a', 'b', 'c']);
+  return rand(data);
 }

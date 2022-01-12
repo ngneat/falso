@@ -1,24 +1,6 @@
 import { rand } from './core';
+import { data } from './verb.json';
 
 export function verb() {
-  return rand([
-    'bypass',
-    'index',
-    'transmit',
-    'parse',
-    'synthesize',
-    'compress',
-    'reboot',
-    'quantify',
-    'hack',
-    'back up',
-    'program',
-    'generate',
-    'override',
-    'input',
-    'connect',
-    'copy',
-    'calculate',
-    'navigate',
-  ]);
+  return rand(data);
 }

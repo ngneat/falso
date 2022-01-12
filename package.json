@@ -3,11 +3,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "build": "nx build falso && node ./post-build.js",
     "new": "nx workspace-generator falso",
     "c": "cz",
     "prepare": "husky install",
-    "test": "echo 'test'"
+    "test": "nx test falso"
   },
+  "workspaces": [
+    "packages/falso"
+  ],
   "dependencies": {
     "tslib": "2.0.0"
   },
@@ -15,6 +19,7 @@
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-angular": "16.0.0",
     "@commitlint/config-conventional": "12.1.4",
+    "@google-cloud/translate": "6.3.1",
     "@jscutlery/semver": "2.13.3",
     "@nrwl/cli": "13.4.3",
     "@nrwl/devkit": "13.4.3",
@@ -23,7 +28,10 @@
     "@nrwl/js": "13.4.3",
     "@nrwl/linter": "13.4.3",
     "@nrwl/tao": "13.4.3",
+    "@nrwl/web": "^13.4.4",
     "@nrwl/workspace": "13.4.3",
+    "@phenomnomnominal/tsquery": "4.1.1",
+    "@types/estree": "^0.0.50",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "5.3.0",
@@ -35,6 +43,7 @@
     "git-cz": "4.8.0",
     "husky": "6.0.0",
     "jest": "27.2.3",
+    "json-update": "^5.3.0",
     "lint-staged": "11.1.2",
     "prettier": "2.3.1",
     "ts-jest": "27.0.5",
@@ -51,6 +60,6 @@
     ]
   },
   "lint-staged": {
-    "*.{ts,json,html,tsx}": "prettier --write"
+    "*.{ts,json,html,tsx,md}": "prettier --write"
   }
 }

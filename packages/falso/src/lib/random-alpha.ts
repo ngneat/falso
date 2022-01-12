@@ -1,32 +1,6 @@
 import { rand } from './core';
+import { data } from './random-alpha.json';
 
 export function randomAlpha() {
-  return rand([
-    'b',
-    'h',
-    'd',
-    'y',
-    'v',
-    'r',
-    'e',
-    'w',
-    'u',
-    't',
-    'p',
-    'n',
-    'f',
-    'j',
-    'm',
-    'c',
-    'x',
-    's',
-    'z',
-    'q',
-    'a',
-    'o',
-    'l',
-    'g',
-    'i',
-    'k',
-  ]);
+  return rand(data);
 }

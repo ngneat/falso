@@ -1,29 +1,6 @@
 import { rand } from './core';
+import { data } from './product.json';
 
 export function product() {
-  return rand([
-    'Chair',
-    'Soap',
-    'Sausages',
-    'Computer',
-    'Hat',
-    'Car',
-    'Shirt',
-    'Mouse',
-    'Keyboard',
-    'Fish',
-    'Bike',
-    'Table',
-    'Pants',
-    'Gloves',
-    'Tuna',
-    'Towels',
-    'Shoes',
-    'Salad',
-    'Cheese',
-    'Chips',
-    'Pizza',
-    'Bacon',
-    'Ball',
-  ]);
+  return rand(data);
 }

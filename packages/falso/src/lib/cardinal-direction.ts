@@ -1,5 +1,6 @@
 import { rand } from './core';
+import { data } from './cardinal-direction.json';
 
 export function cardinalDirection() {
-  return rand(['East', 'South', 'West', 'North']);
+  return rand(data);
 }
