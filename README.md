@@ -970,7 +970,14 @@ import { word } from '@ngneat/falso';
 
 // possimus
 word();
+
+// Possimus
+word({ capitalise: true });
 ```
+
+| Property                | Type    | Description                                    |
+| ----------------------- | ------- | ---------------------------------------------- |
+| capitalise _(optional)_ | boolean | Capitalise first letter (Default value: false) |
 
 #### `words()`
 
