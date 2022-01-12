@@ -1,6 +1,20 @@
 {
   "version": 2,
   "projects": {
-    "falso": "packages/falso"
+    "falso": {
+      "root": "packages/falso",
+      "sourceRoot": "packages/falso/src",
+      "projectType": "package",
+      "targets": {
+        "translate": {
+          "executor": "./tools/executors/translate:translate",
+          "options": {
+            "path": ["abbreviation"],
+            "languages": [""],
+            "output": "translations"
+          }
+        }
+      }
+    }
   }
 }
