@@ -62,8 +62,8 @@ export { gitShortSha } from './lib/git-short-sha';
 export { createCard } from './lib/create-card';
 export { userCard, UserCard } from './lib/user-card';
 export {
-  createCreditTransaction,
-  CreditTransaction,
+    createCreditTransaction,
+    CreditTransaction,
 } from './lib/create-credit-transaction';
 export { img } from './lib/img';
 export { imgDataUri } from './lib/img-data-uri';
@@ -163,3 +163,4 @@ export { rgb, RGBOptions } from './lib/rgb';
 export { programmingLanguage } from './lib/programming-language';
 export { rand } from './lib/core';
 export { randomSequence } from './lib/random-sequence';
+export { hsl, HSLOptions } from './lib/hsl';
