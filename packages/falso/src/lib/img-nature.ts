@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './img-nature.json';
 
-export function imgNature() {
-  return rand(data);
+export function imgNature<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

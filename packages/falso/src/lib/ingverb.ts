@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './ingverb.json';
 
-export function ingverb() {
-  return rand(data);
+export function ingverb<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

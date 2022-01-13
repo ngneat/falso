@@ -1,6 +1,9 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './phone-number-format.json';
 
-export function phoneNumberFormat() {
-  return rand(data);
+// TODO what is this data?
+export function phoneNumberFormat<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

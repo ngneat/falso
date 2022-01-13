@@ -1,6 +1,8 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './programming-language.json';
 
-export function programmingLanguage() {
-  return rand(data);
+export function programmingLanguage<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

@@ -1,13 +1,8 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
+import { data } from './database-collation.json';
 
-export function databaseCollation() {
-  return rand([
-    'utf8_unicode_ci',
-    'cp1250_general_ci',
-    'cp1250_bin',
-    'utf8_general_ci',
-    'ascii_general_ci',
-    'utf8_bin',
-    'ascii_bin',
-  ]);
+export function databaseCollation<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

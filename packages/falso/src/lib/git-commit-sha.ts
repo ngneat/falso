@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './git-commit-sha.json';
 
-export function gitCommitSha() {
-  return rand(data);
+export function gitCommitSha<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

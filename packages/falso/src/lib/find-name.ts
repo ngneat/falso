@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './find-name.json';
-
-export function findName() {
-  return rand(data);
+// TODO rename?
+export function findName<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

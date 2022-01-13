@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './url.json';
 
-export function url() {
-  return rand(data);
+// TODO should we use internal methods
+export function url<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

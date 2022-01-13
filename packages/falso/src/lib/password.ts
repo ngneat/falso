@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './password.json';
 
-export function password() {
-  return rand(data);
+// TODO add requirements
+export function password<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

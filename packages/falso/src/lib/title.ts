@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './title.json';
 
-export function title() {
-  return rand(data);
+// TODO job title?
+export function title<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

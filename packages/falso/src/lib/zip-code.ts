@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './zip-code.json';
 
-export function zipCode() {
-  return rand(data);
+// TODO support state
+export function zipCode<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

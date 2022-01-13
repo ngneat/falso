@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './suffixes.json';
 
-export function suffixes() {
-  return rand(data);
+// TODO rename company suffixes?
+export function suffixes<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

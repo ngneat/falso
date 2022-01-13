@@ -1,5 +1,8 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
+import { data } from './datatype-boolean.json';
 
-export function datatypeBoolean() {
-  return rand([false, true]);
+export function datatypeBoolean<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './file-path.json';
 
-export function filePath() {
-  return rand(data);
+export function filePath<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

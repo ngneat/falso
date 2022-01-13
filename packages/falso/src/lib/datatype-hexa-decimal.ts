@@ -1,28 +1,8 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
+import { data } from './datatype-hexa-decimal.json';
 
-export function datatypeHexaDecimal() {
-  return rand([
-    '0x6',
-    '0xC',
-    '0x5',
-    '0x0',
-    '0x1',
-    '0xE',
-    '0x9',
-    '0xD',
-    '0xA',
-    '0xb',
-    '0xB',
-    '0x4',
-    '0x2',
-    '0xe',
-    '0x8',
-    '0xf',
-    '0xd',
-    '0xF',
-    '0x7',
-    '0xc',
-    '0xa',
-    '0x3',
-  ]);
+export function datatypeHexaDecimal<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

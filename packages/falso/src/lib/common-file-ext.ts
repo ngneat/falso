@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './common-file-ext.json';
 
-export function commonFileExt() {
-  return rand(data);
+export function commonFileExt<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

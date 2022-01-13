@@ -1,6 +1,8 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './transaction-type.json';
 
-export function transactionType() {
-  return rand(data);
+export function transactionType<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

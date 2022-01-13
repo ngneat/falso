@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './crocodilia.json';
 
-export function crocodilia() {
-  return rand(data);
+export function crocodilia<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

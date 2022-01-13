@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './user-agent.json';
 
-export function userAgent() {
-  return rand(data);
+export function userAgent<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }
