@@ -1,6 +1,13 @@
 import { between } from './between';
+import { fake, FakeOptions } from './core';
 
-export function past({ years }: { years: number } = { years: 1 }): Date {
+interface PastOptions extends FakeOptions {
+  years: number;
+}
+
+export function past<Options extends PastOptions>(
+  { years, ...options }: PastOptions = { years: 1 }
+): Date {
   if (years < 0) {
     throw new Error('years must be positive, use future() instead');
   }
@@ -8,5 +15,5 @@ export function past({ years }: { years: number } = { years: 1 }): Date {
   const yearsInMilliseconds = years * 365 * 24 * 60 * 60 * 1000;
   const to = new Date();
   const from = new Date(to.getTime() - yearsInMilliseconds);
-  return between({ from, to });
+  return fake(() => between({ from, to }), options);
 }

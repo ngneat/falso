@@ -1,6 +1,13 @@
 import { between } from './between';
+import { fake, FakeOptions } from './core';
 
-export function soon({ days }: { days: number } = { days: 1 }): Date {
+interface SoonOptions extends FakeOptions {
+  days: number;
+}
+
+export function soon<Options extends SoonOptions>(
+  { days, ...options }: SoonOptions = { days: 1 }
+) {
   if (days < 1) {
     throw new Error('days must be positive, use recent() instead');
   }
@@ -8,5 +15,5 @@ export function soon({ days }: { days: number } = { days: 1 }): Date {
   const daysInMilliseconds = days * 24 * 60 * 60 * 1000;
   const from = new Date();
   const to = new Date(from.getTime() + daysInMilliseconds);
-  return between({ from, to });
+  return fake(() => between({ from, to }), options);
 }
