@@ -1,4 +1,5 @@
 export { seed } from './lib/random';
+export { rand } from './lib/core';
 export { zipCode } from './lib/zip-code';
 export { zipCodeByState } from './lib/zip-code-by-state';
 export { city } from './lib/city';
