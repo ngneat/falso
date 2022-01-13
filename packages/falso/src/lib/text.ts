@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core';
+import { FakeOptions, fake, getRandomInRange } from './core';
 import { word } from './word';
 
 export interface TextOptions extends FakeOptions {
@@ -6,7 +6,7 @@ export interface TextOptions extends FakeOptions {
 }
 
 function getSpecialCharacter(): string {
-  const randomNumber = Math.floor(Math.random() * 10);
+  const randomNumber = getRandomInRange({ min: 1, max: 10, fraction: 0 });
 
   if (randomNumber === 1) {
     return '.';
