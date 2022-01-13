@@ -53,12 +53,14 @@ function generateSentence(charCount: number): string {
 export function text<Options extends TextOptions>(
   options?: Options
 ): string | string[] | void {
-  if (options?.charCount && options.charCount < 1) {
-    throw 'Character count must be greater than 0';
-  }
+  const charCount: number = options?.charCount ?? 10;
 
   const factory = () => {
-    return generateSentence(options?.charCount || 10);
+    if (charCount < 1 || isNaN(charCount)) {
+      throw 'Character count must be greater than 0';
+    }
+
+    return generateSentence(charCount);
   };
 
   return fake(factory, options);
