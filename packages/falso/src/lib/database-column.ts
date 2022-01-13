@@ -1,20 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
+import { data } from './database-column.json';
 
-export function databaseColumn() {
-  return rand([
-    'comment',
-    'group',
-    'password',
-    'token',
-    'phone',
-    'title',
-    'status',
-    'id',
-    'name',
-    'updatedAt',
-    'category',
-    'email',
-    'avatar',
-    'createdAt',
-  ]);
+export function databaseColumn<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

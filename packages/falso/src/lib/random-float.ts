@@ -1,6 +1,14 @@
-import { rand } from './core';
-import { data } from './random-float.json';
+import {
+  fake,
+  FakeOptions,
+  getRandomInRange,
+  RandomInRangeOptions,
+} from './core';
 
-export function randomFloat() {
-  return rand(data);
+export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
+
+export function randomFloat<Options extends RandomFloatOptions>(
+  options?: Options
+) {
+  return fake(() => getRandomInRange(options), options);
 }

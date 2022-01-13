@@ -1,6 +1,9 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './nearby-gpscoordinate.json';
 
-export function nearbyGPSCoordinate() {
-  return rand(data);
+// TODO use getRAndomInRange
+export function nearbyGPSCoordinate<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

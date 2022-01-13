@@ -1,6 +1,9 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './random-array-element.json';
 
-export function randomArrayElement() {
-  return rand(data);
+// TODO ?
+export function randomArrayElement<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

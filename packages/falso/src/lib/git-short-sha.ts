@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './git-short-sha.json';
 
-export function gitShortSha() {
-  return rand(data);
+export function gitShortSha<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

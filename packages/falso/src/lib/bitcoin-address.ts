@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './bitcoin-address.json';
 
-export function bitcoinAddress() {
-  return rand(data);
+export function bitcoinAddress<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

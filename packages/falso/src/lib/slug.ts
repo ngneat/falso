@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './slug.json';
 
-export function slug() {
-  return rand(data);
+export function slug<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

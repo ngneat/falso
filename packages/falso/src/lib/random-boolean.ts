@@ -1,6 +1,5 @@
-import { rand } from './core';
-import { data } from './random-boolean.json';
+import { FakeOptions, fake } from './core';
 
-export function randomBoolean() {
-  return rand(data);
+export function randomBoolean<Options extends FakeOptions>(options?: Options) {
+  return fake([true, false], options);
 }

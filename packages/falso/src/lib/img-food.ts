@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './img-food.json';
 
-export function imgFood() {
-  return rand(data);
+export function imgFood<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

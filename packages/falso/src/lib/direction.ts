@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './direction.json';
 
-export function direction() {
-  return rand(data);
+export function direction<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

@@ -1,6 +1,8 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './secondary-address.json';
 
-export function secondaryAddress() {
-  return rand(data);
+export function secondaryAddress<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

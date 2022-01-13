@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './ipv6.json';
 
-export function ipv6() {
-  return rand(data);
+export function ipv6<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

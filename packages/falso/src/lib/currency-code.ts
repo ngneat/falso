@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './currency-code.json';
 
-export function currencyCode() {
-  return rand(data);
+export function currencyCode<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

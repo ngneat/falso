@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './vehicle.json';
 
-export function vehicle() {
-  return rand(data);
+export function vehicle<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

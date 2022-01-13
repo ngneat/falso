@@ -1,4 +1,9 @@
+import { FakeOptions, fake } from './core';
 import { word } from './word';
+
+export interface TextOptions extends FakeOptions {
+  charCount?: number;
+}
 
 function getSpecialCharacter(): string {
   const randomNumber = Math.floor(Math.random() * 10);
@@ -45,10 +50,16 @@ function generateSentence(charCount: number): string {
   return text.substring(0, charCount);
 }
 
-export function text({ charCount } = { charCount: 10 }): string | void {
-  if (charCount < 1 || !charCount) {
+export function text<Options extends TextOptions>(
+  options?: Options
+): string | string[] | void {
+  if (options?.charCount && options.charCount < 1) {
     throw 'Character count must be greater than 0';
   }
 
-  return generateSentence(charCount);
+  const factory = () => {
+    return generateSentence(options?.charCount || 10);
+  };
+
+  return fake(factory, options);
 }

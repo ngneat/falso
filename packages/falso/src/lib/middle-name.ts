@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './middle-name.json';
 
-export function middleName() {
-  return rand(data);
+// TODO remove?
+export function middleName<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

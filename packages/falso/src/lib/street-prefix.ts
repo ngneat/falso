@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './street-prefix.json';
 
-export function streetPrefix() {
-  return rand(data);
+// TODO
+export function streetPrefix<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

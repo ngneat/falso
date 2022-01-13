@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './suffix.json';
 
-export function suffix() {
-  return rand(data);
+// TODO rename?
+export function suffix<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

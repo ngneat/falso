@@ -1,6 +1,8 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './random-alpha-numeric.json';
-
-export function randomAlphaNumeric() {
-  return rand(data);
+// TODO rename?
+export function randomAlphaNumeric<Options extends FakeOptions>(
+  options?: Options
+) {
+  return fake(data, options);
 }

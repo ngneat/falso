@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './rabbit.json';
 
-export function rabbit() {
-  return rand(data);
+export function rabbit<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

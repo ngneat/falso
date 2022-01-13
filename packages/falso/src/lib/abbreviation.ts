@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { fake, FakeOptions } from './core';
 import { data } from './abbreviation.json';
 
-export function abbreviation() {
-  return rand(data);
+export function abbreviation<O extends FakeOptions>(options?: O) {
+  return fake(data, options);
 }

@@ -1,6 +1,6 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './bs-buzz.json';
 
-export function bsBuzz() {
-  return rand(data);
+export function bsBuzz<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }

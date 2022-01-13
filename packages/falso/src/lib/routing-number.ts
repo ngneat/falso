@@ -1,6 +1,7 @@
-import { rand } from './core';
+import { FakeOptions, fake } from './core';
 import { data } from './routing-number.json';
 
-export function routingNumber() {
-  return rand(data);
+// TODO use get random with 9-10 figures
+export function routingNumber<Options extends FakeOptions>(options?: Options) {
+  return fake(data, options);
 }
