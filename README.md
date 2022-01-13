@@ -975,6 +975,8 @@ word();
 word({ capitalise: true });
 ```
 
+Options:
+
 | Property                | Type    | Description                                    |
 | ----------------------- | ------- | ---------------------------------------------- |
 | capitalise _(optional)_ | boolean | Capitalise first letter (Default value: false) |
@@ -1042,12 +1044,14 @@ paragraphs()
 ```ts
 import { text } from '@ngneat/falso';
 
-// fugiat qua
+// Fugiat qua
 text();
 
-// unde doloribus maiores vel ipsum, occaecati a omni
+// Unde doloribus maiores vel ipsum, occaecati a omni
 text({ charCount: 50 });
 ```
+
+Options:
 
 | Property               | Type   | Description                                                                             |
 | ---------------------- | ------ | --------------------------------------------------------------------------------------- |
