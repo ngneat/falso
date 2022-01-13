@@ -3,8 +3,11 @@
 🙏 We would ❤️ for you to contribute to Falso and help make it even better than it is today!
 
 ## Developing
+
 - Run `npm i`
-- Create new falso by running `yarn f name`
+- Create new falso by running `yarn new --name name --json`
+
+  - Use `--json` (default `false`) to indicate that the falso will load it's data from a JSON file
 
 ## <a name="rules"></a> Coding Rules
 
@@ -17,7 +20,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**. But also,
-we use the git commit messages to **generate the Akita changelog**.
+we use the git commit messages to **generate the Falso changelog**.
 
 ### Commit Message Format
 
