@@ -1,6 +1,7 @@
 import { FakeOptions, fake } from './core';
 import { data } from './random-alpha-numeric.json';
-// TODO rename?
+
+// TODO - generate programmatically
 export function randomAlphaNumeric<Options extends FakeOptions>(
   options?: Options
 ) {

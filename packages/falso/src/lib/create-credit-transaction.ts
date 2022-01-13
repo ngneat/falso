@@ -10,6 +10,7 @@ export interface CreditTransaction {
   account: string;
 }
 
+// TODO - generate programmatically
 export function createCreditTransaction<Options extends FakeOptions>(
   options?: Options
 ) {

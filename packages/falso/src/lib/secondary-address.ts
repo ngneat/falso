@@ -1,6 +1,7 @@
 import { FakeOptions, fake } from './core';
 import { data } from './secondary-address.json';
 
+// TODO - generate programmatically
 export function secondaryAddress<Options extends FakeOptions>(
   options?: Options
 ) {

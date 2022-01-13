@@ -34,7 +34,7 @@ export interface RandomInRangeOptions {
 export function getRandomInRange({
   min = 1.0,
   max = 9999.99,
-  fraction = 2,
+  fraction = 0,
 }: RandomInRangeOptions = {}) {
   return Number((Math.random() * (max - min) + min).toFixed(fraction));
 }
