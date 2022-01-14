@@ -1,53 +1,141 @@
 import { text } from '../lib/text';
 
 describe('text', () => {
-  describe('charCount IS passed', () => {
-    describe('charCount of 0', () => {
-      it('should thrown min value error', () => {
-        const result = () => text({ charCount: 0 });
+  describe('length param NOT passed', () => {
+    describe('charCount is passed', () => {
+      describe('charCount of 0', () => {
+        it('should thrown min value error', () => {
+          const result = () => text({ charCount: 0 });
 
-        expect(result).toThrow('Character count must be greater than 0');
+          expect(result).toThrow('Character count must be greater than 0');
+        });
+      });
+
+      describe('charCount is NaN', () => {
+        it('should thrown min value error', () => {
+          const result = () => text({ charCount: NaN });
+
+          expect(result).toThrow('Character count must be greater than 0');
+        });
+      });
+
+      describe('charCount is 1', () => {
+        it('should return a string with 1 character', () => {
+          const result = text({ charCount: 1 });
+
+          expect(result?.length).toEqual(1);
+        });
+      });
+
+      describe('charCount is 100', () => {
+        it('should return a string with 100 characters', () => {
+          const result = text({ charCount: 100 });
+
+          expect(result?.length).toEqual(100);
+        });
+      });
+
+      describe('charCount is 5000', () => {
+        it('should return a string with 5000 characters', () => {
+          const result = text({ charCount: 5000 });
+
+          expect(result?.length).toEqual(5000);
+        });
       });
     });
 
-    describe('charCount is NaN', () => {
-      it('should thrown min value error', () => {
-        const result = () => text({ charCount: NaN });
+    describe('charCount is NOT passed', () => {
+      it('should return a string with 10 characters', () => {
+        const result = text();
 
-        expect(result).toThrow('Character count must be greater than 0');
+        expect(result?.length).toEqual(10);
+      });
+    });
+  });
+
+  describe('length param passed', () => {
+    describe('length is 1', () => {
+      it('should return an array length of 3', () => {
+        const result = text({ length: 3 });
+
+        expect(result?.length).toEqual(3);
       });
     });
 
-    describe('charCount is 1', () => {
-      it('should return a string with 1 characters', () => {
-        const result = text({ charCount: 1 });
+    describe('length is 5', () => {
+      it('should return an array length of 5', () => {
+        const result = text({ length: 5 });
 
-        expect(result?.length).toEqual(1);
+        expect(result?.length).toEqual(5);
       });
     });
 
-    describe('charCount is 100', () => {
-      it('should return a string with 100 characters', () => {
-        const result = text({ charCount: 100 });
+    describe('length is 100', () => {
+      it('should return an array length of 100', () => {
+        const result = text({ length: 100 });
 
         expect(result?.length).toEqual(100);
       });
     });
 
-    describe('charCount is 5000', () => {
-      it('should return a string with 5000 characters', () => {
-        const result = text({ charCount: 5000 });
+    describe('length is 3', () => {
+      describe('charCount is passed', () => {
+        describe('charCount is 0', () => {
+          it('should thrown min value error', () => {
+            const result = () => text({ charCount: 0, length: 3 });
 
-        expect(result?.length).toEqual(5000);
+            expect(result).toThrow('Character count must be greater than 0');
+          });
+        });
+
+        describe('charCount is NaN', () => {
+          it('should thrown min value error', () => {
+            const result = () => text({ charCount: NaN, length: 3 });
+
+            expect(result).toThrow('Character count must be greater than 0');
+          });
+        });
+
+        describe('charCount is 1', () => {
+          it('should return a string array with 3 items, each with 1 character long', () => {
+            const result = text({ charCount: 1, length: 3 });
+
+            expect(result?.[0]?.length).toEqual(1);
+            expect(result?.[1]?.length).toEqual(1);
+            expect(result?.[2]?.length).toEqual(1);
+          });
+        });
+
+        describe('charCount is 100', () => {
+          it('should return a string array with 3 items, each with 100 character long', () => {
+            const result = text({ charCount: 100, length: 3 });
+
+            expect(result?.[0]?.length).toEqual(100);
+            expect(result?.[1]?.length).toEqual(100);
+            expect(result?.[2]?.length).toEqual(100);
+          });
+        });
+
+        describe('charCount is 5000', () => {
+          it('should return a string array with 3 items, each with 5000 character long', () => {
+            const result = text({ charCount: 5000, length: 3 });
+
+            expect(result?.[0]?.length).toEqual(5000);
+            expect(result?.[1]?.length).toEqual(5000);
+            expect(result?.[2]?.length).toEqual(5000);
+          });
+        });
       });
-    });
-  });
 
-  describe('charCount is NOT passed', () => {
-    it('should return a string with 10 characters', () => {
-      const result = text();
+      describe('charCount is NOT passed', () => {
+        it('should return a string array with 3 items, each with 10 character long', () => {
+          const result = text({ length: 3 });
 
-      expect(result?.length).toEqual(10);
+          expect(result?.[0]?.length).toEqual(10);
+          expect(result?.[1]?.length).toEqual(10);
+          expect(result?.[2]?.length).toEqual(10);
+        });
+      });
     });
   });
 });
