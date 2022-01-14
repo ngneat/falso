@@ -1,53 +1,9 @@
-import { FakeOptions, fake, getRandomInRange } from './core';
-import { word } from './word';
+import { FakeOptions, fake } from './core';
+import { sentence } from './sentence';
+import { randomAlpha } from './random-alpha';
 
 export interface TextOptions extends FakeOptions {
   charCount?: number;
-}
-
-function getSpecialCharacter(): string {
-  const randomNumber = getRandomInRange({ min: 1, max: 10, fraction: 0 });
-
-  if (randomNumber === 1) {
-    return '.';
-  }
-
-  if (randomNumber === 2) {
-    return ',';
-  }
-
-  return '';
-}
-
-function generateSentence(charCount: number): string {
-  let text = word({ capitalize: true });
-  let capitalize = false;
-  let totalWords = 1;
-
-  while (text.length < charCount) {
-    let randomWord: string;
-    let specialChar = '';
-
-    if (capitalize) {
-      randomWord = word({ capitalize: true });
-      capitalize = false;
-    } else {
-      randomWord = word();
-    }
-
-    if (totalWords > 2) {
-      specialChar = getSpecialCharacter();
-    }
-
-    if (specialChar === '.') {
-      capitalize = true;
-    }
-
-    text += ` ${randomWord}${specialChar}`;
-    totalWords++;
-  }
-
-  return text.substring(0, charCount);
 }
 
 export function text<Options extends TextOptions>(
@@ -60,7 +16,17 @@ export function text<Options extends TextOptions>(
   }
 
   const factory = () => {
-    return generateSentence(charCount);
+    let text = sentence();
+
+    while (text.length < charCount) {
+      text += ` ${sentence()}`;
+    }
+
+    text = text.substring(0, charCount - 2);
+    // Ensure last char is always a full-stop (not a space)
+    text += `${randomAlpha()}.`;
+
+    return text;
   };
 
   return fake(factory, options);

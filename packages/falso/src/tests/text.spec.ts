@@ -1,6 +1,12 @@
 import { text } from '../lib/text';
 
 describe('text', () => {
+  it('should end with a full-stop', () => {
+    const result = text();
+
+    expect(result?.slice(-1)).toThrow('.');
+  });
+
   describe('length param NOT passed', () => {
     describe('charCount is passed', () => {
       describe('charCount of 0', () => {
@@ -55,10 +61,10 @@ describe('text', () => {
 
   describe('length param passed', () => {
     describe('length is 1', () => {
-      it('should return an array length of 3', () => {
-        const result = text({ length: 3 });
+      it('should return an array length of 1', () => {
+        const result = text({ length: 1 });
 
-        expect(result?.length).toEqual(3);
+        expect(result?.length).toEqual(1);
       });
     });
 
