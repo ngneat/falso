@@ -5,9 +5,10 @@
 ## Developing
 
 - Run `npm i`
-- Create new falso by running `yarn new --name name --json`
+- Create new falso by running `yarn new --name name`
 
   - Use `--json` (default `false`) to indicate that the falso will load it's data from a JSON file
+  - Use `--skip-test` (default `false`) to indicate that the falso should not generate a test file
 
 ## <a name="rules"></a> Coding Rules
 

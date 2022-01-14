@@ -20,6 +20,12 @@
       "description": "Include json data file for falso",
       "alias": "j"
     },
+    "skipTest": {
+      "type": "boolean",
+      "default": false,
+      "description": "Skip spec file creation for falso",
+      "alias": "s"
+    },
     "project": {
       "type": "string",
       "default": "falso",

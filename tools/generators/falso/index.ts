@@ -2,18 +2,42 @@ import { Tree, getProjects, formatFiles, names } from '@nrwl/devkit';
 import { join } from 'path';
 import { appendFile } from 'fs/promises';
 
-export default async function (
-  tree: Tree,
-  { name, project, json }: { name: string; project: string; json: boolean }
-) {
-  const sourceRoot = getProjects(tree).get(project)?.sourceRoot;
+enum FileType {
+  Spec = 'spec.ts',
+  Ts = 'ts',
+  Json = 'json',
+}
 
-  const n = names(name);
+interface NewFalsoOptions {
+  name: string;
+  project: string;
+  json: boolean;
+  skipTest: boolean;
+}
+
+export default async function (tree: Tree, options: NewFalsoOptions) {
+  const sourceRoot = getProjects(tree).get(options.project)?.sourceRoot;
+
+  const n = names(options.name);
 
   if (sourceRoot) {
-    if (json) {
+    tree.write(
+      getFilePath(sourceRoot, n.fileName, FileType.Ts),
+      `
+      import { FakeOptions, fake } from './core';
+      ${options.json ? `import { data } from './${n.fileName}.json'` : ''}
+
+      export function ${
+        n.propertyName
+      }<Options extends FakeOptions>(options?: Options) {
+        return fake(${options.json ? 'data' : '[]'}, options);
+      }
+    `
+    );
+
+    if (options.json) {
       tree.write(
-        join(sourceRoot, 'lib', `${n.fileName}.json`),
+        getFilePath(sourceRoot, n.fileName, FileType.Json),
         `
         {
           "data": [
@@ -23,19 +47,20 @@ export default async function (
       );
     }
 
-    tree.write(
-      join(sourceRoot, 'lib', `${n.fileName}.ts`),
-      `
-      import { FakeOptions, fake } from './core';
-      ${json ? `import { data } from './${n.fileName}.json'` : ''}
-
-      export function ${
-        n.propertyName
-      }<Options extends FakeOptions>(options?: Options) {
-        return fake(${json ? 'data' : '[]'}, options);
-      }
-    `
-    );
+    if (!options.skipTest) {
+      tree.write(
+        getFilePath(sourceRoot, n.fileName, FileType.Spec),
+        `
+          import { ${n.propertyName} } from '../lib/${n.fileName}';
+    
+          describe('${n.propertyName}', () => {
+            it('should create', () => {
+              expect(${n.propertyName}).toBeTruthy();
+            });	
+          });
+        `
+      );
+    }
 
     const index = join(sourceRoot, `index.ts`);
 
@@ -45,4 +70,16 @@ export default async function (
 
     await formatFiles(tree);
   }
+}
+
+function getFilePath(
+  rootPath: string,
+  filename: string,
+  fileType: FileType
+): string {
+  return join(
+    rootPath,
+    fileType == FileType.Spec ? 'tests' : 'lib',
+    `${filename}.${fileType}`
+  );
 }
