@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "start:docs": "npm run start --prefix docs",
     "build": "nx build falso && node ./post-build.js",
     "new": "nx workspace-generator falso",
     "c": "cz",
@@ -10,7 +11,8 @@
     "test": "nx test falso"
   },
   "workspaces": [
-    "packages/falso"
+    "packages/falso",
+    "docs"
   ],
   "dependencies": {
     "tslib": "2.0.0"
