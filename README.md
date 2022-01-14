@@ -972,14 +972,8 @@ import { word } from '@ngneat/falso';
 word();
 
 // Possimus
-word({ capitalise: true });
+word({ capitalize: true });
 ```
-
-Options:
-
-| Property                | Type    | Description                                    |
-| ----------------------- | ------- | ---------------------------------------------- |
-| capitalise _(optional)_ | boolean | Capitalise first letter (Default value: false) |
 
 #### `words()`
 
@@ -1050,12 +1044,6 @@ text();
 // Unde doloribus maiores vel ipsum, occaecati a omni
 text({ charCount: 50 });
 ```
-
-Options:
-
-| Property               | Type   | Description                                                                             |
-| ---------------------- | ------ | --------------------------------------------------------------------------------------- |
-| charCount _(optional)_ | number | This takes an integer to set the total characters in the returned string (Min value: 1) |
 
 #### `lines()`
 

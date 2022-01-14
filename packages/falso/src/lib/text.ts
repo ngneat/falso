@@ -20,17 +20,17 @@ function getSpecialCharacter(): string {
 }
 
 function generateSentence(charCount: number): string {
-  let text = word({ capitalise: true });
-  let capitalise = false;
+  let text = word({ capitalize: true });
+  let capitalize = false;
   let totalWords = 1;
 
   while (text.length < charCount) {
     let randomWord: string;
     let specialChar = '';
 
-    if (capitalise) {
-      randomWord = word({ capitalise: true });
-      capitalise = false;
+    if (capitalize) {
+      randomWord = word({ capitalize: true });
+      capitalize = false;
     } else {
       randomWord = word();
     }
@@ -40,7 +40,7 @@ function generateSentence(charCount: number): string {
     }
 
     if (specialChar === '.') {
-      capitalise = true;
+      capitalize = true;
     }
 
     text += ` ${randomWord}${specialChar}`;
@@ -55,11 +55,11 @@ export function text<Options extends TextOptions>(
 ): string | string[] | void {
   const charCount: number = options?.charCount ?? 10;
 
-  const factory = () => {
-    if (charCount < 1 || isNaN(charCount)) {
-      throw 'Character count must be greater than 0';
-    }
+  if (charCount < 1 || isNaN(charCount)) {
+    throw 'Character count must be greater than 0';
+  }
 
+  const factory = () => {
     return generateSentence(charCount);
   };
 
