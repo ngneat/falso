@@ -6,7 +6,7 @@ export interface SemverOptions extends FakeOptions {
   // TODO add ranges
 }
 
-// TODO use number generator
+// TODO - generate programmatically
 export function semver<Options extends SemverOptions>(options?: Options) {
   return fake(() => `${options?.prefix || ''}${rand(data)}`, options);
 }

@@ -1,7 +1,5 @@
-import { FakeOptions, fake } from './core';
-import { data } from './datatype-number.json';
+import { FakeOptions, fake, getRandomInRange } from './core';
 
-// TODO getRandomInRange
 export function datatypeNumber<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => getRandomInRange(), options);
 }

@@ -8,9 +8,9 @@ export interface RGBOptions extends FakeOptions {
 export function rgb<Options extends RGBOptions>(options?: Options) {
   const factory = () => {
     const [r, g, b, a] = [
-      getRandomInRange({ min: 0, max: 255, fraction: 0 }),
-      getRandomInRange({ min: 0, max: 255, fraction: 0 }),
-      getRandomInRange({ min: 0, max: 255, fraction: 0 }),
+      getRandomInRange({ min: 0, max: 255 }),
+      getRandomInRange({ min: 0, max: 255 }),
+      getRandomInRange({ min: 0, max: 255 }),
       randomFloat({ min: 0.1, max: 1 }),
     ];
 
