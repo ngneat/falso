@@ -1,5 +1,6 @@
-import { FakeOptions, fake, rand } from './core/core';
+import { FakeOptions, fake } from './core/core';
 import { data } from './word.json';
+import { rand } from './rand';
 
 export interface WordOptions extends FakeOptions {
   capitalize?: boolean;
