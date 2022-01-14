@@ -36,5 +36,5 @@ export function getRandomInRange({
   max = 9999.99,
   fraction = 0,
 }: RandomInRangeOptions = {}) {
-  return Number((Math.random() * (max - min) + min).toFixed(fraction));
+  return Number((random() * (max - min) + min).toFixed(fraction));
 }
