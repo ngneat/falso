@@ -1,10 +1,24 @@
 import { between } from './between';
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 
 interface SoonOptions extends FakeOptions {
   days?: number;
 }
 
+/**
+ * Generate a random soon.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * soon()
+ *
+ * @example
+ *
+ * soon({ length: 10 })
+ *
+ */
 export function soon<Options extends SoonOptions>(options?: Options) {
   const days = options?.days ?? 1;
 

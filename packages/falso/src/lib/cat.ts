@@ -1,10 +1,10 @@
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 import { data } from './cat.json';
 
 /**
  * Generate a random cat.
  *
- * @category Animals
+ * @category TBD
  *
  * @example
  *

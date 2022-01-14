@@ -168,5 +168,5 @@ export { soon } from './lib/soon';
 export { recent } from './lib/recent';
 export { month } from './lib/month';
 export { weekday } from './lib/weekday';
-export { rand } from './lib/core';
+export { rand } from './lib/rand';
 export { randomSequence } from './lib/random-sequence';

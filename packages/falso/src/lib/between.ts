@@ -1,10 +1,24 @@
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 
 interface BetweenOptions extends FakeOptions {
   from: Date;
   to: Date;
 }
 
+/**
+ * Generate a random between.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * between()
+ *
+ * @example
+ *
+ * between({ length: 10 })
+ *
+ */
 /**
  * Generate a random date between ranges.
  *

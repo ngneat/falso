@@ -1,5 +1,5 @@
-import { rand } from '../lib/core';
 import { seed } from '../lib/random';
+import { rand } from '../lib/rand';
 
 describe('seed', () => {
   it('should return same values with constant seed', () => {
