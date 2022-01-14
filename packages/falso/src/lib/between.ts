@@ -6,7 +6,7 @@ interface BetweenOptions extends FakeOptions {
 }
 
 /**
- * Generate a random date between range.
+ * Generate a random date between ranges.
  *
  * @category Date
  *
