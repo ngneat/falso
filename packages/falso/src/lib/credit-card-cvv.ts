@@ -1,6 +1,8 @@
-import { FakeOptions, fake } from './core';
-import { data } from './credit-card-cvv.json';
+import { fake, FakeOptions, getRandomInRange } from './core';
 
 export function creditCardCVV<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(
+    () => getRandomInRange({ min: 100, max: 999 }).toString(),
+    options
+  );
 }

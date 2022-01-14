@@ -1,6 +1,6 @@
-import { FakeOptions, fake } from './core';
-import { data } from './bitcoin-address.json';
+import { fake, FakeOptions } from './core';
+import { randomSequence } from './random-sequence';
 
 export function bitcoinAddress<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => randomSequence({ size: 33 }), options);
 }

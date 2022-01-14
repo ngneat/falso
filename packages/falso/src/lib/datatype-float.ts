@@ -1,7 +1,6 @@
-import { FakeOptions, fake } from './core';
-import { data } from './datatype-float.json';
+import { FakeOptions, fake, getRandomInRange } from './core';
 
-// TODO user getRandomInRange
+// TODO - support more options
 export function datatypeFloat<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => getRandomInRange({ fraction: 2 }), options);
 }
