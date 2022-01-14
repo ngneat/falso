@@ -1,13 +1,13 @@
 import { between } from './between';
-import { fake } from './core';
+import { fake, FakeOptions } from './core';
 
-interface FutureOptions {
-  years: number;
+interface FutureOptions extends FakeOptions {
+  years?: number;
 }
 
-export function future<Options extends FutureOptions>(
-  { years, ...options }: FutureOptions = { years: 1 }
-): Date {
+export function future<Options extends FutureOptions>(options?: Options) {
+  const years = options?.years ?? 1;
+
   if (years < 0) {
     throw new Error('years must be positive, use past() instead');
   }

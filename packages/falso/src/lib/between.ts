@@ -5,17 +5,33 @@ interface BetweenOptions extends FakeOptions {
   to: Date;
 }
 
-export function between<Options extends BetweenOptions>({
-  from,
-  to,
-  ...options
-}: BetweenOptions) {
-  if (from.getTime() >= to.getTime()) {
+/**
+ * Generate a random date between range.
+ *
+ * @category Date
+ *
+ * @example
+ *
+ * month()
+ *
+ * @example
+ *
+ * month({ from: Date, to: Date })
+ *
+ * @example
+ *
+ * month({ length: 10 })
+ *
+ */
+export function between<Options extends BetweenOptions>(options: Options) {
+  if (options.from.getTime() >= options.to.getTime()) {
     throw new Error('from must be before to');
   }
 
   const data = new Date(
-    Math.floor(Math.random() * (to.getTime() - from.getTime())) + from.getTime()
+    Math.floor(
+      Math.random() * (options.to.getTime() - options.from.getTime())
+    ) + options.from.getTime()
   );
   return fake(() => data, options);
 }
