@@ -5,9 +5,9 @@ interface PastOptions extends FakeOptions {
   years: number;
 }
 
-export function past<Options extends PastOptions>(
-  { years, ...options }: PastOptions = { years: 1 }
-): Date {
+export function past<Options extends PastOptions>(options?: Options) {
+  const years = options?.years ?? 1;
+
   if (years < 0) {
     throw new Error('years must be positive, use future() instead');
   }
@@ -15,5 +15,6 @@ export function past<Options extends PastOptions>(
   const yearsInMilliseconds = years * 365 * 24 * 60 * 60 * 1000;
   const to = new Date();
   const from = new Date(to.getTime() - yearsInMilliseconds);
+
   return fake(() => between({ from, to }), options);
 }

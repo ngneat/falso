@@ -2,12 +2,12 @@ import { between } from './between';
 import { fake, FakeOptions } from './core';
 
 interface SoonOptions extends FakeOptions {
-  days: number;
+  days?: number;
 }
 
-export function soon<Options extends SoonOptions>(
-  { days, ...options }: SoonOptions = { days: 1 }
-) {
+export function soon<Options extends SoonOptions>(options?: Options) {
+  const days = options?.days ?? 1;
+
   if (days < 1) {
     throw new Error('days must be positive, use recent() instead');
   }
