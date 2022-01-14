@@ -24,13 +24,27 @@ export default async function (tree: Tree, options: NewFalsoOptions) {
     tree.write(
       getFilePath(sourceRoot, n.fileName, FileType.Ts),
       `
-      import { FakeOptions, fake } from './core';
+      import { FakeOptions, fake } from './core/core';
       ${options.json ? `import { data } from './${n.fileName}.json'` : ''}
 
+      /**
+       * Generate a random ${n.name}.
+       *
+       * @category TBD
+       *
+       * @example
+       *
+       * ${n.propertyName}()
+       *
+       * @example
+       *
+       * ${n.propertyName}({ length: 10 })
+       *
+       */
       export function ${
         n.propertyName
       }<Options extends FakeOptions>(options?: Options) {
-        return fake(${options.json ? 'data' : '[]'}, options);
+        return fake(${options.json ? 'data' : `() => 1`}, options);
       }
     `
     );
