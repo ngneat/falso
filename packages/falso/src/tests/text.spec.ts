@@ -4,7 +4,7 @@ describe('text', () => {
   it('should end with a full-stop', () => {
     const result = text();
 
-    expect(result?.slice(-1)).toThrow('.');
+    expect(result?.slice(-1)).toEqual('.');
   });
 
   describe('length param NOT passed', () => {
@@ -30,6 +30,12 @@ describe('text', () => {
           const result = text({ charCount: 1 });
 
           expect(result?.length).toEqual(1);
+        });
+
+        it('should not end with a full-stop', () => {
+          const result = text({ charCount: 1 });
+
+          expect(result?.slice(-1)).not.toEqual('.');
         });
       });
 
@@ -109,6 +115,14 @@ describe('text', () => {
             expect(result?.[0]?.length).toEqual(1);
             expect(result?.[1]?.length).toEqual(1);
             expect(result?.[2]?.length).toEqual(1);
+          });
+
+          it('should return a string array with 3 items, each should not end with a full-stop', () => {
+            const result = text({ charCount: 1 });
+
+            expect(result?.[0]?.slice(-1)).not.toEqual('.');
+            expect(result?.[1]?.slice(-1)).not.toEqual('.');
+            expect(result?.[2]?.slice(-1)).not.toEqual('.');
           });
         });
 

@@ -32,6 +32,10 @@ export function text<Options extends TextOptions>(
   const factory = () => {
     let text = sentence();
 
+    if (charCount === 1) {
+      return randomAlpha();
+    }
+
     while (text.length < charCount) {
       text += ` ${sentence()}`;
     }
