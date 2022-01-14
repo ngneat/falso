@@ -8,6 +8,12 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+}
+
+html[data-theme='dark'] .heroBanner  {
+  border-color: #3b3b3b;
 }
 
 @media screen and (max-width: 966px) {
