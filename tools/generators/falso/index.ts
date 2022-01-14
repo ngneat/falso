@@ -2,21 +2,65 @@ import { Tree, getProjects, formatFiles, names } from '@nrwl/devkit';
 import { join } from 'path';
 import { appendFile } from 'fs/promises';
 
-export default async function (tree: Tree, { name, project }: { name: string, project: string }) {
+enum FileType {
+  Spec = 'spec.ts',
+  Ts = 'ts',
+  Json = 'json',
+}
 
-  const sourceRoot = getProjects(tree).get(project)?.sourceRoot;
+interface NewFalsoOptions {
+  name: string;
+  project: string;
+  json: boolean;
+  skipTest: boolean;
+}
 
-  const n = names(name);
+export default async function (tree: Tree, options: NewFalsoOptions) {
+  const sourceRoot = getProjects(tree).get(options.project)?.sourceRoot;
+
+  const n = names(options.name);
 
   if (sourceRoot) {
-    tree.write(join(sourceRoot, 'lib', `${n.fileName}.ts`), ` 
-      import { rand } from './core';
-      
-      export function ${n.propertyName}() {
-        return rand([
-        ])
+    tree.write(
+      getFilePath(sourceRoot, n.fileName, FileType.Ts),
+      `
+      import { FakeOptions, fake } from './core';
+      ${options.json ? `import { data } from './${n.fileName}.json'` : ''}
+
+      export function ${
+        n.propertyName
+      }<Options extends FakeOptions>(options?: Options) {
+        return fake(${options.json ? 'data' : '[]'}, options);
       }
-    `)
+    `
+    );
+
+    if (options.json) {
+      tree.write(
+        getFilePath(sourceRoot, n.fileName, FileType.Json),
+        `
+        {
+          "data": [
+          ]
+        }
+      `
+      );
+    }
+
+    if (!options.skipTest) {
+      tree.write(
+        getFilePath(sourceRoot, n.fileName, FileType.Spec),
+        `
+          import { ${n.propertyName} } from '../lib/${n.fileName}';
+    
+          describe('${n.propertyName}', () => {
+            it('should create', () => {
+              expect(${n.propertyName}).toBeTruthy();
+            });	
+          });
+        `
+      );
+    }
 
     const index = join(sourceRoot, `index.ts`);
 
@@ -26,4 +70,16 @@ export default async function (tree: Tree, { name, project }: { name: string, pr
 
     await formatFiles(tree);
   }
+}
+
+function getFilePath(
+  rootPath: string,
+  filename: string,
+  fileType: FileType
+): string {
+  return join(
+    rootPath,
+    fileType == FileType.Spec ? 'tests' : 'lib',
+    `${filename}.${fileType}`
+  );
 }
