@@ -1,5 +1,6 @@
-import { FakeOptions, fake, rand } from './core';
+import { FakeOptions, fake } from './core/core';
 import { data } from './semver.json';
+import { rand } from './rand';
 
 export interface SemverOptions extends FakeOptions {
   prefix?: string;

@@ -1,4 +1,4 @@
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 import { random } from './random';
 
 export const numericChars = '0123456789';
@@ -23,6 +23,20 @@ type RandomSequenceOptions = {
   chars?: string;
 } & FakeOptions;
 
+/**
+ * Generate a random random sequence.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * randomSequence()
+ *
+ * @example
+ *
+ * randomSequence({ length: 10 })
+ *
+ */
 export function randomSequence<Options extends RandomSequenceOptions>(
   options?: Options
 ) {

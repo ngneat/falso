@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core';
+import { FakeOptions, fake } from './core/core';
 import { sentence } from './sentence';
 import { randomAlpha } from './random-alpha';
 
@@ -6,6 +6,20 @@ export interface TextOptions extends FakeOptions {
   charCount?: number;
 }
 
+/**
+ * Generate a random text.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * text()
+ *
+ * @example
+ *
+ * text({ charCount: 10 })
+ *
+ */
 export function text<Options extends TextOptions>(
   options?: Options
 ): string | string[] | void {

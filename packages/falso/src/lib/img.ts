@@ -1,7 +1,21 @@
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 
 type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
 
+/**
+ * Generate a random img.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * img()
+ *
+ * @example
+ *
+ * img({ length: 10 })
+ *
+ */
 export function img<
   Options extends FakeOptions & {
     width?: number;

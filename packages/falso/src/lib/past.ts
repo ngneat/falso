@@ -1,10 +1,24 @@
 import { between } from './between';
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 
 interface PastOptions extends FakeOptions {
   years: number;
 }
 
+/**
+ * Generate a random past.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * past()
+ *
+ * @example
+ *
+ * past({ length: 10 })
+ *
+ */
 export function past<Options extends PastOptions>(options?: Options) {
   const years = options?.years ?? 1;
 

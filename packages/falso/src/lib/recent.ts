@@ -1,10 +1,24 @@
 import { between } from './between';
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 
 interface RecentOptions extends FakeOptions {
   days?: number;
 }
 
+/**
+ * Generate a random recent.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * recent()
+ *
+ * @example
+ *
+ * recent({ length: 10 })
+ *
+ */
 export function recent<Options extends RecentOptions>(options?: Options) {
   const days = options?.days ?? 1;
 

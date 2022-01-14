@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core';
+import { FakeOptions, fake } from './core/core';
 import { data } from './full-name.json';
 
 // TODO - generate programmatically using firstName lastName

@@ -1,8 +1,5 @@
-import { random } from './random';
-
-export function rand<T>(arr: T[]): T {
-  return arr[Math.floor(random() * arr.length)];
-}
+import { rand } from '../rand';
+import { random } from '../random';
 
 export interface FakeOptions {
   length?: number;

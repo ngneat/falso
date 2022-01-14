@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core';
+import { FakeOptions, fake } from './core/core';
 import { data } from './domain-name.json';
 
 // TODO - generate programmatically use string and domain suffix

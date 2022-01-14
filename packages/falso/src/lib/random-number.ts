@@ -3,13 +3,27 @@ import {
   fake,
   getRandomInRange,
   RandomInRangeOptions,
-} from './core';
+} from './core/core';
 
 export interface RandomNumberOptions extends FakeOptions {
   min?: number;
   max?: number;
 }
 
+/**
+ * Generate a random random-number.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * randomNumber()
+ *
+ * @example
+ *
+ * randomNumber({ length: 10 })
+ *
+ */
 export function randomNumber<Options extends RandomNumberOptions>(
   options?: Options
 ) {

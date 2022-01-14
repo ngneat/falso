@@ -1,4 +1,4 @@
-import { fake, FakeOptions, getRandomInRange } from './core';
+import { fake, FakeOptions, getRandomInRange } from './core/core';
 
 export function creditCardCVV<Options extends FakeOptions>(options?: Options) {
   return fake(

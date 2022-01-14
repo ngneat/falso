@@ -1,4 +1,4 @@
-import { FakeOptions, fake, rand } from './core';
+import { FakeOptions, fake, rand } from './core/core';
 import { data } from './word.json';
 
 export interface WordOptions extends FakeOptions {
@@ -9,6 +9,20 @@ function capitalizeFirstLetter(text: string): string {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
+/**
+ * Generate a random word.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * word()
+ *
+ * @example
+ *
+ * word({ length: 10 })
+ *
+ */
 export function word<Options extends WordOptions>(options?: Options) {
   const factory = () => {
     let word = rand(data);

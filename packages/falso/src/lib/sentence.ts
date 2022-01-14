@@ -1,4 +1,4 @@
-import { FakeOptions, fake, getRandomInRange } from './core';
+import { FakeOptions, fake, getRandomInRange } from './core/core';
 import { word } from './word';
 
 function getSpecialCharacter(): string {
@@ -15,6 +15,20 @@ function getSpecialCharacter(): string {
   return '';
 }
 
+/**
+ * Generate a random sentence.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * sentence()
+ *
+ * @example
+ *
+ * sentence({ length: 10 })
+ *
+ */
 export function sentence<Options extends FakeOptions>(options?: Options) {
   const factory = () => {
     let text = word({ capitalize: true });
