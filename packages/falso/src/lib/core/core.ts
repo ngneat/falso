@@ -1,8 +1,5 @@
-import { random } from './random';
-
-export function rand<T>(arr: T[]): T {
-  return arr[Math.floor(random() * arr.length)];
-}
+import { rand } from '../rand';
+import { random } from '../random';
 
 export interface FakeOptions {
   length?: number;
@@ -36,5 +33,5 @@ export function getRandomInRange({
   max = 9999.99,
   fraction = 0,
 }: RandomInRangeOptions = {}) {
-  return Number((Math.random() * (max - min) + min).toFixed(fraction));
+  return Number((random() * (max - min) + min).toFixed(fraction));
 }

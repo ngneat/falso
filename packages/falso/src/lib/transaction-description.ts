@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core';
+import { FakeOptions, fake } from './core/core';
 import { data } from './transaction-description.json';
 
 // TODO - generate programmatically

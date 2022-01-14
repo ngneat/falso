@@ -3,6 +3,7 @@
   "cli": "nx",
   "$id": "falso",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "name": {
       "type": "string",
@@ -10,7 +11,20 @@
       "$default": {
         "$source": "argv",
         "index": 0
-      }
+      },
+      "alias": "n"
+    },
+    "json": {
+      "type": "boolean",
+      "default": false,
+      "description": "Include json data file for falso",
+      "alias": "j"
+    },
+    "skipTest": {
+      "type": "boolean",
+      "default": false,
+      "description": "Skip spec file creation for falso",
+      "alias": "s"
     },
     "project": {
       "type": "string",
@@ -18,7 +32,5 @@
       "description": "Project name"
     }
   },
-  "required": [
-    "name"
-  ]
+  "required": ["name"]
 }

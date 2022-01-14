@@ -1,10 +1,24 @@
 import { randomFloat } from './random-float';
-import { fake, FakeOptions, getRandomInRange } from './core';
+import { fake, FakeOptions, getRandomInRange } from './core/core';
 
 export interface RGBOptions extends FakeOptions {
   alpha?: boolean;
 }
 
+/**
+ * Generate a random rgb.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * rgb()
+ *
+ * @example
+ *
+ * rgb({ length: 10 })
+ *
+ */
 export function rgb<Options extends RGBOptions>(options?: Options) {
   const factory = () => {
     const [r, g, b, a] = [

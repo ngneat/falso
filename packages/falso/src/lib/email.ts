@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core';
+import { FakeOptions, fake } from './core/core';
 import { data } from './email.json';
 
 // TODO - generate programmatically using firstName and suffix

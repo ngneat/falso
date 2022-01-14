@@ -1,13 +1,19 @@
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
+import { random } from './random';
 
-function random(
-  size = 8,
-  chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-) {
+export const numericChars = '0123456789';
+export const alphaChars = 'abcdefghijklmnopqrstuvwxyz';
+export const specialChars = 'TODO';
+export const numericAlphaChars = `${numericChars}${alphaChars}${alphaChars
+  .split('')
+  .map((v) => v.toUpperCase())
+  .join('')}`;
+
+function generator(size = 8, chars = numericAlphaChars) {
   let result = '';
 
   for (let i = size; i > 0; --i)
-    result += chars[Math.floor(Math.random() * chars.length)];
+    result += chars[Math.floor(random() * chars.length)];
 
   return result;
 }
@@ -17,8 +23,22 @@ type RandomSequenceOptions = {
   chars?: string;
 } & FakeOptions;
 
+/**
+ * Generate a random random sequence.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * randomSequence()
+ *
+ * @example
+ *
+ * randomSequence({ length: 10 })
+ *
+ */
 export function randomSequence<Options extends RandomSequenceOptions>(
   options?: Options
 ) {
-  return fake(() => random(options?.size, options?.chars), options);
+  return fake(() => generator(options?.size, options?.chars), options);
 }

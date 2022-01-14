@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core';
+import { FakeOptions, fake } from './core/core';
 import { data } from './credit-card-number.json';
 
 // TODO - support formats and generate programmatically

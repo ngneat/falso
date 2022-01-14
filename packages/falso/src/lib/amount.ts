@@ -3,10 +3,24 @@ import {
   FakeOptions,
   getRandomInRange,
   RandomInRangeOptions,
-} from './core';
+} from './core/core';
 
 type AmountOptions = FakeOptions & RandomInRangeOptions;
 
+/**
+ * Generate a random amount.
+ *
+ * @category TBD
+ *
+ * @example
+ *
+ * amount()
+ *
+ * @example
+ *
+ * amount({ length: 10 })
+ *
+ */
 export function amount<Options extends AmountOptions>(options?: Options) {
   const config: RandomInRangeOptions = {
     min: options?.min || 0,

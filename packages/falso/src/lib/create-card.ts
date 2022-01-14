@@ -1,4 +1,4 @@
-import { fake, FakeOptions } from './core';
+import { fake, FakeOptions } from './core/core';
 import { data } from './create-card.json';
 
 // TODO - generate programmatically
