@@ -1,5 +1,5 @@
 import { randomFloat } from './random-float';
-import { fake, FakeOptions, getRandomInRange } from './core';
+import { fake, FakeOptions, getRandomInRange } from './core/core';
 
 export interface HSLOptions extends FakeOptions {
   alpha?: boolean;
