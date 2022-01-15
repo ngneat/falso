@@ -1804,6 +1804,18 @@ import { hex } from '@ngneat/falso';
 hex();
 ```
 
+#### `hsl({ alpha: boolean })`
+
+```ts
+import { hsl } from '@ngneat/falso';
+
+// hsl(239,80%,20%)
+hsl();
+
+// hsla(239,80%,20%,0.5)
+hsl({ alpha: true });
+```
+
 #### `programmingLanguage()`
 
 ```ts
