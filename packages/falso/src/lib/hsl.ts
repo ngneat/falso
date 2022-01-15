@@ -16,10 +16,13 @@ export interface HSLOptions extends FakeOptions {
  *
  * @example
  *
+ * hsl({ length: 3 })
+ *
+ * @example
+ *
  * hsl({ alpha: true })
  *
  */
-
 export function hsl<Options extends HSLOptions>(options?: Options) {
   const factory = () => {
     const [h, s, l, a] = [
