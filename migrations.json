@@ -1,0 +1,12 @@
+{
+  "migrations": [
+    {
+      "version": "13.4.4-beta.0",
+      "cli": "nx",
+      "description": "Create a root babel config file if it doesn't exist and using babel-jest in jest.config.js and add @nrwl/web as needed",
+      "factory": "./src/migrations/update-13-4-4/add-missing-root-babel-config",
+      "package": "@nrwl/jest",
+      "name": "add-missing-root-babel-config"
+    }
+  ]
+}
