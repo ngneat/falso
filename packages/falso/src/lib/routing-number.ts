@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './routing-number.json';
+import { randNumber } from './number';
 
 /**
  * Generate a random routing number.
@@ -18,5 +18,5 @@ import { data } from './routing-number.json';
 export function randRoutingNumber<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(() => randNumber({ min: 10_000_000, max: 99_999_999 }), options);
 }

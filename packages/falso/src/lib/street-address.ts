@@ -1,5 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './street-address.json';
+import { fake, FakeOptions } from './core/core';
+import { randNumber } from './number';
+import { randStreetName } from './street-name';
 
 /**
  * Generate a random street address.
@@ -18,5 +19,8 @@ import { data } from './street-address.json';
 export function randStreetAddress<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(
+    () => `${randNumber({ min: 0, max: 1_500 })} ${randStreetName()}`,
+    options
+  );
 }

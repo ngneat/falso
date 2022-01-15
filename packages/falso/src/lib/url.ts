@@ -1,5 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './url.json';
+import { fake, FakeOptions } from './core/core';
+import { randDomainSuffix } from './domain-suffix';
+import { randWord } from './word';
 
 /**
  * Generate a random url.
@@ -16,5 +17,7 @@ import { data } from './url.json';
  *
  */
 export function randUrl<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => {
+    return `${fake(['http', 'https'])}://${randWord()}.${randDomainSuffix()}`;
+  }, options);
 }

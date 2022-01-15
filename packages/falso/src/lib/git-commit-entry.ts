@@ -1,5 +1,8 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './git-commit-entry.json';
+import { fake, FakeOptions } from './core/core';
+import { randGitCommitSha } from './git-commit-sha';
+import { randFullName } from './full-name';
+import { randEmail } from './email';
+import { randGitCommitMessage } from './git-commit-message';
 
 /**
  * Generate a random git commit.
@@ -18,5 +21,7 @@ import { data } from './git-commit-entry.json';
 export function randGitCommitEntry<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(() => {
+    return `commit ${randGitCommitSha()}\\r\\nAuthor: ${randFullName()} <${randEmail()}>\\r\\nDate: ${new Date().toString()}\\r\\n\\r\\n${randGitCommitMessage()}`;
+  }, options);
 }

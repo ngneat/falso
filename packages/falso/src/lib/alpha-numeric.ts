@@ -1,5 +1,7 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './random-alpha-numeric.json';
+import { randBoolean } from './boolean';
+import { randAlpha } from './alpha';
+import { randNumber } from './number';
 
 /**
  * Get a random alpha or numeric.
@@ -18,5 +20,8 @@ import { data } from './random-alpha-numeric.json';
 export function randAlphaNumeric<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(
+    () => (randBoolean() ? randAlpha() : randNumber({ min: 0, max: 9 })),
+    options
+  );
 }

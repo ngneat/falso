@@ -1,5 +1,32 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './random-alpha.json';
+
+const alphabet = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'j',
+  'k',
+  'm',
+  'n',
+  'l',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z',
+];
 
 /**
  * Get a random alpha.
@@ -16,5 +43,5 @@ import { data } from './random-alpha.json';
  *
  */
 export function randAlpha<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(alphabet, options);
 }

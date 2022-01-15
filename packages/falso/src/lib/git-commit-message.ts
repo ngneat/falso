@@ -1,5 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './git-commit-message.json';
+import { fake, FakeOptions } from './core/core';
+import { randNumber } from './number';
+import { randWord } from './word';
 
 /**
  * Generate a random git message.
@@ -18,5 +19,13 @@ import { data } from './git-commit-message.json';
 export function randGitCommitMessage<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(() => {
+    const words = [];
+
+    for (let i = 0; i < randNumber({ min: 2, max: 5 }); i++) {
+      words.push(randWord());
+    }
+
+    return words.join(' ');
+  }, options);
 }

@@ -1,5 +1,7 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './git-short-sha.json';
+import { randAlphaNumeric } from './alpha-numeric';
+
+const commitShortShaLen = 7;
 
 /**
  * Generate a random git short sha.
@@ -18,5 +20,13 @@ import { data } from './git-short-sha.json';
 export function randGitShortSha<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(() => {
+    let sha = '';
+
+    for (let i = 0; i < commitShortShaLen; i++) {
+      sha += randAlphaNumeric();
+    }
+
+    return sha;
+  }, options);
 }

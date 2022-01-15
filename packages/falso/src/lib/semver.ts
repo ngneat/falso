@@ -1,10 +1,8 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './semver.json';
-import { rand } from './rand';
+import { randNumber } from './number';
 
 export interface SemverOptions extends FakeOptions {
   prefix?: string;
-  // TODO add ranges
 }
 
 /**
@@ -22,5 +20,11 @@ export interface SemverOptions extends FakeOptions {
  *
  */
 export function randSemver<Options extends SemverOptions>(options?: Options) {
-  return fake(() => `${options?.prefix || ''}${rand(data)}`, options);
+  return fake(() => {
+    const version = Array.from({ length: 3 }, () =>
+      randNumber({ min: 0, max: 20 })
+    ).join('.');
+
+    return `${options?.prefix || ''}${version}`;
+  }, options);
 }

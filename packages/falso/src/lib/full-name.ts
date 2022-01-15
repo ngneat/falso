@@ -1,5 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './full-name.json';
+import { fake, FakeOptions } from './core/core';
+import { randLastName } from './last-name';
+import { randFirstName } from './first-name';
 
 /**
  * Generate a random full name.
@@ -16,5 +17,5 @@ import { data } from './full-name.json';
  *
  */
 export function randFullName<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => `${randFirstName()} ${randLastName()}`, options);
 }

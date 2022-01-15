@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './port.json';
+import { randNumber } from './number';
 
 /**
  * Generate a random port.
@@ -16,5 +16,5 @@ import { data } from './port.json';
  *
  */
 export function randPort<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => randNumber({ min: 0, max: 65_353 }), options);
 }

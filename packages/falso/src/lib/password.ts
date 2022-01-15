@@ -1,5 +1,9 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './password.json';
+import { randSequence } from './sequence';
+
+export interface PasswordOptions extends FakeOptions {
+  size?: number;
+}
 
 /**
  * Generate a random password.
@@ -15,6 +19,10 @@ import { data } from './password.json';
  * randPassword({ length: 10 })
  *
  */
-export function randPassword<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+export function randPassword<Options extends PasswordOptions>(
+  options?: Options
+) {
+  const size = options?.size || 15;
+
+  return fake(() => randSequence({ size }), options);
 }

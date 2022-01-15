@@ -1,5 +1,5 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './mac.json';
+import { fake, FakeOptions } from './core/core';
+import { randHexaDecimal } from './hexa-decimal';
 
 /**
  * Generate a random mac address.
@@ -16,5 +16,12 @@ import { data } from './mac.json';
  *
  */
 export function randMac<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(
+    () =>
+      Array.from(
+        { length: 6 },
+        () => randHexaDecimal() + randHexaDecimal()
+      ).join('-'),
+    options
+  );
 }
