@@ -1,4 +1,4 @@
-import { randBetween } from './between';
+import { randBetweenDate } from './between';
 import { fake, FakeOptions } from './core/core';
 
 interface SoonOptions extends FakeOptions {
@@ -12,14 +12,18 @@ interface SoonOptions extends FakeOptions {
  *
  * @example
  *
- * randSoon()
+ * randSoonDate()
  *
  * @example
  *
- * randSoon({ length: 10 })
+ * randSoonDate({ days: 5 })
+ *
+ * @example
+ *
+ * randSoonDate({ length: 10 })
  *
  */
-export function randSoon<Options extends SoonOptions>(options?: Options) {
+export function randSoonDate<Options extends SoonOptions>(options?: Options) {
   const days = options?.days ?? 1;
 
   if (days < 1) {
@@ -29,5 +33,5 @@ export function randSoon<Options extends SoonOptions>(options?: Options) {
   const daysInMilliseconds = days * 24 * 60 * 60 * 1000;
   const from = new Date();
   const to = new Date(from.getTime() + daysInMilliseconds);
-  return fake(() => randBetween({ from, to }), options);
+  return fake(() => randBetweenDate({ from, to }), options);
 }

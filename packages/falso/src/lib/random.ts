@@ -3,17 +3,13 @@ import seedRandom from 'seedrandom';
 let prng = seedRandom();
 
 /**
- * Generate a random random.
+ * Create a seed.
  *
  * @category general
  *
  * @example
  *
  * randRandom()
- *
- * @example
- *
- * randRandom({ length: 10 })
  *
  */
 export function random() {

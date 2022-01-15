@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './street-name.json';
 
 /**
- * Generate a random street-name.
+ * Generate a random street name.
  *
  * @category address
  *

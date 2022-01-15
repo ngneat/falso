@@ -1,4 +1,4 @@
-import { randBetween } from './between';
+import { randBetweenDate } from './between';
 import { fake, FakeOptions } from './core/core';
 
 interface FutureOptions extends FakeOptions {
@@ -12,18 +12,20 @@ interface FutureOptions extends FakeOptions {
  *
  * @example
  *
- * randFuture()
+ * randFutureDate()
  *
  * @example
  *
- * randFuture({ length: 10 })
+ * randFutureDate({ length: 10 })
  *
  * @example
  *
- * future({ years: 10 })
+ * randFutureDate({ years: 10 })
  *
  */
-export function randFuture<Options extends FutureOptions>(options?: Options) {
+export function randFutureDate<Options extends FutureOptions>(
+  options?: Options
+) {
   const years = options?.years ?? 1;
 
   if (years < 0) {
@@ -33,5 +35,5 @@ export function randFuture<Options extends FutureOptions>(options?: Options) {
   const yearsInMilliseconds = years * 365 * 24 * 60 * 60 * 1000;
   const from = new Date();
   const to = new Date(from.getTime() + yearsInMilliseconds);
-  return fake(() => randBetween({ from, to }), options);
+  return fake(() => randBetweenDate({ from, to }), options);
 }
