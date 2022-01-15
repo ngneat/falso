@@ -11,13 +11,17 @@ export interface RandomNumberOptions extends FakeOptions {
 }
 
 /**
- * Generate a random random-number.
+ * Generate a random random number.
  *
  * @category general
  *
  * @example
  *
  * randNumber()
+ *
+ * @example
+ *
+ * randNumber({ min: 10, max: 1000 })
  *
  * @example
  *

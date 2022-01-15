@@ -8,7 +8,7 @@ export interface SemverOptions extends FakeOptions {
 }
 
 /**
- * Generate a random sem version.
+ * Generate a random semantic version.
  *
  * @category internet
  *

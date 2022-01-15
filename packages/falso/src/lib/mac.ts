@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './mac.json';
 
 /**
- * Generate a random job type.
+ * Generate a random mac address.
  *
- * @category internet
+ * @category system
  *
  * @example
  *

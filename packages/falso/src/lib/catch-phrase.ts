@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './catch-phrase.json';
 
 /**
- * Generate a random catch-phrase.
+ * Generate a random catch phrase.
  *
  * @category text
  *

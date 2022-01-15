@@ -16,7 +16,7 @@ function generator() {
 /**
  * Generate a random hexa decimal.
  *
- * @category General
+ * @category System
  *
  * @example
  *

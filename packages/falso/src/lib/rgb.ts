@@ -16,6 +16,10 @@ export interface RGBOptions extends FakeOptions {
  *
  * @example
  *
+ * randRgb({ alpha: true })
+ *
+ * @example
+ *
  * randRgb({ length: 10 })
  *
  */

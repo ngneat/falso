@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './ordinal-direction.json';
 
 /**
- * Generate a random ordinal-direction.
+ * Generate a random ordinal direction.
  *
  * @category address
  *

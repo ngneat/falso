@@ -35,6 +35,14 @@ type RandomSequenceOptions = {
  *
  * @example
  *
+ * randSequence({ size: 10 })
+ *
+ * @example
+ *
+ * randSequence({ chars: 'aAbBcC@#' })
+ *
+ * @example
+ *
  * randSequence({ length: 10 })
  *
  */

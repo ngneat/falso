@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './job-descriptor.json';
 
 /**
- * Generate a random job-descriptor.
+ * Generate a random job descriptor.
  *
  * @category Jobs
  *

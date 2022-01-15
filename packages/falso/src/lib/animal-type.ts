@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './animal-type.json';
 
 /**
- * Generate a random animal-type.
+ * Generate a random animal type.
  *
  * @category animals
  *

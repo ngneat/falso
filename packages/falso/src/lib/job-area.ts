@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './job-area.json';
 
 /**
- * Generate a random job-area.
+ * Generate a random job area.
  *
  * @category Jobs
  *

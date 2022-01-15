@@ -21,6 +21,8 @@ export default async function (tree: Tree, options: NewFalsoOptions) {
   const n = names(options.name);
 
   if (sourceRoot) {
+    const name = `rand${n.className}`;
+
     tree.write(
       getFilePath(sourceRoot, n.fileName, FileType.Ts),
       `
@@ -28,22 +30,20 @@ export default async function (tree: Tree, options: NewFalsoOptions) {
       ${options.json ? `import { data } from './${n.fileName}.json'` : ''}
 
       /**
-       * Generate a random ${n.name}.
+       * Generate a random ${niceName(n.propertyName).toLowerCase()}.
        *
-       * @category TBD
-       *
-       * @example
-       *
-       * ${n.propertyName}()
+       * @category TODO
        *
        * @example
        *
-       * ${n.propertyName}({ length: 10 })
+       * ${name}()
+       *
+       * @example
+       *
+       * ${name}({ length: 10 })
        *
        */
-      export function ${
-        n.propertyName
-      }<Options extends FakeOptions>(options?: Options) {
+      export function ${name}<Options extends FakeOptions>(options?: Options) {
         return fake(${options.json ? 'data' : `() => 1`}, options);
       }
     `
@@ -96,4 +96,8 @@ function getFilePath(
     fileType == FileType.Spec ? 'tests' : 'lib',
     `${filename}.${fileType}`
   );
+}
+
+function niceName(str: string) {
+  return str.replace(/([A-Z]+)*([A-Z][a-z])/g, '$1 $2');
 }
