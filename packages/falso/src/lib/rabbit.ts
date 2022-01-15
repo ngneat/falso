@@ -4,7 +4,7 @@ import { data } from './rabbit.json';
 /**
  * Generate a random rabbit.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *

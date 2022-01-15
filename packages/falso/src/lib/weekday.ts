@@ -4,7 +4,7 @@ import { data } from './weekday.json';
 /**
  * Generate a random weekday.
  *
- * @category TBD
+ * @category date
  *
  * @example
  *

@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './time-zone.json';
 
 /**
- * Generate a random time-zone.
+ * Generate a random time zone.
  *
- * @category TBD
+ * @category address
  *
  * @example
  *

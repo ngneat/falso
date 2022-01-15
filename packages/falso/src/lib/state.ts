@@ -4,7 +4,7 @@ import { data } from './state.json';
 /**
  * Generate a random state.
  *
- * @category TBD
+ * @category address
  *
  * @example
  *

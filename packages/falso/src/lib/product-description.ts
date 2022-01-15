@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './product-description.json';
 
 /**
- * Generate a random product-description.
+ * Generate a random product description.
  *
- * @category TBD
+ * @category Commerce
  *
  * @example
  *

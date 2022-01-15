@@ -8,7 +8,7 @@ export interface RGBOptions extends FakeOptions {
 /**
  * Generate a random rgb.
  *
- * @category TBD
+ * @category colors
  *
  * @example
  *

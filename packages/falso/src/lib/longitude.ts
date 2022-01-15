@@ -3,7 +3,7 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
 /**
  * Generate a random longitude.
  *
- * @category TBD
+ * @category address
  *
  * @example
  *

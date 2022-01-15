@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './vehicle-manufacturer.json';
 
 /**
- * Generate a random vehicle-manufacturer.
+ * Generate a random vehicle manufacturer.
  *
- * @category TBD
+ * @category vehicle
  *
  * @example
  *

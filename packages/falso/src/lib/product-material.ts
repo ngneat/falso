@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './product-material.json';
 
 /**
- * Generate a random product-material.
+ * Generate a random product material.
  *
- * @category TBD
+ * @category Commerce
  *
  * @example
  *

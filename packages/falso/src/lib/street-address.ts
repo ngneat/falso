@@ -1,7 +1,20 @@
 import { FakeOptions, fake } from './core/core';
 import { data } from './street-address.json';
 
-// TODO - generate programmatically number + street name
+/**
+ * Generate a random street address.
+ *
+ * @category address
+ *
+ * @example
+ *
+ * randStreetAddress()
+ *
+ * @example
+ *
+ * randStreetAddress({ length: 10 })
+ *
+ */
 export function randStreetAddress<Options extends FakeOptions>(
   options?: Options
 ) {

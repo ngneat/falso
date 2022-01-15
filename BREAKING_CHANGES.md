@@ -118,7 +118,7 @@ New
 - month
 - weekday
 
-# COMMERCE
+# Commerce
 
 - department
 - productName

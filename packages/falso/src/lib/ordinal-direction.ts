@@ -4,7 +4,7 @@ import { data } from './ordinal-direction.json';
 /**
  * Generate a random ordinal-direction.
  *
- * @category TBD
+ * @category address
  *
  * @example
  *

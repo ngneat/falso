@@ -4,7 +4,7 @@ import { data } from './street-name.json';
 /**
  * Generate a random street-name.
  *
- * @category TBD
+ * @category address
  *
  * @example
  *
