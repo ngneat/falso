@@ -8,13 +8,13 @@ import { data } from './job-area.json';
  *
  * @example
  *
- * jobArea()
+ * randJobArea()
  *
  * @example
  *
- * jobArea({ length: 10 })
+ * randJobArea({ length: 10 })
  *
  */
-export function jobArea<Options extends FakeOptions>(options?: Options) {
+export function randJobArea<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

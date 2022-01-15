@@ -1,5 +1,5 @@
 import { fake, FakeOptions, getRandomInRange } from './core/core';
-import { RandomNumberOptions } from './random-number';
+import { RandomNumberOptions } from './number';
 
 export interface PriceOptions extends FakeOptions, RandomNumberOptions {}
 
@@ -10,13 +10,13 @@ export interface PriceOptions extends FakeOptions, RandomNumberOptions {}
  *
  * @example
  *
- * price()
+ * randPrice()
  *
  * @example
  *
- * price({ length: 10 })
+ * randPrice({ length: 10 })
  *
  */
-export function price<Options extends PriceOptions>(options?: Options) {
+export function randPrice<Options extends PriceOptions>(options?: Options) {
   return fake(() => getRandomInRange(options), options);
 }

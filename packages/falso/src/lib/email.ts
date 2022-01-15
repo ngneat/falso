@@ -1,7 +1,20 @@
 import { FakeOptions, fake } from './core/core';
 import { data } from './email.json';
 
-// TODO - generate programmatically using firstName and suffix
-export function email<Options extends FakeOptions>(options?: Options) {
+/**
+ * Generate a random email.
+ *
+ * @category Person
+ *
+ * @example
+ *
+ * randEmail()
+ *
+ * @example
+ *
+ * randEmail({ length: 10 })
+ *
+ */
+export function randEmail<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

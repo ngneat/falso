@@ -1,4 +1,4 @@
-import { between } from './between';
+import { randBetween } from './between';
 import { fake, FakeOptions } from './core/core';
 
 interface RecentOptions extends FakeOptions {
@@ -8,18 +8,18 @@ interface RecentOptions extends FakeOptions {
 /**
  * Generate a random recent.
  *
- * @category TBD
+ * @category date
  *
  * @example
  *
- * recent()
+ * randRecent()
  *
  * @example
  *
- * recent({ length: 10 })
+ * randRecent({ length: 10 })
  *
  */
-export function recent<Options extends RecentOptions>(options?: Options) {
+export function randRecent<Options extends RecentOptions>(options?: Options) {
   const days = options?.days ?? 1;
 
   if (days < 1) {
@@ -30,5 +30,5 @@ export function recent<Options extends RecentOptions>(options?: Options) {
   const to = new Date();
   const from = new Date(to.getTime() - daysInMilliseconds);
 
-  return fake(() => between({ from, to }), options);
+  return fake(() => randBetween({ from, to }), options);
 }

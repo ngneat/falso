@@ -1,14 +1,28 @@
 import { FakeOptions, fake } from './core/core';
-import { randomNumber } from './random-number';
+import { randNumber } from './number';
 
-export function creditCardNumber<Options extends FakeOptions>(
+/**
+ * Generate a random credit card number.
+ *
+ * @category Finance
+ *
+ * @example
+ *
+ * randCreditCardNumber()
+ *
+ * @example
+ *
+ * randCreditCardNumber({ length: 10 })
+ *
+ */
+export function randCreditCardNumber<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(() => {
     let cardNumber = '';
 
-    for (let i = 0; i < randomNumber({ min: 12, max: 19 }); i++) {
-      cardNumber += randomNumber({ min: 0, max: 9 });
+    for (let i = 0; i < randNumber({ min: 12, max: 19 }); i++) {
+      cardNumber += randNumber({ min: 0, max: 9 });
     }
 
     return cardNumber;

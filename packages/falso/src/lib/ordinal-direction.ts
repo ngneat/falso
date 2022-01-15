@@ -8,14 +8,14 @@ import { data } from './ordinal-direction.json';
  *
  * @example
  *
- * ordinalDirection()
+ * randOrdinalDirection()
  *
  * @example
  *
- * ordinalDirection({ length: 10 })
+ * randOrdinalDirection({ length: 10 })
  *
  */
-export function ordinalDirection<Options extends FakeOptions>(
+export function randOrdinalDirection<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

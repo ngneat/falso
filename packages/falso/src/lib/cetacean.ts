@@ -4,17 +4,17 @@ import { data } from './cetacean.json';
 /**
  * Generate a random cetacean.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *
- * cetacean()
+ * randCetacean()
  *
  * @example
  *
- * cetacean({ length: 10 })
+ * randCetacean({ length: 10 })
  *
  */
-export function cetacean<Options extends FakeOptions>(options?: Options) {
+export function randCetacean<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

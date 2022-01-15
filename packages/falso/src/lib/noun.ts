@@ -8,13 +8,13 @@ import { data } from './noun.json';
  *
  * @example
  *
- * noun()
+ * randNoun()
  *
  * @example
  *
- * noun({ length: 10 })
+ * randNoun({ length: 10 })
  *
  */
-export function noun<Options extends FakeOptions>(options?: Options) {
+export function randNoun<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

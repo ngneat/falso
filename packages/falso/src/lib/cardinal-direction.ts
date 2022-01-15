@@ -4,18 +4,18 @@ import { data } from './cardinal-direction.json';
 /**
  * Generate a random cardinal-direction.
  *
- * @category TBD
+ * @category Address
  *
  * @example
  *
- * cardinalDirection()
+ * randCardinalDirection()
  *
  * @example
  *
- * cardinalDirection({ length: 10 })
+ * randCardinalDirection({ length: 10 })
  *
  */
-export function cardinalDirection<Options extends FakeOptions>(
+export function randCardinalDirection<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

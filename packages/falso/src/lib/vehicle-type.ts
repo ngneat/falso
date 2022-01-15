@@ -8,13 +8,15 @@ import { data } from './vehicle-type.json';
  *
  * @example
  *
- * vehicleType()
+ * randVehicleType()
  *
  * @example
  *
- * vehicleType({ length: 10 })
+ * randVehicleType({ length: 10 })
  *
  */
-export function vehicleType<Options extends FakeOptions>(options?: Options) {
+export function randVehicleType<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

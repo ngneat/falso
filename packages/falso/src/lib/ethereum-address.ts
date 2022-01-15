@@ -2,20 +2,20 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './ethereum-address.json';
 
 /**
- * Generate a random ethereum-address.
+ * Generate a random ethereum address.
  *
- * @category TBD
- *
- * @example
- *
- * ethereumAddress()
+ * @category Finance
  *
  * @example
  *
- * ethereumAddress({ length: 10 })
+ * randEthereumAddress()
+ *
+ * @example
+ *
+ * randEthereumAddress({ length: 10 })
  *
  */
-export function ethereumAddress<Options extends FakeOptions>(
+export function randEthereumAddress<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

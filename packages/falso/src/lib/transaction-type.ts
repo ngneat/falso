@@ -8,14 +8,14 @@ import { data } from './transaction-type.json';
  *
  * @example
  *
- * transactionType()
+ * randTransactionType()
  *
  * @example
  *
- * transactionType({ length: 10 })
+ * randTransactionType({ length: 10 })
  *
  */
-export function transactionType<Options extends FakeOptions>(
+export function randTransactionType<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

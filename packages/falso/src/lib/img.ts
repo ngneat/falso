@@ -5,18 +5,18 @@ type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
 /**
  * Generate a random img.
  *
- * @category TBD
+ * @category General
  *
  * @example
  *
- * img()
+ * randImg()
  *
  * @example
  *
- * img({ length: 10 })
+ * randImg({ length: 10 })
  *
  */
-export function img<
+export function randImg<
   Options extends FakeOptions & {
     width?: number;
     height?: number;

@@ -2,19 +2,19 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './git-branch.json';
 
 /**
- * Generate a random git-branch.
+ * Generate a random git branch.
  *
- * @category TBD
- *
- * @example
- *
- * gitBranch()
+ * @category git
  *
  * @example
  *
- * gitBranch({ length: 10 })
+ * randGitBranch()
+ *
+ * @example
+ *
+ * randGitBranch({ length: 10 })
  *
  */
-export function gitBranch<Options extends FakeOptions>(options?: Options) {
+export function randGitBranch<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

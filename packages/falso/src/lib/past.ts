@@ -1,4 +1,4 @@
-import { between } from './between';
+import { randBetween } from './between';
 import { fake, FakeOptions } from './core/core';
 
 interface PastOptions extends FakeOptions {
@@ -8,18 +8,18 @@ interface PastOptions extends FakeOptions {
 /**
  * Generate a random past.
  *
- * @category TBD
+ * @category date
  *
  * @example
  *
- * past()
+ * randPast()
  *
  * @example
  *
- * past({ length: 10 })
+ * randPast({ length: 10 })
  *
  */
-export function past<Options extends PastOptions>(options?: Options) {
+export function randPast<Options extends PastOptions>(options?: Options) {
   const years = options?.years ?? 1;
 
   if (years < 0) {
@@ -30,5 +30,5 @@ export function past<Options extends PastOptions>(options?: Options) {
   const to = new Date();
   const from = new Date(to.getTime() - yearsInMilliseconds);
 
-  return fake(() => between({ from, to }), options);
+  return fake(() => randBetween({ from, to }), options);
 }

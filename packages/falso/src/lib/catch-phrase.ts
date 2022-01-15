@@ -4,17 +4,19 @@ import { data } from './catch-phrase.json';
 /**
  * Generate a random catch-phrase.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *
- * catchPhrase()
+ * randCatchPhrase()
  *
  * @example
  *
- * catchPhrase({ length: 10 })
+ * randCatchPhrase({ length: 10 })
  *
  */
-export function catchPhrase<Options extends FakeOptions>(options?: Options) {
+export function randCatchPhrase<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -8,13 +8,15 @@ import { data } from './product-name.json';
  *
  * @example
  *
- * productName()
+ * randProductName()
  *
  * @example
  *
- * productName({ length: 10 })
+ * randProductName({ length: 10 })
  *
  */
-export function productName<Options extends FakeOptions>(options?: Options) {
+export function randProductName<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

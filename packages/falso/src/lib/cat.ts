@@ -4,17 +4,17 @@ import { data } from './cat.json';
 /**
  * Generate a random cat.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *
- * cat()
+ * randCat()
  *
  * @example
  *
- * cat({ length: 10 })
+ * randCat({ length: 10 })
  *
  */
-export function cat<Options extends FakeOptions>(options?: Options) {
+export function randCat<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

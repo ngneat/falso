@@ -8,13 +8,13 @@ import { data } from './phrase.json';
  *
  * @example
  *
- * phrase()
+ * randPhrase()
  *
  * @example
  *
- * phrase({ length: 10 })
+ * randPhrase({ length: 10 })
  *
  */
-export function phrase<Options extends FakeOptions>(options?: Options) {
+export function randPhrase<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

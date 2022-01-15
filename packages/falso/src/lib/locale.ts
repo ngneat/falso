@@ -8,13 +8,13 @@ import { data } from './locale.json';
  *
  * @example
  *
- * locale()
+ * randLocale()
  *
  * @example
  *
- * locale({ length: 10 })
+ * randLocale({ length: 10 })
  *
  */
-export function locale<Options extends FakeOptions>(options?: Options) {
+export function randLocale<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

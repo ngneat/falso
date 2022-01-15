@@ -8,13 +8,13 @@ import { data } from './last-name.json';
  *
  * @example
  *
- * lastName()
+ * randLastName()
  *
  * @example
  *
- * lastName({ length: 10 })
+ * randLastName({ length: 10 })
  *
  */
-export function lastName<Options extends FakeOptions>(options?: Options) {
+export function randLastName<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

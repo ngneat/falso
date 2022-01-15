@@ -7,14 +7,14 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
  *
  * @example
  *
- * latitude()
+ * randLatitude()
  *
  * @example
  *
- * latitude({ length: 10 })
+ * randLatitude({ length: 10 })
  *
  */
-export function latitude<Options extends FakeOptions>(options?: Options) {
+export function randLatitude<Options extends FakeOptions>(options?: Options) {
   return fake(
     () =>
       getRandomInRange({

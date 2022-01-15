@@ -8,13 +8,13 @@ import { data } from './mime-type.json';
  *
  * @example
  *
- * mimeType()
+ * randMimeType()
  *
  * @example
  *
- * mimeType({ length: 10 })
+ * randMimeType({ length: 10 })
  *
  */
-export function mimeType<Options extends FakeOptions>(options?: Options) {
+export function randMimeType<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

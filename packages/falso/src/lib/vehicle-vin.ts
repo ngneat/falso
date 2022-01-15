@@ -8,13 +8,13 @@ import { data } from './vehicle-vin.json';
  *
  * @example
  *
- * vehicleVin()
+ * randVehicleVin()
  *
  * @example
  *
- * vehicleVin({ length: 10 })
+ * randVehicleVin({ length: 10 })
  *
  */
-export function vehicleVin<Options extends FakeOptions>(options?: Options) {
+export function randVehicleVin<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

@@ -9,11 +9,11 @@ let prng = seedRandom();
  *
  * @example
  *
- * random()
+ * randRandom()
  *
  * @example
  *
- * random({ length: 10 })
+ * randRandom({ length: 10 })
  *
  */
 export function random() {

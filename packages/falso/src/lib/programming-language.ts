@@ -8,14 +8,14 @@ import { data } from './programming-language.json';
  *
  * @example
  *
- * programmingLanguage()
+ * randProgrammingLanguage()
  *
  * @example
  *
- * programmingLanguage({ length: 10 })
+ * randProgrammingLanguage({ length: 10 })
  *
  */
-export function programmingLanguage<Options extends FakeOptions>(
+export function randProgrammingLanguage<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

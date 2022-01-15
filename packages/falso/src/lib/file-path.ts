@@ -2,19 +2,19 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './file-path.json';
 
 /**
- * Generate a random file-path.
+ * Generate a random file path.
  *
- * @category TBD
- *
- * @example
- *
- * filePath()
+ * @category system
  *
  * @example
  *
- * filePath({ length: 10 })
+ * randFilePath()
+ *
+ * @example
+ *
+ * randFilePath({ length: 10 })
  *
  */
-export function filePath<Options extends FakeOptions>(options?: Options) {
+export function randFilePath<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

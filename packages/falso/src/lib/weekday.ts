@@ -8,13 +8,13 @@ import { data } from './weekday.json';
  *
  * @example
  *
- * weekday()
+ * randWeekday()
  *
  * @example
  *
- * weekday({ length: 10 })
+ * randWeekday({ length: 10 })
  *
  */
-export function weekday<Options extends FakeOptions>(options?: Options) {
+export function randWeekday<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

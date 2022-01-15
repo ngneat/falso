@@ -8,13 +8,13 @@ import { data } from './sentence.json';
  *
  * @example
  *
- * sentence()
+ * randSentence()
  *
  * @example
  *
- * sentence({ length: 10 })
+ * randSentence({ length: 10 })
  *
  */
-export function sentence<Options extends FakeOptions>(options?: Options) {
+export function randSentence<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

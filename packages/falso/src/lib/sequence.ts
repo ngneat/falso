@@ -27,18 +27,18 @@ type RandomSequenceOptions = {
 /**
  * Generate a random random sequence.
  *
- * @category TBD
+ * @category general
  *
  * @example
  *
- * randomSequence()
+ * randSequence()
  *
  * @example
  *
- * randomSequence({ length: 10 })
+ * randSequence({ length: 10 })
  *
  */
-export function randomSequence<Options extends RandomSequenceOptions>(
+export function randSequence<Options extends RandomSequenceOptions>(
   options?: Options
 ) {
   return fake(() => generator(options?.size, options?.chars), options);

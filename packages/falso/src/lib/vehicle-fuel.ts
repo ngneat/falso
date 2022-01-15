@@ -8,13 +8,15 @@ import { data } from './vehicle-fuel.json';
  *
  * @example
  *
- * vehicleFuel()
+ * randVehicleFuel()
  *
  * @example
  *
- * vehicleFuel({ length: 10 })
+ * randVehicleFuel({ length: 10 })
  *
  */
-export function vehicleFuel<Options extends FakeOptions>(options?: Options) {
+export function randVehicleFuel<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

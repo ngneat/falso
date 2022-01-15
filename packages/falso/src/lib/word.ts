@@ -8,13 +8,13 @@ import { data } from './word.json';
  *
  * @example
  *
- * word()
+ * randWord()
  *
  * @example
  *
- * word({ length: 10 })
+ * randWord({ length: 10 })
  *
  */
-export function word<Options extends FakeOptions>(options?: Options) {
+export function randWord<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

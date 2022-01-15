@@ -8,13 +8,13 @@ import { data } from './vehicle-vrm.json';
  *
  * @example
  *
- * vehicleVrm()
+ * randVehicleVrm()
  *
  * @example
  *
- * vehicleVrm({ length: 10 })
+ * randVehicleVrm({ length: 10 })
  *
  */
-export function vehicleVrm<Options extends FakeOptions>(options?: Options) {
+export function randVehicleVrm<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

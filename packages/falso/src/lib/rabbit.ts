@@ -8,13 +8,13 @@ import { data } from './rabbit.json';
  *
  * @example
  *
- * rabbit()
+ * randRabbit()
  *
  * @example
  *
- * rabbit({ length: 10 })
+ * randRabbit({ length: 10 })
  *
  */
-export function rabbit<Options extends FakeOptions>(options?: Options) {
+export function randRabbit<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

@@ -1,5 +1,5 @@
-import { randomFloat } from './random-float';
 import { fake, FakeOptions, getRandomInRange } from './core/core';
+import { randFloat } from './float';
 
 export interface HSLOptions extends FakeOptions {
   alpha?: boolean;
@@ -12,24 +12,24 @@ export interface HSLOptions extends FakeOptions {
  *
  * @example
  *
- * hsl()
+ * randHsl()
  *
  * @example
  *
- * hsl({ length: 3 })
+ * randHsl({ length: 3 })
  *
  * @example
  *
  * hsl({ alpha: true })
  *
  */
-export function hsl<Options extends HSLOptions>(options?: Options) {
+export function randHsl<Options extends HSLOptions>(options?: Options) {
   const factory = () => {
     const [h, s, l, a] = [
       getRandomInRange({ min: 0, max: 359, fraction: 0 }),
       getRandomInRange({ min: 0, max: 100, fraction: 0 }),
       getRandomInRange({ min: 0, max: 100, fraction: 0 }),
-      randomFloat({ min: 0.1, max: 1 }),
+      randFloat({ min: 0.1, max: 1 }),
     ];
 
     return options?.alpha

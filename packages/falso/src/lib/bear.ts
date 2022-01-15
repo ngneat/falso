@@ -4,17 +4,17 @@ import { data } from './bear.json';
 /**
  * Generate a random bear.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *
- * bear()
+ * randBear()
  *
  * @example
  *
- * bear({ length: 10 })
+ * randBear({ length: 10 })
  *
  */
-export function bear<Options extends FakeOptions>(options?: Options) {
+export function randBear<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

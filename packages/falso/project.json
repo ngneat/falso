@@ -3,6 +3,9 @@
   "sourceRoot": "packages/falso/src",
   "projectType": "library",
   "targets": {
+    "manipulator": {
+      "executor": "./tools/executors/manipulator:manipulator"
+    },
     "build": {
       "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],

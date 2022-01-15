@@ -8,13 +8,15 @@ import { data } from './street-suffix.json';
  *
  * @example
  *
- * streetSuffix()
+ * randStreetSuffix()
  *
  * @example
  *
- * streetSuffix({ length: 10 })
+ * randStreetSuffix({ length: 10 })
  *
  */
-export function streetSuffix<Options extends FakeOptions>(options?: Options) {
+export function randStreetSuffix<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

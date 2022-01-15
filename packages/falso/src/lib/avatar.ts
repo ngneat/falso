@@ -7,18 +7,18 @@ interface AvatarOptions extends FakeOptions {
 /**
  * Generate a random avatar.
  *
- * @category TBD
+ * @category person
  *
  * @example
  *
- * avatar()
+ * randAvatar()
  *
  * @example
  *
- * avatar({ length: 10 })
+ * randAvatar({ length: 10 })
  *
  */
-export function avatar<Options extends AvatarOptions>(options?: Options) {
+export function randAvatar<Options extends AvatarOptions>(options?: Options) {
   const size = options?.size ?? 100;
 
   return fake(() => `https://i.pravatar.cc/${size}`, options);

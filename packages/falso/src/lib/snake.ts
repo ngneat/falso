@@ -8,13 +8,13 @@ import { data } from './snake.json';
  *
  * @example
  *
- * snake()
+ * randSnake()
  *
  * @example
  *
- * snake({ length: 10 })
+ * randSnake({ length: 10 })
  *
  */
-export function snake<Options extends FakeOptions>(options?: Options) {
+export function randSnake<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

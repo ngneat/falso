@@ -8,13 +8,13 @@ import { data } from './job-title.json';
  *
  * @example
  *
- * jobTitle()
+ * randJobTitle()
  *
  * @example
  *
- * jobTitle({ length: 10 })
+ * randJobTitle({ length: 10 })
  *
  */
-export function jobTitle<Options extends FakeOptions>(options?: Options) {
+export function randJobTitle<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

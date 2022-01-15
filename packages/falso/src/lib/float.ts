@@ -8,20 +8,20 @@ import {
 export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
 
 /**
- * Generate a random random-float.
+ * Generate a random random float.
  *
  * @category TBD
  *
  * @example
  *
- * randomFloat()
+ * randFloat()
  *
  * @example
  *
- * randomFloat({ length: 10 })
+ * randFloat({ length: 10 })
  *
  */
-export function randomFloat<Options extends RandomFloatOptions>(
+export function randFloat<Options extends RandomFloatOptions>(
   options?: Options
 ) {
   const o = { ...options, fraction: options?.fraction ?? 2 };

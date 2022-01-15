@@ -8,13 +8,13 @@ import { data } from './time-zone.json';
  *
  * @example
  *
- * timeZone()
+ * randTimeZone()
  *
  * @example
  *
- * timeZone({ length: 10 })
+ * randTimeZone({ length: 10 })
  *
  */
-export function timeZone<Options extends FakeOptions>(options?: Options) {
+export function randTimeZone<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }
