@@ -1,5 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './nearby-gpscoordinate.json';
+import { fake, FakeOptions } from './core/core';
+import { randLatitude } from './latitude';
+import { randLongitude } from './longitude';
 
 /**
  * Generate a random GPS coordinate.
@@ -18,5 +19,5 @@ import { data } from './nearby-gpscoordinate.json';
 export function randNearbyGPSCoordinate<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(() => [randLatitude(), randLongitude()], options);
 }

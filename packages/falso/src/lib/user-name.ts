@@ -1,5 +1,7 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './user-name.json';
+import { fake, FakeOptions } from './core/core';
+import { randFullName } from './full-name';
+import { randNumber } from './number';
+import { randBoolean } from './boolean';
 
 /**
  * Generate a random user name.
@@ -16,5 +18,13 @@ import { data } from './user-name.json';
  *
  */
 export function randUserName<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => {
+    let userName = randFullName().replace(' ', fake(['.', '_']));
+
+    if (randBoolean()) {
+      userName += randNumber({ min: 0, max: 100 });
+    }
+
+    return userName;
+  }, options);
 }

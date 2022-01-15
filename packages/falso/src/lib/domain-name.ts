@@ -1,5 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './domain-name.json';
+import { fake, FakeOptions } from './core/core';
+import { randDomainSuffix } from './domain-suffix';
+import { randWord } from './word';
 
 /**
  * Generate a random domain name.
@@ -16,5 +17,5 @@ import { data } from './domain-name.json';
  *
  */
 export function randDomainName<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => `${randWord()}.${randDomainSuffix()}`, options);
 }

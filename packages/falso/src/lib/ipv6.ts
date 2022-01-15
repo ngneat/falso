@@ -1,5 +1,5 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './ipv6.json';
+import { fake, FakeOptions } from './core/core';
+import { randHexaDecimal } from './hexa-decimal';
 
 /**
  * Generate a random ipv6.
@@ -16,5 +16,9 @@ import { data } from './ipv6.json';
  *
  */
 export function randIpv6<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => {
+    return Array.from({ length: 8 }, () => {
+      return Array.from({ length: 4 }, () => randHexaDecimal()).join('');
+    }).join(':');
+  }, options);
 }

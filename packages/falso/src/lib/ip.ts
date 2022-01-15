@@ -1,5 +1,7 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './ip.json';
+import { randNumber } from './number';
+
+const ipRange = { min: 0, max: 255 };
 
 /**
  * Generate a random ip.
@@ -16,5 +18,8 @@ import { data } from './ip.json';
  *
  */
 export function randIp<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(
+    () => Array.from({ length: 4 }, () => randNumber(ipRange)).join('.'),
+    options
+  );
 }

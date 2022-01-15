@@ -1,5 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './zip-code.json';
+import { fake, FakeOptions } from './core/core';
+import { randNumber } from './number';
+import { randBoolean } from './boolean';
 
 /**
  * Generate a random zip code.
@@ -16,5 +17,13 @@ import { data } from './zip-code.json';
  *
  */
 export function randZipCode<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(() => {
+    let zipCode = '' + randNumber({ min: 10_000, max: 99_999 });
+
+    if (randBoolean()) {
+      zipCode += '-' + randNumber({ min: 1_000, max: 9_999 });
+    }
+
+    return zipCode;
+  }, options);
 }

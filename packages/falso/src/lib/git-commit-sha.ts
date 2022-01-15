@@ -1,5 +1,7 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './git-commit-sha.json';
+import { fake, FakeOptions } from './core/core';
+import { randAlphaNumeric } from './alpha-numeric';
+
+const commitShaLen = 40;
 
 /**
  * Generate a random git sha.
@@ -18,5 +20,13 @@ import { data } from './git-commit-sha.json';
 export function randGitCommitSha<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(() => {
+    let sha = '';
+
+    for (let i = 0; i < commitShaLen; i++) {
+      sha += randAlphaNumeric();
+    }
+
+    return sha;
+  }, options);
 }
