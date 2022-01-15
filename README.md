@@ -2,8 +2,6 @@
  <img width="20%" height="20%" src="logo.png">
 </p>
 
-# Falso
-
 > All the Fake Data for All Your Real Needs 🙂
 
 Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & Fully Typed.
