@@ -8,17 +8,19 @@ jsdoc2md.getTemplateData({
   configure: 'jsdoc.json'
 }).then(res => {
   const categories = res.reduce((acc, current) => {
-    if(!acc[current.category]) {
-      acc[current.category] = [];
+    const c = current.category.toLowerCase();
+
+    if(!acc[c]) {
+      acc[c] = [];
     }
 
-    acc[current.category].push(current);
+    acc[c].push(current);
 
     return acc;
   }, {});
 
   for(const [category, items] of Object.entries(categories)) {
-    let md = `# ${category}\n\n`;
+    let md = `# ${capitalize(category)}\n\n`;
 
     const funcs = items.map(item => {
       return `### \`\`\`${item.name}\`\`\`\n\n${item.description}\n\n\`\`\`ts\nimport { ${item.name} } from '@ngneat/falso';\n\n${item.examples.join('\n')}\n\`\`\`\n\n`;
@@ -26,8 +28,11 @@ jsdoc2md.getTemplateData({
 
     md += funcs.join('');
 
-    console.log(items);
-
     fs.writeFileSync(path.join('docs', 'docs', `${category.toLowerCase()}.md`), md, { encoding: 'utf8' });
   }
 });
+
+
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

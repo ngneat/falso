@@ -2,7 +2,7 @@ import { ExecutorContext, names } from '@nrwl/devkit';
 import { Project, QuoteKind, ScriptTarget } from 'ts-morph';
 import { sync } from 'glob';
 import { basename } from 'path';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync } from 'fs';
 
 const project = new Project({
   manipulationSettings: {
@@ -24,7 +24,6 @@ export default async function manipulator(
 
     const n = names(baseName);
     const funcName = n.propertyName;
-
     const content = readFileSync(path).toString();
 
     // const sourceFile = project.createSourceFile(`temp.ts`, content, {
@@ -33,11 +32,11 @@ export default async function manipulator(
     //
     // sourceFile.formatText({ tabSize: 2 });
     //
-    writeFileSync(
-      path,
-      content.replace(`${funcName}(`, `rand${capitalize(funcName)}(`),
-      { encoding: 'utf8' }
-    );
+    // writeFileSync(
+    //   path,
+    //   sourceFile.getText(),
+    //   { encoding: 'utf8' }
+    // );
   }
 
   return { success: true };

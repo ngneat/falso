@@ -7,14 +7,16 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  *
  * @example
  *
- * creditCardCVV()
+ * randCreditCardCVV()
  *
  * @example
  *
- * creditCardCVV({ length: 10 })
+ * randCreditCardCVV({ length: 10 })
  *
  */
-export function creditCardCVV<Options extends FakeOptions>(options?: Options) {
+export function randCreditCardCVV<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(
     () => getRandomInRange({ min: 100, max: 999 }).toString(),
     options
