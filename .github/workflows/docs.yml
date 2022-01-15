@@ -3,7 +3,7 @@ name: 'docs'
 on:
   push:
     branches:
-      - replacethiswithmasterwhenready
+      - main
     paths:
       - 'docs/**'
 
@@ -37,6 +37,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn
+
+      - name: Build docs
+        run: cd .. && yarn build:docs
 
       - name: Identity
         run: |
