@@ -10,7 +10,7 @@ export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
 /**
  * Generate a random random float.
  *
- * @category TBD
+ * @category general
  *
  * @example
  *

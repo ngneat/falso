@@ -4,7 +4,7 @@ import { data } from './url.json';
 /**
  * Generate a random url.
  *
- * @category url
+ * @category internet
  *
  * @example
  *
