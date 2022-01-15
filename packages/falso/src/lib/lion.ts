@@ -4,7 +4,7 @@ import { data } from './lion.json';
 /**
  * Generate a random lion.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *

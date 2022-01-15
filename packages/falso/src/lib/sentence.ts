@@ -4,7 +4,7 @@ import { data } from './sentence.json';
 /**
  * Generate a random sentence.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *

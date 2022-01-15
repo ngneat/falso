@@ -7,7 +7,20 @@ export interface SemverOptions extends FakeOptions {
   // TODO add ranges
 }
 
-// TODO - generate programmatically
+/**
+ * Generate a random sem version.
+ *
+ * @category internet
+ *
+ * @example
+ *
+ * randSemver()
+ *
+ * @example
+ *
+ * randSemver({ length: 10 })
+ *
+ */
 export function randSemver<Options extends SemverOptions>(options?: Options) {
   return fake(() => `${options?.prefix || ''}${rand(data)}`, options);
 }

@@ -1,7 +1,20 @@
 import { FakeOptions, fake } from './core/core';
 import { data } from './routing-number.json';
 
-// TODO use get random with 9-10 figures
+/**
+ * Generate a random routing number.
+ *
+ * @category finance
+ *
+ * @example
+ *
+ * randRoutingNumber()
+ *
+ * @example
+ *
+ * randRoutingNumber({ length: 10 })
+ *
+ */
 export function randRoutingNumber<Options extends FakeOptions>(
   options?: Options
 ) {

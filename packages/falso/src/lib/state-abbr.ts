@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './state-abbr.json';
 
 /**
- * Generate a random state-abbr.
+ * Generate a random state abbr.
  *
- * @category TBD
+ * @category address
  *
  * @example
  *

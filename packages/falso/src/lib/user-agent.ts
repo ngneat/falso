@@ -1,7 +1,20 @@
 import { FakeOptions, fake } from './core/core';
 import { data } from './user-agent.json';
 
-// TODO - generate programmatically
+/**
+ * Generate a random user agent.
+ *
+ * @category internet
+ *
+ * @example
+ *
+ * randUserAgent()
+ *
+ * @example
+ *
+ * randUserAgent({ length: 10 })
+ *
+ */
 export function randUserAgent<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

@@ -5,7 +5,7 @@ let prng = seedRandom();
 /**
  * Generate a random random.
  *
- * @category TBD
+ * @category general
  *
  * @example
  *

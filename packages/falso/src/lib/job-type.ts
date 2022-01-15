@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './job-type.json';
 
 /**
- * Generate a random job-type.
+ * Generate a random job type.
  *
- * @category TBD
+ * @category Jobs
  *
  * @example
  *

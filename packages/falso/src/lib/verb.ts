@@ -4,7 +4,7 @@ import { data } from './verb.json';
 /**
  * Generate a random verb.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *

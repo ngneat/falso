@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './mime-type.json';
 
 /**
- * Generate a random mime-type.
+ * Generate a random mime type.
  *
- * @category TBD
+ * @category system
  *
  * @example
  *

@@ -4,7 +4,7 @@ import { data } from './product.json';
 /**
  * Generate a random product.
  *
- * @category TBD
+ * @category Commerce
  *
  * @example
  *

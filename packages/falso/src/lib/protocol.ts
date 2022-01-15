@@ -1,8 +1,20 @@
 import { FakeOptions, fake } from './core/core';
 import { data } from './protocol.json';
 
-// TODO rename? webProtocol? applicationLayerProtocol
-// add more protocols https://en.wikipedia.org/wiki/Application_layer#Protocols
+/**
+ * Generate a random protocol.
+ *
+ * @category internet
+ *
+ * @example
+ *
+ * randProtocol()
+ *
+ * @example
+ *
+ * randProtocol({ length: 10 })
+ *
+ */
 export function randProtocol<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

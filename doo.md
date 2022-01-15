@@ -13,6 +13,20 @@ ipv6
 randAlpha
 randAlphaNumeric
 
+---
+
+randMac
+nearbyGPSCoordinate
+randPassword
+randPhoneNumber
+randPort
+randRoutingNumber
+randSemver
+randStreetAddress - number + street name
+randUrl
+randZipCode
+randUserName
+
 // future
 imgDataUri
 genre - add category option - currenlty only music

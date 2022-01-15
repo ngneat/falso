@@ -4,7 +4,7 @@ import { data } from './vehicle-type.json';
 /**
  * Generate a random vehicle-type.
  *
- * @category TBD
+ * @category vehicle
  *
  * @example
  *

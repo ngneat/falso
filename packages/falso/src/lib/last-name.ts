@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './last-name.json';
 
 /**
- * Generate a random last-name.
+ * Generate a random last name.
  *
- * @category TBD
+ * @category person
  *
  * @example
  *

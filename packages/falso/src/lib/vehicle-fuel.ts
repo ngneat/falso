@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './vehicle-fuel.json';
 
 /**
- * Generate a random vehicle-fuel.
+ * Generate a random vehicle fuel.
  *
- * @category TBD
+ * @category vehicle
  *
  * @example
  *

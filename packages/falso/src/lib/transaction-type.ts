@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './transaction-type.json';
 
 /**
- * Generate a random transaction-type.
+ * Generate a random transaction type.
  *
- * @category TBD
+ * @category Finance
  *
  * @example
  *

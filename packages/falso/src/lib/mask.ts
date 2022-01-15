@@ -3,7 +3,7 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
 /**
  * Generate a random mask.
  *
- * @category TBD
+ * @category Finance
  *
  * @example
  *

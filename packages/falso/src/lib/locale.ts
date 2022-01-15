@@ -4,7 +4,7 @@ import { data } from './locale.json';
 /**
  * Generate a random locale.
  *
- * @category TBD
+ * @category address
  *
  * @example
  *

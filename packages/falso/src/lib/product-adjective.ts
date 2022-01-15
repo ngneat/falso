@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './product-adjective.json';
 
 /**
- * Generate a random product-adjective.
+ * Generate a random product adjective.
  *
- * @category TBD
+ * @category Commerce
  *
  * @example
  *

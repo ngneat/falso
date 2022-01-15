@@ -4,7 +4,7 @@ import { data } from './phrase.json';
 /**
  * Generate a random phrase.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *

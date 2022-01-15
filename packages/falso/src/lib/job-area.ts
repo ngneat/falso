@@ -4,7 +4,7 @@ import { data } from './job-area.json';
 /**
  * Generate a random job-area.
  *
- * @category TBD
+ * @category Jobs
  *
  * @example
  *

@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './programming-language.json';
 
 /**
- * Generate a random programming-language.
+ * Generate a random programming language.
  *
- * @category TBD
+ * @category code
  *
  * @example
  *

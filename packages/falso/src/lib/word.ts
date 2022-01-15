@@ -4,7 +4,7 @@ import { data } from './word.json';
 /**
  * Generate a random word.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *

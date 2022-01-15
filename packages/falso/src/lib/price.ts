@@ -6,7 +6,7 @@ export interface PriceOptions extends FakeOptions, RandomNumberOptions {}
 /**
  * Generate a random price.
  *
- * @category TBD
+ * @category Commerce
  *
  * @example
  *
