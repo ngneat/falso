@@ -5,6 +5,21 @@ export interface HSLOptions extends FakeOptions {
   alpha?: boolean;
 }
 
+/**
+ * Generate a random hsl color.
+ *
+ * @category Colors
+ *
+ * @example
+ *
+ * hsl()
+ *
+ * @example
+ *
+ * hsl({ alpha: true })
+ *
+ */
+
 export function hsl<Options extends HSLOptions>(options?: Options) {
   const factory = () => {
     const [h, s, l, a] = [
