@@ -3,6 +3,7 @@ import { random } from './random';
 
 export const numericChars = '0123456789';
 export const alphaChars = 'abcdefghijklmnopqrstuvwxyz';
+// TODO
 export const specialChars = 'TODO';
 export const numericAlphaChars = `${numericChars}${alphaChars}${alphaChars
   .split('')

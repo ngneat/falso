@@ -1,9 +1,16 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './credit-card-number.json';
+import { randomNumber } from './random-number';
 
-// TODO - support formats and generate programmatically
 export function creditCardNumber<Options extends FakeOptions>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(() => {
+    let cardNumber = '';
+
+    for (let i = 0; i < randomNumber({ min: 12, max: 19 }); i++) {
+      cardNumber += randomNumber({ min: 0, max: 9 });
+    }
+
+    return cardNumber;
+  }, options);
 }

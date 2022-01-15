@@ -1,4 +1,5 @@
 import { fake, FakeOptions } from './core/core';
+import { randomNumber } from './random-number';
 
 interface BetweenOptions extends FakeOptions {
   from: Date;
@@ -6,9 +7,9 @@ interface BetweenOptions extends FakeOptions {
 }
 
 /**
- * Generate a random between.
+ * Generate a random date between ranges.
  *
- * @category TBD
+ * @category Date
  *
  * @example
  *
@@ -16,36 +17,29 @@ interface BetweenOptions extends FakeOptions {
  *
  * @example
  *
+ * between({ from: Date, to: Date })
+ *
+ * @example
+ *
  * between({ length: 10 })
  *
  */
-/**
- * Generate a random date between ranges.
- *
- * @category Date
- *
- * @example
- *
- * month()
- *
- * @example
- *
- * month({ from: Date, to: Date })
- *
- * @example
- *
- * month({ length: 10 })
- *
- */
 export function between<Options extends BetweenOptions>(options: Options) {
-  if (options.from.getTime() >= options.to.getTime()) {
+  const from = options.from.getTime();
+  const to = options.to.getTime();
+
+  if (from >= to) {
     throw new Error('from must be before to');
   }
 
-  const data = new Date(
-    Math.floor(
-      Math.random() * (options.to.getTime() - options.from.getTime())
-    ) + options.from.getTime()
-  );
-  return fake(() => data, options);
+  const generator = () => {
+    return new Date(
+      randomNumber({
+        min: from,
+        max: to,
+      })
+    );
+  };
+
+  return fake(generator, options);
 }

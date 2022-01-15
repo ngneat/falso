@@ -30,7 +30,6 @@ export function randomNumber<Options extends RandomNumberOptions>(
   const config: RandomInRangeOptions = {
     min: options?.min || 0,
     max: options?.max || 999_999,
-    fraction: 0,
   };
 
   return fake(() => getRandomInRange(config), options);
