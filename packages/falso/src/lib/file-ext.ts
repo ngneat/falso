@@ -2,19 +2,19 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './file-ext.json';
 
 /**
- * Generate a random file-ext.
+ * Generate a random file ext.
  *
- * @category TBD
- *
- * @example
- *
- * fileExt()
+ * @category system
  *
  * @example
  *
- * fileExt({ length: 10 })
+ * randFileExt()
+ *
+ * @example
+ *
+ * randFileExt({ length: 10 })
  *
  */
-export function fileExt<Options extends FakeOptions>(options?: Options) {
+export function randFileExt<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

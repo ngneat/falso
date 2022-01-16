@@ -13,18 +13,22 @@ function capitalizeFirstLetter(text: string): string {
 /**
  * Generate a random word.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *
- * word()
+ * randWord()
  *
  * @example
  *
- * word({ length: 10 })
+ * randWord({ capitalize: true })
+ *
+ * @example
+ *
+ * randWord({ length: 10 })
  *
  */
-export function word<Options extends WordOptions>(options?: Options) {
+export function randWord<Options extends WordOptions>(options?: Options) {
   const factory = () => {
     let word = rand(data);
 

@@ -4,17 +4,17 @@ import { data } from './dog.json';
 /**
  * Generate a random dog.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *
- * dog()
+ * randDog()
  *
  * @example
  *
- * dog({ length: 10 })
+ * randDog({ length: 10 })
  *
  */
-export function dog<Options extends FakeOptions>(options?: Options) {
+export function randDog<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

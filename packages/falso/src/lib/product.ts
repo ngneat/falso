@@ -8,13 +8,13 @@ import { data } from './product.json';
  *
  * @example
  *
- * product()
+ * randProduct()
  *
  * @example
  *
- * product({ length: 10 })
+ * randProduct({ length: 10 })
  *
  */
-export function product<Options extends FakeOptions>(options?: Options) {
+export function randProduct<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

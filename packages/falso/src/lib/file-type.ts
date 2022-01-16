@@ -2,19 +2,19 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './file-type.json';
 
 /**
- * Generate a random file-type.
+ * Generate a random file type.
  *
- * @category TBD
- *
- * @example
- *
- * fileType()
+ * @category system
  *
  * @example
  *
- * fileType({ length: 10 })
+ * randFileType()
+ *
+ * @example
+ *
+ * randFileType({ length: 10 })
  *
  */
-export function fileType<Options extends FakeOptions>(options?: Options) {
+export function randFileType<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

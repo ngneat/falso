@@ -2,19 +2,21 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './database-type.json';
 
 /**
- * Generate a random database-type.
+ * Generate a random database type.
  *
- * @category TBD
- *
- * @example
- *
- * databaseType()
+ * @category Database
  *
  * @example
  *
- * databaseType({ length: 10 })
+ * randDatabaseType()
+ *
+ * @example
+ *
+ * randDatabaseType({ length: 10 })
  *
  */
-export function databaseType<Options extends FakeOptions>(options?: Options) {
+export function randDatabaseType<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

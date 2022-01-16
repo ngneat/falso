@@ -1,0 +1,8 @@
+{
+  "executors": {
+    "manipulator": {
+      "implementation": "./index",
+      "schema": "./schema.json"
+    }
+  }
+}

@@ -8,13 +8,15 @@ import { data } from './job-descriptor.json';
  *
  * @example
  *
- * jobDescriptor()
+ * randJobDescriptor()
  *
  * @example
  *
- * jobDescriptor({ length: 10 })
+ * randJobDescriptor({ length: 10 })
  *
  */
-export function jobDescriptor<Options extends FakeOptions>(options?: Options) {
+export function randJobDescriptor<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -1,20 +1,22 @@
 import { fake, FakeOptions } from './core/core';
-import { randomSequence } from './random-sequence';
+import { randomSequence } from './sequence';
 
 /**
  * Generate a random bitcoin-address.
  *
- * @category TBD
+ * @category finance
  *
  * @example
  *
- * bitcoinAddress()
+ * randBitcoinAddress()
  *
  * @example
  *
- * bitcoinAddress({ length: 10 })
+ * randBitcoinAddress({ length: 10 })
  *
  */
-export function bitcoinAddress<Options extends FakeOptions>(options?: Options) {
+export function randBitcoinAddress<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(() => randomSequence({ size: 33 }), options);
 }

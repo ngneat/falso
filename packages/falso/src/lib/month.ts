@@ -8,11 +8,11 @@ import { data } from './month.json';
  *
  * @example
  *
- * month()
+ * randMonth()
  *
  * @example
  *
- * month({ length: 10 })
+ * randMonth({ length: 10 })
  *
  */
 /**
@@ -29,6 +29,6 @@ import { data } from './month.json';
  * month({ length: 10 })
  *
  */
-export function month<Options extends FakeOptions>(options?: Options) {
+export function randMonth<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

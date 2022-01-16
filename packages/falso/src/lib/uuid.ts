@@ -2,19 +2,19 @@ import { v4 as uuidv4 } from 'uuid';
 import { fake, FakeOptions } from './core/core';
 
 /**
- * Generate a random random-uuid.
+ * Generate a random random uuid.
  *
- * @category TBD
- *
- * @example
- *
- * randomUuid()
+ * @category general
  *
  * @example
  *
- * randomUuid({ length: 10 })
+ * randUuid()
+ *
+ * @example
+ *
+ * randUuid({ length: 10 })
  *
  */
-export function randomUuid<Options extends FakeOptions>(options?: Options) {
+export function randUuid<Options extends FakeOptions>(options?: Options) {
   return fake(() => uuidv4(), options);
 }

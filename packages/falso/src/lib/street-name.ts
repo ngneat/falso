@@ -8,13 +8,13 @@ import { data } from './street-name.json';
  *
  * @example
  *
- * streetName()
+ * randStreetName()
  *
  * @example
  *
- * streetName({ length: 10 })
+ * randStreetName({ length: 10 })
  *
  */
-export function streetName<Options extends FakeOptions>(options?: Options) {
+export function randStreetName<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

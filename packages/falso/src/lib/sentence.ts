@@ -18,18 +18,18 @@ function getSpecialCharacter(): string {
 /**
  * Generate a random sentence.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *
- * sentence()
+ * randSentence()
  *
  * @example
  *
- * sentence({ length: 10 })
+ * randSentence({ length: 10 })
  *
  */
-export function sentence<Options extends FakeOptions>(options?: Options) {
+export function randSentence<Options extends FakeOptions>(options?: Options) {
   const factory = () => {
     let text = word({ capitalize: true });
     let totalWords = 1;

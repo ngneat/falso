@@ -2,19 +2,19 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './first-name.json';
 
 /**
- * Generate a random first-name.
+ * Generate a random first name.
  *
- * @category TBD
- *
- * @example
- *
- * firstName()
+ * @category person
  *
  * @example
  *
- * firstName({ length: 10 })
+ * randFirstName()
+ *
+ * @example
+ *
+ * randFirstName({ length: 10 })
  *
  */
-export function firstName<Options extends FakeOptions>(options?: Options) {
+export function randFirstName<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

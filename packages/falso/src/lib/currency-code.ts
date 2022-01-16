@@ -2,19 +2,21 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './currency-code.json';
 
 /**
- * Generate a random currency-code.
+ * Generate a random currency code.
  *
- * @category TBD
- *
- * @example
- *
- * currencyCode()
+ * @category Finance
  *
  * @example
  *
- * currencyCode({ length: 10 })
+ * randCurrencyCode()
+ *
+ * @example
+ *
+ * randCurrencyCode({ length: 10 })
  *
  */
-export function currencyCode<Options extends FakeOptions>(options?: Options) {
+export function randCurrencyCode<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -8,13 +8,13 @@ import { data } from './state-abbr.json';
  *
  * @example
  *
- * stateAbbr()
+ * randStateAbbr()
  *
  * @example
  *
- * stateAbbr({ length: 10 })
+ * randStateAbbr({ length: 10 })
  *
  */
-export function stateAbbr<Options extends FakeOptions>(options?: Options) {
+export function randStateAbbr<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

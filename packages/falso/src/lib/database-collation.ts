@@ -2,20 +2,20 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './database-collation.json';
 
 /**
- * Generate a random database-collation.
+ * Generate a random database collation.
  *
- * @category TBD
- *
- * @example
- *
- * databaseCollation()
+ * @category Database
  *
  * @example
  *
- * databaseCollation({ length: 10 })
+ * randDatabaseCollation()
+ *
+ * @example
+ *
+ * randDatabaseCollation({ length: 10 })
  *
  */
-export function databaseCollation<Options extends FakeOptions>(
+export function randDatabaseCollation<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

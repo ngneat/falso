@@ -4,17 +4,17 @@ import { data } from './country.json';
 /**
  * Generate a random country.
  *
- * @category TBD
+ * @category Address
  *
  * @example
  *
- * country()
+ * randCountry()
  *
  * @example
  *
- * country({ length: 10 })
+ * randCountry({ length: 10 })
  *
  */
-export function country<Options extends FakeOptions>(options?: Options) {
+export function randCountry<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

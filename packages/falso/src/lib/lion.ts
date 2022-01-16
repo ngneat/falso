@@ -8,13 +8,13 @@ import { data } from './lion.json';
  *
  * @example
  *
- * lion()
+ * randLion()
  *
  * @example
  *
- * lion({ length: 10 })
+ * randLion({ length: 10 })
  *
  */
-export function lion<Options extends FakeOptions>(options?: Options) {
+export function randLion<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

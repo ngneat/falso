@@ -4,17 +4,17 @@ import { data } from './department.json';
 /**
  * Generate a random department.
  *
- * @category TBD
+ * @category Commerce
  *
  * @example
  *
- * department()
+ * randDepartment()
  *
  * @example
  *
- * department({ length: 10 })
+ * randDepartment({ length: 10 })
  *
  */
-export function department<Options extends FakeOptions>(options?: Options) {
+export function randDepartment<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

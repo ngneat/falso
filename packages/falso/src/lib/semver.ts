@@ -8,6 +8,6 @@ export interface SemverOptions extends FakeOptions {
 }
 
 // TODO - generate programmatically
-export function semver<Options extends SemverOptions>(options?: Options) {
+export function randSemver<Options extends SemverOptions>(options?: Options) {
   return fake(() => `${options?.prefix || ''}${rand(data)}`, options);
 }

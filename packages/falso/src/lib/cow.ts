@@ -4,17 +4,17 @@ import { data } from './cow.json';
 /**
  * Generate a random cow.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *
- * cow()
+ * randCow()
  *
  * @example
  *
- * cow({ length: 10 })
+ * randCow({ length: 10 })
  *
  */
-export function cow<Options extends FakeOptions>(options?: Options) {
+export function randCow<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

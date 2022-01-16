@@ -4,17 +4,17 @@ import { data } from './bird.json';
 /**
  * Generate a random bird.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *
- * bird()
+ * randBird()
  *
  * @example
  *
- * bird({ length: 10 })
+ * randBird({ length: 10 })
  *
  */
-export function bird<Options extends FakeOptions>(options?: Options) {
+export function randBird<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

@@ -27,6 +27,6 @@ export interface UserCard {
 }
 
 // TODO - generate programmatically
-export function userCard<Options extends FakeOptions>(options?: Options) {
+export function randUserCard<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

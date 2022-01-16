@@ -1,6 +1,6 @@
 import { FakeOptions, fake } from './core/core';
-import { sentence } from './sentence';
-import { randomAlpha } from './random-alpha';
+import { randSentence } from './sentence';
+import { randAlpha } from './alpha';
 
 export interface TextOptions extends FakeOptions {
   charCount?: number;
@@ -9,7 +9,7 @@ export interface TextOptions extends FakeOptions {
 /**
  * Generate a random text.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *
@@ -20,7 +20,7 @@ export interface TextOptions extends FakeOptions {
  * text({ charCount: 10 })
  *
  */
-export function text<Options extends TextOptions>(
+export function randText<Options extends TextOptions>(
   options?: Options
 ): string | string[] | void {
   const charCount: number = options?.charCount ?? 10;
@@ -30,19 +30,19 @@ export function text<Options extends TextOptions>(
   }
 
   const factory = () => {
-    let text = sentence();
+    let text = randSentence();
 
     if (charCount === 1) {
-      return randomAlpha();
+      return randAlpha();
     }
 
     while (text.length < charCount) {
-      text += ` ${sentence()}`;
+      text += ` ${randSentence()}`;
     }
 
     text = text.substring(0, charCount - 2);
     // Ensure last char is always a full-stop (not a space)
-    text += `${randomAlpha()}.`;
+    text += `${randAlpha()}.`;
 
     return text;
   };

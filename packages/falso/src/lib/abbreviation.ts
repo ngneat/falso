@@ -4,17 +4,17 @@ import { data } from './abbreviation.json';
 /**
  * Generate a random abbreviation.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *
- * abbreviation()
+ * randAbbreviation()
  *
  * @example
  *
- * abbreviation({ length: 10 })
+ * randAbbreviation({ length: 10 })
  *
  */
-export function abbreviation<O extends FakeOptions>(options?: O) {
+export function randAbbreviation<O extends FakeOptions>(options?: O) {
   return fake(data, options);
 }

@@ -4,17 +4,17 @@ import { data } from './direction.json';
 /**
  * Generate a random direction.
  *
- * @category TBD
+ * @category Address
  *
  * @example
  *
- * direction()
+ * randDirection()
  *
  * @example
  *
- * direction({ length: 10 })
+ * randDirection({ length: 10 })
  *
  */
-export function direction<Options extends FakeOptions>(options?: Options) {
+export function randDirection<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

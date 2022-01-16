@@ -4,17 +4,17 @@ import { data } from './crocodilia.json';
 /**
  * Generate a random crocodilia.
  *
- * @category TBD
+ * @category animals
  *
  * @example
  *
- * crocodilia()
+ * randCrocodilia()
  *
  * @example
  *
- * crocodilia({ length: 10 })
+ * randCrocodilia({ length: 10 })
  *
  */
-export function crocodilia<Options extends FakeOptions>(options?: Options) {
+export function randCrocodilia<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

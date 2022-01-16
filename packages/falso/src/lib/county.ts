@@ -4,17 +4,17 @@ import { data } from './county.json';
 /**
  * Generate a random county.
  *
- * @category TBD
+ * @category Address
  *
  * @example
  *
- * county()
+ * randCounty()
  *
  * @example
  *
- * county({ length: 10 })
+ * randCounty({ length: 10 })
  *
  */
-export function county<Options extends FakeOptions>(options?: Options) {
+export function randCounty<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

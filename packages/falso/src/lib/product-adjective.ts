@@ -8,14 +8,14 @@ import { data } from './product-adjective.json';
  *
  * @example
  *
- * productAdjective()
+ * randProductAdjective()
  *
  * @example
  *
- * productAdjective({ length: 10 })
+ * randProductAdjective({ length: 10 })
  *
  */
-export function productAdjective<Options extends FakeOptions>(
+export function randProductAdjective<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

@@ -13,18 +13,18 @@ export interface RandomNumberOptions extends FakeOptions {
 /**
  * Generate a random random-number.
  *
- * @category TBD
+ * @category general
  *
  * @example
  *
- * randomNumber()
+ * randNumber()
  *
  * @example
  *
- * randomNumber({ length: 10 })
+ * randNumber({ length: 10 })
  *
  */
-export function randomNumber<Options extends RandomNumberOptions>(
+export function randNumber<Options extends RandomNumberOptions>(
   options?: Options
 ) {
   const config: RandomInRangeOptions = {

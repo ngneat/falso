@@ -4,17 +4,17 @@ import { data } from './gender.json';
 /**
  * Generate a random gender.
  *
- * @category TBD
+ * @category person
  *
  * @example
  *
- * gender()
+ * randGender()
  *
  * @example
  *
- * gender({ length: 10 })
+ * randGender({ length: 10 })
  *
  */
-export function gender<Options extends FakeOptions>(options?: Options) {
+export function randGender<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

@@ -4,17 +4,17 @@ import { data } from './city.json';
 /**
  * Generate a random city.
  *
- * @category TBD
+ * @category Address
  *
  * @example
  *
- * city()
+ * randCity()
  *
  * @example
  *
- * city({ length: 10 })
+ * randCity({ length: 10 })
  *
  */
-export function city<Options extends FakeOptions>(options?: Options) {
+export function randCity<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

@@ -8,13 +8,13 @@ import { data } from './verb.json';
  *
  * @example
  *
- * verb()
+ * randVerb()
  *
  * @example
  *
- * verb({ length: 10 })
+ * randVerb({ length: 10 })
  *
  */
-export function verb<Options extends FakeOptions>(options?: Options) {
+export function randVerb<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

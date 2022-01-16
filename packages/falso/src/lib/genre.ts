@@ -4,17 +4,17 @@ import { data } from './genre.json';
 /**
  * Generate a random genre.
  *
- * @category TBD
+ * @category Music
  *
  * @example
  *
- * genre()
+ * randGenre()
  *
  * @example
  *
- * genre({ length: 10 })
+ * randGenre({ length: 10 })
  *
  */
-export function genre<Options extends FakeOptions>(options?: Options) {
+export function randGenre<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

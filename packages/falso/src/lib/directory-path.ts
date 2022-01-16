@@ -2,19 +2,21 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './directory-path.json';
 
 /**
- * Generate a random directory-path.
+ * Generate a random directory path.
  *
- * @category TBD
- *
- * @example
- *
- * directoryPath()
+ * @category system
  *
  * @example
  *
- * directoryPath({ length: 10 })
+ * randDirectoryPath()
+ *
+ * @example
+ *
+ * randDirectoryPath({ length: 10 })
  *
  */
-export function directoryPath<Options extends FakeOptions>(options?: Options) {
+export function randDirectoryPath<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

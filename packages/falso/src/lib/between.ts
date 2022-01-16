@@ -1,5 +1,5 @@
 import { fake, FakeOptions } from './core/core';
-import { randomNumber } from './random-number';
+import { randNumber } from './number';
 
 interface BetweenOptions extends FakeOptions {
   from: Date;
@@ -9,22 +9,22 @@ interface BetweenOptions extends FakeOptions {
 /**
  * Generate a random date between ranges.
  *
- * @category Date
+ * @category date
  *
  * @example
  *
- * between()
+ * randBetween()
  *
  * @example
  *
- * between({ from: Date, to: Date })
+ * randBetween({ from: Date, to: Date })
  *
  * @example
  *
  * between({ length: 10 })
  *
  */
-export function between<Options extends BetweenOptions>(options: Options) {
+export function randBetween<Options extends BetweenOptions>(options: Options) {
   const from = options.from.getTime();
   const to = options.to.getTime();
 
@@ -34,7 +34,7 @@ export function between<Options extends BetweenOptions>(options: Options) {
 
   const generator = () => {
     return new Date(
-      randomNumber({
+      randNumber({
         min: from,
         max: to,
       })

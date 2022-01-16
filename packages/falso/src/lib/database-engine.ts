@@ -2,19 +2,21 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './database-engine.json';
 
 /**
- * Generate a random database-engine.
+ * Generate a random database engine.
  *
- * @category TBD
- *
- * @example
- *
- * databaseEngine()
+ * @category Database
  *
  * @example
  *
- * databaseEngine({ length: 10 })
+ * randDatabaseEngine()
+ *
+ * @example
+ *
+ * randDatabaseEngine({ length: 10 })
  *
  */
-export function databaseEngine<Options extends FakeOptions>(options?: Options) {
+export function randDatabaseEngine<Options extends FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

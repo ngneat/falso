@@ -8,14 +8,14 @@ import { data } from './product-description.json';
  *
  * @example
  *
- * productDescription()
+ * randProductDescription()
  *
  * @example
  *
- * productDescription({ length: 10 })
+ * randProductDescription({ length: 10 })
  *
  */
-export function productDescription<Options extends FakeOptions>(
+export function randProductDescription<Options extends FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

@@ -1,4 +1,4 @@
-import { randomFloat } from './random-float';
+import { randFloat } from './float';
 import { fake, FakeOptions, getRandomInRange } from './core/core';
 
 export interface RGBOptions extends FakeOptions {
@@ -12,20 +12,20 @@ export interface RGBOptions extends FakeOptions {
  *
  * @example
  *
- * rgb()
+ * randRgb()
  *
  * @example
  *
- * rgb({ length: 10 })
+ * randRgb({ length: 10 })
  *
  */
-export function rgb<Options extends RGBOptions>(options?: Options) {
+export function randRgb<Options extends RGBOptions>(options?: Options) {
   const factory = () => {
     const [r, g, b, a] = [
       getRandomInRange({ min: 0, max: 255 }),
       getRandomInRange({ min: 0, max: 255 }),
       getRandomInRange({ min: 0, max: 255 }),
-      randomFloat({ min: 0.1, max: 1 }),
+      randFloat({ min: 0.1, max: 1 }),
     ];
 
     return options?.alpha
