@@ -970,6 +970,9 @@ import { word } from '@ngneat/falso';
 
 // possimus
 word();
+
+// Possimus
+word({ capitalize: true });
 ```
 
 #### `words()`
@@ -1035,8 +1038,11 @@ paragraphs()
 ```ts
 import { text } from '@ngneat/falso';
 
-// Architecto et modi. Dolorem delectus quod eos facere architecto tempore.
+// Fugiat qua
 text();
+
+// Unde doloribus maiores vel ipsum, occaecati a omni
+text({ charCount: 50 });
 ```
 
 #### `lines()`
