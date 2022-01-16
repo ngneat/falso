@@ -128,3 +128,4 @@ export { randZipCode } from './lib/zip-code';
 export { randTodo } from './lib/todo';
 export { randUser } from './lib/user';
 export { randPost } from './lib/post';
+export { randRole } from './lib/role';

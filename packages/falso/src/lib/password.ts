@@ -18,6 +18,10 @@ export interface PasswordOptions extends FakeOptions {
  *
  * randPassword({ length: 10 })
  *
+ * @example
+ *
+ * randPassword({ size: 10 })
+ *
  */
 export function randPassword<Options extends PasswordOptions>(
   options?: Options

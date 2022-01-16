@@ -17,6 +17,10 @@ export interface TextOptions extends FakeOptions {
  *
  * @example
  *
+ * text({ length: 10 })
+ *
+ * @example
+ *
  * text({ charCount: 10 })
  *
  */

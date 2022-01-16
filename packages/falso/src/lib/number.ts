@@ -21,11 +21,11 @@ export interface RandomNumberOptions extends FakeOptions {
  *
  * @example
  *
- * randNumber({ min: 10, max: 1000 })
+ * randNumber({ length: 10 })
  *
  * @example
  *
- * randNumber({ length: 10 })
+ * randNumber({ min: 10, max: 1000 })
  *
  */
 export function randNumber<Options extends RandomNumberOptions>(

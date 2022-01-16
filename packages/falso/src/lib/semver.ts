@@ -18,6 +18,10 @@ export interface SemverOptions extends FakeOptions {
  *
  * randSemver({ length: 10 })
  *
+ * @example
+ *
+ * randSemver({ prefix: 'v' })
+ *
  */
 export function randSemver<Options extends SemverOptions>(options?: Options) {
   return fake(() => {
