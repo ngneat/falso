@@ -1,10 +1,12 @@
 import { FakeOptions, fake, getRandomInRange } from './core/core';
 import { randWord } from './word';
 
-function getSpecialCharacter(): string {
+const maxWords = 50;
+
+function getSpecialCharacter(wordCount: number): string {
   const randomNumber = getRandomInRange({ min: 1, max: 10, fraction: 0 });
 
-  if (randomNumber === 1) {
+  if (randomNumber === 1 || wordCount === maxWords) {
     return '.';
   }
 
@@ -32,14 +34,16 @@ function getSpecialCharacter(): string {
 export function randSentence<Options extends FakeOptions>(options?: Options) {
   const factory = () => {
     let text = randWord({ capitalize: true });
-    let totalWords = 1;
+    let wordCount = 1;
 
-    while (totalWords < 50) {
+    while (wordCount < maxWords) {
       const randomWord = randWord();
       let specialChar = '';
 
-      if (totalWords > 2) {
-        specialChar = getSpecialCharacter();
+      wordCount++;
+
+      if (wordCount > 3) {
+        specialChar = getSpecialCharacter(wordCount);
       }
 
       text += ` ${randomWord}${specialChar}`;
@@ -47,8 +51,6 @@ export function randSentence<Options extends FakeOptions>(options?: Options) {
       if (specialChar === '.') {
         break;
       }
-
-      totalWords++;
     }
 
     return text;
