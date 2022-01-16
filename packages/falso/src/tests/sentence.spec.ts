@@ -1,4 +1,4 @@
-import { randSentence } from '@ngneat/falso';
+import { randSentence } from '../lib/sentence';
 
 describe('randSentence', () => {
   it('should start with a capital letter', () => {
@@ -56,10 +56,9 @@ describe('randSentence', () => {
 
       it('should return a string array with 3 items, each ending with a full-stop', () => {
         const result = randSentence({ length: 3 });
-        // TODO FIX TEST
-        // expect(result[0]?.slice(-1)).toEqual('.');
-        // expect(result[1]?.slice(-1)).toEqual('.');
-        // expect(result[2]?.slice(-1)).toEqual('.');
+        expect(result[0]?.slice(-1)).toEqual('.');
+        expect(result[1]?.slice(-1)).toEqual('.');
+        expect(result[2]?.slice(-1)).toEqual('.');
       });
     });
   });
