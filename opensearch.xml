@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Falso | All the Fake Data for All Your Real Needs</ShortName>
+  <Description>Search Falso | All the Fake Data for All Your Real Needs</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://ngneat.github.io/falso/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://ngneat.github.io/falso/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://ngneat.github.io/falso/opensearch.xml" />
+  <moz:SearchForm>https://ngneat.github.io/falso/</moz:SearchForm>
+</OpenSearchDescription>
