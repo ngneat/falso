@@ -78,7 +78,7 @@ export default async function (tree: Tree, options: NewFalsoOptions) {
 
     const index = join(sourceRoot, `index.ts`);
 
-    const exportStatement = `export { ${n.propertyName} } from './lib/${n.fileName}';\n`;
+    const exportStatement = `export { ${name} } from './lib/${n.fileName}';\n`;
 
     await appendFile(index, exportStatement, { encoding: 'utf-8' });
 
