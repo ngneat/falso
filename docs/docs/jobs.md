@@ -2,7 +2,7 @@
 
 ### `randJobArea`
 
-Generate a random job-area.
+Generate a random job area.
 
 ```ts
 import { randJobArea } from '@ngneat/falso';
@@ -13,7 +13,7 @@ randJobArea({ length: 10 });
 
 ### `randJobDescriptor`
 
-Generate a random job-descriptor.
+Generate a random job descriptor.
 
 ```ts
 import { randJobDescriptor } from '@ngneat/falso';

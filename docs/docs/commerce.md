@@ -11,17 +11,6 @@ randDepartment();
 randDepartment({ length: 10 });
 ```
 
-### `randPrice`
-
-Generate a random price.
-
-```ts
-import { randPrice } from '@ngneat/falso';
-
-randPrice();
-randPrice({ length: 10 });
-```
-
 ### `randProductAdjective`
 
 Generate a random product adjective.

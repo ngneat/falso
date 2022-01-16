@@ -11,17 +11,6 @@ randBoolean();
 randBoolean({ length: 10 });
 ```
 
-### `randHexaDecimal`
-
-Generate a random hexa decimal.
-
-```ts
-import { randHexaDecimal } from '@ngneat/falso';
-
-randHexaDecimal();
-randHexaDecimal({ length: 10 });
-```
-
 ### `randImg`
 
 Generate a random img.
@@ -46,12 +35,13 @@ randFloat({ length: 10 });
 
 ### `randNumber`
 
-Generate a random random-number.
+Generate a random random number.
 
 ```ts
 import { randNumber } from '@ngneat/falso';
 
 randNumber();
+randNumber({ min: 10, max: 1000 });
 randNumber({ length: 10 });
 ```
 
@@ -67,13 +57,12 @@ rand([1, 2, 3]);
 
 ### `random`
 
-Generate a random random.
+Create a seed.
 
 ```ts
 import { random } from '@ngneat/falso';
 
 randRandom();
-randRandom({ length: 10 });
 ```
 
 ### `randSequence`
@@ -84,6 +73,8 @@ Generate a random random sequence.
 import { randSequence } from '@ngneat/falso';
 
 randSequence();
+randSequence({ size: 10 });
+randSequence({ chars: 'aAbBcC@#' });
 randSequence({ length: 10 });
 ```
 

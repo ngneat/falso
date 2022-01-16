@@ -9,7 +9,7 @@ const FeatureList = [
     description: (
       <>
         Falso was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        used to get your demos up and running quickly.
       </>
     ),
   },
@@ -23,12 +23,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Entities Support',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Simply and easily create new entities for your demos .
       </>
     ),
   },

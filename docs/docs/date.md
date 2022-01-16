@@ -11,61 +11,64 @@ month();
 month({ length: 10 });
 ```
 
-### `randBetween`
+### `randBetweenDate`
 
 Generate a random date between ranges.
 
 ```ts
-import { randBetween } from '@ngneat/falso';
+import { randBetweenDate } from '@ngneat/falso';
 
-randBetween();
-randBetween({ from: Date, to: Date });
-between({ length: 10 });
+randBetweenDate();
+randBetweenDate({ from: Date, to: Date });
+randBetweenDate({ length: 10 });
 ```
 
-### `randFuture`
+### `randFutureDate`
 
 Generate a random future.
 
 ```ts
-import { randFuture } from '@ngneat/falso';
+import { randFutureDate } from '@ngneat/falso';
 
-randFuture();
-randFuture({ length: 10 });
-future({ years: 10 });
+randFutureDate();
+randFutureDate({ length: 10 });
+randFutureDate({ years: 10 });
 ```
 
-### `randPast`
+### `randPastDate`
 
-Generate a random past.
+Generate a random past date.
 
 ```ts
-import { randPast } from '@ngneat/falso';
+import { randPastDate } from '@ngneat/falso';
 
-randPast();
-randPast({ length: 10 });
+randPastDate();
+randPastDate({ years: 2 });
+randPastDate({ length: 10 });
 ```
 
-### `randRecent`
+### `randRecentDate`
 
-Generate a random recent.
+Generate a random recent date.
 
 ```ts
-import { randRecent } from '@ngneat/falso';
+import { randRecentDate } from '@ngneat/falso';
 
-randRecent();
-randRecent({ length: 10 });
+randRecentDate();
+randRecentDate({ days: 10 });
+randRecentDate({ length: 10 });
 ```
 
-### `randSoon`
+### `randSoonDate`
 
 Generate a random soon.
 
 ```ts
-import { randSoon } from '@ngneat/falso';
+import { randSoonDate } from '@ngneat/falso';
 
-randSoon();
-randSoon({ length: 10 });
+randSoonDate();
+randSoonDate({ days: 5 });
+randSoonDate({ length: 10 });
 ```
 
 ### `randWeekday`

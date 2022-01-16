@@ -35,7 +35,7 @@ randVehicleModel({ length: 10 });
 
 ### `randVehicleType`
 
-Generate a random vehicle-type.
+Generate a random vehicle type.
 
 ```ts
 import { randVehicleType } from '@ngneat/falso';

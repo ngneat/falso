@@ -1,5 +1,16 @@
 # System
 
+### `randHexaDecimal`
+
+Generate a random hexa decimal.
+
+```ts
+import { randHexaDecimal } from '@ngneat/falso';
+
+randHexaDecimal();
+randHexaDecimal({ length: 10 });
+```
+
 ### `randDirectoryPath`
 
 Generate a random directory path.
@@ -53,6 +64,17 @@ import { randFileType } from '@ngneat/falso';
 
 randFileType();
 randFileType({ length: 10 });
+```
+
+### `randMac`
+
+Generate a random mac address.
+
+```ts
+import { randMac } from '@ngneat/falso';
+
+randMac();
+randMac({ length: 10 });
 ```
 
 ### `randMimeType`

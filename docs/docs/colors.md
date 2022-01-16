@@ -31,5 +31,6 @@ Generate a random rgb.
 import { randRgb } from '@ngneat/falso';
 
 randRgb();
+randRgb({ alpha: true });
 randRgb({ length: 10 });
 ```

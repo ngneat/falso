@@ -1,14 +1,25 @@
 # Finance
 
-### `creditCardCVV`
+### `randCreditCardCVV`
 
 Generate a random credit card CVV.
 
 ```ts
-import { creditCardCVV } from '@ngneat/falso';
+import { randCreditCardCVV } from '@ngneat/falso';
 
-creditCardCVV();
-creditCardCVV({ length: 10 });
+randCreditCardCVV();
+randCreditCardCVV({ length: 10 });
+```
+
+### `randCreditCardIssuer`
+
+Generate a random credit card issuer.
+
+```ts
+import { randCreditCardIssuer } from '@ngneat/falso';
+
+randCreditCardIssuer();
+randCreditCardIssuer({ length: 10 });
 ```
 
 ### `randCreditCardNumber`

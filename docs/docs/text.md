@@ -35,7 +35,7 @@ randAlpha({ length: 3 });
 
 ### `randCatchPhrase`
 
-Generate a random catch-phrase.
+Generate a random catch phrase.
 
 ```ts
 import { randCatchPhrase } from '@ngneat/falso';
@@ -95,8 +95,8 @@ Generate a random text.
 ```ts
 import { randText } from '@ngneat/falso';
 
-randText();
-randText({ length: 10 });
+text();
+text({ charCount: 10 });
 ```
 
 ### `randVerb`
@@ -118,5 +118,6 @@ Generate a random word.
 import { randWord } from '@ngneat/falso';
 
 randWord();
+randWord({ capitalize: true });
 randWord({ length: 10 });
 ```

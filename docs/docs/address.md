@@ -2,7 +2,7 @@
 
 ### `randCardinalDirection`
 
-Generate a random cardinal-direction.
+Generate a random cardinal direction.
 
 ```ts
 import { randCardinalDirection } from '@ngneat/falso';
@@ -123,7 +123,7 @@ randNearbyGPSCoordinate({ length: 10 });
 
 ### `randOrdinalDirection`
 
-Generate a random ordinal-direction.
+Generate a random ordinal direction.
 
 ```ts
 import { randOrdinalDirection } from '@ngneat/falso';
@@ -167,7 +167,7 @@ randStreetAddress({ length: 10 });
 
 ### `randStreetName`
 
-Generate a random street-name.
+Generate a random street name.
 
 ```ts
 import { randStreetName } from '@ngneat/falso';

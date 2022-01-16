@@ -55,17 +55,6 @@ randIpv6();
 randIpv6({ length: 10 });
 ```
 
-### `randMac`
-
-Generate a random job type.
-
-```ts
-import { randMac } from '@ngneat/falso';
-
-randMac();
-randMac({ length: 10 });
-```
-
 ### `randPort`
 
 Generate a random port.
@@ -90,7 +79,7 @@ randProtocol({ length: 10 });
 
 ### `randSemver`
 
-Generate a random sem version.
+Generate a random semantic version.
 
 ```ts
 import { randSemver } from '@ngneat/falso';

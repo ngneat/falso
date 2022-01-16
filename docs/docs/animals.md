@@ -2,7 +2,7 @@
 
 ### `randAnimalType`
 
-Generate a random animal-type.
+Generate a random animal type.
 
 ```ts
 import { randAnimalType } from '@ngneat/falso';
