@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.2.0-beta.0](https://github.com/ngneat/falso/compare/falso-2.1.0-beta.0...falso-2.2.0-beta.0) (2022-01-16)
+
+### Bug Fixes
+
+- 🐞 Ensure that fullstop is appended when wordCount is met ([#40](https://github.com/ngneat/falso/issues/40)) ([6122d0a](https://github.com/ngneat/falso/commit/6122d0a2ba66d73e1a908589fa1e2585e56cc27b))
+
+### Features
+
+- 🔥 add user and post entities ([0385f0d](https://github.com/ngneat/falso/commit/0385f0d30dbb559509b17014515f108070c3ae23))
+- 🔥 generate a todo ([aa99517](https://github.com/ngneat/falso/commit/aa9951778e02c31dab7a35c845e55e1e131b7d3e))
+
 # [2.1.0-beta.0](https://github.com/ngneat/falso/compare/falso-2.0.0-beta.0...falso-2.1.0-beta.0) (2022-01-16)
 
 ### Features
