@@ -22,7 +22,7 @@ export interface TextOptions extends FakeOptions {
  */
 export function randText<Options extends TextOptions>(
   options?: Options
-): string | string[] | void {
+): string | string[] {
   const charCount: number = options?.charCount ?? 10;
 
   if (charCount < 1 || isNaN(charCount)) {

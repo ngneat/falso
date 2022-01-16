@@ -125,3 +125,4 @@ export { randVerb } from './lib/verb';
 export { randWeekday } from './lib/weekday';
 export { randWord } from './lib/word';
 export { randZipCode } from './lib/zip-code';
+export { todo } from './lib/todo';

@@ -65,7 +65,7 @@ export default async function (tree: Tree, options: NewFalsoOptions) {
       tree.write(
         getFilePath(sourceRoot, n.fileName, FileType.Spec),
         `
-          import { ${n.propertyName} } from '../lib/${n.fileName}';
+          import { ${name} } from '../lib/${n.fileName}';
     
           describe('${n.propertyName}', () => {
             it('should create', () => {
