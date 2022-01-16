@@ -129,3 +129,6 @@ export { randTodo } from './lib/todo';
 export { randUser } from './lib/user';
 export { randPost } from './lib/post';
 export { randRole } from './lib/role';
+export { randAwsRegion } from './lib/aws-region';
+export { randAwsService } from './lib/aws-service';
+export { randArn } from './lib/arn';
