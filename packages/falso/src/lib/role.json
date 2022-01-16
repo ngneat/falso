@@ -1,0 +1,3 @@
+{
+  "data": ["Admin", "Editor", "Owner", "Contributor", "Viewer", "Developer"]
+}
