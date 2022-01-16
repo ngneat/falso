@@ -4,7 +4,7 @@ import { data } from './pronoun.json';
 /**
  * Generate a random pronoun.
  *
- * @category TBD
+ * @category text
  *
  * @example
  *
