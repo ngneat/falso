@@ -2,6 +2,27 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.0.0-beta.0](https://github.com/ngneat/falso/compare/falso-1.3.0...falso-2.0.0-beta.0) (2022-01-16)
+
+### Bug Fixes
+
+- 🤖 prefix each function with rand ([17da917](https://github.com/ngneat/falso/commit/17da9174c338933ae2e70a9adff998e580a4b43e))
+- 🤖 remove redundant functions ([20e09aa](https://github.com/ngneat/falso/commit/20e09aa0d95b25119d20b5ea48ff57b43f433ecd))
+- modifies UUID generation logic ([#17](https://github.com/ngneat/falso/issues/17)) ([8f08fb1](https://github.com/ngneat/falso/commit/8f08fb199fa65dfd61767198e6fb8147ed301024))
+
+### Features
+
+- 🔥 Add charCount to text function ([#23](https://github.com/ngneat/falso/issues/23)) ([13b1e0e](https://github.com/ngneat/falso/commit/13b1e0e153a788127d357d5fa3846b9387903bd5))
+- 🔥 add date functions ([#25](https://github.com/ngneat/falso/issues/25)) ([af01bb7](https://github.com/ngneat/falso/commit/af01bb7031a30ef3719f0153b5b8e2187b686b80))
+- add programming languages ([#22](https://github.com/ngneat/falso/issues/22)) ([df6bbb1](https://github.com/ngneat/falso/commit/df6bbb187690cba685377c5691fd2ce3bfdb157a))
+- added HSL color ([#33](https://github.com/ngneat/falso/issues/33)) ([d6dda95](https://github.com/ngneat/falso/commit/d6dda956dac72ce2a2cc539c1be6aa0a3bce38ba))
+- Modifies rgb function to support alpha and added hex function ([#19](https://github.com/ngneat/falso/issues/19)) ([c71ed58](https://github.com/ngneat/falso/commit/c71ed58a2884a6056320b6389450f3eaa25f8ce2))
+
+### BREAKING CHANGES
+
+- New functions name
+- Remove functions
+
 # [1.3.0](https://github.com/ngneat/falso/compare/falso-1.2.0...falso-1.3.0) (2022-01-11)
 
 ### Bug Fixes
