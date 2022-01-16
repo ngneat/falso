@@ -10,7 +10,7 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 
 <p align="center">
 
-[![@ngneat/elf](https://github.com/ngneat/falso/actions/workflows/ci.yml/badge.svg)](https://github.com/ngneat/falso/actions/workflows/ci.yml)
+[![@ngneat/falso](https://github.com/ngneat/falso/actions/workflows/ci.yml/badge.svg)](https://github.com/ngneat/falso/actions/workflows/ci.yml)
 [![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
 [![coc-badge](https://img.shields.io/badge/codeof-conduct-ff69b4.svg?style=flat-square)]()
