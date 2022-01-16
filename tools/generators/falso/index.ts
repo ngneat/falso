@@ -69,7 +69,7 @@ export default async function (tree: Tree, options: NewFalsoOptions) {
     
           describe('${n.propertyName}', () => {
             it('should create', () => {
-              expect(${n.propertyName}).toBeTruthy();
+              expect(${name}).toBeTruthy();
             });	
           });
         `

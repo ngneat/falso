@@ -27,7 +27,7 @@ export function randTodo<Options extends FakeOptions>(options?: Options) {
   return fake(() => {
     return {
       id: randUuid(),
-      title: randText({ charCount: 40 }) as string,
+      title: randText({ charCount: 40 }),
       completed: randBoolean(),
     } as Todo;
   }, options);

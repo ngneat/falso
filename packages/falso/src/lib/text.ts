@@ -20,9 +20,7 @@ export interface TextOptions extends FakeOptions {
  * text({ charCount: 10 })
  *
  */
-export function randText<Options extends TextOptions>(
-  options?: Options
-): string | string[] {
+export function randText<Options extends TextOptions>(options?: Options) {
   const charCount: number = options?.charCount ?? 10;
 
   if (charCount < 1 || isNaN(charCount)) {

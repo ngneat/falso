@@ -126,3 +126,5 @@ export { randWeekday } from './lib/weekday';
 export { randWord } from './lib/word';
 export { randZipCode } from './lib/zip-code';
 export { todo } from './lib/todo';
+export { user } from './lib/user';
+export { post } from './lib/post';
