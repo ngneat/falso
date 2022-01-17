@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './color.json';
 
 /**
- * Generate a random first name.
+ * Generate a random color.
  *
  * @category colors
  *
