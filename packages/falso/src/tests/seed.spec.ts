@@ -21,5 +21,8 @@ describe('seed', () => {
     expect(rand(values)).toEqual(1);
     expect(rand(values)).toEqual(6);
     expect(rand(values)).toEqual(5);
+
+    // Reset seed in case other tests depend on it
+    seed();
   });
 });
