@@ -19,3 +19,7 @@ export async function translateText(text: string[], target: string) {
   const translations = text.map((t) => 'Translated ' + t);
   return translations;
 }
+
+export async function translateJSON(jsonData: any) {
+  return jsonData;
+}

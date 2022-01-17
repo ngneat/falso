@@ -1,6 +1,8 @@
 import { tsquery } from '@phenomnomnominal/tsquery';
 import {
   appendFileSync,
+  copyFile,
+  copyFileSync,
   existsSync,
   mkdirSync,
   readdirSync,
@@ -13,7 +15,7 @@ import { format } from 'prettier';
 import * as ts from 'typescript';
 import { COMMENT, TYPE_SCRIPT_FILE_EXTENSION } from './constants';
 import { EchoExecutorOptions } from './options';
-import { translateText } from './translate';
+import { translateJSON, translateText } from './translate';
 
 /**
  * Write export statements for each generated file to language's index file
@@ -37,114 +39,39 @@ export function writeExportStatements(
 
 export async function writeTranslation(
   options: EchoExecutorOptions,
-  stringLiterals: string[],
-  sourceFile: ts.SourceFile,
-  filePath: string,
-  language?: string
+  projectLibPath: string,
+  jsonFileName: string,
+  TSFileName: string,
+  language: string
 ) {
-  let outputDir: string, tText: string[];
-  if (language) {
-    outputDir = join(options.output, language);
-    tText = await translateText(stringLiterals, language);
-  } else {
-    outputDir = options.output.substring(0, options.output.lastIndexOf('/'));
-    tText = stringLiterals;
-  }
+  const rootJSONFilePath = join(projectLibPath, jsonFileName);
+  const outputDir = join(options.output, language);
+  const outJSONFilePath = join(outputDir, jsonFileName);
 
-  // Generate i18n.json file content
-  const { JSONfileNameWExt, outputFilePath } = createI18NJsonFile(
-    tText,
-    filePath,
-    outputDir
-  );
+  const jsonData = JSON.parse(readFileSync(rootJSONFilePath).toString());
 
-  if (language) {
-    createLanguageFiles(
-      sourceFile,
-      JSONfileNameWExt,
-      outputFilePath,
-      outputDir,
-      filePath
-    );
-  } else {
-    updateDefaultFiles(outputFilePath, JSONfileNameWExt);
-  }
+  const translatedJSONData = await translateJSON(jsonData);
+
+  writeFileSync(outJSONFilePath, JSON.stringify(translatedJSONData, null, 2), {
+    encoding: 'utf-8',
+  });
+
+  const rootTSFilePath = join(projectLibPath, TSFileName);
+  const outTSFilePath = join(outputDir, TSFileName);
+
+  copyFileSync(rootTSFilePath, outTSFilePath);
+
+  updateCorePath(outTSFilePath);
 }
 
-function createI18NJsonFile(
-  tText: string[],
-  filePath: string,
-  outputDir: string
-) {
-  const JSONContent = JSON.stringify({ data: tText }, null, 2);
-
-  // JSON File name
-  const JSONfileNameWExt = basename(filePath, '.ts') + '.json';
-
-  // Output JSON File path
-  const outputJSONFilePath = join(outputDir, JSONfileNameWExt);
-
-  // Write json content
-  writeFileSync(outputJSONFilePath, JSONContent);
-
-  // TS File name
-  const fileNameWExt = basename(filePath);
-
-  // Output TS File path
-  const outputFilePath = join(outputDir, fileNameWExt);
-  return { JSONfileNameWExt, outputFilePath };
-}
-
-function updateDefaultFiles(outputFilePath: string, JSONfileNameWExt: string) {
-  // Get original ts content
-  let tsFileContent = readFileSync(outputFilePath, {
+function updateCorePath(TSFilePath: string) {
+  let tsFileContent = readFileSync(TSFilePath, {
     encoding: 'utf-8',
   }).toString();
 
-  // update it only if not already updated
-  if (!tsFileContent.includes('data')) {
-    tsFileContent = tsFileContent
-      .replace(/(?:\s)\s/g, '') // remove white spaces
-      .replace(
-        `import { rand } from './core';`,
-        `import { rand } from './core';\nimport { data } from './${JSONfileNameWExt}';\n\n`
-      ) // add import data statement
-      .replace(new RegExp(/(\[(.*)\])/g), 'data'); // replace array literal with `data`
+  tsFileContent = tsFileContent.replace(`'./core/core';`, `'../../core/core';`);
 
-    tsFileContent = format(tsFileContent, { singleQuote: true });
-
-    writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
-  }
-}
-
-function createLanguageFiles(
-  sourceFile: ts.SourceFile,
-  JSONfileNameWExt: string,
-  outputFilePath: string,
-  outputDir: string,
-  filePath: string
-) {
-  const ast = tsquery.ast(sourceFile.getFullText());
-
-  // start - get function name and prepare ts content
-  const functionIdentifier = tsquery<ts.Identifier>(
-    ast,
-    'FunctionDeclaration>Identifier'
-  )[0];
-  if (functionIdentifier) {
-    let tsFileContent = `import { rand } from '../../core';
-  import { data } from './${JSONfileNameWExt}';
-  
-  export function ${functionIdentifier.text}() {
-    return rand(data);
-  }
-      `;
-    // end
-
-    tsFileContent = format(tsFileContent, { singleQuote: true });
-
-    writeFileSync(outputFilePath, tsFileContent, { encoding: 'utf-8' });
-  }
+  writeFileSync(TSFilePath, tsFileContent, { encoding: 'utf-8' });
 }
 
 export function createLanguageIndexFile(outputDir: string) {
@@ -154,19 +81,25 @@ export function createLanguageIndexFile(outputDir: string) {
 
   readdirSync(outputDir)
     .filter(
-      (filePath) =>
-        filePath.includes(TYPE_SCRIPT_FILE_EXTENSION) && filePath !== 'index.ts'
+      (fileName) =>
+        fileName.includes(TYPE_SCRIPT_FILE_EXTENSION) && fileName !== 'index.ts'
     )
-    .forEach((filePath) => {
-      const fileNameWOExt = basename(filePath, TYPE_SCRIPT_FILE_EXTENSION);
+    .forEach((fileName) => {
+      const outFilePath = join(outputDir, fileName);
+      const fileNameWOExt = basename(fileName, TYPE_SCRIPT_FILE_EXTENSION);
 
-      const exportStatement = `export * from './${fileNameWOExt}';\n`;
+      const functionName = getFunctionName(outFilePath);
+
+      const exportStatement = `export { ${functionName} } from './${fileNameWOExt}';\n`;
 
       appendFileSync(index, exportStatement, { encoding: 'utf-8' });
     });
 }
 
 export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
+  if (!existsSync(options.output)) {
+    mkdirSync(options.output);
+  }
   for (const language of options.languages) {
     const outputDir = join(options.output, language);
     if (!existsSync(outputDir)) {
@@ -179,4 +112,32 @@ export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
       }
     }
   }
+}
+
+function getFunctionName(filePath: string): string {
+  let functionName = '';
+
+  const fileContent = readFileSync(filePath, { encoding: 'utf-8' });
+
+  const sourceFile = ts.createSourceFile(
+    filePath,
+    fileContent.toString(),
+    ts.ScriptTarget.ES2015,
+    true
+  );
+
+  let ast = tsquery.ast(sourceFile.getFullText());
+
+  const functionIdentifierNode = tsquery<ts.Identifier>(
+    ast,
+    'FunctionDeclaration:has(ExportKeyword)>Identifier'
+  );
+
+  if (functionIdentifierNode?.length) {
+    functionName = functionIdentifierNode
+      .map((n) => n.text)
+      .reduce((p, c) => (p ? p + ', ' + c : c), '');
+  }
+
+  return functionName;
 }

@@ -13,7 +13,8 @@
     "test": "nx test falso",
     "migrate": "nx migrate latest",
     "migrate:run": "nx migrate --run-migrations",
-    "m": "npx tsc tools/executors/manipulator/index && nx run falso:manipulator"
+    "m": "npx tsc tools/executors/manipulator/index && nx run falso:manipulator",
+    "translate": "npx tsc tools/executors/translate/index && nx run falso:translate"
   },
   "workspaces": [
     "packages/falso",

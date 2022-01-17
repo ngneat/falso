@@ -3,13 +3,6 @@
   "type": "object",
   "cli": "nx",
   "properties": {
-    "path": {
-      "type": "array",
-      "description": "Files to translate",
-      "items": {
-        "type": "string"
-      }
-    },
     "languages": {
       "type": "array",
       "description": "Languages",
@@ -23,5 +16,5 @@
       "description": "The output dir path"
     }
   },
-  "required": ["path", "languages", "output"]
+  "required": ["languages", "output"]
 }

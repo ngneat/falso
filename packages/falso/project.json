@@ -49,6 +49,13 @@
       "options": {
         "commitMessageFormat": "chore(${projectName}): release version ${version}"
       }
+    },
+    "translate": {
+      "executor": "./tools/executors/translate:translate",
+      "options": {
+        "languages": ["ru"],
+        "output": "i18n"
+      }
     }
   },
   "tags": []
