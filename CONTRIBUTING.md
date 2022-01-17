@@ -5,7 +5,7 @@
 ## Developing
 
 - Run `npm i`
-- Create new falso by running `yarn new --name name`
+- Create new falso by running `yarn new email`
 
   - Use `--json` (default `false`) to indicate that the falso will load it's data from a JSON file
   - Use `--skip-test` (default `false`) to indicate that the falso should not generate a test file
@@ -24,6 +24,8 @@ readable messages** that are easy to follow when looking through the **project h
 we use the git commit messages to **generate the Falso changelog**.
 
 ### Commit Message Format
+
+Use `npm run c` and answer the questions.
 
 Each commit message consists of a **header**, a **body** and a **footer**. The header has a special
 format that includes a **type**, a **scope** and a **subject**:
