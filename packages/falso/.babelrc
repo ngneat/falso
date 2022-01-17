@@ -1,10 +1,7 @@
 {
   "presets": [
     [
-      "@nrwl/web/babel",
-      {
-        "useBuiltIns": "usage"
-      }
+      "@nrwl/web/babel"
     ]
   ]
 }

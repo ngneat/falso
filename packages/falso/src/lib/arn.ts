@@ -1,11 +1,9 @@
+import { randAccount } from './account';
+import { randAwsRegion } from './aws-region';
 import { fake, FakeOptions } from './core/core';
-import {
-  randAccount,
-  randAwsRegion,
-  randDirectoryPath,
-  randFileName,
-  randNumber,
-} from '@ngneat/falso';
+import { randDirectoryPath } from './directory-path';
+import { randFileName } from './file-name';
+import { randNumber } from './number';
 
 const partitions = ['aws', 'aws-cn', 'aws-us-gov'];
 const services = ['s3', 'sqs', 'lambda', 'iam'];
