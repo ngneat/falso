@@ -1,0 +1,24 @@
+{
+  "data": [
+    "EC2",
+    "RDS",
+    "S3",
+    "Lambda",
+    "CloudFront",
+    "Glacier",
+    "SNS",
+    "SQS",
+    "EBS",
+    "VPC",
+    "Kinesis",
+    "Kinesis Data Firehose",
+    "Dynamo DB",
+    "ElastiCache",
+    "CloudWatch",
+    "Cognito",
+    "Cognito",
+    "API Gateway",
+    "AppSync",
+    "Athena"
+  ]
+}

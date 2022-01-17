@@ -35,6 +35,6 @@ export function randEmail<Options extends FakeOptions>(options?: Options) {
       name += randNumber({ min: 1, max: 1_000 });
     }
 
-    return `${name}@${randEmailProvider()}.${randDomainSuffix()}`;
+    return `${name.toLowerCase()}@${randEmailProvider()}.${randDomainSuffix()}`;
   }, options);
 }

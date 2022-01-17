@@ -1,32 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-
-const alphabet = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'j',
-  'k',
-  'm',
-  'n',
-  'l',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-];
+import { alphaChars } from './sequence';
 
 /**
  * Get a random alpha.
@@ -43,5 +16,5 @@ const alphabet = [
  *
  */
 export function randAlpha<Options extends FakeOptions>(options?: Options) {
-  return fake(alphabet, options);
+  return fake([...alphaChars], options);
 }

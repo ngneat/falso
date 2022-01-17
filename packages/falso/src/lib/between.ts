@@ -13,15 +13,11 @@ interface BetweenOptions extends FakeOptions {
  *
  * @example
  *
- * randBetweenDate()
- *
- * @example
- *
  * randBetweenDate({ from: Date, to: Date })
  *
  * @example
  *
- * randBetweenDate({ length: 10 })
+ * randBetweenDate({ from: Date, to: Date, length: 10 })
  *
  */
 export function randBetweenDate<Options extends BetweenOptions>(
