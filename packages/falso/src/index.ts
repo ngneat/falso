@@ -96,7 +96,7 @@ export { randProgrammingLanguage } from './lib/programming-language';
 export { randProtocol } from './lib/protocol';
 export { randRabbit } from './lib/rabbit';
 export { rand } from './lib/rand';
-export { random } from './lib/random';
+export { random, seed } from './lib/random';
 export { randRecentDate } from './lib/recent';
 export { randRgb } from './lib/rgb';
 export { randRoutingNumber } from './lib/routing-number';
