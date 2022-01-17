@@ -48,7 +48,7 @@ export { randFloat } from './lib/float';
 export { randFullName } from './lib/full-name';
 export { randFutureDate } from './lib/future';
 export { randGender } from './lib/gender';
-export { randGenre } from './lib/genre';
+export { randMusicGenre } from './lib/music-genre';
 export { randGitBranch } from './lib/git-branch';
 export { randGitCommitEntry } from './lib/git-commit-entry';
 export { randGitCommitMessage } from './lib/git-commit-message';
