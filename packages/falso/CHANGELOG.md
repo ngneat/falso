@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.3.0-beta.0](https://github.com/ngneat/falso/compare/falso-2.2.0-beta.0...falso-2.3.0-beta.0) (2022-01-17)
+
+### Bug Fixes
+
+- 🐞 export seed function ([77ccaed](https://github.com/ngneat/falso/commit/77ccaed2b9a14d6f9db758018344e318ef106445)), closes [#46](https://github.com/ngneat/falso/issues/46)
+
+### Features
+
+- 🔥 add aws mocks ([fad442b](https://github.com/ngneat/falso/commit/fad442bda60e0318edd63a6089cb0fdb72073982)), closes [#44](https://github.com/ngneat/falso/issues/44)
+- 🔥 add randRole ([41efb0d](https://github.com/ngneat/falso/commit/41efb0d44426fef1c009e7f1e1705725f73c3c91)), closes [#41](https://github.com/ngneat/falso/issues/41)
+
 # [2.2.0-beta.0](https://github.com/ngneat/falso/compare/falso-2.1.0-beta.0...falso-2.2.0-beta.0) (2022-01-16)
 
 ### Bug Fixes
