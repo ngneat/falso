@@ -8,7 +8,10 @@ const translate = new v2.Translate({
   keyFilename: './tools/executors/translate/files/google-cloud-secret.json',
 });
 
-export async function translateText(text: string[], target: string) {
+export async function translateText(
+  text: string,
+  language: string
+): Promise<string> {
   // Translates the text into the target language. "text" can be a string for
   // translating a single piece of text, or an array of strings for translating
   // multiple texts.
@@ -16,10 +19,55 @@ export async function translateText(text: string[], target: string) {
   // let [translations] = await translate.translate(text, target);
 
   // Comment below once you have google-cloud-secret.json file ready
-  const translations = text.map((t) => 'Translated ' + t);
-  return translations;
+  const translation = language + '-' + text;
+  return translation;
 }
 
-export async function translateJSON(jsonData: any) {
-  return jsonData;
+export async function translateJSON(
+  jsonData: { data: any[] },
+  language: string
+): Promise<{ data: any[] }> {
+  let updatedJSON: { data: any[] } = { data: [] };
+
+  const data = jsonData.data;
+
+  const updatedData = await translateDataArray(data, language);
+
+  updatedJSON.data = updatedData.slice();
+
+  return updatedJSON;
+}
+function translateDataArray(data: any[], language: string): Promise<any[]> {
+  if (Array.isArray(data)) {
+    return Promise.all(
+      data.map(async (d): Promise<any> => {
+        return translateElement(d, language);
+      })
+    );
+  }
+}
+async function translateDataObject(data: any, language: string): Promise<any> {
+  const updatedData: any = {};
+
+  for (const key in data) {
+    const element = data[key];
+    let value = await translateElement(element, language);
+    updatedData[key] = value;
+  }
+
+  return updatedData;
+}
+async function translateElement(element: any, language: string) {
+  switch (typeof element) {
+    case 'string':
+      return await translateText(element, language);
+    case 'object':
+      if (Array.isArray(element)) {
+        return await translateDataArray(element, language);
+      } else {
+        return await translateDataObject(element, language);
+      }
+    default:
+      return element;
+  }
 }

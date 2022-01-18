@@ -11,29 +11,18 @@ import {
   writeFileSync,
 } from 'fs';
 import { basename, join } from 'path';
-import { format } from 'prettier';
 import * as ts from 'typescript';
 import { COMMENT, TYPE_SCRIPT_FILE_EXTENSION } from './constants';
 import { EchoExecutorOptions } from './options';
-import { translateJSON, translateText } from './translate';
+import { translateJSON } from './translate';
 
 /**
  * Write export statements for each generated file to language's index file
  */
-export function writeExportStatements(
-  options: EchoExecutorOptions,
-  translationIndex: string
-) {
-  appendFileSync(translationIndex, `${COMMENT}\n`, {
-    encoding: 'utf-8',
-  });
+export function writeExportStatements(options: EchoExecutorOptions) {
   for (const language of options.languages) {
     const outputDir = join(options.output, language);
     createLanguageIndexFile(outputDir);
-    const exportStatement = `export * as ${language} from './${language}';\n`;
-    appendFileSync(translationIndex, exportStatement, {
-      encoding: 'utf-8',
-    });
   }
 }
 
@@ -46,22 +35,22 @@ export async function writeTranslation(
 ) {
   const rootJSONFilePath = join(projectLibPath, jsonFileName);
   const outputDir = join(options.output, language);
-  const outJSONFilePath = join(outputDir, jsonFileName);
+  const outJSONFilePath = join(outputDir, 'src', jsonFileName);
 
   const jsonData = JSON.parse(readFileSync(rootJSONFilePath).toString());
 
-  const translatedJSONData = await translateJSON(jsonData);
+  const translatedJSONData = await translateJSON(jsonData, language);
 
   writeFileSync(outJSONFilePath, JSON.stringify(translatedJSONData, null, 2), {
     encoding: 'utf-8',
   });
 
   const rootTSFilePath = join(projectLibPath, TSFileName);
-  const outTSFilePath = join(outputDir, TSFileName);
+  const outTSFilePath = join(outputDir, 'src', TSFileName);
 
   copyFileSync(rootTSFilePath, outTSFilePath);
 
-  updateCorePath(outTSFilePath);
+  // updateCorePath(outTSFilePath);
 }
 
 function updateCorePath(TSFilePath: string) {
@@ -75,17 +64,18 @@ function updateCorePath(TSFilePath: string) {
 }
 
 export function createLanguageIndexFile(outputDir: string) {
-  const index = join(outputDir, `index.ts`);
+  const outputSRCDirPath = join(outputDir, 'src');
+  const index = join(outputSRCDirPath, `index.ts`);
 
   appendFileSync(index, `${COMMENT}\n`, { encoding: 'utf-8' });
 
-  readdirSync(outputDir)
+  readdirSync(outputSRCDirPath)
     .filter(
       (fileName) =>
         fileName.includes(TYPE_SCRIPT_FILE_EXTENSION) && fileName !== 'index.ts'
     )
     .forEach((fileName) => {
-      const outFilePath = join(outputDir, fileName);
+      const outFilePath = join(outputSRCDirPath, fileName);
       const fileNameWOExt = basename(fileName, TYPE_SCRIPT_FILE_EXTENSION);
 
       const functionName = getFunctionName(outFilePath);
@@ -101,9 +91,9 @@ export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
     mkdirSync(options.output);
   }
   for (const language of options.languages) {
-    const outputDir = join(options.output, language);
+    const outputDir = join(options.output, language, 'src');
     if (!existsSync(outputDir)) {
-      mkdirSync(outputDir);
+      mkdirSync(outputDir, { recursive: true });
     } else {
       const index = join(outputDir, `index.ts`);
 

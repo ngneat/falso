@@ -53,8 +53,30 @@
     "translate": {
       "executor": "./tools/executors/translate:translate",
       "options": {
-        "languages": ["ru"],
-        "output": "i18n"
+        "languages": ["ru", "es"],
+        "output": "packages/falso/i18n"
+      }
+    },
+    "build-translate-ru": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/falso/i18n/ru",
+        "tsConfig": "packages/falso/i18n/ru/tsconfig.lib.json",
+        "project": "packages/falso/i18n/ru/package.json",
+        "entryFile": "packages/falso/i18n/ru/src/index.ts",
+        "format": ["esm", "cjs"]
+      }
+    },
+    "build-translate-es": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/falso/i18n/es",
+        "tsConfig": "packages/falso/i18n/es/tsconfig.lib.json",
+        "project": "packages/falso/i18n/es/package.json",
+        "entryFile": "packages/falso/i18n/es/src/index.ts",
+        "format": ["esm", "cjs"]
       }
     }
   },

@@ -1,0 +1,32 @@
+{
+  "data": [
+    "es-SCSI",
+    "es-SMTP",
+    "es-ADP",
+    "es-TCP",
+    "es-PNG",
+    "es-EXE",
+    "es-AI",
+    "es-RAM",
+    "es-RSS",
+    "es-GB",
+    "es-SSL",
+    "es-CSS",
+    "es-SAS",
+    "es-SDD",
+    "es-PCI",
+    "es-IB",
+    "es-SQL",
+    "es-XML",
+    "es-THX",
+    "es-AGP",
+    "es-HTTP",
+    "es-SMS",
+    "es-FTP",
+    "es-JBOD",
+    "es-XSS",
+    "es-HDD",
+    "es-JSON",
+    "es-COM"
+  ]
+}

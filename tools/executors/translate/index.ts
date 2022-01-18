@@ -9,7 +9,10 @@ import {
 } from 'fs';
 import { basename, join } from 'path';
 import * as ts from 'typescript';
+import { addBuildTargets } from './add-build-target';
 import { JSON_FILE_EXTENSION, TYPE_SCRIPT_FILE_EXTENSION } from './constants';
+import { copyCoreFiles } from './copy-core';
+import { createConfigFiles } from './create-config';
 import { generateStringLiteralsAndSourceFile } from './generate';
 import { EchoExecutorOptions } from './options';
 import {
@@ -32,10 +35,14 @@ export default async function translateExecutor(
       context.workspace.projects[context.projectName].sourceRoot,
       'lib'
     );
+    const projectJSONPath = join(
+      context.root,
+      context.workspace.projects[context.projectName].root,
+      'project.json'
+    );
     const jsonFilePaths = readdirSync(projectLibPath).filter((p) =>
       p.includes(JSON_FILE_EXTENSION)
     );
-    options.output = join(projectLibPath, options.output);
 
     manageLanguageIndexFiles(options);
 
@@ -70,15 +77,17 @@ export default async function translateExecutor(
       }
     }
 
-    // delete translations/index.ts file if present
-    const translationIndex = join(options.output, `index.ts`);
-    if (existsSync(translationIndex)) {
-      unlinkSync(translationIndex);
-    }
-
     // write export statements everywhere
-    // TODO: Un-comment below
-    writeExportStatements(options, translationIndex);
+    writeExportStatements(options);
+
+    // copy core files
+    copyCoreFiles(options, projectLibPath);
+
+    // create config files
+    createConfigFiles(options);
+
+    // add build targets
+    addBuildTargets(options, projectJSONPath);
 
     console.info(
       "Translation complete. Please make sure to export from package's index file"
