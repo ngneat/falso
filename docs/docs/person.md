@@ -44,6 +44,18 @@ randGender();
 randGender({ length: 10 });
 ```
 
+### `randLanguage`
+
+Generate a random language.
+
+```ts
+import { randLanguage } from '@ngneat/falso';
+
+randLanguage();
+randLanguage({ length: 10 });
+randLanguage({ code: true });
+```
+
 ### `randLastName`
 
 Generate a random last name.
