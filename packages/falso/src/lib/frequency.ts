@@ -4,7 +4,7 @@ import { data } from './frequency.json';
 /**
  * Generate a random adverb for definite or indefinite frequency.
  *
- * @category text
+ * @category date
  *
  * @example
  *

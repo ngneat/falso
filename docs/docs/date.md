@@ -1,16 +1,5 @@
 # Date
 
-### `randMonth`
-
-Generate a random month.
-
-```ts
-import { randMonth } from '@ngneat/falso';
-
-month();
-month({ length: 10 });
-```
-
 ### `randBetweenDate`
 
 Generate a random date between ranges.
@@ -23,6 +12,17 @@ randBetweenDate({ from: Date, to: Date });
 randBetweenDate({ length: 10 });
 ```
 
+### `randFrequency`
+
+Generate a random frequency adverb.
+
+```ts
+import { randFrequency } from '@ngneat/falso';
+
+randFrequency();
+randFrequency({ length: 10 });
+```
+
 ### `randFutureDate`
 
 Generate a random future.
@@ -33,6 +33,17 @@ import { randFutureDate } from '@ngneat/falso';
 randFutureDate();
 randFutureDate({ length: 10 });
 randFutureDate({ years: 10 });
+```
+
+### `randMonth`
+
+Generate a random month.
+
+```ts
+import { randMonth } from '@ngneat/falso';
+
+month();
+month({ length: 10 });
 ```
 
 ### `randPastDate`
