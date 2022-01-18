@@ -1,10 +1,27 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './product.json';
+import { FakeOptions, fake, getRandomInRange } from './core/core';
+import { randUuid } from './uuid';
+import { randProductName } from './product-name';
+import { randProductDescription } from './product-description';
+import { randProductCategory } from './product-category';
+import { randImg } from './img';
+
+export interface Product {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: string;
+    count: string;
+  };
+}
 
 /**
  * Generate a random product.
  *
- * @category Commerce
+ * @category entities
  *
  * @example
  *
@@ -16,5 +33,19 @@ import { data } from './product.json';
  *
  */
 export function randProduct<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+  return fake(
+    () => ({
+      id: randUuid(),
+      title: randProductName(),
+      description: randProductDescription(),
+      price: getRandomInRange({ fraction: 2 }).toString(),
+      category: randProductCategory(),
+      image: randImg(),
+      rating: {
+        rate: getRandomInRange({ min: 0.1, max: 5.0, fraction: 1 }).toString(),
+        count: getRandomInRange({ min: 0, max: 10000 }).toString(),
+      },
+    }),
+    options
+  );
 }

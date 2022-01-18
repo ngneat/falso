@@ -24,7 +24,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className='button button--secondary button--lg'
-            to='/docs/date'
+            to='/docs/getting-started'
           >
             Get Started
           </Link>
@@ -38,9 +38,9 @@ function HomepageHeader() {
               target='_blank'
               style={{
                 textDecoration: 'none',
-                color         : 'inherit',
-                display       : 'flex',
-                alignItems    : 'center'
+                color: 'inherit',
+                display: 'flex',
+                alignItems: 'center'
               }}
             >
               <svg
