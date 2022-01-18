@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './genre.json';
+import { data } from './music-genre.json';
 
 /**
  * Generate a random genre.
@@ -8,13 +8,13 @@ import { data } from './genre.json';
  *
  * @example
  *
- * randGenre()
+ * randMusicGenre()
  *
  * @example
  *
- * randGenre({ length: 10 })
+ * randMusicGenre({ length: 10 })
  *
  */
-export function randGenre<Options extends FakeOptions>(options?: Options) {
+export function randMusicGenre<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }

@@ -95,8 +95,8 @@ Generate a random text.
 ```ts
 import { randText } from '@ngneat/falso';
 
-text();
-text({ charCount: 10 });
+randText();
+randText({ charCount: 10 });
 ```
 
 ### `randVerb`

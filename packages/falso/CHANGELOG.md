@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.3.0](https://github.com/ngneat/falso/compare/falso-2.3.0-beta.0...falso-2.3.0) (2022-01-17)
+
+### Bug Fixes
+
+- 🐞 Move files to correct directory ([1cc9e9a](https://github.com/ngneat/falso/commit/1cc9e9a176ea3892f65a999e4bc758e2f7f6e12e)), closes [#53](https://github.com/ngneat/falso/issues/53)
+
+### Features
+
+- 🔥 Add lots of new firstnames ([643bc5a](https://github.com/ngneat/falso/commit/643bc5a76eb72a14f0af6771986a6251241a39ad)), closes [#45](https://github.com/ngneat/falso/issues/45)
+- 🔥 Add lots of surnames ([816d2f8](https://github.com/ngneat/falso/commit/816d2f85ae7d00c411c815c50def05533f86ee39)), closes [#45](https://github.com/ngneat/falso/issues/45)
+- 🔥 Add randColor function ([eeca102](https://github.com/ngneat/falso/commit/eeca102f6c27248ac90760301edee9616319b57c)), closes [#53](https://github.com/ngneat/falso/issues/53)
+- 🔥 Add randLine function ([0efbd7b](https://github.com/ngneat/falso/commit/0efbd7badab0297b801fb6b98f0d74893e020070)), closes [#39](https://github.com/ngneat/falso/issues/39)
+
 # [2.3.0-beta.0](https://github.com/ngneat/falso/compare/falso-2.2.0-beta.0...falso-2.3.0-beta.0) (2022-01-17)
 
 ### Bug Fixes
