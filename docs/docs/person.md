@@ -53,6 +53,7 @@ import { randLanguage } from '@ngneat/falso';
 
 randLanguage();
 randLanguage({ length: 10 });
+randLanguage({ code: true });
 ```
 
 ### `randLastName`
