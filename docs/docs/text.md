@@ -44,6 +44,17 @@ randCatchPhrase();
 randCatchPhrase({ length: 10 });
 ```
 
+### `randFrequency`
+
+Generate a random frequency adverb.
+
+```ts
+import { randFrequency } from '@ngneat/falso';
+
+randFrequency();
+randFrequency({ length: 10 });
+```
+
 ### `randLines`
 
 Generate a random lines.
