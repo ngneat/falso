@@ -136,3 +136,4 @@ export { randLine } from './lib/line';
 export { randColor } from './lib/color';
 export { randSkill } from './lib/skill';
 export { randFrequency } from './lib/frequency';
+export { randLanguage } from './lib/language';
