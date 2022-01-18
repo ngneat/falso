@@ -135,3 +135,4 @@ export { randArn } from './lib/arn';
 export { randLine } from './lib/line';
 export { randColor } from './lib/color';
 export { randSkill } from './lib/skill';
+export { randProductCategory } from './lib/product-category';
