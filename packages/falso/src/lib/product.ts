@@ -21,7 +21,7 @@ export interface Product {
 /**
  * Generate a random product.
  *
- * @category Commerce
+ * @category entities
  *
  * @example
  *
