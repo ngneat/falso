@@ -4,7 +4,7 @@ import { data } from './product-category.json';
 /**
  * Generate a random product category.
  *
- * @category Commerce
+ * @category entities
  *
  * @example
  *
