@@ -140,3 +140,4 @@ export { randFrequency } from './lib/frequency';
 export { randLanguage } from './lib/language';
 export { randIntegration } from './lib/integration';
 export { randFood } from './lib/food';
+export { randMovie } from './lib/movie';
