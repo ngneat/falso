@@ -2,8 +2,6 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
 import { data } from './food.json';
 import { rand } from './rand';
 
-// TODO: Add more Foods to JSON
-
 export type CuisineOrigin = keyof typeof data;
 
 export interface FoodOptions extends FakeOptions {
@@ -13,7 +11,7 @@ export interface FoodOptions extends FakeOptions {
 const totalOrigins = Object.keys(data)?.length;
 
 /**
- * Generate a random food.
+ * Generate a random food name.
  *
  * @category Food
  *

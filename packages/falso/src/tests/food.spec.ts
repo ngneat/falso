@@ -54,12 +54,7 @@ describe('food', () => {
       it('should return an array length of 3, each with a random dish from a random origin', () => {
         const result = randFood({ length: 3 });
 
-        // TODO: Update results as Korean & Turkish foods are added
-        expect(result).toEqual([
-          'Kawarma',
-          'Add korean food',
-          'Add turkish food',
-        ]);
+        expect(result).toEqual(['Kawarma', 'Donburi', 'Kahvalti']);
       });
     });
   });
