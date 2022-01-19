@@ -2,6 +2,7 @@ import { ExecutorContext } from '@nrwl/devkit';
 import { readdirSync, statSync } from 'fs';
 import { basename, join } from 'path';
 import { JSON_FILE_EXTENSION } from './constants';
+import { generateRollupConfig } from './generate-rollup-config';
 import { EchoExecutorOptions } from './options';
 import {
   manageLanguageIndexFiles,
@@ -32,11 +33,6 @@ export default async function translateExecutor(
     console.info(`Will be translating ${jsonFilePaths.length} files.\n`);
 
     for (let jsonFileName of [jsonFilePaths[0]]) {
-      await new Promise<void>((resolve) =>
-        setTimeout(() => {
-          resolve();
-        }, 100)
-      );
       const TSFileName = basename(jsonFileName, '.json') + '.ts';
       const rootJSONFilePath = join(projectLibPath, jsonFileName);
       const fileStats = statSync(rootJSONFilePath);
@@ -63,9 +59,10 @@ export default async function translateExecutor(
     // write export statements everywhere
     writeExportStatements(options);
 
-    console.info(
-      'Translation complete. Please make sure to add entries in rollup.config.js.'
-    );
+    // generate rollup config
+    generateRollupConfig(options);
+
+    console.info('Translation complete. rollup.config.js generated');
 
     return { success };
   } catch (e) {

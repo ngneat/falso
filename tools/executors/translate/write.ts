@@ -1,7 +1,6 @@
 import { tsquery } from '@phenomnomnominal/tsquery';
 import {
   appendFileSync,
-  copyFile,
   copyFileSync,
   existsSync,
   mkdirSync,
@@ -84,7 +83,7 @@ export function createLanguageIndexFile(outputDir: string) {
       const outFilePath = join(outputDir, fileName);
       const fileNameWOExt = basename(fileName, TYPE_SCRIPT_FILE_EXTENSION);
 
-      const functionName = getFunctionName(outFilePath);
+      const functionName = camelCase(`rand-${fileNameWOExt}`);
 
       const exportStatement = `export { ${functionName} } from './${fileNameWOExt}';\n`;
 
@@ -136,4 +135,14 @@ function getFunctionName(filePath: string): string {
   }
 
   return functionName;
+}
+
+function camelCase(fileNameWithDashes: string): string {
+  return fileNameWithDashes
+    .split('-')
+    .reduce((p, c) => p + capitalizeFirstLetter(c));
+}
+
+function capitalizeFirstLetter(string: string): string {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
