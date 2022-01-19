@@ -65,6 +65,17 @@ import { random } from '@ngneat/falso';
 randRandom();
 ```
 
+### `randPriority`
+
+Generate a random priority.
+
+```ts
+import { randPriority } from '@ngneat/falso';
+
+randPastDate();
+randPastDate({ length: 10 });
+```
+
 ### `randSequence`
 
 Generate a random random sequence.
