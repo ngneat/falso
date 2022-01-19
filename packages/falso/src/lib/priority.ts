@@ -4,7 +4,7 @@ import { data } from './priority.json';
 /**
  * Generate a random priority.
  *
- * @category date
+ * @category general
  *
  * @example
  *
