@@ -66,6 +66,10 @@ function updateCorePath(TSFilePath: string) {
     `'../../lib/core/core';`
   );
 
+  tsFileContent = tsFileContent.replace(`'./rand';`, `'../../lib/rand';`);
+
+  tsFileContent = tsFileContent.replace(`'./random';`, `'../../lib/random';`);
+
   writeFileSync(TSFilePath, tsFileContent, { encoding: 'utf-8' });
 }
 

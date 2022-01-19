@@ -32,6 +32,10 @@ export default async function translateExecutor(
 
     console.info(`Will be translating ${jsonFilePaths.length} files.\n`);
 
+    // un comment below once translation is ready
+    // for (let jsonFileName of jsonFilePaths) {
+
+    // for testing, we are only translating 1st file, comment below once translation is ready
     for (let jsonFileName of [jsonFilePaths[0]]) {
       const TSFileName = basename(jsonFileName, '.json') + '.ts';
       const rootJSONFilePath = join(projectLibPath, jsonFileName);

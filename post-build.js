@@ -14,5 +14,5 @@ json
       .then(() =>
         console.log('Created cjs and esm js files for all translations.')
       )
-      .catch();
+      .catch((e) => console.error(e));
   });
