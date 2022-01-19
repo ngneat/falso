@@ -19,6 +19,12 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 
 </p>
 
+✅ &nbsp;140+ Functions  
+✅ &nbsp;Tree Shakable  
+✅ &nbsp;Fully Typed  
+✅ &nbsp;Entity Functions  
+✅ &nbsp;Single and Array Result
+
 🤓 Learn about it on the [docs site](https://ngneat.github.io/falso/) <br>
 🔥 Run it on [Stackblitz](https://stackblitz.com/edit/typescript-pjao1u?file=index.ts)
 
