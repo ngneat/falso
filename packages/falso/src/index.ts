@@ -139,3 +139,4 @@ export { randProductCategory } from './lib/product-category';
 export { randFrequency } from './lib/frequency';
 export { randLanguage } from './lib/language';
 export { randFood } from './lib/food';
+export { randMovie } from './lib/movie';
