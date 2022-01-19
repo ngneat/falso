@@ -8,9 +8,9 @@ import { data } from './pronoun.json';
  *
  * @example
  *
- * pronoun()
+ * randPronoun()
  *
  */
-export function pronoun<Options extends FakeOptions>(options?: Options) {
+export function randPronoun<Options extends FakeOptions>(options?: Options) {
   return fake(data, options);
 }
