@@ -138,3 +138,4 @@ export { randSkill } from './lib/skill';
 export { randProductCategory } from './lib/product-category';
 export { randFrequency } from './lib/frequency';
 export { randLanguage } from './lib/language';
+export { randIntegration } from './lib/integration';
