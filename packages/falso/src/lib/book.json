@@ -1,0 +1,4566 @@
+{
+  "data": [
+    { "title": "Lucky Jim", "author": "Kingsley Amis", "category": "Comedy" },
+    { "title": "Money", "author": "Martin Amis", "category": "Comedy" },
+    {
+      "title": "The Information",
+      "author": "Martin Amis",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Bottle Factory Outing",
+      "author": "Beryl Bainbridge",
+      "category": "Comedy"
+    },
+    {
+      "title": "According to Queeney",
+      "author": "Beryl Bainbridge",
+      "category": "Comedy"
+    },
+    {
+      "title": "Flaubert’s Parrot",
+      "author": "Julian Barnes",
+      "category": "Comedy"
+    },
+    {
+      "title": "A History of the World in 10 1/2 Chapters",
+      "author": "Julian Barnes",
+      "category": "Comedy"
+    },
+    {
+      "title": "Augustus Carp, Esq. by Himself: Being the Autobiography of a Really Good Man",
+      "author": "Henry Howarth Bashford",
+      "category": "Comedy"
+    },
+    { "title": "Molloy", "author": "Samuel Beckett", "category": "Comedy" },
+    {
+      "title": "Zuleika Dobson",
+      "author": "Max Beerbohm",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Adventures of Augie March",
+      "author": "Saul Bellow",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Uncommon Reader",
+      "author": "Alan Bennett",
+      "category": "Comedy"
+    },
+    { "title": "Queen Lucia", "author": "EF Benson", "category": "Comedy" },
+    {
+      "title": "The Ascent of Rum Doodle",
+      "author": "WE Bowman",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Good Man in Africa",
+      "author": "William Boyd",
+      "category": "Comedy"
+    },
+    {
+      "title": "The History Man",
+      "author": "Malcolm Bradbury",
+      "category": "Comedy"
+    },
+    {
+      "title": "No Bed for Bacon",
+      "author": "Caryl Brahms and SJ Simon",
+      "category": "Comedy"
+    },
+    { "title": "Illywhacker", "author": "Peter Carey", "category": "Comedy" },
+    { "title": "A Season in Sinji", "author": "JL Carr", "category": "Comedy" },
+    {
+      "title": "The Harpole Report",
+      "author": "JL Carr",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Hearing Trumpet",
+      "author": "Leonora Carrington",
+      "category": "Comedy"
+    },
+    { "title": "Mister Johnson", "author": "Joyce Cary", "category": "Comedy" },
+    {
+      "title": "The Horse’s Mouth",
+      "author": "Joyce Cary",
+      "category": "Comedy"
+    },
+    {
+      "title": "Don Quixote",
+      "author": "Miguel de Cervantes",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Case of the Gilded Fly",
+      "author": "Edmund Crispin",
+      "category": "Comedy"
+    },
+    {
+      "title": "Just William",
+      "author": "Richmal Crompton",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Provincial Lady",
+      "author": "EM Delafield",
+      "category": "Comedy"
+    },
+    {
+      "title": "Slouching Towards Kalamazoo",
+      "author": "Peter De Vries",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Pickwick Papers",
+      "author": "Charles Dickens",
+      "category": "Comedy"
+    },
+    {
+      "title": "Martin Chuzzlewit",
+      "author": "Charles Dickens",
+      "category": "Comedy"
+    },
+    {
+      "title": "Jacques the Fatalist and his Master",
+      "author": "Denis Diderot",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Fairy Tale of New York",
+      "author": "JP Donleavy",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Commitments",
+      "author": "Roddy Doyle",
+      "category": "Comedy"
+    },
+    { "title": "Ennui", "author": "Maria Edgeworth", "category": "Comedy" },
+    { "title": "Cheese", "author": "Willem Elsschot", "category": "Comedy" },
+    {
+      "title": "Bridget Jones’s Diary",
+      "author": "Helen Fielding",
+      "category": "Comedy"
+    },
+    {
+      "title": "Joseph Andrews",
+      "author": "Henry Fielding",
+      "category": "Comedy"
+    },
+    { "title": "Tom Jones", "author": "Henry Fielding", "category": "Comedy" },
+    { "title": "Caprice", "author": "Ronald Firbank", "category": "Comedy" },
+    {
+      "title": "Bouvard et Pécuchet",
+      "author": "Gustave Flaubert",
+      "category": "Comedy"
+    },
+    {
+      "title": "Towards the End of the Morning",
+      "author": "Michael Frayn",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Polygots",
+      "author": "William Gerhardie",
+      "category": "Comedy"
+    },
+    {
+      "title": "Cold Comfort Farm",
+      "author": "Stella Gibbons",
+      "category": "Comedy"
+    },
+    { "title": "Dead Souls", "author": "Nikolai Gogol", "category": "Comedy" },
+    { "title": "Oblomov", "author": "Ivan Goncharov", "category": "Comedy" },
+    {
+      "title": "The Wind in the Willows",
+      "author": "Kenneth Grahame",
+      "category": "Comedy"
+    },
+    {
+      "title": "Brewster’s Millions",
+      "author": "Richard Greaves (George Barr McCutcheon)",
+      "category": "Comedy"
+    },
+    {
+      "title": "Squire Haggard’s Journal",
+      "author": "Michael Green",
+      "category": "Comedy"
+    },
+    {
+      "title": "Our Man in Havana",
+      "author": "Graham Greene",
+      "category": "Comedy"
+    },
+    {
+      "title": "Travels with My Aunt",
+      "author": "Graham Greene",
+      "category": "Comedy"
+    },
+    {
+      "title": "Diary of a Nobody",
+      "author": "George Grossmith",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Little World of Don Camillo",
+      "author": "Giovanni Guareschi",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Curious Incident of the Dog in the Night-time",
+      "author": "Mark Haddon",
+      "category": "Comedy"
+    },
+    { "title": "Catch-22", "author": "Joseph Heller", "category": "Comedy" },
+    {
+      "title": "Mr Blandings Builds His Dream House",
+      "author": "Eric Hodgkins",
+      "category": "Comedy"
+    },
+    { "title": "High Fidelity", "author": "Nick Hornby", "category": "Comedy" },
+    {
+      "title": "I Served the King of England",
+      "author": "Bohumil Hrabal",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Lecturer’s Tale",
+      "author": "James Hynes",
+      "category": "Comedy"
+    },
+    {
+      "title": "Mr Norris Changes Trains",
+      "author": "Christopher Isherwood",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Mighty Walzer Howard",
+      "author": "Jacobson",
+      "category": "Comedy"
+    },
+    {
+      "title": "Pictures from an Institution",
+      "author": "Randall Jarrell",
+      "category": "Comedy"
+    },
+    {
+      "title": "Three Men in a Boat",
+      "author": "Jerome K Jerome",
+      "category": "Comedy"
+    },
+    {
+      "title": "Finnegans Wake",
+      "author": "James Joyce",
+      "category": "Comedy"
+    },
+    { "title": "The Castle", "author": "Franz Kafka", "category": "Comedy" },
+    {
+      "title": "Lake Wobegon Days",
+      "author": "Garrison Keillor",
+      "category": "Comedy"
+    },
+    {
+      "title": "Death and the Penguin",
+      "author": "Andrey Kurkov",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Debt to Pleasure",
+      "author": "John Lanchester",
+      "category": "Comedy"
+    },
+    {
+      "title": "L’Histoire de Gil Blas de Santillane (Gil Blas)",
+      "author": "Alain-René Lesage",
+      "category": "Comedy"
+    },
+    {
+      "title": "Changing Places",
+      "author": "David Lodge",
+      "category": "Comedy"
+    },
+    { "title": "Nice Work", "author": "David Lodge", "category": "Comedy" },
+    {
+      "title": "The Towers of Trebizond",
+      "author": "Rose Macaulay",
+      "category": "Comedy"
+    },
+    {
+      "title": "England, Their England",
+      "author": "AG Macdonell",
+      "category": "Comedy"
+    },
+    {
+      "title": "Whisky Galore",
+      "author": "Compton Mackenzie",
+      "category": "Comedy"
+    },
+    {
+      "title": "Memoirs of a Gnostic Dwarf",
+      "author": "David Madsen",
+      "category": "Comedy"
+    },
+    {
+      "title": "Cakes and Ale - Or, the Skeleton in the Cupboard",
+      "author": "W Somerset Maugham",
+      "category": "Comedy"
+    },
+    {
+      "title": "Tales of the City",
+      "author": "Armistead Maupin",
+      "category": "Comedy"
+    },
+    {
+      "title": "Bright Lights, Big City",
+      "author": "Jay McInerney",
+      "category": "Comedy"
+    },
+    { "title": "Puckoon", "author": "Spike Milligan", "category": "Comedy" },
+    {
+      "title": "The Restraint of Beasts",
+      "author": "Magnus Mills",
+      "category": "Comedy"
+    },
+    { "title": "Charade", "author": "John Mortimer", "category": "Comedy" },
+    {
+      "title": "Titmuss Regained",
+      "author": "John Mortimer",
+      "category": "Comedy"
+    },
+    {
+      "title": "Under the Net",
+      "author": "Iris Murdoch",
+      "category": "Comedy"
+    },
+    { "title": "Pnin", "author": "Vladimir Nabokov", "category": "Comedy" },
+    {
+      "title": "Pale Fire",
+      "author": "Vladimir Nabokov",
+      "category": "Comedy"
+    },
+    { "title": "Fireflies", "author": "Shiva Naipaul", "category": "Comedy" },
+    {
+      "title": "The Sacred Book of the Werewolf",
+      "author": "Victor Pelevin",
+      "category": "Comedy"
+    },
+    {
+      "title": "La Disparition",
+      "author": "Georges Perec",
+      "category": "Comedy"
+    },
+    {
+      "title": "Les Revenentes",
+      "author": "Georges Perec",
+      "category": "Comedy"
+    },
+    {
+      "title": "La Vie Mode d’Emploi",
+      "author": "Georges Perec",
+      "category": "Comedy"
+    },
+    {
+      "title": "My Search for Warren Harding",
+      "author": "Robert Plunkett",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Dance to the Music of Time",
+      "author": "Anthony Powell",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Time to be Born",
+      "author": "Dawn Powell",
+      "category": "Comedy"
+    },
+    {
+      "title": "Excellent Women",
+      "author": "Barbara Pym",
+      "category": "Comedy"
+    },
+    {
+      "title": "Less Than Angels",
+      "author": "Barbara Pym",
+      "category": "Comedy"
+    },
+    {
+      "title": "Zazie in the Metro",
+      "author": "Raymond Queneau",
+      "category": "Comedy"
+    },
+    {
+      "title": "Solomon Gursky Was Here",
+      "author": "Mordecai Richler",
+      "category": "Comedy"
+    },
+    {
+      "title": "Alms for Oblivion",
+      "author": "Simon Raven",
+      "category": "Comedy"
+    },
+    {
+      "title": "Portnoy’s Complaint",
+      "author": "Philip Roth",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Westminster Alice",
+      "author": "Saki",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Unbearable Bassington",
+      "author": "Saki",
+      "category": "Comedy"
+    },
+    {
+      "title": "Hurrah for St Trinian’s",
+      "author": "Ronald Searle",
+      "category": "Comedy"
+    },
+    { "title": "Great Apes", "author": "Will Self", "category": "Comedy" },
+    {
+      "title": "Porterhouse Blue",
+      "author": "Tom Sharpe",
+      "category": "Comedy"
+    },
+    {
+      "title": "Blott on the Landscape",
+      "author": "Tom Sharpe",
+      "category": "Comedy"
+    },
+    {
+      "title": "Office Politics",
+      "author": "Wilfrid Sheed",
+      "category": "Comedy"
+    },
+    {
+      "title": "Belles Lettres Papers: A Novel",
+      "author": "Charles Simmons",
+      "category": "Comedy"
+    },
+    { "title": "Moo", "author": "Jane Smiley", "category": "Comedy" },
+    {
+      "title": "Topper Takes a Trip",
+      "author": "Thorne Smith",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Adventures of Ferdinand Count Fathom",
+      "author": "Tobias Smollett",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Adventures of Roderick Random",
+      "author": "Tobias Smollett",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Adventures of Peregrine Pickle",
+      "author": "Tobias Smollett",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Expedition of Humphry Clinker",
+      "author": "Tobias Smollett",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Prime of Miss Jean Brodie",
+      "author": "Muriel Spark",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Girls of Slender Means",
+      "author": "Muriel Spark",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Driver’s Seat",
+      "author": "Muriel Spark",
+      "category": "Comedy"
+    },
+    {
+      "title": "Loitering with Intent",
+      "author": "Muriel Spark",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Far Cry from Kensington",
+      "author": "Muriel Spark",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Life and Opinions of Tristram Shandy, Gentleman",
+      "author": "Laurence Sterne",
+      "category": "Comedy"
+    },
+    {
+      "title": "White Man Falling",
+      "author": "Mike Stocks",
+      "category": "Comedy"
+    },
+    { "title": "Handley Cross", "author": "RS Surtees", "category": "Comedy" },
+    {
+      "title": "A Tale of a Tub",
+      "author": "Jonathan Swift",
+      "category": "Comedy"
+    },
+    { "title": "Penrod", "author": "Booth Tarkington", "category": "Comedy" },
+    {
+      "title": "The Luck of Barry Lyndon",
+      "author": "William Makepeace Thackeray",
+      "category": "Comedy"
+    },
+    {
+      "title": "Before Lunch",
+      "author": "Angela Thirkell",
+      "category": "Comedy"
+    },
+    {
+      "title": "Tropic of Ruislip",
+      "author": "Leslie Thomas",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Confederacy of Dunces",
+      "author": "John Kennedy Toole",
+      "category": "Comedy"
+    },
+    {
+      "title": "Barchester Towers",
+      "author": "Anthony Trollope",
+      "category": "Comedy"
+    },
+    {
+      "title": "Venus on the Half-Shell",
+      "author": "Kilgore Trout",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Mysterious Stranger",
+      "author": "Mark Twain",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Witches of Eastwick",
+      "author": "John Updike",
+      "category": "Comedy"
+    },
+    {
+      "title": "Breakfast of Champions",
+      "author": "Kurt Vonnegut",
+      "category": "Comedy"
+    },
+    {
+      "title": "Infinite Jest",
+      "author": "David Foster Wallace",
+      "category": "Comedy"
+    },
+    {
+      "title": "Decline and Fall",
+      "author": "Evelyn Waugh",
+      "category": "Comedy"
+    },
+    { "title": "Vile Bodies", "author": "Evelyn Waugh", "category": "Comedy" },
+    {
+      "title": "Black Mischief",
+      "author": "Evelyn Waugh",
+      "category": "Comedy"
+    },
+    { "title": "Scoop", "author": "Evelyn Waugh", "category": "Comedy" },
+    {
+      "title": "The Loved One",
+      "author": "Evelyn Waugh",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Handful of Dust",
+      "author": "Evelyn Waugh",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Life and Loves of a She-Devil",
+      "author": "Fay Weldon",
+      "category": "Comedy"
+    },
+    { "title": "Tono Bungay", "author": "HG Wells", "category": "Comedy" },
+    {
+      "title": "Molesworth",
+      "author": "Geoffrey Willans and Ronald Searle",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Wimbledon Poisoner",
+      "author": "Nigel Williams",
+      "category": "Comedy"
+    },
+    {
+      "title": "Anglo-Saxon Attitudes",
+      "author": "Angus Wilson",
+      "category": "Comedy"
+    },
+    {
+      "title": "Something Fresh",
+      "author": "PG Wodehouse",
+      "category": "Comedy"
+    },
+    {
+      "title": "Piccadilly Jim",
+      "author": "PG Wodehouse",
+      "category": "Comedy"
+    },
+    {
+      "title": "Thank You Jeeves",
+      "author": "PG Wodehouse",
+      "category": "Comedy"
+    },
+    {
+      "title": "Heavy Weather",
+      "author": "PG Wodehouse",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Code of the Woosters",
+      "author": "PG Wodehouse",
+      "category": "Comedy"
+    },
+    {
+      "title": "Joy in the Morning",
+      "author": "PG Wodehouse",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Man with the Golden Arm",
+      "author": "Nelson Algren",
+      "category": "Crime"
+    },
+    {
+      "title": "Fantomas",
+      "author": "Marcel Allain and Pierre Souvestre",
+      "category": "Crime"
+    },
+    {
+      "title": "The Mask of Dimitrios",
+      "author": "Eric Ambler",
+      "category": "Crime"
+    },
+    {
+      "title": "Epitaph for a Spy",
+      "author": "Eric Ambler",
+      "category": "Crime"
+    },
+    {
+      "title": "Journey into Fear",
+      "author": "Eric Ambler",
+      "category": "Crime"
+    },
+    {
+      "title": "The New York Trilogy",
+      "author": "Paul Auster",
+      "category": "Crime"
+    },
+    {
+      "title": "Trent’s Last Case",
+      "author": "EC Bentley",
+      "category": "Crime"
+    },
+    {
+      "title": "The Poisoned Chocolates Case",
+      "author": "Anthony Berkeley",
+      "category": "Crime"
+    },
+    {
+      "title": "The Beast Must Die",
+      "author": "Nicholas Blake",
+      "category": "Crime"
+    },
+    {
+      "title": "Lady Audley’s Secret",
+      "author": "Mary E Braddon",
+      "category": "Crime"
+    },
+    {
+      "title": "The Neon Rain",
+      "author": "James Lee Burke",
+      "category": "Crime"
+    },
+    {
+      "title": "The Tin Roof Blowdown",
+      "author": "James Lee Burke",
+      "category": "Crime"
+    },
+    {
+      "title": "The Thirty-Nine Steps",
+      "author": "John Buchan",
+      "category": "Crime"
+    },
+    { "title": "Greenmantle", "author": "John Buchan", "category": "Crime" },
+    {
+      "title": "The Asphalt Jungle",
+      "author": "WR Burnett",
+      "category": "Crime"
+    },
+    {
+      "title": "The Postman Always Rings Twice",
+      "author": "James M Cain",
+      "category": "Crime"
+    },
+    {
+      "title": "Double Indemnity",
+      "author": "James M Cain",
+      "category": "Crime"
+    },
+    {
+      "title": "True History of the Ned Kelly Gang",
+      "author": "Peter Carey",
+      "category": "Crime"
+    },
+    {
+      "title": "The Hollow Man",
+      "author": "John Dickson Carr",
+      "category": "Crime"
+    },
+    {
+      "title": "The Big Sleep",
+      "author": "Raymond Chandler",
+      "category": "Crime"
+    },
+    {
+      "title": "The Long Goodbye",
+      "author": "Raymond Chandler",
+      "category": "Crime"
+    },
+    {
+      "title": "No Orchids for Miss Blandish",
+      "author": "James Hadley Chase",
+      "category": "Crime"
+    },
+    {
+      "title": "The Riddle of the Sands",
+      "author": "Erskine Childers",
+      "category": "Crime"
+    },
+    {
+      "title": "And Then There Were None",
+      "author": "Agatha Christie",
+      "category": "Crime"
+    },
+    {
+      "title": "The Mysterious Affair at Styles",
+      "author": "Agatha Christie",
+      "category": "Crime"
+    },
+    {
+      "title": "The Murder of Roger Ackroyd",
+      "author": "Agatha Christie",
+      "category": "Crime"
+    },
+    {
+      "title": "The Murder at the Vicarage",
+      "author": "Agatha Christie",
+      "category": "Crime"
+    },
+    {
+      "title": "The Secret Adversary",
+      "author": "Agatha Christie",
+      "category": "Crime"
+    },
+    {
+      "title": "The Woman in White",
+      "author": "Wilkie Collins",
+      "category": "Crime"
+    },
+    {
+      "title": "The Moonstone",
+      "author": "Wilkie Collins",
+      "category": "Crime"
+    },
+    {
+      "title": "A Study in Scarlet",
+      "author": "Arthur Conan Doyle",
+      "category": "Crime"
+    },
+    {
+      "title": "The Hound of the Baskervilles",
+      "author": "Arthur Conan Doyle",
+      "category": "Crime"
+    },
+    {
+      "title": "The Sign of Four",
+      "author": "Arthur Conan Doyle",
+      "category": "Crime"
+    },
+    {
+      "title": "The Manchurian Candidate",
+      "author": "Richard Condon",
+      "category": "Crime"
+    },
+    {
+      "title": "The Secret Agent",
+      "author": "Joseph Conrad",
+      "category": "Crime"
+    },
+    {
+      "title": "Under Western Eyes",
+      "author": "Joseph Conrad",
+      "category": "Crime"
+    },
+    {
+      "title": "Postmortem",
+      "author": "Patricia Cornwell",
+      "category": "Crime"
+    },
+    {
+      "title": "The Andromeda Strain",
+      "author": "Michael Crichton",
+      "category": "Crime"
+    },
+    {
+      "title": "Jurassic Park",
+      "author": "Michael Crichton",
+      "category": "Crime"
+    },
+    {
+      "title": "Poetic Justice",
+      "author": "Amanda Cross",
+      "category": "Crime"
+    },
+    {
+      "title": "The Ipcress File",
+      "author": "Len Deighton",
+      "category": "Crime"
+    },
+    {
+      "title": "Last Seen Wearing",
+      "author": "Colin Dexter",
+      "category": "Crime"
+    },
+    {
+      "title": "The Remorseful Day",
+      "author": "Colin Dexter",
+      "category": "Crime"
+    },
+    { "title": "Ratking", "author": "Michael Dibdin", "category": "Crime" },
+    { "title": "Dead Lagoon", "author": "Michael Dibdin", "category": "Crime" },
+    {
+      "title": "Dirty Tricks",
+      "author": "Michael Dibdin",
+      "category": "Crime"
+    },
+    {
+      "title": "A Rich Full Death",
+      "author": "Michael Dibdin",
+      "category": "Crime"
+    },
+    { "title": "Vendetta", "author": "Michael Dibdin", "category": "Crime" },
+    {
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "category": "Crime"
+    },
+    {
+      "title": "An American Tragedy",
+      "author": "Theodore Dreiser",
+      "category": "Crime"
+    },
+    {
+      "title": "My Cousin Rachel",
+      "author": "Daphne du Maurier",
+      "category": "Crime"
+    },
+    {
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "category": "Crime"
+    },
+    {
+      "title": "The Pledge",
+      "author": "Friedrich Durrenmatt",
+      "category": "Crime"
+    },
+    {
+      "title": "The Crime of Father Amaro",
+      "author": "José Maria de Eça de Queiroz",
+      "category": "Crime"
+    },
+    {
+      "title": "The Name of the Rose",
+      "author": "Umberto Eco",
+      "category": "Crime"
+    },
+    {
+      "title": "American Psycho",
+      "author": "Bret Easton Ellis",
+      "category": "Crime"
+    },
+    {
+      "title": "LA Confidential",
+      "author": "James Ellroy",
+      "category": "Crime"
+    },
+    {
+      "title": "The Big Nowhere",
+      "author": "James Ellroy",
+      "category": "Crime"
+    },
+    {
+      "title": "A Quiet Belief in Angels",
+      "author": "RJ Ellory",
+      "category": "Crime"
+    },
+    { "title": "Sanctuary", "author": "William Faulkner", "category": "Crime" },
+    { "title": "Casino Royale", "author": "Ian Fleming", "category": "Crime" },
+    { "title": "Goldfinger", "author": "Ian Fleming", "category": "Crime" },
+    {
+      "title": "You Only Live Twice",
+      "author": "Ian Fleming",
+      "category": "Crime"
+    },
+    {
+      "title": "The Day of the Jackal",
+      "author": "Frederick Forsyth",
+      "category": "Crime"
+    },
+    {
+      "title": "Brighton Rock",
+      "author": "Graham Greene",
+      "category": "Crime"
+    },
+    {
+      "title": "A Gun for Sale",
+      "author": "Graham Greene",
+      "category": "Crime"
+    },
+    {
+      "title": "The Ministry of Fear",
+      "author": "Graham Greene",
+      "category": "Crime"
+    },
+    {
+      "title": "The Third Man",
+      "author": "Graham Greene",
+      "category": "Crime"
+    },
+    {
+      "title": "A Time to Kill",
+      "author": "John Grisham",
+      "category": "Crime"
+    },
+    {
+      "title": "The King of Torts",
+      "author": "John Grisham",
+      "category": "Crime"
+    },
+    {
+      "title": "Hangover Square",
+      "author": "Patrick Hamilton",
+      "category": "Crime"
+    },
+    {
+      "title": "The Glass Key",
+      "author": "Dashiell Hammett",
+      "category": "Crime"
+    },
+    {
+      "title": "The Maltese Falcon",
+      "author": "Dashiell Hammett",
+      "category": "Crime"
+    },
+    {
+      "title": "Red Harvest",
+      "author": "Dashiell Hammett",
+      "category": "Crime"
+    },
+    {
+      "title": "The Thin Man",
+      "author": "Dashiell Hammett",
+      "category": "Crime"
+    },
+    { "title": "Fatherland", "author": "Robert Harris", "category": "Crime" },
+    { "title": "Black Sunday", "author": "Thomas Harris", "category": "Crime" },
+    { "title": "Red Dragon", "author": "Thomas Harris", "category": "Crime" },
+    {
+      "title": "Tourist Season",
+      "author": "Carl Hiaasen",
+      "category": "Crime"
+    },
+    {
+      "title": "The Friends of Eddie Coyle",
+      "author": "George V Higgins",
+      "category": "Crime"
+    },
+    {
+      "title": "Strangers on a Train",
+      "author": "Patricia Highsmith",
+      "category": "Crime"
+    },
+    {
+      "title": "The Talented Mr Ripley",
+      "author": "Patricia Highsmith",
+      "category": "Crime"
+    },
+    {
+      "title": "Bones and Silence",
+      "author": "Reginald Hill",
+      "category": "Crime"
+    },
+    {
+      "title": "A Rage in Harlem",
+      "author": "Chester Himes",
+      "category": "Crime"
+    },
+    {
+      "title": "Miss Smilla’s Feeling for Snow",
+      "author": "Peter Hoeg",
+      "category": "Crime"
+    },
+    {
+      "title": "Rogue Male",
+      "author": "Geoffrey Household",
+      "category": "Crime"
+    },
+    {
+      "title": "Malice Aforethought",
+      "author": "Francis Iles",
+      "category": "Crime"
+    },
+    {
+      "title": "Silence of the Grave",
+      "author": "Arnadur Indridason",
+      "category": "Crime"
+    },
+    {
+      "title": "Death at the President’s Lodging",
+      "author": "Michael Innes",
+      "category": "Crime"
+    },
+    { "title": "Cover Her Face", "author": "PD James", "category": "Crime" },
+    { "title": "A Taste for Death", "author": "PD James", "category": "Crime" },
+    {
+      "title": "Friday the Rabbi Slept Late",
+      "author": "Harry Kemelman",
+      "category": "Crime"
+    },
+    { "title": "Misery", "author": "Stephen King", "category": "Crime" },
+    {
+      "title": "Dolores Claiborne",
+      "author": "Stephen King",
+      "category": "Crime"
+    },
+    { "title": "Kim", "author": "Rudyard Kipling", "category": "Crime" },
+    {
+      "title": "The Constant Gardener",
+      "author": "John le Carre",
+      "category": "Crime"
+    },
+    {
+      "title": "Tinker, Tailor, Soldier, Spy",
+      "author": "John le Carre",
+      "category": "Crime"
+    },
+    {
+      "title": "The Spy Who Came in from the Cold",
+      "author": "John le Carre",
+      "category": "Crime"
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "category": "Crime"
+    },
+    { "title": "52 Pick-up", "author": "Elmore Leonard", "category": "Crime" },
+    { "title": "Get Shorty", "author": "Elmore Leonard", "category": "Crime" },
+    {
+      "title": "Motherless Brooklyn",
+      "author": "Jonathan Lethem",
+      "category": "Crime"
+    },
+    {
+      "title": "The Bourne Identity",
+      "author": "Robert Ludlum",
+      "category": "Crime"
+    },
+    { "title": "Cop Hater", "author": "Ed McBain", "category": "Crime" },
+    {
+      "title": "No Country for Old Men",
+      "author": "Cormac McCarthy",
+      "category": "Crime"
+    },
+    { "title": "Enduring Love", "author": "Ian McEwan", "category": "Crime" },
+    {
+      "title": "Sidetracked",
+      "author": "Henning Mankell",
+      "category": "Crime"
+    },
+    {
+      "title": "Devil in a Blue Dress",
+      "author": "Walter Mosley",
+      "category": "Crime"
+    },
+    {
+      "title": "The Great Impersonation",
+      "author": "E Phillips Oppenheim",
+      "category": "Crime"
+    },
+    {
+      "title": "The Strange Borders of Palace Crescent",
+      "author": "E Phillips Oppenheim",
+      "category": "Crime"
+    },
+    { "title": "My Name is Red", "author": "Orhan Pamuk", "category": "Crime" },
+    { "title": "Toxic Shock", "author": "Sara Paretsky", "category": "Crime" },
+    { "title": "Blacklist", "author": "Sara Paretsky", "category": "Crime" },
+    {
+      "title": "Nineteen Seventy Four",
+      "author": "David Peace",
+      "category": "Crime"
+    },
+    {
+      "title": "Nineteen Seventy Seven",
+      "author": "David Peace",
+      "category": "Crime"
+    },
+    {
+      "title": "The Big Blowdown",
+      "author": "George Pelecanos",
+      "category": "Crime"
+    },
+    {
+      "title": "Hard Revolution",
+      "author": "George Pelecanos",
+      "category": "Crime"
+    },
+    { "title": "Lush Life", "author": "Richard Price", "category": "Crime" },
+    { "title": "The Godfather", "author": "Mario Puzo", "category": "Crime" },
+    { "title": "V", "author": "Thomas Pynchon", "category": "Crime" },
+    {
+      "title": "The Crying of Lot 49",
+      "author": "Thomas Pynchon",
+      "category": "Crime"
+    },
+    { "title": "Black and Blue", "author": "Ian Rankin", "category": "Crime" },
+    {
+      "title": "The Hanging Gardens",
+      "author": "Ian Rankin",
+      "category": "Crime"
+    },
+    { "title": "Exit Music", "author": "Ian Rankin", "category": "Crime" },
+    {
+      "title": "Judgment in Stone",
+      "author": "Ruth Rendell",
+      "category": "Crime"
+    },
+    { "title": "Live Flesh", "author": "Ruth Rendell", "category": "Crime" },
+    { "title": "Dissolution", "author": "CJ Sansom", "category": "Crime" },
+    {
+      "title": "Whose Body?",
+      "author": "Dorothy L Sayers",
+      "category": "Crime"
+    },
+    {
+      "title": "Murder Must Advertise",
+      "author": "Dorothy Le Sayers",
+      "category": "Crime"
+    },
+    {
+      "title": "The Madman of Bergerac",
+      "author": "Georges Simenon",
+      "category": "Crime"
+    },
+    {
+      "title": "The Blue Room",
+      "author": "Georges Simenon",
+      "category": "Crime"
+    },
+    {
+      "title": "The Laughing Policeman",
+      "author": "Maj Sjowall and Per Wahloo",
+      "category": "Crime"
+    },
+    {
+      "title": "Gorky Park",
+      "author": "Martin Cruz Smith",
+      "category": "Crime"
+    },
+    {
+      "title": "Of Mice and Men",
+      "author": "John Steinbeck",
+      "category": "Crime"
+    },
+    {
+      "title": "The League of Frightened Men",
+      "author": "Rex Stout",
+      "category": "Crime"
+    },
+    { "title": "Perfume", "author": "Patrick Suskind", "category": "Crime" },
+    {
+      "title": "The Secret History",
+      "author": "Donna Tartt",
+      "category": "Crime"
+    },
+    {
+      "title": "The Daughter of Time",
+      "author": "Josephine Tey",
+      "category": "Crime"
+    },
+    { "title": "The Getaway", "author": "Jim Thompson", "category": "Crime" },
+    {
+      "title": "Pudd’nhead Wilson",
+      "author": "Mark Twain",
+      "category": "Crime"
+    },
+    {
+      "title": "A Dark-Adapted Eye",
+      "author": "Barbara Vine",
+      "category": "Crime"
+    },
+    {
+      "title": "A Fatal inversion",
+      "author": "Barbara Vine",
+      "category": "Crime"
+    },
+    {
+      "title": "King Solomon’s Carpet",
+      "author": "Barbara Vine",
+      "category": "Crime"
+    },
+    {
+      "title": "The Four Just Men",
+      "author": "Edgar Wallace",
+      "category": "Crime"
+    },
+    { "title": "Fingersmith", "author": "Sarah Waters", "category": "Crime" },
+    { "title": "Native Son", "author": "Richard Wright", "category": "Crime" },
+    { "title": "Therese Raquin", "author": "Emile Zola", "category": "Crime" },
+    {
+      "title": "The Face of Another",
+      "author": "Kobo Abe",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Little Women",
+      "author": "Louisa May Alcott",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Behind the Scenes at the Museum",
+      "author": "Kate Atkinson",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Cat’s Eye",
+      "author": "Margaret Atwood",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Epileptic",
+      "author": "David B",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Room Temperature",
+      "author": "Nicholson Baker",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Eugenie Grandet",
+      "author": "Honore de Balzac",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Le Pere Goriot",
+      "author": "Honore de Balzac",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Crow Road",
+      "author": "Iain Banks",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The L Shaped Room",
+      "author": "Lynne Reid Banks",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Fun Home",
+      "author": "Alison Bechdel",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Malone Dies",
+      "author": "Samuel Beckett",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A Legacy",
+      "author": "Sybille Bedford",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Herzog",
+      "author": "Saul Bellow",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Humboldt’s Gift",
+      "author": "Saul Bellow",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Old Wives’ Tale",
+      "author": "Arnold Bennett",
+      "category": "Family and Self"
+    },
+    { "title": "G", "author": "John Berger", "category": "Family and Self" },
+    {
+      "title": "Extinction",
+      "author": "Thomas Bernhard",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Two Serious Ladies",
+      "author": "Jane Bowles",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Any Human Heart",
+      "author": "William Boyd",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Death of Virgil",
+      "author": "Hermann Broch",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Evelina",
+      "author": "Fanny Burney",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Way of All Flesh",
+      "author": "Samuel Butler",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Sound of my Voice",
+      "author": "Ron Butlin",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Outsider",
+      "author": "Albert Camus",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Wise Children",
+      "author": "Angela Carter",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Professor’s House",
+      "author": "Willa Cather",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Wapshot Chronicle",
+      "author": "John Cheever",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Awakening",
+      "author": "Kate Chopin",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Les Enfants Terrible",
+      "author": "Jean Cocteau",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Vagabond",
+      "author": "Sidonie-Gabrielle Colette",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Manservant and Maidservant",
+      "author": "Ivy Compton-Burnett",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Being Dead",
+      "author": "Jim Crace",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Quarantine",
+      "author": "Jim Crace",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Mandarins",
+      "author": "Simone de Beauvoir",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Roxana",
+      "author": "Daniel Defoe",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Great Expectations",
+      "author": "Charles Dickens",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "category": "Family and Self"
+    },
+    {
+      "title": "My New York Diary",
+      "author": "Julie Doucet",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Millstone",
+      "author": "Margaret Drabble",
+      "category": "Family and Self"
+    },
+    {
+      "title": "My Family and Other Animals",
+      "author": "Gerald Durrell",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Silence",
+      "author": "Shusaku Endo",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Gathering",
+      "author": "Anne Enright",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Middlesex",
+      "author": "Jeffrey Eugenides",
+      "category": "Family and Self"
+    },
+    {
+      "title": "As I Lay Dying",
+      "author": "William Faulkner",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Sound and the Fury",
+      "author": "William Faulkner",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Sportswriter",
+      "author": "Richard Ford",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Howards End",
+      "author": "EM Forster",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Spies",
+      "author": "Michael Frayn",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Hideous Kinky",
+      "author": "Esther Freud",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Man of Property",
+      "author": "John Galsworthy",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Mary Barton",
+      "author": "Elizabeth Gaskell",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Immoralist",
+      "author": "Andre Gide",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Vatican Cellars",
+      "author": "Andre Gide",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Vicar of Wakefield",
+      "author": "Oliver Goldsmith",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Power and the Glory",
+      "author": "Graham Greene",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Hunger",
+      "author": "Knut Hamsun",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Shrimp and the Anemone",
+      "author": "LP Hartley",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Old Man and the Sea",
+      "author": "Ernest Hemingway",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Steppenwolf",
+      "author": "Herman Hesse",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Narziss and Goldmund",
+      "author": "Hermann Hesse",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Three Paradoxes",
+      "author": "Paul Hornschemeier",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Tom Brown’s Schooldays",
+      "author": "Thomas Hughes",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A Prayer for Owen Meany",
+      "author": "John Irving",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Ambassadors",
+      "author": "Henry James",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Washington Square",
+      "author": "Henry James",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Tortoise and the Hare",
+      "author": "Elizabeth Jenkins",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Unfortunates",
+      "author": "BS Johnson",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A Portrait of the Artist as a Young Man",
+      "author": "James Joyce",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Ulysses",
+      "author": "James Joyce",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Good Behaviour",
+      "author": "Molly Keane",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Memet my Hawk",
+      "author": "Yasar Kemal",
+      "category": "Family and Self"
+    },
+    {
+      "title": "One Flew Over the Cuckoo’s Nest",
+      "author": "Ken Kesey",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Buddha of Suburbia",
+      "author": "Hanif Kureishi",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Sons and Lovers",
+      "author": "DH Lawrence",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Cider with Rosie",
+      "author": "Laurie Lee",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Invitation to the Waltz",
+      "author": "Rosamond Lehmann",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Golden Notebook",
+      "author": "Doris Lessing",
+      "category": "Family and Self"
+    },
+    {
+      "title": "How Green was My Valley",
+      "author": "Richard Llewellyn",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Martin Eden",
+      "author": "Jack London",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Under the Volcano",
+      "author": "Malcolm Lowry",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Member of the Wedding",
+      "author": "Carson McCullers",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Palace Walk",
+      "author": "Naguib Mahfouz",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Assistant",
+      "author": "Bernard Malamud",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Buddenbrooks",
+      "author": "Thomas Mann",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Chateau",
+      "author": "William Maxwell",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Rector’s Daughter",
+      "author": "FM Mayor",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Ordeal of Richard Feverek",
+      "author": "George Meredith",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Family Matters",
+      "author": "Rohinton Mistry",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Sour Sweet",
+      "author": "Timothy Mo",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Lonely Passion of Judith Hearne",
+      "author": "Brian Moore",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Bluest Eye",
+      "author": "Toni Morrison",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Song of Solomon",
+      "author": "Toni Morrison",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Who Do You Think You Are?",
+      "author": "Alice Munro",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Black Prince",
+      "author": "Iris Murdoch",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Man Without Qualities",
+      "author": "Robert Musil",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A House for Mr Biswas",
+      "author": "VS Naipaul",
+      "category": "Family and Self"
+    },
+    {
+      "title": "At-Swim-Two-Birds",
+      "author": "Flann O’Brien",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Teach Us to Outgrow Our Madness",
+      "author": "Kezaburo Oe",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Moviegoer",
+      "author": "Walker Percy",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Bell Jar",
+      "author": "Sylvia Plath",
+      "category": "Family and Self"
+    },
+    {
+      "title": "My Name Is Asher Lev",
+      "author": "Chaim Potok",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Good Companions",
+      "author": "JB Priestley",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Shipping News",
+      "author": "E Annie Proulx",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Remembrance of Things Past",
+      "author": "Marcel Proust",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A Married Man",
+      "author": "Piers Paul Read",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Pointed Roofs",
+      "author": "Dorothy Richardson",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Fortunes of Richard Mahoney",
+      "author": "Henry Handel Richardson",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Call it Sleep",
+      "author": "Henry Roth",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Julie, ou la Nouvelle Heloise",
+      "author": "Jean-Jacques Rousseau",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The God of Small Things",
+      "author": "Arundhati Roy",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Catcher in the Rye",
+      "author": "JD Salinger",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Alberta and Jacob",
+      "author": "Cora Sandel",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A Suitable Boy",
+      "author": "Vikram Seth",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Unless",
+      "author": "Carol Shields",
+      "category": "Family and Self"
+    },
+    {
+      "title": "We Need to Talk About Kevin",
+      "author": "Lionel Shriver",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Three Sisters",
+      "author": "May Sinclair",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Family Moskat or The Manor or The Estate",
+      "author": "Isaac Bashevis Singer",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A Thousand Acres",
+      "author": "Jane Smiley",
+      "category": "Family and Self"
+    },
+    {
+      "title": "On Beauty",
+      "author": "Zadie Smith",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Man Who Loved Children",
+      "author": "Christina Stead",
+      "category": "Family and Self"
+    },
+    {
+      "title": "East of Eden",
+      "author": "John Steinbeck",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Ballet Shoes",
+      "author": "Noel Streatfield",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Confessions of Zeno",
+      "author": "Italo Svevo",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Magnificent Ambersons",
+      "author": "Booth Tarkington",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Angel",
+      "author": "Elizabeth Taylor",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Lark Rise to Candleford",
+      "author": "Flora Thompson",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Blackwater Lightship",
+      "author": "Colm Toibin",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Secret Diary of Adrian Mole, Aged 13 3/4",
+      "author": "Sue Townsend",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Death in Summer",
+      "author": "William Trevor",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Fathers and Sons",
+      "author": "Ivan Turgenev",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Peace in War",
+      "author": "Miguel de Unamuno",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Rabbit Omnibus",
+      "author": "John Updike",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Color Purple",
+      "author": "Alice Walker",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Jimmy Corrigan, The Smarest Kid on Earth",
+      "author": "Chris Ware",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Morvern Callar",
+      "author": "Alan Warner",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The History of Mr Polly",
+      "author": "HG Wells",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Fountain Overflows",
+      "author": "Rebecca West",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Frost in May",
+      "author": "Antonia White",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Tree of Man",
+      "author": "Patrick White",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Oranges Are Not the Only Fruit",
+      "author": "Jeanette Winterson",
+      "category": "Family and Self"
+    },
+    {
+      "title": "I’ll Go to Bed at Noon",
+      "author": "Gerard Woodward",
+      "category": "Family and Self"
+    },
+    {
+      "title": "To the Lighthouse",
+      "author": "Virginia Woolf",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Mrs Dalloway",
+      "author": "Virginia Woolf",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Swiss Family Robinson",
+      "author": "Johann David Wyss",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Le Grand Meaulnes",
+      "author": "Henri Alain-Fournier",
+      "category": "Love"
+    },
+    {
+      "title": "Dom Casmurro Joaquim",
+      "author": "Maria Machado de Assis",
+      "category": "Love"
+    },
+    {
+      "title": "Northanger Abbey",
+      "author": "Jane Austen",
+      "category": "Love"
+    },
+    {
+      "title": "Sense and Sensibility",
+      "author": "Jane Austen",
+      "category": "Love"
+    },
+    {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "Love"
+    },
+    { "title": "Mansfield Park", "author": "Jane Austen", "category": "Love" },
+    { "title": "Emma", "author": "Jane Austen", "category": "Love" },
+    { "title": "Persuasion", "author": "Jane Austen", "category": "Love" },
+    {
+      "title": "Giovanni’s Room",
+      "author": "James Baldwin",
+      "category": "Love"
+    },
+    { "title": "Nightwood", "author": "Djuna Barnes", "category": "Love" },
+    {
+      "title": "The Garden of the Finzi-Cortinis",
+      "author": "Giorgio Bassani",
+      "category": "Love"
+    },
+    { "title": "Love for Lydia", "author": "HE Bates", "category": "Love" },
+    {
+      "title": "More Die of Heartbreak",
+      "author": "Saul Bellow",
+      "category": "Love"
+    },
+    { "title": "Lorna Doone", "author": "RD Blackmore", "category": "Love" },
+    {
+      "title": "The Death of the Heart",
+      "author": "Elizabeth Bowen",
+      "category": "Love"
+    },
+    {
+      "title": "The Heat of the Day",
+      "author": "Elizabeth Bowen",
+      "category": "Love"
+    },
+    { "title": "Jane Eyre", "author": "Charlotte Bronte", "category": "Love" },
+    { "title": "Vilette", "author": "Charlotte Bronte", "category": "Love" },
+    {
+      "title": "Wuthering Heights",
+      "author": "Emily Bronte",
+      "category": "Love"
+    },
+    { "title": "Look At Me", "author": "Anita Brookner", "category": "Love" },
+    {
+      "title": "Rubyfruit Jungle",
+      "author": "Rita Mae Brown",
+      "category": "Love"
+    },
+    { "title": "Possession", "author": "AS Byatt", "category": "Love" },
+    {
+      "title": "Breakfast at Tiffany’s",
+      "author": "Truman Capote",
+      "category": "Love"
+    },
+    {
+      "title": "Oscar and Lucinda",
+      "author": "Peter Carey",
+      "category": "Love"
+    },
+    {
+      "title": "A Month in the Country",
+      "author": "JL Carr",
+      "category": "Love"
+    },
+    { "title": "My Antonia", "author": "Willa Cather", "category": "Love" },
+    { "title": "A Lost Lady", "author": "Willa Cather", "category": "Love" },
+    {
+      "title": "Claudine a l’ecole",
+      "author": "Sidonie-Gabrielle Colette",
+      "category": "Love"
+    },
+    {
+      "title": "Cheri",
+      "author": "Sidonie-Gabrielle Collette",
+      "category": "Love"
+    },
+    {
+      "title": "Victory: An Island Tale",
+      "author": "Joseph Conrad",
+      "category": "Love"
+    },
+    {
+      "title": "The Princess of Cleves",
+      "author": "Madame de Lafayette",
+      "category": "Love"
+    },
+    {
+      "title": "The Parasites",
+      "author": "Daphne du Maurier",
+      "category": "Love"
+    },
+    { "title": "Rebecca", "author": "Daphne du Maurier", "category": "Love" },
+    { "title": "The Lover", "author": "Marguerite Duras", "category": "Love" },
+    { "title": "Adam Bede", "author": "George Eliot", "category": "Love" },
+    { "title": "Daniel Deronda", "author": "George Eliot", "category": "Love" },
+    {
+      "title": "The Mill on the Floss",
+      "author": "George Eliot",
+      "category": "Love"
+    },
+    {
+      "title": "The Virgin Suicides",
+      "author": "Jeffrey Eugenides",
+      "category": "Love"
+    },
+    {
+      "title": "The Great Gatsby",
+      "author": "F Scott Fitzgerald",
+      "category": "Love"
+    },
+    {
+      "title": "Tender is the Night",
+      "author": "F Scott Fitzgerald",
+      "category": "Love"
+    },
+    {
+      "title": "The Blue Flower",
+      "author": "Penelope Fitzgerald",
+      "category": "Love"
+    },
+    {
+      "title": "Madame Bovary",
+      "author": "Gustave Flaubert",
+      "category": "Love"
+    },
+    {
+      "title": "The Good Soldier",
+      "author": "Ford Madox Ford",
+      "category": "Love"
+    },
+    {
+      "title": "A Room with a View",
+      "author": "EM Forster",
+      "category": "Love"
+    },
+    {
+      "title": "The French Lieutenant’s Woman",
+      "author": "John Fowles",
+      "category": "Love"
+    },
+    { "title": "The Snow Goose", "author": "Paul Gallico", "category": "Love" },
+    { "title": "Ruth", "author": "Elizabeth Gaskell", "category": "Love" },
+    {
+      "title": "Strait is the Gate",
+      "author": "Andre Gide",
+      "category": "Love"
+    },
+    {
+      "title": "Sunset Song",
+      "author": "Lewis Grassic Gibbon",
+      "category": "Love"
+    },
+    {
+      "title": "The Sorrows of Young Werther",
+      "author": "Johann Wolfgang Goethe",
+      "category": "Love"
+    },
+    { "title": "Living", "author": "Henry Green", "category": "Love" },
+    {
+      "title": "The End of the Affair",
+      "author": "Graham Greene",
+      "category": "Love"
+    },
+    {
+      "title": "The Well of Loneliness",
+      "author": "Radclyffe Hall",
+      "category": "Love"
+    },
+    {
+      "title": "Far From the Madding Crowd",
+      "author": "Thomas Hardy",
+      "category": "Love"
+    },
+    {
+      "title": "Jude the Obscure",
+      "author": "Thomas Hardy",
+      "category": "Love"
+    },
+    {
+      "title": "Tess of the D’Urbervilles",
+      "author": "Thomas Hardy",
+      "category": "Love"
+    },
+    {
+      "title": "The Woodlanders",
+      "author": "Thomas Hardy",
+      "category": "Love"
+    },
+    { "title": "The Go-Between", "author": "LP Hartley", "category": "Love" },
+    {
+      "title": "The Scarlet Letter",
+      "author": "Nathaniel Hawthorne",
+      "category": "Love"
+    },
+    {
+      "title": "The Transit of Venus",
+      "author": "Shirley Hazzard",
+      "category": "Love"
+    },
+    {
+      "title": "A Farewell to Arms",
+      "author": "Ernest Hemingway",
+      "category": "Love"
+    },
+    {
+      "title": "The Infamous Army",
+      "author": "Georgette Heyer",
+      "category": "Love"
+    },
+    {
+      "title": "Regency Buck",
+      "author": "Georgette Heyer",
+      "category": "Love"
+    },
+    {
+      "title": "The Swimming-Pool Library",
+      "author": "Alan Hollinghurst",
+      "category": "Love"
+    },
+    {
+      "title": "Green Mansions: A Romance of the Tropical Forest",
+      "author": "WH Hudson",
+      "category": "Love"
+    },
+    {
+      "title": "Their Eyes Were Watching God",
+      "author": "Zora Neale Hurston",
+      "category": "Love"
+    },
+    { "title": "Crome Yellow", "author": "Aldous Huxley", "category": "Love" },
+    {
+      "title": "The Remains of the Day",
+      "author": "Kazuo Ishiguro",
+      "category": "Love"
+    },
+    {
+      "title": "Portrait of a Lady",
+      "author": "Henry James",
+      "category": "Love"
+    },
+    {
+      "title": "The Wings of the Dove",
+      "author": "Henry James",
+      "category": "Love"
+    },
+    {
+      "title": "The Piano Teacher",
+      "author": "Elfriede Jelinek",
+      "category": "Love"
+    },
+    {
+      "title": "Beauty and Saddness",
+      "author": "Yasunari Kawabata",
+      "category": "Love"
+    },
+    {
+      "title": "The Far Pavillions",
+      "author": "Mary Margaret Kaye",
+      "category": "Love"
+    },
+    {
+      "title": "Zorba the Greek",
+      "author": "Nikos Kazantzakis",
+      "category": "Love"
+    },
+    {
+      "title": "Moon over Africa",
+      "author": "Pamela Kent",
+      "category": "Love"
+    },
+    {
+      "title": "The Book of Laughter and Forgetting",
+      "author": "Milan Kundera",
+      "category": "Love"
+    },
+    {
+      "title": "The Unbearable Lightness of Being",
+      "author": "Milan Kundera",
+      "category": "Love"
+    },
+    {
+      "title": "Les Liaisons Dangereuses",
+      "author": "Pierre-Ambroise-Francois Choderlos de Laclos",
+      "category": "Love"
+    },
+    {
+      "title": "Lady Chatterley’s Lover",
+      "author": "DH Lawrence",
+      "category": "Love"
+    },
+    { "title": "The Rainbow", "author": "DH Lawrence", "category": "Love" },
+    { "title": "Women in Love", "author": "DH Lawrence", "category": "Love" },
+    {
+      "title": "The Echoing Grove",
+      "author": "Rosamond Lehmann",
+      "category": "Love"
+    },
+    {
+      "title": "The Weather in the Streets",
+      "author": "Rosamond Lehmann",
+      "category": "Love"
+    },
+    {
+      "title": "Gentlemen Prefer Blondes",
+      "author": "Anita Loos",
+      "category": "Love"
+    },
+    { "title": "Zami", "author": "Audre Lorde", "category": "Love" },
+    {
+      "title": "Foreign Affairs",
+      "author": "Alison Lurie",
+      "category": "Love"
+    },
+    { "title": "Samarkand", "author": "Amin Maalouf", "category": "Love" },
+    { "title": "Death in Venice", "author": "Thomas Mann", "category": "Love" },
+    {
+      "title": "The Silent Duchess",
+      "author": "Dacia Maraini",
+      "category": "Love"
+    },
+    {
+      "title": "A Heart So White",
+      "author": "Javier Marias",
+      "category": "Love"
+    },
+    {
+      "title": "Love in the Time of Cholera",
+      "author": "Gabriel Garcia Marquez",
+      "category": "Love"
+    },
+    {
+      "title": "Of Human Bondage",
+      "author": "Somerset Maugham",
+      "category": "Love"
+    },
+    {
+      "title": "So Long, See you Tomorrow",
+      "author": "William Maxwell",
+      "category": "Love"
+    },
+    {
+      "title": "The Heart is a Lonely Hunter",
+      "author": "Carson McCullers",
+      "category": "Love"
+    },
+    { "title": "Atonement", "author": "Ian McEwan", "category": "Love" },
+    {
+      "title": "The Child in Time",
+      "author": "Ian McEwan",
+      "category": "Love"
+    },
+    { "title": "The Egoist", "author": "George Meredith", "category": "Love" },
+    {
+      "title": "Tropic of Cancer",
+      "author": "Henry Miller",
+      "category": "Love"
+    },
+    {
+      "title": "Patience and Sarah",
+      "author": "Isabel Miller",
+      "category": "Love"
+    },
+    {
+      "title": "Gone With the Wind",
+      "author": "Margaret Mitchell",
+      "category": "Love"
+    },
+    {
+      "title": "The Pursuit of Love",
+      "author": "Nancy Mitford",
+      "category": "Love"
+    },
+    {
+      "title": "Love in a Cold Climate",
+      "author": "Nancy Mitford",
+      "category": "Love"
+    },
+    {
+      "title": "Arturo’s Island",
+      "author": "Elsa Morante",
+      "category": "Love"
+    },
+    {
+      "title": "Norwegian Wood",
+      "author": "Haruki Murakami",
+      "category": "Love"
+    },
+    {
+      "title": "Lolita, or the Confessions of a White Widowed Male",
+      "author": "Vladimir Nabokov",
+      "category": "Love"
+    },
+    {
+      "title": "The Painter of Signs",
+      "author": "RK Narayan",
+      "category": "Love"
+    },
+    { "title": "Delta of Venus", "author": "Anais Nin", "category": "Love" },
+    {
+      "title": "All Souls Day",
+      "author": "Cees Nooteboom",
+      "category": "Love"
+    },
+    {
+      "title": "The English Patient",
+      "author": "Michael Ondaatje",
+      "category": "Love"
+    },
+    {
+      "title": "Doctor Zhivago",
+      "author": "Boris Pasternak",
+      "category": "Love"
+    },
+    { "title": "Manon Lescaut", "author": "Abbe Prevost", "category": "Love" },
+    { "title": "Wide Sargasso Sea", "author": "Jean Rhys", "category": "Love" },
+    {
+      "title": "Maurice Guest",
+      "author": "Henry Handel Richardson",
+      "category": "Love"
+    },
+    { "title": "Pamela", "author": "Samuel Richardson", "category": "Love" },
+    { "title": "Clarissa", "author": "Samuel Richardson", "category": "Love" },
+    { "title": "Gilead", "author": "Marilynne Robinson", "category": "Love" },
+    {
+      "title": "Bonjour Tristesse",
+      "author": "Francoise Sagan",
+      "category": "Love"
+    },
+    { "title": "Ali and Nino", "author": "Kurban Said", "category": "Love" },
+    { "title": "Light Years", "author": "James Salter", "category": "Love" },
+    {
+      "title": "A Sport and a Passtime",
+      "author": "James Salter",
+      "category": "Love"
+    },
+    { "title": "The Reader", "author": "Benhardq Schlink", "category": "Love" },
+    {
+      "title": "The Reluctant Orphan",
+      "author": "Aara Seale",
+      "category": "Love"
+    },
+    { "title": "Love Story", "author": "Eric Segal", "category": "Love" },
+    {
+      "title": "Enemies, a Love Story",
+      "author": "Isaac Bashevis Singer",
+      "category": "Love"
+    },
+    {
+      "title": "At Grand Central Station I Sat Down and Wept",
+      "author": "Elizabeth Smart",
+      "category": "Love"
+    },
+    {
+      "title": "I Capture the Castle",
+      "author": "Dodie Smith",
+      "category": "Love"
+    },
+    {
+      "title": "The Map of Love",
+      "author": "Ahdaf Soueif",
+      "category": "Love"
+    },
+    {
+      "title": "Valley of the Dolls",
+      "author": "Jacqueline Susann",
+      "category": "Love"
+    },
+    { "title": "Waterland", "author": "Graham Swift", "category": "Love" },
+    {
+      "title": "Diary of a Mad Old Man",
+      "author": "Junichiro Tanizaki",
+      "category": "Love"
+    },
+    { "title": "Anna Karenina", "author": "Leo Tolstoy", "category": "Love" },
+    {
+      "title": "Music and Silence",
+      "author": "Rose Tremain",
+      "category": "Love"
+    },
+    { "title": "First Love", "author": "Ivan Turgenev", "category": "Love" },
+    {
+      "title": "Breathing Lessons",
+      "author": "Anne Tyler",
+      "category": "Love"
+    },
+    {
+      "title": "The Accidental Tourist",
+      "author": "Anne Tyler",
+      "category": "Love"
+    },
+    {
+      "title": "The Night Watch",
+      "author": "Sarah Waters",
+      "category": "Love"
+    },
+    { "title": "The Graduate", "author": "Charles Webb", "category": "Love" },
+    {
+      "title": "The Age of Innocence",
+      "author": "Edith Wharton",
+      "category": "Love"
+    },
+    {
+      "title": "The Passion",
+      "author": "Jeanette Winterson",
+      "category": "Love"
+    },
+    { "title": "East Lynne", "author": "Ellen Wood", "category": "Love" },
+    {
+      "title": "Revolutionary Road",
+      "author": "Richard Yates",
+      "category": "Love"
+    },
+    {
+      "title": "The Hitchhikers Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Non-Stop",
+      "author": "Brian W Aldiss",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Foundation",
+      "author": "Isaac Asimov",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Blind Assassin",
+      "author": "Margaret Atwood",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Handmaid’s Tale",
+      "author": "Margaret Atwood",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "In the Country of Last Things",
+      "author": "Paul Auster",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Drowned World",
+      "author": "JG Ballard",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Crash",
+      "author": "JG Ballard",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Millennium People",
+      "author": "JG Ballard",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Wasp Factory",
+      "author": "Iain Banks",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Consider Phlebas",
+      "author": "Iain M Banks",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Weaveworld",
+      "author": "Clive Barker",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Darkmans",
+      "author": "Nicola Barker",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Time Ships",
+      "author": "Stephen Baxter",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Darwin’s Radio",
+      "author": "Greg Bear",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Vathek",
+      "author": "William Beckford",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Stars My Destination",
+      "author": "Alfred Bester",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Lost Souls",
+      "author": "Poppy Z Brite",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Wieland",
+      "author": "Charles Brockden Brown",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Rogue Moon",
+      "author": "Algis Budrys",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Master and Margarita",
+      "author": "Mikhail Bulgakov",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Coming Race",
+      "author": "EGEL Bulwer-Lytton",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "A Clockwork Orange",
+      "author": "Anthony Burgess",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The End of the World News",
+      "author": "Anthony Burgess",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "A Princess of Mars",
+      "author": "Edgar Rice Burroughs",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Naked Lunch",
+      "author": "William Burroughs",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Kindred",
+      "author": "Octavia Butler",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Erewhon",
+      "author": "Samuel Butler",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Baron in the Trees",
+      "author": "Italo Calvino",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Influence",
+      "author": "Ramsey Campbell",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Alice’s Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Through the Looking Glass and What Alice Found There",
+      "author": "Lewis Carroll",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Nights at the Circus",
+      "author": "Angela Carter",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Passion of New Eve",
+      "author": "Angela Carter",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Amazing Adventures of Kavalier and Clay",
+      "author": "Michael Chabon",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Man who was Thursday",
+      "author": "GK Chesterton",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Childhood’s End",
+      "author": "Arthur C Clarke",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Jonathan Strange & Mr Norrell",
+      "author": "Susanna Clarke",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Hello Summer, Goodbye",
+      "author": "Michael G Coney",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Girlfriend in a Coma",
+      "author": "Douglas Coupland",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "House of Leaves",
+      "author": "Mark Danielewski",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Pig Tales",
+      "author": "Marie Darrieussecq",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Einstein Intersection",
+      "author": "Samuel R Delaney",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Do Androids Dream of Electric Sheep?",
+      "author": "Philip K Dick",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Man in the High Castle",
+      "author": "Philip K Dick",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Camp Concentration",
+      "author": "Thomas M Disch",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Foucault’s Pendulum",
+      "author": "Umberto Eco",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Under the Skin",
+      "author": "Michel Faber",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Magus",
+      "author": "John Fowles",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "American Gods",
+      "author": "Neil Gaiman",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Red Shift",
+      "author": "Alan Garner",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Neuromancer",
+      "author": "William Gibson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Herland",
+      "author": "Charlotte Perkins Gilman",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Lord of the Flies",
+      "author": "William Golding",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Forever War",
+      "author": "Joe Haldeman",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Light",
+      "author": "M John Harrison",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The House of the Seven Gables",
+      "author": "Nathaniel Hawthorne",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Stranger in a Strange Land",
+      "author": "Robert A Heinlein",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Dune",
+      "author": "Frank L Herbert",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Glass Bead Game",
+      "author": "Herman Hesse",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Riddley Walker",
+      "author": "Russell Hoban",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Private Memoirs and Confessions of a Justified Sinner",
+      "author": "James Hogg",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Atomised",
+      "author": "Michel Houellebecq",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Unconsoled",
+      "author": "Kazuo Ishiguro",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Haunting of Hill House",
+      "author": "Shirley Jackson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Turn of the Screw",
+      "author": "Henry James",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Children of Men",
+      "author": "PD James",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "After London; or, Wild England",
+      "author": "Richard Jefferies",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Bold as Love",
+      "author": "Gwyneth Jones",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Trial",
+      "author": "Franz Kafka",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Flowers for Algernon",
+      "author": "Daniel Keyes",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Shining",
+      "author": "Stephen King",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Victorian Chaise-longue",
+      "author": "Marghanita Laski",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Uncle Silas",
+      "author": "Joseph Sheridan Le Fanu",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Earthsea Series",
+      "author": "Ursula Le Guin",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Left Hand of Darkness",
+      "author": "Ursula Le Guin",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Solaris",
+      "author": "Stanislaw Lem",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Memoirs of a Survivor",
+      "author": "Doris Lessing",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Chronicles of Narnia",
+      "author": "CS Lewis",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Monk",
+      "author": "Matthew Lewis",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "A Voyage to Arcturus",
+      "author": "David Lindsay",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Night Sessions",
+      "author": "Ken Macleod",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Beyond Black",
+      "author": "Hilary Mantel",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Only Forward",
+      "author": "Michael Marshall Smith",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "I Am Legend",
+      "author": "Richard Matheson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Melmoth the Wanderer",
+      "author": "Charles Maturin",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Butcher Boy",
+      "author": "Patrick McCabe",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Ascent",
+      "author": "Jed Mercurio",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Scar",
+      "author": "China Mieville",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Ingenious Pain",
+      "author": "Andrew Miller",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "A Canticle for Leibowitz",
+      "author": "Walter M Miller Jr",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Cloud Atlas",
+      "author": "David Mitchell",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Mother London",
+      "author": "Michael Moorcock",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "News from Nowhere",
+      "author": "William Morris",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Beloved",
+      "author": "Toni Morrison",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Wind-Up Bird Chronicle",
+      "author": "Haruki Murakami",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Ada or Ardor",
+      "author": "Vladimir Nabokov",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Time Traveler’s Wife",
+      "author": "Audrey Niffenegger",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Ringworld",
+      "author": "Larry Niven",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Vurt",
+      "author": "Jeff Noon",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Third Policeman",
+      "author": "Flann O’Brien",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Famished Road",
+      "author": "Ben Okri",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Nineteen Eighty-Four",
+      "author": "George Orwell",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Fight Club",
+      "author": "Chuck Palahniuk",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Nightmare Abbey",
+      "author": "Thomas Love Peacock",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Titus Groan",
+      "author": "Mervyn Peake",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Space Merchants",
+      "author": "Frederik Pohl and CM Kornbluth",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "A Glastonbury Romance",
+      "author": "John Cowper Powys",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Discworld Series",
+      "author": "Terry Pratchett",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Prestige",
+      "author": "Christopher Priest",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "His Dark Materials",
+      "author": "Philip Pullman",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Gargantua and Pantagruel",
+      "author": "Francois Rabelais",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Mysteries of Udolpho",
+      "author": "Ann Radcliffe",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Revelation Space",
+      "author": "Alastair Reynolds",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Years of Rice and Salt",
+      "author": "Kim Stanley Robinson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Harry Potter and the Philosopher’s Stone",
+      "author": "JK Rowling",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Satanic Verses",
+      "author": "Salman Rushdie",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Female Man",
+      "author": "Joanna Russ",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Air",
+      "author": "Geoff Ryman",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Little Prince",
+      "author": "Antoine de Saint-Exupery",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Blindness",
+      "author": "Jose Saramago",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "How the Dead Live",
+      "author": "Will Self",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Hyperion",
+      "author": "Dan Simmons",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Star Maker",
+      "author": "Olaf Stapledon",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Snow Crash",
+      "author": "Neal Stephenson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Strange Case of Dr Jekyll and Mr Hyde",
+      "author": "Robert Louis Stevenson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Insult",
+      "author": "Rupert Thomson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Hobbit",
+      "author": "JRR Tolkien",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Lord of the Rings",
+      "author": "JRR Tolkien",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "A Connecticut Yankee in King Arthur’s Court",
+      "author": "Mark Twain",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Sirens of Titan",
+      "author": "Kurt Vonnegut",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Castle of Otranto",
+      "author": "Horace Walpole",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Institute Benjamenta",
+      "author": "Robert Walser",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Lolly Willowes",
+      "author": "Sylvia Townsend Warner",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Affinity",
+      "author": "Sarah Waters",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Time Machine",
+      "author": "HG Wells",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The War of the Worlds",
+      "author": "HG Wells",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Sword in the Stone",
+      "author": "TH White",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Old Men at the Zoo",
+      "author": "Angus Wilson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Book of the New Sun",
+      "author": "Gene Wolfe",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Orlando",
+      "author": "Virginia Woolf",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Day of the Triffids",
+      "author": "John Wyndham",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Midwich Cuckoos",
+      "author": "John Wyndham",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "We",
+      "author": "Yevgeny Zamyatin",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Things Fall Apart",
+      "author": "Chinua Achebe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Anthills of the Savannah",
+      "author": "Chinua Achebe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "London Fields",
+      "author": "Martin Amis",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Untouchable",
+      "author": "Mulk Raj Anand",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Go Tell it on the Mountain",
+      "author": "James Baldwin",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "La Comedie Humaine",
+      "author": "Honore de Balzac",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "They Were Counted",
+      "author": "Miklos Banffy",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Kind of Loving",
+      "author": "Stan Barstow",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Uncle Tom’s Cabin",
+      "author": "Harriet Beecher Stowe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Oroonoko, or The Royal Slave",
+      "author": "Aphra Behn",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Clayhanger",
+      "author": "Arnold Bennett",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Last September",
+      "author": "Elizabeth Bowen",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Room at the Top",
+      "author": "John Braine",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Dry White Season",
+      "author": "Andre Brink",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Shirley",
+      "author": "Charlotte Bronte",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Earthly Powers",
+      "author": "Anthony Burgess",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Virgin in the Garden",
+      "author": "AS Byatt",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Tobacco Road",
+      "author": "Erskine Caldwell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Plague",
+      "author": "Albert Camus",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Kingdom of this World",
+      "author": "Alejo Carpentier",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "What a Carve Up!",
+      "author": "Jonathan Coe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Disgrace",
+      "author": "JM Coetzee",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Waiting for the Barbarians",
+      "author": "JM Coeztee",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Microserfs",
+      "author": "Douglas Coupland",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Moll Flanders",
+      "author": "Daniel Defoe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Underworld",
+      "author": "Don DeLillo",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "White Noise",
+      "author": "Don DeLillo",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Bleak House",
+      "author": "Charles Dickens",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Dombey and Son",
+      "author": "Charles Dickens",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Hard Times",
+      "author": "Charles Dickens",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Little Dorritt",
+      "author": "Charles Dickens",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Oliver Twist",
+      "author": "Charles Dickens",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Play It As It Lays",
+      "author": "Joan Didion",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Sybil or The Two Nations",
+      "author": "Benjamin Disraeli",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Berlin Alexanderplatz",
+      "author": "Alfred Döblin",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Book of Daniel",
+      "author": "EL Doctorow",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Notes from the Underground",
+      "author": "Fyodor Dostoevsky",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Idiot",
+      "author": "Fyodor Dostoevsky",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "USA",
+      "author": "John Dos Passos",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Sister Carrie",
+      "author": "Theodor Dreiser",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Castle Rackrent",
+      "author": "Maria Edgeworth",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Middlemarch",
+      "author": "George Eliot",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Silas Marner",
+      "author": "George Eliot",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Invisible Man",
+      "author": "Ralph Ellison",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Sentimental Education",
+      "author": "Gustave Flaubert",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Effi Briest",
+      "author": "Theodore Fontane",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Independence Day",
+      "author": "Richard Ford",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Passage to India",
+      "author": "EM Forster",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Corrections",
+      "author": "Jonathan Franzen",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Recognitions",
+      "author": "William Gaddis",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Cranford",
+      "author": "Elizabeth Gaskell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "North and South",
+      "author": "Elizabeth Gaskell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Counterfeiters",
+      "author": "Andre Gide",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Odd Women",
+      "author": "George Gissing",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "New Grub Street",
+      "author": "George Gissing",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "July’s People",
+      "author": "Nadine Gordimer",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Mother",
+      "author": "Maxim Gorky",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Lanark",
+      "author": "Alastair Gray",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Love on the Dole",
+      "author": "Walter Greenwood",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Mayor of Casterbridge",
+      "author": "Thomas Hardy",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Kestrel for a Knave",
+      "author": "Barry Hines",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Line of Beauty",
+      "author": "Alan Hollinghurst",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "South Riding",
+      "author": "Winifred Holtby",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Les Miserables",
+      "author": "Victor Hugo",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Goodbye to Berlin",
+      "author": "Christopher Isherwood",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Chronicle in Stone",
+      "author": "Ismael Kadare",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "How Late it Was, How Late",
+      "author": "James Kelman",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Leopard",
+      "author": "Giuseppi di Lampedusa",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Girl in Winter",
+      "author": "Philip Larkin",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Passing",
+      "author": "Nella Larsen",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Grass is Singing",
+      "author": "Doris Lessing",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Babbitt",
+      "author": "Sinclair Lewis",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Elmer Gantry",
+      "author": "Sinclair Lewis",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Main Street",
+      "author": "Sinclair Lewis",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Absolute Beginners",
+      "author": "Colin MacInnes",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Group",
+      "author": "Mary McCarthy",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Amongst Women",
+      "author": "John McGahern",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Posthumous Memoirs of Bras Cubas",
+      "author": "Joaquim Maria Machado de Assis",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Of Love & Hunger",
+      "author": "Julian Maclaren-Ross",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Remembering Babylon",
+      "author": "David Malouf",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Magic Mountain",
+      "author": "Thomas Mann",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Betrothed",
+      "author": "Alessandro Manzoni",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Bel-Ami",
+      "author": "Guy de Maupassant",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Fine Balance",
+      "author": "Rohinton Mistry",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Time of Indifference",
+      "author": "Alberto Moravia",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Bend in the River",
+      "author": "VS Naipaul",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "McTeague",
+      "author": "Frank Norris",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Personality",
+      "author": "Andrew O’Hagan",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Ragazzi Pier",
+      "author": "Paolo Pasolini",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Cry, the Beloved Country",
+      "author": "Alan Paton",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Moon and the Bonfire",
+      "author": "Cesare Pavese",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "GB84",
+      "author": "David Peace",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Headlong Hall",
+      "author": "Thomas Love Peacock",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Afternoon Men",
+      "author": "Anthony Powell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Vineland",
+      "author": "Thomas Pynchon",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Radetzky March",
+      "author": "Joseph Roth",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "American Pastoral",
+      "author": "Philip Roth",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Human Stain",
+      "author": "Philip Roth",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Midnight’s Children",
+      "author": "Salman Rushdie",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Shame",
+      "author": "Salman Rushdie",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "To Each his Own",
+      "author": "Leonardo Sciascia",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Staying On",
+      "author": "Paul Scott",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Last Exit to Brooklyn",
+      "author": "Hubert Selby Jr",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Lonely Londoners",
+      "author": "Samuel Selvon",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "God’s Bit of Wood",
+      "author": "Ousmane Sembene",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Case of Comrade Tulayev",
+      "author": "Victor Serge",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Richshaw Boy",
+      "author": "Lao She",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Saturday Night and Sunday Morning",
+      "author": "Alan Sillitoe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Jungle",
+      "author": "Upton Sinclair",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Novel on Yellow Paper",
+      "author": "Stevie Smith",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "White Teeth",
+      "author": "Zadie Smith",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "One Day in the Life of Ivan Denisovtich",
+      "author": "Alexandr Solzhenitsyn",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Grapes of Wrath",
+      "author": "John Steinbeck",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Red and the Black",
+      "author": "Stendhal",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "This Sporting Life",
+      "author": "David Storey",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Red Room",
+      "author": "August Stringberg",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Home and the World",
+      "author": "Rabindranath Tagore",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Vanity Fair",
+      "author": "William Makepeace Thackeray",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Ragged Trousered Philanthropists",
+      "author": "Robert Tressell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Last Chronicle of Barset",
+      "author": "Anthony Trollope",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Way We Live Now",
+      "author": "Anthony Trollope",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Adventures of Tom Sawyer",
+      "author": "Mark Twain",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Couples",
+      "author": "John Updike",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Z",
+      "author": "Vassilis Vassilikos",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Billy Liar",
+      "author": "Keith Waterhouse",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Trainspotting",
+      "author": "Irvine Welsh",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Day of the Locust",
+      "author": "Nathanael West",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Return of the Soldier",
+      "author": "Rebecca West",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The House of Mirth",
+      "author": "Edith Wharton",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Bonfire of the Vanities",
+      "author": "Tom Wolfe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Germinal",
+      "author": "Emile Zola",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "La Bete Humaine",
+      "author": "Emile Zola",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Silver Stallion",
+      "author": "Junghyo Ahn",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Death of a Hero",
+      "author": "Richard Aldington",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Master Georgie",
+      "author": "Beryl Bainbridge",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Darkness Falls from the Air",
+      "author": "Nigel Balchin",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Empire of the Sun",
+      "author": "JG Ballard",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Regeneration",
+      "author": "Pat Barker",
+      "category": "War and Travel"
+    },
+    {
+      "title": "A Long Long Way",
+      "author": "Sebastian Barry",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Fair Stood the Wind for France",
+      "author": "HE Bates",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Carrie’s War",
+      "author": "Nina Bawden",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Savage Detectives",
+      "author": "Roberto Bolano",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Sheltering Sky",
+      "author": "Paul Bowles",
+      "category": "War and Travel"
+    },
+    {
+      "title": "An Ice-Cream War",
+      "author": "William Boyd",
+      "category": "War and Travel"
+    },
+    {
+      "title": "When the Wind Blows",
+      "author": "Raymond Briggs",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Invisible Cities",
+      "author": "Italo Calvino",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Auto-da-Fe",
+      "author": "Elias Canetti",
+      "category": "War and Travel"
+    },
+    {
+      "title": "One of Ours",
+      "author": "Willa Cather",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Journey to the End of the Night",
+      "author": "Louis-Ferdinand Celine",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Monkey",
+      "author": "Wu Ch’eng-en",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Heart of Darkness",
+      "author": "Joseph Conrad",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Lord Jim",
+      "author": "Joseph Conrad",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Nostromo",
+      "author": "Joseph Conrad",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Sharpe’s Eagle",
+      "author": "Bernard Cornwell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The History of Pompey the Little",
+      "author": "Francis Coventry",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Red Badge of Courage",
+      "author": "Stephen Crane",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Robinson Crusoe",
+      "author": "Daniel Defoe",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Bomber",
+      "author": "Len Deighton",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Deliverance",
+      "author": "James Dickey",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Three Soldiers",
+      "author": "John Dos Passos",
+      "category": "War and Travel"
+    },
+    {
+      "title": "South Wind",
+      "author": "Norman Douglas",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Three Musketeers",
+      "author": "Alexandre Dumas",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Justine",
+      "author": "Lawrence Durrell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Bamboo Bed",
+      "author": "William Eastlake",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Siege of Krishnapur",
+      "author": "JG Farrell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Birdsong",
+      "author": "Sebastian Faulks",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Parade’s End",
+      "author": "Ford Madox Ford",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The African Queen",
+      "author": "CS Forester",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Ship",
+      "author": "CS Forester",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Flashman",
+      "author": "George MacDonald Fraser",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Cold Mountain",
+      "author": "Charles Frazier",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Beach",
+      "author": "Alex Garland",
+      "category": "War and Travel"
+    },
+    {
+      "title": "To The Ends of the Earth trilogy",
+      "author": "William Golding",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Asterix the Gaul",
+      "author": "Rene Goscinny",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Tin Drum",
+      "author": "Gunter Grass",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Count Belisarius",
+      "author": "Robert Graves",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Life and Fate",
+      "author": "Vassily Grossman",
+      "category": "War and Travel"
+    },
+    {
+      "title": "De Niro’s Game",
+      "author": "Rawi Hage",
+      "category": "War and Travel"
+    },
+    {
+      "title": "King Solomon’s Mines",
+      "author": "H Rider Haggard",
+      "category": "War and Travel"
+    },
+    {
+      "title": "She: A History of Adventure",
+      "author": "H Rider Haggard",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Slaves of Solitude",
+      "author": "Patrick Hamilton",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Covenant with Death",
+      "author": "John Harris",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Enigma",
+      "author": "Robert Harris",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Good Soldier Svejk",
+      "author": "Jaroslav Hasek",
+      "category": "War and Travel"
+    },
+    {
+      "title": "For Whom the Bell Tolls",
+      "author": "Ernest Hemingway",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Prisoner of Zenda",
+      "author": "Anthony Hope",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "category": "War and Travel"
+    },
+    {
+      "title": "A High Wind in Jamaica",
+      "author": "Richard Hughes",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Rasselas",
+      "author": "Samuel Johnson",
+      "category": "War and Travel"
+    },
+    {
+      "title": "From Here to Eternity",
+      "author": "James Jones",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Andersonville",
+      "author": "MacKinlay Kantor",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Confederates",
+      "author": "Thomas Keneally",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Schindler’s Ark",
+      "author": "Thomas Keneally",
+      "category": "War and Travel"
+    },
+    { "title": "Day", "author": "AL Kennedy", "category": "War and Travel" },
+    {
+      "title": "On the Road",
+      "author": "Jack Kerouac",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Darkness at Noon",
+      "author": "Arthur Koestler",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Painted Bird",
+      "author": "Jerzy Kosinski",
+      "category": "War and Travel"
+    },
+    {
+      "title": "If Not Now, When?",
+      "author": "Primo Levi",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Call of the Wild",
+      "author": "Jack London",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Guns of Navarone",
+      "author": "Alistair MacLean",
+      "category": "War and Travel"
+    },
+    {
+      "title": "All the Pretty Horses",
+      "author": "Cormac McCarthy",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Blood Meridian",
+      "author": "Cormac McCarthy",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Mark of Zorro",
+      "author": "Johnston McCulley",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Lonesome Dove",
+      "author": "Larry McMurty",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Naked and the Dead",
+      "author": "Norman Mailer",
+      "category": "War and Travel"
+    },
+    {
+      "title": "La Condition Humaine",
+      "author": "Andre Malraux",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Fortunes of War",
+      "author": "Olivia Manning",
+      "category": "War and Travel"
+    },
+    {
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Children of the New Forest",
+      "author": "Frederick Marryat",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Moby-Dick or, The Whale",
+      "author": "Herman Melville",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Tales of the South Pacific",
+      "author": "James Michener",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Cruel Sea",
+      "author": "Nicholas Monsarrat",
+      "category": "War and Travel"
+    },
+    {
+      "title": "History",
+      "author": "Elsa Morante",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Suite Francaise",
+      "author": "Irene Nemirovsky",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Sorrow of War",
+      "author": "Bao Ninh",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Master and Commander",
+      "author": "Patrick O’Brian",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Things They Carried",
+      "author": "Tim O’Brien",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Scarlet Pimpernel",
+      "author": "Baroness Emmuska Orczy",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Burmese Days",
+      "author": "George Orwell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Zen and the Art of Motorcycle Maintenance",
+      "author": "Robert Pirsig",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Valley of Bones",
+      "author": "Anthony Powell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Soldier’s Art",
+      "author": "Anthony Powell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Military Philosophers",
+      "author": "Anthony Powell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Gravity’s Rainbow",
+      "author": "Thomas Pynchon",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Surprising Adventures of Baron Munchausen",
+      "author": "Rudolp Erich Raspe",
+      "category": "War and Travel"
+    },
+    {
+      "title": "All Quiet on the Western Front",
+      "author": "Erich Maria Remarque",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Crab with the Golden Claws",
+      "author": "Georges Remi Herge",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Tintin in Tibet",
+      "author": "Georges Remi Herge",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Castafiore Emerald",
+      "author": "Georges Remi Herge",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Devil to Pay in the Backlands",
+      "author": "Joao Guimaraes Rosa",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Sacaramouche",
+      "author": "Rafael Sabatini",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Captain Blood",
+      "author": "Rafael Sabatini",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Everything is Illuminated",
+      "author": "Jonathon Safran Foer",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Hunters",
+      "author": "James Salter",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Ivanhoe",
+      "author": "Sir Walter Scott",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Rings of Saturn",
+      "author": "WG Sebald",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Austerlitz",
+      "author": "WG Sebald",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Black Beauty",
+      "author": "Anna Sewell",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Young Lions",
+      "author": "Irwin Shaw",
+      "category": "War and Travel"
+    },
+    {
+      "title": "A Town Like Alice",
+      "author": "Nevil Shute",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Maus",
+      "author": "Art Spiegelman",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Charterhouse of Parma",
+      "author": "Stendhal",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Cryptonomicon",
+      "author": "Neal Stephenson",
+      "category": "War and Travel"
+    },
+    {
+      "title": "A Sentimental Journey",
+      "author": "Lawrence Sterne",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Kidnapped",
+      "author": "Robert Louis Stevenson",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Treasure Island",
+      "author": "Robert Louis Stevenson",
+      "category": "War and Travel"
+    },
+    {
+      "title": "A Flag for Sunrise",
+      "author": "Robert Stone",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Sophie’s Choice",
+      "author": "William Styron",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Gulliver’s Travels",
+      "author": "Jonathan Swift",
+      "category": "War and Travel"
+    },
+    {
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Adventures of Huckleberry Finn",
+      "author": "Mark Twain",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Around the World in Eighty Days",
+      "author": "Jules Verne",
+      "category": "War and Travel"
+    },
+    {
+      "title": "A Journey to the Centre of the Earth",
+      "author": "Jules Verne",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Williwaw",
+      "author": "Gore Vidal",
+      "category": "War and Travel"
+    },
+    { "title": "Candide", "author": "Voltaire", "category": "War and Travel" },
+    {
+      "title": "Slaughter-House Five",
+      "author": "Kurt Vonnegut",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Put Out More Flags",
+      "author": "Evelyn Waugh",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Men at Arms",
+      "author": "Evelyn Waugh",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Island of Dr Moreau",
+      "author": "HG Wells",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Machine-Gunners",
+      "author": "Robert Westall",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Voss",
+      "author": "Patrick White",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Virginian",
+      "author": "Owen Wister",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Caine Mutiny",
+      "author": "Herman Wouk",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Debacle",
+      "author": "Emile Zola",
+      "category": "War and Travel"
+    }
+  ]
+}

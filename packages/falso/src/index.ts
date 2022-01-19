@@ -9,6 +9,7 @@ export { randBetweenDate } from './lib/between';
 export { randBird } from './lib/bird';
 export { randBitcoinAddress } from './lib/bitcoin-address';
 export { randBoolean } from './lib/boolean';
+export { randBook } from './lib/book';
 export { randCardinalDirection } from './lib/cardinal-direction';
 export { randCat } from './lib/cat';
 export { randCatchPhrase } from './lib/catch-phrase';
