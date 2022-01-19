@@ -2,7 +2,7 @@
 
 ### `randBrowser`
 
-Generate a random domain name.
+Generate a random browser.
 
 ```ts
 import { randBrowser } from '@ngneat/falso';
