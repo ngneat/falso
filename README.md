@@ -59,6 +59,15 @@ rand([1, 2, 3, 4, 5]);
 seed();
 ```
 
+## Contribute
+
+- Go over the steps in [this](https://github.com/firstcontributions/first-contributions) guide
+- Add a new falso
+
+![contribute](contribute.gif)
+
+- Use `npm run c` and choose the right answers
+
 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 Credit: Some of the data were taken from the old implementation of Faker.js
