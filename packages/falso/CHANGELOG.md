@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.5.1](https://github.com/ngneat/falso/compare/falso-2.5.0...falso-2.5.1) (2022-01-19)
+
+### Bug Fixes
+
+- 🐞 change pronoun to randPronoun ([3b619a2](https://github.com/ngneat/falso/commit/3b619a29aa9b924735104def08de0f9ea0728a0e))
+
 # [2.5.0](https://github.com/ngneat/falso/compare/falso-2.4.0...falso-2.5.0) (2022-01-19)
 
 ### Features
