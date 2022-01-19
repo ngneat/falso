@@ -142,3 +142,4 @@ export { randIntegration } from './lib/integration';
 export { randFood } from './lib/food';
 export { randMovie } from './lib/movie';
 export { randBrowser } from './lib/browser';
+export { randPriority } from './lib/priority';

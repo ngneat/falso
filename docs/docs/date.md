@@ -58,6 +58,17 @@ randPastDate({ years: 2 });
 randPastDate({ length: 10 });
 ```
 
+### `randPriority`
+
+Generate a random priority.
+
+```ts
+import { randPriority } from '@ngneat/falso';
+
+randPastDate();
+randPastDate({ length: 10 });
+```
+
 ### `randRecentDate`
 
 Generate a random recent date.

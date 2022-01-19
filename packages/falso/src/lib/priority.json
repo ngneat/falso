@@ -1,0 +1,12 @@
+{
+  "data": [
+    "low",
+    "medium",
+    "high",
+    "critical",
+    "urgent",
+    "major",
+    "moderate",
+    "minor"
+  ]
+}
