@@ -1,5 +1,16 @@
 # Internet
 
+### `randBrowser`
+
+Generate a random domain name.
+
+```ts
+import { randBrowser } from '@ngneat/falso';
+
+randBrowser();
+randBrowser({ length: 10 });
+```
+
 ### `randDomainName`
 
 Generate a random domain name.
