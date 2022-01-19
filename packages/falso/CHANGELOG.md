@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.5.0](https://github.com/ngneat/falso/compare/falso-2.4.0...falso-2.5.0) (2022-01-19)
+
+### Features
+
+- 🔥 add integrations ([e86d01f](https://github.com/ngneat/falso/commit/e86d01f49e879ffc9176ba7ae5d231e2ca898357)), closes [#73](https://github.com/ngneat/falso/issues/73)
+- 🔥 Add missing foods from origins ([d7d72b3](https://github.com/ngneat/falso/commit/d7d72b3e90ee2e46d81b15bf766779cfd41909d1)), closes [#56](https://github.com/ngneat/falso/issues/56)
+- 🔥 Add random food function ([eb7bd71](https://github.com/ngneat/falso/commit/eb7bd7189b16832a9c6eccd35d580cd22e023ca6)), closes [#56](https://github.com/ngneat/falso/issues/56)
+- add randQuote method that returns a random quote [#67](https://github.com/ngneat/falso/issues/67) ([99fef31](https://github.com/ngneat/falso/commit/99fef3189b8b45e87cc8ad32127a62ab24fcc7af))
+- add randQuote method that returns a random quote, add tests and docs [#67](https://github.com/ngneat/falso/issues/67) ([2d8c6a1](https://github.com/ngneat/falso/commit/2d8c6a18d149e22b656df55257380489f738e9b4))
+
 # [2.3.0](https://github.com/ngneat/falso/compare/falso-2.3.0-beta.0...falso-2.3.0) (2022-01-17)
 
 ### Bug Fixes
