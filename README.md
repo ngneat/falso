@@ -35,6 +35,8 @@ npm i @ngneat/falso
 yarn add @ngneat/falso
 ```
 
+### Usage
+
 ```ts
 import { randEmail, randFullName } from '@ngneat/falso';
 
