@@ -3,7 +3,7 @@ import { data } from './movie.json';
 /**
  * Generate a random movie.
  *
- * @category TODO
+ * @category Movie
  *
  * @example
  *
