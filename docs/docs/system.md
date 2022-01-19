@@ -87,3 +87,17 @@ import { randMimeType } from '@ngneat/falso';
 randMimeType();
 randMimeType({ length: 10 });
 ```
+
+### `randPermission`
+
+Generate a random permission.
+
+```ts
+import { randPermission } from '@ngneat/falso';
+
+randPermission();
+randPermission({ length: 10 });
+randPermission({ numeric: true });
+randPermission({ combination: true });
+randPermission({ numeric: true, combination: true });
+```
