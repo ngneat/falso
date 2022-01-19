@@ -53,7 +53,7 @@
     "translate": {
       "executor": "./tools/executors/translate:translate",
       "options": {
-        "languages": ["ru"],
+        "languages": ["es", "ru"],
         "output": "packages/falso/src/i18n"
       }
     }

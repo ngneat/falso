@@ -3,7 +3,7 @@ const { execSync } = require('child_process');
 
 async function buildTranslationEntryPoints() {
   execSync(`npx tsc --project packages/falso/tsconfig.lib.json`);
-  execSync(`npx rollup --config rollup.config.js --silent`);
+  execSync(`npx rollup --config rollup.config.js`);
 }
 
 json

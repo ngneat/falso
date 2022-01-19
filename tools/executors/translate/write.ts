@@ -41,9 +41,13 @@ export async function writeTranslation(
 
   const translatedJSONData = await translateJSON(jsonData, language);
 
-  writeFileSync(outJSONFilePath, JSON.stringify(translatedJSONData, null, 2), {
-    encoding: 'utf-8',
-  });
+  writeFileSync(
+    outJSONFilePath,
+    JSON.stringify(translatedJSONData, null, 2) + '\n',
+    {
+      encoding: 'utf-8',
+    }
+  );
 
   const rootTSFilePath = join(projectLibPath, TSFileName);
   const outTSFilePath = join(outputDir, TSFileName);
