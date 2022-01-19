@@ -4,22 +4,13 @@ import { rand } from './rand';
 
 // TODO: Add more Foods to JSON
 
-export type CuisineOrigin =
-  | 'china'
-  | 'italy'
-  | 'india'
-  | 'mexico'
-  | 'japan'
-  | 'korea'
-  | 'france'
-  | 'lebanon'
-  | 'thailand'
-  | 'greece'
-  | 'turkey';
+export type CuisineOrigin = keyof typeof data;
 
 export interface FoodOptions extends FakeOptions {
   origin?: CuisineOrigin;
 }
+
+const totalOrigins = Object.keys(data)?.length;
 
 /**
  * Generate a random food.
@@ -46,8 +37,6 @@ export function randFood<Options extends FoodOptions>(options?: Options) {
   if (origin && !foodData[origin]) {
     throw 'No foods found for selected origin';
   }
-
-  const totalOrigins = Object.keys(data)?.length;
 
   if (!totalOrigins) {
     throw 'No foods found';
