@@ -144,3 +144,4 @@ export { randMovie } from './lib/movie';
 export { randBrowser } from './lib/browser';
 export { randPriority } from './lib/priority';
 export { randBrand } from './lib/brand';
+export { randPermission } from './lib/permission';
