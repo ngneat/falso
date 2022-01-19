@@ -1,4 +1,4 @@
-import { fake, FakeOptions } from './core/core';
+import { fake, FakeOptions } from '../../lib/core/core';
 import { data } from './abbreviation.json';
 
 /**

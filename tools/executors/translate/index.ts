@@ -1,19 +1,7 @@
 import { ExecutorContext } from '@nrwl/devkit';
-import {
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  readFileSync,
-  statSync,
-  unlinkSync,
-} from 'fs';
+import { readdirSync, statSync } from 'fs';
 import { basename, join } from 'path';
-import * as ts from 'typescript';
-import { addBuildTargets } from './add-build-target';
-import { JSON_FILE_EXTENSION, TYPE_SCRIPT_FILE_EXTENSION } from './constants';
-import { copyCoreFiles } from './copy-core';
-import { createConfigFiles } from './create-config';
-import { generateStringLiteralsAndSourceFile } from './generate';
+import { JSON_FILE_EXTENSION } from './constants';
 import { EchoExecutorOptions } from './options';
 import {
   manageLanguageIndexFiles,
@@ -34,11 +22,6 @@ export default async function translateExecutor(
       context.root,
       context.workspace.projects[context.projectName].sourceRoot,
       'lib'
-    );
-    const projectJSONPath = join(
-      context.root,
-      context.workspace.projects[context.projectName].root,
-      'project.json'
     );
     const jsonFilePaths = readdirSync(projectLibPath).filter((p) =>
       p.includes(JSON_FILE_EXTENSION)
@@ -80,17 +63,8 @@ export default async function translateExecutor(
     // write export statements everywhere
     writeExportStatements(options);
 
-    // copy core files
-    copyCoreFiles(options, projectLibPath);
-
-    // create config files
-    createConfigFiles(options);
-
-    // add build targets
-    addBuildTargets(options, projectJSONPath);
-
     console.info(
-      "Translation complete. Please make sure to export from package's index file"
+      'Translation complete. Please make sure to add entries in rollup.config.js.'
     );
 
     return { success };

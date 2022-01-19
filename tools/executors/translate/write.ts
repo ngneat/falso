@@ -35,7 +35,7 @@ export async function writeTranslation(
 ) {
   const rootJSONFilePath = join(projectLibPath, jsonFileName);
   const outputDir = join(options.output, language);
-  const outJSONFilePath = join(outputDir, 'src', jsonFileName);
+  const outJSONFilePath = join(outputDir, jsonFileName);
 
   const jsonData = JSON.parse(readFileSync(rootJSONFilePath).toString());
 
@@ -46,11 +46,11 @@ export async function writeTranslation(
   });
 
   const rootTSFilePath = join(projectLibPath, TSFileName);
-  const outTSFilePath = join(outputDir, 'src', TSFileName);
+  const outTSFilePath = join(outputDir, TSFileName);
 
   copyFileSync(rootTSFilePath, outTSFilePath);
 
-  // updateCorePath(outTSFilePath);
+  updateCorePath(outTSFilePath);
 }
 
 function updateCorePath(TSFilePath: string) {
@@ -58,24 +58,26 @@ function updateCorePath(TSFilePath: string) {
     encoding: 'utf-8',
   }).toString();
 
-  tsFileContent = tsFileContent.replace(`'./core/core';`, `'../../core/core';`);
+  tsFileContent = tsFileContent.replace(
+    `'./core/core';`,
+    `'../../lib/core/core';`
+  );
 
   writeFileSync(TSFilePath, tsFileContent, { encoding: 'utf-8' });
 }
 
 export function createLanguageIndexFile(outputDir: string) {
-  const outputSRCDirPath = join(outputDir, 'src');
-  const index = join(outputSRCDirPath, `index.ts`);
+  const index = join(outputDir, `index.ts`);
 
   appendFileSync(index, `${COMMENT}\n`, { encoding: 'utf-8' });
 
-  readdirSync(outputSRCDirPath)
+  readdirSync(outputDir)
     .filter(
       (fileName) =>
         fileName.includes(TYPE_SCRIPT_FILE_EXTENSION) && fileName !== 'index.ts'
     )
     .forEach((fileName) => {
-      const outFilePath = join(outputSRCDirPath, fileName);
+      const outFilePath = join(outputDir, fileName);
       const fileNameWOExt = basename(fileName, TYPE_SCRIPT_FILE_EXTENSION);
 
       const functionName = getFunctionName(outFilePath);
@@ -91,7 +93,7 @@ export function manageLanguageIndexFiles(options: EchoExecutorOptions) {
     mkdirSync(options.output);
   }
   for (const language of options.languages) {
-    const outputDir = join(options.output, language, 'src');
+    const outputDir = join(options.output, language);
     if (!existsSync(outputDir)) {
       mkdirSync(outputDir, { recursive: true });
     } else {
