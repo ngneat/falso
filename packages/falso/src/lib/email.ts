@@ -22,7 +22,7 @@ function randFormattedName(nameSeparator?: NameSeparators): string {
     separator = nameSeparator;
   }
 
-  let name = randFullName().replace(' ', separator);
+  let name = randFullName({ withAccents: false }).replace(' ', separator);
 
   if (randBoolean()) {
     name += randNumber({ min: 1, max: 1_000 });
