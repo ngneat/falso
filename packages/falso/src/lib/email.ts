@@ -1,14 +1,36 @@
 import { fake, FakeOptions } from './core/core';
-import { randFirstName } from './first-name';
 import { randDomainSuffix } from './domain-suffix';
-import { randBoolean } from './boolean';
 import { randFullName } from './full-name';
+import { randBoolean } from './boolean';
 import { randNumber } from './number';
+import { randEmailProvider } from './email-provider';
+
+export interface EmailOptions extends FakeOptions {
+  provider?: string;
+  suffix?: string;
+  nameSeparator?: NameSeparators;
+}
+
+type NameSeparators = '.' | '-' | '_' | '+' | 'none';
 
 const emailProviders = ['gmail', 'yahoo', 'hotmail', 'unaref'];
 
-function randEmailProvider() {
-  return fake(emailProviders);
+function randFormattedName(nameSeparator?: NameSeparators): string {
+  let separator: string = '';
+
+  if (!nameSeparator) {
+    separator = fake(['.', '-', '_', '+', '']);
+  } else if (nameSeparator !== 'none') {
+    separator = nameSeparator;
+  }
+
+  let name = randFullName().replace(' ', separator);
+
+  if (randBoolean()) {
+    name += randNumber({ min: 1, max: 1_000 });
+  }
+
+  return name.toLowerCase();
 }
 
 /**
@@ -25,16 +47,14 @@ function randEmailProvider() {
  * randEmail({ length: 10 })
  *
  */
-export function randEmail<Options extends FakeOptions>(options?: Options) {
-  return fake(() => {
-    let name = randBoolean()
-      ? randFirstName()
-      : randFullName().replace(' ', fake(['.', '_']));
+export function randEmail<Options extends EmailOptions>(options?: Options) {
+  const factory = () => {
+    const emailProvider = options?.provider || randEmailProvider();
+    const formattedName = randFormattedName(options?.nameSeparator);
+    const emailSuffix = options?.suffix || randDomainSuffix();
 
-    if (randBoolean()) {
-      name += randNumber({ min: 1, max: 1_000 });
-    }
+    return `${formattedName}@${emailProvider}.${emailSuffix}`;
+  };
 
-    return `${name.toLowerCase()}@${randEmailProvider()}.${randDomainSuffix()}`;
-  }, options);
+  return fake(factory, options);
 }

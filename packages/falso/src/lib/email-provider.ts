@@ -4,7 +4,7 @@ import { data } from './email-provider.json';
 /**
  * Generate a random email provider.
  *
- * @category Email
+ * @category Internet
  *
  * @example
  *
