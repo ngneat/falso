@@ -19,8 +19,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Flaso package for live code
-src/theme/ReactLiveScope/falso.js
+# Falso package for live code
+src/theme/ReactLiveScope/falso.min.js
 
 # Auto-generated docs
 docs/auto-generated

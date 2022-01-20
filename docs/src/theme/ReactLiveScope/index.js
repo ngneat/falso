@@ -7,7 +7,7 @@
 
 import React from 'react';
 import ReactJson from 'react-json-view'
-import * as Falso from './falso';
+import * as falso from './falso.min';
 
 const buttonStyle = {
   base: {
@@ -60,8 +60,7 @@ const ReactLiveScope = {
   React,
   ReactJson,
   ...React,
-  ...Falso,
-  ChangeDataBtn,
+  ...falso,
   Preview
 };
 

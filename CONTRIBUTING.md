@@ -7,7 +7,7 @@
 - Run `npm i`
 - Create new falso by running `yarn new email`
 
-  - Use `--json` (default `false`) to indicate that the falso will load it's data from a JSON file
+  - Use `--json` (default `false`) to indicate that the falso will load its data from a JSON file
   - Use `--skip-test` (default `false`) to indicate that the falso should not generate a test file
 
 ## <a name="rules"></a> Coding Rules
@@ -15,7 +15,7 @@
 To ensure consistency throughout the source code, keep these rules in mind as you are working:
 
 - All features or bug fixes **must be tested** by one or more specs (unit-tests).
-- All public API methods **must be documented**.
+- All public API methods **must be documented**, the documentation is via **JSDoc above the function** declaration.
 
 ## <a name="commit"></a> Commit Message Guidelines
 
