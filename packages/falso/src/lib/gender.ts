@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { data as gender } from './gender.json';
 import { data as genderCode } from './gender-code.json';
 
@@ -21,7 +21,7 @@ interface GenderOptions extends FakeOptions {
  *
  * @example
  *
- * randGender({ code: true })
+ * randGender({ code: true }) // default is false
  *
  */
 export function randGender<Options extends GenderOptions>(options?: Options) {

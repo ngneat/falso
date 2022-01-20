@@ -20,7 +20,7 @@ export interface HSLOptions extends FakeOptions {
  *
  * @example
  *
- * randHsl({ alpha: true })
+ * randHsl({ alpha: true }) // default is false
  *
  */
 export function randHsl<Options extends HSLOptions>(options?: Options) {

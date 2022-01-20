@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randSentence } from './sentence';
 import { randAlpha } from './alpha';
 
@@ -21,7 +21,7 @@ export interface TextOptions extends FakeOptions {
  *
  * @example
  *
- * text({ charCount: 10 })
+ * text({ charCount: 10 }) // default is 10
  *
  */
 export function randText<Options extends TextOptions>(options?: Options) {

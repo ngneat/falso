@@ -16,7 +16,7 @@ interface RecentOptions extends FakeOptions {
  *
  * @example
  *
- * randRecentDate({ days: 10 })
+ * randRecentDate({ days: 10 }) // default is 1
  *
  * @example
  *

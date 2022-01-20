@@ -16,7 +16,7 @@ export interface RGBOptions extends FakeOptions {
  *
  * @example
  *
- * randRgb({ alpha: true })
+ * randRgb({ alpha: true }) // default is false
  *
  * @example
  *

@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randSentence } from './sentence';
 
 export interface LineOptions extends FakeOptions {
@@ -16,7 +16,7 @@ export interface LineOptions extends FakeOptions {
  *
  * @example
  *
- * randLine({ lineCount: 10 })
+ * randLine({ lineCount: 10 }) // default is 5
  *
  */
 export function randLine<Options extends LineOptions>(options?: Options) {
