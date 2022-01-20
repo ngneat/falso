@@ -40,25 +40,28 @@ export function randCreditCardNumber<
     issuer?: Issuer;
   }
 >(options?: Options) {
-  return fake(() => {
-    let card = rand(data);
+  let card = rand(data);
 
-    if (options?.issuer) {
-      const issuerCard = data.find((card) => {
-        return card.issuer === options?.issuer;
-      });
+  if (options?.issuer) {
+    const issuerCard = data.find((card) => {
+      return card.issuer === options.issuer;
+    });
 
-      if (issuerCard) card = issuerCard;
-    }
+    if (issuerCard) card = issuerCard;
+  }
 
-    const minNumb = 0;
-    const maxNumb = 9;
-    const format = rand(card.formats);
+  const minNumb = 0;
+  const maxNumb = 9;
+  const format = rand(card.formats);
+  const noOfCards = options?.length || 1;
 
-    return format.replace(/#/g, () => {
+  let cardsArray = Array.from({ length: noOfCards }, (_, index) =>
+    format.replace(/#/g, () => {
       return (
         '' + (Math.floor(Math.random() * (maxNumb - minNumb + 1)) + minNumb)
       );
-    });
-  }, options);
+    })
+  ) as any;
+
+  return noOfCards == 1 ? cardsArray[0] : cardsArray;
 }
