@@ -143,3 +143,4 @@ export { randIntegration } from './lib/integration';
 export { randFood } from './lib/food';
 export { randMovie } from './lib/movie';
 export { randOAuthProvider } from './lib/oauth-provider';
+export { randEmailProvider } from './lib/email-provider';
