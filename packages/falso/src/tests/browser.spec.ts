@@ -1,7 +1,7 @@
 import { randBrowser } from '../lib/browser';
 
 describe('browser', () => {
-  it('should create', () => {
-    expect(randBrowser).toBeTruthy();
+  it('should create one browser', () => {
+    expect(randBrowser()).toBeTruthy();
   });
 });
