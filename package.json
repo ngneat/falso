@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:docs": "node ./docs-generator.js",
-    "start:docs": "npm run start --prefix docs",
+    "build:docs": "npm run build && node ./docs-generator.js",
+    "start:docs": "npm run build:docs && npm run start --prefix docs",
     "build": "nx build falso && node ./post-build.js",
     "new": "nx workspace-generator falso",
     "format": "nx format",
