@@ -40,15 +40,14 @@ export function randCreditCardNumber<
     issuer?: Issuer;
   }
 >(options?: Options) {
-  let dataFormats = data.map(({ formats }) => formats);
-  let formats: string[] = [];
+  let formats = data.map(({ formats }) => formats).flat();
 
   if (options?.issuer) {
     formats =
       data.find((card) => {
         return card.issuer === options.issuer;
       })?.formats || [];
-  } else formats = dataFormats.flat();
+  }
 
   const minNumb = 0;
   const maxNumb = 9;
