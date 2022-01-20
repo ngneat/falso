@@ -15,7 +15,7 @@ interface BookOptions extends FakeOptions {
 /**
  * Generate a random book.
  *
- * @category book
+ * @category entities
  *
  * @example
  *
