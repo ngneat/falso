@@ -52,16 +52,17 @@ export function randCreditCardNumber<
 
   const minNumb = 0;
   const maxNumb = 9;
-  const format = rand(card.formats);
   const noOfCards = options?.length || 1;
+  let format = '';
 
-  let cardsArray = Array.from({ length: noOfCards }, (_, index) =>
-    format.replace(/#/g, () => {
+  let cardsArray = Array.from({ length: noOfCards }, (_, index) => {
+    format = rand(card.formats);
+    return format.replace(/#/g, () => {
       return (
         '' + (Math.floor(Math.random() * (maxNumb - minNumb + 1)) + minNumb)
       );
-    })
-  ) as any;
+    });
+  }) as any;
 
   return noOfCards == 1 ? cardsArray[0] : cardsArray;
 }

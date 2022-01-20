@@ -18,6 +18,7 @@ describe('randCreditCardNumber', () => {
   it('should return 10 credit card number', () => {
     const cards = randCreditCardNumber({
       length: 10,
+      issuer: 'Maestro',
     });
     expect(cards?.length).toEqual(10);
   });
