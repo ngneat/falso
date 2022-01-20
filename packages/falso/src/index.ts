@@ -143,4 +143,8 @@ export { randIntegration } from './lib/integration';
 export { randFood } from './lib/food';
 export { randMovie } from './lib/movie';
 export { randOAuthProvider } from './lib/oauth-provider';
+export { randBrowser } from './lib/browser';
+export { randPriority } from './lib/priority';
+export { randBrand } from './lib/brand';
+export { randPermission } from './lib/permission';
 export { randEmailProvider } from './lib/email-provider';
