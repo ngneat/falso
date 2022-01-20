@@ -31,11 +31,15 @@ export async function translateJSON(
 
   const data = jsonData.data;
 
-  const updatedData = await translateDataArray(data, language);
+  if (data) {
+    const updatedData = await translateElement(data, language);
 
-  updatedJSON.data = updatedData.slice();
+    updatedJSON.data = updatedData;
 
-  return updatedJSON;
+    return updatedJSON;
+  }
+
+  throw new Error(`JSON's data must be present under root-level "data" key`);
 }
 function translateDataArray(data: any[], language: string): Promise<any[]> {
   if (Array.isArray(data)) {
