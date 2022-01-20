@@ -20,7 +20,7 @@ interface FutureOptions extends FakeOptions {
  *
  * @example
  *
- * randFutureDate({ years: 10 })
+ * randFutureDate({ years: 10 }) // default is 1
  *
  */
 export function randFutureDate<Options extends FutureOptions>(

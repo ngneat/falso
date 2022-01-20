@@ -16,7 +16,7 @@ interface SoonOptions extends FakeOptions {
  *
  * @example
  *
- * randSoonDate({ days: 5 })
+ * randSoonDate({ days: 5 }) // default is 1
  *
  * @example
  *

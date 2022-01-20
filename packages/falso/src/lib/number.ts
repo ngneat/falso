@@ -1,6 +1,6 @@
 import {
-  FakeOptions,
   fake,
+  FakeOptions,
   getRandomInRange,
   RandomInRangeOptions,
 } from './core/core';
@@ -25,7 +25,7 @@ export interface RandomNumberOptions extends FakeOptions {
  *
  * @example
  *
- * randNumber({ min: 10, max: 1000 })
+ * randNumber({ min: 10, max: 1000 }) // default is 'min': 0, 'max': 999_999
  *
  */
 export function randNumber<Options extends RandomNumberOptions>(

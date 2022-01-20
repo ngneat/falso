@@ -1,0 +1,656 @@
+{
+  "data": [
+    {
+      "title": "The Adventures of Augie March",
+      "author": "Saul Bellow",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Uncommon Reader",
+      "author": "Alan Bennett",
+      "category": "Comedy"
+    },
+    {
+      "title": "Don Quixote",
+      "author": "Miguel de Cervantes",
+      "category": "Comedy"
+    },
+    { "title": "Tom Jones", "author": "Henry Fielding", "category": "Comedy" },
+    { "title": "Dead Souls", "author": "Nikolai Gogol", "category": "Comedy" },
+    {
+      "title": "The Wind in the Willows",
+      "author": "Kenneth Grahame",
+      "category": "Comedy"
+    },
+    {
+      "title": "Our Man in Havana",
+      "author": "Graham Greene",
+      "category": "Comedy"
+    },
+    { "title": "Catch-22", "author": "Joseph Heller", "category": "Comedy" },
+    { "title": "High Fidelity", "author": "Nick Hornby", "category": "Comedy" },
+    {
+      "title": "Three Men in a Boat",
+      "author": "Jerome K Jerome",
+      "category": "Comedy"
+    },
+    {
+      "title": "Finnegans Wake",
+      "author": "James Joyce",
+      "category": "Comedy"
+    },
+    { "title": "Puckoon", "author": "Spike Milligan", "category": "Comedy" },
+    {
+      "title": "Portnoy’s Complaint",
+      "author": "Philip Roth",
+      "category": "Comedy"
+    },
+    { "title": "Great Apes", "author": "Will Self", "category": "Comedy" },
+    {
+      "title": "The Life and Opinions of Tristram Shandy, Gentleman",
+      "author": "Laurence Sterne",
+      "category": "Comedy"
+    },
+    {
+      "title": "A Confederacy of Dunces",
+      "author": "John Kennedy Toole",
+      "category": "Comedy"
+    },
+    {
+      "title": "Breakfast of Champions",
+      "author": "Kurt Vonnegut",
+      "category": "Comedy"
+    },
+    {
+      "title": "Infinite Jest",
+      "author": "David Foster Wallace",
+      "category": "Comedy"
+    },
+    {
+      "title": "Molesworth",
+      "author": "Geoffrey Willans and Ronald Searle",
+      "category": "Comedy"
+    },
+    {
+      "title": "Thank You Jeeves",
+      "author": "PG Wodehouse",
+      "category": "Comedy"
+    },
+    {
+      "title": "The Thirty-Nine Steps",
+      "author": "John Buchan",
+      "category": "Crime"
+    },
+    {
+      "title": "The Big Sleep",
+      "author": "Raymond Chandler",
+      "category": "Crime"
+    },
+    {
+      "title": "And Then There Were None",
+      "author": "Agatha Christie",
+      "category": "Crime"
+    },
+    {
+      "title": "The Hound of the Baskervilles",
+      "author": "Arthur Conan Doyle",
+      "category": "Crime"
+    },
+    {
+      "title": "The Manchurian Candidate",
+      "author": "Richard Condon",
+      "category": "Crime"
+    },
+    {
+      "title": "The Andromeda Strain",
+      "author": "Michael Crichton",
+      "category": "Crime"
+    },
+    {
+      "title": "The Ipcress File",
+      "author": "Len Deighton",
+      "category": "Crime"
+    },
+    {
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "category": "Crime"
+    },
+    {
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "category": "Crime"
+    },
+    {
+      "title": "The Day of the Jackal",
+      "author": "Frederick Forsyth",
+      "category": "Crime"
+    },
+    {
+      "title": "The Third Man",
+      "author": "Graham Greene",
+      "category": "Crime"
+    },
+    {
+      "title": "A Time to Kill",
+      "author": "John Grisham",
+      "category": "Crime"
+    },
+    {
+      "title": "The Thin Man",
+      "author": "Dashiell Hammett",
+      "category": "Crime"
+    },
+    {
+      "title": "The Talented Mr Ripley",
+      "author": "Patricia Highsmith",
+      "category": "Crime"
+    },
+    {
+      "title": "Tinker, Tailor, Soldier, Spy",
+      "author": "John le Carre",
+      "category": "Crime"
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "category": "Crime"
+    },
+    {
+      "title": "No Country for Old Men",
+      "author": "Cormac McCarthy",
+      "category": "Crime"
+    },
+    { "title": "The Godfather", "author": "Mario Puzo", "category": "Crime" },
+    {
+      "title": "The Crying of Lot 49",
+      "author": "Thomas Pynchon",
+      "category": "Crime"
+    },
+    {
+      "title": "Judgment in Stone",
+      "author": "Ruth Rendell",
+      "category": "Crime"
+    },
+    {
+      "title": "Little Women",
+      "author": "Louisa May Alcott",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Le Pere Goriot",
+      "author": "Honore de Balzac",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Outsider",
+      "author": "Albert Camus",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Great Expectations",
+      "author": "Charles Dickens",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Sound and the Fury",
+      "author": "William Faulkner",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Howards End",
+      "author": "EM Forster",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Power and the Glory",
+      "author": "Graham Greene",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Steppenwolf",
+      "author": "Herman Hesse",
+      "category": "Family and Self"
+    },
+    {
+      "title": "A Prayer for Owen Meany",
+      "author": "John Irving",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Ulysses",
+      "author": "James Joyce",
+      "category": "Family and Self"
+    },
+    {
+      "title": "One Flew Over the Cuckoo’s Nest",
+      "author": "Ken Kesey",
+      "category": "Family and Self"
+    },
+    {
+      "title": "How Green was My Valley",
+      "author": "Richard Llewellyn",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Bluest Eye",
+      "author": "Toni Morrison",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Who Do You Think You Are?",
+      "author": "Alice Munro",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Bell Jar",
+      "author": "Sylvia Plath",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Remembrance of Things Past",
+      "author": "Marcel Proust",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Catcher in the Rye",
+      "author": "JD Salinger",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Color Purple",
+      "author": "Alice Walker",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Jimmy Corrigan, The Smarest Kid on Earth",
+      "author": "Chris Ware",
+      "category": "Family and Self"
+    },
+    {
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "category": "Family and Self"
+    },
+    {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "Love"
+    },
+    { "title": "Jane Eyre", "author": "Charlotte Bronte", "category": "Love" },
+    {
+      "title": "Wuthering Heights",
+      "author": "Emily Bronte",
+      "category": "Love"
+    },
+    {
+      "title": "Breakfast at Tiffany’s",
+      "author": "Truman Capote",
+      "category": "Love"
+    },
+    { "title": "Rebecca", "author": "Daphne du Maurier", "category": "Love" },
+    { "title": "Daniel Deronda", "author": "George Eliot", "category": "Love" },
+    {
+      "title": "The Great Gatsby",
+      "author": "F Scott Fitzgerald",
+      "category": "Love"
+    },
+    {
+      "title": "Madame Bovary",
+      "author": "Gustave Flaubert",
+      "category": "Love"
+    },
+    {
+      "title": "A Room with a View",
+      "author": "EM Forster",
+      "category": "Love"
+    },
+    {
+      "title": "The Sorrows of Young Werther",
+      "author": "Johann Wolfgang Goethe",
+      "category": "Love"
+    },
+    {
+      "title": "Far From the Madding Crowd",
+      "author": "Thomas Hardy",
+      "category": "Love"
+    },
+    {
+      "title": "The Scarlet Letter",
+      "author": "Nathaniel Hawthorne",
+      "category": "Love"
+    },
+    {
+      "title": "The Remains of the Day",
+      "author": "Kazuo Ishiguro",
+      "category": "Love"
+    },
+    {
+      "title": "Les Liaisons Dangereuses",
+      "author": "Pierre-Ambroise-Francois Choderlos de Laclos",
+      "category": "Love"
+    },
+    {
+      "title": "Of Human Bondage",
+      "author": "Somerset Maugham",
+      "category": "Love"
+    },
+    { "title": "Atonement", "author": "Ian McEwan", "category": "Love" },
+    {
+      "title": "Gone With the Wind",
+      "author": "Margaret Mitchell",
+      "category": "Love"
+    },
+    {
+      "title": "Norwegian Wood",
+      "author": "Haruki Murakami",
+      "category": "Love"
+    },
+    {
+      "title": "Doctor Zhivago",
+      "author": "Boris Pasternak",
+      "category": "Love"
+    },
+    { "title": "Wide Sargasso Sea", "author": "Jean Rhys", "category": "Love" },
+    {
+      "title": "The Hitchhikers Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Foundation",
+      "author": "Isaac Asimov",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Alice’s Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Man who was Thursday",
+      "author": "GK Chesterton",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Childhood’s End",
+      "author": "Arthur C Clarke",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Do Androids Dream of Electric Sheep?",
+      "author": "Philip K Dick",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "American Gods",
+      "author": "Neil Gaiman",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Neuromancer",
+      "author": "William Gibson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Dune",
+      "author": "Frank L Herbert",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Turn of the Screw",
+      "author": "Henry James",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Shining",
+      "author": "Stephen King",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Earthsea Series",
+      "author": "Ursula Le Guin",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Chronicles of Narnia",
+      "author": "CS Lewis",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Nineteen Eighty-Four",
+      "author": "George Orwell",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Discworld Series",
+      "author": "Terry Pratchett",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Strange Case of Dr Jekyll and Mr Hyde",
+      "author": "Robert Louis Stevenson",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "The Lord of the Rings",
+      "author": "JRR Tolkien",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "Things Fall Apart",
+      "author": "Chinua Achebe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Go Tell it on the Mountain",
+      "author": "James Baldwin",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Uncle Tom’s Cabin",
+      "author": "Harriet Beecher Stowe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Moll Flanders",
+      "author": "Daniel Defoe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "North and South",
+      "author": "Elizabeth Gaskell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Les Miserables",
+      "author": "Victor Hugo",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "A Girl in Winter",
+      "author": "Philip Larkin",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Magic Mountain",
+      "author": "Thomas Mann",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Bel-Ami",
+      "author": "Guy de Maupassant",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Cry, the Beloved Country",
+      "author": "Alan Paton",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Jungle",
+      "author": "Upton Sinclair",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "White Teeth",
+      "author": "Zadie Smith",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Grapes of Wrath",
+      "author": "John Steinbeck",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Vanity Fair",
+      "author": "William Makepeace Thackeray",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Way We Live Now",
+      "author": "Anthony Trollope",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Adventures of Tom Sawyer",
+      "author": "Mark Twain",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "The Bonfire of the Vanities",
+      "author": "Tom Wolfe",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Germinal",
+      "author": "Emile Zola",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "Empire of the Sun",
+      "author": "JG Ballard",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Heart of Darkness",
+      "author": "Joseph Conrad",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Robinson Crusoe",
+      "author": "Daniel Defoe",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Three Musketeers",
+      "author": "Alexandre Dumas",
+      "category": "War and Travel"
+    },
+    {
+      "title": "King Solomon’s Mines",
+      "author": "H Rider Haggard",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Enigma",
+      "author": "Robert Harris",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Good Soldier Svejk",
+      "author": "Jaroslav Hasek",
+      "category": "War and Travel"
+    },
+    {
+      "title": "For Whom the Bell Tolls",
+      "author": "Ernest Hemingway",
+      "category": "War and Travel"
+    },
+    {
+      "title": "On the Road",
+      "author": "Jack Kerouac",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Call of the Wild",
+      "author": "Jack London",
+      "category": "War and Travel"
+    },
+    {
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Moby-Dick or, The Whale",
+      "author": "Herman Melville",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Zen and the Art of Motorcycle Maintenance",
+      "author": "Robert Pirsig",
+      "category": "War and Travel"
+    },
+    {
+      "title": "All Quiet on the Western Front",
+      "author": "Erich Maria Remarque",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Ivanhoe",
+      "author": "Sir Walter Scott",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Treasure Island",
+      "author": "Robert Louis Stevenson",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Gulliver’s Travels",
+      "author": "Jonathan Swift",
+      "category": "War and Travel"
+    },
+    {
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "category": "War and Travel"
+    },
+    {
+      "title": "Around the World in Eighty Days",
+      "author": "Jules Verne",
+      "category": "War and Travel"
+    },
+    {
+      "title": "The Caine Mutiny",
+      "author": "Herman Wouk",
+      "category": "War and Travel"
+    }
+  ]
+}

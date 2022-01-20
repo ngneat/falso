@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randSequence } from './sequence';
 
 export interface PasswordOptions extends FakeOptions {
@@ -20,7 +20,7 @@ export interface PasswordOptions extends FakeOptions {
  *
  * @example
  *
- * randPassword({ size: 10 })
+ * randPassword({ size: 10 }) // default is 15
  *
  */
 export function randPassword<Options extends PasswordOptions>(

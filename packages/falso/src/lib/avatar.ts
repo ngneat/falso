@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 
 interface AvatarOptions extends FakeOptions {
   size?: number;
@@ -19,7 +19,7 @@ interface AvatarOptions extends FakeOptions {
  *
  * @example
  *
- * randAvatar({ size: 200 })
+ * randAvatar({ size: 200 }) // default: 100
  *
  */
 export function randAvatar<Options extends AvatarOptions>(options?: Options) {

@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { data } from './word.json';
 import { rand } from './rand';
 
@@ -21,7 +21,7 @@ function capitalizeFirstLetter(text: string): string {
  *
  * @example
  *
- * randWord({ capitalize: true })
+ * randWord({ capitalize: true }) // default is false
  *
  * @example
  *

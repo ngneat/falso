@@ -20,7 +20,7 @@ interface PastOptions extends FakeOptions {
  *
  * @example
  *
- * randPastDate({ years: 2 })
+ * randPastDate({ years: 2 }) // default is 1
  *
  */
 export function randPastDate<Options extends PastOptions>(options?: Options) {

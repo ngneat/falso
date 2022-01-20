@@ -72,14 +72,14 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Falso, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} NgNeat, Inc.`,
     },
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
   },
-
+  themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
       '@docusaurus/preset-classic',
