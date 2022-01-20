@@ -36,6 +36,7 @@
     "@types/uuid": "8.3.4"
   },
   "exports": {
+    ".": "./index.cjs.js",
     "./i18n/*": "./i18n/*/index.cjs.js"
   }
 }
