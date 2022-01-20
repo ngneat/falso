@@ -14,11 +14,11 @@ import { randBoolean } from './boolean';
  *
  * @example
  *
- * randFirstName({ length: 10 })
+ * randFirstName({ withAccents: true })
  *
  * @example
  *
- * randFirstName({ withAccents: true })
+ * randFirstName({ length: 10 })
  *
  */
 export function randFirstName<Options extends NameOptions>(options?: Options) {

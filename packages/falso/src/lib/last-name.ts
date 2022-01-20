@@ -14,6 +14,10 @@ import { NameOptions } from './full-name';
  *
  * @example
  *
+ * randLastName({ withAccents: false })
+ *
+ * @example
+ *
  * randLastName({ length: 10 })
  *
  */
