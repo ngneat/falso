@@ -1,5 +1,10 @@
 import { FakeOptions, fake } from './core/core';
-import { data } from './protocol.json';
+import { data as protocol } from './protocol.json';
+import { data as protocolFull } from './protocol-full.json';
+
+interface ProtocolOptions extends FakeOptions {
+  fullName?: boolean;
+}
 
 /**
  * Generate a random protocol.
@@ -14,7 +19,13 @@ import { data } from './protocol.json';
  *
  * randProtocol({ length: 10 })
  *
+ * @example
+ *
+ * randProtocol({ fullName: true })
+ *
  */
-export function randProtocol<Options extends FakeOptions>(options?: Options) {
-  return fake(data, options);
+export function randProtocol<Options extends ProtocolOptions>(
+  options?: Options
+) {
+  return fake(options?.fullName ? protocolFull : protocol, options);
 }
