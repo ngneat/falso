@@ -147,3 +147,4 @@ export { randBrowser } from './lib/browser';
 export { randPriority } from './lib/priority';
 export { randBrand } from './lib/brand';
 export { randPermission } from './lib/permission';
+export { randEmailProvider } from './lib/email-provider';
