@@ -11,9 +11,7 @@ export interface EmailOptions extends FakeOptions {
   nameSeparator?: NameSeparators;
 }
 
-type NameSeparators = '.' | '-' | '_' | '+' | 'none';
-
-const emailProviders = ['gmail', 'yahoo', 'hotmail', 'unaref'];
+export type NameSeparators = '.' | '-' | '_' | '+' | 'none';
 
 function randFormattedName(nameSeparator?: NameSeparators): string {
   let separator: string = '';
@@ -45,6 +43,18 @@ function randFormattedName(nameSeparator?: NameSeparators): string {
  * @example
  *
  * randEmail({ length: 10 })
+ *
+ * @example
+ *
+ * randEmail({ provider: 'gmail' })
+ *
+ * @example
+ *
+ * randEmail({ suffix: 'com' })
+ *
+ * @example
+ *
+ * randEmail({ nameSeparator: '.' })
  *
  */
 export function randEmail<Options extends EmailOptions>(options?: Options) {

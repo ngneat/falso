@@ -1,17 +1,129 @@
-import { randEmail } from '@ngneat/falso';
+import { randEmail, seed } from '@ngneat/falso';
+import { NameSeparators } from '../lib/email';
 
 describe('email', () => {
-  it('should do a thing', () => {
-    // console.log(randEmail({ length: 10 }));
-    // console.log(randEmail({ provider: 'btconnect', length: 10 }));
-    // console.log(randEmail({ provider: 'btconnect', suffix: 'com', length: 10 }));
-    console.log(
-      randEmail({
-        provider: 'btconnect',
-        nameSeparator: '.',
-        suffix: 'com',
-        length: 10,
-      })
-    );
+  let validEmailRegex: RegExp;
+
+  beforeEach(() => {
+    validEmailRegex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    seed('💻🕸📞');
+  });
+
+  it('should return valid email format', () => {
+    const result = randEmail();
+
+    expect(result.match(validEmailRegex)).toBeTruthy();
+  });
+
+  it('should use random seed to generate all parts of email', () => {
+    // This will likely break if new names or email providers are added
+    expect(randEmail()).toEqual('joanjiang624@laposte.biz');
+    expect(randEmail()).toEqual('sachiko+goldstein@juno.org');
+    expect(randEmail()).toEqual('zbigniew_matthews@orange.info');
+  });
+
+  describe('nameSeparator is passed', () => {
+    let nameSeparator: NameSeparators;
+
+    beforeEach(() => {
+      nameSeparator = '.';
+    });
+
+    it('should reperate first and last name with a fullstop', () => {
+      const result = randEmail({ nameSeparator });
+      const name = result.split('@')[0];
+
+      expect(
+        name.match(
+          '^[a-zàèìòùðáéíóúýâêîôûãñõäëïöüÿçøåæœ]+\\.[a-zàèìòùðáéíóúýâêîôûãñõäëïöüÿçøåæœ]+[1-1000]?'
+        )
+      ).toBeTruthy();
+    });
+
+    it('should return valid email format', () => {
+      const result = randEmail({ nameSeparator });
+
+      expect(result.match(validEmailRegex)).toBeTruthy();
+    });
+  });
+
+  describe('provider is passed', () => {
+    let provider: string;
+
+    beforeEach(() => {
+      provider = 'testprovider';
+    });
+
+    it('should return a random email with passed provider', () => {
+      const result = randEmail({ provider });
+
+      expect(result).toContain(`@${provider}.`);
+    });
+
+    it('should return valid email format', () => {
+      const result = randEmail({ provider });
+
+      expect(result.match(validEmailRegex)).toBeTruthy();
+    });
+  });
+
+  describe('suffix is passed', () => {
+    let suffix: string;
+
+    beforeEach(() => {
+      suffix = 'me';
+    });
+
+    it('should return valid email format', () => {
+      const result = randEmail({ suffix });
+      const emailSuffix = result.split('.');
+
+      expect(emailSuffix[emailSuffix.length - 1]).toEqual('me');
+    });
+
+    it('should return valid email format', () => {
+      const result = randEmail({ suffix });
+
+      expect(result.match(validEmailRegex)).toBeTruthy();
+    });
+  });
+
+  describe('length is passed', () => {
+    describe('length is 1', () => {
+      it('should return an array length of 1', () => {
+        const result = randEmail({ length: 1 });
+
+        expect(result?.length).toEqual(1);
+      });
+    });
+
+    describe('length is 5', () => {
+      it('should return an array length of 5', () => {
+        const result = randEmail({ length: 5 });
+
+        expect(result?.length).toEqual(5);
+      });
+    });
+
+    describe('length is 100', () => {
+      it('should return an array length of 100', () => {
+        const result = randEmail({ length: 100 });
+
+        expect(result?.length).toEqual(100);
+      });
+    });
+
+    describe('length is 3', () => {
+      it('should return an array length of 3, each with a random email', () => {
+        const result = randEmail({ length: 3 });
+
+        expect(result).toEqual([
+          'joanjiang624@laposte.biz',
+          'sachiko+goldstein@juno.org',
+          'zbigniew_matthews@orange.info',
+        ]);
+      });
+    });
   });
 });
