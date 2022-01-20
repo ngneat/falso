@@ -6,8 +6,8 @@
  */
 
 import React from 'react';
-import ReactJson from 'react-json-view'
 import * as falso from './falso.min';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const buttonStyle = {
   base: {
@@ -44,24 +44,28 @@ function ChangeDataBtn(props) {
   </button>
 }
 
-function Preview({source}) {
-  const [data, setData] = React.useState(source());
 
-  return (
-    <>
-      <ChangeDataBtn onClick={() => setData(source())}/>
-      {typeof data === 'object' ? <ReactJson name={false} enableClipboard={false} src={data}/> : <div>{data}</div>}
-    </>
-  )
+
+function Preview({source}) {
+  return <BrowserOnly fallback={<div>...</div>}>
+    {() => {
+      const ReactJson = require('react-json-view').default;
+      const [data, setData] = React.useState(source());
+
+      return (<>
+        <ChangeDataBtn onClick={() => setData(source())}/>
+        {typeof data === 'object' ? <ReactJson name={false} enableClipboard={false} src={data}/> : <div>{data}</div>}
+      </>);
+    }}
+  </BrowserOnly>;
 }
 
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
-  ReactJson,
   ...React,
   ...falso,
-  Preview
+  Preview,
 };
 
 export default ReactLiveScope;
