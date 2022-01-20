@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.6.0](https://github.com/ngneat/falso/compare/falso-2.5.1...falso-2.6.0) (2022-01-20)
+
+### Features
+
+- 🔥 Add random book ([8290d4f](https://github.com/ngneat/falso/commit/8290d4f8bc16f175eb51f694167e0217768a8474))
+- 🔥 Add random OAuth provider function ([b0dfbc4](https://github.com/ngneat/falso/commit/b0dfbc4b0f2e52e5d6fd7711c6ad98b2471d8c22)), closes [#72](https://github.com/ngneat/falso/issues/72)
+- 🔥 Movies Falso ([e6bf6a0](https://github.com/ngneat/falso/commit/e6bf6a0b5b9d5156c646e4586d3c86bc3f65e52a)), closes [#43](https://github.com/ngneat/falso/issues/43)
+- credit card number issuer & formats added ([fd87549](https://github.com/ngneat/falso/commit/fd8754984a67079453b0087a73fc27820e1f67e3))
+- extend randGender method to return abbreviated genders [#50](https://github.com/ngneat/falso/issues/50) ([edca408](https://github.com/ngneat/falso/commit/edca408200ed7f49549e2506e809a227c5d26504))
+- extend randProtocol to return full names of protocols [#86](https://github.com/ngneat/falso/issues/86) ([3117bad](https://github.com/ngneat/falso/commit/3117bad8d746a05e61d594a2aaa339bcf1dd8ca4))
+- multiple formats added to credit card output with length ([9d12e48](https://github.com/ngneat/falso/commit/9d12e48164a5245cce256ee1b5571f7e38e5270a))
+
 ## [2.5.1](https://github.com/ngneat/falso/compare/falso-2.5.0...falso-2.5.1) (2022-01-19)
 
 ### Bug Fixes
