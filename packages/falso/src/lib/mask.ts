@@ -35,7 +35,8 @@ export function randMask<
     const randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     const randomDigits = '0123456789';
 
-    return [...mask]
+    return mask
+      .split('')
       .map((item) => {
         let replaceChar = '';
         if (item == char)
