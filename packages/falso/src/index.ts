@@ -148,3 +148,4 @@ export { randPriority } from './lib/priority';
 export { randBrand } from './lib/brand';
 export { randPermission } from './lib/permission';
 export { randEmailProvider } from './lib/email-provider';
+export { randClothingSize } from './lib/clothing-size';
