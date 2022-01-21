@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.8.0](https://github.com/ngneat/falso/compare/falso-2.7.0...falso-2.8.0) (2022-01-21)
+
+### Features
+
+- 🔥 add generator for clothing sizes ([723f7f8](https://github.com/ngneat/falso/commit/723f7f8c2854b8d4b065083fdb65083e4b886f06)), closes [#92](https://github.com/ngneat/falso/issues/92)
+- 🔥 Added option to have names with/without accents ([f103725](https://github.com/ngneat/falso/commit/f1037258e58d1c02a58ac4636affc013e2d1861e)), closes [#90](https://github.com/ngneat/falso/issues/90)
+
 # [2.7.0](https://github.com/ngneat/falso/compare/falso-2.6.0...falso-2.7.0) (2022-01-20)
 
 ### Bug Fixes
