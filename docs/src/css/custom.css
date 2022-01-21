@@ -51,3 +51,10 @@ code {
   background-color: rgb(240 248 255);
   padding: 2px 6px;
 }
+
+iframe {
+  border: none;
+  height: 30px;
+  width: 170px;
+  margin-left: 20px;
+}

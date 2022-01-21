@@ -1,5 +1,5 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './integrations.json';
+import { fake, FakeOptions } from './core/core';
+import { data } from './integration.json';
 
 /**
  * Generate a random integration.

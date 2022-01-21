@@ -15,7 +15,12 @@
 To ensure consistency throughout the source code, keep these rules in mind as you are working:
 
 - All features or bug fixes **must be tested** by one or more specs (unit-tests).
+  - One test that asserts the function's return value, if it's an object assert each key.
+  - All options must be tested.
 - All public API methods **must be documented**, the documentation is via **JSDoc above the function** declaration.
+  - If the function excepts different options each must be documented in a separate `@example` block.
+  - If an option has a default value it must be specified next to the example, e.g.:  
+    `randAvatar({ size: 200 }) // default is 100`
 
 ## <a name="commit"></a> Commit Message Guidelines
 
