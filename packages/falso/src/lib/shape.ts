@@ -2,7 +2,7 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './shape.json';
 
 /**
- * Generate a random shapes.
+ * Generate a random shape.
  *
  * @category General
  *
