@@ -2,6 +2,6 @@ import { randIntegration } from '../lib/integration';
 
 describe('integrations', () => {
   it('should create one integration', () => {
-    expect(randIntegration()).toBeTruthy();
+    expect(typeof randIntegration()).toBe('string');
   });
 });
