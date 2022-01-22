@@ -6,7 +6,6 @@ describe('emoji', () => {
   });
 
   it('should create random emoji', () => {
-    console.log(randEmoji({ length: 120 }));
-    expect(randEmoji({ length: 120 }).length).toEqual(120);
+    expect(randEmoji({ length: 20 }).length).toEqual(20);
   });
 });
