@@ -5,7 +5,7 @@ describe('emoji', () => {
     expect(randEmoji).toBeTruthy();
   });
 
-  it('should create random emoji', () => {
+  it('should create 20 random emoji', () => {
     expect(randEmoji({ length: 20 }).length).toEqual(20);
   });
 });
