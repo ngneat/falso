@@ -2,10 +2,13 @@ import { randFullName } from '@ngneat/falso';
 
 describe('fullName', () => {
   let specialCharRegex: RegExp;
+  let nameStructureRegex: RegExp | string;
 
   beforeEach(() => {
     specialCharRegex =
       /[ÞōŌāĀēĒØøłŁàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêěîôûčÂĚÊšŠÎÔŪÛŽžÐŻżãñõÃÑÕäëïöüÿÄËÏÖÜŸőŐçÇßðÅåÆæœ]/;
+    nameStructureRegex =
+      /^[a-zA-ZÞōŌāĀēĒØøłŁàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêěîôûčÂĚÊšŠÎÔŪÛŽžÐŻżãñõÃÑÕäëïöüÿÄËÏÖÜŸőŐçÇßðÅåÆæœ]+(\-[a-zA-ZÞōŌāĀēĒØøłŁàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêěîôûčÂĚÊšŠÎÔŪÛŽžÐŻżãñõÃÑÕäëïöüÿÄËÏÖÜŸőŐçÇßðÅåÆæœ]+)?\s[a-zA-ZÞōŌāĀēĒØøłŁàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêěîôûčÂĚÊšŠÎÔŪÛŽžÐŻżãñõÃÑÕäëïöüÿÄËÏÖÜŸőŐçÇßðÅåÆæœ]+(\-[a-zA-ZÞōŌāĀēĒØøłŁàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêěîôûčÂĚÊšŠÎÔŪÛŽžÐŻżãñõÃÑÕäëïöüÿÄËÏÖÜŸőŐçÇßðÅåÆæœ]+)?$/;
   });
 
   describe('withAccents is passed', () => {
@@ -19,31 +22,31 @@ describe('fullName', () => {
       it('should return a string with a first name, a space and then last name', () => {
         const result = randFullName({ withAccents: false });
 
-        expect(result.match(/^\w+\s\w+$/)).toBeTruthy();
+        expect(result).toMatch(nameStructureRegex);
       });
 
       it('should return a string should contain accents', () => {
         const result = randFullName({ withAccents });
 
-        expect(result.match(specialCharRegex)).toBeTruthy();
+        expect(result).toMatch(specialCharRegex);
       });
     });
 
-    describe('withAccents is false', () => {
+    describe.only('withAccents is false', () => {
       beforeEach(() => {
         withAccents = false;
       });
 
-      it('should return a string with a first name, a space and then last name', () => {
+      it.only('should return a string with a first name, a space and then last name', () => {
         const result = randFullName({ withAccents: false });
 
-        expect(result.match(/^\w+\s\w+$/)).toBeTruthy();
+        expect(result).toMatch(nameStructureRegex);
       });
 
       it('should not return a string should contain accents', () => {
         const result = randFullName({ withAccents });
 
-        expect(result.match(specialCharRegex)).toBeFalsy();
+        expect(result).not.toMatch(specialCharRegex);
       });
     });
   });
