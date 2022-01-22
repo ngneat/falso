@@ -38,17 +38,15 @@ export function randMask<
     return mask
       .split('')
       .map((item) => {
-        let replaceChar = '';
         if (item == char)
-          replaceChar = randomChars.charAt(
-            Math.floor(Math.random() * randomChars.length)
+          return randomChars.charAt(
+            getRandomInRange({ min: 0, max: randomChars.length })
           );
         else if (item == digit)
-          replaceChar = randomDigits.charAt(
-            Math.floor(Math.random() * randomDigits.length)
+          return randomDigits.charAt(
+            getRandomInRange({ min: 0, max: randomDigits.length })
           );
-        else replaceChar = item;
-        return replaceChar;
+        else return item;
       })
       .join('');
   }, options);
