@@ -149,4 +149,7 @@ export { randBrand } from './lib/brand';
 export { randPermission } from './lib/permission';
 export { randEmailProvider } from './lib/email-provider';
 export { randClothingSize } from './lib/clothing-size';
+export { randPronoun } from './lib/pronoun';
+export { randQuote } from './lib/quote';
+export { randEmoji } from './lib/emoji';
 export { randDrinks } from './lib/drinks';
