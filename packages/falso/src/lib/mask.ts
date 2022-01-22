@@ -1,4 +1,5 @@
 import { fake, FakeOptions, getRandomInRange } from './core/core';
+import { randAlpha } from './alpha';
 
 /**
  * Generate a random mask.
@@ -32,20 +33,12 @@ export function randMask<
       options?.digit ?? '#',
     ];
 
-    const randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    const randomDigits = '0123456789';
-
     return mask
       .split('')
       .map((item) => {
-        if (item == char)
-          return randomChars.charAt(
-            getRandomInRange({ min: 0, max: randomChars.length })
-          );
+        if (item == char) return randAlpha();
         else if (item == digit)
-          return randomDigits.charAt(
-            getRandomInRange({ min: 0, max: randomDigits.length })
-          );
+          return getRandomInRange({ min: 0, max: 9, fraction: 0 });
         else return item;
       })
       .join('');
