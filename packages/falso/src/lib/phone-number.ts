@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { FakeOptions, fake, getRandomInRange } from './core/core';
 import { rand } from './rand';
 import { data } from './phone-number.json';
 
@@ -258,24 +258,25 @@ export function randPhoneNumber<
     countryCode?: CountryCode;
   }
 >(options?: Options) {
-  let formats = data.map(({ formats }) => formats).flat();
+  let formats: string[];
 
   if (options?.countryCode) {
     formats =
       data.find((country) => {
         return country.countryCode.includes(options.countryCode!);
       })?.formats || [];
+  } else {
+    formats = data.map(({ formats }) => formats).flat();
   }
 
-  const minNumb = 0;
-  const maxNumb = 9;
-
-  let phoneNumber = Array.from({ length: options?.length || 1 }, (_, index) => {
-    return rand(formats).replace(/#/g, () => {
-      return (
-        '' + (Math.floor(Math.random() * (maxNumb - minNumb + 1)) + minNumb)
+  const phoneNumber = Array.from(
+    { length: options?.length || 1 },
+    (_, index) => {
+      return rand(formats).replace(
+        /#/g,
+        '' + getRandomInRange({ min: 0, max: 9, fraction: 0 })
       );
-    });
-  }) as any;
+    }
+  );
   return fake(phoneNumber, options);
 }

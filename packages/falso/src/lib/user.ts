@@ -46,7 +46,7 @@ export function randUser<Options extends FakeOptions>(options?: Options) {
       email: randEmail(),
       firstName: randFirstName(),
       lastName: randLastName(),
-      phone: <string>randPhoneNumber(),
+      phone: randPhoneNumber(),
       img: randAvatar(),
       username: randUserName(),
       address: {
