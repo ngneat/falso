@@ -156,3 +156,4 @@ export { randQuote } from './lib/quote';
 export { randEmoji } from './lib/emoji';
 export { randDrinks } from './lib/drinks';
 export { randFontFamily } from './lib/font-family';
+export { randStatus } from './lib/status';
