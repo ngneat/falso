@@ -2,6 +2,31 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.13.0](https://github.com/ngneat/falso/compare/falso-2.12.0...falso-2.13.0) (2022-01-23)
+
+### Bug Fixes
+
+- 🐞 use static type ([17a324c](https://github.com/ngneat/falso/commit/17a324cb39ea586691ca35d74f000e4a8c7d15f1)), closes [#125](https://github.com/ngneat/falso/issues/125)
+
+### Features
+
+- 🔥 Add random fontSize ([c7ff471](https://github.com/ngneat/falso/commit/c7ff471008c25c05e436dcef9dd978cf9971967b))
+- 🔥 Added socialRand ([71b5a44](https://github.com/ngneat/falso/commit/71b5a44b24e3eb766976bd6f1eb78839dedbed4e)), closes [#113](https://github.com/ngneat/falso/issues/113)
+
+# [2.12.0](https://github.com/ngneat/falso/compare/falso-2.11.0...falso-2.12.0) (2022-01-23)
+
+### Bug Fixes
+
+- 🐞 Stop randFullName tests failing intermittently ([c7b59f0](https://github.com/ngneat/falso/commit/c7b59f0802f02dd699eb00e7ba8775df59f1a2f2)), closes [#120](https://github.com/ngneat/falso/issues/120)
+
+### Features
+
+- 🔥 Add random fontFamily ([2d6f694](https://github.com/ngneat/falso/commit/2d6f694ce19aa01bb264633a88e00d4723a02c86))
+- 🔥 Add random fontFamily ([ecaa1b6](https://github.com/ngneat/falso/commit/ecaa1b63d9ef040356ce7d1de7ebd0f72ba6d27c))
+- 🔥 Add random fontFamily ([71c5c5b](https://github.com/ngneat/falso/commit/71c5c5b4e8f4d723b5f50050c5a82c3aed214d62))
+- 🔥 Add generator for accessories ([f8a18d5](https://github.com/ngneat/falso/commit/f8a18d586708ade54fdd4b6351695d78fb4de625)), closes [#117](https://github.com/ngneat/falso/issues/117)
+- 🔥 added random status generator ([3e1dc64](https://github.com/ngneat/falso/commit/3e1dc64351b8b9cc225ed1af60c0071030e5b557))
+
 # [2.11.0](https://github.com/ngneat/falso/compare/falso-2.10.0...falso-2.11.0) (2022-01-23)
 
 ### Bug Fixes
