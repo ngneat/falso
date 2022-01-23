@@ -36,8 +36,8 @@ export function randMask<
     return mask
       .split('')
       .map((item) => {
-        if (item == char) return randAlpha();
-        else if (item == digit)
+        if (item === char) return randAlpha();
+        else if (item === digit)
           return getRandomInRange({ min: 0, max: 9, fraction: 0 });
         else return item;
       })
