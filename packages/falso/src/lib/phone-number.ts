@@ -1,6 +1,7 @@
 import { FakeOptions, fake, getRandomInRange } from './core/core';
 import { rand } from './rand';
 import { data } from './phone-number.json';
+import { randMask } from './mask';
 
 type CountryCode =
   | 'AC'
@@ -272,10 +273,9 @@ export function randPhoneNumber<
   const phoneNumber = Array.from(
     { length: options?.length || 1 },
     (_, index) => {
-      return rand(formats).replace(
-        /#/g,
-        '' + getRandomInRange({ min: 0, max: 9, fraction: 0 })
-      );
+      return randMask({
+        mask: rand(formats),
+      });
     }
   );
   return fake(phoneNumber, options);
