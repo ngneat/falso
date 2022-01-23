@@ -2,6 +2,29 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.10.0](https://github.com/ngneat/falso/compare/falso-2.9.0...falso-2.10.0) (2022-01-23)
+
+### Bug Fixes
+
+- converting string to array is updated ([14bbb5f](https://github.com/ngneat/falso/commit/14bbb5f3bf3d230e3323fe9799dcbb7ca62d8b23))
+
+### Features
+
+- added phone number formats ([9cb16bf](https://github.com/ngneat/falso/commit/9cb16bf7a5aad9504d127c804897f75bd2d04ab5))
+- updated to accept user specified mask ([38cd258](https://github.com/ngneat/falso/commit/38cd2581a9478d6472353da0550a1715a3215ea2))
+
+# [2.9.0](https://github.com/ngneat/falso/compare/falso-2.8.0...falso-2.9.0) (2022-01-22)
+
+### Bug Fixes
+
+- 🐞 export randPronoun and randQuote functions ([aa71937](https://github.com/ngneat/falso/commit/aa71937fa1bdf92aeb5289564df71fd064df4184)), closes [#99](https://github.com/ngneat/falso/issues/99)
+- 🐞 Full name formatting when length is passed ([d70f44e](https://github.com/ngneat/falso/commit/d70f44ef234ae52065cd64170ad7f8dd258236ae)), closes [#100](https://github.com/ngneat/falso/issues/100)
+
+### Features
+
+- 🔥 add generator for drinks ([078636b](https://github.com/ngneat/falso/commit/078636b5f26a76d8ee7b7e1b2073a060b89fbcc2)), closes [#96](https://github.com/ngneat/falso/issues/96)
+- 🔥 added random emoji generator ([3ca1b6b](https://github.com/ngneat/falso/commit/3ca1b6b1dd22af9640b8b1ccaa87132ba3ee7339))
+
 # [2.8.0](https://github.com/ngneat/falso/compare/falso-2.7.0...falso-2.8.0) (2022-01-21)
 
 ### Features

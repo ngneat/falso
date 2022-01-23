@@ -1,0 +1,974 @@
+{
+  "data": [
+    {
+      "formats": ["+247 ####"],
+      "countryCode": ["AC"]
+    },
+    {
+      "formats": ["+376 ### ###"],
+      "countryCode": ["AD"]
+    },
+    {
+      "formats": ["+971 ## ### ####", "+971 # ### ####"],
+      "countryCode": ["AE"]
+    },
+    {
+      "formats": ["+93 ## ### ####"],
+      "countryCode": ["AF"]
+    },
+    {
+      "formats": ["+1(268)### ####"],
+      "countryCode": ["AG"]
+    },
+    {
+      "formats": ["+1(264)### ####"],
+      "countryCode": ["AI"]
+    },
+    {
+      "formats": ["+355(###)### ###"],
+      "countryCode": ["AL"]
+    },
+    {
+      "formats": ["+374 ## ### ###"],
+      "countryCode": ["AM"]
+    },
+    {
+      "formats": ["+599 ### ####", "+599 9### ####"],
+      "countryCode": ["AN"]
+    },
+    {
+      "formats": ["+244(###)### ###"],
+      "countryCode": ["AO"]
+    },
+    {
+      "formats": ["+672 1## ###"],
+      "countryCode": ["AQ"]
+    },
+    {
+      "formats": ["+54(###)### ####"],
+      "countryCode": ["AR"]
+    },
+    {
+      "formats": ["+1(684)### ####"],
+      "countryCode": ["AS"]
+    },
+    {
+      "formats": ["+43(###)### ####"],
+      "countryCode": ["AT"]
+    },
+    {
+      "formats": ["+61 # #### ####"],
+      "countryCode": ["AU"]
+    },
+    {
+      "formats": ["+297 ### ####"],
+      "countryCode": ["AW"]
+    },
+    {
+      "formats": ["+994 ## ### ## ##"],
+      "countryCode": ["AZ"]
+    },
+    {
+      "formats": ["+387 ## #####", "+387 ## ####"],
+      "countryCode": ["BA"]
+    },
+    {
+      "formats": ["+1(246)### ####"],
+      "countryCode": ["BB"]
+    },
+    {
+      "formats": ["+880 ## ### ###"],
+      "countryCode": ["BD"]
+    },
+    {
+      "formats": ["+32(###)### ###"],
+      "countryCode": ["BE"]
+    },
+    {
+      "formats": ["+226 ## ## ####"],
+      "countryCode": ["BF"]
+    },
+    {
+      "formats": ["+359(###)### ###"],
+      "countryCode": ["BG"]
+    },
+    {
+      "formats": ["+973 #### ####"],
+      "countryCode": ["BH"]
+    },
+    {
+      "formats": ["+257 ## ## ####"],
+      "countryCode": ["BI"]
+    },
+    {
+      "formats": ["+229 ## ## ####"],
+      "countryCode": ["BJ"]
+    },
+    {
+      "formats": ["+1(441)### ####"],
+      "countryCode": ["BM"]
+    },
+    {
+      "formats": ["+673 ### ####"],
+      "countryCode": ["BN"]
+    },
+    {
+      "formats": ["+591 # ### ####"],
+      "countryCode": ["BO"]
+    },
+    {
+      "formats": ["+55 ## #### ####, +55 ## ##### ####"],
+      "countryCode": ["BR"]
+    },
+    {
+      "formats": ["+1(242)### ####"],
+      "countryCode": ["BS"]
+    },
+    {
+      "formats": ["+975 17 ### ###, +975 # ### ###"],
+      "countryCode": ["BT"]
+    },
+    {
+      "formats": ["+267 ## ### ###"],
+      "countryCode": ["BW"]
+    },
+    {
+      "formats": ["+375(##)### ## ##"],
+      "countryCode": ["BY"]
+    },
+    {
+      "formats": ["+501 ### ####"],
+      "countryCode": ["BZ"]
+    },
+    {
+      "formats": ["+243(###)### ###"],
+      "countryCode": ["CD"]
+    },
+    {
+      "formats": ["+236 ## ## ####"],
+      "countryCode": ["CF"]
+    },
+    {
+      "formats": ["+242 ## ### ####"],
+      "countryCode": ["CG"]
+    },
+    {
+      "formats": ["+41 ## ### ####"],
+      "countryCode": ["CH"]
+    },
+    {
+      "formats": ["+225 ## ### ###"],
+      "countryCode": ["CI"]
+    },
+    {
+      "formats": ["+682 ## ###"],
+      "countryCode": ["CK"]
+    },
+    {
+      "formats": ["+56 # #### ####"],
+      "countryCode": ["CL"]
+    },
+    {
+      "formats": ["+237 #### ####"],
+      "countryCode": ["CM"]
+    },
+    {
+      "formats": [
+        "+86(###)#### ####",
+        "+86(###)#### ###",
+        "+86 ## ##### #####"
+      ],
+      "countryCode": ["CN"]
+    },
+    {
+      "formats": ["+57(###)### ####"],
+      "countryCode": ["CO"]
+    },
+    {
+      "formats": ["+506 #### ####"],
+      "countryCode": ["CR"]
+    },
+    {
+      "formats": ["+53 # ### ####"],
+      "countryCode": ["CU"]
+    },
+    {
+      "formats": ["+238(###)## ##"],
+      "countryCode": ["CV"]
+    },
+    {
+      "formats": ["+599 ### ####"],
+      "countryCode": ["CW"]
+    },
+    {
+      "formats": ["+357 ## ### ###"],
+      "countryCode": ["CY"]
+    },
+    {
+      "formats": ["+420(###)### ###"],
+      "countryCode": ["CZ"]
+    },
+    {
+      "formats": [
+        "+49(####)### ####, +49(###)### ####",
+        "+49(###)## ####",
+        "+49(###)## ###",
+        "+49(###)## ##",
+        "+49 ### ###"
+      ],
+      "countryCode": ["DE"]
+    },
+    {
+      "formats": ["+253 ## ## ## ##"],
+      "countryCode": ["DJ"]
+    },
+    {
+      "formats": ["+45 ## ## ## ##"],
+      "countryCode": ["DK"]
+    },
+    {
+      "formats": ["+1(767)### ####"],
+      "countryCode": ["DM"]
+    },
+    {
+      "formats": ["+1(809)### ####", "+1(829)### ####", "+1(849)### ####"],
+      "countryCode": ["DO"]
+    },
+    {
+      "formats": ["+213 ## ### ####"],
+      "countryCode": ["DZ"]
+    },
+    {
+      "formats": ["+593 ## ### ####", "+593 # ### ####"],
+      "countryCode": ["EC"]
+    },
+    {
+      "formats": ["+372 #### ####", "+372 ### ####"],
+      "countryCode": ["EE"]
+    },
+    {
+      "formats": ["+20(###)### ####"],
+      "countryCode": ["EG"]
+    },
+    {
+      "formats": ["+291 # ### ###"],
+      "countryCode": ["ER"]
+    },
+    {
+      "formats": ["+34(###)### ###"],
+      "countryCode": ["ES"]
+    },
+    {
+      "formats": ["+251 ## ### ####"],
+      "countryCode": ["ET"]
+    },
+    {
+      "formats": ["+358(###)### ## ##"],
+      "countryCode": ["FI"]
+    },
+    {
+      "formats": ["+679 ## #####"],
+      "countryCode": ["FJ"]
+    },
+    {
+      "formats": ["+500 #####"],
+      "countryCode": ["FK"]
+    },
+    {
+      "formats": ["+691 ### ####"],
+      "countryCode": ["FM"]
+    },
+    {
+      "formats": ["+298 ### ###"],
+      "countryCode": ["FO"]
+    },
+    {
+      "formats": [
+        "+262 ##### ####",
+        "+33 # ## ## ## ##",
+        "+508 ## ####",
+        "+590(###)### ###"
+      ],
+      "countryCode": ["FR"]
+    },
+    {
+      "formats": ["+241 # ## ## ##"],
+      "countryCode": ["GA"]
+    },
+    {
+      "formats": ["+1(473)### ####"],
+      "countryCode": ["GD"]
+    },
+    {
+      "formats": ["+995(###)### ###"],
+      "countryCode": ["GE"]
+    },
+    {
+      "formats": ["+594 ##### ####"],
+      "countryCode": ["GF"]
+    },
+    {
+      "formats": ["+233(###)### ###"],
+      "countryCode": ["GH"]
+    },
+    {
+      "formats": ["+350 ### #####"],
+      "countryCode": ["GI"]
+    },
+    {
+      "formats": ["+299 ## ## ##"],
+      "countryCode": ["GL"]
+    },
+    {
+      "formats": ["+220(###)## ##"],
+      "countryCode": ["GM"]
+    },
+    {
+      "formats": ["+224 ## ### ###"],
+      "countryCode": ["GN"]
+    },
+    {
+      "formats": ["+240 ## ### ####"],
+      "countryCode": ["GQ"]
+    },
+    {
+      "formats": ["+30(###)### ####"],
+      "countryCode": ["GR"]
+    },
+    {
+      "formats": ["+502 # ### ####"],
+      "countryCode": ["GT"]
+    },
+    {
+      "formats": ["+1(671)### ####"],
+      "countryCode": ["GU"]
+    },
+    {
+      "formats": ["+245 # ######"],
+      "countryCode": ["GW"]
+    },
+    {
+      "formats": ["+592 ### ####"],
+      "countryCode": ["GY"]
+    },
+    {
+      "formats": ["+852 #### ####"],
+      "countryCode": ["HK"]
+    },
+    {
+      "formats": ["+504 #### ####"],
+      "countryCode": ["HN"]
+    },
+    {
+      "formats": ["+385 (##) ### ###", "+385 (##) ### ####", "+385 1 #### ###"],
+      "countryCode": ["HR"]
+    },
+    {
+      "formats": ["+509 ## ## ####"],
+      "countryCode": ["HT"]
+    },
+    {
+      "formats": ["+36(###)### ###"],
+      "countryCode": ["HU"]
+    },
+    {
+      "formats": [
+        "+62(8##)### ####",
+        "+62(8##)### ###",
+        "+62(8##)### ## ###",
+        "+62 ## ### ##",
+        "+62 ## ### ###",
+        "+62 ## ### ####"
+      ],
+      "countryCode": ["ID"]
+    },
+    {
+      "formats": ["+353(###)### ###"],
+      "countryCode": ["IE"]
+    },
+    {
+      "formats": ["+972 5# ### ####", "+972 # ### ####"],
+      "countryCode": ["IL"]
+    },
+    {
+      "formats": ["+91 ##### #####"],
+      "countryCode": ["IN"]
+    },
+    {
+      "formats": ["+246 ### ####"],
+      "countryCode": ["IO"]
+    },
+    {
+      "formats": ["+964(###)### ####"],
+      "countryCode": ["IQ"]
+    },
+    {
+      "formats": ["+98(###)### ####"],
+      "countryCode": ["IR"]
+    },
+    {
+      "formats": ["+354 ### ####"],
+      "countryCode": ["IS"]
+    },
+    {
+      "formats": [
+        "+39(0##)#### ## ##",
+        "+39(0##)#### ###",
+        "+39(0##)### ###",
+        "+39(0##)## ###",
+        "+39(0##)## ##",
+        "+39(0#)## ##",
+        "+39(3##)### ## ##",
+        "+39(3##)## ## ##"
+      ],
+      "countryCode": ["IT"]
+    },
+    {
+      "formats": ["+1(876)### ####"],
+      "countryCode": ["JM"]
+    },
+    {
+      "formats": ["+962 # #### ####"],
+      "countryCode": ["JO"]
+    },
+    {
+      "formats": ["+81 ## #### ####", "+81(###)### ###"],
+      "countryCode": ["JP"]
+    },
+    {
+      "formats": ["+254 ### ######"],
+      "countryCode": ["KE"]
+    },
+    {
+      "formats": ["+996(###)### ###"],
+      "countryCode": ["KG"]
+    },
+    {
+      "formats": ["+855 ## ### ###"],
+      "countryCode": ["KH"]
+    },
+    {
+      "formats": ["+686 ## ###"],
+      "countryCode": ["KI"]
+    },
+    {
+      "formats": ["+269 ## #####"],
+      "countryCode": ["KM"]
+    },
+    {
+      "formats": ["+1(869)### ####"],
+      "countryCode": ["KN"]
+    },
+    {
+      "formats": [
+        "+850 191 ### ####",
+        "+850 ## ### ###",
+        "+850 ### #### ###",
+        "+850 ### ###",
+        "+850 #### ####",
+        "+850 #### #############"
+      ],
+      "countryCode": ["KP"]
+    },
+    {
+      "formats": ["+82 ## ### ####"],
+      "countryCode": ["KR"]
+    },
+    {
+      "formats": ["+965 #### ####"],
+      "countryCode": ["KW"]
+    },
+    {
+      "formats": ["+1(345)### ####"],
+      "countryCode": ["KY"]
+    },
+    {
+      "formats": ["+7(6##)### ## ##", "+7(7##)### ## ##"],
+      "countryCode": ["KZ"]
+    },
+    {
+      "formats": ["+856(20##)### ###", "+856 ## ### ###"],
+      "countryCode": ["LA"]
+    },
+    {
+      "formats": ["+961 ## ### ###", "+961 # ### ###"],
+      "countryCode": ["LB"]
+    },
+    {
+      "formats": ["+1(758)### ####"],
+      "countryCode": ["LC"]
+    },
+    {
+      "formats": ["+423(###)### ####"],
+      "countryCode": ["LI"]
+    },
+    {
+      "formats": ["+94 ## ### ####"],
+      "countryCode": ["LK"]
+    },
+    {
+      "formats": ["+231 ## ### ###"],
+      "countryCode": ["LR"]
+    },
+    {
+      "formats": ["+266 # ### ####"],
+      "countryCode": ["LS"]
+    },
+    {
+      "formats": ["+370(###)## ###"],
+      "countryCode": ["LT"]
+    },
+    {
+      "formats": [
+        "+352 ### ###",
+        "+352 #### ###",
+        "+352 ##### ###",
+        "+352 ###### ###"
+      ],
+      "countryCode": ["LU"]
+    },
+    {
+      "formats": ["+371 ## ### ###"],
+      "countryCode": ["LV"]
+    },
+    {
+      "formats": ["+218 ## ### ###", "+218 21 ### ####"],
+      "countryCode": ["LY"]
+    },
+    {
+      "formats": ["+212 ## #### ###"],
+      "countryCode": ["MA"]
+    },
+    {
+      "formats": ["+377(###)### ###", "+377 ## ### ###"],
+      "countryCode": ["MC"]
+    },
+    {
+      "formats": ["+373 #### ####"],
+      "countryCode": ["MD"]
+    },
+    {
+      "formats": ["+382 ## ### ###"],
+      "countryCode": ["ME"]
+    },
+    {
+      "formats": ["+261 ## ## #####"],
+      "countryCode": ["MG"]
+    },
+    {
+      "formats": ["+692 ### ####"],
+      "countryCode": ["MH"]
+    },
+    {
+      "formats": ["+389 ## ### ###"],
+      "countryCode": ["MK"]
+    },
+    {
+      "formats": ["+223 ## ## ####"],
+      "countryCode": ["ML"]
+    },
+    {
+      "formats": ["+95 ## ### ###", "+95 # ### ###", "+95 ### ###"],
+      "countryCode": ["MM"]
+    },
+    {
+      "formats": ["+976 ## ## ####"],
+      "countryCode": ["MN"]
+    },
+    {
+      "formats": ["+853 #### ####"],
+      "countryCode": ["MO"]
+    },
+    {
+      "formats": ["+1(670)### ####"],
+      "countryCode": ["MP"]
+    },
+    {
+      "formats": ["+596(###)## ## ##"],
+      "countryCode": ["MQ"]
+    },
+    {
+      "formats": ["+222 ## ## ####"],
+      "countryCode": ["MR"]
+    },
+    {
+      "formats": ["+1(664)### ####"],
+      "countryCode": ["MS"]
+    },
+    {
+      "formats": ["+356 #### ####"],
+      "countryCode": ["MT"]
+    },
+    {
+      "formats": ["+230 ### ####"],
+      "countryCode": ["MU"]
+    },
+    {
+      "formats": ["+960 ### ####"],
+      "countryCode": ["MV"]
+    },
+    {
+      "formats": ["+265 1 ### ###", "+265 # #### ####"],
+      "countryCode": ["MW"]
+    },
+    {
+      "formats": ["+52(###)### ####", "+52 ## ## ####"],
+      "countryCode": ["MX"]
+    },
+    {
+      "formats": [
+        "+60 ## ### ####",
+        "+60 11 #### ####",
+        "+60(###)### ###",
+        "+60 ## ### ###",
+        "+60 # ### ###"
+      ],
+      "countryCode": ["MY"]
+    },
+    {
+      "formats": ["+258 ## ### ###"],
+      "countryCode": ["MZ"]
+    },
+    {
+      "formats": ["+264 ## ### ####"],
+      "countryCode": ["NA"]
+    },
+    {
+      "formats": ["+687 ## ####"],
+      "countryCode": ["NC"]
+    },
+    {
+      "formats": ["+227 ## ## ####"],
+      "countryCode": ["NE"]
+    },
+    {
+      "formats": ["+672 3## ###"],
+      "countryCode": ["NF"]
+    },
+    {
+      "formats": [
+        "+234(###)### ####",
+        "+234 ## ### ###",
+        "+234 ## ### ##",
+        "+234(###)### ####"
+      ],
+      "countryCode": ["NG"]
+    },
+    {
+      "formats": ["+505 #### ####"],
+      "countryCode": ["NI"]
+    },
+    {
+      "formats": ["+31 ## ### ####"],
+      "countryCode": ["NL"]
+    },
+    {
+      "formats": ["+47(###)## ###"],
+      "countryCode": ["NO"]
+    },
+    {
+      "formats": ["+977 ## ### ###"],
+      "countryCode": ["NP"]
+    },
+    {
+      "formats": ["+674 ### ####"],
+      "countryCode": ["NR"]
+    },
+    {
+      "formats": ["+683 ####"],
+      "countryCode": ["NU"]
+    },
+    {
+      "formats": ["+64(###)### ###[#]", "+64 ## ### ###"],
+      "countryCode": ["NZ"]
+    },
+    {
+      "formats": ["+968 ## ### ###"],
+      "countryCode": ["OM"]
+    },
+    {
+      "formats": ["+507 ### ####"],
+      "countryCode": ["PA"]
+    },
+    {
+      "formats": ["+51(###)### ###"],
+      "countryCode": ["PE"]
+    },
+    {
+      "formats": ["+689 ## ## ##"],
+      "countryCode": ["PF"]
+    },
+    {
+      "formats": ["+675(###)## ###"],
+      "countryCode": ["PG"]
+    },
+    {
+      "formats": ["+63(###)### ####"],
+      "countryCode": ["PH"]
+    },
+    {
+      "formats": ["+92(###)### ####"],
+      "countryCode": ["PK"]
+    },
+    {
+      "formats": ["+48(###)### ###"],
+      "countryCode": ["PL"]
+    },
+    {
+      "formats": ["+970 ## ### ####"],
+      "countryCode": ["PS"]
+    },
+    {
+      "formats": ["+351 ## ### ####"],
+      "countryCode": ["PT"]
+    },
+    {
+      "formats": ["+680 ### ####"],
+      "countryCode": ["PW"]
+    },
+    {
+      "formats": ["+595(###)### ###"],
+      "countryCode": ["PY"]
+    },
+    {
+      "formats": ["+974 #### ####"],
+      "countryCode": ["QA"]
+    },
+    {
+      "formats": ["+262 ##### ####"],
+      "countryCode": ["RE"]
+    },
+    {
+      "formats": ["+40 ## ### ####"],
+      "countryCode": ["RO"]
+    },
+    {
+      "formats": ["+381 ## ### ####"],
+      "countryCode": ["RS"]
+    },
+    {
+      "formats": ["+7(###)### ## ##"],
+      "countryCode": ["RU"]
+    },
+    {
+      "formats": ["+250(###)### ###"],
+      "countryCode": ["RW"]
+    },
+    {
+      "formats": ["+966 5 #### ####", "+966 # ### ####"],
+      "countryCode": ["SA"]
+    },
+    {
+      "formats": ["+677 ### ####", "+677 #####"],
+      "countryCode": ["SB"]
+    },
+    {
+      "formats": ["+248 # ### ###"],
+      "countryCode": ["SC"]
+    },
+    {
+      "formats": ["+249 ## ### ####"],
+      "countryCode": ["SD"]
+    },
+    {
+      "formats": ["+46 ## ### ####"],
+      "countryCode": ["SE"]
+    },
+    {
+      "formats": ["+65 #### ####"],
+      "countryCode": ["SG"]
+    },
+    {
+      "formats": ["+290 ####", "+290 ####"],
+      "countryCode": ["SH"]
+    },
+    {
+      "formats": ["+386 ## ### ###"],
+      "countryCode": ["SI"]
+    },
+    {
+      "formats": ["+421(###)### ###"],
+      "countryCode": ["SK"]
+    },
+    {
+      "formats": ["+232 ## ######"],
+      "countryCode": ["SL"]
+    },
+    {
+      "formats": ["+378 #### ######"],
+      "countryCode": ["SM"]
+    },
+    {
+      "formats": ["+221 ## ### ####"],
+      "countryCode": ["SN"]
+    },
+    {
+      "formats": ["+252 ## ### ###", "+252 # ### ###", "+252 # ### ###"],
+      "countryCode": ["SO"]
+    },
+    {
+      "formats": ["+597 ### ####", "+597 ### ###"],
+      "countryCode": ["SR"]
+    },
+    {
+      "formats": ["+211 ## ### ####"],
+      "countryCode": ["SS"]
+    },
+    {
+      "formats": ["+239 ## #####"],
+      "countryCode": ["ST"]
+    },
+    {
+      "formats": ["+503 ## ## ####"],
+      "countryCode": ["SV"]
+    },
+    {
+      "formats": ["+1(721)### ####"],
+      "countryCode": ["SX"]
+    },
+    {
+      "formats": ["+963 ## #### ###"],
+      "countryCode": ["SY"]
+    },
+    {
+      "formats": ["+268 ## ## ####"],
+      "countryCode": ["SZ"]
+    },
+    {
+      "formats": ["+1(649)### ####"],
+      "countryCode": ["TC"]
+    },
+    {
+      "formats": ["+235 ## ## ## ##"],
+      "countryCode": ["TD"]
+    },
+    {
+      "formats": ["+228 ## ### ###"],
+      "countryCode": ["TG"]
+    },
+    {
+      "formats": ["+66 ## ### ####", "+66 ## ### ###"],
+      "countryCode": ["TH"]
+    },
+    {
+      "formats": ["+992 ## ### ####"],
+      "countryCode": ["TJ"]
+    },
+    {
+      "formats": ["+690 ####"],
+      "countryCode": ["TK"]
+    },
+    {
+      "formats": ["+670 ### ####", "+670 77# #####", "+670 78# #####"],
+      "countryCode": ["TL"]
+    },
+    {
+      "formats": ["+993 # ### ####"],
+      "countryCode": ["TM"]
+    },
+    {
+      "formats": ["+216 ## ### ###"],
+      "countryCode": ["TN"]
+    },
+    {
+      "formats": ["+676 #####"],
+      "countryCode": ["TO"]
+    },
+    {
+      "formats": ["+90(###)### ####"],
+      "countryCode": ["TR"]
+    },
+    {
+      "formats": ["+1(868)### ####"],
+      "countryCode": ["TT"]
+    },
+    {
+      "formats": ["+688 90####", "+688 2####"],
+      "countryCode": ["TV"]
+    },
+    {
+      "formats": ["+886 # #### ####", "+886 #### ####"],
+      "countryCode": ["TW"]
+    },
+    {
+      "formats": ["+255 ## ### ####"],
+      "countryCode": ["TZ"]
+    },
+    {
+      "formats": ["+380(##)### ## ##"],
+      "countryCode": ["UA"]
+    },
+    {
+      "formats": ["+256(###)### ###"],
+      "countryCode": ["UG"]
+    },
+    {
+      "formats": ["+44 #### ######"],
+      "countryCode": ["GB", "UK"]
+    },
+    {
+      "formats": ["+598 # ### ## ##"],
+      "countryCode": ["UY"]
+    },
+    {
+      "formats": ["+998 ## ### ####"],
+      "countryCode": ["UZ"]
+    },
+    {
+      "formats": ["+39 6 698 #####"],
+      "countryCode": ["VA"]
+    },
+    {
+      "formats": ["+1(784)### ####"],
+      "countryCode": ["VC"]
+    },
+    {
+      "formats": ["+58(###)### ####"],
+      "countryCode": ["VE"]
+    },
+    {
+      "formats": ["+1(284)### ####"],
+      "countryCode": ["VG"]
+    },
+    {
+      "formats": ["+1(340)### ####"],
+      "countryCode": ["VI"]
+    },
+    {
+      "formats": ["+84 ## #### ###", "+84(###)#### ###"],
+      "countryCode": ["VN"]
+    },
+    {
+      "formats": ["+678 ## #####", "+678 #####"],
+      "countryCode": ["VU"]
+    },
+    {
+      "formats": ["+681 ## ####"],
+      "countryCode": ["WF"]
+    },
+    {
+      "formats": ["+685 ## ####"],
+      "countryCode": ["WS"]
+    },
+    {
+      "formats": ["+967 ### ### ###", "+967 # ### ###", "+967 ## ### ###"],
+      "countryCode": ["YE"]
+    },
+    {
+      "formats": ["+27 ## ### ####"],
+      "countryCode": ["ZA"]
+    },
+    {
+      "formats": ["+260 ## ### ####"],
+      "countryCode": ["ZM"]
+    },
+    {
+      "formats": ["+263 # ######"],
+      "countryCode": ["ZW"]
+    },
+    {
+      "formats": ["+1(###)### ####"],
+      "countryCode": ["US", "CA"]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { fake, FakeOptions, getRandomInRange } from './core/core';
+import { randAlpha } from './alpha';
 
 /**
  * Generate a random mask.
@@ -11,12 +12,35 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  *
  * @example
  *
+ * randMask({ mask: "@#### @##" })
+ *
+ * @example
+ *
  * randMask({ length: 10 })
  *
  */
-export function randMask<Options extends FakeOptions>(options?: Options) {
-  return fake(
-    () => getRandomInRange({ min: 1000, max: 9999 }).toString(),
-    options
-  );
+export function randMask<
+  Options extends FakeOptions & {
+    mask?: string;
+    char?: string;
+    digit?: string;
+  }
+>(options?: Options) {
+  return fake(() => {
+    const [mask, char, digit] = [
+      options?.mask ?? '@##@#',
+      options?.char ?? '@',
+      options?.digit ?? '#',
+    ];
+
+    return mask
+      .split('')
+      .map((item) => {
+        if (item === char) return randAlpha();
+        else if (item === digit)
+          return getRandomInRange({ min: 0, max: 9, fraction: 0 });
+        else return item;
+      })
+      .join('');
+  }, options);
 }
