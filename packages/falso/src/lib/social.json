@@ -1,0 +1,412 @@
+{
+  "data": [
+    {
+      "name": "Triller",
+      "link": "https://www.triller.co/"
+    },
+    {
+      "name": "Periscope",
+      "link": "https://www.periscope.tv/"
+    },
+    {
+      "name": "Vimeo",
+      "link": "https://vimeo.com/"
+    },
+    {
+      "name": "Valence",
+      "link": "https://valence.community/"
+    },
+    {
+      "name": "Untappd",
+      "link": "https://untappd.com/"
+    },
+    {
+      "name": "Elpha",
+      "link": "https://elpha.com/"
+    },
+    {
+      "name": "Yubo",
+      "link": "https://yubo.live/"
+    },
+    {
+      "name": "Peanut",
+      "link": "https://www.peanut-app.io/"
+    },
+    {
+      "name": "Houseparty",
+      "link": "https://houseparty.com/"
+    },
+    {
+      "name": "Caffeine",
+      "link": "https://www.caffeine.tv/"
+    },
+    {
+      "name": "Steemit",
+      "link": "https://steemit.com/"
+    },
+    {
+      "name": "Baidu Tieba",
+      "link": "https://tieba.baidu.com/"
+    },
+    {
+      "name": "23snaps",
+      "link": "https://www.23snaps.com/"
+    },
+    {
+      "name": "Likee",
+      "link": "https://likee.video/"
+    },
+    {
+      "name": "8tracks",
+      "link": "https://8tracks.com/"
+    },
+    {
+      "name": "Academia",
+      "link": "https://www.academia.edu/"
+    },
+    {
+      "name": "Amikumu",
+      "link": "https://amikumu.com/"
+    },
+    {
+      "name": "aNobii",
+      "link": "https://www.anobii.com/"
+    },
+    {
+      "name": "ASMALLWORLD",
+      "link": "https://www.asmallworld.com/"
+    },
+    {
+      "name": "Athlinks",
+      "link": "https://www.athlinks.com/"
+    },
+    {
+      "name": "BAND",
+      "link": "https://band.us/en"
+    },
+    {
+      "name": "beBee",
+      "link": "https://www.bebee.com/us/"
+    },
+    {
+      "name": "blind",
+      "link": "https://www.teamblind.com/"
+    },
+    {
+      "name": "diaspora*",
+      "link": "https://diasporafoundation.org/"
+    },
+    {
+      "name": "Fark",
+      "link": "https://www.fark.com/"
+    },
+    {
+      "name": "MeWe",
+      "link": "https://mewe.com/"
+    },
+    {
+      "name": "Facebook",
+      "link": "https://www.facebook.com/"
+    },
+    {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/"
+    },
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/"
+    },
+    {
+      "name": "Tumblr",
+      "link": "https://www.tumblr.com/"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/"
+    },
+    {
+      "name": "WhatsApp",
+      "link": "https://www.whatsapp.com/"
+    },
+    {
+      "name": "Snapchat",
+      "link": "https://www.snapchat.com/"
+    },
+    {
+      "name": "Pinterest",
+      "link": "https://www.pinterest.com/"
+    },
+    {
+      "name": "Reddit",
+      "link": "https://www.reddit.com/"
+    },
+    {
+      "name": "YouTube",
+      "link": "https://www.youtube.com/"
+    },
+    {
+      "name": "Mix",
+      "link": "https://mix.com/"
+    },
+    {
+      "name": "Tagged",
+      "link": "https://www.tagged.com/"
+    },
+    {
+      "name": "Nextdoor",
+      "link": "https://nextdoor.com/"
+    },
+    {
+      "name": "DeviantArt",
+      "link": "https://www.deviantart.com/"
+    },
+    {
+      "name": "Quora",
+      "link": "https://www.quora.com/"
+    },
+    {
+      "name": "Meetup",
+      "link": "https://www.meetup.com/"
+    },
+    {
+      "name": "ReverbNation",
+      "link": "https://www.reverbnation.com/"
+    },
+    {
+      "name": "Flixster",
+      "link": "https://www.flixster.com/"
+    },
+    {
+      "name": "Goodreads",
+      "link": "https://www.goodreads.com/"
+    },
+    {
+      "name": "Twitch",
+      "link": "https://www.twitch.tv/"
+    },
+    {
+      "name": "CaringBridge",
+      "link": "https://www.caringbridge.org/"
+    },
+    {
+      "name": "Wattpad",
+      "link": "https://www.wattpad.com/"
+    },
+    {
+      "name": "Viadeo",
+      "link": "http://www.viadeo.com/"
+    },
+    {
+      "name": "Crunchyroll",
+      "link": "https://www.crunchyroll.com/"
+    },
+    {
+      "name": "Skyrock",
+      "link": "https://www.skyrock.com/"
+    },
+    {
+      "name": "VK",
+      "link": "https://vk.com/"
+    },
+    {
+      "name": "MyHeritage",
+      "link": "https://www.myheritage.com/"
+    },
+    {
+      "name": "LiveJournal",
+      "link": "https://www.livejournal.com/"
+    },
+    {
+      "name": "Classmates",
+      "link": "https://www.classmates.com/"
+    },
+    {
+      "name": "SoundCloud",
+      "link": "https://soundcloud.com/"
+    },
+    {
+      "name": "Bubbly",
+      "link": "http://bubbly.net/"
+    },
+    {
+      "name": "Flickr",
+      "link": "https://www.flickr.com/"
+    },
+    {
+      "name": "We Heart It",
+      "link": "https://weheartit.com/"
+    },
+    {
+      "name": "Influenster",
+      "link": "https://www.influenster.com/"
+    },
+    {
+      "name": "FilmAffinity",
+      "link": "https://www.filmaffinity.com/en/main.html"
+    },
+    {
+      "name": "Open Diary",
+      "link": "https://www.opendiary.com/"
+    },
+    {
+      "name": "Yelp",
+      "link": "https://www.yelp.com/"
+    },
+    {
+      "name": "CollegeHumor",
+      "link": "http://www.collegehumor.com/"
+    },
+    {
+      "name": "Gaia Online",
+      "link": "https://www.gaiaonline.com/"
+    },
+    {
+      "name": "MocoSpace",
+      "link": "https://www.mocospace.com/"
+    },
+    {
+      "name": "CouchSurfing",
+      "link": "https://www.couchsurfing.com/"
+    },
+    {
+      "name": "Funny or Die",
+      "link": "https://www.funnyordie.com/"
+    },
+    {
+      "name": "italki",
+      "link": "https://www.italki.com/home"
+    },
+    {
+      "name": "eToro",
+      "link": "https://www.etoro.com/"
+    },
+    {
+      "name": "XING",
+      "link": "https://www.xing.com/en"
+    },
+    {
+      "name": "MeetMe",
+      "link": "https://www.meetme.com/"
+    },
+    {
+      "name": "Ravelry",
+      "link": "https://www.ravelry.com/account/login"
+    },
+    {
+      "name": "Care2",
+      "link": "https://www.care2.com/"
+    },
+    {
+      "name": "YY",
+      "link": "http://www.yy.com/"
+    },
+    {
+      "name": "Vero",
+      "link": "https://www.vero.co/"
+    },
+    {
+      "name": "Medium",
+      "link": "https://medium.com/"
+    },
+    {
+      "name": "GIPHY",
+      "link": "https://giphy.com/"
+    },
+    {
+      "name": "Tribe",
+      "link": "https://tribe.so/"
+    },
+    {
+      "name": "Tencent QQ",
+      "link": "https://www.qq.com/"
+    },
+    {
+      "name": "WeChat",
+      "link": "https://www.wechat.com/en"
+    },
+    {
+      "name": "Qzone",
+      "link": "https://qzone.qq.com/"
+    },
+    {
+      "name": "TikTok",
+      "link": "https://www.tiktok.com/trending?lang=en"
+    },
+    {
+      "name": "Sina Weibo",
+      "link": "https://www.weibo.com/overseas"
+    },
+    {
+      "name": "Kuaishou",
+      "link": "https://www.kuaishou.com/"
+    },
+    {
+      "name": "Skype",
+      "link": "https://www.skype.com/en/"
+    },
+    {
+      "name": "Viber",
+      "link": "https://www.viber.com/en/"
+    },
+    {
+      "name": "LINE",
+      "link": "https://line.me/en/"
+    },
+    {
+      "name": "LINE PLAY",
+      "link": "http://lp.play.line.me/en.html"
+    },
+    {
+      "name": "The Dots",
+      "link": "https://the-dots.com/"
+    },
+    {
+      "name": "Telegram",
+      "link": "https://telegram.org/"
+    },
+    {
+      "name": "Foursquare Swarm",
+      "link": "https://www.swarmapp.com/"
+    },
+    {
+      "name": "Douban",
+      "link": "https://www.douban.com/"
+    },
+    {
+      "name": "Discord",
+      "link": "https://discord.com/"
+    },
+    {
+      "name": "Badoo",
+      "link": "https://badoo.com/"
+    },
+    {
+      "name": "Myspace",
+      "link": "https://myspace.com/"
+    },
+    {
+      "name": "Mixi",
+      "link": "https://mixi.jp/"
+    },
+    {
+      "name": "Ravelry",
+      "link": "https://www.ravelry.com/account/login"
+    },
+    {
+      "name": "Cellufun",
+      "link": "http://www.cellufun.com/games.asp?v=59bfuWxNv00"
+    },
+    {
+      "name": "Xanga",
+      "link": "http://xanga.com/"
+    },
+    {
+      "name": "Imgur",
+      "link": "https://imgur.com/"
+    },
+    {
+      "name": "Ello",
+      "link": "https://ello.co/"
+    }
+  ]
+}
