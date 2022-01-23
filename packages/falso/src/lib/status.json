@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "status": "Pending",
+      "type": ["Project", "User Story"]
+    },
+    {
+      "status": "Todo",
+      "type": ["User Story", "Task"]
+    },
+    {
+      "status": "In progress",
+      "type": ["Task"]
+    },
+    {
+      "status": "In Discussion",
+      "type": ["User Story"]
+    },
+    {
+      "status": "In Development",
+      "type": ["User Story", "Task"]
+    },
+    {
+      "status": "Needs Confirmation",
+      "type": ["User Story"]
+    },
+    {
+      "status": "Completed",
+      "type": ["User Story", "Task", "Project"]
+    },
+    {
+      "status": "Upcoming",
+      "type": ["Project"]
+    },
+    {
+      "status": "Overdue",
+      "type": ["Project"]
+    },
+    {
+      "status": "Not started",
+      "type": ["Project"]
+    },
+    {
+      "status": "Active",
+      "type": ["Project"]
+    },
+    {
+      "status": "Priority",
+      "type": ["Project"]
+    },
+    {
+      "status": "Canceled",
+      "type": ["Project"]
+    },
+    {
+      "status": "Closed",
+      "type": ["Project", "Task"]
+    },
+    {
+      "status": "New",
+      "type": ["Project", "Task", "User Story"]
+    },
+    {
+      "status": "On hold",
+      "type": ["Project"]
+    }
+  ]
+}
