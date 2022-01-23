@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.11.0](https://github.com/ngneat/falso/compare/falso-2.10.0...falso-2.11.0) (2022-01-23)
+
+### Bug Fixes
+
+- 🐞 correct typo ([0074565](https://github.com/ngneat/falso/commit/0074565da5d44d53ce948579c3be36a3e5589492))
+
+### Features
+
+- 🔥 add generator for shapes ([b322c30](https://github.com/ngneat/falso/commit/b322c30dfbd094437ed3a469e442d25bfeb29cd1)), closes [#98](https://github.com/ngneat/falso/issues/98)
+- 🔥 extend random movie characters list ([56db442](https://github.com/ngneat/falso/commit/56db442d80d1bcf0fc737851994e55466b16b35b))
+- 🔥 generate random movie characters ([cfbf0fe](https://github.com/ngneat/falso/commit/cfbf0fe99031f8999b8dfeb981423a381e541b3b)), closes [#97](https://github.com/ngneat/falso/issues/97)
+
 # [2.10.0](https://github.com/ngneat/falso/compare/falso-2.9.0...falso-2.10.0) (2022-01-23)
 
 ### Bug Fixes
