@@ -158,3 +158,4 @@ export { randDrinks } from './lib/drinks';
 export { randFontFamily } from './lib/font-family';
 export { randStatus } from './lib/status';
 export { randAccessory } from './lib/accessory';
+export { randFontSize } from './lib/font-size';
