@@ -2,9 +2,9 @@ import { FakeOptions, fake } from './core/core';
 import { data } from './social.json';
 
 /**
- * Generate random SocialNetwork
+ * Generate random social network
  *
- * @category Social
+ * @category internet
  *
  * @example
  *
@@ -12,11 +12,8 @@ import { data } from './social.json';
  *
  * @example
  *
- * randSocial({length: 2})
+ * randSocial({ length: 2 })
  *
- * @returns
- *
- * An object, or list of object in format object.name, object.link
  *
  */
 
