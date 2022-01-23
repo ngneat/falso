@@ -6,11 +6,15 @@ type Type = 'Project' | 'User Story' | 'Task';
 /**
  * Generate a random status.
  *
- * @category TODO
+ * @category general
  *
  * @example
  *
  * randStatus()
+ *
+ * @example
+ *
+ * randStatus({ type: 'User Story' })
  *
  * @example
  *
