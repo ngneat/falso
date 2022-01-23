@@ -8,7 +8,7 @@ describe('randPhoneNumber', () => {
   it('should return a UK number', () => {
     expect(
       randPhoneNumber({
-        countryCode: 'IN',
+        countryCode: 'UK',
       })
     ).toMatch(/^[\d\s+()[\]]+$/);
   });
