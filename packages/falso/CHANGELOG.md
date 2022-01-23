@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.10.0](https://github.com/ngneat/falso/compare/falso-2.9.0...falso-2.10.0) (2022-01-23)
+
+### Bug Fixes
+
+- converting string to array is updated ([14bbb5f](https://github.com/ngneat/falso/commit/14bbb5f3bf3d230e3323fe9799dcbb7ca62d8b23))
+
+### Features
+
+- added phone number formats ([9cb16bf](https://github.com/ngneat/falso/commit/9cb16bf7a5aad9504d127c804897f75bd2d04ab5))
+- updated to accept user specified mask ([38cd258](https://github.com/ngneat/falso/commit/38cd2581a9478d6472353da0550a1715a3215ea2))
+
 # [2.9.0](https://github.com/ngneat/falso/compare/falso-2.8.0...falso-2.9.0) (2022-01-22)
 
 ### Bug Fixes
