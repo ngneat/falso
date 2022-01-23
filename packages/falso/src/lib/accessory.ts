@@ -4,7 +4,7 @@ import { data } from './accessory.json';
 /**
  * Generate a random accessory.
  *
- * @category Accessory
+ * @category Commerce
  *
  * @example
  *
