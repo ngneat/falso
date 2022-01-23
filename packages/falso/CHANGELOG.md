@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.13.0](https://github.com/ngneat/falso/compare/falso-2.12.0...falso-2.13.0) (2022-01-23)
+
+### Bug Fixes
+
+- 🐞 use static type ([17a324c](https://github.com/ngneat/falso/commit/17a324cb39ea586691ca35d74f000e4a8c7d15f1)), closes [#125](https://github.com/ngneat/falso/issues/125)
+
+### Features
+
+- 🔥 Add random fontSize ([c7ff471](https://github.com/ngneat/falso/commit/c7ff471008c25c05e436dcef9dd978cf9971967b))
+- 🔥 Added socialRand ([71b5a44](https://github.com/ngneat/falso/commit/71b5a44b24e3eb766976bd6f1eb78839dedbed4e)), closes [#113](https://github.com/ngneat/falso/issues/113)
+
 # [2.12.0](https://github.com/ngneat/falso/compare/falso-2.11.0...falso-2.12.0) (2022-01-23)
 
 ### Bug Fixes
