@@ -1,5 +1,240 @@
-import { FakeOptions, fake } from './core/core';
-import { randNumber } from './number';
+import { FakeOptions, fake, getRandomInRange } from './core/core';
+import { rand } from './rand';
+import { data } from './phone-number.json';
+import { randMask } from './mask';
+
+type CountryCode =
+  | 'AC'
+  | 'AD'
+  | 'AE'
+  | 'AF'
+  | 'AG'
+  | 'AI'
+  | 'AL'
+  | 'AM'
+  | 'AN'
+  | 'AO'
+  | 'AQ'
+  | 'AR'
+  | 'AS'
+  | 'AT'
+  | 'AU'
+  | 'AW'
+  | 'AZ'
+  | 'BA'
+  | 'BB'
+  | 'BD'
+  | 'BE'
+  | 'BF'
+  | 'BG'
+  | 'BH'
+  | 'BI'
+  | 'BJ'
+  | 'BM'
+  | 'BN'
+  | 'BO'
+  | 'BR'
+  | 'BS'
+  | 'BT'
+  | 'BW'
+  | 'BY'
+  | 'BZ'
+  | 'CD'
+  | 'CF'
+  | 'CG'
+  | 'CH'
+  | 'CI'
+  | 'CK'
+  | 'CL'
+  | 'CM'
+  | 'CN'
+  | 'CO'
+  | 'CR'
+  | 'CU'
+  | 'CV'
+  | 'CW'
+  | 'CY'
+  | 'CZ'
+  | 'DE'
+  | 'DJ'
+  | 'DK'
+  | 'DM'
+  | 'DO'
+  | 'DZ'
+  | 'EC'
+  | 'EE'
+  | 'EG'
+  | 'ER'
+  | 'ES'
+  | 'ET'
+  | 'FI'
+  | 'FJ'
+  | 'FK'
+  | 'FM'
+  | 'FO'
+  | 'FR'
+  | 'GA'
+  | 'GD'
+  | 'GE'
+  | 'GF'
+  | 'GH'
+  | 'GI'
+  | 'GL'
+  | 'GM'
+  | 'GN'
+  | 'GQ'
+  | 'GR'
+  | 'GT'
+  | 'GU'
+  | 'GW'
+  | 'GY'
+  | 'HK'
+  | 'HN'
+  | 'HR'
+  | 'HT'
+  | 'HU'
+  | 'ID'
+  | 'IE'
+  | 'IL'
+  | 'IN'
+  | 'IO'
+  | 'IQ'
+  | 'IR'
+  | 'IS'
+  | 'IT'
+  | 'JM'
+  | 'JO'
+  | 'JP'
+  | 'KE'
+  | 'KG'
+  | 'KH'
+  | 'KI'
+  | 'KM'
+  | 'KN'
+  | 'KP'
+  | 'KR'
+  | 'KW'
+  | 'KY'
+  | 'KZ'
+  | 'LA'
+  | 'LB'
+  | 'LC'
+  | 'LI'
+  | 'LK'
+  | 'LR'
+  | 'LS'
+  | 'LT'
+  | 'LU'
+  | 'LV'
+  | 'LY'
+  | 'MA'
+  | 'MC'
+  | 'MD'
+  | 'ME'
+  | 'MG'
+  | 'MH'
+  | 'MK'
+  | 'ML'
+  | 'MM'
+  | 'MN'
+  | 'MO'
+  | 'MP'
+  | 'MQ'
+  | 'MR'
+  | 'MS'
+  | 'MT'
+  | 'MU'
+  | 'MV'
+  | 'MW'
+  | 'MX'
+  | 'MY'
+  | 'MZ'
+  | 'NA'
+  | 'NC'
+  | 'NE'
+  | 'NF'
+  | 'NG'
+  | 'NI'
+  | 'NL'
+  | 'NO'
+  | 'NP'
+  | 'NR'
+  | 'NU'
+  | 'NZ'
+  | 'OM'
+  | 'PA'
+  | 'PE'
+  | 'PF'
+  | 'PG'
+  | 'PH'
+  | 'PK'
+  | 'PL'
+  | 'PS'
+  | 'PT'
+  | 'PW'
+  | 'PY'
+  | 'QA'
+  | 'RE'
+  | 'RO'
+  | 'RS'
+  | 'RU'
+  | 'RW'
+  | 'SA'
+  | 'SB'
+  | 'SC'
+  | 'SD'
+  | 'SE'
+  | 'SG'
+  | 'SH'
+  | 'SI'
+  | 'SK'
+  | 'SL'
+  | 'SM'
+  | 'SN'
+  | 'SO'
+  | 'SR'
+  | 'SS'
+  | 'ST'
+  | 'SV'
+  | 'SX'
+  | 'SY'
+  | 'SZ'
+  | 'TC'
+  | 'TD'
+  | 'TG'
+  | 'TH'
+  | 'TJ'
+  | 'TK'
+  | 'TL'
+  | 'TM'
+  | 'TN'
+  | 'TO'
+  | 'TR'
+  | 'TT'
+  | 'TV'
+  | 'TW'
+  | 'TZ'
+  | 'UA'
+  | 'UG'
+  | 'GB'
+  | 'UY'
+  | 'UZ'
+  | 'VA'
+  | 'VC'
+  | 'VE'
+  | 'VG'
+  | 'VI'
+  | 'VN'
+  | 'VU'
+  | 'WF'
+  | 'WS'
+  | 'YE'
+  | 'ZA'
+  | 'ZM'
+  | 'ZW'
+  | 'US'
+  | 'CA'
+  | 'UK';
 
 /**
  * Generate a random phone number.
@@ -12,15 +247,36 @@ import { randNumber } from './number';
  *
  * @example
  *
+ * randPhoneNumber({ countryCode: 'US' })
+ *
+ * @example
+ *
  * randPhoneNumber({ length: 10 })
  *
  */
-export function randPhoneNumber<Options extends FakeOptions>(
-  options?: Options
-) {
-  return fake(() => {
-    const number = '1' + randNumber({ min: 1_000_000_000, max: 9_999_999_999 });
+export function randPhoneNumber<
+  Options extends FakeOptions & {
+    countryCode?: CountryCode;
+  }
+>(options?: Options) {
+  let formats: string[];
 
-    return number.replace(/1(.{3})(.{3})(.{4})/, '1-$1-$2-$3');
-  }, options);
+  if (options?.countryCode) {
+    formats =
+      data.find((country) => {
+        return country.countryCode.includes(options.countryCode!);
+      })?.formats || [];
+  } else {
+    formats = data.map(({ formats }) => formats).flat();
+  }
+
+  const phoneNumber = Array.from(
+    { length: options?.length || 1 },
+    (_, index) => {
+      return randMask({
+        mask: rand(formats),
+      });
+    }
+  );
+  return fake(phoneNumber, options);
 }

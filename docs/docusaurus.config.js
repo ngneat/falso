@@ -14,7 +14,7 @@ module.exports = {
   projectName: 'falso',
   themeConfig: {
     algolia: {
-      apiKey: 'changethis',
+      apiKey: '464a7197abc1659dd1b9be9e70cb3e1c',
       indexName: 'falso',
     },
     navbar: {
