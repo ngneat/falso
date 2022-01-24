@@ -15,6 +15,8 @@ import { data } from './state.json';
  * randState({ length: 10 })
  *
  */
-export function randState<Options extends FakeOptions>(options?: Options) {
+export function randState<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

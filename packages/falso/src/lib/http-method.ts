@@ -15,6 +15,8 @@ import { data } from './http-method.json';
  * randHttpMethod({ length: 10 })
  *
  */
-export function randHttpMethod<Options extends FakeOptions>(options?: Options) {
+export function randHttpMethod<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

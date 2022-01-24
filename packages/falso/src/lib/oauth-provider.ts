@@ -15,7 +15,7 @@ import { data } from './oauth-provider.json';
  * randOAuthProvider({ length: 10 })
  *
  */
-export function randOAuthProvider<Options extends FakeOptions>(
+export function randOAuthProvider<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

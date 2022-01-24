@@ -16,6 +16,8 @@ import { randWord } from './word';
  * randDomainName({ length: 10 })
  *
  */
-export function randDomainName<Options extends FakeOptions>(options?: Options) {
+export function randDomainName<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => `${randWord()}.${randDomainSuffix()}`, options);
 }

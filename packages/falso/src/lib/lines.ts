@@ -15,6 +15,8 @@ import { data } from './lines.json';
  * randLines({ length: 10 })
  *
  */
-export function randLines<Options extends FakeOptions>(options?: Options) {
+export function randLines<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

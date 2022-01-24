@@ -15,6 +15,8 @@ import { data } from './mime-type.json';
  * randMimeType({ length: 10 })
  *
  */
-export function randMimeType<Options extends FakeOptions>(options?: Options) {
+export function randMimeType<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -15,7 +15,7 @@ import { data } from './product-adjective.json';
  * randProductAdjective({ length: 10 })
  *
  */
-export function randProductAdjective<Options extends FakeOptions>(
+export function randProductAdjective<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

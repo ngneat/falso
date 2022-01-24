@@ -15,7 +15,7 @@ import { data } from './email-provider.json';
  * randEmailProvider({ length: 10 })
  *
  */
-export function randEmailProvider<Options extends FakeOptions>(
+export function randEmailProvider<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

@@ -15,6 +15,8 @@ import { fake, FakeOptions } from './core/core';
  * randUuid({ length: 10 })
  *
  */
-export function randUuid<Options extends FakeOptions>(options?: Options) {
+export function randUuid<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => uuidv4(), options);
 }

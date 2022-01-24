@@ -15,6 +15,8 @@ import { data } from './state-abbr.json';
  * randStateAbbr({ length: 10 })
  *
  */
-export function randStateAbbr<Options extends FakeOptions>(options?: Options) {
+export function randStateAbbr<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

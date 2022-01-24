@@ -15,6 +15,8 @@ import { data } from './fish.json';
  * randFish({ length: 10 })
  *
  */
-export function randFish<Options extends FakeOptions>(options?: Options) {
+export function randFish<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

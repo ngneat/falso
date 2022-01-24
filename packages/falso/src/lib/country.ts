@@ -15,6 +15,8 @@ import { data } from './country.json';
  * randCountry({ length: 10 })
  *
  */
-export function randCountry<Options extends FakeOptions>(options?: Options) {
+export function randCountry<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

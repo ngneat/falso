@@ -25,6 +25,8 @@ type Type = 'Project' | 'User Story' | 'Task';
 export function randStatus<
   Options extends FakeOptions & {
     type?: Type;
+  } = FakeOptions & {
+    type?: Type;
   }
 >(options?: Options) {
   let statuses: string[];

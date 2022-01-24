@@ -24,6 +24,10 @@ export function randMask<
     mask?: string;
     char?: string;
     digit?: string;
+  } = FakeOptions & {
+    mask?: string;
+    char?: string;
+    digit?: string;
   }
 >(options?: Options) {
   return fake(() => {

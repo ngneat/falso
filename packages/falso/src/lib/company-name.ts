@@ -15,7 +15,7 @@ import { data } from './company-name.json';
  * randCompanyName({ length: 10 })
  *
  */
-export function randCompanyName<Options extends FakeOptions>(
+export function randCompanyName<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

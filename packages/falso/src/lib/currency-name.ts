@@ -15,7 +15,7 @@ import { data } from './currency-name.json';
  * randCurrencyName({ length: 10 })
  *
  */
-export function randCurrencyName<Options extends FakeOptions>(
+export function randCurrencyName<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

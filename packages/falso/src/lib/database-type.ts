@@ -15,7 +15,7 @@ import { data } from './database-type.json';
  * randDatabaseType({ length: 10 })
  *
  */
-export function randDatabaseType<Options extends FakeOptions>(
+export function randDatabaseType<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

@@ -23,9 +23,9 @@ interface PermissionOptions extends FakeOptions {
  * randPermission({ numeric: true })
  *
  */
-export function randPermission<Options extends PermissionOptions>(
-  options?: Options
-) {
+export function randPermission<
+  Options extends PermissionOptions = PermissionOptions
+>(options?: Options) {
   if (options?.numeric) {
     return fake([0, 1, 2, 4], options);
   }

@@ -15,6 +15,8 @@ import { data } from './bird.json';
  * randBird({ length: 10 })
  *
  */
-export function randBird<Options extends FakeOptions>(options?: Options) {
+export function randBird<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -15,6 +15,8 @@ import { data } from './aws-region.json';
  * randAwsRegion({ length: 10 })
  *
  */
-export function randAwsRegion<Options extends FakeOptions>(options?: Options) {
+export function randAwsRegion<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

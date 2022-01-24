@@ -16,7 +16,9 @@ import { randWord } from './word';
  * randUrl({ length: 10 })
  *
  */
-export function randUrl<Options extends FakeOptions>(options?: Options) {
+export function randUrl<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => {
     return `${fake(['http', 'https'])}://${randWord()}.${randDomainSuffix()}`;
   }, options);

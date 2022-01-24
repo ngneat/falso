@@ -16,7 +16,9 @@ import { randBoolean } from './boolean';
  * randZipCode({ length: 10 })
  *
  */
-export function randZipCode<Options extends FakeOptions>(options?: Options) {
+export function randZipCode<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => {
     let zipCode = '' + randNumber({ min: 10_000, max: 99_999 });
 

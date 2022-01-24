@@ -15,6 +15,8 @@ import { data } from './emoji.json';
  * randEmoji({ length: 10 })
  *
  */
-export function randEmoji<Options extends FakeOptions>(options?: Options) {
+export function randEmoji<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

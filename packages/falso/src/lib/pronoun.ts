@@ -11,6 +11,8 @@ import { data } from './pronoun.json';
  * randPronoun()
  *
  */
-export function randPronoun<Options extends FakeOptions>(options?: Options) {
+export function randPronoun<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

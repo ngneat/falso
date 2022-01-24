@@ -1,8 +1,8 @@
-import { randBetweenDate } from '../lib/between';
-import { randFutureDate } from '../lib/future';
-import { randSoonDate } from '../lib/soon';
-import { randPastDate } from '../lib/past';
-import { randRecentDate } from '../lib/recent';
+import { randBetweenDate } from '../lib/between-date';
+import { randFutureDate } from '../lib/future-date';
+import { randSoonDate } from '../lib/soon-date';
+import { randPastDate } from '../lib/past-date';
+import { randRecentDate } from '../lib/recent-date';
 
 describe('between', () => {
   it('should return a Date', () => {

@@ -15,6 +15,8 @@ import { data } from './abbreviation.json';
  * randAbbreviation({ length: 10 })
  *
  */
-export function randAbbreviation<O extends FakeOptions>(options?: O) {
+export function randAbbreviation<O extends FakeOptions = FakeOptions>(
+  options?: O
+) {
   return fake(data, options);
 }

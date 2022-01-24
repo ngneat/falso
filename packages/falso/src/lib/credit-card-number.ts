@@ -38,6 +38,8 @@ type Issuer =
 export function randCreditCardNumber<
   Options extends FakeOptions & {
     issuer?: Issuer;
+  } = FakeOptions & {
+    issuer?: Issuer;
   }
 >(options?: Options) {
   let formats = data.map(({ formats }) => formats).flat();

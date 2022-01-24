@@ -15,6 +15,8 @@ import { data } from './shape.json';
  * randShape({ length: 10 })
  *
  */
-export function randShape<Options extends FakeOptions>(options?: Options) {
+export function randShape<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

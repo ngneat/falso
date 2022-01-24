@@ -15,6 +15,8 @@ import { data } from './job-area.json';
  * randJobArea({ length: 10 })
  *
  */
-export function randJobArea<Options extends FakeOptions>(options?: Options) {
+export function randJobArea<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -15,6 +15,8 @@ import { data } from './cow.json';
  * randCow({ length: 10 })
  *
  */
-export function randCow<Options extends FakeOptions>(options?: Options) {
+export function randCow<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

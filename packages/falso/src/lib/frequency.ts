@@ -15,6 +15,8 @@ import { data } from './frequency.json';
  * randFrequency({ length: 10 })
  *
  */
-export function randFrequency<Options extends FakeOptions>(options?: Options) {
+export function randFrequency<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

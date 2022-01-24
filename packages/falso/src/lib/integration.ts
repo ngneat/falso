@@ -15,7 +15,7 @@ import { data } from './integration.json';
  * randIntegrations({ length: 10 })
  *
  */
-export function randIntegration<Options extends FakeOptions>(
+export function randIntegration<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

@@ -14,6 +14,8 @@ import { data } from './movie.json';
  * randMovie({ length: 10 })
  *
  */
-export function randMovie<Options extends FakeOptions>(options?: Options) {
+export function randMovie<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

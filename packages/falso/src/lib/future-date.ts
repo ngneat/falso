@@ -23,7 +23,7 @@ interface FutureOptions extends FakeOptions {
  * randFutureDate({ years: 10 }) // default is 1
  *
  */
-export function randFutureDate<Options extends FutureOptions>(
+export function randFutureDate<Options extends FutureOptions = FutureOptions>(
   options?: Options
 ) {
   const years = options?.years ?? 1;

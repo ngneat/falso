@@ -15,7 +15,7 @@ import { data } from './product-category.json';
  * randProductCategory({ length: 10 })
  *
  */
-export function randProductCategory<Options extends FakeOptions>(
+export function randProductCategory<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

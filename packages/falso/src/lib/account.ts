@@ -14,6 +14,8 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  * randAccount({ length: 10 })
  *
  */
-export function randAccount<Options extends FakeOptions>(options?: Options) {
+export function randAccount<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => getRandomInRange({ max: 99999999 }).toString(), options);
 }

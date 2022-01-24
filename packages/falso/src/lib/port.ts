@@ -15,6 +15,8 @@ import { randNumber } from './number';
  * randPort({ length: 10 })
  *
  */
-export function randPort<Options extends FakeOptions>(options?: Options) {
+export function randPort<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => randNumber({ min: 0, max: 65_353 }), options);
 }

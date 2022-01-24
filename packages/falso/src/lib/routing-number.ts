@@ -15,7 +15,7 @@ import { randNumber } from './number';
  * randRoutingNumber({ length: 10 })
  *
  */
-export function randRoutingNumber<Options extends FakeOptions>(
+export function randRoutingNumber<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(() => randNumber({ min: 10_000_000, max: 99_999_999 }), options);

@@ -15,6 +15,8 @@ import { data } from './font-family.json';
  * randFontFamily({ length: 10 })
  *
  */
-export function randFontFamily<Options extends FakeOptions>(options?: Options) {
+export function randFontFamily<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

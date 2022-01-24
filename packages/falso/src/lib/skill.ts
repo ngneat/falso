@@ -15,6 +15,8 @@ import { data } from './skill.json';
  * randSkill({ length: 10 })
  *
  */
-export function randSkill<Options extends FakeOptions>(options?: Options) {
+export function randSkill<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }
