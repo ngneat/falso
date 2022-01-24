@@ -51,21 +51,30 @@ var project = new ts_morph_1.Project({
 });
 function manipulator(options, context) {
     return __awaiter(this, void 0, void 0, function () {
-        var funcsPaths, i, _i, funcsPaths_1, path, baseName, n, funcName, content;
+        var funcsPaths, _i, funcsPaths_1, path, baseName, className, funcName, content, sourceFile, decl;
         return __generator(this, function (_a) {
             funcsPaths = (0, glob_1.sync)('packages/falso/src/lib/*.ts');
-            i = funcsPaths.map(function (p) {
-                var baseName = (0, path_1.basename)(p).replace('.ts', '');
-                var n = (0, devkit_1.names)(baseName);
-                var funcName = n.className;
-                return "export { rand" + funcName + " } from './lib/" + baseName + "';";
-            });
-            (0, fs_1.writeFileSync)("packages/falso/src/index.ts", i.join('\n'), { encoding: 'utf8' });
+            for (_i = 0, funcsPaths_1 = funcsPaths; _i < funcsPaths_1.length; _i++) {
+                path = funcsPaths_1[_i];
+                baseName = (0, path_1.basename)(path).replace('.ts', '');
+                className = (0, devkit_1.names)(baseName).className;
+                funcName = "rand" + className;
+                content = (0, fs_1.readFileSync)(path).toString();
+                sourceFile = project.createSourceFile("temp.ts", content, {
+                    overwrite: true
+                });
+                decl = sourceFile.getFunction(funcName);
+                console.log(funcName);
+                decl.getTypeParameters().forEach(function (c) {
+                    var split = c.getText().split('extends');
+                    c.replaceWithText(c.getText() + " = " + split[split.length - 1].trim());
+                });
+                // Manipulate the function
+                sourceFile.formatText({ tabSize: 2 });
+                (0, fs_1.writeFileSync)(path, sourceFile.getText(), { encoding: 'utf8' });
+            }
             return [2 /*return*/, { success: true }];
         });
     });
 }
 exports["default"] = manipulator;
-function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}

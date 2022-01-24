@@ -1,4 +1,4 @@
-import { randBetweenDate } from './between';
+import { randBetweenDate } from './between-date';
 import { fake, FakeOptions } from './core/core';
 
 interface FutureOptions extends FakeOptions {
