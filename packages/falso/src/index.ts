@@ -162,3 +162,4 @@ export { randStatus } from './lib/status';
 export { randAccessory } from './lib/accessory';
 export { randFontSize } from './lib/font-size';
 export { randSubscriptionPlan } from './lib/subscription-plan';
+export { randSuperHero, randSuperHeroName } from './lib/super-hero';

@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "realName": "Peter Parker",
+      "alterEgo": "Spider-man",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Bruce Wayne",
+      "alterEgo": "Batman",
+      "company": "DC"
+    }
+  ]
+}
