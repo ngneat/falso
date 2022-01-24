@@ -1,4 +1,4 @@
-import { randNumber } from '..';
+import { randNumber } from './number';
 import { FakeOptions, fake } from './core/core';
 
 export type FontSizeSuffix =
