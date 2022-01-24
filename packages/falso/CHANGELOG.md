@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.15.0](https://github.com/ngneat/falso/compare/falso-2.14.0...falso-2.15.0) (2022-01-24)
+
+### Features
+
+- 🔥 support strict null check false ([2cd4f9a](https://github.com/ngneat/falso/commit/2cd4f9a509ef97ad8b226d824f18a113ae60bff1))
+
 # [2.14.0](https://github.com/ngneat/falso/compare/falso-2.13.0...falso-2.14.0) (2022-01-24)
 
 ### Features
