@@ -17,7 +17,7 @@ import { randWord } from './word';
  */
 export function randSlug<Options extends FakeOptions>(options?: Options) {
   return fake(() => {
-    const numberOfWordsInSlug = getRandomInRange({ min: 1, max: 10 });
+    const numberOfWordsInSlug = getRandomInRange({ min: 3, max: 10 });
     const randomWords = randWord({ length: numberOfWordsInSlug });
     return randomWords.join('-');
   }, options);
