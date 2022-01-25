@@ -1,6 +1,6 @@
 import { fake, FakeOptions } from './core/core';
 import { data } from './superhero.json';
-import { rand, randUuid } from '@ngneat/falso';
+import { randUuid } from '@ngneat/falso';
 
 export type ComicBookCompany = 'Marvel' | 'DC';
 
@@ -22,7 +22,7 @@ export interface SuperheroEntity extends Superhero {
 /**
  * Generate a random superhero.
  *
- * @category Superhero
+ * @category entity
  *
  * @example
  *
@@ -52,38 +52,4 @@ export function randSuperhero<Options extends SuperheroOptions>(
     });
 
   return fake(filteredData, options);
-}
-
-/**
- * Generate a random superhero name.
- *
- * @category Superhero
- *
- * @example
- *
- * randSuperheroName()
- *
- * @example
- *
- * randSuperhero({ company: 'Marvel' })
- *
- * @example
- *
- * randSuperheroName({ length: 10 })
- *
- */
-export function randSuperheroName<Options extends SuperheroOptions>(
-  options?: Options
-) {
-  const factory: () => string = () => {
-    const heroes = data
-      .filter((hero: Superhero) =>
-        options?.company ? hero.company === options.company : true
-      )
-      .map((hero: Superhero) => hero.alterEgo);
-
-    return rand(heroes);
-  };
-
-  return fake(factory, options);
 }

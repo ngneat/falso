@@ -164,4 +164,5 @@ export { randFontSize } from './lib/font-size';
 export { randSubscriptionPlan } from './lib/subscription-plan';
 export { randSvg } from './lib/svg';
 export { randOctal } from './lib/octal';
-export { randSuperhero, randSuperheroName } from './lib/superhero';
+export { randSuperhero } from './lib/superhero';
+export { randSuperheroName } from './lib/superhero-name';
