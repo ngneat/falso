@@ -15,6 +15,8 @@ import { data } from './phrase.json';
  * randPhrase({ length: 10 })
  *
  */
-export function randPhrase<Options extends FakeOptions>(options?: Options) {
+export function randPhrase<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

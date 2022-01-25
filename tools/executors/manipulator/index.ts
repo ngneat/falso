@@ -1,7 +1,6 @@
-import { ExecutorContext, names } from '@nrwl/devkit';
+import { ExecutorContext } from '@nrwl/devkit';
 import { Project, QuoteKind, ScriptTarget } from 'ts-morph';
 import { sync } from 'glob';
-import { basename } from 'path';
 import { readFileSync, writeFileSync } from 'fs';
 
 const project = new Project({
@@ -20,17 +19,19 @@ export default async function manipulator(
   const funcsPaths = sync('packages/falso/src/lib/*.ts');
 
   for (const path of funcsPaths) {
-    const baseName = basename(path).replace('.ts', '');
-
-    const { className } = names(baseName);
-    const funcName = `rand${className}`;
     const content = readFileSync(path).toString();
 
     const sourceFile = project.createSourceFile(`temp.ts`, content, {
       overwrite: true,
     });
 
-    const decl = sourceFile.getFunction(funcName);
+    const decl = sourceFile
+      .getFunctions()
+      .find((f) => f.getName().startsWith('rand'));
+
+    if (decl.getName() === 'rand') {
+      continue;
+    }
 
     // Manipulate the function
 

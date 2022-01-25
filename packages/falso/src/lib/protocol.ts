@@ -24,7 +24,7 @@ interface ProtocolOptions extends FakeOptions {
  * randProtocol({ fullName: true })
  *
  */
-export function randProtocol<Options extends ProtocolOptions>(
+export function randProtocol<Options extends ProtocolOptions = ProtocolOptions>(
   options?: Options
 ) {
   return fake(options?.fullName ? protocolFull : protocol, options);

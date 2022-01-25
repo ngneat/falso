@@ -15,6 +15,8 @@ import { data } from './drinks.json';
  * randDrinks({ length: 10 })
  *
  */
-export function randDrinks<Options extends FakeOptions>(options?: Options) {
+export function randDrinks<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

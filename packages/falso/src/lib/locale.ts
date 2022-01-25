@@ -15,6 +15,8 @@ import { data } from './locale.json';
  * randLocale({ length: 10 })
  *
  */
-export function randLocale<Options extends FakeOptions>(options?: Options) {
+export function randLocale<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

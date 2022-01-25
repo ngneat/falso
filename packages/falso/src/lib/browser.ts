@@ -15,6 +15,8 @@ import { data } from './browser.json';
  * randBrowser({ length: 10 })
  *
  */
-export function randBrowser<Options extends FakeOptions>(options?: Options) {
+export function randBrowser<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

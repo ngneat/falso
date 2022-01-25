@@ -17,6 +17,8 @@ import { data } from './social.json';
  *
  */
 
-export function randSocial<Options extends FakeOptions>(options?: Options) {
+export function randSocial<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -23,7 +23,9 @@ export interface SemverOptions extends FakeOptions {
  * randSemver({ prefix: 'v' })
  *
  */
-export function randSemver<Options extends SemverOptions>(options?: Options) {
+export function randSemver<Options extends SemverOptions = SemverOptions>(
+  options?: Options
+) {
   return fake(() => {
     const version = Array.from({ length: 3 }, () =>
       randNumber({ min: 0, max: 20 })

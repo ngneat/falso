@@ -15,7 +15,7 @@ import { data } from './credit-card-issuer.json';
  * randCreditCardIssuer({ length: 10 })
  *
  */
-export function randCreditCardIssuer<Options extends FakeOptions>(
+export function randCreditCardIssuer<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

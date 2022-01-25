@@ -24,7 +24,9 @@ export interface NameOptions extends FakeOptions {
  * randFullName({ length: 10 })
  *
  */
-export function randFullName<Options extends NameOptions>(options?: Options) {
+export function randFullName<Options extends NameOptions = NameOptions>(
+  options?: Options
+) {
   const nameOptions = {
     withAccents: options?.withAccents,
   };

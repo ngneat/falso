@@ -15,7 +15,7 @@ import { data } from './database-column.json';
  * randDatabaseColumn({ length: 10 })
  *
  */
-export function randDatabaseColumn<Options extends FakeOptions>(
+export function randDatabaseColumn<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

@@ -15,6 +15,8 @@ import { data } from './weekday.json';
  * randWeekday({ length: 10 })
  *
  */
-export function randWeekday<Options extends FakeOptions>(options?: Options) {
+export function randWeekday<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

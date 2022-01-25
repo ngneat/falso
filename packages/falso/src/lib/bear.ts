@@ -15,6 +15,8 @@ import { data } from './bear.json';
  * randBear({ length: 10 })
  *
  */
-export function randBear<Options extends FakeOptions>(options?: Options) {
+export function randBear<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

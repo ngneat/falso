@@ -15,6 +15,8 @@ import { data } from './user-agent.json';
  * randUserAgent({ length: 10 })
  *
  */
-export function randUserAgent<Options extends FakeOptions>(options?: Options) {
+export function randUserAgent<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

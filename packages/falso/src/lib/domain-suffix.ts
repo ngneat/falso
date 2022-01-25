@@ -15,7 +15,7 @@ import { data } from './domain-suffix.json';
  * randDomainSuffix({ length: 10 })
  *
  */
-export function randDomainSuffix<Options extends FakeOptions>(
+export function randDomainSuffix<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(data, options);

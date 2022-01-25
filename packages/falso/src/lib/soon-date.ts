@@ -1,4 +1,4 @@
-import { randBetweenDate } from './between';
+import { randBetweenDate } from './between-date';
 import { fake, FakeOptions } from './core/core';
 
 interface SoonOptions extends FakeOptions {
@@ -23,7 +23,9 @@ interface SoonOptions extends FakeOptions {
  * randSoonDate({ length: 10 })
  *
  */
-export function randSoonDate<Options extends SoonOptions>(options?: Options) {
+export function randSoonDate<Options extends SoonOptions = SoonOptions>(
+  options?: Options
+) {
   const days = options?.days ?? 1;
 
   if (days < 1) {

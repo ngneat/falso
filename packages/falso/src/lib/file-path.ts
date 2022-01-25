@@ -15,6 +15,8 @@ import { data } from './file-path.json';
  * randFilePath({ length: 10 })
  *
  */
-export function randFilePath<Options extends FakeOptions>(options?: Options) {
+export function randFilePath<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

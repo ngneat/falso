@@ -15,6 +15,8 @@ import { data } from './color.json';
  * randColor({ length: 10 })
  *
  */
-export function randColor<Options extends FakeOptions>(options?: Options) {
+export function randColor<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

@@ -15,6 +15,8 @@ import { random } from './random';
  * randHex({ length: 10 })
  *
  */
-export function randHex<Options extends FakeOptions>(options?: Options) {
+export function randHex<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => `#${random().toString(16).substr(2, 6)}`, options);
 }

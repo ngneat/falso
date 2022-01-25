@@ -29,7 +29,7 @@ export interface FontSizeOptions extends FakeOptions {
  * randFontSize({ length: 10 })
  *
  */
-export function randFontSize<Options extends FontSizeOptions>(
+export function randFontSize<Options extends FontSizeOptions = FontSizeOptions>(
   options?: Options
 ) {
   return fake(() => {

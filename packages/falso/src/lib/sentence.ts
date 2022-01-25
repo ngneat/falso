@@ -31,7 +31,9 @@ function getSpecialCharacter(wordCount: number): string {
  * randSentence({ length: 10 })
  *
  */
-export function randSentence<Options extends FakeOptions>(options?: Options) {
+export function randSentence<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   const factory = () => {
     let text = randWord({ capitalize: true });
     let wordCount = 1;

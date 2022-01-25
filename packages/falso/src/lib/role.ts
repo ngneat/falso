@@ -15,6 +15,8 @@ import { data } from './role.json';
  * randRole({ length: 10 })
  *
  */
-export function randRole<Options extends FakeOptions>(options?: Options) {
+export function randRole<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

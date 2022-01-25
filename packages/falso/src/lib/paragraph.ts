@@ -15,6 +15,8 @@ import { data } from './paragraph.json';
  * randJobTitle({ length: 10 })
  *
  */
-export function randParagraph<Options extends FakeOptions>(options?: Options) {
+export function randParagraph<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

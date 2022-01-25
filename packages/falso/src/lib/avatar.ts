@@ -22,7 +22,9 @@ interface AvatarOptions extends FakeOptions {
  * randAvatar({ size: 200 }) // default: 100
  *
  */
-export function randAvatar<Options extends AvatarOptions>(options?: Options) {
+export function randAvatar<Options extends AvatarOptions = AvatarOptions>(
+  options?: Options
+) {
   const size = options?.size ?? 100;
 
   return fake(() => `https://i.pravatar.cc/${size}`, options);

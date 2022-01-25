@@ -15,7 +15,7 @@ import { randSequence } from './sequence';
  * randBitcoinAddress({ length: 10 })
  *
  */
-export function randBitcoinAddress<Options extends FakeOptions>(
+export function randBitcoinAddress<Options extends FakeOptions = FakeOptions>(
   options?: Options
 ) {
   return fake(() => randSequence({ size: 33 }), options);

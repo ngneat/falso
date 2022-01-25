@@ -15,6 +15,8 @@ import { data } from './aws-service.json';
  * randAwsService({ length: 10 })
  *
  */
-export function randAwsService<Options extends FakeOptions>(options?: Options) {
+export function randAwsService<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

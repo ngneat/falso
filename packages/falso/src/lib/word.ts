@@ -28,7 +28,9 @@ function capitalizeFirstLetter(text: string): string {
  * randWord({ length: 10 })
  *
  */
-export function randWord<Options extends WordOptions>(options?: Options) {
+export function randWord<Options extends WordOptions = WordOptions>(
+  options?: Options
+) {
   const factory = () => {
     let word = rand(data);
 

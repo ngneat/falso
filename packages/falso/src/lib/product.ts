@@ -32,7 +32,9 @@ export interface Product {
  * randProduct({ length: 10 })
  *
  */
-export function randProduct<Options extends FakeOptions>(options?: Options) {
+export function randProduct<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(
     () => ({
       id: randUuid(),

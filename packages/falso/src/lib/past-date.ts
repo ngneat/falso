@@ -1,4 +1,4 @@
-import { randBetweenDate } from './between';
+import { randBetweenDate } from './between-date';
 import { fake, FakeOptions } from './core/core';
 
 interface PastOptions extends FakeOptions {
@@ -23,7 +23,9 @@ interface PastOptions extends FakeOptions {
  * randPastDate({ years: 2 }) // default is 1
  *
  */
-export function randPastDate<Options extends PastOptions>(options?: Options) {
+export function randPastDate<Options extends PastOptions = PastOptions>(
+  options?: Options
+) {
   const years = options?.years ?? 1;
 
   if (years < 0) {

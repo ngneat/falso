@@ -17,7 +17,9 @@ import { randAlphaNumeric } from './alpha-numeric';
  * randIban({ length: 10 })
  *
  */
-export function randIban<Options extends FakeOptions>(options?: Options) {
+export function randIban<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => {
     let iban = randCountryCode();
 

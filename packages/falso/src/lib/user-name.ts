@@ -17,7 +17,9 @@ import { randBoolean } from './boolean';
  * randUserName({ length: 10 })
  *
  */
-export function randUserName<Options extends FakeOptions>(options?: Options) {
+export function randUserName<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => {
     let userName = randFullName().replace(' ', fake(['.', '_']));
 

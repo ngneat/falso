@@ -39,7 +39,9 @@ export interface User {
  * randUser({ length: 10 })
  *
  */
-export function randUser<Options extends FakeOptions>(options?: Options) {
+export function randUser<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => {
     const user: User = {
       id: randUuid(),

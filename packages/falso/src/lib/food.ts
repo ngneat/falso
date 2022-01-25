@@ -36,7 +36,9 @@ const totalOrigins = Object.keys(data)?.length;
  * randFood({ length: 10 })
  *
  */
-export function randFood<Options extends FoodOptions>(options?: Options) {
+export function randFood<Options extends FoodOptions = FoodOptions>(
+  options?: Options
+) {
   const foodData: { [origin: string]: string[] } = data;
   const origin: string | undefined = options?.origin;
 

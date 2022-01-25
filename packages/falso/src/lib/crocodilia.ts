@@ -15,6 +15,8 @@ import { data } from './crocodilia.json';
  * randCrocodilia({ length: 10 })
  *
  */
-export function randCrocodilia<Options extends FakeOptions>(options?: Options) {
+export function randCrocodilia<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(data, options);
 }

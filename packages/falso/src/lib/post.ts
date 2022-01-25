@@ -25,7 +25,9 @@ interface Post {
  * randPost({ length: 10 })
  *
  */
-export function randPost<Options extends FakeOptions>(options?: Options) {
+export function randPost<Options extends FakeOptions = FakeOptions>(
+  options?: Options
+) {
   return fake(() => {
     const post: Post = {
       id: randUuid(),

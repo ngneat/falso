@@ -15,8 +15,8 @@ import { data } from './cardinal-direction.json';
  * randCardinalDirection({ length: 10 })
  *
  */
-export function randCardinalDirection<Options extends FakeOptions>(
-  options?: Options
-) {
+export function randCardinalDirection<
+  Options extends FakeOptions = FakeOptions
+>(options?: Options) {
   return fake(data, options);
 }
