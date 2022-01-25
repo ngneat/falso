@@ -163,3 +163,4 @@ export { randAccessory } from './lib/accessory';
 export { randFontSize } from './lib/font-size';
 export { randSubscriptionPlan } from './lib/subscription-plan';
 export { randSvg } from './lib/svg';
+export { randOctal } from './lib/octal';
