@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.16.0](https://github.com/ngneat/falso/compare/falso-2.15.0...falso-2.16.0) (2022-01-25)
+
+### Features
+
+- 🔥 add generator for SVGs ([574fd08](https://github.com/ngneat/falso/commit/574fd085508b6c6d0275091285798504bfbcf951)), closes [#114](https://github.com/ngneat/falso/issues/114)
+- 🔥 add octal number generator ([1d47da1](https://github.com/ngneat/falso/commit/1d47da13b4d9b69359c5c096cbb2f4d52605efea)), closes [#131](https://github.com/ngneat/falso/issues/131)
+
 # [2.15.0](https://github.com/ngneat/falso/compare/falso-2.14.0...falso-2.15.0) (2022-01-24)
 
 ### Features
