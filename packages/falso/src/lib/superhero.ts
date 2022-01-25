@@ -30,6 +30,10 @@ export interface SuperheroEntity extends Superhero {
  *
  * @example
  *
+ * randSuperhero({ company: 'Marvel' })
+ *
+ * @example
+ *
  * randSuperhero({ length: 10 })
  *
  */
@@ -58,6 +62,10 @@ export function randSuperhero<Options extends SuperheroOptions>(
  * @example
  *
  * randSuperheroName()
+ *
+ * @example
+ *
+ * randSuperhero({ company: 'Marvel' })
  *
  * @example
  *
