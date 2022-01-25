@@ -61,6 +61,16 @@
       "company": "Marvel"
     },
     {
+      "realName": "Frog Thor",
+      "alterEgo": "Frog Thor",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Doug Ramsey",
+      "alterEgo": "Cypher",
+      "company": "Marvel"
+    },
+    {
       "realName": "Natasha Alianovna Romanova",
       "alterEgo": "Black Widow",
       "company": "Marvel"
@@ -118,6 +128,16 @@
     {
       "realName": "Silvija Sablinova",
       "alterEgo": "Silver Sable",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Gamora Zen Whoberi Ben Titan",
+      "alterEgo": "Gamora",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Jessica Drew",
+      "alterEgo": "X-23",
       "company": "Marvel"
     },
 
