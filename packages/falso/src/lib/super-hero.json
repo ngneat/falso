@@ -6,8 +6,229 @@
       "company": "Marvel"
     },
     {
+      "realName": "Matt Murdock",
+      "alterEgo": "Daredevil",
+      "company": "Marvel"
+    },
+    {
+      "realName": "T'Challa",
+      "alterEgo": "Black Panther",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Steve Rogers",
+      "alterEgo": "Captain America",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Thor Odinson",
+      "alterEgo": "Thor",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Remy Etienne LeBeau",
+      "alterEgo": "Gambit",
+      "company": "Marvel"
+    },
+    {
+      "realName": "James \"Logan\" Howlett",
+      "alterEgo": "Wolverine\n",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Frank Castle",
+      "alterEgo": "Punisher",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Dr. Stephen Strange",
+      "alterEgo": "Doctor Strange",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Tony Stark",
+      "alterEgo": "Iron Man",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Wade Wilson",
+      "alterEgo": "Deadpool",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Steven Grant",
+      "alterEgo": "Moon Knight",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Natasha Alianovna Romanova",
+      "alterEgo": "Black Widow",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Ms. Marvel",
+      "alterEgo": "Carol Danvers",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Shadowcat",
+      "alterEgo": "Kitty Pryde",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Susan Storm",
+      "alterEgo": "Invisible Woman",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Elektra Natchios",
+      "alterEgo": "Elektra",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Janet Van Dyne",
+      "alterEgo": "Wasp",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Clarice Ferguson",
+      "alterEgo": "Blink",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Ororo Munroe",
+      "alterEgo": "Storm",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Wanda Maximoff",
+      "alterEgo": "Scarlet Witch",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Anna Marie LeBeau",
+      "alterEgo": "Rogue",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Jennifer Walter",
+      "alterEgo": "She-Hulk",
+      "company": "Marvel"
+    },
+    {
+      "realName": "Silvija Sablinova",
+      "alterEgo": "Silver Sable",
+      "company": "Marvel"
+    },
+
+    {
       "realName": "Bruce Wayne",
       "alterEgo": "Batman",
+      "company": "DC"
+    },
+    {
+      "realName": "Clark Kent",
+      "alterEgo": "Superman",
+      "company": "DC"
+    },
+    {
+      "realName": "Hal Jordan",
+      "alterEgo": "Green Lantern",
+      "company": "DC"
+    },
+    {
+      "realName": "Barry Allen",
+      "alterEgo": "The Flash",
+      "company": "DC"
+    },
+    {
+      "realName": "J'onn J'onzz",
+      "alterEgo": "Martian Manhunter",
+      "company": "DC"
+    },
+    {
+      "realName": "Arthur Curry",
+      "alterEgo": "Aquaman",
+      "company": "DC"
+    },
+    {
+      "realName": "Oliver Queen",
+      "alterEgo": "Green Arrow",
+      "company": "DC"
+    },
+    {
+      "realName": "Ryan Choi",
+      "alterEgo": "The Atom",
+      "company": "DC"
+    },
+    {
+      "realName": "Carter Hall",
+      "alterEgo": "Hawkman",
+      "company": "DC"
+    },
+    {
+      "realName": "Nathaniel Adam",
+      "alterEgo": "Captain Atom",
+      "company": "DC"
+    },
+    {
+      "realName": "Jefferson Michael Pierce",
+      "alterEgo": "Black Lightning",
+      "company": "DC"
+    },
+    {
+      "realName": "Diana Prince",
+      "alterEgo": "Wonder Woman",
+      "company": "DC"
+    },
+    {
+      "realName": "Chay-Ara",
+      "alterEgo": "Hawkgirl",
+      "company": "DC"
+    },
+    {
+      "realName": "Tora Olafsdotter",
+      "alterEgo": "Ice",
+      "company": "DC"
+    },
+    {
+      "realName": "Kara Zor-El",
+      "alterEgo": "Supergirl",
+      "company": "DC"
+    },
+    {
+      "realName": "Jennifer-Lynn Hayden",
+      "alterEgo": "Jade",
+      "company": "DC"
+    },
+    {
+      "realName": "Kara Zor-L",
+      "alterEgo": "Power Girl",
+      "company": "DC"
+    },
+    {
+      "realName": "Dawn Granger",
+      "alterEgo": "Hawk",
+      "company": "DC"
+    },
+    {
+      "realName": "Dinah Lance",
+      "alterEgo": "Black Canary",
+      "company": "DC"
+    },
+    {
+      "realName": "Helena Bertinelli",
+      "alterEgo": "Huntress",
+      "company": "DC"
+    },
+    {
+      "realName": "Barbara Gordon",
+      "alterEgo": "Batgirl",
+      "company": "DC"
+    },
+    {
+      "realName": "Zinda Blake",
+      "alterEgo": "Lady Blackhawk",
       "company": "DC"
     }
   ]

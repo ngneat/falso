@@ -1,14 +1,16 @@
 import { randSuperHero, randSuperHeroName } from '../lib/super-hero';
 
+// TODO: Add tests
+
 describe('superHero', () => {
-  describe('randSuperhero', () => {});
+  describe('randSuperHero', () => {});
 
   describe('randSuperheroName', () => {
     it('should ', () => {
-      // console.log(randSuperhero());
-      // console.log(randSuperhero({ company: 'DC' }));
+      console.log(randSuperHero());
+      // console.log(randSuperHero({ company: 'DC' }));
       console.log(randSuperHeroName());
-      // console.log(randSuperheroName({ company: 'DC' }));
+      // console.log(randSuperHeroName({ company: 'DC' }));
     });
   });
 });

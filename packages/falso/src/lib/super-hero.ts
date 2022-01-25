@@ -2,7 +2,7 @@ import { fake, FakeOptions } from './core/core';
 import { data } from './super-hero.json';
 import { rand, randUuid } from '@ngneat/falso';
 
-export type ComicBookCompany = 'Marvel' | 'DC' | 'Dark Horse';
+export type ComicBookCompany = 'Marvel' | 'DC';
 
 export interface SuperHeroOptions extends FakeOptions {
   company?: ComicBookCompany;
