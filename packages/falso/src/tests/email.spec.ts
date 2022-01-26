@@ -18,9 +18,9 @@ describe('email', () => {
 
   it('should use random seed to generate all parts of email', () => {
     // This will likely break if new names or email providers are added
-    expect(randEmail()).toEqual('jose-antoniojin624@laposte.biz');
-    expect(randEmail()).toEqual('sawat+ghosh@juno.org');
-    expect(randEmail()).toEqual('zainab_meijer@orange.info');
+    expect(randEmail()).toEqual('jorgejiang624@laposte.biz');
+    expect(randEmail()).toEqual('sawat+garza@juno.org');
+    expect(randEmail()).toEqual('zainab_meier@orange.info');
   });
 
   describe('nameSeparator is passed', () => {
@@ -115,9 +115,9 @@ describe('email', () => {
         const result = randEmail({ length: 3 });
 
         expect(result).toEqual([
-          'jose-antoniojin624@laposte.biz',
-          'sawat+ghosh@juno.org',
-          'zainab_meijer@orange.info',
+          'jorgejiang624@laposte.biz',
+          'sawat+garza@juno.org',
+          'zainab_meier@orange.info',
         ]);
       });
     });
