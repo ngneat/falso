@@ -1,14 +1,27 @@
-import { randLastName, seed } from '@ngneat/falso';
+import { randLastName } from '../lib/last-name';
+import { seed } from '../lib/random';
+import { data } from '../lib/last-name.json';
 
 describe('lastName', () => {
+  let specialCharRegex: RegExp;
+
+  beforeEach(() => {
+    specialCharRegex =
+      /[ÞōŌāĀēĒØøłŁàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêěîôûčÂĚÊšŠÎÔŪÛŽžÐŻżãñõÃÑÕäëïöüÿÄËÏÖÜŸőŐçÇßðÅåÆæœŘČĆŃĖřūþćńė]/;
+  });
+
+  describe('last-name.json', () => {
+    describe('withoutAccents', () => {
+      it('should not contain any accented characters', () => {
+        const allNames = data.withoutAccents.join('');
+
+        expect(allNames).not.toMatch(specialCharRegex);
+      });
+    });
+  });
+
   describe('withAccents is passed', () => {
     let withAccents: boolean;
-    let specialCharRegex: RegExp;
-
-    beforeEach(() => {
-      specialCharRegex =
-        /[ÞōŌāĀēĒØøłŁàèìòùÀÈÌÒÙáéíóúýÁÉÍÓÚÝâêěîôûčÂĚÊšŠÎÔŪÛŽžÐŻżãñõÃÑÕäëïöüÿÄËÏÖÜŸőŐçÇßðÅåÆæœ]/;
-    });
 
     describe('withAccents is true', () => {
       beforeEach(() => {
@@ -68,7 +81,7 @@ describe('lastName', () => {
       it('should return an array length of 3, each with a random lastName', () => {
         const result = randLastName({ length: 3 });
 
-        expect(result).toEqual(['Förster', 'Žukauskienė', 'Björnsson']);
+        expect(result).toEqual(['Friðriksson', 'Žukauskienė', 'Björnsson']);
       });
     });
   });

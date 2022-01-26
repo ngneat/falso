@@ -1,4 +1,4 @@
-import { randFullName } from '@ngneat/falso';
+import { randFullName } from '../lib/full-name';
 
 describe('fullName', () => {
   let specialCharRegex: RegExp;
