@@ -1,5 +1,7 @@
-import { randEmail, seed } from '@ngneat/falso';
-import { NameSeparators } from '../lib/email';
+import { seed } from '../lib/random';
+import { randEmail, NameSeparators } from '../lib/email';
+import { randFirstName } from '../lib/first-name';
+import { randLastName } from '../lib/last-name';
 
 describe('email', () => {
   let validEmailRegex: RegExp;
@@ -18,9 +20,37 @@ describe('email', () => {
 
   it('should use random seed to generate all parts of email', () => {
     // This will likely break if new names or email providers are added
-    expect(randEmail()).toEqual('jorgejiang624@laposte.biz');
-    expect(randEmail()).toEqual('sawat+garza@juno.org');
-    expect(randEmail()).toEqual('zainab_meier@orange.info');
+    expect(randEmail()).toEqual('jorge+jiménez418@laposte.info');
+    expect(randEmail()).toEqual('sørina_müller@sympatico.net');
+    expect(randEmail()).toEqual('wolfgang+łuczak@verizon.net');
+  });
+
+  describe('firstName is passed', () => {
+    let firstName: string;
+
+    beforeEach(() => {
+      firstName = randFirstName();
+    });
+
+    it('should contain the first name', () => {
+      const result = randEmail({ firstName });
+
+      expect(result).toContain(firstName.toLowerCase());
+    });
+  });
+
+  describe('lastName is passed', () => {
+    let lastName: string;
+
+    beforeEach(() => {
+      lastName = randLastName();
+    });
+
+    it('should contain the first name', () => {
+      const result = randEmail({ lastName });
+
+      expect(result).toContain(lastName.toLowerCase());
+    });
   });
 
   describe('nameSeparator is passed', () => {
@@ -34,7 +64,9 @@ describe('email', () => {
       const result = randEmail({ nameSeparator });
       const name = result.split('@')[0];
 
-      expect(name.match('^[a-z]+\\.[a-z]+[1-1000]?')).toBeTruthy();
+      expect(
+        name.match('^[a-z]+(\\-[a-z]+)?\\.[a-z]+(\\-[a-z]+)?([1-1000]+)?')
+      ).toBeTruthy();
     });
 
     it('should return valid email format', () => {
@@ -115,9 +147,9 @@ describe('email', () => {
         const result = randEmail({ length: 3 });
 
         expect(result).toEqual([
-          'jorgejiang624@laposte.biz',
-          'sawat+garza@juno.org',
-          'zainab_meier@orange.info',
+          'jorge+jiménez418@laposte.info',
+          'sørina_müller@sympatico.net',
+          'wolfgang+łuczak@verizon.net',
         ]);
       });
     });

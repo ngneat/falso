@@ -1,7 +1,13 @@
 import { fake, FakeOptions } from './core/core';
-import { randFullName } from './full-name';
 import { randNumber } from './number';
 import { randBoolean } from './boolean';
+import { randFirstName } from './first-name';
+import { randLastName } from './last-name';
+
+export interface UserNameOptions extends FakeOptions {
+  firstName?: string;
+  lastName?: string;
+}
 
 /**
  * Generate a random user name.
@@ -16,12 +22,22 @@ import { randBoolean } from './boolean';
  *
  * randUserName({ length: 10 })
  *
+ * @example
+ *
+ * randUserName({ firstName: 'Ryan' })
+ *
+ * @example
+ *
+ * randUserName({ lastName: 'Smee' })
+ *
  */
-export function randUserName<Options extends FakeOptions = never>(
+export function randUserName<Options extends UserNameOptions = never>(
   options?: Options
 ) {
   return fake(() => {
-    let userName = randFullName().replace(' ', fake(['.', '_']));
+    const firstName = options?.firstName ?? randFirstName();
+    const lastName = options?.lastName ?? randLastName();
+    let userName = `${firstName} ${lastName}`.replace(' ', fake(['.', '_']));
 
     if (randBoolean()) {
       userName += randNumber({ min: 0, max: 100 });

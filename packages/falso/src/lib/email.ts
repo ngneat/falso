@@ -1,11 +1,14 @@
 import { fake, FakeOptions } from './core/core';
 import { randDomainSuffix } from './domain-suffix';
-import { randFullName } from './full-name';
 import { randBoolean } from './boolean';
 import { randNumber } from './number';
 import { randEmailProvider } from './email-provider';
+import { randFirstName } from './first-name';
+import { randLastName } from './last-name';
 
 export interface EmailOptions extends FakeOptions {
+  firstName?: string;
+  lastName?: string;
   provider?: string;
   suffix?: string;
   nameSeparator?: NameSeparators;
@@ -13,16 +16,20 @@ export interface EmailOptions extends FakeOptions {
 
 export type NameSeparators = '.' | '-' | '_' | '+' | 'none';
 
-function randFormattedName(nameSeparator?: NameSeparators): string {
-  let separator: string = '';
+function randFormattedName<Options extends EmailOptions = never>(
+  options?: Options
+): string {
+  let separator = '';
+  const firstName = options?.firstName ?? randFirstName();
+  const lastName = options?.lastName ?? randLastName();
 
-  if (!nameSeparator) {
+  if (!options?.nameSeparator) {
     separator = fake(['.', '-', '_', '+', '']);
-  } else if (nameSeparator !== 'none') {
-    separator = nameSeparator;
+  } else if (options.nameSeparator !== 'none') {
+    separator = options.nameSeparator;
   }
 
-  let name = randFullName({ withAccents: false }).replace(' ', separator);
+  let name = `${firstName} ${lastName}`.replace(' ', separator);
 
   if (randBoolean()) {
     name += randNumber({ min: 1, max: 1_000 });
@@ -46,15 +53,24 @@ function randFormattedName(nameSeparator?: NameSeparators): string {
  *
  * @example
  *
+ * randEmail({ firstName: 'Netanel' })
+ *
+ * @example
+ *
+ * randEmail({ lastName: 'Basal' })
+ *
+ * @example
+ *
+ * randEmail({ nameSeparator: '.' })
+ *
+ * @example
+ *
  * randEmail({ provider: 'gmail' })
  *
  * @example
  *
  * randEmail({ suffix: 'com' })
  *
- * @example
- *
- * randEmail({ nameSeparator: '.' })
  *
  */
 export function randEmail<Options extends EmailOptions = never>(
@@ -62,7 +78,7 @@ export function randEmail<Options extends EmailOptions = never>(
 ) {
   const factory = () => {
     const emailProvider = options?.provider || randEmailProvider();
-    const formattedName = randFormattedName(options?.nameSeparator);
+    const formattedName = randFormattedName(options);
     const emailSuffix = options?.suffix || randDomainSuffix();
 
     return `${formattedName}@${emailProvider}.${emailSuffix}`;
