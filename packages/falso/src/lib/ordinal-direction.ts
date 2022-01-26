@@ -15,7 +15,7 @@ import { data } from './ordinal-direction.json';
  * randOrdinalDirection({ length: 10 })
  *
  */
-export function randOrdinalDirection<Options extends FakeOptions = FakeOptions>(
+export function randOrdinalDirection<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

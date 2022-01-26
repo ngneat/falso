@@ -21,7 +21,7 @@ import { NameOptions } from './full-name';
  * randLastName({ length: 10 })
  *
  */
-export function randLastName<Options extends NameOptions = NameOptions>(
+export function randLastName<Options extends NameOptions = never>(
   options?: Options
 ) {
   const withAccents = options?.withAccents ?? randBoolean();

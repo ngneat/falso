@@ -24,7 +24,7 @@ interface LanguageOptions extends FakeOptions {
  * randLanguage({ code: true }) // default is false
  *
  */
-export function randLanguage<Options extends LanguageOptions = LanguageOptions>(
+export function randLanguage<Options extends LanguageOptions = never>(
   options?: Options
 ) {
   return fake(options?.code ? languageCodes : languages, options);

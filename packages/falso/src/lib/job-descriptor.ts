@@ -15,7 +15,7 @@ import { data } from './job-descriptor.json';
  * randJobDescriptor({ length: 10 })
  *
  */
-export function randJobDescriptor<Options extends FakeOptions = FakeOptions>(
+export function randJobDescriptor<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

@@ -21,9 +21,9 @@ export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
  * randFloat({ length: 10 })
  *
  */
-export function randFloat<
-  Options extends RandomFloatOptions = RandomFloatOptions
->(options?: Options) {
+export function randFloat<Options extends RandomFloatOptions = never>(
+  options?: Options
+) {
   const o = { ...options, fraction: options?.fraction ?? 2 };
   return fake(() => getRandomInRange(o), options);
 }

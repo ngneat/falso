@@ -17,9 +17,7 @@ import { rand } from './rand';
  *
  */
 export function randFileName<
-  Options extends FakeOptions & { extension?: string } = FakeOptions & {
-    extension?: string;
-  }
+  Options extends FakeOptions & { extension?: string } = never
 >(options?: Options) {
   const ext = options?.extension ?? 'pdf';
 

@@ -15,7 +15,7 @@ import { data } from './snake.json';
  * randSnake({ length: 10 })
  *
  */
-export function randSnake<Options extends FakeOptions = FakeOptions>(
+export function randSnake<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

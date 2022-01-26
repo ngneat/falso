@@ -15,8 +15,8 @@ import { data } from './programming-language.json';
  * randProgrammingLanguage({ length: 10 })
  *
  */
-export function randProgrammingLanguage<
-  Options extends FakeOptions = FakeOptions
->(options?: Options) {
+export function randProgrammingLanguage<Options extends FakeOptions = never>(
+  options?: Options
+) {
   return fake(data, options);
 }

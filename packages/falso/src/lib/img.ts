@@ -21,11 +21,7 @@ export function randImg<
     width?: number;
     height?: number;
     category?: Category;
-  } = FakeOptions & {
-    width?: number;
-    height?: number;
-    category?: Category;
-  }
+  } = never
 >(options?: Options) {
   const [width, height, category] = [
     options?.width ?? 500,

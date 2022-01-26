@@ -15,8 +15,8 @@ import { data } from './vehicle-manufacturer.json';
  * randVehicleManufacturer({ length: 10 })
  *
  */
-export function randVehicleManufacturer<
-  Options extends FakeOptions = FakeOptions
->(options?: Options) {
+export function randVehicleManufacturer<Options extends FakeOptions = never>(
+  options?: Options
+) {
   return fake(data, options);
 }

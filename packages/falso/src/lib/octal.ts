@@ -14,7 +14,7 @@ import { FakeOptions, fake } from './core/core';
  * randOctal({ length: 10 })
  *
  */
-export function randOctal<Options extends FakeOptions = FakeOptions>(
+export function randOctal<Options extends FakeOptions = never>(
   options?: Options
 ) {
   const RADIX = 8;

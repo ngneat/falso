@@ -28,9 +28,9 @@ export interface RandomNumberOptions extends FakeOptions {
  * randNumber({ min: 10, max: 1000 }) // default is 'min': 0, 'max': 999_999
  *
  */
-export function randNumber<
-  Options extends RandomNumberOptions = RandomNumberOptions
->(options?: Options) {
+export function randNumber<Options extends RandomNumberOptions = never>(
+  options?: Options
+) {
   const config: RandomInRangeOptions = {
     min: options?.min || 0,
     max: options?.max || 999_999,

@@ -15,7 +15,7 @@ import { data } from './product-material.json';
  * randProductMaterial({ length: 10 })
  *
  */
-export function randProductMaterial<Options extends FakeOptions = FakeOptions>(
+export function randProductMaterial<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

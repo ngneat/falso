@@ -15,7 +15,7 @@ import { randHexaDecimal } from './hexa-decimal';
  * randIpv6({ length: 10 })
  *
  */
-export function randIpv6<Options extends FakeOptions = FakeOptions>(
+export function randIpv6<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

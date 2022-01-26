@@ -23,9 +23,7 @@ export interface RGBOptions extends FakeOptions {
  * randRgb({ length: 10 })
  *
  */
-export function randRgb<Options extends RGBOptions = RGBOptions>(
-  options?: Options
-) {
+export function randRgb<Options extends RGBOptions = never>(options?: Options) {
   const factory = () => {
     const [r, g, b, a] = [
       getRandomInRange({ min: 0, max: 255 }),

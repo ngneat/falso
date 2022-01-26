@@ -15,7 +15,7 @@ import { data } from './priority.json';
  * randPriority({ length: 10 })
  *
  */
-export function randPriority<Options extends FakeOptions = FakeOptions>(
+export function randPriority<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

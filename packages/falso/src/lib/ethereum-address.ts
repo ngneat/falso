@@ -15,7 +15,7 @@ import { data } from './ethereum-address.json';
  * randEthereumAddress({ length: 10 })
  *
  */
-export function randEthereumAddress<Options extends FakeOptions = FakeOptions>(
+export function randEthereumAddress<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

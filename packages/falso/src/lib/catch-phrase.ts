@@ -15,7 +15,7 @@ import { data } from './catch-phrase.json';
  * randCatchPhrase({ length: 10 })
  *
  */
-export function randCatchPhrase<Options extends FakeOptions = FakeOptions>(
+export function randCatchPhrase<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

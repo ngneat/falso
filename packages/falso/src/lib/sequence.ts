@@ -46,8 +46,8 @@ type RandomSequenceOptions = {
  * randSequence({ length: 10 })
  *
  */
-export function randSequence<
-  Options extends RandomSequenceOptions = RandomSequenceOptions
->(options?: Options) {
+export function randSequence<Options extends RandomSequenceOptions = never>(
+  options?: Options
+) {
   return fake(() => generator(options?.size, options?.chars), options);
 }

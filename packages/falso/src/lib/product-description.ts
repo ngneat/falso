@@ -15,8 +15,8 @@ import { data } from './product-description.json';
  * randProductDescription({ length: 10 })
  *
  */
-export function randProductDescription<
-  Options extends FakeOptions = FakeOptions
->(options?: Options) {
+export function randProductDescription<Options extends FakeOptions = never>(
+  options?: Options
+) {
   return fake(data, options);
 }

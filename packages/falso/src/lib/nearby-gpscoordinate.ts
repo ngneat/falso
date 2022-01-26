@@ -16,8 +16,8 @@ import { randLongitude } from './longitude';
  * randNearbyGPSCoordinate({ length: 10 })
  *
  */
-export function randNearbyGPSCoordinate<
-  Options extends FakeOptions = FakeOptions
->(options?: Options) {
+export function randNearbyGPSCoordinate<Options extends FakeOptions = never>(
+  options?: Options
+) {
   return fake(() => [randLatitude(), randLongitude()], options);
 }

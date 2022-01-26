@@ -17,7 +17,7 @@ import { randNumber } from './number';
  * randAlphaNumeric({ length: 3 })
  *
  */
-export function randAlphaNumeric<Options extends FakeOptions = FakeOptions>(
+export function randAlphaNumeric<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(

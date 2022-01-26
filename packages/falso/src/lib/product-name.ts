@@ -15,7 +15,7 @@ import { data } from './product-name.json';
  * randProductName({ length: 10 })
  *
  */
-export function randProductName<Options extends FakeOptions = FakeOptions>(
+export function randProductName<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

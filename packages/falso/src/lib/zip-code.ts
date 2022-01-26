@@ -16,7 +16,7 @@ import { randBoolean } from './boolean';
  * randZipCode({ length: 10 })
  *
  */
-export function randZipCode<Options extends FakeOptions = FakeOptions>(
+export function randZipCode<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

@@ -15,7 +15,7 @@ import { data } from './transaction-type.json';
  * randTransactionType({ length: 10 })
  *
  */
-export function randTransactionType<Options extends FakeOptions = FakeOptions>(
+export function randTransactionType<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

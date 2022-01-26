@@ -30,7 +30,9 @@ interface BookOptions extends FakeOptions {
  * randBook({ category: 'Comedy' })
  *
  */
-export function randBook<Options extends BookOptions>(options?: Options) {
+export function randBook<Options extends BookOptions = never>(
+  options?: Options
+) {
   const bookData = options?.category
     ? data.filter(({ category }) => category === options.category)
     : data;

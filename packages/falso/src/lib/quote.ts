@@ -15,7 +15,7 @@ import { data } from './quote.json';
  * randQuote({ length: 10 })
  *
  */
-export function randQuote<Options extends FakeOptions = FakeOptions>(
+export function randQuote<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

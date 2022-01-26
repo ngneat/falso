@@ -15,7 +15,7 @@ import { data } from './svg.json';
  * randSvg({ length: 10 })
  *
  */
-export function randSvg<Options extends FakeOptions = FakeOptions>(
+export function randSvg<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

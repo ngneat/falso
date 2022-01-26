@@ -22,7 +22,7 @@ function generator() {
  * randHexaDecimal({ length: 10 })
  *
  */
-export function randHexaDecimal<Options extends FakeOptions = FakeOptions>(
+export function randHexaDecimal<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(generator, options);

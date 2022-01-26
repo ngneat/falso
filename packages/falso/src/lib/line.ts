@@ -19,7 +19,7 @@ export interface LineOptions extends FakeOptions {
  * randLine({ lineCount: 10 }) // default is 5
  *
  */
-export function randLine<Options extends LineOptions = LineOptions>(
+export function randLine<Options extends LineOptions = never>(
   options?: Options
 ) {
   const lineCount: number = options?.lineCount ?? 5;

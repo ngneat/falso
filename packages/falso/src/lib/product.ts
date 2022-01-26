@@ -32,7 +32,7 @@ export interface Product {
  * randProduct({ length: 10 })
  *
  */
-export function randProduct<Options extends FakeOptions = FakeOptions>(
+export function randProduct<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(

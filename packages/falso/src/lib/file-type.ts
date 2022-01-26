@@ -15,7 +15,7 @@ import { data } from './file-type.json';
  * randFileType({ length: 10 })
  *
  */
-export function randFileType<Options extends FakeOptions = FakeOptions>(
+export function randFileType<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

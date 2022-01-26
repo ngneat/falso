@@ -15,7 +15,7 @@ import { alphaChars } from './sequence';
  * randAlpha({ length: 3 })
  *
  */
-export function randAlpha<Options extends FakeOptions = FakeOptions>(
+export function randAlpha<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(alphaChars.split(''), options);

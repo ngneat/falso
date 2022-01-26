@@ -23,9 +23,7 @@ export interface HSLOptions extends FakeOptions {
  * randHsl({ alpha: true }) // default is false
  *
  */
-export function randHsl<Options extends HSLOptions = HSLOptions>(
-  options?: Options
-) {
+export function randHsl<Options extends HSLOptions = never>(options?: Options) {
   const factory = () => {
     const [h, s, l, a] = [
       getRandomInRange({ min: 0, max: 359, fraction: 0 }),

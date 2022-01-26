@@ -15,7 +15,7 @@ import { data } from './subscription-plan.json';
  * randSubscriptionPlan({ length: 10 })
  *
  */
-export function randSubscriptionPlan<Options extends FakeOptions = FakeOptions>(
+export function randSubscriptionPlan<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

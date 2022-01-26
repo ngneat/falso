@@ -14,7 +14,7 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  * randCreditCardCVV({ length: 10 })
  *
  */
-export function randCreditCardCVV<Options extends FakeOptions = FakeOptions>(
+export function randCreditCardCVV<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(

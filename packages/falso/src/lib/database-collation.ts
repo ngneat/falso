@@ -15,8 +15,8 @@ import { data } from './database-collation.json';
  * randDatabaseCollation({ length: 10 })
  *
  */
-export function randDatabaseCollation<
-  Options extends FakeOptions = FakeOptions
->(options?: Options) {
+export function randDatabaseCollation<Options extends FakeOptions = never>(
+  options?: Options
+) {
   return fake(data, options);
 }

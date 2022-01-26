@@ -5,7 +5,11 @@ export interface FakeOptions {
   length?: number;
 }
 
-type Return<T, O extends FakeOptions> = O['length'] extends number ? T[] : T;
+type Return<T, O extends FakeOptions> = [O] extends [never]
+  ? T
+  : O['length'] extends number
+  ? T[]
+  : T;
 
 export function fake<T, Options extends FakeOptions>(
   data: T[] | ((i: number) => T),

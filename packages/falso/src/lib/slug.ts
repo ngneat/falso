@@ -15,7 +15,7 @@ import { randWord } from './word';
  * randSlug({ length: 10 })
  *
  */
-export function randSlug<Options extends FakeOptions = FakeOptions>(
+export function randSlug<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

@@ -17,7 +17,7 @@ import { randBoolean } from './boolean';
  * randUserName({ length: 10 })
  *
  */
-export function randUserName<Options extends FakeOptions = FakeOptions>(
+export function randUserName<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

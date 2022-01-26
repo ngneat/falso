@@ -15,7 +15,7 @@ import { data } from './month.json';
  * month({ length: 10 })
  *
  */
-export function randMonth<Options extends FakeOptions = FakeOptions>(
+export function randMonth<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);
