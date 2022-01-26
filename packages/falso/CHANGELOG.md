@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.17.0](https://github.com/ngneat/falso/compare/falso-2.16.0...falso-2.17.0) (2022-01-26)
+
+### Bug Fixes
+
+- 🐞 support non strict null checks ([7ccbcfb](https://github.com/ngneat/falso/commit/7ccbcfbc594b366e42022ea2e4b89f7742ec8b20))
+
+### Features
+
+- 🔥 add new counties to the list ([747029b](https://github.com/ngneat/falso/commit/747029be605805bdf27efdffc7b626b8765af65b))
+
 # [2.16.0](https://github.com/ngneat/falso/compare/falso-2.15.0...falso-2.16.0) (2022-01-25)
 
 ### Features
