@@ -1,6 +1,7 @@
 import { fake, FakeOptions } from './core/core';
+import { rand } from './rand';
 import { data } from './superhero.json';
-import { rand, randUuid } from '@ngneat/falso';
+import { randUuid } from './uuid';
 
 export type ComicBookCompany = 'Marvel' | 'DC';
 
