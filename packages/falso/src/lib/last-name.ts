@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake } from './core/core';
 import { data } from './last-name.json';
 import { randBoolean } from './boolean';
 import { NameOptions } from './full-name';

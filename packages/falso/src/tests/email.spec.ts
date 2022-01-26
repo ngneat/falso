@@ -1,5 +1,7 @@
 import { seed } from '../lib/random';
 import { randEmail, NameSeparators } from '../lib/email';
+import { randFirstName } from '../lib/first-name';
+import { randLastName } from '../lib/last-name';
 
 describe('email', () => {
   let validEmailRegex: RegExp;
@@ -21,6 +23,34 @@ describe('email', () => {
     expect(randEmail()).toEqual('jorge+jiménez418@laposte.info');
     expect(randEmail()).toEqual('sørina_müller@sympatico.net');
     expect(randEmail()).toEqual('wolfgang+łuczak@verizon.net');
+  });
+
+  describe('firstName is passed', () => {
+    let firstName: string;
+
+    beforeEach(() => {
+      firstName = randFirstName();
+    });
+
+    it('should contain the first name', () => {
+      const result = randEmail({ firstName });
+
+      expect(result).toContain(firstName.toLowerCase());
+    });
+  });
+
+  describe('lastName is passed', () => {
+    let lastName: string;
+
+    beforeEach(() => {
+      lastName = randLastName();
+    });
+
+    it('should contain the first name', () => {
+      const result = randEmail({ lastName });
+
+      expect(result).toContain(lastName.toLowerCase());
+    });
   });
 
   describe('nameSeparator is passed', () => {
