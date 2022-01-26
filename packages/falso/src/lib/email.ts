@@ -57,7 +57,9 @@ function randFormattedName(nameSeparator?: NameSeparators): string {
  * randEmail({ nameSeparator: '.' })
  *
  */
-export function randEmail<Options extends EmailOptions>(options?: Options) {
+export function randEmail<Options extends EmailOptions = never>(
+  options?: Options
+) {
   const factory = () => {
     const emailProvider = options?.provider || randEmailProvider();
     const formattedName = randFormattedName(options?.nameSeparator);
