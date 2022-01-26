@@ -25,13 +25,11 @@ export function randSuperheroName<Options extends SuperheroOptions>(
   options?: Options
 ) {
   const factory: () => string = () => {
-    const heroes = data
-      .filter((hero: Superhero) =>
-        options?.company ? hero.company === options.company : true
-      )
-      .map((hero: Superhero) => hero.alterEgo);
+    const heroes: Superhero[] = options?.company
+      ? data.filter(({ company }) => company === options.company)
+      : data;
 
-    return rand(heroes);
+    return rand(heroes).alterEgo;
   };
 
   return fake(factory, options);

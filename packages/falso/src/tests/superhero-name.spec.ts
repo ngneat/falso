@@ -1,10 +1,10 @@
-import { randSuperheroName } from '@ngneat/falso';
+import { randSuperhero, randSuperheroName } from '@ngneat/falso';
 import { ComicBookCompany } from '../lib/superhero';
 import { data } from '../lib/superhero.json';
 
 describe('randSuperheroName', () => {
   it('should return a random super superhero name', () => {
-    const result: string = randSuperheroName();
+    const result = randSuperheroName();
     const allNames = data.map((hero) => hero.alterEgo);
 
     expect(allNames).toContain(result);
@@ -20,7 +20,7 @@ describe('randSuperheroName', () => {
       });
 
       it('should return a random super superhero name from DC', () => {
-        const result: string = randSuperheroName({ company });
+        const result = randSuperheroName({ company });
         const allNames = data
           .filter((hero) => hero.company === company)
           .map((hero) => hero.alterEgo);
@@ -36,7 +36,7 @@ describe('randSuperheroName', () => {
       });
 
       it('should return a random super superhero name from Marvel', () => {
-        const result: string = randSuperheroName({ company });
+        const result = randSuperheroName({ company });
         const allNames = data
           .filter((hero) => hero.company === company)
           .map((hero) => hero.alterEgo);
@@ -50,7 +50,7 @@ describe('randSuperheroName', () => {
   describe('length is passed', () => {
     describe('length is 2', () => {
       it('should return a string with 2 random superhero names', () => {
-        const result: string[] = randSuperheroName({ length: 2 });
+        const result = randSuperheroName({ length: 2 });
 
         expect(result.length).toEqual(2);
       });
@@ -58,7 +58,7 @@ describe('randSuperheroName', () => {
 
     describe('length is 5', () => {
       it('should return a string with 5 random superhero names', () => {
-        const result: string[] = randSuperheroName({ length: 5 });
+        const result = randSuperheroName({ length: 5 });
 
         expect(result.length).toEqual(5);
       });
@@ -66,7 +66,7 @@ describe('randSuperheroName', () => {
 
     describe('length is 100', () => {
       it('should return a string with 100 random superhero names', () => {
-        const result: string[] = randSuperheroName({ length: 100 });
+        const result = randSuperheroName({ length: 100 });
 
         expect(result.length).toEqual(100);
       });

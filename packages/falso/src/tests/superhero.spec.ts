@@ -6,7 +6,7 @@ import {
 
 describe('randSuperhero', () => {
   it('should return a random super superhero entity', () => {
-    const result: SuperheroEntity = randSuperhero();
+    const result = randSuperhero();
 
     expect(result).toEqual({
       id: expect.any(String),
@@ -25,7 +25,7 @@ describe('randSuperhero', () => {
       });
 
       it('should return a random super superhero entity from DC', () => {
-        const result: SuperheroEntity = randSuperhero({ company });
+        const result = randSuperhero({ company });
 
         expect(result).toEqual({
           id: expect.any(String),
@@ -42,7 +42,7 @@ describe('randSuperhero', () => {
       });
 
       it('should return a random super superhero entity from Marvel', () => {
-        const result: SuperheroEntity = randSuperhero({ company });
+        const result = randSuperhero({ company });
 
         expect(result).toEqual({
           id: expect.any(String),
@@ -57,7 +57,7 @@ describe('randSuperhero', () => {
   describe('length is passed', () => {
     describe('length is 2', () => {
       it('should return a string with 2 random superhero entities', () => {
-        const result: SuperheroEntity[] = randSuperhero({ length: 2 });
+        const result = randSuperhero({ length: 2 });
 
         expect(result.length).toEqual(2);
       });
@@ -65,7 +65,7 @@ describe('randSuperhero', () => {
 
     describe('length is 5', () => {
       it('should return a string with 5 random superhero entities', () => {
-        const result: SuperheroEntity[] = randSuperhero({ length: 5 });
+        const result = randSuperhero({ length: 5 });
 
         expect(result.length).toEqual(5);
       });
@@ -73,7 +73,7 @@ describe('randSuperhero', () => {
 
     describe('length is 100', () => {
       it('should return a string with 100 random superhero entities', () => {
-        const result: SuperheroEntity[] = randSuperhero({ length: 100 });
+        const result = randSuperhero({ length: 100 });
 
         expect(result.length).toEqual(100);
       });
@@ -81,7 +81,7 @@ describe('randSuperhero', () => {
 
     describe('length is 3', () => {
       it('should return a string with 3 random superhero entities', () => {
-        const [hero1, hero2, hero3]: SuperheroEntity[] = randSuperhero({
+        const [hero1, hero2, hero3] = randSuperhero({
           length: 3,
         });
 
