@@ -36,7 +36,7 @@ export interface SuperheroEntity extends Superhero {
  * randSuperhero({ length: 10 })
  *
  */
-export function randSuperhero<Options extends SuperheroOptions>(
+export function randSuperhero<Options extends SuperheroOptions = never>(
   options?: Options
 ) {
   const factory: () => SuperheroEntity = () => {

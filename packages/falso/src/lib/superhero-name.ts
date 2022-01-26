@@ -21,7 +21,7 @@ import { Superhero, SuperheroOptions } from './superhero';
  * randSuperheroName({ length: 10 })
  *
  */
-export function randSuperheroName<Options extends SuperheroOptions>(
+export function randSuperheroName<Options extends SuperheroOptions = never>(
   options?: Options
 ) {
   const factory: () => string = () => {
