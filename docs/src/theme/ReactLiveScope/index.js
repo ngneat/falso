@@ -45,6 +45,10 @@ function ChangeDataBtn(props) {
 }
 
 
+const reactJsonStyle = {
+  fontSize: 'inherit',
+  fontFamily: 'inherit',
+};
 
 function Preview({source}) {
   return <BrowserOnly fallback={<div>...</div>}>
@@ -54,7 +58,7 @@ function Preview({source}) {
 
       return (<>
         <ChangeDataBtn onClick={() => setData(source())}/>
-        {typeof data === 'object' ? <ReactJson name={false} enableClipboard={false} src={data}/> : <div>{data}</div>}
+        {typeof data === 'object' ? <ReactJson style={reactJsonStyle} name={false} enableClipboard={false} src={data} /> : <div>{data}</div>}
       </>);
     }}
   </BrowserOnly>;
