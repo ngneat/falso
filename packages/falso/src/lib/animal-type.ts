@@ -15,7 +15,7 @@ import { data } from './animal-type.json';
  * randAnimalType({ length: 10 })
  *
  */
-export function randAnimalType<Options extends FakeOptions = FakeOptions>(
+export function randAnimalType<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

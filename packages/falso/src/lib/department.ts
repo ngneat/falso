@@ -15,7 +15,7 @@ import { data } from './department.json';
  * randDepartment({ length: 10 })
  *
  */
-export function randDepartment<Options extends FakeOptions = FakeOptions>(
+export function randDepartment<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

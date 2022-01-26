@@ -257,9 +257,7 @@ type CountryCode =
 export function randPhoneNumber<
   Options extends FakeOptions & {
     countryCode?: CountryCode;
-  } = FakeOptions & {
-    countryCode?: CountryCode;
-  }
+  } = never
 >(options?: Options) {
   let formats: string[];
 

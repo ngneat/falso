@@ -15,7 +15,7 @@ import { data } from './verb.json';
  * randVerb({ length: 10 })
  *
  */
-export function randVerb<Options extends FakeOptions = FakeOptions>(
+export function randVerb<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

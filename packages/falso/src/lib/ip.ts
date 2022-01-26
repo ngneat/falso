@@ -17,9 +17,7 @@ const ipRange = { min: 0, max: 255 };
  * randIp({ length: 10 })
  *
  */
-export function randIp<Options extends FakeOptions = FakeOptions>(
-  options?: Options
-) {
+export function randIp<Options extends FakeOptions = never>(options?: Options) {
   return fake(
     () => Array.from({ length: 4 }, () => randNumber(ipRange)).join('.'),
     options

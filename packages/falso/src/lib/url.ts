@@ -16,7 +16,7 @@ import { randWord } from './word';
  * randUrl({ length: 10 })
  *
  */
-export function randUrl<Options extends FakeOptions = FakeOptions>(
+export function randUrl<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

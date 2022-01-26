@@ -15,7 +15,7 @@ import { data } from './directory-path.json';
  * randDirectoryPath({ length: 10 })
  *
  */
-export function randDirectoryPath<Options extends FakeOptions = FakeOptions>(
+export function randDirectoryPath<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

@@ -23,7 +23,7 @@ interface RecentOptions extends FakeOptions {
  * randRecentDate({ length: 10 })
  *
  */
-export function randRecentDate<Options extends RecentOptions = RecentOptions>(
+export function randRecentDate<Options extends RecentOptions = never>(
   options?: Options
 ) {
   const days = options?.days ?? 1;

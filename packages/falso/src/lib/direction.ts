@@ -15,7 +15,7 @@ import { data } from './direction.json';
  * randDirection({ length: 10 })
  *
  */
-export function randDirection<Options extends FakeOptions = FakeOptions>(
+export function randDirection<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

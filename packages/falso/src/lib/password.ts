@@ -23,7 +23,7 @@ export interface PasswordOptions extends FakeOptions {
  * randPassword({ size: 10 }) // default is 15
  *
  */
-export function randPassword<Options extends PasswordOptions = PasswordOptions>(
+export function randPassword<Options extends PasswordOptions = never>(
   options?: Options
 ) {
   const size = options?.size || 15;

@@ -15,7 +15,7 @@ import { data } from './accessory.json';
  * randAccessory({ length: 10 })
  *
  */
-export function randAccessory<Options extends FakeOptions = FakeOptions>(
+export function randAccessory<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

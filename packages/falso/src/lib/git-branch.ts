@@ -15,7 +15,7 @@ import { data } from './git-branch.json';
  * randGitBranch({ length: 10 })
  *
  */
-export function randGitBranch<Options extends FakeOptions = FakeOptions>(
+export function randGitBranch<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

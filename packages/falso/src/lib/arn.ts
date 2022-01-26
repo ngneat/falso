@@ -36,7 +36,7 @@ const serviceArn: Record<string, () => string> = {
  * randArn({ length: 10 })
  *
  */
-export function randArn<Options extends FakeOptions = FakeOptions>(
+export function randArn<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

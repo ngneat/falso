@@ -15,7 +15,7 @@ import { data } from './cetacean.json';
  * randCetacean({ length: 10 })
  *
  */
-export function randCetacean<Options extends FakeOptions = FakeOptions>(
+export function randCetacean<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

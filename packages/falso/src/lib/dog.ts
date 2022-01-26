@@ -15,7 +15,7 @@ import { data } from './dog.json';
  * randDog({ length: 10 })
  *
  */
-export function randDog<Options extends FakeOptions = FakeOptions>(
+export function randDog<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

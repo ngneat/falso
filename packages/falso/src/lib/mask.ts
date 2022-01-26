@@ -24,11 +24,7 @@ export function randMask<
     mask?: string;
     char?: string;
     digit?: string;
-  } = FakeOptions & {
-    mask?: string;
-    char?: string;
-    digit?: string;
-  }
+  } = never
 >(options?: Options) {
   return fake(() => {
     const [mask, char, digit] = [

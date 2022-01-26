@@ -15,7 +15,7 @@ import { randHexaDecimal } from './hexa-decimal';
  * randMac({ length: 10 })
  *
  */
-export function randMac<Options extends FakeOptions = FakeOptions>(
+export function randMac<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(

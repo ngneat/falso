@@ -24,7 +24,7 @@ export interface TextOptions extends FakeOptions {
  * text({ charCount: 10 }) // default is 10
  *
  */
-export function randText<Options extends TextOptions = TextOptions>(
+export function randText<Options extends TextOptions = never>(
   options?: Options
 ) {
   const charCount: number = options?.charCount ?? 10;

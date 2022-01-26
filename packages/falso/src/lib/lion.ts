@@ -15,7 +15,7 @@ import { data } from './lion.json';
  * randLion({ length: 10 })
  *
  */
-export function randLion<Options extends FakeOptions = FakeOptions>(
+export function randLion<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

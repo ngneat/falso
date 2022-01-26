@@ -39,7 +39,7 @@ export interface User {
  * randUser({ length: 10 })
  *
  */
-export function randUser<Options extends FakeOptions = FakeOptions>(
+export function randUser<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

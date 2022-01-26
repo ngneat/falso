@@ -15,7 +15,7 @@ import { data } from './horse.json';
  * randHorse({ length: 10 })
  *
  */
-export function randHorse<Options extends FakeOptions = FakeOptions>(
+export function randHorse<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

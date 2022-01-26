@@ -15,7 +15,7 @@ import { data } from './database-engine.json';
  * randDatabaseEngine({ length: 10 })
  *
  */
-export function randDatabaseEngine<Options extends FakeOptions = FakeOptions>(
+export function randDatabaseEngine<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

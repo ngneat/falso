@@ -15,7 +15,7 @@ import { data } from './street-name.json';
  * randStreetName({ length: 10 })
  *
  */
-export function randStreetName<Options extends FakeOptions = FakeOptions>(
+export function randStreetName<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

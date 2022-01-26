@@ -15,7 +15,7 @@ import { data } from './cat.json';
  * randCat({ length: 10 })
  *
  */
-export function randCat<Options extends FakeOptions = FakeOptions>(
+export function randCat<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

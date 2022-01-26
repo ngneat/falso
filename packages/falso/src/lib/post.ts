@@ -25,7 +25,7 @@ interface Post {
  * randPost({ length: 10 })
  *
  */
-export function randPost<Options extends FakeOptions = FakeOptions>(
+export function randPost<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

@@ -23,7 +23,7 @@ interface PastOptions extends FakeOptions {
  * randPastDate({ years: 2 }) // default is 1
  *
  */
-export function randPastDate<Options extends PastOptions = PastOptions>(
+export function randPastDate<Options extends PastOptions = never>(
   options?: Options
 ) {
   const years = options?.years ?? 1;

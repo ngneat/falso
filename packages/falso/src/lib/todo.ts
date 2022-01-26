@@ -23,7 +23,7 @@ interface Todo {
  * randTodo({ length: 10 })
  *
  */
-export function randTodo<Options extends FakeOptions = FakeOptions>(
+export function randTodo<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

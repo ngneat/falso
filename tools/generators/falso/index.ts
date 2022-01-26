@@ -43,7 +43,7 @@ export default async function (tree: Tree, options: NewFalsoOptions) {
        * ${name}({ length: 10 })
        *
        */
-      export function ${name}<Options extends FakeOptions = FakeOptions>(options?: Options) {
+      export function ${name}<Options extends FakeOptions = never>(options?: Options) {
         return fake(${options.json ? 'data' : `() => 1`}, options);
       }
     `

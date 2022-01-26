@@ -15,7 +15,7 @@ import { data } from './time-zone.json';
  * randTimeZone({ length: 10 })
  *
  */
-export function randTimeZone<Options extends FakeOptions = FakeOptions>(
+export function randTimeZone<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

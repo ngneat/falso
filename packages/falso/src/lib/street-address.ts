@@ -16,7 +16,7 @@ import { randStreetName } from './street-name';
  * randStreetAddress({ length: 10 })
  *
  */
-export function randStreetAddress<Options extends FakeOptions = FakeOptions>(
+export function randStreetAddress<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(

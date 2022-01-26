@@ -21,7 +21,7 @@ import { randBoolean } from './boolean';
  * randFirstName({ length: 10 })
  *
  */
-export function randFirstName<Options extends NameOptions = NameOptions>(
+export function randFirstName<Options extends NameOptions = never>(
   options?: Options
 ) {
   const withAccents = options?.withAccents ?? randBoolean();

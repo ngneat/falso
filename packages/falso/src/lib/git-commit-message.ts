@@ -16,7 +16,7 @@ import { randWord } from './word';
  * randGitCommitMessage({ length: 10 })
  *
  */
-export function randGitCommitMessage<Options extends FakeOptions = FakeOptions>(
+export function randGitCommitMessage<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {

@@ -15,7 +15,7 @@ import { data } from './county.json';
  * randCounty({ length: 10 })
  *
  */
-export function randCounty<Options extends FakeOptions = FakeOptions>(
+export function randCounty<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

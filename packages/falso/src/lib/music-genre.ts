@@ -15,7 +15,7 @@ import { data } from './music-genre.json';
  * randMusicGenre({ length: 10 })
  *
  */
-export function randMusicGenre<Options extends FakeOptions = FakeOptions>(
+export function randMusicGenre<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

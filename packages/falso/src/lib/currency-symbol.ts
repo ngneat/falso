@@ -15,7 +15,7 @@ import { data } from './currency-symbol.json';
  * randCurrencySymbol({ length: 10 })
  *
  */
-export function randCurrencySymbol<Options extends FakeOptions = FakeOptions>(
+export function randCurrencySymbol<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(data, options);

@@ -23,7 +23,7 @@ interface SoonOptions extends FakeOptions {
  * randSoonDate({ length: 10 })
  *
  */
-export function randSoonDate<Options extends SoonOptions = SoonOptions>(
+export function randSoonDate<Options extends SoonOptions = never>(
   options?: Options
 ) {
   const days = options?.days ?? 1;

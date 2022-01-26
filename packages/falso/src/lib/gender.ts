@@ -24,7 +24,7 @@ interface GenderOptions extends FakeOptions {
  * randGender({ code: true }) // default is false
  *
  */
-export function randGender<Options extends GenderOptions = GenderOptions>(
+export function randGender<Options extends GenderOptions = never>(
   options?: Options
 ) {
   return fake(options?.code ? genderCode : gender, options);

@@ -14,7 +14,7 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
  * randLongitude({ length: 10 })
  *
  */
-export function randLongitude<Options extends FakeOptions = FakeOptions>(
+export function randLongitude<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(
