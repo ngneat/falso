@@ -2,6 +2,33 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.18.0](https://github.com/ngneat/falso/compare/falso-2.17.0...falso-2.18.0) (2022-01-26)
+
+### Bug Fixes
+
+- 🐞 Add missing special char to regex ([cc62fc9](https://github.com/ngneat/falso/commit/cc62fc9911eafc656dbbbd56d294de0fb67e940b))
+- 🐞 Add tests to ensure there are no invalid names in json ([0319dcc](https://github.com/ngneat/falso/commit/0319dcca701b6781f9747a37896e83c6bdd3c603))
+- 🐞 email should default to never type ([9d50b17](https://github.com/ngneat/falso/commit/9d50b178789d6b49697aa4737c27b361239629b6))
+
+### Features
+
+- 🔥 Add more superheros to json file ([2b26553](https://github.com/ngneat/falso/commit/2b26553d39b64efed2a627e70f54ba15ee2dcf99)), closes [#134](https://github.com/ngneat/falso/issues/134)
+- 🔥 Add random super hero functions ([775bc68](https://github.com/ngneat/falso/commit/775bc688c1f12f2cf3fbda29f63e5749dc88955a)), closes [#134](https://github.com/ngneat/falso/issues/134)
+- 🔥 Add unit test suite for superhero functions ([3ad309d](https://github.com/ngneat/falso/commit/3ad309d1bb6485d3d416ba3e6df644dfa7fc2cd6)), closes [#134](https://github.com/ngneat/falso/issues/134)
+
+# [2.18.0](https://github.com/ngneat/falso/compare/falso-2.17.0...falso-2.18.0) (2022-01-26)
+
+### Bug Fixes
+
+- 🐞 Add missing special char to regex ([cc62fc9](https://github.com/ngneat/falso/commit/cc62fc9911eafc656dbbbd56d294de0fb67e940b))
+- 🐞 Add tests to ensure there are no invalid names in json ([0319dcc](https://github.com/ngneat/falso/commit/0319dcca701b6781f9747a37896e83c6bdd3c603))
+
+### Features
+
+- 🔥 Add more superheros to json file ([2b26553](https://github.com/ngneat/falso/commit/2b26553d39b64efed2a627e70f54ba15ee2dcf99)), closes [#134](https://github.com/ngneat/falso/issues/134)
+- 🔥 Add random super hero functions ([775bc68](https://github.com/ngneat/falso/commit/775bc688c1f12f2cf3fbda29f63e5749dc88955a)), closes [#134](https://github.com/ngneat/falso/issues/134)
+- 🔥 Add unit test suite for superhero functions ([3ad309d](https://github.com/ngneat/falso/commit/3ad309d1bb6485d3d416ba3e6df644dfa7fc2cd6)), closes [#134](https://github.com/ngneat/falso/issues/134)
+
 # [2.17.0](https://github.com/ngneat/falso/compare/falso-2.16.0...falso-2.17.0) (2022-01-26)
 
 ### Bug Fixes
