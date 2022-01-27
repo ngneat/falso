@@ -167,3 +167,4 @@ export { randOctal } from './lib/octal';
 export { randSuperhero } from './lib/superhero';
 export { randSuperheroName } from './lib/superhero-name';
 export { randBinary } from './lib/binary';
+export { randSports } from './lib/sports';
