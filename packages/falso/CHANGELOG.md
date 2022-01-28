@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.20.0](https://github.com/ngneat/falso/compare/falso-2.19.0...falso-2.20.0) (2022-01-28)
+
+### Bug Fixes
+
+- 🐞 Fix broken tests after merge of main ([6a5ce8c](https://github.com/ngneat/falso/commit/6a5ce8cbfcccd0c9fe2bfadf5efb26f2a4bda438))
+
+### Features
+
+- 🔥 Add use same name for email & userName in randUser ([ac19622](https://github.com/ngneat/falso/commit/ac19622f43b9495a06214eccae42fdeedb3c57b4)), closes [#143](https://github.com/ngneat/falso/issues/143)
+- 🔥 added abbreviation in randMonth ([a2be22c](https://github.com/ngneat/falso/commit/a2be22c20e7560a0c2da15c4bd1749efa399ed20)), closes [#145](https://github.com/ngneat/falso/issues/145)
+- 🔥 added randSports ([99781f6](https://github.com/ngneat/falso/commit/99781f6a1374c0bdf5b620ab7493dcfefa0a5ec0))
+
 # [2.18.0](https://github.com/ngneat/falso/compare/falso-2.17.0...falso-2.18.0) (2022-01-26)
 
 ### Bug Fixes
