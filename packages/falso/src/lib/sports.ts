@@ -12,7 +12,7 @@ const categoriesCount = Object.keys(data)?.length;
 /**
  * Generate a random sports.
  *
- * @category Sports
+ * @category sports
  *
  * @example
  *
