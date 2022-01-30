@@ -168,3 +168,8 @@ export { randSuperhero } from './lib/superhero';
 export { randSuperheroName } from './lib/superhero-name';
 export { randBinary } from './lib/binary';
 export { randSports } from './lib/sports';
+export { randFootballTeam } from './lib/football-team';
+export { randBasketballTeam } from './lib/basketball-team';
+export { randIceHockeyTeam } from './lib/ice-hockey-team';
+export { randAmericanFootballTeam } from './lib/american-football-team';
+export { randBaseballTeam } from './lib/baseball-team';
