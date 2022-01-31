@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.21.0](https://github.com/ngneat/falso/compare/falso-2.20.0...falso-2.21.0) (2022-01-31)
+
+### Features
+
+- 🔥 Add functions for rand sports team by sport ([aa0c86c](https://github.com/ngneat/falso/commit/aa0c86c1691dbe1972a94205b4385efd5554238c)), closes [#150](https://github.com/ngneat/falso/issues/150)
+- 🔥 Add random team name function ([89c0c4a](https://github.com/ngneat/falso/commit/89c0c4a5e20c7a55fcf40576b0a8afe266dfa27b)), closes [#150](https://github.com/ngneat/falso/issues/150)
+
 # [2.20.0](https://github.com/ngneat/falso/compare/falso-2.19.0...falso-2.20.0) (2022-01-28)
 
 ### Bug Fixes
