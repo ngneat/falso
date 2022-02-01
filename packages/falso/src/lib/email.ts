@@ -20,8 +20,8 @@ function randFormattedName<Options extends EmailOptions = never>(
   options?: Options
 ): string {
   let separator = '';
-  const firstName = options?.firstName ?? randFirstName();
-  const lastName = options?.lastName ?? randLastName();
+  const firstName = options?.firstName ?? randFirstName({ withAccents: false });
+  const lastName = options?.lastName ?? randLastName({ withAccents: false });
 
   if (!options?.nameSeparator) {
     separator = fake(['.', '-', '_', '+', '']);

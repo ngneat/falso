@@ -2,14 +2,24 @@ import { seed } from '../lib/random';
 import { randEmail, NameSeparators } from '../lib/email';
 import { randFirstName } from '../lib/first-name';
 import { randLastName } from '../lib/last-name';
+import * as firstNameFunctions from '../lib/first-name';
+import * as lastNameFunctions from '../lib/last-name';
 
 describe('email', () => {
   let validEmailRegex: RegExp;
+  let randFirstNameSpy: jest.SpyInstance;
+  let randLastNameSpy: jest.SpyInstance;
 
   beforeEach(() => {
     validEmailRegex =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    randFirstNameSpy = jest.spyOn(firstNameFunctions, 'randFirstName');
+    randLastNameSpy = jest.spyOn(lastNameFunctions, 'randLastName');
     seed('💻🕸📞');
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it('should return valid email format', () => {
@@ -20,36 +30,56 @@ describe('email', () => {
 
   it('should use random seed to generate all parts of email', () => {
     // This will likely break if new names or email providers are added
-    expect(randEmail()).toEqual('jorge+jiménez418@laposte.info');
-    expect(randEmail()).toEqual('sørina_müller@sympatico.net');
-    expect(randEmail()).toEqual('wolfgang+łuczak@verizon.net');
+    expect(randEmail()).toEqual('somkiat-kimura624@laposte.biz');
+    expect(randEmail()).toEqual('roy-schmidt@juno.org');
+    expect(randEmail()).toEqual('mpho_zhong@orange.info');
   });
 
-  describe('firstName is passed', () => {
-    let firstName: string;
+  describe('firstName', () => {
+    describe('firstName is passed', () => {
+      let firstName: string;
 
-    beforeEach(() => {
-      firstName = randFirstName();
+      beforeEach(() => {
+        firstName = randFirstName();
+      });
+
+      it('should contain the first name', () => {
+        const result = randEmail({ firstName });
+
+        expect(result).toContain(firstName.toLowerCase());
+      });
     });
 
-    it('should contain the first name', () => {
-      const result = randEmail({ firstName });
+    describe('firstName is not passed', () => {
+      it('should call randFirstName without special characters', () => {
+        randEmail();
 
-      expect(result).toContain(firstName.toLowerCase());
+        expect(randFirstNameSpy).toBeCalledWith({ withAccents: false });
+      });
     });
   });
 
-  describe('lastName is passed', () => {
-    let lastName: string;
+  describe('lastName', () => {
+    describe('lastName is passed', () => {
+      let lastName: string;
 
-    beforeEach(() => {
-      lastName = randLastName();
+      beforeEach(() => {
+        lastName = randLastName();
+      });
+
+      it('should contain the last name', () => {
+        const result = randEmail({ lastName });
+
+        expect(result).toContain(lastName.toLowerCase());
+      });
     });
 
-    it('should contain the first name', () => {
-      const result = randEmail({ lastName });
+    describe('lastName is not passed', () => {
+      it('should call randLastName without special characters', () => {
+        randEmail();
 
-      expect(result).toContain(lastName.toLowerCase());
+        expect(randLastNameSpy).toBeCalledWith({ withAccents: false });
+      });
     });
   });
 
@@ -147,9 +177,9 @@ describe('email', () => {
         const result = randEmail({ length: 3 });
 
         expect(result).toEqual([
-          'jorge+jiménez418@laposte.info',
-          'sørina_müller@sympatico.net',
-          'wolfgang+łuczak@verizon.net',
+          'somkiat-kimura624@laposte.biz',
+          'roy-schmidt@juno.org',
+          'mpho_zhong@orange.info',
         ]);
       });
     });

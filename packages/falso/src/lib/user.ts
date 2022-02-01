@@ -43,8 +43,8 @@ export function randUser<Options extends FakeOptions = never>(
   options?: Options
 ) {
   return fake(() => {
-    const firstName = randFirstName();
-    const lastName = randLastName();
+    const firstName = randFirstName({ withAccents: false });
+    const lastName = randLastName({ withAccents: false });
 
     const user: User = {
       id: randUuid(),
