@@ -1,7 +1,20 @@
 import { randUser } from '../lib/user';
-import { replaceAccentedChars } from '../lib/core/string-manipulation';
+import * as firstNameFunctions from '../lib/first-name';
+import * as lastNameFunctions from '../lib/last-name';
 
 describe('user', () => {
+  let randFirstNameSpy: jest.SpyInstance;
+  let randLastNameSpy: jest.SpyInstance;
+
+  beforeAll(() => {
+    randFirstNameSpy = jest.spyOn(firstNameFunctions, 'randFirstName');
+    randLastNameSpy = jest.spyOn(lastNameFunctions, 'randLastName');
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should create a user', () => {
     const user = randUser();
 
@@ -14,8 +27,8 @@ describe('user', () => {
     const result = randUser();
     const { firstName, lastName, email } = result;
 
-    expect(email).toContain(replaceAccentedChars(firstName).toLowerCase());
-    expect(email).toContain(replaceAccentedChars(lastName).toLowerCase());
+    expect(email).toContain(firstName.toLowerCase());
+    expect(email).toContain(lastName.toLowerCase());
   });
 
   it('should contain the firstName and lastName in the username', () => {
@@ -24,5 +37,21 @@ describe('user', () => {
 
     expect(username.toLowerCase()).toContain(firstName.toLowerCase());
     expect(username.toLowerCase()).toContain(lastName.toLowerCase());
+  });
+
+  describe('firstName', () => {
+    it('should call randFirstName without special characters', () => {
+      randUser();
+
+      expect(randFirstNameSpy).toBeCalledWith({ withAccents: false });
+    });
+  });
+
+  describe('lastName', () => {
+    it('should call randLastName without special characters', () => {
+      randUser();
+
+      expect(randLastNameSpy).toBeCalledWith({ withAccents: false });
+    });
   });
 });

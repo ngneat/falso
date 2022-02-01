@@ -1,10 +1,13 @@
 import { fake, FakeOptions } from './core/core';
 import { data } from './word.json';
 import { rand } from './rand';
-import { capitalizeFirstLetter } from './core/string-manipulation';
 
 export interface WordOptions extends FakeOptions {
   capitalize?: boolean;
+}
+
+function capitalizeFirstLetter(text: string): string {
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 /**
