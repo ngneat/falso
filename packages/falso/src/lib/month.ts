@@ -1,6 +1,5 @@
-import { fake, FakeOptions } from './core/core';
+import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './month.json';
-import { rand } from './rand';
 export interface MonthOptions extends FakeOptions {
   abbreviation?: boolean;
 }
@@ -30,7 +29,7 @@ export function randMonth<Options extends MonthOptions = never>(
   const monthData: string[] = data;
   const abbreviation: boolean | undefined = options?.abbreviation;
   const factory: () => string = () => {
-    const randMonth: string = rand(monthData);
+    const randMonth: string = randElement(monthData);
     if (abbreviation) {
       return randMonth.slice(0, 3);
     }

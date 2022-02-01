@@ -1,5 +1,4 @@
-import { FakeOptions, fake } from './core/core';
-import { rand } from './rand';
+import { fake, FakeOptions, randElement } from './core/core';
 
 /**
  * Generate a random boolean.
@@ -18,5 +17,5 @@ import { rand } from './rand';
 export function randBoolean<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => rand([true, false]), options);
+  return fake(() => randElement([true, false]), options);
 }
