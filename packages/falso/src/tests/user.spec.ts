@@ -1,4 +1,5 @@
 import { randUser } from '../lib/user';
+import { replaceAccentedChars } from '../lib/core/string-manipulation';
 
 describe('user', () => {
   it('should create a user', () => {
@@ -9,12 +10,12 @@ describe('user', () => {
     expect(typeof user.img).toEqual('string');
   });
 
-  it('should contain the firstName and lastName in the email', () => {
+  it('should contain the firstName and lastName with non-accented characters in the email', () => {
     const result = randUser();
     const { firstName, lastName, email } = result;
 
-    expect(email.toLowerCase()).toContain(firstName.toLowerCase());
-    expect(email.toLowerCase()).toContain(lastName.toLowerCase());
+    expect(email).toContain(replaceAccentedChars(firstName).toLowerCase());
+    expect(email).toContain(replaceAccentedChars(lastName).toLowerCase());
   });
 
   it('should contain the firstName and lastName in the username', () => {

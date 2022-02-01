@@ -2,6 +2,7 @@ import { seed } from '../lib/random';
 import { randEmail, NameSeparators } from '../lib/email';
 import { randFirstName } from '../lib/first-name';
 import { randLastName } from '../lib/last-name';
+import { replaceAccentedChars } from '../lib/core/string-manipulation';
 
 describe('email', () => {
   let validEmailRegex: RegExp;
@@ -20,9 +21,9 @@ describe('email', () => {
 
   it('should use random seed to generate all parts of email', () => {
     // This will likely break if new names or email providers are added
-    expect(randEmail()).toEqual('jorge+jiménez418@laposte.info');
-    expect(randEmail()).toEqual('sørina_müller@sympatico.net');
-    expect(randEmail()).toEqual('wolfgang+łuczak@verizon.net');
+    expect(randEmail()).toEqual('jorge+jimenez418@laposte.info');
+    expect(randEmail()).toEqual('sorina_muller@sympatico.net');
+    expect(randEmail()).toEqual('wolfgang+luczak@verizon.net');
   });
 
   describe('firstName is passed', () => {
@@ -32,10 +33,10 @@ describe('email', () => {
       firstName = randFirstName();
     });
 
-    it('should contain the first name', () => {
+    it('should contain the first name with accents removed', () => {
       const result = randEmail({ firstName });
 
-      expect(result).toContain(firstName.toLowerCase());
+      expect(result).toContain(replaceAccentedChars(firstName).toLowerCase());
     });
   });
 
@@ -46,10 +47,10 @@ describe('email', () => {
       lastName = randLastName();
     });
 
-    it('should contain the first name', () => {
+    it('should contain the last name with accents removed', () => {
       const result = randEmail({ lastName });
 
-      expect(result).toContain(lastName.toLowerCase());
+      expect(result).toContain(replaceAccentedChars(lastName).toLowerCase());
     });
   });
 
@@ -147,9 +148,9 @@ describe('email', () => {
         const result = randEmail({ length: 3 });
 
         expect(result).toEqual([
-          'jorge+jiménez418@laposte.info',
-          'sørina_müller@sympatico.net',
-          'wolfgang+łuczak@verizon.net',
+          'jorge+jimenez418@laposte.info',
+          'sorina_muller@sympatico.net',
+          'wolfgang+luczak@verizon.net',
         ]);
       });
     });

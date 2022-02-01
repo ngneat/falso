@@ -5,6 +5,7 @@ import { randNumber } from './number';
 import { randEmailProvider } from './email-provider';
 import { randFirstName } from './first-name';
 import { randLastName } from './last-name';
+import { replaceAccentedChars } from './core/string-manipulation';
 
 export interface EmailOptions extends FakeOptions {
   firstName?: string;
@@ -29,7 +30,9 @@ function randFormattedName<Options extends EmailOptions = never>(
     separator = options.nameSeparator;
   }
 
-  let name = `${firstName} ${lastName}`.replace(' ', separator);
+  let name = `${replaceAccentedChars(firstName)} ${replaceAccentedChars(
+    lastName
+  )}`.replace(' ', separator);
 
   if (randBoolean()) {
     name += randNumber({ min: 1, max: 1_000 });
