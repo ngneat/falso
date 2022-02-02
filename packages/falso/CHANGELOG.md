@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.22.0](https://github.com/ngneat/falso/compare/falso-2.21.0...falso-2.22.0) (2022-02-02)
+
+### Features
+
+- 🔥 Replace accented chars in email addresses ([ae82b3b](https://github.com/ngneat/falso/commit/ae82b3bb577526cedd36c81ddab2d5fe19e54d73))
+
 # [2.21.0](https://github.com/ngneat/falso/compare/falso-2.20.0...falso-2.21.0) (2022-01-31)
 
 ### Features
