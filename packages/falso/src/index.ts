@@ -174,3 +174,5 @@ export { randVerb } from './lib/verb';
 export { randWeekday } from './lib/weekday';
 export { randWord } from './lib/word';
 export { randZipCode } from './lib/zip-code';
+export { randSinger } from './lib/singer';
+export { randSong } from './lib/song';
