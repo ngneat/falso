@@ -1,7 +1,6 @@
-import { fake } from './core/core';
-import { data } from './superhero.json';
-import { rand } from './rand';
+import { fake, randElement } from './core/core';
 import { Superhero, SuperheroOptions } from './superhero';
+import { data } from './superhero.json';
 
 /**
  * Generate a random superhero name.
@@ -29,7 +28,7 @@ export function randSuperheroName<Options extends SuperheroOptions = never>(
       ? data.filter(({ company }) => company === options.company)
       : data;
 
-    return rand(heroes).alterEgo;
+    return randElement(heroes).alterEgo;
   };
 
   return fake(factory, options);

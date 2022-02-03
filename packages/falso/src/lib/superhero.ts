@@ -1,5 +1,4 @@
-import { fake, FakeOptions } from './core/core';
-import { rand } from './rand';
+import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './superhero.json';
 import { randUuid } from './uuid';
 
@@ -46,7 +45,7 @@ export function randSuperhero<Options extends SuperheroOptions = never>(
       : data;
 
     return {
-      ...rand(heroes),
+      ...randElement(heroes),
       id: randUuid(),
     };
   };

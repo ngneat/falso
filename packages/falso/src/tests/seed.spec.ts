@@ -1,5 +1,5 @@
+import { randElement } from '../lib/core/core';
 import { seed } from '../lib/random';
-import { rand } from '../lib/rand';
 
 describe('seed', () => {
   it('should return same values with constant seed', () => {
@@ -8,19 +8,19 @@ describe('seed', () => {
     const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     seed(seed1Value);
-    expect(rand(values)).toEqual(1);
-    expect(rand(values)).toEqual(6);
-    expect(rand(values)).toEqual(5);
+    expect(randElement(values)).toEqual(1);
+    expect(randElement(values)).toEqual(6);
+    expect(randElement(values)).toEqual(5);
 
     seed(seed2Value);
-    expect(rand(values)).toEqual(7);
-    expect(rand(values)).toEqual(5);
-    expect(rand(values)).toEqual(1);
+    expect(randElement(values)).toEqual(7);
+    expect(randElement(values)).toEqual(5);
+    expect(randElement(values)).toEqual(1);
 
     seed(seed1Value);
-    expect(rand(values)).toEqual(1);
-    expect(rand(values)).toEqual(6);
-    expect(rand(values)).toEqual(5);
+    expect(randElement(values)).toEqual(1);
+    expect(randElement(values)).toEqual(6);
+    expect(randElement(values)).toEqual(5);
 
     // Reset seed in case other tests depend on it
     seed();

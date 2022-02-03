@@ -1,4 +1,4 @@
-import { random } from './random';
+import { fake, FakeOptions } from './core/core';
 
 /**
  * Get a random item from array.
@@ -9,7 +9,14 @@ import { random } from './random';
  *
  * rand([1, 2, 3])
  *
+ * @example
+ *
+ * rand([1, 2, 3], { length: 10 })
+ *
  */
-export function rand<T>(arr: T[]): T {
-  return arr[Math.floor(random() * arr.length)];
+export function rand<T, Options extends FakeOptions = never>(
+  arr: T[],
+  options?: Options
+) {
+  return fake(arr, options);
 }

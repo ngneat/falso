@@ -1,6 +1,5 @@
-import { fake, FakeOptions } from './core/core';
+import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './word.json';
-import { rand } from './rand';
 
 export interface WordOptions extends FakeOptions {
   capitalize?: boolean;
@@ -32,7 +31,7 @@ export function randWord<Options extends WordOptions = never>(
   options?: Options
 ) {
   const factory = () => {
-    let word = rand(data);
+    let word = randElement(data);
 
     if (options?.capitalize) {
       word = capitalizeFirstLetter(word);
