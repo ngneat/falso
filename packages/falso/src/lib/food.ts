@@ -1,6 +1,5 @@
-import { FakeOptions, fake, getRandomInRange } from './core/core';
+import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
 import { data } from './food.json';
-import { rand } from './rand';
 
 export interface FoodOptions extends FakeOptions {
   origin?:
@@ -52,7 +51,7 @@ export function randFood<Options extends FoodOptions = never>(
 
   const factory: () => string = () => {
     if (origin) {
-      return rand(foodData[origin]);
+      return randElement(foodData[origin]);
     }
 
     const originIndex = getRandomInRange({
@@ -62,7 +61,7 @@ export function randFood<Options extends FoodOptions = never>(
     });
     const randomOrigin = Object.keys(foodData)[originIndex];
 
-    return rand(foodData[randomOrigin]);
+    return randElement(foodData[randomOrigin]);
   };
 
   return fake(factory, options);

@@ -1,4 +1,3 @@
-import { rand } from '../rand';
 import { random } from '../random';
 
 export interface FakeOptions {
@@ -15,7 +14,7 @@ export function fake<T, Options extends FakeOptions>(
   data: T[] | ((i: number) => T),
   options?: Options
 ): Return<T, Options> {
-  const dataSource = Array.isArray(data) ? () => rand(data) : data;
+  const dataSource = Array.isArray(data) ? () => randElement(data) : data;
 
   if (!options?.length) {
     return dataSource(0) as any;
@@ -24,6 +23,10 @@ export function fake<T, Options extends FakeOptions>(
   return Array.from({ length: options.length }, (_, index) =>
     dataSource(index)
   ) as any;
+}
+
+export function randElement<T>(arr: T[]) {
+  return arr[Math.floor(random() * arr.length)];
 }
 
 export interface RandomInRangeOptions {
