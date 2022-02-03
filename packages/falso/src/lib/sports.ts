@@ -1,6 +1,5 @@
-import { FakeOptions, fake, getRandomInRange } from './core/core';
+import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
 import { data } from './sports.json';
-import { rand } from './rand';
 
 export interface SportCategories extends FakeOptions {
   // This categories can be extended in the future
@@ -43,7 +42,7 @@ export function randSports<Options extends SportCategories = never>(
 
   const factory: () => string = () => {
     if (category) {
-      return rand(sportsData[category]);
+      return randElement(sportsData[category]);
     }
 
     const randIndex = getRandomInRange({
@@ -53,7 +52,7 @@ export function randSports<Options extends SportCategories = never>(
     });
     const randomOrigin = Object.keys(sportsData)[randIndex];
 
-    return rand(sportsData[randomOrigin]);
+    return randElement(sportsData[randomOrigin]);
   };
 
   return fake(factory, options);

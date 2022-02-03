@@ -1,5 +1,4 @@
-import { FakeOptions, fake } from './core/core';
-import { rand } from './rand';
+import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './credit-card-number.json';
 
 type Issuer =
@@ -52,13 +51,16 @@ export function randCreditCardNumber<
   const minNumb = 0;
   const maxNumb = 9;
 
-  let cardsArray = Array.from({ length: options?.length || 1 }, (_, index) => {
-    return rand(formats).replace(/#/g, () => {
-      return (
-        '' + (Math.floor(Math.random() * (maxNumb - minNumb + 1)) + minNumb)
-      );
-    });
-  }) as any;
+  const cardsArray = Array.from(
+    { length: options?.length || 1 },
+    (_, index) => {
+      return randElement(formats).replace(/#/g, () => {
+        return (
+          '' + (Math.floor(Math.random() * (maxNumb - minNumb + 1)) + minNumb)
+        );
+      });
+    }
+  ) as any;
 
   return fake(cardsArray, options);
 }
