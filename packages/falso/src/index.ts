@@ -174,3 +174,4 @@ export { randIceHockeyTeam } from './lib/ice-hockey-team';
 export { randAmericanFootballTeam } from './lib/american-football-team';
 export { randBaseballTeam } from './lib/baseball-team';
 export { randSportsTeam } from './lib/sports-team';
+export { randSong } from './lib/song';

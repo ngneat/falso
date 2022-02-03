@@ -20,6 +20,8 @@
     "docs"
   ],
   "dependencies": {
+    "fs": "0.0.1-security",
+    "nx": "^13.7.2",
     "tslib": "2.3.1"
   },
   "devDependencies": {
