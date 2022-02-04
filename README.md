@@ -13,7 +13,7 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 [![@ngneat/falso](https://github.com/ngneat/falso/actions/workflows/ci.yml/badge.svg)](https://github.com/ngneat/falso/actions/workflows/ci.yml)
 [![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
-[![coc-badge](https://img.shields.io/badge/codeof-conduct-ff69b4.svg?style=flat-square)]()
+[![coc-badge](https://img.shields.io/badge/codeof-conduct-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e5079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
