@@ -4,6 +4,13 @@ const path = require('path');
 const glob = require('glob');
 const { minify } = require("terser");
 
+const functionModifiers = {
+  rand: 'rand([1,2,3])',
+  randBoolean: 'randBoolean().toString()'
+}
+
+const skipLivePreview = ['seed'];
+
 jsdoc2md.getTemplateData({
   files    : glob.sync('packages/falso/src/lib/*.ts'),
   configure: 'jsdoc.json'
@@ -28,11 +35,7 @@ jsdoc2md.getTemplateData({
   for(const [category, items] of Object.entries(categories)) {
     let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(category)}\n\n`;
 
-    const funcs = items.map(item => {
-      return `### \`\`\`${item.name}\`\`\`\n\n${item.description}\n\n\`\`\`ts\nimport { ${item.name} } from '@ngneat/falso';\n\n${item.examples.join('\n')}\n\`\`\`\n\n\`\`\`jsx live\nfunction Demo(props) {\n  return <Preview source={() => ${item.name}()}/>;\n}\n\`\`\`\n\n`;
-    });
-
-    md += funcs.join('');
+    md += items.map(getDocsSection).join('');
 
     fs.writeFileSync(path.join(docsOutputPath, `${category.toLowerCase()}.mdx`), md, { encoding: 'utf8' });
   }
@@ -46,4 +49,18 @@ jsdoc2md.getTemplateData({
 
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function getDocsSection({name, description, examples}) {
+  let section = `### \`\`\`${name}\`\`\`\n\n${description}\n\n\`\`\`ts\nimport { ${name} } from '@ngneat/falso';\n\n${examples.join('\n')}\n\`\`\`\n\n`;
+
+  if (!skipLivePreview.includes(name)) {
+    const funcCall = functionModifiers[name] ? functionModifiers[name] : `${name}()`;
+    const source = `() => ${funcCall}`;
+
+    section += `\`\`\`jsx live\nfunction Demo(props) {\n  return <Preview source={${source}}/>;\n}\n\`\`\`\n\n`;
+  }
+
+  return section;
+
 }

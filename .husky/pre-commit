@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-node scripts/update-readme.js && npx lint-staged
+node scripts/update-functions-count.js && npx lint-staged
