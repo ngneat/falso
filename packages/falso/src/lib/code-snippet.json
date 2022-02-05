@@ -1,0 +1,18 @@
+{
+  "data": {
+    "bash": "#!/bin/bash\n\nmove()\n{\n  local n=\"$1\"\n  local from=\"$2\"\n  local to=\"$3\"\n  local via=\"$4\"\n\n  if [[ \"$n\" == \"1\" ]]\n  then\n    echo \"Move disk from pole $from to pole $to\"\n  else\n    move $(($n - 1)) $from $via $to\n    move 1 $from $to $via\n    move $(($n - 1)) $via $to $from\n  fi\n}\n\nmove $1 $2 $3 $4",
+    "c": "#include <stdio.h>\n\nvoid move(int n, int from, int via, int to) {\n   if (n > 1) {\n      move(n - 1, from, to, via);\n      printf(\"Move disk from pole %d to pole %d\\n\", from, to);\n      move(n - 1, via, from, to);\n   } else {\n      printf(\"Move disk from pole %d to pole %d\\n\", from, to);\n   }\n}\nint main() {\n   move(4, 1, 2, 3);\n   return 0;\n}",
+    "c#": "public void move(int n, int from, int to, int via) {\n  if (n == 1) {\n    System.Console.WriteLine(\"Move disk from pole \" + from + \" to pole \" + to);\n  } else {\n    move(n - 1, from, via, to);\n    move(1, from, to, via);\n    move(n - 1, via, to, from);\n  }\n}",
+    "c++": "void move(int n, int from, int to, int via) {\n  if (n == 1) {\n    std::cout << \"Move disk from pole \" << from << \" to pole \" << to << std::endl;\n  } else {\n    move(n - 1, from, via, to);\n    move(1, from, to, via);\n    move(n - 1, via, to, from);\n  }\n}",
+    "css": ".hover-rotate {\n  overflow: hidden;\n  margin: 8px;\n  min-width: 240px;\n  max-width: 320px;\n  width: 100%;\n}\n\n.hover-rotate img {\n  transition: all 0.3s;\n  box-sizing: border-box;\n  max-width: 100%;\n}\n\n.hover-rotate:hover img {\n  transform: scale(1.3) rotate(5deg);\n}",
+    "go": "func fib(a int) int {\n  if a < 2 {\n      return a\n  }\n  return fib(a - 1) + fib(a - 2)\n}",
+    "html": "<form action=\"http://maps.google.com/maps\" method=\"get\" target=\"_blank\">\n  <label for=\"saddr\">Enter your location</label>\n  <input type=\"text\" name=\"saddr\" />\n  <input type=\"hidden\" name=\"daddr\" value=\"350 5th Ave New York, NY 10018 (Empire State Building)\" />\n  <input type=\"submit\" value=\"Get directions\" />\n</form>",
+    "java": "public void move(int n, int from, int to, int via) {\n  if (n == 1) {\n      System.out.println(\"Move disk from pole \" + from + \" to pole \" + to);\n  } else {\n      move(n - 1, from, via, to);\n      move(1, from, to, via);\n      move(n - 1, via, to, from);\n  }\n}",
+    "javascript": "function move(n, a, b, c) {\n  if (n > 0) {\n    move(n - 1, a, c, b);\n    console.log(\"Move disk from \" + a + \" to \" + c);\n    move(n - 1, b, a, c);\n  }\n}\nmove(4, \"A\", \"B\", \"C\");",
+    "php": "function move($n,$from,$to,$via) {\n  if ($n === 1) {\n    print(\"Move disk from pole $from to pole $to\");\n  } else {\n    move($n-1,$from,$via,$to);\n    move(1,$from,$to,$via);\n    move($n-1,$via,$to,$from);\n  }\n}",
+    "python": "def hanoi(ndisks, startPeg=1, endPeg=3):\n  if ndisks:\n    hanoi(ndisks - 1, startPeg, 6 - startPeg - endPeg)\n    print \"Move disk %d from peg %d to peg %d\" % (ndisks, startPeg, endPeg)\n    hanoi(ndisks - 1, 6 - startPeg - endPeg, endPeg)\n\nhanoi(ndisks=4)",
+    "rust": "fn move_(n: i32, from: i32, to: i32, via: i32) {\n  if n > 0 {\n      move_(n - 1, from, via, to);\n      println!(\"Move disk from pole {} to pole {}\", from, to);\n      move_(n - 1, via, to, from);\n  }\n}\n \nfn main() {\n  move_(4, 1,2,3);\n}",
+    "sql": "SELECT *\nFROM   call\nORDER  BY call.employee_id ASC,\n          call.start_time ASC;",
+    "swift": "func hanoi(n: Int, a: String, b: String, c: String) {\n  if n > 0 {\n    hanoi(n - 1, a: a, b: c, c: b)\n    print(\"Move disk from \\\\(a) to \\\\(c)\")\n    hanoi(n - 1, a: b, b: a, c: c)\n  }\n}\n  \nhanoi(4, a: \"A\", b: \"B\", c: \"C\")';"
+  }
+}
