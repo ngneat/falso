@@ -9,7 +9,7 @@ export interface NameOptions extends FakeOptions {
 /**
  * Generate a random full name.
  *
- * @category Address
+ * @category person
  *
  * @example
  *
