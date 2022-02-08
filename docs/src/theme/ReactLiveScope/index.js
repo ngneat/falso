@@ -8,6 +8,7 @@
 import React from 'react';
 import * as falso from './falso.min';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import {default as ReactJson} from "react-json-view";
 
 const buttonStyle = {
   base: {
@@ -56,9 +57,27 @@ function Preview({source}) {
       const ReactJson = require('react-json-view').default;
       const [data, setData] = React.useState(source());
 
+      let output = '';
+
+      if( typeof data === 'string' ) {
+        output = (<>
+          <div>{data}</div>
+        </>)
+      }
+      else if (data?.['getDate']) {
+        output = (<>
+          <div>{data.toString()}</div>
+        </>)
+      }
+      else if(typeof data === 'object') {
+        output = (<>
+          <ReactJson style={reactJsonStyle} name={false} enableClipboard={false} src={data} />
+        </>)
+      }
+
       return (<>
         <ChangeDataBtn onClick={() => setData(source())}/>
-        {typeof data === 'object' ? <ReactJson style={reactJsonStyle} name={false} enableClipboard={false} src={data} /> : <div>{data}</div>}
+        {output}
       </>);
     }}
   </BrowserOnly>;
