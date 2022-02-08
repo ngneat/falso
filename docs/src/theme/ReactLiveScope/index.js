@@ -8,7 +8,6 @@
 import React from 'react';
 import * as falso from './falso.min';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-import {default as ReactJson} from "react-json-view";
 
 const buttonStyle = {
   base: {
