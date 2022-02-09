@@ -3,12 +3,10 @@ import { randUuid } from './uuid';
 import { randEmail } from './email';
 import { randFirstName } from './first-name';
 import { randLastName } from './last-name';
-import { randCity } from './city';
-import { randStreetAddress } from './street-address';
-import { randZipCode } from './zip-code';
 import { randPhoneNumber } from './phone-number';
 import { randUserName } from './user-name';
 import { randAvatar } from './avatar';
+import { randAddress } from './address';
 
 export interface User {
   id: string;
@@ -54,11 +52,7 @@ export function randUser<Options extends FakeOptions = never>(
       phone: randPhoneNumber(),
       img: randAvatar(),
       username: randUserName({ firstName, lastName }),
-      address: {
-        city: randCity(),
-        street: randStreetAddress(),
-        zipCode: randZipCode(),
-      },
+      address: randAddress(),
     };
 
     return user;
