@@ -2,20 +2,20 @@ import { FakeOptions, fake } from './core/core';
 import { randAddress } from './address';
 
 /**
- * Generate a random address string.
+ * Generate a random full address.
  *
  * @category Address
  *
  * @example
  *
- * randAddressFull()
+ * randFullAddress()
  *
  * @example
  *
- * randAddressFull({ length: 10 })
+ * randFullAddress({ length: 10 })
  *
  */
-export function randAddressFull<Options extends FakeOptions = never>(
+export function randFullAddress<Options extends FakeOptions = never>(
   options?: Options
 ) {
   const factory = () => {
