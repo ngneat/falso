@@ -14,7 +14,7 @@ interface Post {
 /**
  * Generate a random post.
  *
- * @category entities
+ * @category entities, internet
  *
  * @example
  *

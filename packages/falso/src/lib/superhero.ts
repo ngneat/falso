@@ -21,7 +21,7 @@ export interface SuperheroEntity extends Superhero {
 /**
  * Generate a random superhero.
  *
- * @category entities
+ * @category entities, comic book
  *
  * @example
  *

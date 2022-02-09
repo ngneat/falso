@@ -8,7 +8,7 @@ import { randCountry } from './country';
 /**
  * Generate a random address.
  *
- * @category Entities
+ * @category entities, address
  *
  * @example
  *

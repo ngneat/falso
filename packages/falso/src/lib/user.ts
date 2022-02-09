@@ -26,7 +26,7 @@ export interface User {
 /**
  * Generate a random user.
  *
- * @category entities
+ * @category entities, user
  *
  * @example
  *
