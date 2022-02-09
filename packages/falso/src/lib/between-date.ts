@@ -13,11 +13,11 @@ interface BetweenOptions extends FakeOptions {
  *
  * @example
  *
- * randBetweenDate({ from: Date, to: Date })
+ * randBetweenDate({ from: new Date('10/07/2020'), to: new Date() })
  *
  * @example
  *
- * randBetweenDate({ from: Date, to: Date, length: 10 })
+ * randBetweenDate({ from: new Date('10/07/2020'), to: new Date(), length: 10 })
  *
  */
 export function randBetweenDate<Options extends BetweenOptions = never>(
@@ -27,7 +27,7 @@ export function randBetweenDate<Options extends BetweenOptions = never>(
   const to = options.to.getTime();
 
   if (from >= to) {
-    throw new Error('from must be before to');
+    throw new Error('From must be before to');
   }
 
   const generator = () => {
