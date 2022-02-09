@@ -23,16 +23,8 @@ interface BetweenOptions extends FakeOptions {
 export function randBetweenDate<Options extends BetweenOptions = never>(
   options: Options
 ) {
-  const from = options?.from?.getTime();
-  const to = options?.to?.getTime();
-
-  if (!from) {
-    throw new Error('From date must be passed');
-  }
-
-  if (!to) {
-    throw new Error('To date must be passed');
-  }
+  const from = options.from.getTime();
+  const to = options.to.getTime();
 
   if (from >= to) {
     throw new Error('From must be before to');
