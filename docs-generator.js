@@ -6,7 +6,12 @@ const { minify } = require("terser");
 
 const functionModifiers = {
   rand: 'rand([1,2,3])',
-  randBoolean: 'randBoolean().toString()'
+  randBoolean: 'randBoolean().toString()',
+  randFutureDate: 'randFutureDate().toString()',
+  randBetweenDate: 'randBetweenDate({ from: new Date(\'10/07/2020\'), to: new Date(\'10/07/2025\') }).toString()',
+  randPastDate: 'randPastDate().toString()',
+  randRecentDate: 'randRecentDate().toString()',
+  randSoonDate: 'randSoonDate().toString()',
 }
 
 const skipLivePreview = ['seed'];

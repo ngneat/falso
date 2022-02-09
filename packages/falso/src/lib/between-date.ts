@@ -13,19 +13,18 @@ interface BetweenOptions extends FakeOptions {
  *
  * @example
  *
- * randBetweenDate({ from: new Date('10/07/1988'), to: new Date('10/07/1989') })
+ * randBetweenDate({ from: new Date('10/07/2020'), to: new Date() })
  *
  * @example
  *
- * randBetweenDate({ from: new Date('10/07/1988'), to: new Date('10/07/1989'), length: 10 })
+ * randBetweenDate({ from: new Date('10/07/2020'), to: new Date(), length: 10 })
  *
  */
 export function randBetweenDate<Options extends BetweenOptions = never>(
   options: Options
 ) {
-  // TODO: RS - For now I have added default dates to fix the docs. We should look into ways to use the examples from the JSDocs for LIVE EDITOR functions
-  const from = options?.from?.getTime() ?? new Date('10/07/1988').getTime();
-  const to = options?.to?.getTime() ?? new Date('11/07/1989').getTime();
+  const from = options.from.getTime();
+  const to = options.to.getTime();
 
   if (!from) {
     throw new Error('From date must be passed');

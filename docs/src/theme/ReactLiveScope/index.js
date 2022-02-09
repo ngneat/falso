@@ -56,27 +56,9 @@ function Preview({source}) {
       const ReactJson = require('react-json-view').default;
       const [data, setData] = React.useState(source());
 
-      let output = '';
-
-      if( typeof data === 'string' ) {
-        output = (<>
-          <div>{data}</div>
-        </>)
-      }
-      else if (data?.['getDate']) {
-        output = (<>
-          <div>{data.toString()}</div>
-        </>)
-      }
-      else if(typeof data === 'object') {
-        output = (<>
-          <ReactJson style={reactJsonStyle} name={false} enableClipboard={false} src={data} />
-        </>)
-      }
-
       return (<>
         <ChangeDataBtn onClick={() => setData(source())}/>
-        {output}
+        {typeof data === 'object' ? <ReactJson style={reactJsonStyle} name={false} enableClipboard={false} src={data} /> : <div>{data}</div>}
       </>);
     }}
   </BrowserOnly>;
