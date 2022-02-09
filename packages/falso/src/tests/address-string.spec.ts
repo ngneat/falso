@@ -1,7 +1,7 @@
 import * as randAddressFunctions from '../lib/address';
-import { randAddressString } from '@ngneat/falso';
+import { randAddressFull } from '@ngneat/falso';
 
-describe('randAddressString', () => {
+describe('randAddressFull', () => {
   let randAddressSpy: jest.SpyInstance;
 
   beforeAll(() => {
@@ -21,7 +21,7 @@ describe('randAddressString', () => {
       zipCode: 'CR3 0AA',
     });
 
-    const result = randAddressString();
+    const result = randAddressFull();
 
     expect(result).toEqual(
       '4 Privet drive, Little Whinging, Surrey, United Kingdom, CR3 0AA'

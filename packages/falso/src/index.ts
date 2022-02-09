@@ -177,4 +177,4 @@ export { randZipCode } from './lib/zip-code';
 export { randSinger } from './lib/singer';
 export { randSong } from './lib/song';
 export { randAddress } from './lib/address';
-export { randAddressString } from './lib/address-string';
+export { randAddressFull } from './lib/address-string';

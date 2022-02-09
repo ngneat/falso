@@ -8,14 +8,14 @@ import { randAddress } from './address';
  *
  * @example
  *
- * randAddressString()
+ * randAddressFull()
  *
  * @example
  *
- * randAddressString({ length: 10 })
+ * randAddressFull({ length: 10 })
  *
  */
-export function randAddressString<Options extends FakeOptions = never>(
+export function randAddressFull<Options extends FakeOptions = never>(
   options?: Options
 ) {
   const factory = () => {
