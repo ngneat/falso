@@ -41,7 +41,7 @@ function randFormattedName<Options extends EmailOptions = never>(
 /**
  * Generate a random email.
  *
- * @category Person
+ * @category Person, User
  *
  * @example
  *

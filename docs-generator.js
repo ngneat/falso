@@ -21,13 +21,29 @@ jsdoc2md.getTemplateData({
   configure: 'jsdoc.json'
 }).then(res => {
   const categories = res.reduce((acc, current) => {
-    const c = current.category.toLowerCase();
+    const category = current.category.toLowerCase();
 
-    if(!acc[c]) {
-      acc[c] = [];
+    // Handle multiple categories
+    if( category.includes(',') ) {
+      const categories = category.split(', ');
+      categories.forEach((c) => {
+        if(!acc[c]) {
+          acc[c] = [];
+        }
+
+        acc[c].push({
+          ...current,
+          category: c,
+        });
+      });
     }
+    else {
+      if(!acc[category]) {
+        acc[category] = [];
+      }
 
-    acc[c].push(current);
+      acc[category].push(current);
+    }
 
     return acc;
   }, {});
@@ -37,10 +53,10 @@ jsdoc2md.getTemplateData({
     fs.mkdirSync(docsOutputPath);
   }
 
-  for(const [category, items] of Object.entries(categories)) {
+  for(let [category, items] of Object.entries(categories)) {
     let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(category)}\n\n`;
 
-    md += items.map(getDocsSection).join('');
+    md += items.sort((funcA, funcB) => sortFunctions(funcA, funcB)).map(getDocsSection).join('');
 
     fs.writeFileSync(path.join(docsOutputPath, `${category.toLowerCase()}.mdx`), md, { encoding: 'utf8' });
   }
@@ -51,6 +67,17 @@ jsdoc2md.getTemplateData({
   });
 });
 
+function sortFunctions(funcA, funcB) {
+  if(funcA.name < funcB.name) {
+    return -1;
+  }
+
+  if(funcA.name > funcB.name) {
+    return 1;
+  }
+
+  return 0;
+}
 
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
