@@ -26,11 +26,14 @@ import { AddressOptions, randAddress } from './address';
 export function randFullAddress<Options extends AddressOptions = never>(
   options?: Options
 ) {
-  const includeCounty: boolean = options?.includeCounty || true;
-  const includeCountry: boolean = options?.includeCountry || true;
+  const includeCounty: boolean = options?.includeCounty ?? true;
+  const includeCountry: boolean = options?.includeCountry ?? true;
 
   const factory = () => {
-    const { street, city, county, country, zipCode } = randAddress();
+    const { street, city, county, country, zipCode } = randAddress({
+      includeCounty,
+      includeCountry,
+    });
 
     let address = `${street}, ${city}, `;
 

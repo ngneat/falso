@@ -6,8 +6,8 @@ import { randCounty } from './county';
 import { randCountry } from './country';
 
 export interface AddressOptions extends FakeOptions {
-  includeCounty: boolean;
-  includeCountry: boolean;
+  includeCounty?: boolean;
+  includeCountry?: boolean;
 }
 
 interface Address {
@@ -43,8 +43,8 @@ interface Address {
 export function randAddress<Options extends AddressOptions = never>(
   options?: Options
 ) {
-  const includeCounty: boolean = options?.includeCounty || true;
-  const includeCountry: boolean = options?.includeCountry || true;
+  const includeCounty: boolean = options?.includeCounty ?? true;
+  const includeCountry: boolean = options?.includeCountry ?? true;
 
   const factory = () => {
     const address: Address = {
@@ -58,7 +58,7 @@ export function randAddress<Options extends AddressOptions = never>(
     }
 
     if (includeCountry) {
-      address.country = randCounty();
+      address.country = randCountry();
     }
 
     return address;
