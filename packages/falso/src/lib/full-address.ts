@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-import { randAddress } from './address';
+import { AddressOptions, randAddress } from './address';
 
 /**
  * Generate a random full address.
@@ -12,16 +12,37 @@ import { randAddress } from './address';
  *
  * @example
  *
+ * randFullAddress({ includeCounty: false }) // Default true
+ *
+ * @example
+ *
+ * randFullAddress({ includeCountry: false }) // Default true
+ *
+ * @example
+ *
  * randFullAddress({ length: 10 })
  *
  */
-export function randFullAddress<Options extends FakeOptions = never>(
+export function randFullAddress<Options extends AddressOptions = never>(
   options?: Options
 ) {
+  const includeCounty: boolean = options?.includeCounty || true;
+  const includeCountry: boolean = options?.includeCountry || true;
+
   const factory = () => {
     const { street, city, county, country, zipCode } = randAddress();
 
-    return `${street}, ${city}, ${county}, ${country}, ${zipCode}`;
+    let address = `${street}, ${city}, `;
+
+    if (includeCounty) {
+      address += `${county}, `;
+    }
+
+    if (includeCountry) {
+      address += `${country}, `;
+    }
+
+    return address + zipCode;
   };
 
   return fake(factory, options);
