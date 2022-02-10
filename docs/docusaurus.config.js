@@ -13,6 +13,9 @@ module.exports = {
     organizationName: 'ngneat',
     projectName: 'falso',
     themeConfig: {
+        colorMode: {
+            respectPrefersColorScheme: true,
+        },
         algolia: {
             appId: '4MDX7BPF21',
             apiKey: '464a7197abc1659dd1b9be9e70cb3e1c',
