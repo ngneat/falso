@@ -178,3 +178,4 @@ export { randSinger } from './lib/singer';
 export { randSong } from './lib/song';
 export { randAddress } from './lib/address';
 export { randFullAddress } from './lib/full-address';
+export { randJSON } from './lib/rand-json';
