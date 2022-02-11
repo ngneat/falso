@@ -27,7 +27,11 @@ describe('randAddress', () => {
     jest.clearAllMocks();
   });
 
-  it('should format values returned from randAddress', () => {
+  afterAll(() => {
+    jest.resetAllMocks();
+  });
+
+  it('should create address entity with values returned rand address functions', () => {
     randStreetAddressSpy.mockReturnValue('4 Privet drive');
     randCitySpy.mockReturnValue('Little Whinging');
     randCountySpy.mockReturnValue('Surrey');
@@ -42,6 +46,54 @@ describe('randAddress', () => {
       county: 'Surrey',
       country: 'United Kingdom',
       zipCode: 'CR3 0AA',
+    });
+  });
+
+  describe('includeCounty IS passed', () => {
+    let includeCounty: boolean;
+
+    beforeEach(() => {
+      includeCounty = false;
+    });
+
+    it('should create address entity with values returned rand address functions (without county)', () => {
+      randStreetAddressSpy.mockReturnValue('4 Privet drive');
+      randCitySpy.mockReturnValue('Little Whinging');
+      randCountrySpy.mockReturnValue('United Kingdom');
+      randZipCodeSpy.mockReturnValue('CR3 0AA');
+
+      const result = randAddress({ includeCounty });
+
+      expect(result).toEqual({
+        street: '4 Privet drive',
+        city: 'Little Whinging',
+        country: 'United Kingdom',
+        zipCode: 'CR3 0AA',
+      });
+    });
+  });
+
+  describe('includeCountry IS passed', () => {
+    let includeCountry: boolean;
+
+    beforeEach(() => {
+      includeCountry = false;
+    });
+
+    it('should create address entity with values returned rand address functions (without country)', () => {
+      randStreetAddressSpy.mockReturnValue('4 Privet drive');
+      randCitySpy.mockReturnValue('Little Whinging');
+      randCountySpy.mockReturnValue('Surrey');
+      randZipCodeSpy.mockReturnValue('CR3 0AA');
+
+      const result = randAddress({ includeCountry });
+
+      expect(result).toEqual({
+        street: '4 Privet drive',
+        city: 'Little Whinging',
+        county: 'Surrey',
+        zipCode: 'CR3 0AA',
+      });
     });
   });
 });

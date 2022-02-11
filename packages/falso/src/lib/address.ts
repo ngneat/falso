@@ -5,6 +5,19 @@ import { randZipCode } from './zip-code';
 import { randCounty } from './county';
 import { randCountry } from './country';
 
+export interface AddressOptions extends FakeOptions {
+  includeCounty?: boolean;
+  includeCountry?: boolean;
+}
+
+interface Address {
+  street: string;
+  city: string;
+  zipCode: string;
+  county?: string;
+  country?: string;
+}
+
 /**
  * Generate a random address.
  *
@@ -16,20 +29,39 @@ import { randCountry } from './country';
  *
  * @example
  *
+ * randAddress({ includeCounty: false }) // Default true
+ *
+ * @example
+ *
+ * randAddress({ includeCountry: false }) // Default true
+ *
+ * @example
+ *
  * randAddress({ length: 10 })
  *
  */
-export function randAddress<Options extends FakeOptions = never>(
+export function randAddress<Options extends AddressOptions = never>(
   options?: Options
 ) {
+  const includeCounty: boolean = options?.includeCounty ?? true;
+  const includeCountry: boolean = options?.includeCountry ?? true;
+
   const factory = () => {
-    return {
+    const address: Address = {
       street: randStreetAddress(),
       city: randCity(),
-      county: randCounty(),
-      country: randCountry(),
       zipCode: randZipCode(),
     };
+
+    if (includeCounty) {
+      address.county = randCounty();
+    }
+
+    if (includeCountry) {
+      address.country = randCountry();
+    }
+
+    return address;
   };
 
   return fake(factory, options);
