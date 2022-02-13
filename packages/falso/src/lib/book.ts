@@ -12,6 +12,12 @@ interface BookOptions extends FakeOptions {
     | 'War and Travel';
 }
 
+export interface Book {
+  title: string;
+  author: string;
+  category: BookOptions['category'];
+}
+
 /**
  * Generate a random book.
  *

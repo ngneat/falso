@@ -3,7 +3,7 @@ import { randUuid } from './uuid';
 import { randBoolean } from './boolean';
 import { randText } from './text';
 
-interface Todo {
+export interface Todo {
   id: string;
   title: string;
   completed: boolean;

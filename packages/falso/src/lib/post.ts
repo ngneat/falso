@@ -4,7 +4,7 @@ import { randUuid } from './uuid';
 import { randText } from './text';
 import { randNumber } from './number';
 
-interface Post {
+export interface Post {
   id: string;
   title: string;
   body: string;
