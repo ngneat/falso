@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.23.0](https://github.com/ngneat/falso/compare/falso-2.22.0...falso-2.23.0) (2022-02-13)
+
+### Bug Fixes
+
+- 🐞 Date function examples in docs ([0285854](https://github.com/ngneat/falso/commit/028585440a3ae98e3def7a66a0665906fd0a6447)), closes [#170](https://github.com/ngneat/falso/issues/170)
+
+### Features
+
+- 🔥 add options to random array ([82dfbfe](https://github.com/ngneat/falso/commit/82dfbfe2f740ca5cc27dee39a452a15e834ed97d)), closes [#152](https://github.com/ngneat/falso/issues/152)
+- 🔥 Add randAddress & randAddressString ([89d91b5](https://github.com/ngneat/falso/commit/89d91b5a0f53ecfcd14edc1406653a8dd117a2fb)), closes [#172](https://github.com/ngneat/falso/issues/172)
+- 🔥 add randJSON ([9743286](https://github.com/ngneat/falso/commit/97432860131429d4518b17ecaaa8710f3bfea2b7)), closes [#110](https://github.com/ngneat/falso/issues/110)
+- 🔥 Add tests and tweak logic ([0026f67](https://github.com/ngneat/falso/commit/0026f679ce6875112c370ec6a3b38d46c1f762ba)), closes [#181](https://github.com/ngneat/falso/issues/181)
+- 🔥 Added song falso ([7f6aa86](https://github.com/ngneat/falso/commit/7f6aa86771412e5ccc9b3ca432af835f16c402e2)), closes [#132](https://github.com/ngneat/falso/issues/132)
+- 🔥 expose entities types ([ea9f80d](https://github.com/ngneat/falso/commit/ea9f80d1b1a45aa4d7df567503d68daeb877aeb3)), closes [#183](https://github.com/ngneat/falso/issues/183)
+- 🔥 Made county & country optional for address & fullAddres ([2160106](https://github.com/ngneat/falso/commit/2160106364093135e5264bee6d432e2bef789444))
+
 # [2.22.0](https://github.com/ngneat/falso/compare/falso-2.21.0...falso-2.22.0) (2022-02-02)
 
 ### Features

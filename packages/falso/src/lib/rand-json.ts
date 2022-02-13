@@ -1,13 +1,11 @@
-import {
-  randBoolean,
-  randMovie,
-  randMovieCharacter,
-  randSinger,
-  randSnake,
-  randNumber,
-  randWord,
-} from '..';
+import { randBoolean } from './boolean';
 import { FakeOptions } from './core/core';
+import { randMovie } from './movie';
+import { randMovieCharacter } from './movie-character';
+import { randNumber } from './number';
+import { randSinger } from './singer';
+import { randSnake } from './snake';
+import { randWord } from './word';
 
 export interface RandomJSONOptions extends FakeOptions {
   min?: number;
