@@ -28,8 +28,8 @@ export function randPastDate<Options extends PastOptions = never>(
 ) {
   const years = options?.years ?? 1;
 
-  if (years < 0) {
-    throw new Error('years must be positive, use future() instead');
+  if (years <= 0) {
+    throw new Error('Years must be positive, use future() instead');
   }
 
   const yearsInMilliseconds = years * 365 * 24 * 60 * 60 * 1000;
