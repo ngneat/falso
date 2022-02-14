@@ -12,7 +12,12 @@ export interface FoodOptions extends FakeOptions {
     | 'lebanon'
     | 'thailand'
     | 'greece'
-    | 'turkey';
+    | 'turkey'
+    | 'spain'
+    | 'venezuela'
+    | 'argentina'
+    | 'colombia'
+    | 'peru';
 }
 
 const totalOrigins = Object.keys(data)?.length;
