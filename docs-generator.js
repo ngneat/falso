@@ -12,6 +12,7 @@ const functionModifiers = {
   randPastDate: 'randPastDate().toString()',
   randRecentDate: 'randRecentDate().toString()',
   randSoonDate: 'randSoonDate().toString()',
+  randTextRange: 'randTextRange({ min: 10, max: 100 })',
 }
 
 const skipLivePreview = ['seed'];
