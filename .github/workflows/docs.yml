@@ -1,9 +1,8 @@
 name: 'docs'
 
 on:
-  push:
-    branches:
-      - main
+  registry_package:
+    types: [published]
 
 jobs:
   build:
