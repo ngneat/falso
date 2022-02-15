@@ -11,6 +11,7 @@ export interface FoodOptions extends FakeOptions {
     | 'france'
     | 'lebanon'
     | 'thailand'
+    | 'romania'
     | 'greece'
     | 'turkey';
 }
