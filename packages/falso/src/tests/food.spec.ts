@@ -21,7 +21,7 @@ describe('food', () => {
     it('should return a random dish from a random origin', () => {
       const result = randFood();
 
-      expect(result).toEqual('Kawarma');
+      expect(result).toEqual('Mu kratha');
     });
   });
 
@@ -54,7 +54,7 @@ describe('food', () => {
       it('should return an array length of 3, each with a random dish from a random origin', () => {
         const result = randFood({ length: 3 });
 
-        expect(result).toEqual(['Kawarma', 'Donburi', 'Kahvalti']);
+        expect(result).toEqual(['Mu kratha', 'Raclette', 'Clătitele cu gem']);
       });
     });
   });
