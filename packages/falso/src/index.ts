@@ -9,6 +9,7 @@ export { randArn } from './lib/arn';
 export { randAvatar } from './lib/avatar';
 export { randAwsRegion } from './lib/aws-region';
 export { randAwsService } from './lib/aws-service';
+export { randAwsRequestId } from './lib/aws-request-id';
 export { randBaseballTeam } from './lib/baseball-team';
 export { randBasketballTeam } from './lib/basketball-team';
 export { randBear } from './lib/bear';
