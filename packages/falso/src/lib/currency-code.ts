@@ -4,7 +4,7 @@ import { data } from './currency-code.json';
 /**
  * Generate a random currency code.
  *
- * @category Finance
+ * @category finance
  *
  * @example
  *

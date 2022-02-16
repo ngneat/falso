@@ -4,7 +4,7 @@ import { data } from './drinks.json';
 /**
  * Generate a random drink.
  *
- * @category Drinks
+ * @category drinks
  *
  * @example
  *

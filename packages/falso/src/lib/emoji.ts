@@ -4,7 +4,7 @@ import { data } from './emoji.json';
 /**
  * Generate a random emoji.
  *
- * @category Text
+ * @category text
  *
  * @example
  *

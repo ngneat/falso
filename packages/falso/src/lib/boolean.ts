@@ -3,7 +3,7 @@ import { fake, FakeOptions, randElement } from './core/core';
 /**
  * Generate a random boolean.
  *
- * @category General
+ * @category general
  *
  * @example
  *

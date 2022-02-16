@@ -29,11 +29,11 @@ export interface Address {
  *
  * @example
  *
- * randAddress({ includeCounty: false }) // Default true
+ * randAddress({ includeCounty: false }) // default is true
  *
  * @example
  *
- * randAddress({ includeCountry: false }) // Default true
+ * randAddress({ includeCountry: false }) // default is true
  *
  * @example
  *
