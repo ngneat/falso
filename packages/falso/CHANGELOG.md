@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.25.0](https://github.com/ngneat/falso/compare/falso-2.24.0...falso-2.25.0) (2022-02-16)
+
+### Bug Fixes
+
+- 🐞 Broken food tests caused by merge ([725b3d8](https://github.com/ngneat/falso/commit/725b3d8be06d2b3f9057af73d6a67557f2d1eaf9))
+
+### Features
+
+- 🔥 add randAwsRequestId ([79dedb0](https://github.com/ngneat/falso/commit/79dedb053e7bbcfdf29158945aecd4af21f2baed))
+
 # [2.23.0](https://github.com/ngneat/falso/compare/falso-2.22.0...falso-2.23.0) (2022-02-13)
 
 ### Bug Fixes
