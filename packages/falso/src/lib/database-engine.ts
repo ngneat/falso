@@ -4,7 +4,7 @@ import { data } from './database-engine.json';
 /**
  * Generate a random database engine.
  *
- * @category Database
+ * @category database
  *
  * @example
  *

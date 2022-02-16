@@ -8,7 +8,7 @@ export interface HSLOptions extends FakeOptions {
 /**
  * Generate a random hsl color.
  *
- * @category Colors
+ * @category colors
  *
  * @example
  *

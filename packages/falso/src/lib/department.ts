@@ -4,7 +4,7 @@ import { data } from './department.json';
 /**
  * Generate a random department.
  *
- * @category Commerce
+ * @category commerce
  *
  * @example
  *

@@ -4,7 +4,7 @@ import { data } from './shape.json';
 /**
  * Generate a random shape.
  *
- * @category General
+ * @category general
  *
  * @example
  *

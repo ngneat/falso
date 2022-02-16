@@ -4,7 +4,7 @@ import { data } from './currency-symbol.json';
 /**
  * Generate a random currency symbol.
  *
- * @category Finance
+ * @category finance
  *
  * @example
  *

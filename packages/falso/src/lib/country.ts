@@ -4,7 +4,7 @@ import { data } from './country.json';
 /**
  * Generate a random country.
  *
- * @category Address
+ * @category address
  *
  * @example
  *

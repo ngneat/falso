@@ -4,7 +4,7 @@ import { data } from './font-family.json';
 /**
  * Generate a random font family.
  *
- * @category Code
+ * @category code
  *
  * @example
  *

@@ -2,9 +2,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { fake, FakeOptions } from './core/core';
 
 /**
- * Generate a random random uuid.
+ * Generate a random uuid.
  *
- * @category general
+ * @category general, database
  *
  * @example
  *

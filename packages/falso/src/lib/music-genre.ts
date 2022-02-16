@@ -4,7 +4,7 @@ import { data } from './music-genre.json';
 /**
  * Generate a random genre.
  *
- * @category Music
+ * @category music
  *
  * @example
  *
