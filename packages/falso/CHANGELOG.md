@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.25.1](https://github.com/ngneat/falso/compare/falso-2.25.0...falso-2.25.1) (2022-02-16)
+
+### Bug Fixes
+
+- 🐞 export randAwsRequestId ([48a06a2](https://github.com/ngneat/falso/commit/48a06a25c0affcaf6863eb9658f3ec60aa00ae27))
+
 # [2.25.0](https://github.com/ngneat/falso/compare/falso-2.24.0...falso-2.25.0) (2022-02-16)
 
 ### Bug Fixes
