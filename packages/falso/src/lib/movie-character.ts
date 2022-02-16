@@ -3,7 +3,7 @@ import { data } from './movie-character.json';
 /**
  * Generate a random movie character.
  *
- * @category Movie
+ * @category movie
  *
  * @example
  *

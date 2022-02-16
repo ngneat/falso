@@ -4,7 +4,7 @@ import { data } from './svg.json';
 /**
  * Generate a random svg.
  *
- * @category General
+ * @category general
  *
  * @example
  *

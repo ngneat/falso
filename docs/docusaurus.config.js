@@ -83,7 +83,13 @@ module.exports = {
             {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    editUrl: 'https://github.com/ngneat/falso/docusaurus/edit/main/website/',
+                    editUrl: ({versionDocsDirPath, docPath}) => {
+                      if (docPath.startsWith('auto-generated')) {
+                        return 'https://github.com/ngneat/falso/blob/main/docs/updating-docs.md';
+                      }
+
+                      return `https://github.com/ngneat/falso/edit/main/docs/${versionDocsDirPath}/${docPath}`;
+                    },
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),

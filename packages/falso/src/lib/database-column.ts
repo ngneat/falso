@@ -4,7 +4,7 @@ import { data } from './database-column.json';
 /**
  * Generate a random database column.
  *
- * @category Database
+ * @category database
  *
  * @example
  *
