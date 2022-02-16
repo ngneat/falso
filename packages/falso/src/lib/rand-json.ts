@@ -5,6 +5,7 @@ import { randMovieCharacter } from './movie-character';
 import { randNumber } from './number';
 import { randSinger } from './singer';
 import { randSnake } from './snake';
+import { randUuid } from './uuid';
 import { randWord } from './word';
 
 export interface RandomJSONOptions extends FakeOptions {
@@ -35,10 +36,16 @@ const generateRandomValue = (): any => {
 };
 
 const generateRandomObject = (length: number) => {
-  return randNumber({ length }).reduce(
-    (o, key) => ({ ...o, [key]: generateRandomValue() }),
-    {}
-  );
+  let o = {};
+  let arr = randNumber({ length });
+
+  for (let index = 0; index < arr.length; index++) {
+    o = Object.assign(o, {
+      [randUuid().replace(/-/g, '')]: generateRandomValue(),
+    });
+  }
+
+  return o;
 };
 
 /**
@@ -66,6 +73,7 @@ export function randJSON<Options extends RandomJSONOptions = never>(
   });
 
   if (options?.length) objectSize = options.length;
+  console.debug('=> ', objectSize);
 
   return generateRandomObject(objectSize);
 }
