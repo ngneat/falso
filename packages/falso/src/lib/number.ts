@@ -11,9 +11,9 @@ export interface RandomNumberOptions extends FakeOptions {
 }
 
 /**
- * Generate a random random number.
+ * Generate a random number.
  *
- * @category general
+ * @category general, math
  *
  * @example
  *

@@ -7,7 +7,7 @@ export interface MonthOptions extends FakeOptions {
 /**
  * Generate a random month.
  *
- * @category Date
+ * @category date
  *
  * @example
  *

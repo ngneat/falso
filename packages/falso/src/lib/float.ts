@@ -8,9 +8,9 @@ import {
 export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
 
 /**
- * Generate a random random float.
+ * Generate a random float.
  *
- * @category general
+ * @category general, math
  *
  * @example
  *

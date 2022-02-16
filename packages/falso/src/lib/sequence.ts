@@ -25,7 +25,7 @@ type RandomSequenceOptions = {
 } & FakeOptions;
 
 /**
- * Generate a random random sequence.
+ * Generate a random sequence.
  *
  * @category general
  *

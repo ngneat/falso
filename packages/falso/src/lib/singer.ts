@@ -3,7 +3,7 @@ import { data } from './singer.json';
 /**
  * Generate a random singer.
  *
- * @category Music
+ * @category music
  *
  * @example
  *

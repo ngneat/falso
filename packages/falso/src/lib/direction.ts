@@ -4,7 +4,7 @@ import { data } from './direction.json';
 /**
  * Generate a random direction.
  *
- * @category Address
+ * @category address
  *
  * @example
  *
