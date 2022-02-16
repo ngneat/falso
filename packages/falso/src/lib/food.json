@@ -345,6 +345,57 @@
       "Salep",
       "Yogurtlu kebab"
     ],
+    "spain": [
+      "Tortilla de patatas",
+      "Fabada asturiana",
+      "Calçots",
+      "Boquerones al vinagre",
+      "Empanada gallega",
+      "Paella",
+      "Gazpacho",
+      "Gachas",
+      "Migas",
+      "Bocadillo de calamares",
+      "Pulpo a feira",
+      "Caldo gallego",
+      "Lentejas con chorizo",
+      "Cocido madrileño",
+      "Cachopo",
+      "Caracoles"
+    ],
+    "venezuela": [
+      "Pabellón criollo",
+      "Arepa",
+      "Mondongo",
+      "Empanadas",
+      "Quesillo",
+      "Chicha andina",
+      "Tequeños",
+      "Cachapa"
+    ],
+    "argentina": [
+      "Milanesas",
+      "Empanadas",
+      "Pizza fugazeta",
+      "Asado",
+      "Choripan",
+      "Bondiola",
+      "Bife de chorizo"
+    ],
+    "colombia": [
+      "Bandeja paisa",
+      "Chuleta valluna",
+      "Sancocho trifásico",
+      "Empanada valluna",
+      "Salpicon de frutas",
+      "Pastel de garbanzo"
+    ],
+    "peru": [
+      "Ceviche",
+      "Arroz con pollo",
+      "Aji de gallina",
+      "Llunca de gallina"
+    ],
     "romania": [
       "Sarmale",
       "Mici",
