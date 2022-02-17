@@ -37,9 +37,8 @@ const generateRandomValue = (): any => {
 
 const generateRandomObject = (length: number) => {
   let o = {};
-  let arr = randNumber({ length });
 
-  for (let index = 0; index < arr.length; index++) {
+  for (let index = 0; index < length; index++) {
     o = Object.assign(o, {
       [randUuid().replace(/-/g, '')]: generateRandomValue(),
     });
@@ -56,11 +55,11 @@ const generateRandomObject = (length: number) => {
  * @example
  * randJSON()
  *
- * @example <caption>If a fixed number of keys are required</caption>
+ * @example If a fixed number of keys are required
  *
  * randJSON({ length: 10 })
  *
- * @example <caption>If a random number of keys are required</caption>
+ * @example If a random number of keys are required
  *
  * randJSON({ min: 1, max: 10 })
  */
@@ -73,7 +72,6 @@ export function randJSON<Options extends RandomJSONOptions = never>(
   });
 
   if (options?.length) objectSize = options.length;
-  console.debug('=> ', objectSize);
 
   return generateRandomObject(objectSize);
 }
