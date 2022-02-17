@@ -8,9 +8,11 @@ describe('flightDetails', () => {
     const result = randFlightDetails();
 
     expect(result).toEqual({
+      passenger: expect.any(String),
       airline: expect.any(String),
       flightNumber: expect.any(String),
       from: expect.any(String),
+      seat: expect.any(String),
       to: expect.any(String),
       date: expect.any(Date),
       flightLength: expect.any(Number),
