@@ -14,8 +14,7 @@ describe('flightNumber', () => {
       const result = randFlightNumber({ airline });
 
       // TODO: RS - Look into char length
-      expect(result).toMatch(/^FR[0-9]?/);
-      expect(result).toHaveLength(6);
+      expect(result).toMatch(/^FR[0-9][0-9][0-9][0-9]$/);
     });
   });
 
@@ -30,8 +29,7 @@ describe('flightNumber', () => {
       const result = randFlightNumber({ airline });
 
       // TODO: RS - Look into char length
-      expect(result).toMatch(/^BA[0-9]?/);
-      expect(result).toHaveLength(5);
+      expect(result).toMatch(/^BA[0-9][0-9][0-9]$/);
     });
   });
 
@@ -46,8 +44,7 @@ describe('flightNumber', () => {
       const result = randFlightNumber({ airline });
 
       // TODO: RS - Look into char length
-      expect(result).toMatch(/^IB[0-9]?/);
-      expect(result).toHaveLength(6);
+      expect(result).toMatch(/^IB[0-9][0-9][0-9][0-9]$/);
     });
   });
 
@@ -62,8 +59,7 @@ describe('flightNumber', () => {
       const result = randFlightNumber({ airline });
 
       // TODO: RS - Look into char length
-      expect(result).toMatch(/^EZY[0-9]?/);
-      expect(result).toHaveLength(6);
+      expect(result).toMatch(/^EZY[0-9][0-9][0-9]$/);
     });
   });
 
@@ -78,8 +74,7 @@ describe('flightNumber', () => {
       const result = randFlightNumber({ airline });
 
       // TODO: RS - Look into char length
-      expect(result).toMatch(/^LS[0-9]?/);
-      expect(result).toHaveLength(6);
+      expect(result).toMatch(/^LS[0-9][0-9][0-9][0-9]$/);
     });
   });
 
@@ -88,11 +83,11 @@ describe('flightNumber', () => {
       const result = randFlightNumber();
 
       expect(
-        result.match(/LS[0-9]/) ||
-          result.match(/^EZY[0-9]?/) ||
-          result.match(/^IB[0-9]?/) ||
-          result.match(/^BA[0-9]?/) ||
-          result.match(/^FR[0-9]?/)
+        result.match(/LS[0-9][0-9][0-9][0-9]$/) ||
+          result.match(/^EZY[0-9][0-9][0-9]$/) ||
+          result.match(/^IB[0-9][0-9][0-9][0-9]$/) ||
+          result.match(/^BA[0-9][0-9][0-9]$/) ||
+          result.match(/^FR[0-9][0-9][0-9][0-9]$/)
       ).toBeTruthy();
     });
   });
