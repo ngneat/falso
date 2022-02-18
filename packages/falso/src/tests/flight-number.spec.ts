@@ -13,7 +13,6 @@ describe('flightNumber', () => {
     it('should return flight number in correct format', () => {
       const result = randFlightNumber({ airline });
 
-      // TODO: RS - Look into char length
       expect(result).toMatch(/^FR[0-9][0-9][0-9][0-9]$/);
     });
   });
@@ -43,7 +42,6 @@ describe('flightNumber', () => {
     it('should return flight number in correct format', () => {
       const result = randFlightNumber({ airline });
 
-      // TODO: RS - Look into char length
       expect(result).toMatch(/^IB[0-9][0-9][0-9][0-9]$/);
     });
   });
@@ -58,7 +56,6 @@ describe('flightNumber', () => {
     it('should return flight number in correct format', () => {
       const result = randFlightNumber({ airline });
 
-      // TODO: RS - Look into char length
       expect(result).toMatch(/^EZY[0-9][0-9][0-9]$/);
     });
   });
@@ -73,7 +70,6 @@ describe('flightNumber', () => {
     it('should return flight number in correct format', () => {
       const result = randFlightNumber({ airline });
 
-      // TODO: RS - Look into char length
       expect(result).toMatch(/^LS[0-9][0-9][0-9][0-9]$/);
     });
   });
