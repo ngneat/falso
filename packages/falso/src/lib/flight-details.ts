@@ -5,17 +5,7 @@ import { rand } from './rand';
 import { randAirline } from './airline';
 import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
-
-function generateSeatNumber(): string {
-  return `${getRandomInRange({ min: 1, max: 33 })}${rand([
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-  ])}`;
-}
+import { randSeatNumber } from './seat-number';
 
 /**
  * Generate a random flight details.
@@ -44,7 +34,7 @@ export function randFlightDetails<Options extends FakeOptions = never>(
       from: randCity(),
       to: randCity(),
       date: randFutureDate(),
-      seat: generateSeatNumber(),
+      seat: randSeatNumber(),
       flightLength:
         getRandomInRange({ min: 1, max: 8 }) +
         rand<number>([0, 0.25, 0.5, 0.75]),
