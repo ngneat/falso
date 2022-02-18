@@ -1,11 +1,16 @@
 import { FakeOptions, fake, getRandomInRange } from './core/core';
 import { randCity } from './city';
 import { randFutureDate } from './future-date';
-import { rand } from './rand';
 import { randAirline } from './airline';
 import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
 import { randSeatNumber } from './seat-number';
+
+function generateFlightLength(): number {
+  return (
+    Math.ceil(getRandomInRange({ min: 1, max: 9, fraction: 2 }) / 0.25) * 0.25
+  );
+}
 
 /**
  * Generate a random flight details.
@@ -35,9 +40,7 @@ export function randFlightDetails<Options extends FakeOptions = never>(
       to: randCity(),
       date: randFutureDate(),
       seat: randSeatNumber(),
-      flightLength:
-        getRandomInRange({ min: 1, max: 8 }) +
-        rand<number>([0, 0.25, 0.5, 0.75]),
+      flightLength: generateFlightLength(),
     };
   };
 

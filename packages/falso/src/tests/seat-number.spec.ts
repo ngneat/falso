@@ -1,9 +1,9 @@
-import { randFlightDetails } from '@ngneat/falso';
+import { randSeatNumber } from '../lib/seat-number';
 
 describe('seatNumber', () => {
   it('should return a seat in the correct format', () => {
-    const result = randFlightDetails();
+    const result = randSeatNumber();
 
-    expect(result.seat).toMatch(/^(?:[1-9]|[1-2][0-9]|3[0-3])[A-Z]$/);
+    expect(result).toMatch(/^(?:[1-9]|[1-2][0-9]|3[0-3])[A-Z]$/);
   });
 });
