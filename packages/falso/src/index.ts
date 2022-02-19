@@ -182,3 +182,7 @@ export { randFullAddress } from './lib/full-address';
 export { randJSON } from './lib/rand-json';
 export { randCodeSnippet } from './lib/code-snippet';
 export { randTextRange } from './lib/text-range';
+export { randFlightNumber } from './lib/flight-number';
+export { randAirline } from './lib/airline';
+export { randFlightDetails } from './lib/flight-details';
+export { randSeatNumber } from './lib/seat-number';
