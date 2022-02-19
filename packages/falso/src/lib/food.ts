@@ -18,6 +18,7 @@ export interface FoodOptions extends FakeOptions {
     | 'venezuela'
     | 'argentina'
     | 'colombia'
+    | 'chile'
     | 'peru';
 }
 
