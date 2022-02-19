@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.26.0](https://github.com/ngneat/falso/compare/falso-2.25.1...falso-2.26.0) (2022-02-19)
+
+### Bug Fixes
+
+- 🐞 Fix randfood tests ([f23c05b](https://github.com/ngneat/falso/commit/f23c05b9d2e5746c01fb965270cf674bc27e579e)), closes [#187](https://github.com/ngneat/falso/issues/187)
+- 🐞 sports category olympicWinter in JSON ([5011bcd](https://github.com/ngneat/falso/commit/5011bcd9f920a0a2e1cda6a4eebf3a71f4e1a8fd)), closes [#201](https://github.com/ngneat/falso/issues/201)
+- 🐞 Tweak flight time logic and fix tests ([2664bb9](https://github.com/ngneat/falso/commit/2664bb9004e596347b7274eea9f58629e35d152a)), closes [#197](https://github.com/ngneat/falso/issues/197)
+
+### Features
+
+- 🔥 Add food from LATAM ([9c134d5](https://github.com/ngneat/falso/commit/9c134d53d082649ef13101a5410cfb2ec477881a))
+- 🔥 Add new food from latam ([84a9eef](https://github.com/ngneat/falso/commit/84a9eef0851ccadcc5892d140716c76096f9e38e))
+- 🔥 Add rand seat number function ([d2b0ef2](https://github.com/ngneat/falso/commit/d2b0ef28dc7f53ddccfa976b5f85f0a352cca8c8)), closes [#197](https://github.com/ngneat/falso/issues/197)
+- 🔥 Add randFlightNumber & randAirport functions ([c1c5e8e](https://github.com/ngneat/falso/commit/c1c5e8e425a8bd1862fa3e2ab152341da7f14e69))
+- 🔥 Add random flight details function ([31df76e](https://github.com/ngneat/falso/commit/31df76e96a9ba9daa8625065da7274b8e944a76e))
+
 ## [2.25.1](https://github.com/ngneat/falso/compare/falso-2.25.0...falso-2.25.1) (2022-02-16)
 
 ### Bug Fixes

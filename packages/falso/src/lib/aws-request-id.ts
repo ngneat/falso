@@ -1,5 +1,5 @@
+import { randAlphaNumeric } from './alpha-numeric';
 import { fake, FakeOptions } from './core/core';
-import { randAlphaNumeric } from '@ngneat/falso';
 
 /**
  * Generate a random AWS request id.
