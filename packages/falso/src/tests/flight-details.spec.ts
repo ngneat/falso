@@ -1,4 +1,4 @@
-import { randFlightDetails } from '../lib/flight-details';
+import { FlightDetails, randFlightDetails } from '../lib/flight-details';
 import { randFlightNumber } from '@ngneat/falso';
 import * as randFlightNumberFunctions from '../lib/flight-number';
 import * as randAirlineFunctions from '../lib/airline';
@@ -11,19 +11,19 @@ describe('flightDetails', () => {
       passenger: expect.any(String),
       airline: expect.any(String),
       flightNumber: expect.any(String),
-      from: expect.any(String),
+      origin: expect.any(String),
+      destination: expect.any(String),
       seat: expect.any(String),
-      to: expect.any(String),
-      date: expect.any(Date),
+      date: expect.any(String),
       flightLength: expect.any(Number),
     });
   });
 
-  it('expect flight length to be between 1 and 8.45', () => {
-    const result = randFlightDetails();
+  it('expect flight length to be between 1 and 8.75', () => {
+    const result = randFlightDetails() as FlightDetails;
 
     expect(result.flightLength).toBeGreaterThanOrEqual(1);
-    expect(result.flightLength).toBeLessThanOrEqual(8.45);
+    expect(result.flightLength).toBeLessThanOrEqual(8.75);
   });
 
   describe('flightNumber', () => {
