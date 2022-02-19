@@ -21,6 +21,13 @@ describe('sports', () => {
       const sport = randSports({ category: 'olympic' });
       expect(data.olympic).toContain(sport);
     });
+
+    describe('category is winterOlympic', () => {
+      it('should return a sport from the category winterOlympic', () => {
+        const sport = randSports({ category: 'winterOlympic' });
+        expect(data.winterOlympic).toContain(sport);
+      });
+    });
   });
   describe('length is passed', () => {
     describe('length is 1', () => {
