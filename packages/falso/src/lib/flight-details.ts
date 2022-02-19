@@ -39,7 +39,7 @@ function generateFlightLength(): number {
  */
 export function randFlightDetails<Options extends FakeOptions = never>(
   options?: Options
-): FlightDetails | FlightDetails[] {
+) {
   const factory: () => FlightDetails = () => {
     const airline = randAirline() as Airline;
 
