@@ -11,8 +11,15 @@ export interface FoodOptions extends FakeOptions {
     | 'france'
     | 'lebanon'
     | 'thailand'
+    | 'romania'
     | 'greece'
-    | 'turkey';
+    | 'turkey'
+    | 'spain'
+    | 'venezuela'
+    | 'argentina'
+    | 'colombia'
+    | 'chile'
+    | 'peru';
 }
 
 const totalOrigins = Object.keys(data)?.length;

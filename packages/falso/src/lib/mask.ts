@@ -12,7 +12,7 @@ import { randAlpha } from './alpha';
  *
  * @example
  *
- * randMask({ mask: "@#### @##" })
+ * randMask({ mask: '@#### @##' })
  *
  * @example
  *

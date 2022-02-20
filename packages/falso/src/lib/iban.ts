@@ -6,7 +6,7 @@ import { randAlphaNumeric } from './alpha-numeric';
 /**
  * Generate a random ibn.
  *
- * @category Finance
+ * @category finance
  *
  * @example
  *

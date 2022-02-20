@@ -4,7 +4,7 @@ import { data } from './database-collation.json';
 /**
  * Generate a random database collation.
  *
- * @category Database
+ * @category database
  *
  * @example
  *

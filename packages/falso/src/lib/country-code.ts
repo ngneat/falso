@@ -4,7 +4,7 @@ import { data } from './country-code.json';
 /**
  * Generate a random country code.
  *
- * @category Address
+ * @category address
  *
  * @example
  *

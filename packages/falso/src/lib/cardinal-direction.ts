@@ -4,7 +4,7 @@ import { data } from './cardinal-direction.json';
 /**
  * Generate a random cardinal direction.
  *
- * @category Address
+ * @category address
  *
  * @example
  *

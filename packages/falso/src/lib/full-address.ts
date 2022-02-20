@@ -12,11 +12,11 @@ import { AddressOptions, randAddress } from './address';
  *
  * @example
  *
- * randFullAddress({ includeCounty: false }) // Default true
+ * randFullAddress({ includeCounty: false }) // default is true
  *
  * @example
  *
- * randFullAddress({ includeCountry: false }) // Default true
+ * randFullAddress({ includeCountry: false }) // default is true
  *
  * @example
  *

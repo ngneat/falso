@@ -18,7 +18,7 @@ type Issuer =
 /**
  * Generate a random credit card number.
  *
- * @category Finance
+ * @category finance
  *
  * @example
  *

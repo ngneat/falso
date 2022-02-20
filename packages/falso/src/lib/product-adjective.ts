@@ -4,7 +4,7 @@ import { data } from './product-adjective.json';
 /**
  * Generate a random product adjective.
  *
- * @category Commerce
+ * @category commerce
  *
  * @example
  *

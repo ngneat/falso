@@ -4,7 +4,7 @@ import { data } from './job-descriptor.json';
 /**
  * Generate a random job descriptor.
  *
- * @category Jobs
+ * @category jobs
  *
  * @example
  *

@@ -7,11 +7,11 @@ import { fake, FakeOptions } from './core/core';
  *
  * @example
  *
- * rand([1, 2, 3])
+ * rand([ 1, 2, 3 ])
  *
  * @example
  *
- * rand([1, 2, 3], { length: 10 })
+ * rand([ 1, 2, 3 ], { length: 10 })
  *
  */
 export function rand<T, Options extends FakeOptions = never>(

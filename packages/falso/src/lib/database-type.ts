@@ -4,7 +4,7 @@ import { data } from './database-type.json';
 /**
  * Generate a random database type.
  *
- * @category Database
+ * @category database
  *
  * @example
  *
