@@ -83,7 +83,8 @@ describe('flightNumber', () => {
           result.match(/^EZY[0-9][0-9][0-9]$/) ||
           result.match(/^IB[0-9][0-9][0-9][0-9]$/) ||
           result.match(/^BA[0-9][0-9][0-9]$/) ||
-          result.match(/^FR[0-9][0-9][0-9][0-9]$/)
+          result.match(/^FR[0-9][0-9][0-9][0-9]$/) ||
+          result.match(/^[1-9][0-9][0-9][0-9][0-9]$/)
       ).toBeTruthy();
     });
   });
