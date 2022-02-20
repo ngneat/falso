@@ -1,17 +1,21 @@
-import { FakeOptions, fake, getRandomInRange } from './core/core';
-import { randCity } from './city';
+import { fake, FakeOptions, getRandomInRange } from './core/core';
 import { randFutureDate } from './future-date';
 import { randAirline } from './airline';
 import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
 import { randSeatNumber } from './seat-number';
+import { Airport, randAirport } from './airport';
+
+export interface FlightDetailsOptions extends FakeOptions {
+  airline?: Airline;
+}
 
 export interface FlightDetails {
   passenger: string;
   airline: string;
   flightNumber: string;
-  origin: string;
-  destination: string;
+  origin: Airport;
+  destination: Airport;
   date: string;
   seat: string;
   flightLength: number;
@@ -37,18 +41,20 @@ function generateFlightLength(): number {
  * randFlightDetails({ length: 10 })
  *
  */
-export function randFlightDetails<Options extends FakeOptions = never>(
+export function randFlightDetails<Options extends FlightDetailsOptions = never>(
   options?: Options
 ) {
   const factory: () => FlightDetails = () => {
-    const airline = randAirline() as Airline;
+    const airline = options?.airline ?? (randAirline() as Airline);
+
+    const [origin, destination] = randAirport({ length: 2 }) as Airport[];
 
     return {
       passenger: randFullName(),
       airline,
       flightNumber: randFlightNumber({ airline: airline }),
-      origin: randCity(),
-      destination: randCity(),
+      origin,
+      destination,
       date: randFutureDate().toISOString(),
       seat: randSeatNumber(),
       flightLength: generateFlightLength(),
