@@ -2,9 +2,14 @@ import { randFlightDetails } from '../lib/flight-details';
 import * as randFlightNumberFunctions from '../lib/flight-number';
 import * as randAirlineFunctions from '../lib/airline';
 import * as randAirportFunctions from '../lib/airport';
-import { randAirport } from '@ngneat/falso';
+import * as randFutureDateFunctions from '../lib/future-date';
+import { randAirport } from '../lib/airport';
 
 describe('flightDetails', () => {
+  afterAll(() => {
+    jest.resetAllMocks();
+  });
+
   it('should return a flight in correct format', () => {
     const result = randFlightDetails();
 
@@ -53,10 +58,6 @@ describe('flightDetails', () => {
       jest.clearAllMocks();
     });
 
-    afterAll(() => {
-      jest.resetAllMocks();
-    });
-
     it('should call randFlightNumber with randAirline', () => {
       const airline = 'British Airways';
       randAirlineSpy.mockReturnValue(airline);
@@ -96,10 +97,6 @@ describe('flightDetails', () => {
       jest.clearAllMocks();
     });
 
-    afterAll(() => {
-      jest.resetAllMocks();
-    });
-
     it('expect origin and destination to be returned from randAirport', () => {
       const airport1 = randAirport();
       const airport2 = randAirport();
@@ -109,6 +106,28 @@ describe('flightDetails', () => {
 
       expect(result.origin).toEqual(airport1);
       expect(result.destination).toEqual(airport2);
+    });
+  });
+
+  describe('date', () => {
+    let randFutureDateSpy: jest.SpyInstance;
+    const randAirportSpy = jest.spyOn(randAirportFunctions, 'randAirport');
+
+    beforeAll(() => {
+      randFutureDateSpy = jest.spyOn(randFutureDateFunctions, 'randFutureDate');
+    });
+
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('expect date to be set to ISO value from date returned from randFutureDate', () => {
+      const date = new Date('2019/07/10');
+      randFutureDateSpy.mockReturnValue(date);
+
+      const result = randFlightDetails();
+
+      expect(result.date).toEqual(date.toISOString());
     });
   });
 });
