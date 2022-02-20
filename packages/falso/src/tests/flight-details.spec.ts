@@ -30,11 +30,11 @@ describe('flightDetails', () => {
     });
   });
 
-  it('expect flight length to be between 1 and 8.75', () => {
+  it('expect flight length to be between 1 and 9.75', () => {
     const result = randFlightDetails();
 
     expect(result.flightLength).toBeGreaterThanOrEqual(1);
-    expect(result.flightLength).toBeLessThanOrEqual(8.75);
+    expect(result.flightLength).toBeLessThanOrEqual(9.75);
   });
 
   describe('flightNumber', () => {
