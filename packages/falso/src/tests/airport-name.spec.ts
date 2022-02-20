@@ -1,12 +1,12 @@
 import { data } from '../lib/airport.json';
-import { randAirportCode } from '@ngneat/falso';
+import { randAirportName } from '../lib/airport-name';
 
 describe('airportName', () => {
   it('should return an airport name', () => {
-    const airportCodes = data.map(({ name }) => name);
+    const airportNames = data.map(({ name }) => name);
 
-    const result = randAirportCode();
+    const result = randAirportName();
 
-    expect(airportCodes).toContain(result);
+    expect(airportNames).toContain(result);
   });
 });
