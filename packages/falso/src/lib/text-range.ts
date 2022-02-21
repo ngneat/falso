@@ -22,7 +22,7 @@ export interface TextRangeOptions extends FakeOptions {
  */
 export function randTextRange<Options extends TextRangeOptions = never>(
   options: Options
-): string | string[] {
+) {
   const min = options.min;
   const max = options.max;
 

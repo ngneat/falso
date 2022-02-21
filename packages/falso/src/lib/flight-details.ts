@@ -38,6 +38,10 @@ function generateFlightLength(): number {
  *
  * @example
  *
+ * randFlightDetails({ airline: 'RyanAir' })
+ *
+ * @example
+ *
  * randFlightDetails({ length: 10 })
  *
  */
@@ -47,7 +51,7 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
   const factory: () => FlightDetails = () => {
     const airline = options?.airline ?? (randAirline() as Airline);
 
-    const [origin, destination] = randAirport({ length: 2 }) as Airport[];
+    const [origin, destination] = randAirport({ length: 2 });
 
     return {
       passenger: randFullName(),
