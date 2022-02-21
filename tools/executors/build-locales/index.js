@@ -58,7 +58,6 @@ var devkit_1 = require("@nrwl/devkit");
 var glob_1 = require("glob");
 var fs_1 = require("fs");
 var path = require("path");
-var path_1 = require("path");
 /**
  * Build all locales.
  *
@@ -121,7 +120,7 @@ exports["default"] = buildLocales;
 function createLocaleBuildConfigs(_a) {
     var localesOutputPath = _a.localesOutputPath, localesSourcePath = _a.localesSourcePath, falsoSourcePath = _a.falsoSourcePath;
     return (0, glob_1.sync)(localesSourcePath + "/*/index.ts").map(function (entryFile) {
-        var language = (0, path_1.dirname)(entryFile).split(path.sep).pop();
+        var language = path.dirname(entryFile).split(path.sep).pop();
         return {
             language: language,
             outputPath: localesOutputPath + "/" + language,

@@ -1,8 +1,7 @@
 import { ExecutorContext, runExecutor } from '@nrwl/devkit';
 import { sync } from 'glob';
-import { renameSync, rm, rmSync, writeFileSync } from 'fs';
+import { renameSync, rmSync, writeFileSync } from 'fs';
 import * as path from 'path';
-import { dirname } from 'path';
 
 interface BuildLocalesOptions {
   localesOutputPath: string;
@@ -75,7 +74,7 @@ function createLocaleBuildConfigs({
   falsoSourcePath,
 }: BuildLocalesOptions): LocaleBuildConfig[] {
   return sync(`${localesSourcePath}/*/index.ts`).map((entryFile: string) => {
-    const language = dirname(entryFile).split(path.sep).pop();
+    const language = path.dirname(entryFile).split(path.sep).pop();
 
     return {
       language,
