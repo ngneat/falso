@@ -24,6 +24,6 @@ export interface Airport {
  */
 export function randAirport<Options extends FakeOptions = never>(
   options?: Options
-): Airport | Airport[] {
+) {
   return fake(data, options);
 }
