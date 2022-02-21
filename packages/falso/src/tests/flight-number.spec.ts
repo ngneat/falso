@@ -4,6 +4,10 @@ import { seed } from '../lib/random';
 import * as randFunctions from '../lib/rand';
 
 describe('flightNumber', () => {
+  afterAll(() => {
+    jest.resetAllMocks();
+  });
+
   describe('RyanAir is passed', () => {
     let airline: Airline;
 
@@ -205,6 +209,10 @@ describe('flightNumber', () => {
 
     beforeEach(() => {
       randSpy = jest.spyOn(randFunctions, 'rand');
+    });
+
+    afterEach(() => {
+      jest.clearAllMocks();
     });
 
     it('should use airline returned from rand to generate flight number', () => {
