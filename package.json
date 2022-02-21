@@ -6,6 +6,7 @@
     "build:docs": "npm run build && node ./docs-generator.js",
     "start:docs": "npm run build:docs && npm run start --prefix docs",
     "build": "nx build falso && node ./post-build.js",
+    "build-locales": "npx tsc tools/executors/build-locales/index && npx nx build-locales falso",
     "new": "nx workspace-generator falso",
     "format": "nx format",
     "c": "cz",

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "cli": "nx",
+  "properties": {
+    "localesOutputPath": {
+      "type": "string",
+      "description": "Locales output path"
+    },
+    "localesSourcePath": {
+      "type": "string",
+      "description": "Locales src path"
+    },
+    "falsoSourcePath": {
+      "type": "string",
+      "description": "Falso src path"
+    }
+  }
+}

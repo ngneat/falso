@@ -1,0 +1,8 @@
+{
+  "executors": {
+    "build-locales": {
+      "implementation": "./index",
+      "schema": "./schema.json"
+    }
+  }
+}

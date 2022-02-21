@@ -29,6 +29,14 @@
         ]
       }
     },
+    "build-locales": {
+      "executor": "./tools/executors/build-locales:build-locales",
+      "options": {
+        "localesOutputPath": "dist/packages/falso/locales",
+        "falsoSourcePath": "packages/falso/src",
+        "localesSourcePath": "packages/falso/src/lib/locales"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
