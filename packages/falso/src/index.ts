@@ -186,3 +186,6 @@ export { randFlightNumber } from './lib/flight-number';
 export { randAirline } from './lib/airline';
 export { randFlightDetails, FlightDetails } from './lib/flight-details';
 export { randSeatNumber } from './lib/seat-number';
+export { randAirport } from './lib/airport';
+export { randAirportName } from './lib/airport-name';
+export { randAirportCode } from './lib/airport-code';
