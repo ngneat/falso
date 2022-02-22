@@ -40,7 +40,7 @@ export default async function buildLocales(
 
   const result = await Promise.all(
     localeBuildConfigs.map(async (buildConfig: LocaleBuildConfig) => {
-      setupLocaleBuild(buildConfig);
+      setupLocaleBuild(buildConfig, options);
 
       const buildResult = await buildLocale(buildConfig, context);
 
@@ -73,14 +73,21 @@ function createLocaleBuildConfigs({
   localesSourcePath,
   falsoSourcePath,
 }: BuildLocalesOptions): LocaleBuildConfig[] {
-  return sync(`${localesSourcePath}/*/index.ts`).map((entryFile: string) => {
+  return sync(
+    path.join(falsoSourcePath, localesSourcePath, `*`, `index.ts`)
+  ).map((entryFile: string) => {
     const language = path.dirname(entryFile).split(path.sep).pop();
 
     return {
       language,
-      outputPath: `${localesOutputPath}/${language}`,
-      entryFile: `${falsoSourcePath}/index_${language}.ts`,
-      tsConfig: `${localesSourcePath}/${language}/tsconfig.json`,
+      outputPath: path.join(localesOutputPath, language),
+      entryFile: path.join(falsoSourcePath, `index_${language}.ts`),
+      tsConfig: path.join(
+        falsoSourcePath,
+        localesSourcePath,
+        language,
+        `tsconfig.json`
+      ),
     };
   });
 }
@@ -113,11 +120,18 @@ async function buildLocale(
  * Create necessary file for a proper build of the secondary entry point.
  *
  * @param buildConfig
+ * @param options
  */
-function setupLocaleBuild(buildConfig: LocaleBuildConfig): void {
+function setupLocaleBuild(
+  buildConfig: LocaleBuildConfig,
+  options: BuildLocalesOptions
+): void {
   writeFileSync(
     buildConfig.entryFile,
-    `export * from './lib/locales/${buildConfig.language}';`
+    `export * from './${path.join(
+      options.localesSourcePath,
+      buildConfig.language
+    )}';`
   );
 
   writeFileSync(
@@ -160,10 +174,6 @@ function cleanupBuildArtifacts(buildConfig: LocaleBuildConfig): void {
 
   writeFileSync(
     `${buildConfig.outputPath}/package.json`,
-    `{
-  "main": "./index.cjs.js",
-  "module": "./index.esm.js",
-  "typings": "./index.d.ts"
-}`
+    `{"main": "./index.cjs.js","module": "./index.esm.js","typings": "./index.d.ts"}`
   );
 }

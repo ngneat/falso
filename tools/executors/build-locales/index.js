@@ -85,7 +85,7 @@ function buildLocales(options, context) {
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0:
-                                        setupLocaleBuild(buildConfig);
+                                        setupLocaleBuild(buildConfig, options);
                                         return [4 /*yield*/, buildLocale(buildConfig, context)];
                                     case 1:
                                         buildResult = _a.sent();
@@ -119,13 +119,13 @@ exports["default"] = buildLocales;
  */
 function createLocaleBuildConfigs(_a) {
     var localesOutputPath = _a.localesOutputPath, localesSourcePath = _a.localesSourcePath, falsoSourcePath = _a.falsoSourcePath;
-    return (0, glob_1.sync)(localesSourcePath + "/*/index.ts").map(function (entryFile) {
+    return (0, glob_1.sync)(path.join(falsoSourcePath, localesSourcePath, "*", "index.ts")).map(function (entryFile) {
         var language = path.dirname(entryFile).split(path.sep).pop();
         return {
             language: language,
-            outputPath: localesOutputPath + "/" + language,
-            entryFile: falsoSourcePath + "/index_" + language + ".ts",
-            tsConfig: localesSourcePath + "/" + language + "/tsconfig.json"
+            outputPath: path.join(localesOutputPath, language),
+            entryFile: path.join(falsoSourcePath, "index_" + language + ".ts"),
+            tsConfig: path.join(falsoSourcePath, localesSourcePath, language, "tsconfig.json")
         };
     });
 }
@@ -184,9 +184,10 @@ function buildLocale(buildConfig, context) {
  * Create necessary file for a proper build of the secondary entry point.
  *
  * @param buildConfig
+ * @param options
  */
-function setupLocaleBuild(buildConfig) {
-    (0, fs_1.writeFileSync)(buildConfig.entryFile, "export * from './lib/locales/" + buildConfig.language + "';");
+function setupLocaleBuild(buildConfig, options) {
+    (0, fs_1.writeFileSync)(buildConfig.entryFile, "export * from './" + path.join(options.localesSourcePath, buildConfig.language) + "';");
     (0, fs_1.writeFileSync)(buildConfig.tsConfig, "{\n  \"extends\": \"../../../../tsconfig.json\",\n  \"compilerOptions\": {\n    \"outDir\": \"../../../../../../dist/out-tsc\",\n    \"declaration\": true,\n    \"types\": []\n  },\n  \"include\": [\"**/*.ts\"],\n  \"exclude\": [\"**/*.spec.ts\"]\n}\n");
 }
 /**
@@ -209,5 +210,5 @@ function cleanupBuildArtifacts(buildConfig) {
     (0, glob_1.sync)(buildConfig.outputPath + "/index_*").forEach(function (indexFilePath) {
         return (0, fs_1.renameSync)(indexFilePath, indexFilePath.replace(/_[a-z]+./g, '.'));
     });
-    (0, fs_1.writeFileSync)(buildConfig.outputPath + "/package.json", "{\n  \"main\": \"./index.cjs.js\",\n  \"module\": \"./index.esm.js\",\n  \"typings\": \"./index.d.ts\"\n}");
+    (0, fs_1.writeFileSync)(buildConfig.outputPath + "/package.json", "{\"main\": \"./index.cjs.js\",\"module\": \"./index.esm.js\",\"typings\": \"./index.d.ts\"}");
 }

@@ -29,12 +29,12 @@
         ]
       }
     },
-    "build-locales": {
+    "i18n": {
       "executor": "./tools/executors/build-locales:build-locales",
       "options": {
-        "localesOutputPath": "dist/packages/falso/locales",
+        "localesOutputPath": "dist/packages/falso/i18n",
         "falsoSourcePath": "packages/falso/src",
-        "localesSourcePath": "packages/falso/src/lib/locales"
+        "localesSourcePath": "lib/i18n"
       }
     },
     "lint": {

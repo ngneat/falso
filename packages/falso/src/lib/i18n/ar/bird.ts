@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from '../../core/core';
-import { data } from './bird.json';
+import { data } from './bird.i18n.json';
 
 /**
  * Generate a random bird.

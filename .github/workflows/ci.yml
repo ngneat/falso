@@ -12,4 +12,4 @@ jobs:
       - run: npm ci
       - run: npm run test
       - run: npm run build
-      - run: npm run build-locales
+      - run: npm run i18n
