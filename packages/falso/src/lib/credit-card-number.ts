@@ -1,7 +1,12 @@
-import { fake, FakeOptions, randElement } from './core/core';
+import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
+import { rand } from './rand';
 import { data } from './credit-card-number.json';
 
-type Issuer =
+export interface CreditCardNumberOptions extends FakeOptions {
+  issuer?: Issuer;
+}
+
+export type Issuer =
   | 'American Express'
   | 'UnionPay'
   | 'Diners Club'
@@ -26,41 +31,28 @@ type Issuer =
  *
  * @example
  *
- * randCreditCardNumber({ issuer: 'Visa'})
+ * randCreditCardNumber({ issuer: 'Visa' })
  *
  * @example
  *
  * randCreditCardNumber({ length: 10 })
  *
  */
-
 export function randCreditCardNumber<
-  Options extends FakeOptions & {
-    issuer?: Issuer;
-  } = never
+  Options extends CreditCardNumberOptions = never
 >(options?: Options) {
-  let formats = data.map(({ formats }) => formats).flat();
+  const issuer: Issuer | string = options?.issuer ?? rand(data).issuer;
+  const formats = data.find((card) => card.issuer === issuer)?.formats;
 
-  if (options?.issuer) {
-    formats =
-      data.find((card) => {
-        return card.issuer === options.issuer;
-      })?.formats || [];
+  if (!formats) {
+    throw new Error('Unable to generate card number for this issuer');
   }
 
-  const minNumb = 0;
-  const maxNumb = 9;
+  const factory: () => string = () => {
+    return randElement(formats).replace(/#/g, () => {
+      return getRandomInRange({ min: 0, max: 9 }).toString();
+    });
+  };
 
-  const cardsArray = Array.from(
-    { length: options?.length || 1 },
-    (_, index) => {
-      return randElement(formats).replace(/#/g, () => {
-        return (
-          '' + (Math.floor(Math.random() * (maxNumb - minNumb + 1)) + minNumb)
-        );
-      });
-    }
-  ) as any;
-
-  return fake(cardsArray, options);
+  return fake(factory, options);
 }
