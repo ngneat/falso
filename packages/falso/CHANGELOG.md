@@ -2,7 +2,7 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-# [2.26.0](https://github.com/ngneat/falso/compare/falso-2.25.1...falso-2.26.0) (2022-02-23)
+# [2.27.0](https://github.com/ngneat/falso/compare/falso-2.25.1...falso-2.27.0) (2022-02-23)
 
 ### Bug Fixes
 

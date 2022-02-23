@@ -5,7 +5,7 @@
   "scripts": {
     "build:docs": "npm run build && node ./docs-generator.js",
     "start:docs": "npm run build:docs && npm run start --prefix docs",
-    "build": "nx build falso && node ./post-build.js",
+    "build": "nx build falso && npm run i18n && node ./post-build.js",
     "i18n": "nx i18n falso",
     "new": "nx workspace-generator falso",
     "format": "nx format",
