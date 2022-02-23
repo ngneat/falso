@@ -6,19 +6,22 @@ export interface CreditCardNumberOptions extends FakeOptions {
   issuer?: Issuer;
 }
 
-export type Issuer =
-  | 'American Express'
-  | 'UnionPay'
-  | 'Diners Club'
-  | 'Discover Card'
-  | 'RuPay'
-  | 'JCB'
-  | 'Maestro'
-  | 'Dankort'
-  | 'Mastercard'
-  | 'Visa'
-  | 'Visa Electron'
-  | 'UATP';
+const issuers = [
+  'American Express',
+  'UnionPay',
+  'Diners Club',
+  'Discover Card',
+  'RuPay',
+  'JCB',
+  'Maestro',
+  'Dankort',
+  'Mastercard',
+  'Visa',
+  'Visa Electron',
+  'UATP',
+];
+
+export type Issuer = typeof issuers[number];
 
 /**
  * Generate a random credit card number.
@@ -41,15 +44,12 @@ export type Issuer =
 export function randCreditCardNumber<
   Options extends CreditCardNumberOptions = never
 >(options?: Options) {
-  const issuer: Issuer | string = options?.issuer ?? rand(data).issuer;
+  const issuer: Issuer | string = options?.issuer ?? rand(issuers);
   const formats = data.find((card) => card.issuer === issuer)?.formats;
-
-  if (!formats) {
-    throw new Error('Unable to generate card number for this issuer');
-  }
+  const fallBackFormat = ['#### ###### ####'];
 
   const factory: () => string = () => {
-    return randElement(formats).replace(/#/g, () => {
+    return randElement(formats || fallBackFormat).replace(/#/g, () => {
       return getRandomInRange({ min: 0, max: 9 }).toString();
     });
   };
