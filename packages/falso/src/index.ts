@@ -189,3 +189,4 @@ export { randSeatNumber } from './lib/seat-number';
 export { randAirport } from './lib/airport';
 export { randAirportName } from './lib/airport-name';
 export { randAirportCode } from './lib/airport-code';
+export { randCreditCard } from './lib/credit-card';
