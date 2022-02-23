@@ -29,6 +29,14 @@
         ]
       }
     },
+    "i18n": {
+      "executor": "./tools/executors/build-locales:build-locales",
+      "options": {
+        "localesOutputPath": "dist/packages/falso/i18n",
+        "falsoSourcePath": "packages/falso/src",
+        "localesSourcePath": "lib/i18n"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

@@ -1,0 +1,1 @@
+export { randBird } from './bird';
