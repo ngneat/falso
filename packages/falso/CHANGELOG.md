@@ -2,6 +2,34 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.26.0](https://github.com/ngneat/falso/compare/falso-2.25.1...falso-2.26.0) (2022-02-23)
+
+### Bug Fixes
+
+- 🐞 Add test for fall back flight number logic ([8fc7c09](https://github.com/ngneat/falso/commit/8fc7c09e4eed2411c7490cee1a9aca1db985ea23))
+- 🐞 export flight details interface ([7474ee3](https://github.com/ngneat/falso/commit/7474ee3260fdd1f66bdaf4f914a4c1c7ca230da2))
+- 🐞 Fix broken test ([4e8790a](https://github.com/ngneat/falso/commit/4e8790ad9d9e6b923b64fdb35af043e4348ec6f1))
+- 🐞 Fix randfood tests ([f23c05b](https://github.com/ngneat/falso/commit/f23c05b9d2e5746c01fb965270cf674bc27e579e)), closes [#187](https://github.com/ngneat/falso/issues/187)
+- 🐞 sports category olympicWinter in JSON ([5011bcd](https://github.com/ngneat/falso/commit/5011bcd9f920a0a2e1cda6a4eebf3a71f4e1a8fd)), closes [#201](https://github.com/ngneat/falso/issues/201)
+- 🐞 Tweak flight time logic and fix tests ([2664bb9](https://github.com/ngneat/falso/commit/2664bb9004e596347b7274eea9f58629e35d152a)), closes [#197](https://github.com/ngneat/falso/issues/197)
+- 🐞 wrong translations ([6dde4ee](https://github.com/ngneat/falso/commit/6dde4ee867930eea1326ae4c000a0f4196f5591e))
+
+### Features
+
+- 🔥 Add food from LATAM ([9c134d5](https://github.com/ngneat/falso/commit/9c134d53d082649ef13101a5410cfb2ec477881a))
+- 🔥 Add more airlines ([044686e](https://github.com/ngneat/falso/commit/044686e18371997972d6934a4f966d3a7c109bee))
+- 🔥 Add more flight number generators for various airlines ([7cc88f9](https://github.com/ngneat/falso/commit/7cc88f98d82cc6bca12878fed3b149aa5c638f17))
+- 🔥 Add more vehicle manufacturers ([6571e20](https://github.com/ngneat/falso/commit/6571e20a56e7c0863ffb472e8fe08290d5888a65))
+- 🔥 Add new food from latam ([84a9eef](https://github.com/ngneat/falso/commit/84a9eef0851ccadcc5892d140716c76096f9e38e))
+- 🔥 Add rand seat number function ([d2b0ef2](https://github.com/ngneat/falso/commit/d2b0ef28dc7f53ddccfa976b5f85f0a352cca8c8)), closes [#197](https://github.com/ngneat/falso/issues/197)
+- 🔥 Add randFlightNumber & randAirport functions ([c1c5e8e](https://github.com/ngneat/falso/commit/c1c5e8e425a8bd1862fa3e2ab152341da7f14e69))
+- 🔥 Add random airport name, code and entity functions ([6793686](https://github.com/ngneat/falso/commit/6793686a2a3587ac71af512c0a8726ac133ee9d8)), closes [#208](https://github.com/ngneat/falso/issues/208)
+- 🔥 Add random flight details function ([31df76e](https://github.com/ngneat/falso/commit/31df76e96a9ba9daa8625065da7274b8e944a76e))
+- 🔥 Add romanian currency ([542cb59](https://github.com/ngneat/falso/commit/542cb5938b165a61987cc64f9b2ec48e9b65947e))
+- 🔥 build all locales ([34a0cf6](https://github.com/ngneat/falso/commit/34a0cf6d18ea4958e6d0b753f6a75e292bb90be7))
+- 🔥 translate randBird ([95cb1b8](https://github.com/ngneat/falso/commit/95cb1b8793039c1efab7a4f81ecef6784225fd38))
+- 🔥 translate randBird to ru and es ([82407ae](https://github.com/ngneat/falso/commit/82407aec21dce4360af88634865a4b439dd92a9e))
+
 # [2.26.0](https://github.com/ngneat/falso/compare/falso-2.25.1...falso-2.26.0) (2022-02-19)
 
 ### Bug Fixes
