@@ -34,10 +34,5 @@
   "devDependencies": {
     "@types/seedrandom": "3.0.1",
     "@types/uuid": "8.3.4"
-  },
-  "standard-version": {
-    "skip": {
-      "tag": true
-    }
   }
 }
