@@ -58,7 +58,7 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
 
     const dateOptions: Intl.DateTimeFormatOptions = {
       month: 'numeric',
-      year: 'numeric',
+      year: '2-digit',
     };
     const validFrom = randPastDate({ years: 1 }).toLocaleDateString(
       'en-GB',
