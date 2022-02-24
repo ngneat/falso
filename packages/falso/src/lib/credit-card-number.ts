@@ -46,7 +46,7 @@ export function randCreditCardNumber<
 >(options?: Options) {
   const issuer: Issuer | string = options?.issuer ?? rand(issuers);
   const formats = data.find((card) => card.issuer === issuer)?.formats;
-  const fallBackFormat = ['#### ###### ####'];
+  const fallBackFormat = ['#### #### #### ####'];
 
   const factory: () => string = () => {
     return randElement(formats || fallBackFormat).replace(/#/g, () => {
