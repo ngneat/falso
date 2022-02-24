@@ -3,10 +3,10 @@ import { rand } from './rand';
 import { data } from './credit-card-number.json';
 
 export interface CreditCardNumberOptions extends FakeOptions {
-  issuer?: Issuer;
+  brand?: Brand;
 }
 
-export type Issuer =
+export type Brand =
   | 'American Express'
   | 'UnionPay'
   | 'Diners Club'
@@ -31,7 +31,7 @@ export type Issuer =
  *
  * @example
  *
- * randCreditCardNumber({ issuer: 'Visa' })
+ * randCreditCardNumber({ brand: 'Visa' })
  *
  * @example
  *
@@ -41,9 +41,9 @@ export type Issuer =
 export function randCreditCardNumber<
   Options extends CreditCardNumberOptions = never
 >(options?: Options) {
-  const issuer: Issuer | string = options?.issuer ?? rand(Object.keys(data));
+  const brand: Brand | string = options?.brand ?? rand(Object.keys(data));
 
-  const formats = data.find((card) => card.issuer === issuer)?.formats;
+  const formats = data.find((card) => card.brand === brand)?.formats;
   const fallBackFormat = ['#### #### #### ####'];
 
   const factory: () => string = () => {

@@ -34,7 +34,7 @@ export { randCountryCode } from './lib/country-code';
 export { randCounty } from './lib/county';
 export { randCow } from './lib/cow';
 export { randCreditCardCVV } from './lib/credit-card-cvv';
-export { randCreditCardIssuer } from './lib/credit-card-issuer';
+export { randCreditCardBrand } from './lib/credit-card-brand';
 export { randCreditCardNumber } from './lib/credit-card-number';
 export { randCrocodilia } from './lib/crocodilia';
 export { randCurrencyCode } from './lib/currency-code';

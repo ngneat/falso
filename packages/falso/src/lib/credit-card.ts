@@ -1,7 +1,7 @@
 import { fake, FakeOptions } from './core/core';
 import { randCreditCardCVV } from './credit-card-cvv';
-import { randCreditCardIssuer } from './credit-card-issuer';
-import { Issuer, randCreditCardNumber } from './credit-card-number';
+import { randCreditCardBrand } from './credit-card-brand';
+import { Brand, randCreditCardNumber } from './credit-card-number';
 import { randAccount } from './account';
 import { randFullName } from './full-name';
 import { rand } from './rand';
@@ -10,12 +10,12 @@ import { randFutureDate } from './future-date';
 import { randPersonTitle } from './person-title';
 
 export interface CreditCardOptions extends FakeOptions {
-  issuer?: Issuer;
+  brand?: Brand;
 }
 
 export interface CreditCard {
   ccv: string;
-  issuer: string;
+  brand: string;
   number: string;
   account: string;
   name: string;
@@ -42,7 +42,7 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
   options?: Options
 ) {
   const factory: () => CreditCard = () => {
-    const issuer = options?.issuer ?? (randCreditCardIssuer() as Issuer);
+    const brand = options?.brand ?? (randCreditCardBrand() as Brand);
 
     const title = randPersonTitle();
     const fullName = randFullName({ withAccents: false });
@@ -62,11 +62,11 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
 
     return {
       name,
-      issuer,
+      brand,
       validFrom,
       untilEnd,
       ccv: randCreditCardCVV(),
-      number: randCreditCardNumber({ issuer }),
+      number: randCreditCardNumber({ brand }),
       account: randAccount(),
       type: rand(['Credit', 'Debit']),
     };
