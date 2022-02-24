@@ -18,17 +18,17 @@ const functionModifiers = {
 const skipLivePreview = ['seed'];
 
 jsdoc2md.getTemplateData({
-  files    : glob.sync('packages/falso/src/lib/*.ts'),
+  files: glob.sync('packages/falso/src/lib/*.ts'),
   configure: 'jsdoc.json'
 }).then(res => {
   const categories = res.reduce((acc, current) => {
     const category = current.category.toLowerCase();
 
     // Handle multiple categories
-    if( category.includes(',') ) {
+    if (category.includes(',')) {
       const categories = category.split(', ');
       categories.forEach((c) => {
-        if(!acc[c]) {
+        if (!acc[c]) {
           acc[c] = [];
         }
 
@@ -39,7 +39,7 @@ jsdoc2md.getTemplateData({
       });
     }
     else {
-      if(!acc[category]) {
+      if (!acc[category]) {
         acc[category] = [];
       }
 
@@ -54,7 +54,7 @@ jsdoc2md.getTemplateData({
     fs.mkdirSync(docsOutputPath);
   }
 
-  for(let [category, items] of Object.entries(categories)) {
+  for (let [category, items] of Object.entries(categories)) {
     let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(category)}\n\n`;
 
     md += items.sort((funcA, funcB) => sortFunctions(funcA, funcB)).map(getDocsSection).join('');
@@ -62,18 +62,18 @@ jsdoc2md.getTemplateData({
     fs.writeFileSync(path.join(docsOutputPath, `${category.toLowerCase()}.mdx`), md, { encoding: 'utf8' });
   }
 
-  const [falsoESMPath] = glob.sync('dist/**/index.esm.js');
+  const [falsoESMPath] = glob.sync('dist/packages/falso/index.esm.js');
   minify(fs.readFileSync(falsoESMPath, "utf8")).then((minified) => {
     fs.writeFileSync(path.join('docs', 'src', 'theme', 'ReactLiveScope', 'falso.min.js'), minified.code);
   });
 });
 
 function sortFunctions(funcA, funcB) {
-  if(funcA.name < funcB.name) {
+  if (funcA.name < funcB.name) {
     return -1;
   }
 
-  if(funcA.name > funcB.name) {
+  if (funcA.name > funcB.name) {
     return 1;
   }
 
@@ -84,7 +84,7 @@ function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function getDocsSection({name, description, examples}) {
+function getDocsSection({ name, description, examples }) {
   let section = `### \`\`\`${name}\`\`\`\n\n${description}\n\n\`\`\`ts\nimport { ${name} } from '@ngneat/falso';\n\n${examples.join('\n')}\n\`\`\`\n\n`;
 
   if (!skipLivePreview.includes(name)) {
