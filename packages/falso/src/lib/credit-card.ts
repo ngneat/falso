@@ -10,6 +10,7 @@ import { randFutureDate } from './future-date';
 import { randPersonTitle } from './person-title';
 
 export interface CreditCardOptions extends FakeOptions {
+  fullName?: string;
   brand?: Brand;
 }
 
@@ -18,7 +19,7 @@ export interface CreditCard {
   brand: string;
   number: string;
   account: string;
-  name: string;
+  fullName: string;
   type: 'Credit' | 'Debit';
   validFrom: string;
   untilEnd: string;
@@ -35,6 +36,14 @@ export interface CreditCard {
  *
  * @example
  *
+ * randCreditCard({ fullName: 'Mr Ryan Smee' })
+ *
+ * @example
+ *
+ * randCreditCard({ brand: 'Visa' })
+ *
+ * @example
+ *
  * randCreditCard({ length: 10 })
  *
  */
@@ -42,11 +51,11 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
   options?: Options
 ) {
   const factory: () => CreditCard = () => {
+    const fullName =
+      options?.fullName ??
+      `${randPersonTitle()} ${randFullName({ withAccents: false })}`;
     const brand = options?.brand ?? (randCreditCardBrand() as Brand);
 
-    const title = randPersonTitle();
-    const fullName = randFullName({ withAccents: false });
-    const name = `${title} ${fullName}`;
     const dateOptions: Intl.DateTimeFormatOptions = {
       month: 'numeric',
       year: 'numeric',
@@ -61,7 +70,7 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
     );
 
     return {
-      name,
+      fullName,
       brand,
       validFrom,
       untilEnd,
