@@ -42,10 +42,11 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
   options?: Options
 ) {
   const factory: () => CreditCard = () => {
+    const issuer = options?.issuer ?? (randCreditCardIssuer() as Issuer);
+
     const title = randPersonTitle();
     const fullName = randFullName({ withAccents: false });
     const name = `${title} ${fullName}`;
-    const issuer = options?.issuer ?? randCreditCardIssuer();
     const dateOptions: Intl.DateTimeFormatOptions = {
       month: 'numeric',
       year: 'numeric',
