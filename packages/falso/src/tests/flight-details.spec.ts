@@ -3,6 +3,7 @@ import * as randFlightNumberFunctions from '../lib/flight-number';
 import * as randAirlineFunctions from '../lib/airline';
 import * as randAirportFunctions from '../lib/airport';
 import * as randFutureDateFunctions from '../lib/future-date';
+import * as randFullNameFunctions from '../lib/full-name';
 import { randAirport } from '../lib/airport';
 
 describe('flightDetails', () => {
@@ -40,6 +41,39 @@ describe('flightDetails', () => {
 
     expect(result.flightLength).toBeGreaterThanOrEqual(1);
     expect(result.flightLength).toBeLessThanOrEqual(9.75);
+  });
+
+  describe('passenger', () => {
+    let randFullNameSpy: jest.SpyInstance;
+
+    beforeEach(() => {
+      randFullNameSpy = jest.spyOn(randFullNameFunctions, 'randFullName');
+    });
+
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    describe('passenger is passed', () => {
+      it('should set passenger to passed passenger option', () => {
+        const passenger = 'Marta Esteban';
+
+        const result = randFlightDetails({ passenger });
+
+        expect(result.passenger).toEqual(passenger);
+      });
+    });
+
+    describe('passenger is not passed', () => {
+      it('should set passenger to value returned from randFullName', () => {
+        const fullName = 'Ryan Smee';
+        randFullNameSpy.mockReturnValue(fullName);
+
+        const result = randFlightDetails();
+
+        expect(result.passenger).toEqual(fullName);
+      });
+    });
   });
 
   describe('flightNumber', () => {
@@ -111,7 +145,6 @@ describe('flightDetails', () => {
 
   describe('date', () => {
     let randFutureDateSpy: jest.SpyInstance;
-    const randAirportSpy = jest.spyOn(randAirportFunctions, 'randAirport');
 
     beforeAll(() => {
       randFutureDateSpy = jest.spyOn(randFutureDateFunctions, 'randFutureDate');
