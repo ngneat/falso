@@ -15,7 +15,7 @@ describe('randTextRange', () => {
       const result = randTextRange({ min, max });
 
       expect(result.length).toBeGreaterThan(min);
-      expect(result.length).toBeLessThan(max);
+      expect(result.length).toBeLessThanOrEqual(max);
     });
   });
 
