@@ -1,4 +1,4 @@
-import { FakeOptions, fake, getRandomInRange } from './core/core';
+import { fake, FakeOptions, getRandomInRange } from './core/core';
 import { rand } from './rand';
 import * as airlines from './airline.json';
 
@@ -22,11 +22,38 @@ export interface FlightNumberOptions extends FakeOptions {
   airline?: Airline;
 }
 
-function generateStandardFlightNumber(
-  prefix: string,
-  suffixMin: number,
-  suffixMax: number
-): string {
+interface FlightNumberMetadata {
+  prefix: string;
+  suffixMin?: number;
+  suffixMax?: number;
+}
+
+const flightNumberInfo: Record<Airline, FlightNumberMetadata> = {
+  RyanAir: { prefix: 'FR' },
+  'British Airways': { prefix: 'BA', suffixMin: 100, suffixMax: 999 },
+  Iberia: { prefix: 'IB' },
+  Jet2: { prefix: 'LS' },
+  EasyJet: { prefix: 'EZY', suffixMin: 100, suffixMax: 999 },
+  Emirates: { prefix: 'EK', suffixMin: 10, suffixMax: 99 },
+  'American Airlines': { prefix: 'AA' },
+  JetBlue: { prefix: 'B', suffixMin: 100, suffixMax: 999 },
+  'Air Europa': { prefix: 'UX' },
+  'Delta Air Lines': { prefix: 'DL' },
+  'United Airlines': { prefix: 'UA' },
+  'Virgin Atlantic': { prefix: 'VS' },
+  'Thai Airways': { prefix: 'TG' },
+  'Qatar Airways': { prefix: 'QR' },
+};
+
+function generateStandardFlightNumber({
+  prefix,
+  suffixMin = 1_000,
+  suffixMax = 9_999,
+}: {
+  prefix: string;
+  suffixMin?: number;
+  suffixMax?: number;
+}): string {
   return `${prefix}${getRandomInRange({ min: suffixMin, max: suffixMax })}`;
 }
 
@@ -54,38 +81,11 @@ export function randFlightNumber<Options extends FlightNumberOptions = never>(
   const airline = options?.airline ?? (rand(airlines.data) as Airline);
 
   const factory: () => string = () => {
-    switch (airline) {
-      case 'RyanAir':
-        return generateStandardFlightNumber('FR', 1_000, 9_999);
-      case 'British Airways':
-        return generateStandardFlightNumber('BA', 100, 999);
-      case 'Iberia':
-        return generateStandardFlightNumber('IB', 1_000, 9_999);
-      case 'Jet2':
-        return generateStandardFlightNumber('LS', 1_000, 9_999);
-      case 'EasyJet':
-        return generateStandardFlightNumber('EZY', 100, 999);
-      case 'Emirates':
-        return generateStandardFlightNumber('EK', 10, 99);
-      case 'American Airlines':
-        return generateStandardFlightNumber('AA', 1_000, 9_999);
-      case 'JetBlue':
-        return generateStandardFlightNumber('B', 100, 999);
-      case 'Air Europa':
-        return generateStandardFlightNumber('UX', 1_000, 9_999);
-      case 'Delta Air Lines':
-        return generateStandardFlightNumber('DL', 1_000, 9_999);
-      case 'United Airlines':
-        return generateStandardFlightNumber('UA', 1_000, 9_999);
-      case 'Virgin Atlantic':
-        return generateStandardFlightNumber('VS', 1_000, 9_999);
-      case 'Thai Airways':
-        return generateStandardFlightNumber('TG', 1_000, 9_999);
-      case 'Qatar Airways':
-        return generateStandardFlightNumber('QR', 1_000, 9_999);
-      default:
-        return getRandomInRange({ min: 10_000, max: 99_999 }).toString();
+    if (flightNumberInfo[airline]) {
+      return generateStandardFlightNumber(flightNumberInfo[airline]);
     }
+
+    return getRandomInRange({ min: 10_000, max: 99_999 }).toString();
   };
 
   return fake(factory, options);
