@@ -36,12 +36,10 @@ const generateRandomValue = (): any => {
 };
 
 const generateRandomObject = (length: number) => {
-  let o = {};
+  let o: { [key: string]: any} = {};
 
   for (let index = 0; index < length; index++) {
-    o = Object.assign(o, {
-      [randUuid().replace(/-/g, '')]: generateRandomValue(),
-    });
+    o[randUuid().replace(/-/g, '')] = generateRandomValue()
   }
 
   return o;
