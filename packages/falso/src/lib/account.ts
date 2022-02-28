@@ -1,4 +1,4 @@
-import { fake, FakeOptions, getRandomInRange } from './core/core';
+import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
 
 /**
  * Generate a random account.
@@ -17,5 +17,11 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
 export function randAccount<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => getRandomInRange({ max: 99999999 }).toString(), options);
+  const factory: () => string = () => {
+    return '#########'.replace(/#/g, () => {
+      return getRandomInRange({ min: 0, max: 9 }).toString();
+    });
+  };
+
+  return fake(factory, options);
 }

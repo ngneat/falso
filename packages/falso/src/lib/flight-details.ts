@@ -8,6 +8,7 @@ import { Airport, randAirport } from './airport';
 
 export interface FlightDetailsOptions extends FakeOptions {
   airline?: Airline;
+  passenger?: string;
 }
 
 export interface FlightDetails {
@@ -38,6 +39,10 @@ function generateFlightLength(): number {
  *
  * @example
  *
+ * randFlightDetails({ passenger: 'Ryan Smee' })
+ *
+ * @example
+ *
  * randFlightDetails({ airline: 'RyanAir' })
  *
  * @example
@@ -50,11 +55,12 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
 ) {
   const factory: () => FlightDetails = () => {
     const airline = options?.airline ?? (randAirline() as Airline);
+    const passenger = options?.passenger ?? randFullName();
 
     const [origin, destination] = randAirport({ length: 2 });
 
     return {
-      passenger: randFullName(),
+      passenger,
       airline,
       flightNumber: randFlightNumber({ airline: airline }),
       origin,

@@ -1,15 +1,15 @@
 {
   "data": [
     {
-      "issuer": "American Express",
+      "brand": "American Express",
       "formats": ["34## ###### #####", "37## ###### #####"]
     },
     {
-      "issuer": "UnionPay",
+      "brand": "UnionPay",
       "formats": ["62## #### #### ####", "62#### #############"]
     },
     {
-      "issuer": "Diners Club",
+      "brand": "Diners Club",
       "formats": [
         "300# ###### ####",
         "301# ###### ####",
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "issuer": "Discover Card",
+      "brand": "Discover Card",
       "formats": [
         "6011 #### #### ####",
         "644# #### #### ####",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "issuer": "RuPay",
+      "brand": "RuPay",
       "formats": [
         "60## #### #### ####",
         "65## #### #### ####",
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "issuer": "JCB",
+      "brand": "JCB",
       "formats": [
         "3528 #### #### ####",
         "3565 #### #### ####",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "issuer": "Maestro",
+      "brand": "Maestro",
       "formats": [
         "5018 #### #####",
         "5020 #### #####",
@@ -74,11 +74,11 @@
       ]
     },
     {
-      "issuer": "Dankort",
+      "brand": "Dankort",
       "formats": ["5019 #### #### ####"]
     },
     {
-      "issuer": "Mastercard",
+      "brand": "Mastercard",
       "formats": [
         "51## #### #### ####",
         "52## #### #### ####",
@@ -88,11 +88,11 @@
       ]
     },
     {
-      "issuer": "Visa",
+      "brand": "Visa",
       "formats": ["4### #### #### ####"]
     },
     {
-      "issuer": "Visa Electron",
+      "brand": "Visa Electron",
       "formats": [
         "4026 #### #### ####",
         "4175 00## #### ####",
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "issuer": "UATP",
+      "brand": "UATP",
       "formats": ["1### ##### ######"]
     }
   ]
