@@ -5,6 +5,7 @@ import { randMovieCharacter } from './movie-character';
 import { randNumber } from './number';
 import { randSinger } from './singer';
 import { randSnake } from './snake';
+import { randUuid } from './uuid';
 import { randWord } from './word';
 
 export interface RandomJSONOptions extends FakeOptions {
@@ -35,10 +36,13 @@ const generateRandomValue = (): any => {
 };
 
 const generateRandomObject = (length: number) => {
-  return randNumber({ length }).reduce(
-    (o, key) => ({ ...o, [key]: generateRandomValue() }),
-    {}
-  );
+  let o: { [key: string]: any} = {};
+
+  for (let index = 0; index < length; index++) {
+    o[randUuid().replace(/-/g, '')] = generateRandomValue()
+  }
+
+  return o;
 };
 
 /**
@@ -49,11 +53,11 @@ const generateRandomObject = (length: number) => {
  * @example
  * randJSON()
  *
- * @example <caption>If a fixed number of keys are required</caption>
+ * @example If a fixed number of keys are required
  *
  * randJSON({ length: 10 })
  *
- * @example <caption>If a random number of keys are required</caption>
+ * @example If a random number of keys are required
  *
  * randJSON({ min: 1, max: 10 })
  */
