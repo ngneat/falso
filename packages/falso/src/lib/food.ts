@@ -19,7 +19,8 @@ export interface FoodOptions extends FakeOptions {
     | 'argentina'
     | 'colombia'
     | 'chile'
-    | 'peru';
+    | 'peru'
+    | 'ecuador';
 }
 
 const totalOrigins = Object.keys(data)?.length;
