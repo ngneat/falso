@@ -1,6 +1,6 @@
 import { randLastName } from '../lib/last-name';
-import { seed } from '../lib/random';
 import { data } from '../lib/last-name.json';
+import * as randBooleanFunctions from '../lib/boolean';
 
 describe('lastName', () => {
   let specialCharRegex: RegExp;
@@ -8,6 +8,10 @@ describe('lastName', () => {
   beforeEach(() => {
     specialCharRegex =
       /[āĀàÀáÁâÂãÃäÄÅåæÆçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
+  });
+
+  afterAll(() => {
+    jest.resetAllMocks();
   });
 
   describe('last-name.json', () => {
@@ -74,14 +78,26 @@ describe('lastName', () => {
     });
 
     describe('length is 3', () => {
+      let randBooleanSpy: jest.SpyInstance;
+
       beforeEach(() => {
-        seed('💻🌍🌎');
+        randBooleanSpy = jest
+          .spyOn(randBooleanFunctions, 'randBoolean')
+          .mockImplementation(() => null);
+      });
+
+      afterEach(() => {
+        jest.clearAllMocks();
       });
 
       it('should return an array length of 3, each with a random lastName', () => {
-        const result = randLastName({ length: 3 });
+        randBooleanSpy.mockReturnValue(true);
 
-        expect(result).toEqual(['Friðriksson', 'Žukauskienė', 'Björnsson']);
+        const [lastName1, lastName2, lastName3] = randLastName({ length: 3 });
+
+        expect(data['withAccents']).toContain(lastName1);
+        expect(data['withAccents']).toContain(lastName2);
+        expect(data['withAccents']).toContain(lastName3);
       });
     });
   });
