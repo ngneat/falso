@@ -1,6 +1,5 @@
 import { Airline, randFlightNumber } from '../lib/flight-number';
 import { getRandomInRange } from '../lib/core/core';
-import { seed } from '../lib/random';
 import * as randFunctions from '../lib/rand';
 
 describe('flightNumber', () => {
@@ -249,10 +248,6 @@ describe('flightNumber', () => {
     describe('length is 3', () => {
       let length: number;
 
-      beforeAll(() => {
-        seed('✈️🌎☀️🍹');
-      });
-
       beforeEach(() => {
         length = 3;
       });
@@ -260,9 +255,9 @@ describe('flightNumber', () => {
       it('should return an array length of 3, each with flight number', () => {
         const [first, second, third] = randFlightNumber({ airline, length });
 
-        expect(first).toEqual('BA958');
-        expect(second).toEqual('BA641');
-        expect(third).toEqual('BA824');
+        expect(first).toMatch(/^BA[0-9][0-9][0-9]$/);
+        expect(second).toMatch(/^BA[0-9][0-9][0-9]$/);
+        expect(third).toMatch(/^BA[0-9][0-9][0-9]$/);
       });
     });
   });
