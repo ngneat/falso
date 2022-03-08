@@ -2,6 +2,30 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0](https://github.com/ngneat/falso/compare/falso-2.27.0...falso-3.0.0) (2022-03-08)
+
+### Bug Fixes
+
+- 🐞 prevent key overwritten when looping ([a039e10](https://github.com/ngneat/falso/commit/a039e1078aa6cbdd0565d8d4c02df9bd1ab039b7)), closes [#180](https://github.com/ngneat/falso/issues/180)
+- 🐞 Remove reliance on seed from json based tests ([b03a99e](https://github.com/ngneat/falso/commit/b03a99e7118995c32a249c9094a30309a635cbf6))
+- 🐞 removed unecessary array variable ([f1315c2](https://github.com/ngneat/falso/commit/f1315c2644d4433a33ab6d82e810092f09954e7a))
+
+### Features
+
+- 🔥 Add skeleton of rand credit card ([3e2ccc1](https://github.com/ngneat/falso/commit/3e2ccc16c7b2eda59e30f8ab3ee7ab8b08f81487)), closes [#215](https://github.com/ngneat/falso/issues/215)
+- 🔥 Add tests for credit card ([d1be88c](https://github.com/ngneat/falso/commit/d1be88c3789ceeeed6f79d7228163c62041f2208)), closes [#215](https://github.com/ngneat/falso/issues/215)
+- 🔥 Allow passenger to be passed to flightDetails ([bf3c6da](https://github.com/ngneat/falso/commit/bf3c6da263f9ff3031cfd5170eb2a0c62c7a441a))
+- 🔥 Change card issuer to card brand ([e8173ff](https://github.com/ngneat/falso/commit/e8173ff3d17a7be4155a2dffec3e916820969a15)), closes [#215](https://github.com/ngneat/falso/issues/215)
+- 🔥 Fix card date formats ([4bb5b39](https://github.com/ngneat/falso/commit/4bb5b39f4f439b4e7aaafe9943b52ec0f6671d71)), closes [#215](https://github.com/ngneat/falso/issues/215)
+- 🔥 Fix weaker typing of Issuer ([dac3a36](https://github.com/ngneat/falso/commit/dac3a36dd5d3d3c8f2ffcf6b7e5ea948d3077cc2)), closes [#215](https://github.com/ngneat/falso/issues/215)
+- 🔥 Tweak card entity properties ([dc537f2](https://github.com/ngneat/falso/commit/dc537f23bfe4333e55a50275d9e6607507c4cc7f)), closes [#215](https://github.com/ngneat/falso/issues/215)
+- 🔥 Tweak CreditCardOptions ([97530d0](https://github.com/ngneat/falso/commit/97530d034a7518d645e0523b47800275c06d6198)), closes [#215](https://github.com/ngneat/falso/issues/215)
+- 🔥 Update account number to allow it to start with 0 ([1ad465d](https://github.com/ngneat/falso/commit/1ad465de3c09253eb88ce141f0b9731d1596e43d)), closes [#215](https://github.com/ngneat/falso/issues/215)
+
+### BREAKING CHANGES
+
+- 🧨 Change all references of card issuer to brand
+
 # [2.27.0](https://github.com/ngneat/falso/compare/falso-2.25.1...falso-2.27.0) (2022-02-23)
 
 ### Bug Fixes
