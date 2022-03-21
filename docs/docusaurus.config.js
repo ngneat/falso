@@ -12,6 +12,9 @@ module.exports = {
     favicon: 'img/favicon.ico',
     organizationName: 'ngneat',
     projectName: 'falso',
+    clientModules: [
+        require.resolve('./src/consolePlayground/index.js'),
+    ],
     themeConfig: {
         colorMode: {
             respectPrefersColorScheme: true,
