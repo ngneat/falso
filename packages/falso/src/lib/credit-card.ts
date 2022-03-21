@@ -28,7 +28,7 @@ export interface CreditCard {
 /**
  * Generate a random credit card.
  *
- * @category finance, entity
+ * @category finance, entities
  *
  * @example
  *
