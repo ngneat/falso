@@ -1,7 +1,7 @@
 import * as falso from '../theme/ReactLiveScope/falso.min';
 
 window.onload = function () {
-	if (typeof window) {
+	if (typeof window !== 'undefined') {
 		const titleStyles = 'color:#8a76d9; font-size: 22px; font-weight:bold;';
 		const copyStyles = 'color:white; font-size: 14px';
 		const exampleStyles = 'color:#8a76d9; font-size: 14px;';
