@@ -41,11 +41,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   let attempts = 0;
   const maxAttempts = options.length * 2;
 
-  while (items.length < options.length) {
-    if (attempts >= maxAttempts) {
-      break;
-    }
-
+  while (items.length < options.length && attempts < maxAttempts) {
     const item = data();
 
     if (!items.includes(item)) {
@@ -75,17 +71,17 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   }
 
   const clonedData: T[] = JSON.parse(JSON.stringify(data));
-  return Array.from({ length: options.length }, (_, index) =>
-    randUniqueElement(clonedData)
-  ).filter((item) => item);
-}
+  const newArray: T[] = [];
 
-export function randUniqueElement<T>(arr: T[]): T {
-  const index = Math.floor(random() * arr.length);
-  const item = arr[index];
-  arr.splice(index, 1);
+  while (clonedData.length && newArray.length !== options.length) {
+    const randomIndex = getRandomInRange({ min: clonedData.length });
+    const item = clonedData[randomIndex];
 
-  return item;
+    newArray.push(item);
+    clonedData.splice(randomIndex, 1);
+  }
+
+  return newArray;
 }
 
 export function randElement<T>(arr: T[]): T {
