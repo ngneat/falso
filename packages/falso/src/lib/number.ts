@@ -5,9 +5,8 @@ import {
   RandomInRangeOptions,
 } from './core/core';
 
-export interface RandomNumberOptions extends FakeOptions {
-  min?: number;
-  max?: number;
+export interface RandomNumberOptions extends RandomInRangeOptions, FakeOptions {
+  precision?: number;
 }
 
 /**
@@ -27,14 +26,32 @@ export interface RandomNumberOptions extends FakeOptions {
  *
  * randNumber({ min: 10, max: 1000 }) // default is 'min': 0, 'max': 999_999
  *
+ * @example
+ *
+ * randNumber({ min: 1000, max: 100000, precision: 1000 }) // 67000
+ *
+ * @example
+ *
+ * randNumber({ min: 1000, max: 2000, precision: 100 }) // 1200
+ *
+ * @example
+ *
+ * randNumber({ min: 1000, max: 2000, precision: 10 }) // 1250
  */
 export function randNumber<Options extends RandomNumberOptions = never>(
   options?: Options
 ) {
-  const config: RandomInRangeOptions = {
+  const o: RandomNumberOptions = {
     min: options?.min || 0,
     max: options?.max || 999_999,
+    precision: options?.precision,
   };
 
-  return fake(() => getRandomInRange(config), options);
+  return fake(() => {
+    const num = getRandomInRange(o);
+    if (o.precision !== undefined) {
+      return Math.floor(num / o.precision) * o.precision;
+    }
+    return num;
+  }, options);
 }

@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.1.0](https://github.com/ngneat/falso/compare/falso-3.0.0...falso-3.1.0) (2022-03-22)
+
+### Features
+
+- add precision to randNumber ([44fdcd6](https://github.com/ngneat/falso/commit/44fdcd61014705de6aa8368f2276ebd6fd80abd0)), closes [#226](https://github.com/ngneat/falso/issues/226)
+
 # [3.0.0](https://github.com/ngneat/falso/compare/falso-2.27.0...falso-3.0.0) (2022-03-08)
 
 ### Bug Fixes
