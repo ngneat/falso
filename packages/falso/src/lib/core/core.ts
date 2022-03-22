@@ -74,7 +74,7 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   const newArray: T[] = [];
 
   while (clonedData.length && newArray.length !== options.length) {
-    const randomIndex = getRandomInRange({ min: clonedData.length });
+    const randomIndex = getRandomInRange({ max: clonedData.length - 1 });
     const item = clonedData[randomIndex];
 
     newArray.push(item);
@@ -85,7 +85,8 @@ export function fakeFromArray<T, Options extends FakeOptions>(
 }
 
 export function randElement<T>(arr: T[]): T {
-  return arr[Math.floor(random() * arr.length)];
+  const randomIndex = getRandomInRange({ max: arr.length - 1 });
+  return arr[randomIndex];
 }
 
 export interface RandomInRangeOptions {
