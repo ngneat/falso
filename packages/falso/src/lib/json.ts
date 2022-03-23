@@ -10,6 +10,8 @@ import { randWord } from './word';
 import { randUser } from './user';
 import { randAddress } from './address';
 import { randProduct } from './product';
+import { randFlightDetails } from './flight-details';
+import { randCreditCard } from './credit-card';
 
 export interface RandomJSONOptions extends FakeOptions {
   totalKeys?: number;
@@ -38,6 +40,10 @@ const generateRandomValue = (): any => {
     randAddress({ length: randNumber({ min: 1, max: 10 }) }),
     randProduct(),
     randProduct({ length: randNumber({ min: 1, max: 10 }) }),
+    randFlightDetails(),
+    randFlightDetails({ length: randNumber({ min: 1, max: 10 }) }),
+    randCreditCard(),
+    randCreditCard({ length: randNumber({ min: 1, max: 10 }) }),
   ];
 
   return availableValuesGenerators[
