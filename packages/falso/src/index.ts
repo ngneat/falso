@@ -179,7 +179,7 @@ export { randSinger } from './lib/singer';
 export { randSong } from './lib/song';
 export { randAddress, Address } from './lib/address';
 export { randFullAddress } from './lib/full-address';
-export { randJSON } from './lib/rand-json';
+export { randJSON } from './lib/json';
 export { randCodeSnippet } from './lib/code-snippet';
 export { randTextRange } from './lib/text-range';
 export { randFlightNumber } from './lib/flight-number';
