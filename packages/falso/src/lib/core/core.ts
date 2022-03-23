@@ -13,17 +13,22 @@ type Return<T, O extends FakeOptions> = [O] extends [never]
 
 export function fake<T, Options extends FakeOptions>(
   data: T[] | (() => T),
-  options?: Options
+  options?: Options,
+  comparisonFunction: (
+    item: T,
+    items: T[]
+  ) => boolean = primitiveComparisonFunction
 ): Return<T, Options> {
   if (Array.isArray(data)) {
     return fakeFromArray(data, options) as any;
   }
 
-  return fakeFromFunction(data, options) as any;
+  return fakeFromFunction(data, comparisonFunction, options) as any;
 }
 
 export function fakeFromFunction<T, Options extends FakeOptions>(
   data: () => T,
+  comparisonFunction: (item: T, items: T[]) => boolean,
   options?: Options
 ) {
   if (!options?.length) {
@@ -44,7 +49,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   while (items.length < options.length && attempts < maxAttempts) {
     const item = data();
 
-    if (!items.includes(item)) {
+    if (!comparisonFunction(item, items)) {
       items.push(item);
     }
 
@@ -65,9 +70,7 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   const priority = options?.priority ?? 'length';
 
   if (priority === 'length') {
-    return Array.from({ length: options.length }, (_, index) =>
-      randElement(data)
-    );
+    return Array.from({ length: options.length }, () => randElement(data));
   }
 
   const clonedData: T[] = JSON.parse(JSON.stringify(data));
@@ -83,6 +86,15 @@ export function fakeFromArray<T, Options extends FakeOptions>(
 
   return newArray;
 }
+
+export const primitiveComparisonFunction: <T>(item: T, items: T[]) => boolean =
+  (item, items) => items.includes(item);
+export const objectWithIdComparisonFunction: <T extends { id: string }>(
+  item: T,
+  items: T[]
+) => boolean = (item, items) => {
+  return items.some((i) => i.id === item.id);
+};
 
 export function randElement<T>(arr: T[]): T {
   return arr[Math.floor(random() * arr.length)];

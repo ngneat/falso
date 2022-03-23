@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { FakeOptions, fake, objectWithIdComparisonFunction } from './core/core';
 import { randUser, User } from './user';
 import { randUuid } from './uuid';
 import { randText } from './text';
@@ -28,7 +28,7 @@ export interface Post {
 export function randPost<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
+  const factory = () => {
     const post: Post = {
       id: randUuid(),
       title: randText({ charCount: 40 }),
@@ -43,5 +43,7 @@ export function randPost<Options extends FakeOptions = never>(
     };
 
     return post;
-  }, options);
+  };
+
+  return fake(factory, options, objectWithIdComparisonFunction);
 }

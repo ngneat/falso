@@ -1,4 +1,9 @@
-import { fake, FakeOptions, randElement } from './core/core';
+import {
+  fake,
+  FakeOptions,
+  objectWithIdComparisonFunction,
+  randElement,
+} from './core/core';
 import { data } from './superhero.json';
 import { randUuid } from './uuid';
 
@@ -50,5 +55,5 @@ export function randSuperhero<Options extends SuperheroOptions = never>(
     };
   };
 
-  return fake(factory, options);
+  return fake(factory, options, objectWithIdComparisonFunction);
 }

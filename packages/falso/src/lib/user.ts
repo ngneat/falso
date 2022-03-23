@@ -1,4 +1,4 @@
-import { fake, FakeOptions } from './core/core';
+import { fake, FakeOptions, objectWithIdComparisonFunction } from './core/core';
 import { randUuid } from './uuid';
 import { randEmail } from './email';
 import { randFirstName } from './first-name';
@@ -40,7 +40,7 @@ export interface User {
 export function randUser<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
+  const factory = () => {
     const firstName = randFirstName({ withAccents: false });
     const lastName = randLastName({ withAccents: false });
 
@@ -56,5 +56,7 @@ export function randUser<Options extends FakeOptions = never>(
     };
 
     return user;
-  }, options);
+  };
+
+  return fake(factory, options, objectWithIdComparisonFunction);
 }

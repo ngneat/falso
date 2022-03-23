@@ -1,4 +1,9 @@
-import { FakeOptions, fake, getRandomInRange } from './core/core';
+import {
+  FakeOptions,
+  fake,
+  getRandomInRange,
+  objectWithIdComparisonFunction,
+} from './core/core';
 import { randUuid } from './uuid';
 import { randProductName } from './product-name';
 import { randProductDescription } from './product-description';
@@ -35,19 +40,18 @@ export interface Product {
 export function randProduct<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(
-    () => ({
-      id: randUuid(),
-      title: randProductName(),
-      description: randProductDescription(),
-      price: getRandomInRange({ fraction: 2 }).toString(),
-      category: randProductCategory(),
-      image: randImg(),
-      rating: {
-        rate: getRandomInRange({ min: 0.1, max: 5.0, fraction: 1 }).toString(),
-        count: getRandomInRange({ min: 0, max: 10000 }).toString(),
-      },
-    }),
-    options
-  );
+  const factory = () => ({
+    id: randUuid(),
+    title: randProductName(),
+    description: randProductDescription(),
+    price: getRandomInRange({ fraction: 2 }).toString(),
+    category: randProductCategory(),
+    image: randImg(),
+    rating: {
+      rate: getRandomInRange({ min: 0.1, max: 5.0, fraction: 1 }).toString(),
+      count: getRandomInRange({ min: 0, max: 10000 }).toString(),
+    },
+  });
+
+  return fake(factory, options, objectWithIdComparisonFunction);
 }
