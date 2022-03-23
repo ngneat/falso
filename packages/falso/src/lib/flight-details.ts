@@ -5,6 +5,7 @@ import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
 import { randSeatNumber } from './seat-number';
 import { Airport, randAirport } from './airport';
+import { CreditCard } from './credit-card';
 
 export interface FlightDetailsOptions extends FakeOptions {
   airline?: Airline;
@@ -73,3 +74,14 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
 
   return fake(factory, options);
 }
+
+export const comparisonFunction: (
+  flight: FlightDetails,
+  flights: FlightDetails[]
+) => boolean = (flight, flights) => {
+  return flights.some(
+    (f) =>
+      f.passenger + f.flightNumber + f.date ===
+      flight.passenger + flight.flightNumber + flight.date
+  );
+};

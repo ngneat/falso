@@ -19,7 +19,7 @@ import { randBoolean } from './boolean';
 export function randZipCode<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
+  const factory: () => string = () => {
     let zipCode = '' + randNumber({ min: 10_000, max: 99_999 });
 
     if (randBoolean()) {
@@ -27,5 +27,7 @@ export function randZipCode<Options extends FakeOptions = never>(
     }
 
     return zipCode;
-  }, options);
+  };
+
+  return fake(factory, options);
 }

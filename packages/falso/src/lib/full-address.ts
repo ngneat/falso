@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake } from './core/core';
 import { AddressOptions, randAddress } from './address';
 
 /**
@@ -29,7 +29,7 @@ export function randFullAddress<Options extends AddressOptions = never>(
   const includeCounty: boolean = options?.includeCounty ?? true;
   const includeCountry: boolean = options?.includeCountry ?? true;
 
-  const factory = () => {
+  const factory: () => string = () => {
     const { street, city, county, country, zipCode } = randAddress({
       includeCounty,
       includeCountry,

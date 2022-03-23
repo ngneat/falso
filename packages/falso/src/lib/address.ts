@@ -64,5 +64,12 @@ export function randAddress<Options extends AddressOptions = never>(
     return address;
   };
 
-  return fake(factory, options);
+  return fake(factory, options, comparisonFunction);
 }
+
+const comparisonFunction: (item: Address, items: Address[]) => boolean = (
+  item: Address,
+  items: Address[]
+) => {
+  return items.some((i) => i.street + i.zipCode === item.street + item.zipCode);
+};

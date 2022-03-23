@@ -95,6 +95,12 @@ export const objectWithIdComparisonFunction: <T extends { id: string }>(
 ) => boolean = (item, items) => {
   return items.some((i) => i.id === item.id);
 };
+export const dateComparisonFunction: (date: Date, dates: Date[]) => boolean = (
+  date,
+  dates
+) => {
+  return dates.some((d) => d.valueOf() === date.valueOf());
+};
 
 export function randElement<T>(arr: T[]): T {
   return arr[Math.floor(random() * arr.length)];

@@ -37,5 +37,3 @@ export function randFloat<Options extends RandomFloatOptions = never>(
   };
   return fake(() => getRandomInRange(o), options);
 }
-
-randFloat();

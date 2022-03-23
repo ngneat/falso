@@ -1,5 +1,5 @@
 import { randBetweenDate } from './between-date';
-import { fake, FakeOptions } from './core/core';
+import { dateComparisonFunction, fake, FakeOptions } from './core/core';
 
 interface SoonOptions extends FakeOptions {
   days?: number;
@@ -35,5 +35,9 @@ export function randSoonDate<Options extends SoonOptions = never>(
   const daysInMilliseconds = days * 24 * 60 * 60 * 1000;
   const from = new Date();
   const to = new Date(from.getTime() + daysInMilliseconds);
-  return fake(() => randBetweenDate({ from, to }), options);
+  return fake(
+    () => randBetweenDate({ from, to }),
+    options,
+    dateComparisonFunction
+  );
 }

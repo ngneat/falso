@@ -1,4 +1,4 @@
-import { fake, FakeOptions } from './core/core';
+import { dateComparisonFunction, fake, FakeOptions } from './core/core';
 import { randNumber } from './number';
 
 interface BetweenOptions extends FakeOptions {
@@ -39,5 +39,5 @@ export function randBetweenDate<Options extends BetweenOptions = never>(
     );
   };
 
-  return fake(generator, options);
+  return fake(generator, options, dateComparisonFunction);
 }
