@@ -1,5 +1,5 @@
-import { randNumber } from '../lib/number';
 import { randJSON } from '../lib/json';
+import { randNumber } from '../lib/number';
 
 describe('randJSON', () => {
   describe('when it returns the expected values', () => {
@@ -26,28 +26,16 @@ describe('randJSON', () => {
   });
 
   describe('length is passed', () => {
-    describe('length is 1', () => {
-      it('should return an array length of 1', () => {
-        const result = randJSON({ length: 1 });
+    let length: number;
 
-        expect(result?.length).toEqual(1);
-      });
+    beforeEach(() => {
+      length = randNumber({ min: 1, max: 30, fraction: 1 });
     });
 
-    describe('length is 5', () => {
-      it('should return an array length of 5', () => {
-        const result = randJSON({ length: 5 });
+    it('should return an array length passed', () => {
+      const result = randJSON({ length });
 
-        expect(result?.length).toEqual(5);
-      });
-    });
-
-    describe('length is 100', () => {
-      it('should return an array length of 100', () => {
-        const result = randJSON({ length: 100 });
-
-        expect(result?.length).toEqual(100);
-      });
+      expect(result?.length).toEqual(length);
     });
   });
 });

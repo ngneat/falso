@@ -64,12 +64,10 @@ export function randAddress<Options extends AddressOptions = never>(
     return address;
   };
 
-  return fake(factory, options, comparisonFunction);
+  return fake(factory, options, checkUnique);
 }
 
-const comparisonFunction: (item: Address, items: Address[]) => boolean = (
+const checkUnique: (item: Address, items: Address[]) => boolean = (
   item: Address,
   items: Address[]
-) => {
-  return items.some((i) => i.street + i.zipCode === item.street + item.zipCode);
-};
+) => items.some((i) => i.street + i.zipCode === item.street + item.zipCode);

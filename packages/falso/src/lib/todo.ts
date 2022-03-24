@@ -1,4 +1,4 @@
-import { fake, FakeOptions, objectWithIdComparisonFunction } from './core/core';
+import { fake, FakeOptions, checkUniqueObjectWithId } from './core/core';
 import { randUuid } from './uuid';
 import { randBoolean } from './boolean';
 import { randText } from './text';
@@ -32,5 +32,5 @@ export function randTodo<Options extends FakeOptions = never>(
     completed: randBoolean(),
   });
 
-  return fake(factory, options, objectWithIdComparisonFunction);
+  return fake(factory, options, checkUniqueObjectWithId);
 }

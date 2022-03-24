@@ -1,4 +1,4 @@
-import { FakeOptions, fake, objectWithIdComparisonFunction } from './core/core';
+import { FakeOptions, fake, checkUniqueObjectWithId } from './core/core';
 import { randUser, User } from './user';
 import { randUuid } from './uuid';
 import { randText } from './text';
@@ -45,5 +45,5 @@ export function randPost<Options extends FakeOptions = never>(
     return post;
   };
 
-  return fake(factory, options, objectWithIdComparisonFunction);
+  return fake(factory, options, checkUniqueObjectWithId);
 }

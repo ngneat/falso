@@ -88,5 +88,10 @@ export function randJSON<Options extends RandomJSONOptions = never>(
     return generatedObject;
   };
 
-  return fake(factory, options);
+  return fake(factory, options, checkUnique);
 }
+
+const checkUnique: (item: object, items: object[]) => boolean = (
+  item: object,
+  items: object[]
+) => items.some((i) => JSON.stringify(i) === JSON.stringify(item));

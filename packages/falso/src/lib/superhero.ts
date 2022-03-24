@@ -1,7 +1,7 @@
 import {
   fake,
   FakeOptions,
-  objectWithIdComparisonFunction,
+  checkUniqueObjectWithId,
   randElement,
 } from './core/core';
 import { data } from './superhero.json';
@@ -55,5 +55,5 @@ export function randSuperhero<Options extends SuperheroOptions = never>(
     };
   };
 
-  return fake(factory, options, objectWithIdComparisonFunction);
+  return fake(factory, options, checkUniqueObjectWithId);
 }

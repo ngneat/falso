@@ -2,7 +2,7 @@ import {
   FakeOptions,
   fake,
   getRandomInRange,
-  objectWithIdComparisonFunction,
+  checkUniqueObjectWithId,
 } from './core/core';
 import { randUuid } from './uuid';
 import { randProductName } from './product-name';
@@ -53,5 +53,5 @@ export function randProduct<Options extends FakeOptions = never>(
     },
   });
 
-  return fake(factory, options, objectWithIdComparisonFunction);
+  return fake(factory, options, checkUniqueObjectWithId);
 }

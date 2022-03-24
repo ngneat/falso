@@ -19,16 +19,9 @@ import { randLongitude } from './longitude';
 export function randNearbyGPSCoordinate<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(
-    () => [randLatitude(), randLongitude()],
-    options,
-    comparisonFunction
-  );
+  return fake(() => [randLatitude(), randLongitude()], options, checkUnique);
 }
 
-const comparisonFunction: (
-  coordinate: number[],
-  coordinates: number[][]
-) => boolean = (coordinate, coordinates) => {
-  return coordinates.some((c) => c.join('') === c.join(''));
-};
+const checkUnique: (coordinate: number[], coordinates: number[][]) => boolean =
+  (coordinate, coordinates) =>
+    coordinates.some((c) => c.join('') === c.join(''));

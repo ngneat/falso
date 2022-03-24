@@ -72,16 +72,15 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
     };
   };
 
-  return fake(factory, options);
+  return fake(factory, options, checkUnique);
 }
 
-export const comparisonFunction: (
+const checkUnique: (
   flight: FlightDetails,
   flights: FlightDetails[]
-) => boolean = (flight, flights) => {
-  return flights.some(
+) => boolean = (flight, flights) =>
+  flights.some(
     (f) =>
       f.passenger + f.flightNumber + f.date ===
       flight.passenger + flight.flightNumber + flight.date
   );
-};

@@ -14,10 +14,7 @@ type Return<T, O extends FakeOptions> = [O] extends [never]
 export function fake<T, Options extends FakeOptions>(
   data: T[] | (() => T),
   options?: Options,
-  comparisonFunction: (
-    item: T,
-    items: T[]
-  ) => boolean = primitiveComparisonFunction
+  comparisonFunction: (item: T, items: T[]) => boolean = checkUniquePrimitive
 ): Return<T, Options> {
   if (Array.isArray(data)) {
     return fakeFromArray(data, options) as any;
@@ -87,20 +84,20 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   return newArray;
 }
 
-export const primitiveComparisonFunction: <T>(item: T, items: T[]) => boolean =
-  (item, items) => items.includes(item);
-export const objectWithIdComparisonFunction: <T extends { id: string }>(
-  item: T,
-  items: T[]
-) => boolean = (item, items) => {
-  return items.some((i) => i.id === item.id);
-};
-export const dateComparisonFunction: (date: Date, dates: Date[]) => boolean = (
+export const checkUniquePrimitive: <T>(item: T, items: T[]) => boolean = (
+  item,
+  items
+) => items.includes(item);
+
+export const checkUniqueDate: (date: Date, dates: Date[]) => boolean = (
   date,
   dates
-) => {
-  return dates.some((d) => d.valueOf() === date.valueOf());
-};
+) => dates.some((d) => d.valueOf() === date.valueOf());
+
+export const checkUniqueObjectWithId: <T extends { id: string }>(
+  item: T,
+  items: T[]
+) => boolean = (item, items) => items.some((i) => i.id === item.id);
 
 export function randElement<T>(arr: T[]): T {
   return arr[Math.floor(random() * arr.length)];

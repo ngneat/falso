@@ -1,5 +1,5 @@
 import { randBetweenDate } from './between-date';
-import { dateComparisonFunction, fake, FakeOptions } from './core/core';
+import { checkUniqueDate, fake, FakeOptions } from './core/core';
 
 interface FutureOptions extends FakeOptions {
   years?: number;
@@ -37,5 +37,5 @@ export function randFutureDate<Options extends FutureOptions = never>(
   const to = new Date(from.getTime() + yearsInMilliseconds);
   const factory: () => Date = () => randBetweenDate({ from, to });
 
-  return fake(factory, options, dateComparisonFunction);
+  return fake(factory, options, checkUniqueDate);
 }

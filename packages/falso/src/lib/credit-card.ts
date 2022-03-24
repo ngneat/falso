@@ -81,12 +81,10 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
     };
   };
 
-  return fake(factory, options, comparisonFunction);
+  return fake(factory, options, checkUnique);
 }
 
-export const comparisonFunction: (
-  card: CreditCard,
-  cards: CreditCard[]
-) => boolean = (card, cards) => {
-  return cards.some((c) => c.number === card.number);
-};
+const checkUnique: (card: CreditCard, cards: CreditCard[]) => boolean = (
+  card,
+  cards
+) => cards.some((c) => c.number === card.number);
