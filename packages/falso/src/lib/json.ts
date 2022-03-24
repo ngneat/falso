@@ -1,5 +1,5 @@
 import { randBoolean } from './boolean';
-import { FakeOptions } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randMovie } from './movie';
 import { randMovieCharacter } from './movie-character';
 import { randNumber } from './number';
@@ -7,10 +7,16 @@ import { randSinger } from './singer';
 import { randSnake } from './snake';
 import { randUuid } from './uuid';
 import { randWord } from './word';
+import { randUser } from './user';
+import { randAddress } from './address';
+import { randProduct } from './product';
+import { randFlightDetails } from './flight-details';
+import { randCreditCard } from './credit-card';
 
 export interface RandomJSONOptions extends FakeOptions {
-  min?: number;
-  max?: number;
+  totalKeys?: number;
+  minKeys?: number;
+  maxKeys?: number;
 }
 
 const generateRandomValue = (): any => {
@@ -28,21 +34,21 @@ const generateRandomValue = (): any => {
     randWord({ length: randNumber({ min: 1, max: 10 }) }),
     randSnake(),
     randSnake({ length: randNumber({ min: 1, max: 10 }) }),
+    randUser(),
+    randUser({ length: randNumber({ min: 1, max: 10 }) }),
+    randAddress(),
+    randAddress({ length: randNumber({ min: 1, max: 10 }) }),
+    randProduct(),
+    randProduct({ length: randNumber({ min: 1, max: 10 }) }),
+    randFlightDetails(),
+    randFlightDetails({ length: randNumber({ min: 1, max: 10 }) }),
+    randCreditCard(),
+    randCreditCard({ length: randNumber({ min: 1, max: 10 }) }),
   ];
 
   return availableValuesGenerators[
     randNumber({ min: 0, max: availableValuesGenerators.length - 1 })
   ];
-};
-
-const generateRandomObject = (length: number) => {
-  let o: { [key: string]: any} = {};
-
-  for (let index = 0; index < length; index++) {
-    o[randUuid().replace(/-/g, '')] = generateRandomValue()
-  }
-
-  return o;
 };
 
 /**
@@ -55,21 +61,32 @@ const generateRandomObject = (length: number) => {
  *
  * @example If a fixed number of keys are required
  *
- * randJSON({ length: 10 })
+ * randJSON({ totalKeys: 10 })
  *
  * @example If a random number of keys are required
  *
- * randJSON({ min: 1, max: 10 })
+ * randJSON({ minKeys: 1, maxKeys: 10 })
+ *
  */
 export function randJSON<Options extends RandomJSONOptions = never>(
   options?: Options
 ) {
-  let objectSize = randNumber({
-    min: options?.min || 1,
-    max: options?.max || 99,
-  });
+  const objectSize =
+    options?.totalKeys ??
+    randNumber({
+      min: options?.minKeys || 1,
+      max: options?.maxKeys || 99,
+    });
 
-  if (options?.length) objectSize = options.length;
+  const factory = () => {
+    const generatedObject: { [key: string]: any } = {};
 
-  return generateRandomObject(objectSize);
+    for (let index = 0; index < objectSize; index++) {
+      generatedObject[randUuid().replace(/-/g, '')] = generateRandomValue();
+    }
+
+    return generatedObject;
+  };
+
+  return fake(factory, options);
 }
