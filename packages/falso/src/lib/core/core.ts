@@ -14,18 +14,29 @@ type Return<T, O extends FakeOptions> = [O] extends [never]
 export function fake<T, Options extends FakeOptions>(
   data: T[] | (() => T),
   options?: Options,
-  comparisonFunction: (item: T, items: T[]) => boolean = checkUniquePrimitive
+  comparisonFunction: (item: T, items: T[]) => boolean = primitiveValueIsUnique,
+  comparisonKeys?: string[]
 ): Return<T, Options> {
   if (Array.isArray(data)) {
     return fakeFromArray(data, options) as any;
   }
 
-  return fakeFromFunction(data, comparisonFunction, options) as any;
+  return fakeFromFunction(
+    data,
+    comparisonFunction,
+    comparisonKeys,
+    options
+  ) as any;
 }
 
 export function fakeFromFunction<T, Options extends FakeOptions>(
   data: () => T,
-  comparisonFunction: (item: T, items: T[]) => boolean,
+  isItemADuplicateFunction: (
+    item: T,
+    items: T[],
+    comparisonKeys?: string[]
+  ) => boolean,
+  comparisonKeys?: string[],
   options?: Options
 ) {
   if (!options?.length) {
@@ -46,7 +57,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   while (items.length < options.length && attempts < maxAttempts) {
     const item = data();
 
-    if (!comparisonFunction(item, items)) {
+    if (!isItemADuplicateFunction(item, items, comparisonKeys)) {
       items.push(item);
     }
 
@@ -84,20 +95,38 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   return newArray;
 }
 
-export const checkUniquePrimitive: <T>(item: T, items: T[]) => boolean = (
+export const primitiveValueIsUnique: <T>(item: T, items: T[]) => boolean = (
   item,
   items
-) => items.includes(item);
+) => !items.includes(item);
 
-export const checkUniqueDate: (date: Date, dates: Date[]) => boolean = (
+export const dateIsUnique: (date: Date, dates: Date[]) => boolean = (
   date,
   dates
-) => dates.some((d) => d.valueOf() === date.valueOf());
+) => !dates.some((d) => d.valueOf() === date.valueOf());
 
 export const checkUniqueObjectWithId: <T extends { id: string }>(
   item: T,
   items: T[]
 ) => boolean = (item, items) => items.some((i) => i.id === item.id);
+
+export const objectIsUnique: (
+  item: any,
+  items: any[],
+  keys: string[]
+) => boolean = (item: any, items: any[], keys: string[]) => {
+  for (const key of keys) {
+    if (!item[key]) {
+      throw `${key} does not exist in this array value type`;
+    }
+
+    if (items.some((arrayItem) => arrayItem[key] === item[key])) {
+      return true;
+    }
+  }
+
+  return false;
+};
 
 export function randElement<T>(arr: T[]): T {
   return arr[Math.floor(random() * arr.length)];

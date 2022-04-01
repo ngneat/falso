@@ -59,13 +59,21 @@ const generateRandomValue = (): any => {
  * @example
  * randJSON()
  *
- * @example If a fixed number of keys are required
+ * @example
  *
- * randJSON({ totalKeys: 10 })
+ * randJSON({ totalKeys: 10 }) // If a fixed number of keys are required
  *
- * @example If a random number of keys are required
+ * @example
  *
- * randJSON({ minKeys: 1, maxKeys: 10 })
+ * randJSON({ minKeys: 1, maxKeys: 10 }) // If a random number of keys are required
+ *
+ * @example
+ *
+ * randJSON({ length: 10 })
+ *
+ * @example
+ *
+ * randJSON({ length: 10, priority: 'length' })
  *
  */
 export function randJSON<Options extends RandomJSONOptions = never>(
