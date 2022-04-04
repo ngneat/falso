@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { FakeOptions, fake, objectIsUnique } from './core/core';
 import { randCity } from './city';
 import { randStreetAddress } from './street-address';
 import { randZipCode } from './zip-code';
@@ -67,7 +67,7 @@ export function randAddress<Options extends AddressOptions = never>(
   return fake(factory, options, checkUnique);
 }
 
-const checkUnique: (item: Address, items: Address[]) => boolean = (
-  item: Address,
-  items: Address[]
-) => items.some((i) => i.street + i.zipCode === item.street + item.zipCode);
+const checkUnique: (address: Address, addresses: Address[]) => boolean = (
+  address: Address,
+  addresses: Address[]
+) => objectIsUnique(address, addresses, ['street', 'zipCode']);

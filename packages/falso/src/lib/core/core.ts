@@ -108,7 +108,7 @@ export const dateIsUnique: (date: Date, dates: Date[]) => boolean = (
 export const checkUniqueObjectWithId: <T extends { id: string }>(
   item: T,
   items: T[]
-) => boolean = (item, items) => items.some((i) => i.id === item.id);
+) => boolean = (item, items) => objectIsUnique(item, items, ['id']);
 
 export const objectIsUnique: (
   item: any,

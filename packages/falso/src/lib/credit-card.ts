@@ -1,4 +1,4 @@
-import { fake, FakeOptions } from './core/core';
+import { fake, FakeOptions, objectIsUnique } from './core/core';
 import { randCreditCardCVV } from './credit-card-cvv';
 import { randCreditCardBrand } from './credit-card-brand';
 import { Brand, randCreditCardNumber } from './credit-card-number';
@@ -8,6 +8,7 @@ import { rand } from './rand';
 import { randPastDate } from './past-date';
 import { randFutureDate } from './future-date';
 import { randPersonTitle } from './person-title';
+import { Address } from './address';
 
 export interface CreditCardOptions extends FakeOptions {
   fullName?: string;
@@ -85,6 +86,6 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
 }
 
 const checkUnique: (card: CreditCard, cards: CreditCard[]) => boolean = (
-  card,
-  cards
-) => cards.some((c) => c.number === card.number);
+  card: CreditCard,
+  cards: CreditCard[]
+) => objectIsUnique(card, cards, ['number']);

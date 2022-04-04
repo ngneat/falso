@@ -1,4 +1,9 @@
-import { fake, FakeOptions, getRandomInRange } from './core/core';
+import {
+  fake,
+  FakeOptions,
+  getRandomInRange,
+  objectIsUnique,
+} from './core/core';
 import { randFutureDate } from './future-date';
 import { randAirline } from './airline';
 import { Airline, randFlightNumber } from './flight-number';
@@ -78,9 +83,5 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
 const checkUnique: (
   flight: FlightDetails,
   flights: FlightDetails[]
-) => boolean = (flight, flights) =>
-  flights.some(
-    (f) =>
-      f.passenger + f.flightNumber + f.date ===
-      flight.passenger + flight.flightNumber + flight.date
-  );
+) => boolean = (flight: FlightDetails, flights: FlightDetails[]) =>
+  objectIsUnique(flight, flights, ['passenger', 'flightNumber', 'date']);
