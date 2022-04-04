@@ -16,9 +16,9 @@ describe('objectIsUnique', () => {
     });
 
     it('should throw error', () => {
-      expect(() => objectIsUnique(newItem, array, keys)).toThrow(
-        'noExistentKey does not exist in this array value type'
-      );
+      expect(() =>
+        objectIsUnique(newItem, array, keys)
+      ).toThrowErrorMatchingSnapshot();
     });
   });
 
