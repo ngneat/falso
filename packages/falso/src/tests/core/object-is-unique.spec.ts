@@ -3,7 +3,7 @@ import { randUser, User } from '../../lib/user';
 import { randUuid } from '../../lib/uuid';
 import { randFirstName } from '../../lib/first-name';
 
-describe('valueExistsInObjectArray', () => {
+describe('objectIsUnique', () => {
   describe("keys contains a key that doesn't exist", () => {
     let array: User[];
     let newItem: User;
