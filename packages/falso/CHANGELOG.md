@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [4.0.0](https://github.com/ngneat/falso/compare/falso-3.1.0...falso-4.0.0) (2022-04-05)
+
+### Features
+
+- 🔥 Add a couple more entity functions for good measure ([8d35219](https://github.com/ngneat/falso/commit/8d35219cf0abe0712db419685329b6d11209dbf3))
+- 🔥 Add possibility to set finance account length ([23bc2b6](https://github.com/ngneat/falso/commit/23bc2b6c6c04f484aebf12f9072c17a1f3f5c16f)), closes [#236](https://github.com/ngneat/falso/issues/236)
+- 🔥 New foods added in colombia and venezuela ([acbea69](https://github.com/ngneat/falso/commit/acbea691a944dd0a7a282a175f849f09ff57dd3b))
+- 🔥 Update randJson to be more standard ([bcef48b](https://github.com/ngneat/falso/commit/bcef48bede316b211b74b481c57845b6370862ba))
+
+### BREAKING CHANGES
+
+- 🧨 Change length option with totalKeys. Change min option to minKeys.
+  Change max option to maxKeys
+
 # [3.1.0](https://github.com/ngneat/falso/compare/falso-3.0.0...falso-3.1.0) (2022-03-22)
 
 ### Features
