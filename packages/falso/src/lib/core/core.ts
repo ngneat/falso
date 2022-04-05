@@ -38,7 +38,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   ) => boolean,
   comparisonKeys?: string[],
   options?: Options
-) {
+): T | T[] {
   if (!options?.length) {
     return data();
   }
@@ -70,7 +70,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
 export function fakeFromArray<T, Options extends FakeOptions>(
   data: T[],
   options?: Options
-) {
+): T | T[] {
   if (!options?.length) {
     return randElement(data);
   }
@@ -85,7 +85,10 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   const newArray: T[] = [];
 
   while (clonedData.length && newArray.length !== options.length) {
-    const randomIndex = Math.floor(random() * clonedData.length);
+    const randomIndex = getRandomInRange({
+      min: 0,
+      max: clonedData.length - 1,
+    });
     const item = clonedData[randomIndex];
 
     newArray.push(item);
