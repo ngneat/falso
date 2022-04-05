@@ -52,11 +52,11 @@ export function randFood<Options extends FoodOptions = never>(
   const origin: string | undefined = options?.origin;
 
   if (!totalOrigins) {
-    throw 'No foods found';
+    throw new Error('No foods found');
   }
 
   if (origin && !foodData[origin]) {
-    throw 'No foods found for selected origin';
+    throw Error('No foods found for selected origin');
   }
 
   const factory: () => string = () => {

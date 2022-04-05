@@ -33,7 +33,7 @@ export function randSports<Options extends SportCategories = never>(
   const category: string | undefined = options?.category;
 
   if (!categoriesCount) {
-    throw 'No Sport Categories found';
+    throw Error('No Sport Categories found');
   }
 
   if (category && !sportsData[category]) {

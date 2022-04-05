@@ -117,7 +117,7 @@ export const objectIsUnique: (
 ) => boolean = (item: any, items: any[], keys: string[]) => {
   for (const key of keys) {
     if (!item[key]) {
-      throw `${key} does not exist in this array value type`;
+      throw new Error(`${key} does not exist in this array value type`);
     }
 
     if (items.some((arrayItem) => arrayItem[key] === item[key])) {

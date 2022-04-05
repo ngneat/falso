@@ -25,7 +25,7 @@ export function randLine<Options extends LineOptions = never>(
   const lineCount: number = options?.lineCount ?? 5;
 
   if (lineCount < 1 || isNaN(lineCount)) {
-    throw 'Line count must be greater than 0';
+    throw Error('Line count must be greater than 0');
   }
 
   const factory = () => {

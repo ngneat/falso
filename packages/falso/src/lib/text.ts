@@ -30,7 +30,7 @@ export function randText<Options extends TextOptions = never>(
   const charCount: number = options?.charCount ?? 10;
 
   if (charCount < 1 || isNaN(charCount)) {
-    throw 'Character count must be greater than 0';
+    throw new Error('Character count must be greater than 0');
   }
 
   const factory = () => {
