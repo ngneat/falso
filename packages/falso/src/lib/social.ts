@@ -14,6 +14,10 @@ import { data } from './social.json';
  *
  * randSocial({ length: 2 })
  *
+ * @example
+ *
+ * randSocial({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  *
  */
 

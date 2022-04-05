@@ -16,6 +16,10 @@ const commitShortShaLen = 7;
  *
  * randGitShortSha({ length: 10 })
  *
+ * @example
+ *
+ * randGitShortSha({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randGitShortSha<Options extends FakeOptions = never>(
   options?: Options

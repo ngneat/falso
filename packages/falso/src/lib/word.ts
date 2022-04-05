@@ -26,6 +26,10 @@ function capitalizeFirstLetter(text: string): string {
  *
  * randWord({ length: 10 })
  *
+ * @example
+ *
+ * randWord({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randWord<Options extends WordOptions = never>(
   options?: Options

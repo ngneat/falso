@@ -14,6 +14,10 @@ import { rand } from './rand';
  *
  * randSeatNumber({ length: 10 })
  *
+ * @example
+ *
+ * randSeatNumber({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randSeatNumber<Options extends FakeOptions = never>(
   options?: Options

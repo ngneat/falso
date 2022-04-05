@@ -14,6 +14,10 @@ import { data } from './emoji.json';
  *
  * randEmoji({ length: 10 })
  *
+ * @example
+ *
+ * randEmoji({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randEmoji<Options extends FakeOptions = never>(
   options?: Options

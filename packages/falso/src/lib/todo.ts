@@ -22,6 +22,10 @@ export interface Todo {
  *
  * randTodo({ length: 10 })
  *
+ * @example
+ *
+ * randTodo({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randTodo<Options extends FakeOptions = never>(
   options?: Options

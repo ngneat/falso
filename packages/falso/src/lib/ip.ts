@@ -16,6 +16,10 @@ const ipRange = { min: 0, max: 255 };
  *
  * randIp({ length: 10 })
  *
+ * @example
+ *
+ * randIp({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randIp<Options extends FakeOptions = never>(options?: Options) {
   return fake(

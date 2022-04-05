@@ -28,6 +28,10 @@ export interface FontSizeOptions extends FakeOptions {
  *
  * randFontSize({ length: 10 })
  *
+ * @example
+ *
+ * randFontSize({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randFontSize<Options extends FontSizeOptions = never>(
   options?: Options

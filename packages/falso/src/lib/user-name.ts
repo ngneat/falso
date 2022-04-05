@@ -20,15 +20,19 @@ export interface UserNameOptions extends FakeOptions {
  *
  * @example
  *
- * randUserName({ length: 10 })
- *
- * @example
- *
  * randUserName({ firstName: 'Ryan' })
  *
  * @example
  *
  * randUserName({ lastName: 'Smee' })
+ *
+ * @example
+ *
+ * randUserName({ length: 10 })
+ *
+ * @example
+ *
+ * randUserName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
  *
  */
 export function randUserName<Options extends UserNameOptions = never>(

@@ -35,6 +35,10 @@ const serviceArn: Record<string, () => string> = {
  *
  * randArn({ length: 10 })
  *
+ * @example
+ *
+ * randArn({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randArn<Options extends FakeOptions = never>(
   options?: Options

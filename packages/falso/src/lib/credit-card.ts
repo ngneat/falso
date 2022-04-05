@@ -8,7 +8,6 @@ import { rand } from './rand';
 import { randPastDate } from './past-date';
 import { randFutureDate } from './future-date';
 import { randPersonTitle } from './person-title';
-import { Address } from './address';
 
 export interface CreditCardOptions extends FakeOptions {
   fullName?: string;
@@ -46,6 +45,10 @@ export interface CreditCard {
  * @example
  *
  * randCreditCard({ length: 10 })
+ *
+ * @example
+ *
+ * randCreditCard({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
  *
  */
 export function randCreditCard<Options extends CreditCardOptions = never>(

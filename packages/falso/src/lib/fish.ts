@@ -14,6 +14,10 @@ import { data } from './fish.json';
  *
  * randFish({ length: 10 })
  *
+ * @example
+ *
+ * randFish({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randFish<Options extends FakeOptions = never>(
   options?: Options

@@ -15,6 +15,10 @@ import { randWord } from './word';
  *
  * randUrl({ length: 10 })
  *
+ * @example
+ *
+ * randUrl({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randUrl<Options extends FakeOptions = never>(
   options?: Options

@@ -16,11 +16,15 @@ interface FutureOptions extends FakeOptions {
  *
  * @example
  *
+ * randFutureDate({ years: 10 }) // default is 1
+ *
+ * @example
+ *
  * randFutureDate({ length: 10 })
  *
  * @example
  *
- * randFutureDate({ years: 10 }) // default is 1
+ * randFutureDate({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
  *
  */
 export function randFutureDate<Options extends FutureOptions = never>(

@@ -13,6 +13,10 @@ import { data } from './movie-character.json';
  *
  * randMovieCharacter({ length: 10 })
  *
+ * @example
+ *
+ * randMovieCharacter({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randMovieCharacter<Options extends FakeOptions = never>(
   options?: Options

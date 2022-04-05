@@ -39,6 +39,10 @@ export interface Address {
  *
  * randAddress({ length: 10 })
  *
+ * @example
+ *
+ * randAddress({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randAddress<Options extends AddressOptions = never>(
   options?: Options

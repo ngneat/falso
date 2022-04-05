@@ -20,6 +20,10 @@ import { NameOptions } from './full-name';
  *
  * randLastName({ length: 10 })
  *
+ * @example
+ *
+ * randLastName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randLastName<Options extends NameOptions = never>(
   options?: Options

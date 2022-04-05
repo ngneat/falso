@@ -22,6 +22,10 @@ interface SoonOptions extends FakeOptions {
  *
  * randSoonDate({ length: 10 })
  *
+ * @example
+ *
+ * randSoonDate({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randSoonDate<Options extends SoonOptions = never>(
   options?: Options

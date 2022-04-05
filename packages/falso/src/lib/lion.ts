@@ -14,6 +14,10 @@ import { data } from './lion.json';
  *
  * randLion({ length: 10 })
  *
+ * @example
+ *
+ * randLion({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randLion<Options extends FakeOptions = never>(
   options?: Options

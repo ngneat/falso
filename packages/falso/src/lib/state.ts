@@ -14,6 +14,10 @@ import { data } from './state.json';
  *
  * randState({ length: 10 })
  *
+ * @example
+ *
+ * randState({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randState<Options extends FakeOptions = never>(
   options?: Options

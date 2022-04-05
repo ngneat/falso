@@ -14,6 +14,10 @@ import { data } from './product-description.json';
  *
  * randProductDescription({ length: 10 })
  *
+ * @example
+ *
+ * randProductDescription({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randProductDescription<Options extends FakeOptions = never>(
   options?: Options

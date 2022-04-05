@@ -14,6 +14,10 @@ import { data } from './domain-suffix.json';
  *
  * randDomainSuffix({ length: 10 })
  *
+ * @example
+ *
+ * randDomainSuffix({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randDomainSuffix<Options extends FakeOptions = never>(
   options?: Options

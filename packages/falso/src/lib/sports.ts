@@ -25,6 +25,10 @@ const categoriesCount = Object.keys(data)?.length;
  *
  * randSports({ length: 10 })
  *
+ * @example
+ *
+ * randSports({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randSports<Options extends SportCategories = never>(
   options?: Options

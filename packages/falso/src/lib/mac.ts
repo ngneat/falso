@@ -14,6 +14,10 @@ import { randHexaDecimal } from './hexa-decimal';
  *
  * randMac({ length: 10 })
  *
+ * @example
+ *
+ * randMac({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randMac<Options extends FakeOptions = never>(
   options?: Options

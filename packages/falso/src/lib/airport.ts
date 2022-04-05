@@ -21,6 +21,10 @@ export interface Airport {
  *
  * randAirport({ length: 10 })
  *
+ * @example
+ *
+ * randAirport({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randAirport<Options extends FakeOptions = never>(
   options?: Options

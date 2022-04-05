@@ -14,6 +14,10 @@ import { data } from './font-family.json';
  *
  * randFontFamily({ length: 10 })
  *
+ * @example
+ *
+ * randFontFamily({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randFontFamily<Options extends FakeOptions = never>(
   options?: Options

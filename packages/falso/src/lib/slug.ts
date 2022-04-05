@@ -14,6 +14,10 @@ import { randWord } from './word';
  *
  * randSlug({ length: 10 })
  *
+ * @example
+ *
+ * randSlug({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randSlug<Options extends FakeOptions = never>(
   options?: Options

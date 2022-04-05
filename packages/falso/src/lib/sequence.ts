@@ -45,6 +45,10 @@ type RandomSequenceOptions = {
  *
  * randSequence({ length: 10 })
  *
+ * @example
+ *
+ * randSequence({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randSequence<Options extends RandomSequenceOptions = never>(
   options?: Options

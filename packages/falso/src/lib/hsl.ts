@@ -16,11 +16,15 @@ export interface HSLOptions extends FakeOptions {
  *
  * @example
  *
+ * randHsl({ alpha: true }) // default is false
+ *
+ * @example
+ *
  * randHsl({ length: 3 })
  *
  * @example
  *
- * randHsl({ alpha: true }) // default is false
+ * randHsl({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
  *
  */
 export function randHsl<Options extends HSLOptions = never>(options?: Options) {

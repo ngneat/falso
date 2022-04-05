@@ -14,6 +14,10 @@ import { data } from './subscription-plan.json';
  *
  * randSubscriptionPlan({ length: 10 })
  *
+ * @example
+ *
+ * randSubscriptionPlan({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randSubscriptionPlan<Options extends FakeOptions = never>(
   options?: Options

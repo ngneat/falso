@@ -15,6 +15,10 @@ import { rand } from './rand';
  *
  * randAirportName({ length: 10 })
  *
+ * @example
+ *
+ * randAirportName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randAirportName<Options extends FakeOptions = never>(
   options?: Options

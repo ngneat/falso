@@ -16,6 +16,10 @@ import { randAlphaNumeric } from './alpha-numeric';
  *
  * randIban({ length: 10 })
  *
+ * @example
+ *
+ * randIban({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randIban<Options extends FakeOptions = never>(
   options?: Options

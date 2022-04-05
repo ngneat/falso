@@ -17,11 +17,15 @@ interface ProtocolOptions extends FakeOptions {
  *
  * @example
  *
+ * randProtocol({ fullName: true })
+ *
+ * @example
+ *
  * randProtocol({ length: 10 })
  *
  * @example
  *
- * randProtocol({ fullName: true })
+ * randProtocol({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
  *
  */
 export function randProtocol<Options extends ProtocolOptions = never>(

@@ -20,6 +20,10 @@ import { randBoolean } from './boolean';
  *
  * randFirstName({ length: 10 })
  *
+ * @example
+ *
+ * randFirstName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randFirstName<Options extends NameOptions = never>(
   options?: Options

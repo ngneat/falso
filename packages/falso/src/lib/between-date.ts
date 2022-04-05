@@ -19,6 +19,10 @@ interface BetweenOptions extends FakeOptions {
  *
  * randBetweenDate({ from: new Date('10/07/2020'), to: new Date(), length: 10 })
  *
+ * @example
+ *
+ * randBetweenDate({ from: new Date('10/07/2020'), to: new Date(), length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randBetweenDate<Options extends BetweenOptions = never>(
   options: Options

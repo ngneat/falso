@@ -14,6 +14,10 @@ import { data } from './state-abbr.json';
  *
  * randStateAbbr({ length: 10 })
  *
+ * @example
+ *
+ * randStateAbbr({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randStateAbbr<Options extends FakeOptions = never>(
   options?: Options

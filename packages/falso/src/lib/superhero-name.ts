@@ -19,6 +19,10 @@ import { data } from './superhero.json';
  *
  * randSuperheroName({ length: 10 })
  *
+ * @example
+ *
+ * randSuperheroName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randSuperheroName<Options extends SuperheroOptions = never>(
   options?: Options

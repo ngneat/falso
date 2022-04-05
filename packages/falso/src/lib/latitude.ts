@@ -13,6 +13,10 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
  *
  * randLatitude({ length: 10 })
  *
+ * @example
+ *
+ * randLatitude({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randLatitude<Options extends FakeOptions = never>(
   options?: Options

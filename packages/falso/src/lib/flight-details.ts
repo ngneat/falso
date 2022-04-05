@@ -10,7 +10,6 @@ import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
 import { randSeatNumber } from './seat-number';
 import { Airport, randAirport } from './airport';
-import { CreditCard } from './credit-card';
 
 export interface FlightDetailsOptions extends FakeOptions {
   airline?: Airline;
@@ -54,6 +53,10 @@ function generateFlightLength(): number {
  * @example
  *
  * randFlightDetails({ length: 10 })
+ *
+ * @example
+ *
+ * randFlightDetails({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
  *
  */
 export function randFlightDetails<Options extends FlightDetailsOptions = never>(

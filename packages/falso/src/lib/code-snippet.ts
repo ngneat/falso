@@ -34,11 +34,15 @@ interface CodeSnippetOptions extends FakeOptions {
  *
  * @example
  *
+ * randCodeSnippet({ lang: 'html' }) // default is 'javascript'
+ *
+ * @example
+ *
  * randCodeSnippet({ length: 10 })
  *
  * @example
  *
- * randCodeSnippet({ lang: 'html' }) // default is 'javascript'
+ * randCodeSnippet({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
  *
  */
 export function randCodeSnippet<Options extends CodeSnippetOptions = never>(

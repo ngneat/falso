@@ -14,6 +14,10 @@ import { data } from './music-genre.json';
  *
  * randMusicGenre({ length: 10 })
  *
+ * @example
+ *
+ * randMusicGenre({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ *
  */
 export function randMusicGenre<Options extends FakeOptions = never>(
   options?: Options
