@@ -1,9 +1,0 @@
-{
-  "executors": {
-    "translate": {
-      "implementation": "./index",
-      "schema": "./schema.json",
-      "description": "Generates translation file"
-    }
-  }
-}
