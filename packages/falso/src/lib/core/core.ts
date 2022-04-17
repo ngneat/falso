@@ -16,7 +16,7 @@ export function fake<T, Options extends FakeOptions>(
 ): Return<T, Options> {
   const dataSource = Array.isArray(data) ? () => randElement(data) : data;
 
-  if (!options?.length) {
+  if (options?.length === undefined) {
     return dataSource(0) as any;
   }
 
