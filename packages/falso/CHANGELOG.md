@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.0.0](https://github.com/ngneat/falso/compare/falso-4.0.0...falso-5.0.0) (2022-04-17)
+
+### Bug Fixes
+
+- 🐞 Return an empty array when length is 0 ([27639c7](https://github.com/ngneat/falso/commit/27639c7d9fe84bdf7fd54bd31a14171f6b92cc8c)), closes [#253](https://github.com/ngneat/falso/issues/253)
+
+### BREAKING CHANGES
+
+- 🧨 Setting the option length 0 returns now an array
+
 # [4.0.0](https://github.com/ngneat/falso/compare/falso-3.1.0...falso-4.0.0) (2022-04-05)
 
 ### Features
