@@ -17,6 +17,10 @@ export function fake<T, Options extends FakeOptions>(
   comparisonFunction: (item: T, items: T[]) => boolean = primitiveValueIsUnique,
   comparisonKeys?: string[]
 ): Return<T, Options> {
+  if (options?.length === 0) {
+    return [] as any;
+  }
+
   if (Array.isArray(data)) {
     return fakeFromArray(data, options) as any;
   }
