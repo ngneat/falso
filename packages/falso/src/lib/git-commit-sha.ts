@@ -24,7 +24,7 @@ export function randGitCommitSha<Options extends FakeOptions = never>(
     let sha = '';
 
     for (let i = 0; i < commitShaLen; i++) {
-      sha += randAlphaNumeric();
+      sha += randHexaDecimal();
     }
 
     return sha;
