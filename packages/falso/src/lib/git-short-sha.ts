@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-import { randAlphaNumeric } from './alpha-numeric';
+import { randHexaDecimal } from './hexa-decimal';
 
 const commitShortShaLen = 7;
 
