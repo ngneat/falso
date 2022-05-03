@@ -1,11 +1,7 @@
-import {
-  fake,
-  FakeOptions,
-  checkUniqueObjectWithId,
-  randElement,
-} from './core/core';
+import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './superhero.json';
 import { randUuid } from './uuid';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export type ComicBookCompany = 'Marvel' | 'DC';
 
@@ -59,5 +55,5 @@ export function randSuperhero<Options extends SuperheroOptions = never>(
     };
   };
 
-  return fake(factory, options, checkUniqueObjectWithId);
+  return fake(factory, options, objectWithIdIsUnique);
 }

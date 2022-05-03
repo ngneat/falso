@@ -1,14 +1,10 @@
-import {
-  FakeOptions,
-  fake,
-  getRandomInRange,
-  checkUniqueObjectWithId,
-} from './core/core';
+import { FakeOptions, fake, getRandomInRange } from './core/core';
 import { randUuid } from './uuid';
 import { randProductName } from './product-name';
 import { randProductDescription } from './product-description';
 import { randProductCategory } from './product-category';
 import { randImg } from './img';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export interface Product {
   id: string;
@@ -57,5 +53,5 @@ export function randProduct<Options extends FakeOptions = never>(
     },
   });
 
-  return fake(factory, options, checkUniqueObjectWithId);
+  return fake(factory, options, objectWithIdIsUnique);
 }

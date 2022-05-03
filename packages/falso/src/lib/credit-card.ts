@@ -1,4 +1,4 @@
-import { fake, FakeOptions, objectIsUnique } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randCreditCardCVV } from './credit-card-cvv';
 import { randCreditCardBrand } from './credit-card-brand';
 import { Brand, randCreditCardNumber } from './credit-card-number';
@@ -8,6 +8,7 @@ import { rand } from './rand';
 import { randPastDate } from './past-date';
 import { randFutureDate } from './future-date';
 import { randPersonTitle } from './person-title';
+import { objectIsUnique } from './core/unique-validators';
 
 export interface CreditCardOptions extends FakeOptions {
   fullName?: string;

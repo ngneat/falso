@@ -1,7 +1,8 @@
-import { fake, FakeOptions, checkUniqueObjectWithId } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randUuid } from './uuid';
 import { randBoolean } from './boolean';
 import { randText } from './text';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export interface Todo {
   id: string;
@@ -36,5 +37,5 @@ export function randTodo<Options extends FakeOptions = never>(
     completed: randBoolean(),
   });
 
-  return fake(factory, options, checkUniqueObjectWithId);
+  return fake(factory, options, objectWithIdIsUnique);
 }

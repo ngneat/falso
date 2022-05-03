@@ -1,8 +1,9 @@
-import { FakeOptions, fake, checkUniqueObjectWithId } from './core/core';
+import { FakeOptions, fake } from './core/core';
 import { randUser, User } from './user';
 import { randUuid } from './uuid';
 import { randText } from './text';
 import { randNumber } from './number';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export interface Post {
   id: string;
@@ -49,5 +50,5 @@ export function randPost<Options extends FakeOptions = never>(
     return post;
   };
 
-  return fake(factory, options, checkUniqueObjectWithId);
+  return fake(factory, options, objectWithIdIsUnique);
 }

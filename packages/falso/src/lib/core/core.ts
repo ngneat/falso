@@ -1,4 +1,5 @@
 import { random } from '../random';
+import { primitiveValueIsUnique } from './unique-validators';
 
 export interface FakeOptions {
   length?: number;
@@ -14,7 +15,7 @@ type Return<T, O extends FakeOptions> = [O] extends [never]
 export function fake<T, Options extends FakeOptions>(
   data: T[] | (() => T),
   options?: Options,
-  comparisonFunction: (item: T, items: T[]) => boolean = primitiveValueIsUnique,
+  uniqueComparer: (item: T, items: T[]) => boolean = primitiveValueIsUnique,
   comparisonKeys?: string[]
 ): Return<T, Options> {
   if (options?.length === 0) {
@@ -25,12 +26,7 @@ export function fake<T, Options extends FakeOptions>(
     return fakeFromArray(data, options) as any;
   }
 
-  return fakeFromFunction(
-    data,
-    comparisonFunction,
-    comparisonKeys,
-    options
-  ) as any;
+  return fakeFromFunction(data, uniqueComparer, comparisonKeys, options) as any;
 }
 
 export function fakeFromFunction<T, Options extends FakeOptions>(
@@ -101,39 +97,6 @@ export function fakeFromArray<T, Options extends FakeOptions>(
 
   return newArray;
 }
-
-export const primitiveValueIsUnique: <T>(item: T, items: T[]) => boolean = (
-  item,
-  items
-) => !items.includes(item);
-
-export const dateIsUnique: (date: Date, dates: Date[]) => boolean = (
-  date,
-  dates
-) => !dates.some((d) => d.valueOf() === date.valueOf());
-
-export const checkUniqueObjectWithId: <T extends { id: string }>(
-  item: T,
-  items: T[]
-) => boolean = (item, items) => objectIsUnique(item, items, ['id']);
-
-export const objectIsUnique: (
-  item: any,
-  items: any[],
-  keys: string[]
-) => boolean = (item: any, items: any[], keys: string[]) => {
-  for (const key of keys) {
-    if (!item[key]) {
-      throw new Error(`${key} does not exist in this array value type`);
-    }
-
-    if (items.some((arrayItem) => arrayItem[key] === item[key])) {
-      return true;
-    }
-  }
-
-  return false;
-};
 
 export function randElement<T>(arr: T[]): T {
   return arr[Math.floor(random() * arr.length)];

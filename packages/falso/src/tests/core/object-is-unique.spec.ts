@@ -1,7 +1,7 @@
-import { objectIsUnique } from '../../lib/core/core';
 import { randUser, User } from '../../lib/user';
 import { randUuid } from '../../lib/uuid';
 import { randFirstName } from '../../lib/first-name';
+import { objectIsUnique } from '../../lib/core/unique-validators';
 
 describe('objectIsUnique', () => {
   describe("keys contains a key that doesn't exist", () => {

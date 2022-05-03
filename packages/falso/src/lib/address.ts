@@ -1,9 +1,10 @@
-import { FakeOptions, fake, objectIsUnique } from './core/core';
+import { FakeOptions, fake } from './core/core';
 import { randCity } from './city';
 import { randStreetAddress } from './street-address';
 import { randZipCode } from './zip-code';
 import { randCounty } from './county';
 import { randCountry } from './country';
+import { objectIsUnique } from './core/unique-validators';
 
 export interface AddressOptions extends FakeOptions {
   includeCounty?: boolean;

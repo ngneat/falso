@@ -1,5 +1,6 @@
 import { randBetweenDate } from './between-date';
-import { dateIsUnique, fake, FakeOptions } from './core/core';
+import { fake, FakeOptions } from './core/core';
+import { dateIsUnique } from './core/unique-validators';
 
 interface RecentOptions extends FakeOptions {
   days?: number;

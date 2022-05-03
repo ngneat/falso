@@ -1,4 +1,4 @@
-import { fake, FakeOptions, checkUniqueObjectWithId } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randUuid } from './uuid';
 import { randEmail } from './email';
 import { randFirstName } from './first-name';
@@ -7,6 +7,7 @@ import { randPhoneNumber } from './phone-number';
 import { randUserName } from './user-name';
 import { randAvatar } from './avatar';
 import { randAddress } from './address';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export interface User {
   id: string;
@@ -62,5 +63,5 @@ export function randUser<Options extends FakeOptions = never>(
     return user;
   };
 
-  return fake(factory, options, checkUniqueObjectWithId);
+  return fake(factory, options, objectWithIdIsUnique);
 }

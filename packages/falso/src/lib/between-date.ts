@@ -1,5 +1,6 @@
-import { dateIsUnique, fake, FakeOptions } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randNumber } from './number';
+import { dateIsUnique } from './core/unique-validators';
 
 interface BetweenOptions extends FakeOptions {
   from: Date;

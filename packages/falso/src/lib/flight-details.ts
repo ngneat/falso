@@ -1,15 +1,11 @@
-import {
-  fake,
-  FakeOptions,
-  getRandomInRange,
-  objectIsUnique,
-} from './core/core';
+import { fake, FakeOptions, getRandomInRange } from './core/core';
 import { randFutureDate } from './future-date';
 import { randAirline } from './airline';
 import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
 import { randSeatNumber } from './seat-number';
 import { Airport, randAirport } from './airport';
+import { objectIsUnique } from './core/unique-validators';
 
 export interface FlightDetailsOptions extends FakeOptions {
   airline?: Airline;
