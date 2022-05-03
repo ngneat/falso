@@ -1,5 +1,5 @@
 import { fake, FakeOptions } from './core/core';
-import { randAlphaNumeric } from './alpha-numeric';
+import { randHexaDecimal } from './hexa-decimal';
 
 const commitShaLen = 40;
 
@@ -28,7 +28,7 @@ export function randGitCommitSha<Options extends FakeOptions = never>(
     let sha = '';
 
     for (let i = 0; i < commitShaLen; i++) {
-      sha += randAlphaNumeric();
+      sha += randHexaDecimal();
     }
 
     return sha;
