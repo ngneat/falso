@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-import { randAlphaNumeric } from './alpha-numeric';
+import { randHexaDecimal } from './hexa-decimal';
 
 const commitShortShaLen = 7;
 
@@ -24,7 +24,7 @@ export function randGitShortSha<Options extends FakeOptions = never>(
     let sha = '';
 
     for (let i = 0; i < commitShortShaLen; i++) {
-      sha += randAlphaNumeric();
+      sha += randHexaDecimal();
     }
 
     return sha;
