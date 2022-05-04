@@ -1,5 +1,5 @@
 import { fake, FakeOptions } from './core/core';
-import { randBoolean } from './boolean';
+import { randNumber } from './number';
 
 function generator() {
   return randNumber({min:0, max:15}).toString(16);
