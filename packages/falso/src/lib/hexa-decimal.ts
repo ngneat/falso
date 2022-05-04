@@ -1,11 +1,8 @@
 import { fake, FakeOptions } from './core/core';
-import { randBoolean } from './boolean';
-
-const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+import { randNumber } from './number';
 
 function generator() {
-  return '' + (randBoolean() ? fake(digits) : fake(letters));
+  return randNumber({min:0, max:15}).toString(16);
 }
 
 /**
