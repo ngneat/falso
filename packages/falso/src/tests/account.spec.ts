@@ -29,5 +29,6 @@ describe('account', () => {
     expect(result.length).toBe(12);
     expect(Array.isArray(result)).toBe(true);
     expect(result[0].length).toBe(14);
+    expect(result[0]).not.toEqual(result[1]);
   });
 });

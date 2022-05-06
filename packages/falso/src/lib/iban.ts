@@ -3,8 +3,12 @@ import { randCountryCode } from './country-code';
 import { randNumber } from './number';
 import { randAlphaNumeric } from './alpha-numeric';
 
+export interface IbanOptions extends FakeOptions {
+  countryCode?: string; // [A-Z]{2}
+}
+
 /**
- * Generate a random ibn.
+ * Generate a random IBAN number.
  *
  * @category finance
  *
@@ -14,19 +18,36 @@ import { randAlphaNumeric } from './alpha-numeric';
  *
  * @example
  *
+ * randSwift({ countryCode: 'DE' }) // country code with ISO country code
+ *
+ * @example
+ *
  * randIban({ length: 10 })
  *
  */
-export function randIban<Options extends FakeOptions = never>(
+export function randIban<Options extends IbanOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
-    let iban = randCountryCode();
+  if (options?.countryCode && options?.countryCode?.length !== 2) {
+    throw new Error(
+      'country code should be valid ISO 3166-1 alpha-2 two-letter country code, for example: DE'
+    );
+  }
 
-    for (let i = 0; i < randNumber({ min: 14, max: 28 }); i++) {
-      iban += randAlphaNumeric();
-    }
+  const factory: () => string = () => {
+    const countryCode = options?.countryCode ?? randCountryCode();
 
-    return iban;
-  }, options);
+    const checkDigits = randNumber({ min: 10, max: 99 }).toString();
+
+    const bban = Array(randNumber({ min: 12, max: 30 }))
+      .fill('#')
+      .join('')
+      .replace(/#/g, () => {
+        return randAlphaNumeric().toString();
+      });
+
+    return `${countryCode}${checkDigits}${bban}`.toUpperCase();
+  };
+
+  return fake(factory, options);
 }
