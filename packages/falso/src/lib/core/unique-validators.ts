@@ -24,9 +24,9 @@ export const objectIsUnique: (
     }
 
     if (items.some((arrayItem) => arrayItem[key] === item[key])) {
-      return true;
+      return false;
     }
   }
 
-  return false;
+  return true;
 };

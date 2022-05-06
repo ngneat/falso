@@ -42,10 +42,10 @@ describe('objectIsUnique', () => {
         array[1].id = sharedId;
       });
 
-      it('should return true', () => {
+      it('should return false', () => {
         const result = objectIsUnique(newItem, array, keys);
 
-        expect(result).toEqual(true);
+        expect(result).toEqual(false);
       });
     });
 
@@ -60,7 +60,7 @@ describe('objectIsUnique', () => {
       it('should return true', () => {
         const result = objectIsUnique(newItem, array, keys);
 
-        expect(result).toEqual(false);
+        expect(result).toEqual(true);
       });
     });
   });
@@ -85,10 +85,10 @@ describe('objectIsUnique', () => {
         array[1].firstName = sharedFirstName;
       });
 
-      it('should return true', () => {
+      it('should return false', () => {
         const result = objectIsUnique(newItem, array, keys);
 
-        expect(result).toEqual(true);
+        expect(result).toEqual(false);
       });
     });
 
@@ -107,7 +107,7 @@ describe('objectIsUnique', () => {
       it('should return true', () => {
         const result = objectIsUnique(newItem, array, keys);
 
-        expect(result).toEqual(false);
+        expect(result).toEqual(true);
       });
     });
   });
