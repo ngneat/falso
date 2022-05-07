@@ -28,6 +28,6 @@ describe('random-float', () => {
   it('should support fraction', () => {
     const num = randFloat({ min: 100, max: 200, fraction: 2 });
     expect(typeof num).toBe('number');
-    expect(String(num)).toMatch(/^\d+\.\d\d$/);
+    expect(String(num)).toMatch(/^\d+\.\d?\d$/);
   });
 });
