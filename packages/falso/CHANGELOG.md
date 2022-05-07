@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.2.0](https://github.com/ngneat/falso/compare/falso-5.1.0...falso-5.2.0) (2022-05-07)
+
+### Features
+
+- 🔥 add sequence predefined patterns ([bc7b23c](https://github.com/ngneat/falso/commit/bc7b23cecc34ae6fd8eee93184519d431c2846ee))
+
 # [5.1.0](https://github.com/ngneat/falso/compare/falso-5.0.0...falso-5.1.0) (2022-05-06)
 
 ### Features
