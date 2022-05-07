@@ -1,12 +1,108 @@
 {
   "migrations": [
     {
-      "version": "13.4.4-beta.0",
       "cli": "nx",
-      "description": "Create a root babel config file if it doesn't exist and using babel-jest in jest.config.js and add @nrwl/web as needed",
-      "factory": "./src/migrations/update-13-4-4/add-missing-root-babel-config",
+      "version": "14.0.6",
+      "description": "Remove root property from project.json files",
+      "factory": "./src/migrations/update-14-0-6/remove-roots",
+      "package": "nx",
+      "name": "14-0-6-remove-root"
+    },
+    {
+      "version": "13.6.0-beta.0",
+      "description": "Remove old options that are no longer used",
+      "cli": "nx",
+      "implementation": "./src/migrations/update-13-6-0/remove-old-task-runner-options",
+      "package": "@nrwl/workspace",
+      "name": "13-6-0-remove-old-task-runner-options"
+    },
+    {
+      "version": "13.9.0-beta.0",
+      "description": "Replace @nrwl/tao with nx",
+      "cli": "nx",
+      "implementation": "./src/migrations/update-13-9-0/replace-tao-with-nx",
+      "package": "@nrwl/workspace",
+      "name": "13-9-0-replace-tao-with-nx"
+    },
+    {
+      "version": "13.10.0-beta.0",
+      "description": "Update the decorate-angular-cli script to require nx instead of @nrwl/cli",
+      "cli": "nx",
+      "implementation": "./src/migrations/update-13-10-0/update-decorate-cli",
+      "package": "@nrwl/workspace",
+      "name": "13-10-0-update-decorate-cli"
+    },
+    {
+      "version": "13.10.0-beta.0",
+      "description": "Update the tasks runner property to import it from the nx package instead of @nrwl/worksapce",
+      "cli": "nx",
+      "implementation": "./src/migrations/update-13-10-0/update-tasks-runner",
+      "package": "@nrwl/workspace",
+      "name": "13-10-0-update-tasks-runner"
+    },
+    {
+      "version": "14.0.0-beta.0",
+      "description": "Changes the presets in nx.json to come from the nx package",
+      "cli": "nx",
+      "implementation": "./src/migrations/update-14-0-0/change-nx-json-presets",
+      "package": "@nrwl/workspace",
+      "name": "14-0-0-change-nx-json-presets"
+    },
+    {
+      "version": "14.0.0-beta.0",
+      "description": "Migrates from @nrwl/workspace:run-script to nx:run-script",
+      "cli": "nx",
+      "implementation": "./src/migrations/update-14-0-0/change-npm-script-executor",
+      "package": "@nrwl/workspace",
+      "name": "14-0-0-change-npm-script-executor"
+    },
+    {
+      "version": "14.0.0-beta.2",
+      "cli": "nx",
+      "description": "Update move jest config files to .ts files.",
+      "factory": "./src/migrations/update-14-0-0/update-jest-config-ext",
       "package": "@nrwl/jest",
-      "name": "add-missing-root-babel-config"
+      "name": "update-jest-config-extensions"
+    },
+    {
+      "cli": "nx",
+      "version": "13.8.0-beta.1",
+      "description": "Add a postcss config option to apps to load a single config file for all libs",
+      "factory": "./src/migrations/update-13-8-0/add-postcss-config-option",
+      "package": "@nrwl/web",
+      "name": "add-postcss-config-option"
+    },
+    {
+      "cli": "nx",
+      "version": "13.8.5-beta.1",
+      "description": "Renames @nrwl/js:node to @nrwl/node:node",
+      "factory": "./src/migrations/update-13-8-5/update-node-executor",
+      "package": "@nrwl/js",
+      "name": "update-node-executor"
+    },
+    {
+      "cli": "nx",
+      "version": "13.8.5-beta.1",
+      "description": "Adjust .swcrc to .lib.swcrc",
+      "factory": "./src/migrations/update-13-8-5/update-swcrc",
+      "package": "@nrwl/js",
+      "name": "update-swcrc"
+    },
+    {
+      "cli": "nx",
+      "version": "13.10.1-beta.1",
+      "description": "Update .lib.swcrc to exclude missing test files",
+      "factory": "./src/migrations/update-13-10-1/update-lib-swcrc-exclude",
+      "package": "@nrwl/js",
+      "name": "update-swcrc-exclude"
+    },
+    {
+      "cli": "nx",
+      "version": "14.0.0-beta.2",
+      "description": "Exclude jest config from .lib.swcrc",
+      "factory": "./src/migrations/update-14-0-0/exclude-jest-config-swcrc",
+      "package": "@nrwl/js",
+      "name": "exclude-jest-config-swcrc"
     }
   ]
 }
