@@ -19,7 +19,7 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 
 </p>
 
-✅ &nbsp;192 Functions  
+✅ &nbsp;194 Functions  
 ✅ &nbsp;Tree Shakable  
 ✅ &nbsp;Fully Typed  
 ✅ &nbsp;Entity Functions  
