@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [5.2.1](https://github.com/ngneat/falso/compare/falso-5.2.0...falso-5.2.1) (2022-05-08)
+
+### Bug Fixes
+
+- 🐞 expose randBic and randSwift ([722d441](https://github.com/ngneat/falso/commit/722d44117face29a0781ea9bf015c6d2a09f6ab1))
+
 # [5.2.0](https://github.com/ngneat/falso/compare/falso-5.1.0...falso-5.2.0) (2022-05-07)
 
 ### Features
