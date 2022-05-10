@@ -2,6 +2,26 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [5.2.1](https://github.com/ngneat/falso/compare/falso-5.2.0...falso-5.2.1) (2022-05-08)
+
+### Bug Fixes
+
+- 🐞 expose randBic and randSwift ([722d441](https://github.com/ngneat/falso/commit/722d44117face29a0781ea9bf015c6d2a09f6ab1))
+
+# [5.2.0](https://github.com/ngneat/falso/compare/falso-5.1.0...falso-5.2.0) (2022-05-07)
+
+### Features
+
+- 🔥 add sequence predefined patterns ([bc7b23c](https://github.com/ngneat/falso/commit/bc7b23cecc34ae6fd8eee93184519d431c2846ee))
+
+# [5.1.0](https://github.com/ngneat/falso/compare/falso-5.0.0...falso-5.1.0) (2022-05-06)
+
+### Features
+
+- 🔥 Add vehicle models ([c6ff665](https://github.com/ngneat/falso/commit/c6ff6650f965087309bfb7e8932d6d319ea20eaf))
+- 🔥 iban options with country code added ([272db8b](https://github.com/ngneat/falso/commit/272db8b508fc9fa1074a762d0e008ba53dc5a6f0))
+- 🔥 swift / bic code generation ([afa783a](https://github.com/ngneat/falso/commit/afa783af749c421791979b8aba0334cac83bfa06))
+
 ## [5.0.1](https://github.com/ngneat/falso/compare/falso-5.0.0...falso-5.0.1) (2022-05-03)
 
 - Use the right function in git commit

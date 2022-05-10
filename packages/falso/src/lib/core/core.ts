@@ -15,7 +15,7 @@ export interface FakeConfig<T> {
   comparisonKeys?: string[];
 }
 
-type Return<T, O extends FakeOptions> = [O] extends [never]
+export type Return<T, O extends FakeOptions> = [O] extends [never]
   ? T
   : O['length'] extends number
   ? T[]

@@ -26,7 +26,7 @@ describe('random-float', () => {
   });
 
   it('should support fraction', () => {
-    const floatRegex = /^\d+\.\d{1,2}$/; // A number with 1-2 decimal places
+    const floatRegex = /^\d+\.\d?\d$/; // A number with 1-2 decimal places
     const num = randFloat({ min: 100, max: 200, fraction: 2 });
     expect(typeof num).toBe('number');
     expect(String(num)).toMatch(floatRegex);
