@@ -42,5 +42,5 @@ export function randFutureDate<Options extends FutureOptions = never>(
   const to = new Date(from.getTime() + yearsInMilliseconds);
   const factory: () => Date = () => randBetweenDate({ from, to });
 
-  return fake(factory, options, dateIsUnique);
+  return fake(factory, options, { uniqueComparer: dateIsUnique });
 }

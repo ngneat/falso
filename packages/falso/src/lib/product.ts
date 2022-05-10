@@ -53,5 +53,5 @@ export function randProduct<Options extends FakeOptions = never>(
     },
   });
 
-  return fake(factory, options, objectWithIdIsUnique);
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

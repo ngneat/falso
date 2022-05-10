@@ -44,5 +44,5 @@ export function randBetweenDate<Options extends BetweenOptions = never>(
     );
   };
 
-  return fake(generator, options, dateIsUnique);
+  return fake(generator, options, { uniqueComparer: dateIsUnique });
 }

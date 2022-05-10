@@ -40,5 +40,7 @@ export function randSoonDate<Options extends SoonOptions = never>(
   const daysInMilliseconds = days * 24 * 60 * 60 * 1000;
   const from = new Date();
   const to = new Date(from.getTime() + daysInMilliseconds);
-  return fake(() => randBetweenDate({ from, to }), options, dateIsUnique);
+  return fake(() => randBetweenDate({ from, to }), options, {
+    uniqueComparer: dateIsUnique,
+  });
 }

@@ -50,5 +50,5 @@ export function randPost<Options extends FakeOptions = never>(
     return post;
   };
 
-  return fake(factory, options, objectWithIdIsUnique);
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

@@ -6,6 +6,15 @@ export interface FakeOptions {
   priority?: 'length' | 'unique';
 }
 
+export interface FakeConfig<T> {
+  uniqueComparer: (
+    item: T,
+    items: T[],
+    comparisonKeys?: string[]
+  ) => boolean | ((item: T, items: T[]) => boolean);
+  comparisonKeys?: string[];
+}
+
 type Return<T, O extends FakeOptions> = [O] extends [never]
   ? T
   : O['length'] extends number
@@ -15,8 +24,9 @@ type Return<T, O extends FakeOptions> = [O] extends [never]
 export function fake<T, Options extends FakeOptions>(
   data: T[] | (() => T),
   options?: Options,
-  uniqueComparer: (item: T, items: T[]) => boolean = primitiveValueIsUnique,
-  comparisonKeys?: string[]
+  config: FakeConfig<T> = {
+    uniqueComparer: primitiveValueIsUnique,
+  }
 ): Return<T, Options> {
   if (options?.length === 0) {
     return [] as any;
@@ -26,17 +36,12 @@ export function fake<T, Options extends FakeOptions>(
     return fakeFromArray(data, options) as any;
   }
 
-  return fakeFromFunction(data, uniqueComparer, comparisonKeys, options) as any;
+  return fakeFromFunction(data, config, options) as any;
 }
 
 export function fakeFromFunction<T, Options extends FakeOptions>(
   data: () => T,
-  isItemADuplicateFunction: (
-    item: T,
-    items: T[],
-    comparisonKeys?: string[]
-  ) => boolean,
-  comparisonKeys?: string[],
+  config: FakeConfig<T>,
   options?: Options
 ): T | T[] {
   if (!options?.length) {
@@ -57,7 +62,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   while (items.length < options.length && attempts < maxAttempts) {
     const item = data();
 
-    if (!isItemADuplicateFunction(item, items, comparisonKeys)) {
+    if (!config.uniqueComparer(item, items, config.comparisonKeys)) {
       items.push(item);
     }
 

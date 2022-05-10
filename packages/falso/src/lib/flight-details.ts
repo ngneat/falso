@@ -76,7 +76,7 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
     };
   };
 
-  return fake(factory, options, checkUnique);
+  return fake(factory, options, { uniqueComparer: checkUnique });
 }
 
 const checkUnique: (

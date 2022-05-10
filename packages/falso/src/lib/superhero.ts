@@ -55,5 +55,5 @@ export function randSuperhero<Options extends SuperheroOptions = never>(
     };
   };
 
-  return fake(factory, options, objectWithIdIsUnique);
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

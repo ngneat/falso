@@ -37,5 +37,5 @@ export function randTodo<Options extends FakeOptions = never>(
     completed: randBoolean(),
   });
 
-  return fake(factory, options, objectWithIdIsUnique);
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

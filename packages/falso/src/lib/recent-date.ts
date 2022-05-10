@@ -41,5 +41,7 @@ export function randRecentDate<Options extends RecentOptions = never>(
   const to = new Date();
   const from = new Date(to.getTime() - daysInMilliseconds);
 
-  return fake(() => randBetweenDate({ from, to }), options, dateIsUnique);
+  return fake(() => randBetweenDate({ from, to }), options, {
+    uniqueComparer: dateIsUnique,
+  });
 }

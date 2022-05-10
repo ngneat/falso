@@ -69,7 +69,7 @@ export function randAddress<Options extends AddressOptions = never>(
     return address;
   };
 
-  return fake(factory, options, checkUnique);
+  return fake(factory, options, { uniqueComparer: checkUnique });
 }
 
 const checkUnique: (address: Address, addresses: Address[]) => boolean = (

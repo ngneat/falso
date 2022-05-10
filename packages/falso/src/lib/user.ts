@@ -63,5 +63,5 @@ export function randUser<Options extends FakeOptions = never>(
     return user;
   };
 
-  return fake(factory, options, objectWithIdIsUnique);
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

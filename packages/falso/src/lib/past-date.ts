@@ -41,5 +41,7 @@ export function randPastDate<Options extends PastOptions = never>(
   const to = new Date();
   const from = new Date(to.getTime() - yearsInMilliseconds);
 
-  return fake(() => randBetweenDate({ from, to }), options, dateIsUnique);
+  return fake(() => randBetweenDate({ from, to }), options, {
+    uniqueComparer: dateIsUnique,
+  });
 }

@@ -96,7 +96,7 @@ export function randJSON<Options extends RandomJSONOptions = never>(
     return generatedObject;
   };
 
-  return fake(factory, options, checkUnique);
+  return fake(factory, options, { uniqueComparer: checkUnique });
 }
 
 const checkUnique: (item: object, items: object[]) => boolean = (
