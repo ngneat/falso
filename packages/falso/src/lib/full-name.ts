@@ -4,6 +4,7 @@ import { randFirstName } from './first-name';
 
 export interface NameOptions extends FakeOptions {
   withAccents?: boolean;
+  gender?: 'male' | 'female';
 }
 
 /**
@@ -17,7 +18,11 @@ export interface NameOptions extends FakeOptions {
  *
  * @example
  *
- * randFullName({ withAccents: false })
+ * randFullName({ gender: 'female' }) // Emma Marková
+ *
+ * @example
+ *
+ * randFullName({ withAccents: false }) // return full name without special symbols like â, î or ô and etc
  *
  * @example
  *
@@ -29,6 +34,7 @@ export function randFullName<Options extends NameOptions = never>(
 ) {
   const nameOptions = {
     withAccents: options?.withAccents,
+    gender: options?.gender,
   };
 
   return fake(
