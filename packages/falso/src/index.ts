@@ -4,6 +4,7 @@ export { randAccount } from './lib/account';
 export { randAlpha } from './lib/alpha';
 export { randAlphaNumeric } from './lib/alpha-numeric';
 export { randAmericanFootballTeam } from './lib/american-football-team';
+export { randAmount } from './lib/amount';
 export { randAnimalType } from './lib/animal-type';
 export { randArn } from './lib/arn';
 export { randAvatar } from './lib/avatar';
