@@ -31,12 +31,7 @@ export function randWord<Options extends WordOptions = never>(
   options?: Options
 ) {
   const factory = () => {
-    let word = '';
-
-    // make sure the minimal length is 2 as in some occasions it can be just a letter
-    while (word.length < 2){
-      word = randElement(data);
-    }
+    let word = randElement(data);
 
     if (options?.capitalize) {
       word = capitalizeFirstLetter(word);
