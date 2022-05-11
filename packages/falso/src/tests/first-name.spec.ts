@@ -17,7 +17,10 @@ describe('firstName', () => {
   describe('first-name.json', () => {
     describe('withoutAccents', () => {
       it('should not contain any accented characters', () => {
-        const allNames = data.withoutAccents.join('');
+        const allNames = [
+          ...data.withoutAccents.male,
+          ...data.withoutAccents.female,
+        ].join('');
 
         expect(allNames).not.toMatch(specialCharRegex);
       });
@@ -26,6 +29,7 @@ describe('firstName', () => {
 
   describe('withAccents is passed', () => {
     let withAccents: boolean;
+    let gender: 'male' | 'female';
 
     describe('withAccents is true', () => {
       beforeEach(() => {
@@ -36,6 +40,22 @@ describe('firstName', () => {
         const result = randFirstName({ withAccents });
 
         expect(result.match(specialCharRegex)).toBeTruthy();
+      });
+
+      it('should return a firstName with at least 1 accented character and female gender', () => {
+        gender = 'female';
+        const result = randFirstName({ withAccents, gender });
+
+        expect(result.match(specialCharRegex)).toBeTruthy();
+        expect(data.withAccents.female.includes(result)).toBe(true);
+      });
+
+      it('should return a firstName with at least 1 accented character and male gender', () => {
+        gender = 'male';
+        const result = randFirstName({ withAccents, gender });
+
+        expect(result.match(specialCharRegex)).toBeTruthy();
+        expect(data.withAccents.male.includes(result)).toBe(true);
       });
     });
 
@@ -48,6 +68,22 @@ describe('firstName', () => {
         const result = randFirstName({ withAccents });
 
         expect(result.match(specialCharRegex)).toBeFalsy();
+      });
+
+      it('should return a firstName with only non-accented characters and female gender', () => {
+        gender = 'female';
+        const result = randFirstName({ withAccents, gender });
+
+        expect(result.match(specialCharRegex)).toBeFalsy();
+        expect(data.withoutAccents.female.includes(result)).toBe(true);
+      });
+
+      it('should return a firstName with only non-accented characters and male gender', () => {
+        gender = 'male';
+        const result = randFirstName({ withAccents, gender });
+
+        expect(result.match(specialCharRegex)).toBeFalsy();
+        expect(data.withoutAccents.male.includes(result)).toBe(true);
       });
     });
   });
@@ -97,9 +133,15 @@ describe('firstName', () => {
           length: 3,
         });
 
-        expect(data.withoutAccents).toContain(firstName1);
-        expect(data.withoutAccents).toContain(firstName2);
-        expect(data.withoutAccents).toContain(firstName3);
+        const names = [
+          ...data.withoutAccents.male,
+          ...data.withoutAccents.female,
+        ];
+
+        expect(randBooleanSpy).toHaveBeenCalled();
+        expect(names).toContain(firstName1);
+        expect(names).toContain(firstName2);
+        expect(names).toContain(firstName3);
       });
     });
   });
