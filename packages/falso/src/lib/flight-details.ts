@@ -52,7 +52,7 @@ function generateFlightLength(): number {
  *
  * @example
  *
- * randFlightDetails({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFlightDetails({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFlightDetails<Options extends FlightDetailsOptions = never>(

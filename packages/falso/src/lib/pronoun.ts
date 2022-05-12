@@ -16,7 +16,7 @@ import { data } from './pronoun.json';
  *
  * @example
  *
- * randPronoun({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randPronoun({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randPronoun<Options extends FakeOptions = never>(

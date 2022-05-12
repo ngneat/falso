@@ -17,7 +17,7 @@ import { randWord } from './word';
  *
  * @example
  *
- * randUrl({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randUrl({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randUrl<Options extends FakeOptions = never>(

@@ -16,7 +16,7 @@ import { data } from './lines.json';
  *
  * @example
  *
- * randLines({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randLines({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randLines<Options extends FakeOptions = never>(

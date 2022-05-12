@@ -16,7 +16,7 @@ import { randNumber } from './number';
  *
  * @example
  *
- * randPort({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randPort({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randPort<Options extends FakeOptions = never>(

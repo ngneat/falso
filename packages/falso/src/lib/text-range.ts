@@ -21,7 +21,7 @@ export interface TextRangeOptions extends FakeOptions {
  *
  * @example
  *
- * randTextRange({ min: 10, max: 100, length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randTextRange({ min: 10, max: 100, length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randTextRange<Options extends TextRangeOptions = never>(

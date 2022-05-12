@@ -2,7 +2,7 @@ import { fake, FakeOptions } from './core/core';
 import { randNumber } from './number';
 
 function generator() {
-  return randNumber({min:0, max:15}).toString(16);
+  return randNumber({ min: 0, max: 15 }).toString(16);
 }
 
 /**
@@ -20,7 +20,7 @@ function generator() {
  *
  * @example
  *
- * randHexaDecimal({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randHexaDecimal({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randHexaDecimal<Options extends FakeOptions = never>(

@@ -16,7 +16,7 @@ import { data } from './drinks.json';
  *
  * @example
  *
- * randDrinks({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randDrinks({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randDrinks<Options extends FakeOptions = never>(

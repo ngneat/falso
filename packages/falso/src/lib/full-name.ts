@@ -30,7 +30,7 @@ export interface NameOptions extends FakeOptions {
  *
  * @example
  *
- * randFullName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFullName({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFullName<Options extends NameOptions = never>(

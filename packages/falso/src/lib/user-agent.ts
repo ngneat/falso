@@ -16,7 +16,7 @@ import { data } from './user-agent.json';
  *
  * @example
  *
- * randUserAgent({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randUserAgent({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randUserAgent<Options extends FakeOptions = never>(

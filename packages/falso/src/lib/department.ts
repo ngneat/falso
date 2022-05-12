@@ -16,7 +16,7 @@ import { data } from './department.json';
  *
  * @example
  *
- * randDepartment({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randDepartment({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randDepartment<Options extends FakeOptions = never>(

@@ -32,7 +32,7 @@ function getSpecialCharacter(wordCount: number): string {
  *
  * @example
  *
- * randSentence({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randSentence({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randSentence<Options extends FakeOptions = never>(

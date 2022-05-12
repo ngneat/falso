@@ -16,7 +16,7 @@ import { data } from './directory-path.json';
  *
  * @example
  *
- * randDirectoryPath({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randDirectoryPath({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randDirectoryPath<Options extends FakeOptions = never>(

@@ -16,7 +16,7 @@ import { data } from './ethereum-address.json';
  *
  * @example
  *
- * randEthereumAddress({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randEthereumAddress({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randEthereumAddress<Options extends FakeOptions = never>(

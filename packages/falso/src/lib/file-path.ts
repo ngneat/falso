@@ -16,7 +16,7 @@ import { data } from './file-path.json';
  *
  * @example
  *
- * randFilePath({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFilePath({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFilePath<Options extends FakeOptions = never>(

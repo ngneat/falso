@@ -16,7 +16,7 @@ import { data } from './social.json';
  *
  * @example
  *
- * randSocial({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randSocial({ length: 10, priority: 'unique' }) // default is 'length'
  *
  *
  */

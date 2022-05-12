@@ -39,7 +39,7 @@ export type Brand =
  *
  * @example
  *
- * randCreditCardNumber({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randCreditCardNumber({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randCreditCardNumber<

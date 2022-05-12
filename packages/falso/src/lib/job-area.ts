@@ -16,7 +16,7 @@ import { data } from './job-area.json';
  *
  * @example
  *
- * randJobArea({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randJobArea({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randJobArea<Options extends FakeOptions = never>(

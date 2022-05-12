@@ -16,7 +16,7 @@ import { data } from './abbreviation.json';
  *
  * @example
  *
- * randAbbreviation({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randAbbreviation({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randAbbreviation<O extends FakeOptions = never>(options?: O) {

@@ -18,7 +18,7 @@ import { randNumber } from './number';
  *
  * @example
  *
- * randAlphaNumeric({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randAlphaNumeric({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randAlphaNumeric<Options extends FakeOptions = never>(

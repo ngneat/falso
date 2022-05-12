@@ -24,7 +24,7 @@ export interface RGBOptions extends FakeOptions {
  *
  * @example
  *
- * randRgb({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randRgb({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randRgb<Options extends RGBOptions = never>(options?: Options) {

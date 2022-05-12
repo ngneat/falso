@@ -19,7 +19,7 @@ import { randGitCommitMessage } from './git-commit-message';
  *
  * @example
  *
- * randGitCommitEntry({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randGitCommitEntry({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randGitCommitEntry<Options extends FakeOptions = never>(

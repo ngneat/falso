@@ -16,7 +16,7 @@ import { data } from './browser.json';
  *
  * @example
  *
- * randBrowser({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randBrowser({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randBrowser<Options extends FakeOptions = never>(

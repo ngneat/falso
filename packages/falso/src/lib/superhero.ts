@@ -38,7 +38,7 @@ export interface SuperheroEntity extends Superhero {
  *
  * @example
  *
- * randSuperhero({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randSuperhero({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randSuperhero<Options extends SuperheroOptions = never>(

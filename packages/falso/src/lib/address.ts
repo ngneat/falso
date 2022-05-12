@@ -42,7 +42,7 @@ export interface Address {
  *
  * @example
  *
- * randAddress({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randAddress({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randAddress<Options extends AddressOptions = never>(

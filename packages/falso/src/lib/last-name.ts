@@ -22,7 +22,7 @@ import { NameOptions } from './full-name';
  *
  * @example
  *
- * randLastName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randLastName({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randLastName<Options extends NameOptions = never>(

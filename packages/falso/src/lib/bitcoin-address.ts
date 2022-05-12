@@ -16,7 +16,7 @@ import { randSequence } from './sequence';
  *
  * @example
  *
- * randBitcoinAddress({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randBitcoinAddress({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randBitcoinAddress<Options extends FakeOptions = never>(

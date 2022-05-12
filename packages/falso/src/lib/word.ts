@@ -28,7 +28,7 @@ function capitalizeFirstLetter(text: string): string {
  *
  * @example
  *
- * randWord({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randWord({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randWord<Options extends WordOptions = never>(

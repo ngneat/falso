@@ -22,7 +22,7 @@ type Type = 'Project' | 'User Story' | 'Task';
  *
  * @example
  *
- * randStatus({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randStatus({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 

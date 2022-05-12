@@ -16,7 +16,7 @@ import { data } from './ordinal-direction.json';
  *
  * @example
  *
- * randOrdinalDirection({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randOrdinalDirection({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randOrdinalDirection<Options extends FakeOptions = never>(

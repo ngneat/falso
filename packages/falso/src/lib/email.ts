@@ -73,7 +73,7 @@ function randFormattedName<Options extends EmailOptions = never>(
  *
  * @example
  *
- * randEmail({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randEmail({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randEmail<Options extends EmailOptions = never>(

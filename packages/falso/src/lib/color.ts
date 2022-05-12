@@ -16,7 +16,7 @@ import { data } from './color.json';
  *
  * @example
  *
- * randColor({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randColor({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randColor<Options extends FakeOptions = never>(

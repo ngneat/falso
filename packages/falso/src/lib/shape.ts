@@ -16,7 +16,7 @@ import { data } from './shape.json';
  *
  * @example
  *
- * randShape({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randShape({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randShape<Options extends FakeOptions = never>(

@@ -16,7 +16,7 @@ import { data } from './bird.i18n.json';
  *
  * @example
  *
- * randBird({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randBird({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randBird<Options extends FakeOptions = never>(

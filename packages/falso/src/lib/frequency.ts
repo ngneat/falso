@@ -16,7 +16,7 @@ import { data } from './frequency.json';
  *
  * @example
  *
- * randFrequency({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFrequency({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFrequency<Options extends FakeOptions = never>(

@@ -27,7 +27,7 @@ export interface Post {
  *
  * @example
  *
- * randPost({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randPost({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randPost<Options extends FakeOptions = never>(

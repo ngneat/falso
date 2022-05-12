@@ -49,7 +49,7 @@ export interface CreditCard {
  *
  * @example
  *
- * randCreditCard({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randCreditCard({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randCreditCard<Options extends CreditCardOptions = never>(

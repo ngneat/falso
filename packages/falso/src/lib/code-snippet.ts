@@ -42,7 +42,7 @@ interface CodeSnippetOptions extends FakeOptions {
  *
  * @example
  *
- * randCodeSnippet({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randCodeSnippet({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randCodeSnippet<Options extends CodeSnippetOptions = never>(

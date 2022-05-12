@@ -16,7 +16,7 @@ import { data } from './database-engine.json';
  *
  * @example
  *
- * randDatabaseEngine({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randDatabaseEngine({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randDatabaseEngine<Options extends FakeOptions = never>(

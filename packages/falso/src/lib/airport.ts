@@ -23,7 +23,7 @@ export interface Airport {
  *
  * @example
  *
- * randAirport({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randAirport({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randAirport<Options extends FakeOptions = never>(

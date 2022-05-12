@@ -16,7 +16,7 @@ import { data } from './cat.json';
  *
  * @example
  *
- * randCat({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randCat({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randCat<Options extends FakeOptions = never>(

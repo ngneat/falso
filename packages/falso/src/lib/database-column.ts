@@ -16,7 +16,7 @@ import { data } from './database-column.json';
  *
  * @example
  *
- * randDatabaseColumn({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randDatabaseColumn({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randDatabaseColumn<Options extends FakeOptions = never>(

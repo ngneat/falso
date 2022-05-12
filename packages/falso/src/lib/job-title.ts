@@ -16,7 +16,7 @@ import { data } from './job-title.json';
  *
  * @example
  *
- * randJobTitle({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randJobTitle({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randJobTitle<Options extends FakeOptions = never>(

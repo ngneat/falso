@@ -16,7 +16,7 @@ import { data } from './product-category.json';
  *
  * @example
  *
- * randProductCategory({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randProductCategory({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randProductCategory<Options extends FakeOptions = never>(

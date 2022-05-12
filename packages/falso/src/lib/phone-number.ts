@@ -254,7 +254,7 @@ type CountryCode =
  *
  * @example
  *
- * randPhoneNumber({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randPhoneNumber({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randPhoneNumber<

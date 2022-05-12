@@ -16,7 +16,7 @@ import { data } from './accessory.json';
  *
  * @example
  *
- * randAccessory({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randAccessory({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randAccessory<Options extends FakeOptions = never>(

@@ -16,7 +16,7 @@ import { data } from './subscription-plan.json';
  *
  * @example
  *
- * randSubscriptionPlan({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randSubscriptionPlan({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randSubscriptionPlan<Options extends FakeOptions = never>(

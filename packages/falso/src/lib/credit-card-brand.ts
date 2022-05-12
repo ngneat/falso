@@ -16,7 +16,7 @@ import { data } from './credit-card-brand.json';
  *
  * @example
  *
- * randCreditCardBrand({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randCreditCardBrand({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randCreditCardBrand<Options extends FakeOptions = never>(

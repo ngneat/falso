@@ -16,7 +16,7 @@ import { data } from './rabbit.json';
  *
  * @example
  *
- * randRabbit({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randRabbit({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randRabbit<Options extends FakeOptions = never>(

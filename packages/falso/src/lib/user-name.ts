@@ -32,7 +32,7 @@ export interface UserNameOptions extends FakeOptions {
  *
  * @example
  *
- * randUserName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randUserName({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randUserName<Options extends UserNameOptions = never>(

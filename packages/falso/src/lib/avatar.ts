@@ -23,7 +23,7 @@ interface AvatarOptions extends FakeOptions {
  *
  * @example
  *
- * randAvatar({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randAvatar({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randAvatar<Options extends AvatarOptions = never>(

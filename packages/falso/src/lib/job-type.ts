@@ -16,7 +16,7 @@ import { data } from './job-type.json';
  *
  * @example
  *
- * randJobType({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randJobType({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randJobType<Options extends FakeOptions = never>(

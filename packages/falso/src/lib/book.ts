@@ -37,7 +37,7 @@ export interface Book {
  *
  * @example
  *
- * randBook({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randBook({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randBook<Options extends BookOptions = never>(

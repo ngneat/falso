@@ -16,7 +16,7 @@ import { data } from './oauth-provider.json';
  *
  * @example
  *
- * randOAuthProvider({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randOAuthProvider({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randOAuthProvider<Options extends FakeOptions = never>(

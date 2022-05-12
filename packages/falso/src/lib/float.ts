@@ -30,7 +30,7 @@ export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
  *
  * @example
  *
- * randFloat({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFloat({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFloat<Options extends RandomFloatOptions = never>(

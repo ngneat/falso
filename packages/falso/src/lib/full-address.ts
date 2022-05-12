@@ -24,7 +24,7 @@ import { AddressOptions, randAddress } from './address';
  *
  * @example
  *
- * randFullAddress({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFullAddress({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFullAddress<Options extends AddressOptions = never>(

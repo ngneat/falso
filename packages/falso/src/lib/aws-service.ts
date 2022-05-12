@@ -16,7 +16,7 @@ import { data } from './aws-service.json';
  *
  * @example
  *
- * randAwsService({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randAwsService({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randAwsService<Options extends FakeOptions = never>(

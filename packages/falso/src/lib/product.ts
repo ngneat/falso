@@ -34,7 +34,7 @@ export interface Product {
  *
  * @example
  *
- * randProduct({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randProduct({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randProduct<Options extends FakeOptions = never>(

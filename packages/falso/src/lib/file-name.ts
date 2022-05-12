@@ -16,7 +16,7 @@ import { data } from './file-name.json';
  *
  * @example
  *
- * randFileName({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFileName({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFileName<

@@ -26,7 +26,7 @@ export interface IbanOptions extends FakeOptions {
  *
  * @example
  *
- * randIban({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randIban({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randIban<Options extends IbanOptions = never>(

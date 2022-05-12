@@ -16,7 +16,7 @@ import { data } from './file-ext.json';
  *
  * @example
  *
- * randFileExt({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randFileExt({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randFileExt<Options extends FakeOptions = never>(

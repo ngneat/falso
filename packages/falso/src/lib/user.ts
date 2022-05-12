@@ -39,7 +39,7 @@ export interface User {
  *
  * @example
  *
- * randUser({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randUser({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randUser<Options extends FakeOptions = never>(

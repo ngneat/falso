@@ -25,7 +25,7 @@ interface PastOptions extends FakeOptions {
  *
  * @example
  *
- * randPastDate({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randPastDate({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randPastDate<Options extends PastOptions = never>(

@@ -40,7 +40,7 @@ export interface RandomNumberOptions extends RandomInRangeOptions, FakeOptions {
  *
  * @example
  *
- * randNumber({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randNumber({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randNumber<Options extends RandomNumberOptions = never>(

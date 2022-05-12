@@ -17,7 +17,7 @@ type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
  *
  * @example
  *
- * randImg({ length: 10, priority: 'unique' }) // default is 'length' ('length' | 'unique')
+ * randImg({ length: 10, priority: 'unique' }) // default is 'length'
  *
  */
 export function randImg<
