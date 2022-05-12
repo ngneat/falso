@@ -1,10 +1,19 @@
 import { randFloat } from '../lib/float';
 
-describe('random-float', () => {
+describe('float', () => {
   it('should return a random float between min and max default values', () => {
     const [min, max] = [1.0, 9999.99];
     expect(randFloat()).toBeGreaterThanOrEqual(min);
     expect(randFloat()).toBeLessThanOrEqual(max);
+  });
+
+  it('should return a list of random float numbers between min and max default values', () => {
+    const [min, max] = [1.0, 9999.99];
+    const result = randFloat({ min, max, length: 10 });
+
+    expect(result[0]).toBeGreaterThanOrEqual(min);
+    expect(result[0]).toBeLessThanOrEqual(max);
+    expect(result.length).toBe(10);
   });
 
   it('should return a random float between 1.1 and 20.0', () => {

@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.3.0](https://github.com/ngneat/falso/compare/falso-5.2.1...falso-5.3.0) (2022-05-12)
+
+### Bug Fixes
+
+- **word:** word should more than 1 chars ([465b959](https://github.com/ngneat/falso/commit/465b9592449f004cd04dd49ebd6b31ceb4328f70))
+
+### Features
+
+- 🔥 add gender support for firstname ([2c7d752](https://github.com/ngneat/falso/commit/2c7d7527e12317ba107cede2b3a66c20795c384c)), closes [#262](https://github.com/ngneat/falso/issues/262)
+- 🔥 introduce randAmount ([d6d0fb7](https://github.com/ngneat/falso/commit/d6d0fb730b76ec67ac4ef58348965a8a6d54d607))
+
 ## [5.2.1](https://github.com/ngneat/falso/compare/falso-5.2.0...falso-5.2.1) (2022-05-08)
 
 ### Bug Fixes
