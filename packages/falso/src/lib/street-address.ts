@@ -17,7 +17,7 @@ import { randStreetName } from './street-name';
  *
  * @example
  *
- * randStreetAddress({ length: 10, priority: 'unique' }) // default is 'length'
+ * randStreetAddress({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randStreetAddress<Options extends FakeOptions = never>(

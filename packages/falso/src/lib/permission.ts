@@ -24,7 +24,7 @@ interface PermissionOptions extends FakeOptions {
  *
  * @example
  *
- * randPermission({ length: 10, priority: 'unique' }) // default is 'length'
+ * randPermission({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randPermission<Options extends PermissionOptions = never>(

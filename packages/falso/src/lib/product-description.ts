@@ -16,7 +16,7 @@ import { data } from './product-description.json';
  *
  * @example
  *
- * randProductDescription({ length: 10, priority: 'unique' }) // default is 'length'
+ * randProductDescription({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randProductDescription<Options extends FakeOptions = never>(

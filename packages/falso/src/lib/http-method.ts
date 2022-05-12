@@ -16,7 +16,7 @@ import { data } from './http-method.json';
  *
  * @example
  *
- * randHttpMethod({ length: 10, priority: 'unique' }) // default is 'length'
+ * randHttpMethod({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randHttpMethod<Options extends FakeOptions = never>(

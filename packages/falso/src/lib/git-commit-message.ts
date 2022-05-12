@@ -17,7 +17,7 @@ import { randWord } from './word';
  *
  * @example
  *
- * randGitCommitMessage({ length: 10, priority: 'unique' }) // default is 'length'
+ * randGitCommitMessage({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randGitCommitMessage<Options extends FakeOptions = never>(

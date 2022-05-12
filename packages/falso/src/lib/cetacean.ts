@@ -16,7 +16,7 @@ import { data } from './cetacean.json';
  *
  * @example
  *
- * randCetacean({ length: 10, priority: 'unique' }) // default is 'length'
+ * randCetacean({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randCetacean<Options extends FakeOptions = never>(

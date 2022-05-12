@@ -16,7 +16,7 @@ import { data } from './fish.json';
  *
  * @example
  *
- * randFish({ length: 10, priority: 'unique' }) // default is 'length'
+ * randFish({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randFish<Options extends FakeOptions = never>(

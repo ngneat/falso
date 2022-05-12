@@ -16,7 +16,7 @@ import { data } from './verb.json';
  *
  * @example
  *
- * randVerb({ length: 10, priority: 'unique' }) // default is 'length'
+ * randVerb({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randVerb<Options extends FakeOptions = never>(

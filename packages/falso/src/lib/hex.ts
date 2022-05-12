@@ -16,7 +16,7 @@ import { random } from './random';
  *
  * @example
  *
- * randHex({ length: 10, priority: 'unique' }) // default is 'length'
+ * randHex({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randHex<Options extends FakeOptions = never>(

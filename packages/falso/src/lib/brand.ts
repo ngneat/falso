@@ -16,7 +16,7 @@ import { data } from './brand.json';
  *
  * @example
  *
- * randBrand({ length: 10, priority: 'unique' }) // default is 'length'
+ * randBrand({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randBrand<Options extends FakeOptions = never>(

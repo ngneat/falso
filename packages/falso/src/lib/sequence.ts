@@ -53,7 +53,7 @@ type RandomSequenceOptions2 = {
  *
  * @example
  *
- * randSequence({ length: 10, priority: 'unique' }) // default is 'length'
+ * randSequence({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randSequence<Options extends RandomSequenceOptions = never>(

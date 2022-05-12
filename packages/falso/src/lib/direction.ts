@@ -16,7 +16,7 @@ import { data } from './direction.json';
  *
  * @example
  *
- * randDirection({ length: 10, priority: 'unique' }) // default is 'length'
+ * randDirection({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randDirection<Options extends FakeOptions = never>(

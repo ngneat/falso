@@ -16,7 +16,7 @@ import { randHexaDecimal } from './hexa-decimal';
  *
  * @example
  *
- * randIpv6({ length: 10, priority: 'unique' }) // default is 'length'
+ * randIpv6({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randIpv6<Options extends FakeOptions = never>(

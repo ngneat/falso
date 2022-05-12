@@ -25,7 +25,7 @@ interface ProtocolOptions extends FakeOptions {
  *
  * @example
  *
- * randProtocol({ length: 10, priority: 'unique' }) // default is 'length'
+ * randProtocol({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randProtocol<Options extends ProtocolOptions = never>(

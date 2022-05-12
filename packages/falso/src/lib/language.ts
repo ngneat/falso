@@ -25,7 +25,7 @@ interface LanguageOptions extends FakeOptions {
  *
  * @example
  *
- * randLanguage({ length: 10, priority: 'unique' }) // default is 'length'
+ * randLanguage({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randLanguage<Options extends LanguageOptions = never>(

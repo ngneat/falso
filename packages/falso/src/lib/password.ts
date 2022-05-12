@@ -24,7 +24,7 @@ export interface PasswordOptions extends FakeOptions {
  *
  * @example
  *
- * randPassword({ length: 10, priority: 'unique' }) // default is 'length'
+ * randPassword({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randPassword<Options extends PasswordOptions = never>(

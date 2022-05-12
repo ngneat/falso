@@ -20,7 +20,7 @@ import { randIceHockeyTeam } from './ice-hockey-team';
  *
  * @example
  *
- * randSportsTeam({ length: 10, priority: 'unique' }) // default is 'length'
+ * randSportsTeam({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randSportsTeam<Options extends FakeOptions = never>(

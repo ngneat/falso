@@ -20,7 +20,7 @@ function generator() {
  *
  * @example
  *
- * randHexaDecimal({ length: 10, priority: 'unique' }) // default is 'length'
+ * randHexaDecimal({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randHexaDecimal<Options extends FakeOptions = never>(

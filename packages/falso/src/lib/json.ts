@@ -73,7 +73,7 @@ const generateRandomValue = (): any => {
  *
  * @example
  *
- * randJSON({ length: 10, priority: 'unique' }) // default is 'length'
+ * randJSON({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randJSON<Options extends RandomJSONOptions = never>(

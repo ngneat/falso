@@ -16,7 +16,7 @@ import { data } from './airline.json';
  *
  * @example
  *
- * randAirline({ length: 10, priority: 'unique' }) // default is 'length'
+ * randAirline({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randAirline<Options extends FakeOptions = never>(

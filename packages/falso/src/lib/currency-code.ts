@@ -16,7 +16,7 @@ import { data } from './currency-code.json';
  *
  * @example
  *
- * randCurrencyCode({ length: 10, priority: 'unique' }) // default is 'length'
+ * randCurrencyCode({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randCurrencyCode<Options extends FakeOptions = never>(

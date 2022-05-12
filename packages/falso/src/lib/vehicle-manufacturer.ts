@@ -16,7 +16,7 @@ import { data } from './vehicle-manufacturer.json';
  *
  * @example
  *
- * randVehicleManufacturer({ length: 10, priority: 'unique' }) // default is 'length'
+ * randVehicleManufacturer({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randVehicleManufacturer<Options extends FakeOptions = never>(

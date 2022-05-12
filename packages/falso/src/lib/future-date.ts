@@ -25,7 +25,7 @@ interface FutureOptions extends FakeOptions {
  *
  * @example
  *
- * randFutureDate({ length: 10, priority: 'unique' }) // default is 'length'
+ * randFutureDate({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randFutureDate<Options extends FutureOptions = never>(

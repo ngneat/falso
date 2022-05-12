@@ -24,7 +24,7 @@ export interface MonthOptions extends FakeOptions {
  *
  * @example
  *
- * randMonth({ length: 10, priority: 'unique' }) // default is 'length'
+ * randMonth({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randMonth<Options extends MonthOptions = never>(

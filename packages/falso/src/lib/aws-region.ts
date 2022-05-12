@@ -16,7 +16,7 @@ import { data } from './aws-region.json';
  *
  * @example
  *
- * randAwsRegion({ length: 10, priority: 'unique' }) // default is 'length'
+ * randAwsRegion({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randAwsRegion<Options extends FakeOptions = never>(

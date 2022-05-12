@@ -16,7 +16,7 @@ import { data } from './role.json';
  *
  * @example
  *
- * randRole({ length: 10, priority: 'unique' }) // default is 'length'
+ * randRole({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randRole<Options extends FakeOptions = never>(

@@ -15,7 +15,7 @@ import { fake, FakeOptions, randElement } from './core/core';
  *
  * @example
  *
- * randBoolean({ length: 10, priority: 'unique' }) // default is 'length'
+ * randBoolean({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randBoolean<Options extends FakeOptions = never>(

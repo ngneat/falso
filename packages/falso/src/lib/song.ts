@@ -15,7 +15,7 @@ import { data } from './song.json';
  *
  * @example
  *
- * randSong({ length: 10, priority: 'unique' }) // default is 'length'
+ * randSong({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randSong<Options extends FakeOptions = never>(

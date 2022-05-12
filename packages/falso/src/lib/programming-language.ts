@@ -16,7 +16,7 @@ import { data } from './programming-language.json';
  *
  * @example
  *
- * randProgrammingLanguage({ length: 10, priority: 'unique' }) // default is 'length'
+ * randProgrammingLanguage({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randProgrammingLanguage<Options extends FakeOptions = never>(

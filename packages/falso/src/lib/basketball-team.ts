@@ -16,7 +16,7 @@ import { data } from './basketball-team.json';
  *
  * @example
  *
- * randBasketballTeam({ length: 10, priority: 'unique' }) // default is 'length'
+ * randBasketballTeam({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randBasketballTeam<Options extends FakeOptions = never>(

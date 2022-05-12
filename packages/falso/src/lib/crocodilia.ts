@@ -16,7 +16,7 @@ import { data } from './crocodilia.json';
  *
  * @example
  *
- * randCrocodilia({ length: 10, priority: 'unique' }) // default is 'length'
+ * randCrocodilia({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randCrocodilia<Options extends FakeOptions = never>(

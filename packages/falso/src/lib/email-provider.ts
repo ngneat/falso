@@ -16,7 +16,7 @@ import { data } from './email-provider.json';
  *
  * @example
  *
- * randEmailProvider({ length: 10, priority: 'unique' }) // default is 'length'
+ * randEmailProvider({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randEmailProvider<Options extends FakeOptions = never>(

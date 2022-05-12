@@ -16,7 +16,7 @@ import { data } from './snake.json';
  *
  * @example
  *
- * randSnake({ length: 10, priority: 'unique' }) // default is 'length'
+ * randSnake({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randSnake<Options extends FakeOptions = never>(

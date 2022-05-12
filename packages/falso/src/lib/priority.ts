@@ -16,7 +16,7 @@ import { data } from './priority.json';
  *
  * @example
  *
- * randPriority({ length: 10, priority: 'unique' }) // default is 'length'
+ * randPriority({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randPriority<Options extends FakeOptions = never>(

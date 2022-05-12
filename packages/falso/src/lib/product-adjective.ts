@@ -16,7 +16,7 @@ import { data } from './product-adjective.json';
  *
  * @example
  *
- * randProductAdjective({ length: 10, priority: 'unique' }) // default is 'length'
+ * randProductAdjective({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randProductAdjective<Options extends FakeOptions = never>(

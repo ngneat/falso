@@ -20,7 +20,7 @@ import { randAlpha } from './alpha';
  *
  * @example
  *
- * randMask({ length: 10, priority: 'unique' }) // default is 'length'
+ * randMask({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randMask<

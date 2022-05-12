@@ -15,7 +15,7 @@ import { data } from './movie.json';
  *
  * @example
  *
- * randMovie({ length: 10, priority: 'unique' }) // default is 'length'
+ * randMovie({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randMovie<Options extends FakeOptions = never>(

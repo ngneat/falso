@@ -46,7 +46,7 @@ const totalOrigins = Object.keys(data)?.length;
  *
  * @example
  *
- * randFood({ length: 10, priority: 'unique' }) // default is 'length'
+ * randFood({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randFood<Options extends FoodOptions = never>(

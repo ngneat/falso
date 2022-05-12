@@ -15,7 +15,7 @@ import { data } from './singer.json';
  *
  * @example
  *
- * randSinger({ length: 10, priority: 'unique' }) // default is 'length'
+ * randSinger({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randSinger<Options extends FakeOptions = never>(

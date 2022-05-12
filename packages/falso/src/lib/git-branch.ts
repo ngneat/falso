@@ -16,7 +16,7 @@ import { data } from './git-branch.json';
  *
  * @example
  *
- * randGitBranch({ length: 10, priority: 'unique' }) // default is 'length'
+ * randGitBranch({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randGitBranch<Options extends FakeOptions = never>(

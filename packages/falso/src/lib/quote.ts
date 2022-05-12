@@ -16,7 +16,7 @@ import { data } from './quote.json';
  *
  * @example
  *
- * randQuote({ length: 10, priority: 'unique' }) // default is 'length'
+ * randQuote({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randQuote<Options extends FakeOptions = never>(

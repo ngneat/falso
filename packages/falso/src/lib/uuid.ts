@@ -16,7 +16,7 @@ import { fake, FakeOptions } from './core/core';
  *
  * @example
  *
- * randUuid({ length: 10, priority: 'unique' }) // default is 'length'
+ * randUuid({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randUuid<Options extends FakeOptions = never>(

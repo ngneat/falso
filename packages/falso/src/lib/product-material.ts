@@ -16,7 +16,7 @@ import { data } from './product-material.json';
  *
  * @example
  *
- * randProductMaterial({ length: 10, priority: 'unique' }) // default is 'length'
+ * randProductMaterial({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randProductMaterial<Options extends FakeOptions = never>(

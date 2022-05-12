@@ -16,7 +16,7 @@ import { data } from './database-type.json';
  *
  * @example
  *
- * randDatabaseType({ length: 10, priority: 'unique' }) // default is 'length'
+ * randDatabaseType({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randDatabaseType<Options extends FakeOptions = never>(

@@ -15,7 +15,7 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  *
  * @example
  *
- * randCreditCardCVV({ length: 10, priority: 'unique' }) // default is 'length'
+ * randCreditCardCVV({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randCreditCardCVV<Options extends FakeOptions = never>(

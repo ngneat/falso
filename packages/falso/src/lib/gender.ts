@@ -25,7 +25,7 @@ interface GenderOptions extends FakeOptions {
  *
  * @example
  *
- * randGender({ length: 10, priority: 'unique' }) // default is 'length'
+ * randGender({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randGender<Options extends GenderOptions = never>(

@@ -16,7 +16,7 @@ import { data } from './file-type.json';
  *
  * @example
  *
- * randFileType({ length: 10, priority: 'unique' }) // default is 'length'
+ * randFileType({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randFileType<Options extends FakeOptions = never>(

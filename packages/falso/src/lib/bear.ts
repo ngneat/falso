@@ -16,7 +16,7 @@ import { data } from './bear.json';
  *
  * @example
  *
- * randBear({ length: 10, priority: 'unique' }) // default is 'length'
+ * randBear({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randBear<Options extends FakeOptions = never>(

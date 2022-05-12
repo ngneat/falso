@@ -20,7 +20,7 @@ export interface LineOptions extends FakeOptions {
  *
  * @example
  *
- * randLine({ length: 10, priority: 'unique' }) // default is 'length'
+ * randLine({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randLine<Options extends LineOptions = never>(

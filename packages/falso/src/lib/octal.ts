@@ -15,7 +15,7 @@ import { FakeOptions } from './core/core';
  *
  * @example
  *
- * randOctal({ length: 10, priority: 'unique' }) // default is 'length'
+ * randOctal({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randOctal<Options extends FakeOptions = never>(

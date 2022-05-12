@@ -17,7 +17,7 @@ import { randWord } from './word';
  *
  * @example
  *
- * randDomainName({ length: 10, priority: 'unique' }) // default is 'length'
+ * randDomainName({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randDomainName<Options extends FakeOptions = never>(

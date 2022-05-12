@@ -27,7 +27,7 @@ import { rand } from './rand';
  *
  * @example
  *
- * randFirstName({ length: 10, priority: 'unique' }) // default is 'length'
+ * randFirstName({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randFirstName<Options extends NameOptions = never>(

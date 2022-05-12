@@ -17,7 +17,7 @@ import { randLongitude } from './longitude';
  *
  * @example
  *
- * randNearbyGPSCoordinate({ length: 10, priority: 'unique' }) // default is 'length'
+ * randNearbyGPSCoordinate({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randNearbyGPSCoordinate<Options extends FakeOptions = never>(

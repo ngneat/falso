@@ -16,7 +16,7 @@ import { data } from './city.json';
  *
  * @example
  *
- * randCity({ length: 10, priority: 'unique' }) // default is 'length'
+ * randCity({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randCity<Options extends FakeOptions = never>(

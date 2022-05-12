@@ -16,7 +16,7 @@ import { randNumber } from './number';
  *
  * @example
  *
- * randRoutingNumber({ length: 10, priority: 'unique' }) // default is 'length'
+ * randRoutingNumber({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randRoutingNumber<Options extends FakeOptions = never>(
