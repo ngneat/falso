@@ -399,7 +399,7 @@ export {
   randAirportCode,
   randCreditCard,
 };
-export const falso = {
+export declare const falso: {
   randAbbreviation,
   randAccessory,
   randAccount,
