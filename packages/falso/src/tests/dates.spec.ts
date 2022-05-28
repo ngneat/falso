@@ -11,6 +11,12 @@ describe('between', () => {
     expect(randBetweenDate({ from, to })).toBeInstanceOf(Date);
   });
 
+  it('should use date strings', () => {
+    const from = new Date(2020, 4, 4).toISOString();
+    const to = new Date(2020, 5, 5).toISOString();
+    expect(randBetweenDate({ from, to })).toBeInstanceOf(Date);
+  });
+
   it('should return a Date between 2020-04-04 and 2020-05-05', () => {
     const from = new Date(2020, 4, 4);
     const to = new Date(2020, 5, 5);

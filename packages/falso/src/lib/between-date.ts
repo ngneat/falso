@@ -2,8 +2,8 @@ import { fake, FakeOptions } from './core/core';
 import { randNumber } from './number';
 
 interface BetweenOptions extends FakeOptions {
-  from: Date;
-  to: Date;
+  from: Date | string;
+  to: Date | string;
 }
 
 /**
@@ -23,8 +23,8 @@ interface BetweenOptions extends FakeOptions {
 export function randBetweenDate<Options extends BetweenOptions = never>(
   options: Options
 ) {
-  const from = options.from.getTime();
-  const to = options.to.getTime();
+  const from = new Date(options.from).getTime();
+  const to = new Date(options.to).getTime();
 
   if (from >= to) {
     throw new Error('From must be before to');
