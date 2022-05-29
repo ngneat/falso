@@ -19,7 +19,7 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 
 </p>
 
-✅ &nbsp;195 Functions  
+✅ &nbsp;583 Functions  
 ✅ &nbsp;Tree Shakable  
 ✅ &nbsp;Fully Typed  
 ✅ &nbsp;Entity Functions  
@@ -39,11 +39,11 @@ yarn add @ngneat/falso
 ### Usage
 
 ```ts
-import { randEmail, randFullName } from '@ngneat/falso';
+import { falso } from '@ngneat/falso';
 
-const user = { email: randEmail(), name: randFullName() };
+const user = { email: falso.randEmail(), name: falso.randFullName() };
 
-const emails = randEmail({ length: 10 });
+const emails = falso.randEmail({ length: 10 });
 ```
 
 ### Setting a Randomness Seed
@@ -51,15 +51,15 @@ const emails = randEmail({ length: 10 });
 You can set your own seed if you want consistent results:
 
 ```ts
-import { rand, seed } from '@ngneat/falso';
+import { falso } from '@ngneat/falso';
 
-seed('some-constant-seed');
+falso.seed('some-constant-seed');
 
 // Always returns 2
-rand([1, 2, 3, 4, 5]);
+falso.rand([1, 2, 3, 4, 5]);
 
 // Reset random seed
-seed();
+falso.seed();
 ```
 
 ## Contribute
