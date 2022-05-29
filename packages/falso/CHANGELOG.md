@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.4.0](https://github.com/ngneat/falso/compare/falso-5.3.0...falso-5.4.0) (2022-05-29)
+
+### Bug Fixes
+
+- 🐞 Fix full name tests ([6f8348d](https://github.com/ngneat/falso/commit/6f8348dc6f877f70d9d3282ae5944014432e2e9f))
+- 🐞 Generate uuid from seed ([0825d8f](https://github.com/ngneat/falso/commit/0825d8f6d6062559c9055bdd4910981877c22d30)), closes [#232](https://github.com/ngneat/falso/issues/232)
+- **phone-numbers:** fixed typos ([23137c7](https://github.com/ngneat/falso/commit/23137c7bd7f1bba655d825579cba84fa2f9539e7))
+- **phone-numbers:** fixed typos ([cadfc36](https://github.com/ngneat/falso/commit/cadfc36f6ec469d19eedd568a9359ecb9ffaff44))
+
+### Features
+
+- 🔥 allow date strings for betweenDate ([e4da11d](https://github.com/ngneat/falso/commit/e4da11db3fc652c4769c99f92d5b05e323cfdbe2))
+
 # [5.3.0](https://github.com/ngneat/falso/compare/falso-5.2.1...falso-5.3.0) (2022-05-12)
 
 ### Bug Fixes
