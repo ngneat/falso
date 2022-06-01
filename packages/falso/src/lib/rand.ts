@@ -15,7 +15,7 @@ import { fake, FakeOptions } from './core/core';
  *
  */
 export function rand<T, Options extends FakeOptions = never>(
-  arr: T[],
+  arr: Readonly<T[]>,
   options?: Options
 ) {
   return fake(arr, options);

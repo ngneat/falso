@@ -10,11 +10,15 @@ export type Return<T, O extends FakeOptions> = [O] extends [never]
   ? T[]
   : T;
 
+type FactoryFunction<T> = (i: number) => T;
+
 export function fake<T, Options extends FakeOptions>(
-  data: T[] | ((i: number) => T),
+  data: Readonly<T[]> | FactoryFunction<T>,
   options?: Options
 ): Return<T, Options> {
-  const dataSource = Array.isArray(data) ? () => randElement(data) : data;
+  const dataSource = Array.isArray(data)
+    ? () => randElement(data)
+    : (data as FactoryFunction<T>);
 
   if (options?.length === undefined) {
     return dataSource(0) as any;
@@ -25,7 +29,7 @@ export function fake<T, Options extends FakeOptions>(
   ) as any;
 }
 
-export function randElement<T>(arr: T[]) {
+export function randElement<T>(arr: Readonly<T[]>) {
   return arr[Math.floor(random() * arr.length)];
 }
 
