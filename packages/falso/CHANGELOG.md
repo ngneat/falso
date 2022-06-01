@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [5.4.1](https://github.com/ngneat/falso/compare/falso-5.4.0...falso-5.4.1) (2022-06-01)
+
+### Bug Fixes
+
+- 🐞 support readonly arrays ([1cb0c63](https://github.com/ngneat/falso/commit/1cb0c637864051497e5d836ff508d8274a83afa2)), closes [#275](https://github.com/ngneat/falso/issues/275)
+
 # [5.4.0](https://github.com/ngneat/falso/compare/falso-5.3.0...falso-5.4.0) (2022-05-29)
 
 ### Bug Fixes
