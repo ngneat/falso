@@ -1,4 +1,4 @@
-import { isNotNil } from './core/isNotNil';
+import { isNotNil } from '../core/isNotNil';
 
 export interface RandIncrementalNumberOptions {
   from: number;
@@ -9,23 +9,23 @@ export interface RandIncrementalNumberOptions {
 /**
  * Generate incremental numbers.
  *
- * @category general
+ * @category factories
  *
  * @example
  *
- * const factory = randIncrementalNumber()
+ * const factory = incrementalNumber()
  * factory() // returns 1
  * factory() // returns 2
  *
  * @example
  *
- * const factory = randIncrementalNumber({from: 10, to: 100, step: 10})
+ * const factory = incrementalNumber({from: 10, to: 100, step: 10})
  * factory() // returns 10
  * factory() // returns 20
  * ...
  *
  */
-export function randIncrementalNumber(
+export function incrementalNumber(
   options: RandIncrementalNumberOptions = { from: 1, step: 1 }
 ): () => number | undefined {
   if (options.step === 0) {
