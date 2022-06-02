@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.5.0](https://github.com/ngneat/falso/compare/falso-5.4.1...falso-5.5.0) (2022-06-02)
+
+### Bug Fixes
+
+- 🐞 change randIncrementalNumber to incrementalNumber ([2ca7d85](https://github.com/ngneat/falso/commit/2ca7d8544a1fc937d91cb32f47428eb21704c157))
+- cleanup after review ([0df444d](https://github.com/ngneat/falso/commit/0df444d9ea1d8d9198f0fb9c7ba0cf5e82327ee4))
+
+### Features
+
+- 🔥 add randIncrementalNumber function ([de0afbb](https://github.com/ngneat/falso/commit/de0afbb2c51cff94aedb84cc0e605c8da1a3f977)), closes [#278](https://github.com/ngneat/falso/issues/278)
+
 ## [5.4.1](https://github.com/ngneat/falso/compare/falso-5.4.0...falso-5.4.1) (2022-06-01)
 
 ### Bug Fixes
