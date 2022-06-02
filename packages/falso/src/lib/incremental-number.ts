@@ -1,3 +1,5 @@
+import { isNotNil } from './core/isNotNil';
+
 export interface RandIncrementalNumberOptions {
   from: number;
   to?: number;
@@ -11,15 +13,16 @@ export interface RandIncrementalNumberOptions {
  *
  * @example
  *
- * randIncrementalNumber()
+ * const factory = randIncrementalNumber()
+ * factory() // returns 1
+ * factory() // returns 2
  *
  * @example
  *
- * randIncrementalNumber({ from:100, to: 200, step: 10 })
- *
- * @example
- *
- * randMask({ length: 10 })
+ * const factory = randIncrementalNumber({from: 10, to: 100, step: 10})
+ * factory() // returns 10
+ * factory() // returns 20
+ * ...
  *
  */
 export function randIncrementalNumber(
@@ -35,7 +38,7 @@ export function randIncrementalNumber(
     throw new Error('`from` should be a number greater than 0');
   }
 
-  if (options.to != null) {
+  if (isNotNil(options.to)) {
     if (options.to < 0) {
       throw new Error(
         '`to` should be a number greater than from and greater than 0'
@@ -55,16 +58,16 @@ export function randIncrementalNumber(
     }
   }
 
-  let crt = options.from;
+  let currentValue = options.from;
 
   return () => {
-    if (options.to != null) {
-      if (options.step > 0 && crt > options.to) return undefined;
-      if (options.step < 0 && crt < options.to) return undefined;
+    if (isNotNil(options.to)) {
+      if (options.step > 0 && currentValue > options.to) return undefined;
+      if (options.step < 0 && currentValue < options.to) return undefined;
     }
 
-    const next = crt;
-    crt = crt + options.step;
+    const next = currentValue;
+    currentValue = currentValue + options.step;
 
     return next;
   };
