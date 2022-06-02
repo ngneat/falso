@@ -194,3 +194,4 @@ export { randAirportName } from './lib/airport-name';
 export { randAirportCode } from './lib/airport-code';
 export { randCreditCard } from './lib/credit-card';
 export { incrementalNumber } from './lib/factories/incremental-number';
+export { incrementalDate } from './lib/factories/incremental-date';
