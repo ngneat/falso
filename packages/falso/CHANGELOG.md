@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.6.0](https://github.com/ngneat/falso/compare/falso-5.5.0...falso-5.6.0) (2022-06-03)
+
+### Bug Fixes
+
+- allow string and number as input ([50fbd30](https://github.com/ngneat/falso/commit/50fbd3061674ae2ffcca31b3284dd5131b3bb826))
+- expose interface types ([d6af604](https://github.com/ngneat/falso/commit/d6af60478e294f7b8f963a4911607e10246bfd95))
+
+### Features
+
+- 🔥 add randIncrementalDate function ([e35c364](https://github.com/ngneat/falso/commit/e35c36433d22690a53c8d6855748dcfddc349946)), closes [#277](https://github.com/ngneat/falso/issues/277)
+
 # [5.5.0](https://github.com/ngneat/falso/compare/falso-5.4.1...falso-5.5.0) (2022-06-02)
 
 ### Bug Fixes
