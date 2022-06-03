@@ -2,8 +2,8 @@ import { isNotNil } from '../core/isNotNil';
 import { incrementalNumber } from './incremental-number';
 
 export interface IncrementalDateOptions {
-  from: Date;
-  to?: Date;
+  from: Date | string | number;
+  to?: Date | string | number;
   step: number;
 }
 
@@ -36,19 +36,28 @@ export function incrementalDate(
     step: millisecondsPerDay,
   }
 ): () => Date | undefined {
-  if (options.step <= 0) {
+  const from = new Date(options.from);
+  const to = options.to ? new Date(options.to) : undefined;
+
+  if (options.step === 0) {
     throw new Error(
-      '`step` should be a number greater than 0, for example: {from: new Date(), step: 10}'
+      '`step` should be a number different from 0, for example: {from: new Date(), step: 10}'
     );
   }
 
-  if (isNotNil(options.to) && options.to < options.from) {
-    throw new Error('`to` should be a date greater than `from`');
+  if (isNotNil(to)) {
+    if (from > to && options.step > 0) {
+      throw new Error('`to` should be a date greater than or equal to `from`');
+    }
+
+    if (from < to && options.step < 0) {
+      throw new Error('`to` should be a date lower than or equal to `from`');
+    }
   }
 
   const numberFactory = incrementalNumber({
-    from: options.from.getTime(),
-    to: options.to?.getTime(),
+    from: from.getTime(),
+    to: to?.getTime(),
     step: options.step,
   });
 
