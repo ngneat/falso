@@ -1,6 +1,6 @@
 import { isNotNil } from '../core/isNotNil';
 
-export interface RandIncrementalNumberOptions {
+export interface IncrementalNumberOptions {
   from: number;
   to?: number;
   step: number;
@@ -26,7 +26,7 @@ export interface RandIncrementalNumberOptions {
  *
  */
 export function incrementalNumber(
-  options: RandIncrementalNumberOptions = { from: 1, step: 1 }
+  options: IncrementalNumberOptions = { from: 1, step: 1 }
 ): () => number | undefined {
   if (options.step === 0) {
     throw new Error(
