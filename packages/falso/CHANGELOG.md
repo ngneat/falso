@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [5.6.1](https://github.com/ngneat/falso/compare/falso-5.6.0...falso-5.6.1) (2022-06-05)
+
+### Bug Fixes
+
+- remove unexpected "ą" from names without accents ([fe71a6f](https://github.com/ngneat/falso/commit/fe71a6f6b5dc18ed7dfe6e9557ccdff5d281b444))
+
 # [5.6.0](https://github.com/ngneat/falso/compare/falso-5.5.0...falso-5.6.0) (2022-06-03)
 
 ### Bug Fixes
