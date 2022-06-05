@@ -7,7 +7,7 @@ describe('firstName', () => {
 
   beforeEach(() => {
     specialCharRegex =
-      /[āĀàÀáÁâÂãÃäÄÅåæÆçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
+      /[āĀàÀáÁâÂãÃäÄÅåæÆąĄçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
   });
 
   afterAll(() => {
@@ -24,6 +24,16 @@ describe('firstName', () => {
 
         expect(allNames).not.toMatch(specialCharRegex);
       });
+    });
+
+    it('should not contain unexpected special characters', () => {
+      const allNames = [
+        ...data.withoutAccents.male,
+        ...data.withoutAccents.female,
+      ].join('');
+      const notSpecialCharRegex = /[^a-z-]/i;
+
+      expect(allNames).not.toMatch(notSpecialCharRegex);
     });
   });
 

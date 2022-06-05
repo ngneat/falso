@@ -7,7 +7,7 @@ describe('lastName', () => {
 
   beforeEach(() => {
     specialCharRegex =
-      /[āĀàÀáÁâÂãÃäÄÅåæÆçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
+      /[āĀàÀáÁâÂãÃäÄÅåæÆąĄçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
   });
 
   afterAll(() => {
@@ -20,6 +20,13 @@ describe('lastName', () => {
         const allNames = data.withoutAccents.join('');
 
         expect(allNames).not.toMatch(specialCharRegex);
+      });
+
+      it('should not contain unexpected special characters', () => {
+        const allNames = data.withoutAccents.join('');
+        const notSpecialCharRegex = /[^a-z-]/i;
+
+        expect(allNames).not.toMatch(notSpecialCharRegex);
       });
     });
   });
