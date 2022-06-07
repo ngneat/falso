@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.7.0](https://github.com/ngneat/falso/compare/falso-5.6.1...falso-5.7.0) (2022-06-07)
+
+### Features
+
+- 🔥 add i18n firstname locale ([e99af4d](https://github.com/ngneat/falso/commit/e99af4d77b2965b322f3eccfc7081e3bad31c904))
+
 ## [5.6.1](https://github.com/ngneat/falso/compare/falso-5.6.0...falso-5.6.1) (2022-06-05)
 
 ### Bug Fixes
