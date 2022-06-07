@@ -2,6 +2,7 @@ import { random } from '../random';
 
 export interface FakeOptions {
   length?: number;
+  locale?: any | string[];
 }
 
 export type Return<T, O extends FakeOptions> = [O] extends [never]
