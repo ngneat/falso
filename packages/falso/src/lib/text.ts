@@ -13,15 +13,15 @@ export interface TextOptions extends FakeOptions {
  *
  * @example
  *
- * text()
+ * randText()
  *
  * @example
  *
- * text({ length: 10 })
+ * randText({ length: 10 })
  *
  * @example
  *
- * text({ charCount: 10 }) // default is 10
+ * randText({ charCount: 10 }) // default is 10
  *
  */
 export function randText<Options extends TextOptions = never>(
