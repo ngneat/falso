@@ -1,17 +1,13 @@
 import { randFirstName } from '../lib/first-name';
 import { data } from '../lib/first-name.json';
-import * as randBooleanFunctions from '../lib/boolean';
+import { data as locale } from '../lib/i18n/ru/first-name.i18n.json';
 
 describe('firstName', () => {
   let specialCharRegex: RegExp;
 
   beforeEach(() => {
     specialCharRegex =
-      /[āĀàÀáÁâÂãÃäÄÅåæÆçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
-  });
-
-  afterAll(() => {
-    jest.resetAllMocks();
+      /[āĀàÀáÁâÂãÃäÄÅåæÆąĄçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
   });
 
   describe('first-name.json', () => {
@@ -24,6 +20,16 @@ describe('firstName', () => {
 
         expect(allNames).not.toMatch(specialCharRegex);
       });
+    });
+
+    it('should not contain unexpected special characters', () => {
+      const allNames = [
+        ...data.withoutAccents.male,
+        ...data.withoutAccents.female,
+      ].join('');
+      const notSpecialCharRegex = /[^a-z-]/i;
+
+      expect(allNames).not.toMatch(notSpecialCharRegex);
     });
   });
 
@@ -114,21 +120,7 @@ describe('firstName', () => {
     });
 
     describe('length is 3', () => {
-      let randBooleanSpy: jest.SpyInstance;
-
-      beforeEach(() => {
-        randBooleanSpy = jest
-          .spyOn(randBooleanFunctions, 'randBoolean')
-          .mockImplementation(() => null);
-      });
-
-      afterEach(() => {
-        jest.clearAllMocks();
-      });
-
       it('should return an array length of 3, each with a random firstname', () => {
-        randBooleanSpy.mockReturnValue(false);
-
         const [firstName1, firstName2, firstName3] = randFirstName({
           length: 3,
         });
@@ -138,11 +130,32 @@ describe('firstName', () => {
           ...data.withoutAccents.female,
         ];
 
-        expect(randBooleanSpy).toHaveBeenCalled();
         expect(names).toContain(firstName1);
         expect(names).toContain(firstName2);
         expect(names).toContain(firstName3);
       });
+    });
+  });
+
+  describe('with provided locale data', () => {
+    const data = locale;
+
+    it('should works with female gender and provided data', () => {
+      const result = randFirstName({
+        gender: 'female',
+        locale,
+      });
+
+      expect(data.withoutAccents.female.includes(result)).toBe(true);
+    });
+
+    it('should works with male gender and provided data', () => {
+      const result = randFirstName({
+        gender: 'male',
+        locale,
+      });
+
+      expect(data.withoutAccents.male.includes(result)).toBe(true);
     });
   });
 });

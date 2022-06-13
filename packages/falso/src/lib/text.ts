@@ -13,19 +13,19 @@ export interface TextOptions extends FakeOptions {
  *
  * @example
  *
- * text()
+ * randText()
  *
  * @example
  *
- * text({ charCount: 10 }) // default is 10
+ * randText({ charCount: 10 }) // default is 10
  *
  * @example
  *
- * text({ length: 10 })
+ * randText({ length: 10 })
  *
  * @example
  *
- * text({ length: 10, priority: 'unique' }) // default priority is 'length'
+ * randText({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randText<Options extends TextOptions = never>(

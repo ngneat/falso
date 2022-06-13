@@ -2,6 +2,59 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [5.7.0](https://github.com/ngneat/falso/compare/falso-5.6.1...falso-5.7.0) (2022-06-07)
+
+### Features
+
+- 🔥 add i18n firstname locale ([e99af4d](https://github.com/ngneat/falso/commit/e99af4d77b2965b322f3eccfc7081e3bad31c904))
+
+## [5.6.1](https://github.com/ngneat/falso/compare/falso-5.6.0...falso-5.6.1) (2022-06-05)
+
+### Bug Fixes
+
+- remove unexpected "ą" from names without accents ([fe71a6f](https://github.com/ngneat/falso/commit/fe71a6f6b5dc18ed7dfe6e9557ccdff5d281b444))
+
+# [5.6.0](https://github.com/ngneat/falso/compare/falso-5.5.0...falso-5.6.0) (2022-06-03)
+
+### Bug Fixes
+
+- allow string and number as input ([50fbd30](https://github.com/ngneat/falso/commit/50fbd3061674ae2ffcca31b3284dd5131b3bb826))
+- expose interface types ([d6af604](https://github.com/ngneat/falso/commit/d6af60478e294f7b8f963a4911607e10246bfd95))
+
+### Features
+
+- 🔥 add randIncrementalDate function ([e35c364](https://github.com/ngneat/falso/commit/e35c36433d22690a53c8d6855748dcfddc349946)), closes [#277](https://github.com/ngneat/falso/issues/277)
+
+# [5.5.0](https://github.com/ngneat/falso/compare/falso-5.4.1...falso-5.5.0) (2022-06-02)
+
+### Bug Fixes
+
+- 🐞 change randIncrementalNumber to incrementalNumber ([2ca7d85](https://github.com/ngneat/falso/commit/2ca7d8544a1fc937d91cb32f47428eb21704c157))
+- cleanup after review ([0df444d](https://github.com/ngneat/falso/commit/0df444d9ea1d8d9198f0fb9c7ba0cf5e82327ee4))
+
+### Features
+
+- 🔥 add randIncrementalNumber function ([de0afbb](https://github.com/ngneat/falso/commit/de0afbb2c51cff94aedb84cc0e605c8da1a3f977)), closes [#278](https://github.com/ngneat/falso/issues/278)
+
+## [5.4.1](https://github.com/ngneat/falso/compare/falso-5.4.0...falso-5.4.1) (2022-06-01)
+
+### Bug Fixes
+
+- 🐞 support readonly arrays ([1cb0c63](https://github.com/ngneat/falso/commit/1cb0c637864051497e5d836ff508d8274a83afa2)), closes [#275](https://github.com/ngneat/falso/issues/275)
+
+# [5.4.0](https://github.com/ngneat/falso/compare/falso-5.3.0...falso-5.4.0) (2022-05-29)
+
+### Bug Fixes
+
+- 🐞 Fix full name tests ([6f8348d](https://github.com/ngneat/falso/commit/6f8348dc6f877f70d9d3282ae5944014432e2e9f))
+- 🐞 Generate uuid from seed ([0825d8f](https://github.com/ngneat/falso/commit/0825d8f6d6062559c9055bdd4910981877c22d30)), closes [#232](https://github.com/ngneat/falso/issues/232)
+- **phone-numbers:** fixed typos ([23137c7](https://github.com/ngneat/falso/commit/23137c7bd7f1bba655d825579cba84fa2f9539e7))
+- **phone-numbers:** fixed typos ([cadfc36](https://github.com/ngneat/falso/commit/cadfc36f6ec469d19eedd568a9359ecb9ffaff44))
+
+### Features
+
+- 🔥 allow date strings for betweenDate ([e4da11d](https://github.com/ngneat/falso/commit/e4da11db3fc652c4769c99f92d5b05e323cfdbe2))
+
 # [5.3.0](https://github.com/ngneat/falso/compare/falso-5.2.1...falso-5.3.0) (2022-05-12)
 
 ### Bug Fixes

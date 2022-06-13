@@ -14,7 +14,8 @@
 const glob = require('glob');
 
 const items = [
-  ...glob.sync('./docs/*.md?(x)'),
+  ...glob.sync('./docs/getting-started.mdx'),
+  ...glob.sync('./docs/factories.mdx'),
   ...glob.sync('./docs/auto-generated/*.md?(x)')
 ].map(p => p.replace(/\.\/docs\/(.+)\.mdx?/, '$1'));
 

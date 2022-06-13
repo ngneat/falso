@@ -1,0 +1,36 @@
+---
+sidebar_label: Factories
+title: Factories
+---
+
+### ```incrementalNumber```
+
+```ts
+import { incrementalNumber } from '@ngneat/falso';
+
+const factory = incrementalNumber()
+factory() // returns 1
+factory() // returns 2
+
+const factory = incrementalNumber({from: 10, to: 100, step: 10})
+factory() // returns 10
+factory() // returns 20
+...
+```
+
+### ```incrementalDate```
+
+```ts
+import { incrementalNumber } from '@ngneat/falso';
+
+const dateFactory = incrementalDate()
+// seeds factory with new Date()
+dateFactory() // returns seed
+dateFactory() // returns seed + 1 day
+
+const dateFactory = incrementalDate({from: new Date(2022,1,1), to: new Date(2022,1,3), step: 10})
+// seeds factory with `from` value
+dateFactory() // returns seed
+dateFactory() // returns seed + 10ms
+...
+```
