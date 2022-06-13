@@ -4,6 +4,7 @@ import { primitiveValueIsUnique } from './unique-validators';
 export interface FakeOptions {
   length?: number;
   priority?: 'length' | 'unique';
+  locale?: any | string[];
 }
 
 export interface FakeConfig<T> {
@@ -21,8 +22,10 @@ export type Return<T, O extends FakeOptions> = [O] extends [never]
   ? T[]
   : T;
 
+type FactoryFunction<T> = (i: number) => T;
+
 export function fake<T, Options extends FakeOptions>(
-  data: T[] | (() => T),
+  data: Readonly<T[]> | FactoryFunction<T>,
   options?: Options,
   config: FakeConfig<T> = {
     uniqueComparer: primitiveValueIsUnique,
@@ -36,22 +39,22 @@ export function fake<T, Options extends FakeOptions>(
     return fakeFromArray(data, options) as any;
   }
 
-  return fakeFromFunction(data, config, options) as any;
+  return fakeFromFunction(data as FactoryFunction<T>, config, options) as any;
 }
 
 export function fakeFromFunction<T, Options extends FakeOptions>(
-  data: () => T,
+  data: FactoryFunction<T>,
   config: FakeConfig<T>,
   options?: Options
 ): T | T[] {
   if (!options?.length) {
-    return data();
+    return data(0);
   }
 
   const priority = options?.priority ?? 'length';
 
   if (priority === 'length') {
-    return Array.from({ length: options.length }, (_, index) => data());
+    return Array.from({ length: options.length }, (_, index) => data(0));
   }
 
   const items: T[] = [];
@@ -60,7 +63,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   const maxAttempts = options.length * 2;
 
   while (items.length < options.length && attempts < maxAttempts) {
-    const item = data();
+    const item = data(0);
 
     if (!config.uniqueComparer(item, items, config.comparisonKeys)) {
       items.push(item);
