@@ -18,5 +18,5 @@ import { randNumber } from './number';
 export function randPort<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => randNumber({ min: 0, max: 65_353 }), options);
+  return fake(() => randNumber({ min: 0, max: 65_535 }), options);
 }
