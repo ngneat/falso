@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [6.0.0](https://github.com/ngneat/falso/compare/falso-5.7.0...falso-6.0.0) (2022-06-26)
+
+### Bug Fixes
+
+- 🐞 ammount shoud return number by default ([eff0fda](https://github.com/ngneat/falso/commit/eff0fda70c66130ecc4c1ce9121a4d265dad7040))
+- fix max port number ([c96533c](https://github.com/ngneat/falso/commit/c96533c0dc882e790d3b9905eb79e5bc331e3150))
+
+### BREAKING CHANGES
+
+- 🧨 randAmmount will now return numbers by default and strings when passing
+  the symbol option.
+
 # [5.7.0](https://github.com/ngneat/falso/compare/falso-5.6.1...falso-5.7.0) (2022-06-07)
 
 ### Features
