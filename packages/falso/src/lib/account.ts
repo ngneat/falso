@@ -1,4 +1,4 @@
-import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
+import { fake, FakeOptions, getRandomInRange } from './core/core';
 
 export interface AccountOptions extends FakeOptions {
   accountLength?: number;

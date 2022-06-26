@@ -5,6 +5,10 @@ export interface FakeOptions {
   locale?: any | string[];
 }
 
+export type markRequired<Type, Key extends keyof Type> = Type & {
+  [Property in Key]-?: Type[Property];
+};
+
 export type Return<T, O extends FakeOptions> = [O] extends [never]
   ? T
   : O['length'] extends number
