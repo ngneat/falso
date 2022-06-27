@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [6.0.1](https://github.com/ngneat/falso/compare/falso-6.0.0...falso-6.0.1) (2022-06-27)
+
+### Bug Fixes
+
+- 🐞 remove inappropriate word ([c1ef85a](https://github.com/ngneat/falso/commit/c1ef85a0bed24031ed39b9a1a17fba3fc8843f91)), closes [#285](https://github.com/ngneat/falso/issues/285)
+
 # [6.0.0](https://github.com/ngneat/falso/compare/falso-5.7.0...falso-6.0.0) (2022-06-26)
 
 ### Bug Fixes
