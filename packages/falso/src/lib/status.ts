@@ -20,6 +20,10 @@ type Type = 'Project' | 'User Story' | 'Task';
  *
  * randStatus({ length: 10 })
  *
+ * @example
+ *
+ * randStatus({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 
 export function randStatus<

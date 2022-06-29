@@ -17,11 +17,15 @@ interface GenderOptions extends FakeOptions {
  *
  * @example
  *
+ * randGender({ code: true }) // default is false
+ *
+ * @example
+ *
  * randGender({ length: 10 })
  *
  * @example
  *
- * randGender({ code: true }) // default is false
+ * randGender({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randGender<Options extends GenderOptions = never>(

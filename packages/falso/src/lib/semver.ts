@@ -16,11 +16,15 @@ export interface SemverOptions extends FakeOptions {
  *
  * @example
  *
+ * randSemver({ prefix: 'v' })
+ *
+ * @example
+ *
  * randSemver({ length: 10 })
  *
  * @example
  *
- * randSemver({ prefix: 'v' })
+ * randSemver({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randSemver<Options extends SemverOptions = never>(

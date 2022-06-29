@@ -17,11 +17,15 @@ export interface TextOptions extends FakeOptions {
  *
  * @example
  *
+ * randText({ charCount: 10 }) // default is 10
+ *
+ * @example
+ *
  * randText({ length: 10 })
  *
  * @example
  *
- * randText({ charCount: 10 }) // default is 10
+ * randText({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randText<Options extends TextOptions = never>(
@@ -30,7 +34,7 @@ export function randText<Options extends TextOptions = never>(
   const charCount: number = options?.charCount ?? 10;
 
   if (charCount < 1 || isNaN(charCount)) {
-    throw 'Character count must be greater than 0';
+    throw new Error('Character count must be greater than 0');
   }
 
   const factory = () => {

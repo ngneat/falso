@@ -13,6 +13,10 @@ import { fake, FakeOptions } from './core/core';
  *
  * rand([ 1, 2, 3 ], { length: 10 })
  *
+ * @example
+ *
+ * rand({ [ 1, 2, 3 ], length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function rand<T, Options extends FakeOptions = never>(
   arr: Readonly<T[]>,

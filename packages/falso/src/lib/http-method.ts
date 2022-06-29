@@ -14,6 +14,10 @@ import { data } from './http-method.json';
  *
  * randHttpMethod({ length: 10 })
  *
+ * @example
+ *
+ * randHttpMethod({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randHttpMethod<Options extends FakeOptions = never>(
   options?: Options

@@ -14,6 +14,10 @@ import { data } from './weekday.json';
  *
  * randWeekday({ length: 10 })
  *
+ * @example
+ *
+ * randWeekday({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randWeekday<Options extends FakeOptions = never>(
   options?: Options

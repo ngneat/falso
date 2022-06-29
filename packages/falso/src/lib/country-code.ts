@@ -14,6 +14,10 @@ import { data } from './country-code.json';
  *
  * randCountryCode({ length: 10 })
  *
+ * @example
+ *
+ * randCountryCode({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randCountryCode<Options extends FakeOptions = never>(
   options?: Options

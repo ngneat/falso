@@ -14,6 +14,10 @@ import { data } from './skill.json';
  *
  * randSkill({ length: 10 })
  *
+ * @example
+ *
+ * randSkill({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randSkill<Options extends FakeOptions = never>(
   options?: Options

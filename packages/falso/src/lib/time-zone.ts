@@ -14,6 +14,10 @@ import { data } from './time-zone.json';
  *
  * randTimeZone({ length: 10 })
  *
+ * @example
+ *
+ * randTimeZone({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randTimeZone<Options extends FakeOptions = never>(
   options?: Options

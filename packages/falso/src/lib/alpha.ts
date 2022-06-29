@@ -14,6 +14,10 @@ import { alphaChars } from './sequence';
  *
  * randAlpha({ length: 3 })
  *
+ * @example
+ *
+ * randAlpha({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randAlpha<Options extends FakeOptions = never>(
   options?: Options

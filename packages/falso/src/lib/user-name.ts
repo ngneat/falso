@@ -20,21 +20,25 @@ export interface UserNameOptions extends FakeOptions {
  *
  * @example
  *
- * randUserName({ length: 10 })
- *
- * @example
- *
  * randUserName({ firstName: 'Ryan' })
  *
  * @example
  *
  * randUserName({ lastName: 'Smee' })
  *
+ * @example
+ *
+ * randUserName({ length: 10 })
+ *
+ * @example
+ *
+ * randUserName({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randUserName<Options extends UserNameOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
+  const factory: () => string = () => {
     const firstName = options?.firstName ?? randFirstName();
     const lastName = options?.lastName ?? randLastName();
     let userName = `${firstName} ${lastName}`.replace(' ', fake(['.', '_']));
@@ -44,5 +48,7 @@ export function randUserName<Options extends UserNameOptions = never>(
     }
 
     return userName;
-  }, options);
+  };
+
+  return fake(factory, options);
 }

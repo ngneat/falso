@@ -14,6 +14,10 @@ import { data } from './mime-type.json';
  *
  * randMimeType({ length: 10 })
  *
+ * @example
+ *
+ * randMimeType({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randMimeType<Options extends FakeOptions = never>(
   options?: Options

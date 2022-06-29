@@ -59,13 +59,21 @@ const generateRandomValue = (): any => {
  * @example
  * randJSON()
  *
- * @example If a fixed number of keys are required
+ * @example
  *
- * randJSON({ totalKeys: 10 })
+ * randJSON({ totalKeys: 10 }) // If a fixed number of keys are required
  *
- * @example If a random number of keys are required
+ * @example
  *
- * randJSON({ minKeys: 1, maxKeys: 10 })
+ * randJSON({ minKeys: 1, maxKeys: 10 }) // If a random number of keys are required
+ *
+ * @example
+ *
+ * randJSON({ length: 10 })
+ *
+ * @example
+ *
+ * randJSON({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randJSON<Options extends RandomJSONOptions = never>(
@@ -88,5 +96,10 @@ export function randJSON<Options extends RandomJSONOptions = never>(
     return generatedObject;
   };
 
-  return fake(factory, options);
+  return fake(factory, options, { uniqueComparer: checkUnique });
 }
+
+const checkUnique: (item: object, items: object[]) => boolean = (
+  item: object,
+  items: object[]
+) => items.some((i) => JSON.stringify(i) === JSON.stringify(item));

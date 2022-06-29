@@ -1,6 +1,7 @@
 import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './superhero.json';
 import { randUuid } from './uuid';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export type ComicBookCompany = 'Marvel' | 'DC';
 
@@ -35,6 +36,10 @@ export interface SuperheroEntity extends Superhero {
  *
  * randSuperhero({ length: 10 })
  *
+ * @example
+ *
+ * randSuperhero({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randSuperhero<Options extends SuperheroOptions = never>(
   options?: Options
@@ -50,5 +55,5 @@ export function randSuperhero<Options extends SuperheroOptions = never>(
     };
   };
 
-  return fake(factory, options);
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

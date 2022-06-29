@@ -21,6 +21,10 @@ export interface AccountOptions extends FakeOptions {
  *
  * randAccount({ length: 10 })
  *
+ * @example
+ *
+ * randAccount({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randAccount<Options extends AccountOptions = never>(
   options?: Options

@@ -8,6 +8,7 @@ import { rand } from './rand';
 import { randPastDate } from './past-date';
 import { randFutureDate } from './future-date';
 import { randPersonTitle } from './person-title';
+import { objectIsUnique } from './core/unique-validators';
 
 export interface CreditCardOptions extends FakeOptions {
   fullName?: string;
@@ -46,6 +47,10 @@ export interface CreditCard {
  *
  * randCreditCard({ length: 10 })
  *
+ * @example
+ *
+ * randCreditCard({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randCreditCard<Options extends CreditCardOptions = never>(
   options?: Options
@@ -81,5 +86,10 @@ export function randCreditCard<Options extends CreditCardOptions = never>(
     };
   };
 
-  return fake(factory, options);
+  return fake(factory, options, { uniqueComparer: checkUnique });
 }
+
+const checkUnique: (card: CreditCard, cards: CreditCard[]) => boolean = (
+  card: CreditCard,
+  cards: CreditCard[]
+) => objectIsUnique(card, cards, ['number']);

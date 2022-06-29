@@ -24,6 +24,10 @@ import { rand } from './rand';
  *
  * randFirstName({ length: 10 })
  *
+ * @example
+ *
+ * randFirstName({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randFirstName<Options extends NameOptions = never>(
   options?: Options

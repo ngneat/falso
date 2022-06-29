@@ -17,11 +17,15 @@ interface LanguageOptions extends FakeOptions {
  *
  * @example
  *
+ * randLanguage({ code: true }) // default is false
+ *
+ * @example
+ *
  * randLanguage({ length: 10 })
  *
  * @example
  *
- * randLanguage({ code: true }) // default is false
+ * randLanguage({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randLanguage<Options extends LanguageOptions = never>(

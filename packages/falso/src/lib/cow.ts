@@ -14,6 +14,10 @@ import { data } from './cow.json';
  *
  * randCow({ length: 10 })
  *
+ * @example
+ *
+ * randCow({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randCow<Options extends FakeOptions = never>(
   options?: Options

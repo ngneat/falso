@@ -74,6 +74,10 @@ function generateStandardFlightNumber({
  *
  * randFlightNumber({ length: 10 })
  *
+ * @example
+ *
+ * randFlightNumber({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randFlightNumber<Options extends FlightNumberOptions = never>(
   options?: Options

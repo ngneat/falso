@@ -14,6 +14,10 @@ import { data } from './vehicle.json';
  *
  * randVehicle({ length: 10 })
  *
+ * @example
+ *
+ * randVehicle({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randVehicle<Options extends FakeOptions = never>(
   options?: Options

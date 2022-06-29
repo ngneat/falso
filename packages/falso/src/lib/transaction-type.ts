@@ -14,6 +14,10 @@ import { data } from './transaction-type.json';
  *
  * randTransactionType({ length: 10 })
  *
+ * @example
+ *
+ * randTransactionType({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randTransactionType<Options extends FakeOptions = never>(
   options?: Options

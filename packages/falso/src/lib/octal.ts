@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { FakeOptions } from './core/core';
 
 /**
  * Generate a random octal.
@@ -12,6 +12,10 @@ import { FakeOptions, fake } from './core/core';
  * @example
  *
  * randOctal({ length: 10 })
+ *
+ * @example
+ *
+ * randOctal({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randOctal<Options extends FakeOptions = never>(

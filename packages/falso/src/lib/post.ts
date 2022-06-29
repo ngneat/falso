@@ -3,6 +3,7 @@ import { randUser, User } from './user';
 import { randUuid } from './uuid';
 import { randText } from './text';
 import { randNumber } from './number';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export interface Post {
   id: string;
@@ -24,11 +25,15 @@ export interface Post {
  *
  * randPost({ length: 10 })
  *
+ * @example
+ *
+ * randPost({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randPost<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
+  const factory = () => {
     const post: Post = {
       id: randUuid(),
       title: randText({ charCount: 40 }),
@@ -43,5 +48,7 @@ export function randPost<Options extends FakeOptions = never>(
     };
 
     return post;
-  }, options);
+  };
+
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

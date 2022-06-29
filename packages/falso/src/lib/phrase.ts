@@ -14,6 +14,10 @@ import { data } from './phrase.json';
  *
  * randPhrase({ length: 10 })
  *
+ * @example
+ *
+ * randPhrase({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randPhrase<Options extends FakeOptions = never>(
   options?: Options

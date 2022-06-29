@@ -14,6 +14,10 @@ import { data } from './currency-symbol.json';
  *
  * randCurrencySymbol({ length: 10 })
  *
+ * @example
+ *
+ * randCurrencySymbol({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randCurrencySymbol<Options extends FakeOptions = never>(
   options?: Options
