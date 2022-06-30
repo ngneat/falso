@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [6.0.2](https://github.com/ngneat/falso/compare/falso-6.0.1...falso-6.0.2) (2022-06-30)
+
+### Bug Fixes
+
+- 🐞 randNumber is ignoring fraction ([b9bec6d](https://github.com/ngneat/falso/commit/b9bec6d4a2b2e9e4de4dae5e91eacde0ace925b9))
+
 ## [6.0.1](https://github.com/ngneat/falso/compare/falso-6.0.0...falso-6.0.1) (2022-06-27)
 
 ### Bug Fixes
