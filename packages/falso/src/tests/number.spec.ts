@@ -9,6 +9,12 @@ describe('randNumber', () => {
     expect(num).toBeLessThanOrEqual(max);
   });
 
+  it('should return a random number with fraction', () => {
+    const [min, max] = [1, 999_999];
+    const num = randNumber({ min: 0.1, max: 1, fraction: 2 });
+    expect(Number.isInteger(num)).toBe(false);
+  });
+
   it('should support precision', () => {
     const num = randNumber({ min: 1000, max: 2000, precision: 100 });
     expect(typeof num).toBe('number');
