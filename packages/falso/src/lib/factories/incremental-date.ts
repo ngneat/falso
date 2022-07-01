@@ -31,6 +31,10 @@ const millisecondsPerDay = 24 * 60 * 60 * 1_000;
  *
  */
 export function incrementalDate(
+  options: Required<IncrementalDateOptions>
+): () => Date | undefined;
+export function incrementalDate(options?: IncrementalDateOptions): () => Date;
+export function incrementalDate(
   options: IncrementalDateOptions = {
     from: new Date(),
     step: millisecondsPerDay,

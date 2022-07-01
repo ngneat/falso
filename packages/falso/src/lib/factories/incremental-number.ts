@@ -26,6 +26,12 @@ export interface IncrementalNumberOptions {
  *
  */
 export function incrementalNumber(
+  options: Required<IncrementalNumberOptions>
+): () => number | undefined;
+export function incrementalNumber(
+  options?: IncrementalNumberOptions
+): () => number;
+export function incrementalNumber(
   options: IncrementalNumberOptions = { from: 1, step: 1 }
 ): () => number | undefined {
   if (options.step === 0) {
