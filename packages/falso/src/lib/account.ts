@@ -21,7 +21,13 @@ export interface AccountOptions extends FakeOptions {
  *
  * randAccount({ length: 10 })
  *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 101066154
+ * 175520166
+ * 446472254
  */
+
 export function randAccount<Options extends AccountOptions = never>(
   options?: Options
 ) {

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prepublish": "node ./scripts/example-generator.js ./packages/falso/src/lib/",
+    "prepublishOnly": "./node_modules/.bin/ts-node ./scripts/example-generator.js ./packages/falso/src/lib/ @automaticallyGeneratedExamples",
     "build:docs": "npm run build && node ./docs-generator.js",
     "start:docs": "npm run build:docs && npm run start --prefix docs",
     "build": "nx build falso && npm run i18n && node ./post-build.js",
@@ -22,6 +22,7 @@
     "docs"
   ],
   "dependencies": {
+    "ts-node": "10.8.1",
     "tslib": "2.3.1"
   },
   "devDependencies": {

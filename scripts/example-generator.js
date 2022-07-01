@@ -1,39 +1,83 @@
 const fs = require('fs');
 
-const [libDirectoryPath] = process.argv.slice(2);
-const GENERATE_INDICATOR = "@automaticallyGeneratedExamples"
-// https://regex101.com/r/rlqGTA/1
-const regexp = new RegExp(`(${GENERATE_INDICATOR}).*\\/`,"gs");
-const errors = [];
+const [directoryPath, generateIndicator] = process.argv.slice(2);
+// https://regex101.com/r/qxpfyX/1
+const regexp = new RegExp(`(${generateIndicator}).*[*]\\/`,"gs");
+const directoryUniqueFilenames = fs.readdirSync(directoryPath)
+  .map(filename => filename.split('.')[0])
+  .filter((filename, index, filenames) => filenames.indexOf(filename) === index);
+const ERRORS = {
+  missingIndicatorProperty: `'${generateIndicator}' is missing in jsdoc`,
+  tsFileDoesNotExists: `corresponding ts file does not exists`,
+  missingJsonDataField: `'json.data' field is missing`,
+  jsonDataFieldValueMustBeArray: "'json.data' field value is not array",
+  jsonDataMustNotBeEmptyArray: "'json.data' field value is empty array",
+  tsFileDoesNotContainRandFunction: "ts file must contain function which name starts with 'rand'"
+};
+
+const functions = {
+  getFileContent: (filepath) => {
+    try {
+      return fs.readFileSync(filepath).toString()
+    } catch(error) {
+      if(error.message.startsWith("ENOENT")) {
+        return null;
+      }
+      throw error;
+    }
+  },
+  getExamplesFromJson: (json) => {
+    if(json.data === undefined) {
+      return [null, ERRORS.missingJsonDataField];
+    }
+    if(false === (json.data instanceof Array)) {
+      return [null, ERRORS.jsonDataFieldValueMustBeArray]
+    }
+    if(json.data.length === 0) {
+      return [null, ERRORS.jsonDataMustNotBeEmptyArray]
+    }
+    return [json.data.slice(0,3), null];
+  },
+  getExamplesFromTs: (tsContent) => {
+    const [,randFunction] = Object.entries(tsContent).find(([key]) => key.startsWith('rand'));
+    if(randFunction === undefined || typeof randFunction !== 'function') {
+      return [null, ERRORS.tsFileDoesNotContainRandFunction]
+    }
+    return [Array.from({ length: 3 }, randFunction), null]
+  },
+  generateExamples: (acc, filename) => {
+    const basePath = `${directoryPath}${filename}`
+    const filePath = {
+      ts: `${basePath}.ts`,
+      json: `${basePath}.json`,
+    };
+    const tsFileContent = functions.getFileContent(filePath.ts);
+    if(tsFileContent === null) {
+      acc[ERRORS.tsFileDoesNotExists].push(filename);
+      return acc;
+    }
+    if(false === tsFileContent.includes(generateIndicator)) {
+      acc[ERRORS.missingIndicatorProperty].push(filename);
+      return acc;
+    }
+    const jsonFileContent = functions.getFileContent(filePath.json);
+    const [examples, error] = jsonFileContent === null
+      ? functions.getExamplesFromTs(require(`../${basePath}`))
+      : functions.getExamplesFromJson(JSON.parse(jsonFileContent));
+    if(error !== null) {
+      acc[error].push(filename);
+      return acc;
+    }
+    const replacement = `${generateIndicator}\n * @example\n${examples.map(example => ` * ${example}\n`).join('')} */`
+    fs.writeFileSync(`${basePath}.ts`, tsFileContent.replace(regexp, replacement));
+    return acc;
+  },
+};
 
 console.log('Generating examples...')
-const filenames = fs
-.readdirSync(libDirectoryPath)
-.filter((jsonFilename, index, array) => jsonFilename.includes(".json") && array.find(tsFilename => tsFilename.replace('ts','json') === jsonFilename))
+const errors = directoryUniqueFilenames.reduce(functions.generateExamples,  Object.values(ERRORS).reduce((acc, errorText) => ({...acc, [errorText]: []}), {}));
+console.log(Object.entries(errors).reduce((acc, [key, value]) => `${acc}--> ${value.length} - ${key}:\n   [${value.join(', ')}]\n` ,'<<-- Generator Errors -->>\n'));
+console.log(`<<-- Generator Result -->>
+--> generated: ${directoryUniqueFilenames.length - Object.values(errors).flat().length}
+--> files: ${directoryUniqueFilenames.length}`);
 
-filenames.forEach(filename => {
-    try {
-      const tsFilepath = `${libDirectoryPath}${filename.replace('json','ts')}`
-      const tsFileContent = fs.readFileSync(tsFilepath).toString();
-      if(!tsFileContent.includes(GENERATE_INDICATOR)) {
-        console.log(`file is missing '${GENERATE_INDICATOR}' and will be ignored ${filename.replace('json','ts')}`);
-        return;
-      }
-      const jsonFilepath = `${libDirectoryPath}${filename}`
-      const jsonFileContent = JSON.parse(fs.readFileSync(jsonFilepath));
-      if(jsonFileContent.data === undefined) {
-        throw Error(`missing data field in file: ${filename}`);
-      }
-      if(!(jsonFileContent.data instanceof Array)) {
-        throw Error(`invalid data field, must be an array: ${filename}`);
-      }
-      fs.writeFileSync(tsFilepath, tsFileContent.replace(regexp, `${GENERATE_INDICATOR}\n * @example\n${jsonFileContent.data.slice(0,3).map(example => ` * ${example}\n`).join('')} */`));
-    } catch(error) {
-      errors.push({filename, error});
-    }
-  });
-
-  if(errors.length > 0) {
-    console.log(errors);
-  }
-  console.log(`Generating examples finished ${filenames.length - errors.length}/${filenames.length}`);

@@ -13,7 +13,7 @@ import { data } from './abbreviation.json';
  * @example
  *
  * randAbbreviation({ length: 10 })
- * 
+ *
  * @automaticallyGeneratedExamples
  * @example
  * SCSI
