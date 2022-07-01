@@ -10,4 +10,12 @@ describe('octal', () => {
     const octRegex = /[0-7]+/;
     expect(octRegex.test(octNumber.toString())).toBeTruthy();
   });
+
+  it('should return an octa array', () => {
+    const length = 5;
+    const octNumbers = randOctal({ length });
+
+    expect(Array.isArray(octNumbers)).toBe(true);
+    expect(octNumbers.length).toEqual(length);
+  });
 });

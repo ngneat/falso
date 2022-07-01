@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 
 /**
  * Generate a random octal.
@@ -19,7 +19,9 @@ export function randOctal<Options extends FakeOptions = never>(
 ) {
   const RADIX = 8;
 
-  const randomNumber = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+  return fake(() => {
+    const randomNumber = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 
-  return BigInt(randomNumber.toString(RADIX));
+    return BigInt(randomNumber.toString(RADIX));
+  }, options);
 }

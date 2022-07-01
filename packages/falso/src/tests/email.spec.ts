@@ -1,8 +1,8 @@
-import { randEmail, NameSeparators } from '../lib/email';
-import { randFirstName } from '../lib/first-name';
-import { randLastName } from '../lib/last-name';
+import { NameSeparators, randEmail } from '../lib/email';
 import * as firstNameFunctions from '../lib/first-name';
+import { randFirstName } from '../lib/first-name';
 import * as lastNameFunctions from '../lib/last-name';
+import { randLastName } from '../lib/last-name';
 
 describe('email', () => {
   let validEmailRegex: RegExp;
@@ -11,7 +11,7 @@ describe('email', () => {
 
   beforeEach(() => {
     validEmailRegex =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     randFirstNameSpy = jest.spyOn(firstNameFunctions, 'randFirstName');
     randLastNameSpy = jest.spyOn(lastNameFunctions, 'randLastName');
   });
