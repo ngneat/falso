@@ -1,4 +1,4 @@
-import { randSuperhero, randSuperheroName } from '@ngneat/falso';
+import { randSuperheroName } from '../lib/superhero-name';
 import { ComicBookCompany } from '../lib/superhero';
 import { data } from '../lib/superhero.json';
 

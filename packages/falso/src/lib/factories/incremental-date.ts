@@ -1,4 +1,4 @@
-import { isNotNil } from '../core/isNotNil';
+import { isNil } from '../core/validators';
 import { incrementalNumber } from './incremental-number';
 
 export interface IncrementalDateOptions {
@@ -49,7 +49,7 @@ export function incrementalDate(
     );
   }
 
-  if (isNotNil(to)) {
+  if (!isNil(to)) {
     if (from > to && options.step > 0) {
       throw new Error('`to` should be a date greater than or equal to `from`');
     }

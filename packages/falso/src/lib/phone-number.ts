@@ -269,13 +269,10 @@ export function randPhoneNumber<
     formats = data.map(({ formats }) => formats).flat();
   }
 
-  const phoneNumber = Array.from(
-    { length: options?.length || 1 },
-    (_, index) => {
-      return randMask({
-        mask: randElement(formats),
-      });
-    }
+  const phoneNumber = Array.from({ length: options?.length || 1 }, () =>
+    randMask({
+      mask: randElement(formats),
+    })
   );
   return fake(phoneNumber, options);
 }

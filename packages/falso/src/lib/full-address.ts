@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake } from './core/core';
 import { AddressOptions, randAddress } from './address';
 
 /**

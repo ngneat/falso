@@ -2,8 +2,10 @@ import {
   fake,
   FakeOptions,
   getRandomInRange,
+  markRequired,
   RandomInRangeOptions,
 } from './core/core';
+import { isNil } from './core/validators';
 
 export interface RandomNumberOptions extends RandomInRangeOptions, FakeOptions {
   precision?: number;
@@ -45,14 +47,18 @@ export interface RandomNumberOptions extends RandomInRangeOptions, FakeOptions {
 export function randNumber<Options extends RandomNumberOptions = never>(
   options?: Options
 ) {
-  const normalized: RandomNumberOptions = {
-    min: options?.min || 0,
-    max: options?.max || 999_999,
+  const normalized: markRequired<RandomNumberOptions, 'min' | 'max'> = {
+    min: isNil(options?.min) ? 0 : options!.min,
+    max: isNil(options?.max) ? 999_999 : options!.max,
     precision: options?.precision,
     fraction: options?.fraction,
   };
 
   return fake(() => {
+    if (normalized.min === normalized.max) {
+      return normalized.min;
+    }
+
     const num = getRandomInRange(normalized);
     if (normalized.precision !== undefined) {
       return Math.floor(num / normalized.precision) * normalized.precision;
