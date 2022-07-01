@@ -49,5 +49,13 @@ export function getRandomInRange({
   max = 9999.99,
   fraction = 0,
 }: RandomInRangeOptions = {}) {
-  return Number((random() * (max - min) + min).toFixed(fraction));
+  let detectedFraction = fraction;
+
+  if (!detectedFraction) {
+    const minFraction = min.toString().split('.')[1]?.length || 0;
+    const maxFraction = max.toString().split('.')[1]?.length || 0;
+    detectedFraction = Math.max(minFraction, maxFraction);
+  }
+
+  return Number((random() * (max - min) + min).toFixed(detectedFraction));
 }
