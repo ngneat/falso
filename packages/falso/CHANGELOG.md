@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [6.0.3](https://github.com/ngneat/falso/compare/falso-6.0.2...falso-6.0.3) (2022-07-02)
+
+### Bug Fixes
+
+- 🐞 incremental functions typing ([ec8f053](https://github.com/ngneat/falso/commit/ec8f053539a50ebb90fd4b03869a58d3cd606079))
+- 🐞 randNumber options resolution ([a0e5a4c](https://github.com/ngneat/falso/commit/a0e5a4c197a8685a5ce200a7392a4ecdaca93759)), closes [#289](https://github.com/ngneat/falso/issues/289)
+
 ## [6.0.2](https://github.com/ngneat/falso/compare/falso-6.0.1...falso-6.0.2) (2022-06-30)
 
 ### Bug Fixes
