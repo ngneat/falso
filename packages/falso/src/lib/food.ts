@@ -19,6 +19,7 @@ export type FoodOrigin =
   | 'colombia'
   | 'chile'
   | 'peru'
+  | 'el salvador'
   | 'ecuador';
 
 export interface FoodOptions extends FakeOptions {
