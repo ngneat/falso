@@ -14,7 +14,10 @@ import { data } from './crocodilia.json';
  *
  * randCrocodilia({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCrocodilia<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { data } from './browser.json';
  *
  * randBrowser({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBrowser<Options extends FakeOptions = never>(
   options?: Options
 ) {

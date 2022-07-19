@@ -14,7 +14,10 @@ import { data } from './oauth-provider.json';
  *
  * randOAuthProvider({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randOAuthProvider<Options extends FakeOptions = never>(
   options?: Options
 ) {

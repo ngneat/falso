@@ -36,7 +36,10 @@ export interface User {
  *
  * randUser({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randUser<Options extends FakeOptions = never>(
   options?: Options
 ) {

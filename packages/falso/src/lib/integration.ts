@@ -14,7 +14,10 @@ import { data } from './integration.json';
  *
  * randIntegrations({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randIntegration<Options extends FakeOptions = never>(
   options?: Options
 ) {

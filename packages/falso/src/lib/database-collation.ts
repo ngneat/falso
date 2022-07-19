@@ -14,7 +14,10 @@ import { data } from './database-collation.json';
  *
  * randDatabaseCollation({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randDatabaseCollation<Options extends FakeOptions = never>(
   options?: Options
 ) {

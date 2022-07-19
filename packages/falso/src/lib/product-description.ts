@@ -14,7 +14,10 @@ import { data } from './product-description.json';
  *
  * randProductDescription({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randProductDescription<Options extends FakeOptions = never>(
   options?: Options
 ) {

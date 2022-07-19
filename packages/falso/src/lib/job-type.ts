@@ -14,7 +14,10 @@ import { data } from './job-type.json';
  *
  * randJobType({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randJobType<Options extends FakeOptions = never>(
   options?: Options
 ) {

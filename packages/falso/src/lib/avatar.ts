@@ -21,7 +21,10 @@ interface AvatarOptions extends FakeOptions {
  *
  * randAvatar({ size: 200 }) // default is 100
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randAvatar<Options extends AvatarOptions = never>(
   options?: Options
 ) {

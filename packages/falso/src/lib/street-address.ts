@@ -15,7 +15,10 @@ import { randStreetName } from './street-name';
  *
  * randStreetAddress({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randStreetAddress<Options extends FakeOptions = never>(
   options?: Options
 ) {

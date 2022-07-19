@@ -14,7 +14,10 @@ import { data } from './rabbit.json';
  *
  * randRabbit({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randRabbit<Options extends FakeOptions = never>(
   options?: Options
 ) {

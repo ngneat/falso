@@ -14,7 +14,10 @@ import { data } from './quote.json';
  *
  * randQuote({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randQuote<Options extends FakeOptions = never>(
   options?: Options
 ) {

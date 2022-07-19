@@ -14,7 +14,10 @@ import { data } from './aws-region.json';
  *
  * randAwsRegion({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randAwsRegion<Options extends FakeOptions = never>(
   options?: Options
 ) {

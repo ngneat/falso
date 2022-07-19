@@ -30,7 +30,10 @@ function getSpecialCharacter(wordCount: number): string {
  *
  * randSentence({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSentence<Options extends FakeOptions = never>(
   options?: Options
 ) {

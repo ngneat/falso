@@ -13,7 +13,10 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
  *
  * randBinary({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBinary<Options extends FakeOptions = never>(
   options?: Options
 ) {

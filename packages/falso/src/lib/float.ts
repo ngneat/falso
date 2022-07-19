@@ -27,7 +27,10 @@ export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
  * @example
  *
  * randFloat({ min: 10, max: 20, fraction: 2 }) // 12.52
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFloat<Options extends RandomFloatOptions = never>(
   options?: Options
 ) {

@@ -16,7 +16,10 @@ const commitShaLen = 40;
  *
  * randGitCommitSha({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randGitCommitSha<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -16,7 +16,10 @@ import { randNumber } from './number';
  *
  * randAlphaNumeric({ length: 3 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randAlphaNumeric<Options extends FakeOptions = never>(
   options?: Options
 ) {

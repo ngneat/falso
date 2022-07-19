@@ -14,7 +14,10 @@ import { data } from './ethereum-address.json';
  *
  * randEthereumAddress({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randEthereumAddress<Options extends FakeOptions = never>(
   options?: Options
 ) {

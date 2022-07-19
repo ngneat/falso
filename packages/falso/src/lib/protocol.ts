@@ -23,7 +23,10 @@ interface ProtocolOptions extends FakeOptions {
  *
  * randProtocol({ fullName: true })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randProtocol<Options extends ProtocolOptions = never>(
   options?: Options
 ) {

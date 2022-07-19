@@ -14,7 +14,10 @@ import { data } from './drinks.json';
  *
  * randDrinks({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randDrinks<Options extends FakeOptions = never>(
   options?: Options
 ) {

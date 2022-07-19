@@ -11,7 +11,10 @@ let prng = seedRandom();
  *
  * random()
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function random() {
   return prng();
 }
@@ -28,7 +31,9 @@ export function random() {
  * @example
  *
  * seed('some-constant-seed')
+ *
  */
+
 export function seed(value?: string) {
   prng = seedRandom(value);
 }

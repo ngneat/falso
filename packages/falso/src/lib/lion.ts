@@ -14,7 +14,10 @@ import { data } from './lion.json';
  *
  * randLion({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randLion<Options extends FakeOptions = never>(
   options?: Options
 ) {

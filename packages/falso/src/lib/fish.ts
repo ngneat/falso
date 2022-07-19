@@ -14,7 +14,10 @@ import { data } from './fish.json';
  *
  * randFish({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFish<Options extends FakeOptions = never>(
   options?: Options
 ) {

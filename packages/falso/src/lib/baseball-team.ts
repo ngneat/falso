@@ -14,7 +14,10 @@ import { data } from './baseball-team.json';
  *
  * randBaseballTeam({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBaseballTeam<Options extends FakeOptions = never>(
   options?: Options
 ) {

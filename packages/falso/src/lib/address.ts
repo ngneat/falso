@@ -39,7 +39,10 @@ export interface Address {
  *
  * randAddress({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randAddress<Options extends AddressOptions = never>(
   options?: Options
 ) {

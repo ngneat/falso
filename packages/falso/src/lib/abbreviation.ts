@@ -20,6 +20,7 @@ import { data } from './abbreviation.json';
  * SMTP
  * ADP
  */
+
 export function randAbbreviation<O extends FakeOptions = never>(options?: O) {
   return fake(data, options);
 }

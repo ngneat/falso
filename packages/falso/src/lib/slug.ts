@@ -14,7 +14,10 @@ import { randWord } from './word';
  *
  * randSlug({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSlug<Options extends FakeOptions = never>(
   options?: Options
 ) {

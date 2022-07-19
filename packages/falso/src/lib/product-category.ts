@@ -14,7 +14,10 @@ import { data } from './product-category.json';
  *
  * randProductCategory({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randProductCategory<Options extends FakeOptions = never>(
   options?: Options
 ) {

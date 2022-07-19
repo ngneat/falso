@@ -14,7 +14,10 @@ import { data } from './locale.json';
  *
  * randLocale({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randLocale<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { data } from './phrase.json';
  *
  * randPhrase({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randPhrase<Options extends FakeOptions = never>(
   options?: Options
 ) {

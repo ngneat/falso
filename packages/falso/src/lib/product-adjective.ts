@@ -14,7 +14,10 @@ import { data } from './product-adjective.json';
  *
  * randProductAdjective({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randProductAdjective<Options extends FakeOptions = never>(
   options?: Options
 ) {

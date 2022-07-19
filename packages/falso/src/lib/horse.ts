@@ -14,7 +14,10 @@ import { data } from './horse.json';
  *
  * randHorse({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randHorse<Options extends FakeOptions = never>(
   options?: Options
 ) {

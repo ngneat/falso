@@ -252,7 +252,10 @@ type CountryCode =
  *
  * randPhoneNumber({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randPhoneNumber<
   Options extends FakeOptions & {
     countryCode?: CountryCode;

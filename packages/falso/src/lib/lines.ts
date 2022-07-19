@@ -14,7 +14,10 @@ import { data } from './lines.json';
  *
  * randLines({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randLines<Options extends FakeOptions = never>(
   options?: Options
 ) {

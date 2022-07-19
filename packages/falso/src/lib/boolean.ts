@@ -13,7 +13,10 @@ import { fake, FakeOptions, randElement } from './core/core';
  *
  * randBoolean({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBoolean<Options extends FakeOptions = never>(
   options?: Options
 ) {

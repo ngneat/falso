@@ -15,7 +15,10 @@ type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
  *
  * randImg({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randImg<
   Options extends FakeOptions & {
     width?: number;

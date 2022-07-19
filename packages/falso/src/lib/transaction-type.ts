@@ -14,7 +14,10 @@ import { data } from './transaction-type.json';
  *
  * randTransactionType({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randTransactionType<Options extends FakeOptions = never>(
   options?: Options
 ) {

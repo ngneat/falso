@@ -22,7 +22,10 @@ export interface RGBOptions extends FakeOptions {
  *
  * randRgb({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randRgb<Options extends RGBOptions = never>(options?: Options) {
   const factory = () => {
     const [r, g, b, a] = [

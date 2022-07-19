@@ -37,7 +37,10 @@ export type Brand =
  *
  * randCreditCardNumber({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCreditCardNumber<
   Options extends CreditCardNumberOptions = never
 >(options?: Options) {

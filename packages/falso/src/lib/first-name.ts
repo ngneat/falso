@@ -24,7 +24,10 @@ import { rand } from './rand';
  *
  * randFirstName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFirstName<Options extends NameOptions = never>(
   options?: Options
 ) {

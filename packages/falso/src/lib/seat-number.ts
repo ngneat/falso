@@ -14,7 +14,10 @@ import { rand } from './rand';
  *
  * randSeatNumber({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSeatNumber<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { randHexaDecimal } from './hexa-decimal';
  *
  * randIpv6({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randIpv6<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -15,7 +15,10 @@ import { randWord } from './word';
  *
  * randUrl({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randUrl<Options extends FakeOptions = never>(
   options?: Options
 ) {

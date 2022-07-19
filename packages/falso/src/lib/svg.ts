@@ -14,7 +14,10 @@ import { data } from './svg.json';
  *
  * randSvg({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSvg<Options extends FakeOptions = never>(
   options?: Options
 ) {

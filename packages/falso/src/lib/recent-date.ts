@@ -22,7 +22,10 @@ interface RecentOptions extends FakeOptions {
  *
  * randRecentDate({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randRecentDate<Options extends RecentOptions = never>(
   options?: Options
 ) {

@@ -13,7 +13,10 @@ import { data } from './song.json';
  *
  * randSong({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSong<Options extends FakeOptions = never>(
   options?: Options
 ) {

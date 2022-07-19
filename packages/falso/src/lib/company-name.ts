@@ -14,7 +14,10 @@ import { data } from './company-name.json';
  *
  * randCompanyName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCompanyName<Options extends FakeOptions = never>(
   options?: Options
 ) {

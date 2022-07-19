@@ -34,7 +34,10 @@ import { randSwift, SwiftOptions } from './swift';
  *
  * randBic({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBic<Options extends SwiftOptions = never>(
   options?: Options
 ) {

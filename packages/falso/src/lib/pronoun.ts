@@ -10,7 +10,10 @@ import { data } from './pronoun.json';
  *
  * randPronoun()
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randPronoun<Options extends FakeOptions = never>(
   options?: Options
 ) {

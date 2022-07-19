@@ -44,7 +44,10 @@ export interface SwiftOptions extends FakeOptions {
  *
  * randSwift({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSwift<Options extends SwiftOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { data } from './city.json';
  *
  * randCity({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCity<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { data } from './product-material.json';
  *
  * randProductMaterial({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randProductMaterial<Options extends FakeOptions = never>(
   options?: Options
 ) {

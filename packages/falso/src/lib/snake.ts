@@ -14,7 +14,10 @@ import { data } from './snake.json';
  *
  * randSnake({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSnake<Options extends FakeOptions = never>(
   options?: Options
 ) {

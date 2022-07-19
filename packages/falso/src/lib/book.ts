@@ -35,7 +35,10 @@ export interface Book {
  *
  * randBook({ category: 'Comedy' })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBook<Options extends BookOptions = never>(
   options?: Options
 ) {

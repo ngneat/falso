@@ -72,7 +72,10 @@ function randFormattedName<Options extends EmailOptions = never>(
  * randEmail({ suffix: 'com' })
  *
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randEmail<Options extends EmailOptions = never>(
   options?: Options
 ) {

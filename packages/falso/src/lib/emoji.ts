@@ -14,7 +14,10 @@ import { data } from './emoji.json';
  *
  * randEmoji({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randEmoji<Options extends FakeOptions = never>(
   options?: Options
 ) {

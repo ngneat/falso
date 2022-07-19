@@ -14,7 +14,10 @@ import { data } from './cat.json';
  *
  * randCat({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCat<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { data } from './vehicle-fuel.json';
  *
  * randVehicleFuel({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randVehicleFuel<Options extends FakeOptions = never>(
   options?: Options
 ) {

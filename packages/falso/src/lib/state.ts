@@ -14,7 +14,10 @@ import { data } from './state.json';
  *
  * randState({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randState<Options extends FakeOptions = never>(
   options?: Options
 ) {

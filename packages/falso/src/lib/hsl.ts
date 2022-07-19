@@ -22,7 +22,10 @@ export interface HSLOptions extends FakeOptions {
  *
  * randHsl({ alpha: true }) // default is false
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randHsl<Options extends HSLOptions = never>(options?: Options) {
   const factory = () => {
     const [h, s, l, a] = [

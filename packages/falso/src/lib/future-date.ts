@@ -22,7 +22,10 @@ interface FutureOptions extends FakeOptions {
  *
  * randFutureDate({ years: 10 }) // default is 1
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFutureDate<Options extends FutureOptions = never>(
   options?: Options
 ) {

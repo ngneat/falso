@@ -14,7 +14,10 @@ import { data } from './ordinal-direction.json';
  *
  * randOrdinalDirection({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randOrdinalDirection<Options extends FakeOptions = never>(
   options?: Options
 ) {

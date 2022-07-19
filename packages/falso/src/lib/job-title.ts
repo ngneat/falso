@@ -14,7 +14,10 @@ import { data } from './job-title.json';
  *
  * randJobTitle({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randJobTitle<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { data } from './ice-hockey-team.json';
  *
  * randIceHockeyTeam({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randIceHockeyTeam<Options extends FakeOptions = never>(
   options?: Options
 ) {

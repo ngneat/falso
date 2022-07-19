@@ -14,7 +14,10 @@ import { data } from './verb.json';
  *
  * randVerb({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randVerb<Options extends FakeOptions = never>(
   options?: Options
 ) {

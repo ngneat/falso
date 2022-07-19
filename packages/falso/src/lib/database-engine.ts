@@ -14,7 +14,10 @@ import { data } from './database-engine.json';
  *
  * randDatabaseEngine({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randDatabaseEngine<Options extends FakeOptions = never>(
   options?: Options
 ) {

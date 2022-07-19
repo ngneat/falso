@@ -14,7 +14,10 @@ import { data } from './bear.json';
  *
  * randBear({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBear<Options extends FakeOptions = never>(
   options?: Options
 ) {

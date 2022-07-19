@@ -23,7 +23,10 @@ interface LanguageOptions extends FakeOptions {
  *
  * randLanguage({ code: true }) // default is false
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randLanguage<Options extends LanguageOptions = never>(
   options?: Options
 ) {

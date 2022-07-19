@@ -14,7 +14,10 @@ import { data } from './priority.json';
  *
  * randPriority({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randPriority<Options extends FakeOptions = never>(
   options?: Options
 ) {

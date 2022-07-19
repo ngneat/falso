@@ -14,7 +14,10 @@ import { data } from './directory-path.json';
  *
  * randDirectoryPath({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randDirectoryPath<Options extends FakeOptions = never>(
   options?: Options
 ) {

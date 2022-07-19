@@ -14,7 +14,10 @@ import { data } from './mime-type.json';
  *
  * randMimeType({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randMimeType<Options extends FakeOptions = never>(
   options?: Options
 ) {

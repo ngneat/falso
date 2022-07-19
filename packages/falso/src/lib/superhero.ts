@@ -35,7 +35,10 @@ export interface SuperheroEntity extends Superhero {
  *
  * randSuperhero({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSuperhero<Options extends SuperheroOptions = never>(
   options?: Options
 ) {

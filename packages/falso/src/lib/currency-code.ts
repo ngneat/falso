@@ -14,7 +14,10 @@ import { data } from './currency-code.json';
  *
  * randCurrencyCode({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCurrencyCode<Options extends FakeOptions = never>(
   options?: Options
 ) {

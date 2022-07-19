@@ -22,7 +22,10 @@ export interface Todo {
  *
  * randTodo({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randTodo<Options extends FakeOptions = never>(
   options?: Options
 ) {

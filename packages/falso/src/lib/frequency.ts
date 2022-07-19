@@ -14,7 +14,10 @@ import { data } from './frequency.json';
  *
  * randFrequency({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFrequency<Options extends FakeOptions = never>(
   options?: Options
 ) {

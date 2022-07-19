@@ -22,7 +22,10 @@ export interface SemverOptions extends FakeOptions {
  *
  * randSemver({ prefix: 'v' })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSemver<Options extends SemverOptions = never>(
   options?: Options
 ) {

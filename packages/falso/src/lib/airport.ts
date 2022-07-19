@@ -21,7 +21,10 @@ export interface Airport {
  *
  * randAirport({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randAirport<Options extends FakeOptions = never>(
   options?: Options
 ) {

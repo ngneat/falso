@@ -14,7 +14,10 @@ import { data } from './user-agent.json';
  *
  * randUserAgent({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randUserAgent<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,10 @@ import { data } from './catch-phrase.json';
  *
  * randCatchPhrase({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCatchPhrase<Options extends FakeOptions = never>(
   options?: Options
 ) {
