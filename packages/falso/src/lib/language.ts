@@ -25,6 +25,10 @@ interface LanguageOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Afrikaans'
+ * 'Amharic'
+ * 'Arabic'
  */
 
 export function randLanguage<Options extends LanguageOptions = never>(

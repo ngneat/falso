@@ -16,6 +16,10 @@ import { data } from './country-code.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'MS'
+ * 'TW'
+ * 'LR'
  */
 
 export function randCountryCode<Options extends FakeOptions = never>(

@@ -23,6 +23,25 @@ export interface Airport {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * {
+  name: 'Hartsfield–Jackson Atlanta International Airport',
+  code: 'ATL',
+  city: 'Atlanta',
+  country: 'United States'
+}
+ * {
+  name: 'Los Angeles International Airport',
+  code: 'LAX',
+  city: 'Los Angeles',
+  country: 'United States'
+}
+ * {
+  name: "O'Hare International Airport",
+  code: 'ORD',
+  city: 'Chicago',
+  country: 'United States'
+}
  */
 
 export function randAirport<Options extends FakeOptions = never>(

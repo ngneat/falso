@@ -16,9 +16,9 @@ import { data } from './abbreviation.json';
  *
  * @automaticallyGeneratedExamples
  * @example
- * SCSI
- * SMTP
- * ADP
+ * 'SCSI'
+ * 'SMTP'
+ * 'ADP'
  */
 
 export function randAbbreviation<O extends FakeOptions = never>(options?: O) {

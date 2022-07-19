@@ -16,6 +16,10 @@ import { data } from './country.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Argentina'
+ * 'Peru'
+ * 'Colombia'
  */
 
 export function randCountry<Options extends FakeOptions = never>(

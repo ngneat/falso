@@ -16,6 +16,10 @@ import { data } from './horse.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Pottok'
+ * 'Dutch Heavy Draft'
+ * 'Spanish Barb'
  */
 
 export function randHorse<Options extends FakeOptions = never>(

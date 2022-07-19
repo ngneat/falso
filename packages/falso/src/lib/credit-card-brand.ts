@@ -16,6 +16,10 @@ import { data } from './credit-card-brand.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'American Express'
+ * 'T-Union'
+ * 'UnionPay'
  */
 
 export function randCreditCardBrand<Options extends FakeOptions = never>(

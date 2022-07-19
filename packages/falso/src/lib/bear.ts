@@ -16,6 +16,10 @@ import { data } from './bear.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Spectacled bear'
+ * 'Brown bear'
+ * 'Asian black bear'
  */
 
 export function randBear<Options extends FakeOptions = never>(

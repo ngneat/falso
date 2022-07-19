@@ -16,6 +16,10 @@ import { data } from './basketball-team.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Atlanta Hawks'
+ * 'Boston Celtics'
+ * 'Brooklyn Nets'
  */
 
 export function randBasketballTeam<Options extends FakeOptions = never>(

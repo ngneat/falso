@@ -16,6 +16,10 @@ import { data } from './shape.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Triangle'
+ * 'Circle'
+ * 'Square'
  */
 
 export function randShape<Options extends FakeOptions = never>(

@@ -15,6 +15,10 @@ import { data } from './singer.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Mary J. Blige'
+ * 'Steven Tyler'
+ * 'Stevie Nicks'
  */
 
 export function randSinger<Options extends FakeOptions = never>(

@@ -16,6 +16,10 @@ import { data } from './rabbit.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Satin'
+ * 'Giant Angora'
+ * 'Tan'
  */
 
 export function randRabbit<Options extends FakeOptions = never>(

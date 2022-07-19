@@ -16,6 +16,10 @@ import { data } from './database-type.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'tinyint'
+ * 'date'
+ * 'timestamp'
  */
 
 export function randDatabaseType<Options extends FakeOptions = never>(

@@ -16,6 +16,10 @@ import { data } from './vehicle-fuel.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Gasoline'
+ * 'Hybrid'
+ * 'Electric'
  */
 
 export function randVehicleFuel<Options extends FakeOptions = never>(

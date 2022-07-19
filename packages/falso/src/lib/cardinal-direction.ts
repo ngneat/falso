@@ -16,6 +16,10 @@ import { data } from './cardinal-direction.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'East'
+ * 'South'
+ * 'West'
  */
 
 export function randCardinalDirection<Options extends FakeOptions = never>(

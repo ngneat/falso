@@ -16,6 +16,10 @@ import { rand } from './rand';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 5F
+ * 18D
+ * 2F
  */
 
 export function randSeatNumber<Options extends FakeOptions = never>(

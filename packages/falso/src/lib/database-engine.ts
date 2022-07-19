@@ -16,6 +16,10 @@ import { data } from './database-engine.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'CSV'
+ * 'ARCHIVE'
+ * 'MyISAM'
  */
 
 export function randDatabaseEngine<Options extends FakeOptions = never>(

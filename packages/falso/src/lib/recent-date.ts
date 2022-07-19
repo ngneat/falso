@@ -24,6 +24,10 @@ interface RecentOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * Mon Jul 18 2022 20:10:55 GMT+0200 (Central European Summer Time)
+ * Mon Jul 18 2022 17:14:10 GMT+0200 (Central European Summer Time)
+ * Tue Jul 19 2022 00:41:23 GMT+0200 (Central European Summer Time)
  */
 
 export function randRecentDate<Options extends RecentOptions = never>(

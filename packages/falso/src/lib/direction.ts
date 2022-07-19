@@ -16,6 +16,10 @@ import { data } from './direction.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Southwest'
+ * 'North'
+ * 'Northeast'
  */
 
 export function randDirection<Options extends FakeOptions = never>(

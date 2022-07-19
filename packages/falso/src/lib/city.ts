@@ -16,6 +16,10 @@ import { data } from './city.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'South Dagmarshire'
+ * 'New Solonmouth'
+ * 'New Montemouth'
  */
 
 export function randCity<Options extends FakeOptions = never>(

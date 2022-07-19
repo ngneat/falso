@@ -16,6 +16,10 @@ import { data } from './street-name.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'King Drives'
+ * 'Georgiana Throughway'
+ * 'Antonietta Highway'
  */
 
 export function randStreetName<Options extends FakeOptions = never>(

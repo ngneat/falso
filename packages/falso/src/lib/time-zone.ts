@@ -16,6 +16,10 @@ import { data } from './time-zone.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'America/Lima'
+ * 'America/Juneau'
+ * 'Pacific/Auckland'
  */
 
 export function randTimeZone<Options extends FakeOptions = never>(

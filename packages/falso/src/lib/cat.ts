@@ -16,6 +16,10 @@ import { data } from './cat.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Japanese Bobtail'
+ * 'Savannah'
+ * 'LaPerm'
  */
 
 export function randCat<Options extends FakeOptions = never>(

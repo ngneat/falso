@@ -23,6 +23,10 @@ interface AvatarOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * https://i.pravatar.cc/100
+ * https://i.pravatar.cc/100
+ * https://i.pravatar.cc/100
  */
 
 export function randAvatar<Options extends AvatarOptions = never>(

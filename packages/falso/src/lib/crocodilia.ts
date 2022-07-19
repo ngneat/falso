@@ -16,6 +16,10 @@ import { data } from './crocodilia.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Orinoco Crocodile'
+ * 'Gharial'
+ * 'Broad-snouted Caiman'
  */
 
 export function randCrocodilia<Options extends FakeOptions = never>(

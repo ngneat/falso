@@ -16,6 +16,10 @@ import { data } from './job-descriptor.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Senior'
+ * 'Corporate'
+ * 'Future'
  */
 
 export function randJobDescriptor<Options extends FakeOptions = never>(

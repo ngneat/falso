@@ -16,6 +16,10 @@ import { data } from './job-title.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Internal Quality Coordinator'
+ * 'Legacy Marketing Planner'
+ * 'Investor Configuration Specialist'
  */
 
 export function randJobTitle<Options extends FakeOptions = never>(

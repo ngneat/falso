@@ -24,6 +24,10 @@ export interface MonthOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'January'
+ * 'February'
+ * 'March'
  */
 
 export function randMonth<Options extends MonthOptions = never>(

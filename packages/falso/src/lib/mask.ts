@@ -20,6 +20,10 @@ import { randAlpha } from './alpha';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * c05a4
+ * q52u2
+ * p13u3
  */
 
 export function randMask<

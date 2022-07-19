@@ -16,6 +16,10 @@ import { data } from './weekday.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Monday'
+ * 'Tuesday'
+ * 'Wedneday'
  */
 
 export function randWeekday<Options extends FakeOptions = never>(

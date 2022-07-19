@@ -16,6 +16,10 @@ import { data } from './cow.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Hartón del Valle'
+ * 'Pedit'
+ * 'German Black Pied cattle'
  */
 
 export function randCow<Options extends FakeOptions = never>(

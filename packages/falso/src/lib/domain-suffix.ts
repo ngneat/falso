@@ -16,6 +16,10 @@ import { data } from './domain-suffix.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'org'
+ * 'biz'
+ * 'com'
  */
 
 export function randDomainSuffix<Options extends FakeOptions = never>(

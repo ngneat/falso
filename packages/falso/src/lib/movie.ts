@@ -15,6 +15,10 @@ import { data } from './movie.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'The Shawshank Redemption'
+ * 'The Godfather'
+ * 'The Godfather: Part II'
  */
 
 export function randMovie<Options extends FakeOptions = never>(

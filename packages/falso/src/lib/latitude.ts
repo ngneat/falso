@@ -15,6 +15,10 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 30.204
+ * 34.253
+ * -31.506
  */
 
 export function randLatitude<Options extends FakeOptions = never>(

@@ -15,6 +15,10 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 10010000100010100000011001101101000111010010001000100
+ * 1011010110110110110010000110110101111111101111011100
+ * 1000000100101111001100101001010111000001000000101010
  */
 
 export function randBinary<Options extends FakeOptions = never>(

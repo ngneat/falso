@@ -15,6 +15,10 @@ import { data } from './movie-character.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Darth Vader'
+ * 'Edna Mode'
+ * 'Randle McMurphy'
  */
 
 export function randMovieCharacter<Options extends FakeOptions = never>(

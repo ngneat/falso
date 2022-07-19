@@ -25,6 +25,10 @@ interface ProtocolOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'https'
+ * 'http'
+ * 'tcp'
  */
 
 export function randProtocol<Options extends ProtocolOptions = never>(

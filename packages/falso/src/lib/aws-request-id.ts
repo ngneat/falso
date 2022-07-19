@@ -16,6 +16,10 @@ import { fake, FakeOptions } from './core/core';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 788k7v21-fa9h-0y1h-x6l8-rs8dpe1efc4y
+ * 5s3mlim3-737x-8ol6-d282-mg88umn271x5
+ * nm1dvo6p-uuj3-1l62-e131-lu249e634825
  */
 
 export function randAwsRequestId<Options extends FakeOptions = never>(

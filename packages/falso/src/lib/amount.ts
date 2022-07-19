@@ -37,6 +37,10 @@ export interface RandomAmountOptions extends RandomInRangeOptions, FakeOptions {
  * randAmount({ length: 10 })
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 8672.63
+ * 3284.82
+ * 9879.79
  */
 
 export function randAmount<

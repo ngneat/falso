@@ -16,6 +16,10 @@ import { data } from './oauth-provider.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Amazon'
+ * 'AOL'
+ * 'Autodesk'
  */
 
 export function randOAuthProvider<Options extends FakeOptions = never>(

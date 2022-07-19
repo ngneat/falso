@@ -16,6 +16,10 @@ import { data } from './fish.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Araucanian herring'
+ * 'Pacific saury'
+ * 'Indian oil sardine'
  */
 
 export function randFish<Options extends FakeOptions = never>(

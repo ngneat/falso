@@ -16,6 +16,10 @@ import { data } from './vehicle-manufacturer.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Abarth'
+ * 'Acura'
+ * 'Alpine'
  */
 
 export function randVehicleManufacturer<Options extends FakeOptions = never>(

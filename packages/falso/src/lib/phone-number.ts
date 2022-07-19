@@ -254,6 +254,13 @@ type CountryCode =
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * { formats: [ '+247 ####' ], countryCode: [ 'AC' ] }
+ * { formats: [ '+376 ### ###' ], countryCode: [ 'AD' ] }
+ * {
+  formats: [ '+971 ## ### ####', '+971 # ### ####' ],
+  countryCode: [ 'AE' ]
+}
  */
 
 export function randPhoneNumber<

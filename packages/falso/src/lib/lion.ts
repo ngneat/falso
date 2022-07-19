@@ -16,6 +16,10 @@ import { data } from './lion.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Cape lion'
+ * 'Transvaal lion'
+ * 'Masai Lion'
  */
 
 export function randLion<Options extends FakeOptions = never>(

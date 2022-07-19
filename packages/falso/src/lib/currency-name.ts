@@ -16,6 +16,10 @@ import { data } from './currency-name.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Egyptian Pound'
+ * 'Belize Dollar'
+ * 'Sudanese Pound'
  */
 
 export function randCurrencyName<Options extends FakeOptions = never>(

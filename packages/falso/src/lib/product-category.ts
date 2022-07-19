@@ -16,6 +16,10 @@ import { data } from './product-category.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Antiques'
+ * 'Appliances'
+ * 'Automotive Parts & Accessories'
  */
 
 export function randProductCategory<Options extends FakeOptions = never>(

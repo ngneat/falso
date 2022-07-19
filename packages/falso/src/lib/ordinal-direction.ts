@@ -16,6 +16,10 @@ import { data } from './ordinal-direction.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Southwest'
+ * 'Northwest'
+ * 'Southeast'
  */
 
 export function randOrdinalDirection<Options extends FakeOptions = never>(

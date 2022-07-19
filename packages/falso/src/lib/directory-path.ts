@@ -16,6 +16,10 @@ import { data } from './directory-path.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * '/usr/X11R6'
+ * '/sys'
+ * '/mnt'
  */
 
 export function randDirectoryPath<Options extends FakeOptions = never>(

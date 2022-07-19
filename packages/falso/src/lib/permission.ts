@@ -24,6 +24,10 @@ interface PermissionOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'read'
+ * 'write'
+ * 'execute'
  */
 
 export function randPermission<Options extends PermissionOptions = never>(

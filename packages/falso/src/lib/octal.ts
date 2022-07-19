@@ -15,6 +15,10 @@ import { fake, FakeOptions } from './core/core';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 26575274017412507
+ * 223001471652072323
+ * 160740577524717427
  */
 
 export function randOctal<Options extends FakeOptions = never>(

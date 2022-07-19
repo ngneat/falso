@@ -16,6 +16,10 @@ import { data } from './vehicle.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Toyota Volt'
+ * 'Rolls Royce XC90'
+ * 'Nissan Fiesta'
  */
 
 export function randVehicle<Options extends FakeOptions = never>(

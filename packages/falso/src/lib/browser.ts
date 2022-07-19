@@ -16,6 +16,10 @@ import { data } from './browser.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Chrome'
+ * 'Edge'
+ * 'Firefox'
  */
 
 export function randBrowser<Options extends FakeOptions = never>(

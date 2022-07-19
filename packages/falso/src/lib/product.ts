@@ -33,6 +33,10 @@ export interface Product {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Chair'
+ * 'Soap'
+ * 'Sausages'
  */
 
 export function randProduct<Options extends FakeOptions = never>(

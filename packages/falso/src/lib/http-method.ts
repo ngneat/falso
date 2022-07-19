@@ -16,6 +16,10 @@ import { data } from './http-method.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'GET'
+ * 'POST'
+ * 'PUT'
  */
 
 export function randHttpMethod<Options extends FakeOptions = never>(

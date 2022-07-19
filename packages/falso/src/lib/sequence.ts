@@ -53,6 +53,10 @@ type RandomSequenceOptions2 = {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 95vctFi3
+ * AI9cNHN7
+ * g2YAKyLq
  */
 
 export function randSequence<Options extends RandomSequenceOptions = never>(

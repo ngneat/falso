@@ -16,6 +16,10 @@ import { data } from './state.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Oklahoma'
+ * 'South Dakota'
+ * 'Massachusetts'
  */
 
 export function randState<Options extends FakeOptions = never>(

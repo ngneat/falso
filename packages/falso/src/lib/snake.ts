@@ -16,6 +16,10 @@ import { data } from './snake.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Bluntnose viper'
+ * 'Yunnan keelback'
+ * 'Eastern hognose snake'
  */
 
 export function randSnake<Options extends FakeOptions = never>(

@@ -28,6 +28,10 @@ function capitalizeFirstLetter(text: string): string {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'est'
+ * 'voluptatem'
+ * 'non'
  */
 
 export function randWord<Options extends WordOptions = never>(

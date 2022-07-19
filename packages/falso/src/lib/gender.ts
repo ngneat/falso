@@ -25,6 +25,10 @@ interface GenderOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Cisgender'
+ * 'Male to female transgender woman'
+ * 'Androgyne'
  */
 
 export function randGender<Options extends GenderOptions = never>(

@@ -32,6 +32,10 @@ function getSpecialCharacter(wordCount: number): string {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Vero voluptatem fuga sequi veritatis.'
+ * 'Temporibus reprehenderit neque sint nihil sint quae.'
+ * 'Aperiam porro aperiam et.'
  */
 
 export function randSentence<Options extends FakeOptions = never>(

@@ -16,6 +16,10 @@ import { data } from './drinks.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Amaretto Sour'
+ * 'Aviation'
+ * 'Cocktail'
  */
 
 export function randDrinks<Options extends FakeOptions = never>(

@@ -16,6 +16,10 @@ import { data } from './file-type.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'model'
+ * 'x-conference'
+ * 'x-shader'
  */
 
 export function randFileType<Options extends FakeOptions = never>(

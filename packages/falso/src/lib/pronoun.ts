@@ -12,6 +12,10 @@ import { data } from './pronoun.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'They/Them'
+ * 'She/Her'
+ * 'He/Him'
  */
 
 export function randPronoun<Options extends FakeOptions = never>(

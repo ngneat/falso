@@ -17,6 +17,10 @@ type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * https://placeimg.com/500/500
+ * https://placeimg.com/500/500
+ * https://placeimg.com/500/500
  */
 
 export function randImg<

@@ -16,6 +16,10 @@ import { data } from './frequency.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'always'
+ * 'constantly'
+ * 'usually'
  */
 
 export function randFrequency<Options extends FakeOptions = never>(

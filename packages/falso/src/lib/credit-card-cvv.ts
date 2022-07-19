@@ -15,6 +15,10 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 721
+ * 584
+ * 106
  */
 
 export function randCreditCardCVV<Options extends FakeOptions = never>(

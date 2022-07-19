@@ -16,6 +16,10 @@ import { data } from './person-title.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Dr.'
+ * 'Miss'
+ * 'Mr.'
  */
 
 export function randPersonTitle<Options extends FakeOptions = never>(

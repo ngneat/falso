@@ -16,6 +16,10 @@ import { data } from './database-collation.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'utf8_unicode_ci'
+ * 'cp1250_general_ci'
+ * 'cp1250_bin'
  */
 
 export function randDatabaseCollation<Options extends FakeOptions = never>(

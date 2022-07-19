@@ -16,6 +16,10 @@ import { data } from './integration.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Slack'
+ * 'GitHub'
+ * 'Jira'
  */
 
 export function randIntegration<Options extends FakeOptions = never>(

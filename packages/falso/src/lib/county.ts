@@ -16,6 +16,10 @@ import { data } from './county.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Bedfordshire'
+ * 'Berkshire'
+ * 'Bristol'
  */
 
 export function randCounty<Options extends FakeOptions = never>(

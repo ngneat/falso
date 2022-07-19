@@ -20,6 +20,10 @@ function generator() {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 1
+ * 3
+ * a
  */
 
 export function randHexaDecimal<Options extends FakeOptions = never>(

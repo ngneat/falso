@@ -16,6 +16,10 @@ import { data } from './currency-code.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'IRR'
+ * 'SHP'
+ * 'NPR'
  */
 
 export function randCurrencyCode<Options extends FakeOptions = never>(

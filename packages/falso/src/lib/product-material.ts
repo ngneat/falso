@@ -16,6 +16,10 @@ import { data } from './product-material.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Metal'
+ * 'Plastic'
+ * 'Rubber'
  */
 
 export function randProductMaterial<Options extends FakeOptions = never>(

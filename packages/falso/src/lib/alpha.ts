@@ -16,6 +16,10 @@ import { alphaChars } from './sequence';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * g
+ * g
+ * l
  */
 
 export function randAlpha<Options extends FakeOptions = never>(

@@ -45,6 +45,10 @@ export interface RandomNumberOptions extends RandomInRangeOptions, FakeOptions {
  * randNumber({ min: 1000, max: 2000, precision: 10 }) // 1_250
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 594711
+ * 214173
+ * 523061
  */
 
 export function randNumber<Options extends RandomNumberOptions = never>(

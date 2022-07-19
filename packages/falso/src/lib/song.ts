@@ -15,6 +15,10 @@ import { data } from './song.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'The twist'
+ * 'Smooth'
+ * 'Mack the knife'
  */
 
 export function randSong<Options extends FakeOptions = never>(

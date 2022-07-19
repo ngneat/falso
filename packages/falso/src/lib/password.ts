@@ -24,6 +24,10 @@ export interface PasswordOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * igPbPzb0NCpuQpB
+ * MD8iRRoiUmpGq6F
+ * OyYuahySZicMxdg
  */
 
 export function randPassword<Options extends PasswordOptions = never>(

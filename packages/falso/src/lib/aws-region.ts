@@ -16,6 +16,10 @@ import { data } from './aws-region.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'us-east-2'
+ * 'us-east-1'
+ * 'us-west-1'
  */
 
 export function randAwsRegion<Options extends FakeOptions = never>(

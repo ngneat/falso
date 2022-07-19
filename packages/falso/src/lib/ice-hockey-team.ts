@@ -16,6 +16,10 @@ import { data } from './ice-hockey-team.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Anaheim Ducks'
+ * 'Arizona Coyotes'
+ * 'Boston Bruins'
  */
 
 export function randIceHockeyTeam<Options extends FakeOptions = never>(

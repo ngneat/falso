@@ -17,6 +17,10 @@ import { randLongitude } from './longitude';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * -35.38,152.673
+ * 32.35,-15.859
+ * -32.507,-145.21
  */
 
 export function randNearbyGPSCoordinate<Options extends FakeOptions = never>(

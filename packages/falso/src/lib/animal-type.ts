@@ -16,6 +16,10 @@ import { data } from './animal-type.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'bird'
+ * 'cetacean'
+ * 'rabbit'
  */
 
 export function randAnimalType<Options extends FakeOptions = never>(

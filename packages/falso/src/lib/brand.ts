@@ -16,6 +16,10 @@ import { data } from './brand.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Apple'
+ * 'Amazon'
+ * 'Microsoft'
  */
 
 export function randBrand<Options extends FakeOptions = never>(

@@ -16,6 +16,10 @@ import { data } from './company-name.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Kautzer, Macejkovic and Fisher'
+ * 'Greenholt - Mosciski'
+ * 'Marquardt - Runolfsdottir'
  */
 
 export function randCompanyName<Options extends FakeOptions = never>(

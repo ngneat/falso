@@ -20,6 +20,11 @@ type Type = 'Project' | 'User Story' | 'Task';
  *
  * randStatus({ length: 10 })
  *
+ * @automaticallyGeneratedExamples
+ * @example
+ * { status: 'Pending', type: [ 'Project', 'User Story' ] }
+ * { status: 'Todo', type: [ 'User Story', 'Task' ] }
+ * { status: 'In progress', type: [ 'Task' ] }
  */
 
 export function randStatus<

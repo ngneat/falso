@@ -16,6 +16,10 @@ import { data } from './football-team.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'AFC Bournemouth'
+ * 'Alavés'
+ * 'Arsenal'
  */
 
 export function randFootballTeam<Options extends FakeOptions = never>(

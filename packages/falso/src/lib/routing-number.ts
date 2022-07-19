@@ -16,6 +16,10 @@ import { randNumber } from './number';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 84704424
+ * 94603877
+ * 32247120
  */
 
 export function randRoutingNumber<Options extends FakeOptions = never>(

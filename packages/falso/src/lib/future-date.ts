@@ -24,6 +24,10 @@ interface FutureOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * Fri Mar 10 2023 19:14:56 GMT+0100 (Central European Standard Time)
+ * Sun Jun 04 2023 16:20:23 GMT+0200 (Central European Summer Time)
+ * Sun Jul 16 2023 23:09:32 GMT+0200 (Central European Summer Time)
  */
 
 export function randFutureDate<Options extends FutureOptions = never>(

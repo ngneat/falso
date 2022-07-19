@@ -16,6 +16,10 @@ import { data } from './airline.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Aeroflot'
+ * 'Air Canada'
+ * 'Air Europa'
  */
 
 export function randAirline<Options extends FakeOptions = never>(

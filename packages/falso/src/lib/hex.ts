@@ -16,6 +16,10 @@ import { random } from './random';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * #2b1df7
+ * #64f33f
+ * #af3363
  */
 
 export function randHex<Options extends FakeOptions = never>(

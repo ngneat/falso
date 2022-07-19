@@ -16,6 +16,10 @@ import { data } from './skill.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Accounting or bookkeeping'
+ * 'Active listening'
+ * 'Adaptability'
  */
 
 export function randSkill<Options extends FakeOptions = never>(

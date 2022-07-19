@@ -16,6 +16,10 @@ import { data } from './file-name.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'markets'
+ * 'solid_backing_strategist'
+ * 'granite'
  */
 
 export function randFileName<

@@ -24,6 +24,10 @@ interface PastOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * Sun May 01 2022 04:45:01 GMT+0200 (Central European Summer Time)
+ * Wed Mar 02 2022 06:23:07 GMT+0100 (Central European Standard Time)
+ * Mon Dec 27 2021 15:33:39 GMT+0100 (Central European Standard Time)
  */
 
 export function randPastDate<Options extends PastOptions = never>(

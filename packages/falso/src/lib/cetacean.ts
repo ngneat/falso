@@ -16,6 +16,10 @@ import { data } from './cetacean.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Clymene Dolphin'
+ * 'Bottlenose Dolphin'
+ * 'Costero'
  */
 
 export function randCetacean<Options extends FakeOptions = never>(

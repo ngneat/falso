@@ -16,6 +16,10 @@ import { data } from './emoji.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * '😀'
+ * '😃'
+ * '😄'
  */
 
 export function randEmoji<Options extends FakeOptions = never>(

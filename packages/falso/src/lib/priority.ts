@@ -16,6 +16,10 @@ import { data } from './priority.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'low'
+ * 'medium'
+ * 'high'
  */
 
 export function randPriority<Options extends FakeOptions = never>(

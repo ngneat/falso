@@ -37,6 +37,10 @@ export interface SuperheroEntity extends Superhero {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * { realName: 'Peter Parker', alterEgo: 'Spider-man', company: 'Marvel' }
+ * { realName: 'Matt Murdock', alterEgo: 'Daredevil', company: 'Marvel' }
+ * { realName: "T'Challa", alterEgo: 'Black Panther', company: 'Marvel' }
  */
 
 export function randSuperhero<Options extends SuperheroOptions = never>(

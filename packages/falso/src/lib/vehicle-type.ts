@@ -16,6 +16,10 @@ import { data } from './vehicle-type.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Sedan'
+ * 'Crew Cab Pickup'
+ * 'Minivan'
  */
 
 export function randVehicleType<Options extends FakeOptions = never>(

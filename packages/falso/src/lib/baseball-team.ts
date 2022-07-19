@@ -16,6 +16,10 @@ import { data } from './baseball-team.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Arizona Diamondbacks'
+ * 'Atlanta Braves'
+ * 'Baltimore Orioles'
  */
 
 export function randBaseballTeam<Options extends FakeOptions = never>(

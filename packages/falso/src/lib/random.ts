@@ -13,25 +13,10 @@ let prng = seedRandom();
  *
  *
  * @automaticallyGeneratedExamples
- */
-
-export function random() {
-  return prng();
-}
-
-/**
- * Sets and Resets random seed.
- *
- * @category general
- *
  * @example
- *
- * seed()
- *
- * @example
- *
- * seed('some-constant-seed')
- *
+ * 0.14991954812181882
+ * 0.8425426058803052
+ * 0.07010227748271382
  */
 
 export function seed(value?: string) {

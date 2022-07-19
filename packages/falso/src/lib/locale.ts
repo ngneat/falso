@@ -16,6 +16,10 @@ import { data } from './locale.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'cz'
+ * 'ge'
+ * 'ne'
  */
 
 export function randLocale<Options extends FakeOptions = never>(

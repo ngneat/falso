@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { inspect } = require('util');
 
 const [directoryPath, generateIndicator] = process.argv.slice(2);
 // https://regex101.com/r/qxpfyX/1
@@ -12,7 +13,8 @@ const ERRORS = {
   missingJsonDataField: `'json.data' field is missing`,
   jsonDataFieldValueMustBeArray: "'json.data' field value is not array",
   jsonDataMustNotBeEmptyArray: "'json.data' field value is empty array",
-  tsFileDoesNotContainRandFunction: "ts file must contain function which name starts with 'rand'"
+  tsFileDoesNotContainRandFunction: "ts file must contain function which name starts with 'rand'",
+  fileReadError: 'fileReadError'
 };
 
 const functions = {
@@ -38,12 +40,18 @@ const functions = {
     }
     return [json.data.slice(0,3), null];
   },
-  getExamplesFromTs: (tsContent) => {
-    const [,randFunction] = Object.entries(tsContent).find(([key]) => key.startsWith('rand'));
-    if(randFunction === undefined || typeof randFunction !== 'function') {
-      return [null, ERRORS.tsFileDoesNotContainRandFunction]
+  getExamplesFromTs: (tsFilePath) => {
+    try {
+      const tsContent = require(tsFilePath);
+      const [,randFunction] = Object.entries(tsContent).find(([key]) => key.startsWith('rand'));
+      if(randFunction === undefined || typeof randFunction !== 'function') {
+        return [null, ERRORS.tsFileDoesNotContainRandFunction]
+      }
+      return [Array.from({ length: 3 }, randFunction), null]
+    } catch(error) {
+      console.log(error);
+      return [null, ERRORS.fileReadError];
     }
-    return [Array.from({ length: 3 }, randFunction), null]
   },
   generateExamples: (acc, filename) => {
     const basePath = `${directoryPath}${filename}`
@@ -62,13 +70,13 @@ const functions = {
     }
     const jsonFileContent = functions.getFileContent(filePath.json);
     const [examples, error] = jsonFileContent === null
-      ? functions.getExamplesFromTs(require(`../${basePath}`))
+      ? functions.getExamplesFromTs(`../${basePath}`)
       : functions.getExamplesFromJson(JSON.parse(jsonFileContent));
     if(error !== null) {
       acc[error].push(filename);
       return acc;
     }
-    const replacement = `${generateIndicator}\n * @example\n${examples.map(example => ` * ${example}\n`).join('')} */`
+    const replacement = `${generateIndicator}\n * @example\n${examples.map(example => ` * ${inspect(example)}\n`).join('')} */`
     fs.writeFileSync(`${basePath}.ts`, tsFileContent.replace(regexp, replacement));
     return acc;
   },

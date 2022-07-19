@@ -24,6 +24,10 @@ export interface RGBOptions extends FakeOptions {
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * rgb(197, 87, 72)
+ * rgb(126, 83, 138)
+ * rgb(166, 45, 239)
  */
 
 export function randRgb<Options extends RGBOptions = never>(options?: Options) {

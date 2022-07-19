@@ -16,6 +16,10 @@ import { data } from './color.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'AliceBlue'
+ * 'AntiqueWhite'
+ * 'Aqua'
  */
 
 export function randColor<Options extends FakeOptions = never>(

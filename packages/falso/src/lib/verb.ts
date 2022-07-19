@@ -16,6 +16,10 @@ import { data } from './verb.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'bypass'
+ * 'index'
+ * 'transmit'
  */
 
 export function randVerb<Options extends FakeOptions = never>(

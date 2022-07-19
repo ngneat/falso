@@ -16,6 +16,10 @@ import { data } from './department.json';
  *
  *
  * @automaticallyGeneratedExamples
+ * @example
+ * 'Games'
+ * 'Automotive'
+ * 'Music'
  */
 
 export function randDepartment<Options extends FakeOptions = never>(
