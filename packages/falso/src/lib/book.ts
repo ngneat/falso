@@ -35,7 +35,26 @@ export interface Book {
  *
  * randBook({ category: 'Comedy' })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * {
+  title: 'The Adventures of Augie March',
+  author: 'Saul Bellow',
+  category: 'Comedy'
+}
+ * {
+  title: 'The Uncommon Reader',
+  author: 'Alan Bennett',
+  category: 'Comedy'
+}
+ * {
+  title: 'Don Quixote',
+  author: 'Miguel de Cervantes',
+  category: 'Comedy'
+}
  */
+
 export function randBook<Options extends BookOptions = never>(
   options?: Options
 ) {

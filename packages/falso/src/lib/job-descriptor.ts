@@ -14,7 +14,14 @@ import { data } from './job-descriptor.json';
  *
  * randJobDescriptor({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Senior'
+ * 'Corporate'
+ * 'Future'
  */
+
 export function randJobDescriptor<Options extends FakeOptions = never>(
   options?: Options
 ) {

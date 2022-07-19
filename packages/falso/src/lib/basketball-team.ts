@@ -14,7 +14,14 @@ import { data } from './basketball-team.json';
  *
  * randBasketballTeam({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Atlanta Hawks'
+ * 'Boston Celtics'
+ * 'Brooklyn Nets'
  */
+
 export function randBasketballTeam<Options extends FakeOptions = never>(
   options?: Options
 ) {

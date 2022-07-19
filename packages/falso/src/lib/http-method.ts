@@ -14,7 +14,14 @@ import { data } from './http-method.json';
  *
  * randHttpMethod({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'GET'
+ * 'POST'
+ * 'PUT'
  */
+
 export function randHttpMethod<Options extends FakeOptions = never>(
   options?: Options
 ) {

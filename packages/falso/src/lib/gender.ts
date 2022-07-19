@@ -23,7 +23,14 @@ interface GenderOptions extends FakeOptions {
  *
  * randGender({ code: true }) // default is false
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Cisgender'
+ * 'Male to female transgender woman'
+ * 'Androgyne'
  */
+
 export function randGender<Options extends GenderOptions = never>(
   options?: Options
 ) {

@@ -15,7 +15,10 @@ import { rand } from './rand';
  *
  * randAirportName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randAirportName<Options extends FakeOptions = never>(
   options?: Options
 ) {

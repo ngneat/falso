@@ -28,7 +28,10 @@ export interface NameOptions extends FakeOptions {
  *
  * randFullName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFullName<Options extends NameOptions = never>(
   options?: Options
 ) {

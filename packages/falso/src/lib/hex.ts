@@ -14,7 +14,14 @@ import { random } from './random';
  *
  * randHex({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * #2b1df7
+ * #64f33f
+ * #af3363
  */
+
 export function randHex<Options extends FakeOptions = never>(
   options?: Options
 ) {

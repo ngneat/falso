@@ -14,7 +14,13 @@ import { data } from './abbreviation.json';
  *
  * randAbbreviation({ length: 10 })
  *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'SCSI'
+ * 'SMTP'
+ * 'ADP'
  */
+
 export function randAbbreviation<O extends FakeOptions = never>(options?: O) {
   return fake(data, options);
 }

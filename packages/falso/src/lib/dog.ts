@@ -14,7 +14,14 @@ import { data } from './dog.json';
  *
  * randDog({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Jack Russell Terrier'
+ * 'Beauceron'
+ * 'Denmark Feist'
  */
+
 export function randDog<Options extends FakeOptions = never>(
   options?: Options
 ) {

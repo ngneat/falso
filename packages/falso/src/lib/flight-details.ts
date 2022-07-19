@@ -49,7 +49,10 @@ function generateFlightLength(): number {
  *
  * randFlightDetails({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFlightDetails<Options extends FlightDetailsOptions = never>(
   options?: Options
 ) {

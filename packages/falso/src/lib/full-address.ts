@@ -22,7 +22,10 @@ import { AddressOptions, randAddress } from './address';
  *
  * randFullAddress({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randFullAddress<Options extends AddressOptions = never>(
   options?: Options
 ) {

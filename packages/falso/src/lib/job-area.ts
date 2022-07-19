@@ -14,7 +14,14 @@ import { data } from './job-area.json';
  *
  * randJobArea({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Brand'
+ * 'Tactics'
+ * 'Markets'
  */
+
 export function randJobArea<Options extends FakeOptions = never>(
   options?: Options
 ) {

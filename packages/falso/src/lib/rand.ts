@@ -13,7 +13,10 @@ import { fake, FakeOptions } from './core/core';
  *
  * rand([ 1, 2, 3 ], { length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function rand<T, Options extends FakeOptions = never>(
   arr: Readonly<T[]>,
   options?: Options

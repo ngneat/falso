@@ -24,7 +24,10 @@ export interface Post {
  *
  * randPost({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randPost<Options extends FakeOptions = never>(
   options?: Options
 ) {

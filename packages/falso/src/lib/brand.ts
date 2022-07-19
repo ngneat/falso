@@ -14,7 +14,14 @@ import { data } from './brand.json';
  *
  * randBrand({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Apple'
+ * 'Amazon'
+ * 'Microsoft'
  */
+
 export function randBrand<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -23,7 +23,10 @@ export interface TextOptions extends FakeOptions {
  *
  * randText({ charCount: 10 }) // default is 10
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randText<Options extends TextOptions = never>(
   options?: Options
 ) {

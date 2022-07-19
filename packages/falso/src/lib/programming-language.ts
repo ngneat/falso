@@ -14,7 +14,14 @@ import { data } from './programming-language.json';
  *
  * randProgrammingLanguage({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Python'
+ * 'Java'
+ * 'JavaScript'
  */
+
 export function randProgrammingLanguage<Options extends FakeOptions = never>(
   options?: Options
 ) {

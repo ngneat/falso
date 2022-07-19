@@ -14,7 +14,14 @@ import { randNumber } from './number';
  *
  * randRoutingNumber({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 84704424
+ * 94603877
+ * 32247120
  */
+
 export function randRoutingNumber<Options extends FakeOptions = never>(
   options?: Options
 ) {

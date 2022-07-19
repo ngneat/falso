@@ -20,7 +20,10 @@ import { NameOptions } from './full-name';
  *
  * randLastName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randLastName<Options extends NameOptions = never>(
   options?: Options
 ) {

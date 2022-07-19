@@ -14,7 +14,14 @@ import { data } from './integration.json';
  *
  * randIntegrations({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Slack'
+ * 'GitHub'
+ * 'Jira'
  */
+
 export function randIntegration<Options extends FakeOptions = never>(
   options?: Options
 ) {

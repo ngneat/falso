@@ -30,7 +30,10 @@ export interface UserNameOptions extends FakeOptions {
  *
  * randUserName({ lastName: 'Smee' })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randUserName<Options extends UserNameOptions = never>(
   options?: Options
 ) {

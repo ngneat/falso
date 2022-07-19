@@ -24,7 +24,10 @@ export interface IbanOptions extends FakeOptions {
  *
  * randIban({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randIban<Options extends IbanOptions = never>(
   options?: Options
 ) {

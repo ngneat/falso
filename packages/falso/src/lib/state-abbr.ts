@@ -14,7 +14,14 @@ import { data } from './state-abbr.json';
  *
  * randStateAbbr({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'OR'
+ * 'FL'
+ * 'NM'
  */
+
 export function randStateAbbr<Options extends FakeOptions = never>(
   options?: Options
 ) {

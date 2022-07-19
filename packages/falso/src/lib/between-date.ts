@@ -19,7 +19,10 @@ interface BetweenOptions extends FakeOptions {
  *
  * randBetweenDate({ from: new Date('10/07/2020'), to: new Date(), length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBetweenDate<Options extends BetweenOptions = never>(
   options: Options
 ) {

@@ -31,7 +31,14 @@ export interface Product {
  *
  * randProduct({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Chair'
+ * 'Soap'
+ * 'Sausages'
  */
+
 export function randProduct<Options extends FakeOptions = never>(
   options?: Options
 ) {

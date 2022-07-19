@@ -14,7 +14,14 @@ import { data } from './department.json';
  *
  * randDepartment({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Games'
+ * 'Automotive'
+ * 'Music'
  */
+
 export function randDepartment<Options extends FakeOptions = never>(
   options?: Options
 ) {

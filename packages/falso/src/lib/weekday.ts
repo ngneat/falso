@@ -14,7 +14,14 @@ import { data } from './weekday.json';
  *
  * randWeekday({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Monday'
+ * 'Tuesday'
+ * 'Wedneday'
  */
+
 export function randWeekday<Options extends FakeOptions = never>(
   options?: Options
 ) {

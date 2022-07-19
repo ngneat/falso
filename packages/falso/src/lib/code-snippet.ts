@@ -40,7 +40,10 @@ interface CodeSnippetOptions extends FakeOptions {
  *
  * randCodeSnippet({ lang: 'html' }) // default is 'javascript'
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCodeSnippet<Options extends CodeSnippetOptions = never>(
   options?: Options
 ) {

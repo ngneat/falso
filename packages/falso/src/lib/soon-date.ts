@@ -22,7 +22,14 @@ interface SoonOptions extends FakeOptions {
  *
  * randSoonDate({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * Tue Jul 19 2022 14:16:27 GMT+0200 (Central European Summer Time)
+ * Tue Jul 19 2022 18:06:09 GMT+0200 (Central European Summer Time)
+ * Wed Jul 20 2022 04:12:57 GMT+0200 (Central European Summer Time)
  */
+
 export function randSoonDate<Options extends SoonOptions = never>(
   options?: Options
 ) {

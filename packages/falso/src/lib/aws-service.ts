@@ -14,7 +14,14 @@ import { data } from './aws-service.json';
  *
  * randAwsService({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'EC2'
+ * 'RDS'
+ * 'S3'
  */
+
 export function randAwsService<Options extends FakeOptions = never>(
   options?: Options
 ) {

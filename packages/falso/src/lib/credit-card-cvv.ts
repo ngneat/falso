@@ -13,7 +13,14 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  *
  * randCreditCardCVV({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 721
+ * 584
+ * 106
  */
+
 export function randCreditCardCVV<Options extends FakeOptions = never>(
   options?: Options
 ) {

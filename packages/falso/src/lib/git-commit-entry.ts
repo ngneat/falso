@@ -17,7 +17,10 @@ import { randGitCommitMessage } from './git-commit-message';
  *
  * randGitCommitEntry({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randGitCommitEntry<Options extends FakeOptions = never>(
   options?: Options
 ) {

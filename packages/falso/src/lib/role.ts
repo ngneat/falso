@@ -14,7 +14,14 @@ import { data } from './role.json';
  *
  * randRole({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Admin'
+ * 'Editor'
+ * 'Owner'
  */
+
 export function randRole<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -19,7 +19,10 @@ export interface TextRangeOptions extends FakeOptions {
  *
  * randTextRange({ min: 10, max: 100, length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randTextRange<Options extends TextRangeOptions = never>(
   options: Options
 ) {

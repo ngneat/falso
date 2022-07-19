@@ -15,7 +15,10 @@ import { randWord } from './word';
  *
  * randDomainName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randDomainName<Options extends FakeOptions = never>(
   options?: Options
 ) {

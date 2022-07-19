@@ -14,7 +14,14 @@ import { data } from './vehicle-model.json';
  *
  * randVehicleModel({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * '296 GTB'
+ * '4Runner'
+ * '500'
  */
+
 export function randVehicleModel<Options extends FakeOptions = never>(
   options?: Options
 ) {

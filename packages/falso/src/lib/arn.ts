@@ -35,7 +35,10 @@ const serviceArn: Record<string, () => string> = {
  *
  * randArn({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randArn<Options extends FakeOptions = never>(
   options?: Options
 ) {

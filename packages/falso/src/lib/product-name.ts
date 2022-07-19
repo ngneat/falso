@@ -14,7 +14,14 @@ import { data } from './product-name.json';
  *
  * randProductName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Small Rubber Shoes'
+ * 'Fantastic Wooden Sausages'
+ * 'Handmade Frozen Salad'
  */
+
 export function randProductName<Options extends FakeOptions = never>(
   options?: Options
 ) {

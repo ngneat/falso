@@ -67,7 +67,10 @@ const generateRandomValue = (): any => {
  *
  * randJSON({ minKeys: 1, maxKeys: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randJSON<Options extends RandomJSONOptions = never>(
   options?: Options
 ) {
