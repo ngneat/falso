@@ -201,3 +201,4 @@ export {
   incrementalDate,
   IncrementalDateOptions,
 } from './lib/factories/incremental-date';
+export { randPercentages } from './lib/percentages';
