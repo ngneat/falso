@@ -11,21 +11,21 @@ export interface RandomNumberOptions extends RandomInRangeOptions, FakeOptions {
 }
 
 /**
- * Generate a random number.
+ * Generate a list of percentages that add up to 100%.
  *
  * @category general, math
  *
  * @example
  *
- * randNumber() // default amount is 2 fraction is 3
+ * randPercentages() // default amount is 2 fraction is 3
  *
  * @example
  *
- * randNumber({ amount: 3, length: 10 })
+ * randPercentages({ amount: 3, length: 10 })
  *
  * @example
  *
- * randNumber({ amount: 3 })
+ * randPercentages({ amount: 3 })
  *
  */
 export function randPercentages<Options extends RandomNumberOptions = never>(
