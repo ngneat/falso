@@ -42,7 +42,7 @@ export function randAggregation<
   const totalValue = options?.totalValue ?? 100;
 
   if (values <= 1) {
-    throw new Error('Amount must be bigger than 1');
+    throw new Error('Values must be bigger than 1');
   }
 
   type TupleReturn = number extends T ? number[] : Tuple<number, T>;
