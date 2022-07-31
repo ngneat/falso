@@ -9,6 +9,7 @@ export interface RandomAggregationOptions
   extends RandomInRangeOptions,
     FakeOptions {
   totalValue?: number;
+  noZeros?: boolean;
 }
 
 // https://stackoverflow.com/questions/52489261/typescript-can-i-define-an-n-length-tuple-type
@@ -40,6 +41,7 @@ export function randAggregation<
 >(options?: Options & { values?: T }) {
   const values: T = (options?.values ?? 2) as unknown as T;
   const totalValue = options?.totalValue ?? 100;
+  const noZeros = options?.noZeros ?? false;
 
   if (values <= 1) {
     throw new Error('Values must be bigger than 1');
@@ -49,11 +51,24 @@ export function randAggregation<
     throw new Error('TotalValue must be positive');
   }
 
+  if (noZeros) {
+    if (totalValue < values) {
+      throw new Error(
+        'Values must be larger or equal to totalValue with the noZero option'
+      );
+    }
+  }
+
   type TupleReturn = number extends T ? number[] : Tuple<number, T>;
   return fake((): TupleReturn => {
-    const nums: number[] = new Array(values).fill(0);
+    const nums: number[] = new Array(values).fill(noZeros ? 1 : 0);
 
     let max = totalValue;
+
+    if (noZeros) {
+      max -= values;
+    }
+
     for (let i = 0; i < values - 1; i++) {
       const num = getRandomInRange({
         min: 0,
@@ -61,7 +76,7 @@ export function randAggregation<
       });
 
       max -= num;
-      nums[i] = num;
+      nums[i] += num;
     }
     nums[nums.length - 1] += totalValue - nums.reduce((a, b) => a + b, 0);
 
