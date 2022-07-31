@@ -38,19 +38,19 @@ export function randAggregation<
   T extends number = 2,
   Options extends RandomAggregationOptions = never
 >(options?: Options & { values?: T }) {
-  const amount: T = (options?.values ?? 2) as unknown as T;
+  const values: T = (options?.values ?? 2) as unknown as T;
   const totalValue = options?.totalValue ?? 100;
 
-  if (amount <= 1) {
+  if (values <= 1) {
     throw new Error('Amount must be bigger than 1');
   }
 
-  type TupleReturn = number extends T ? number[] : Tuple<number, typeof amount>;
+  type TupleReturn = number extends T ? number[] : Tuple<number, T>;
 
   return fake((): TupleReturn => {
     const nums: number[] = [];
 
-    for (let i = 0; i < amount - 1; i++) {
+    for (let i = 0; i < values - 1; i++) {
       const num = getRandomInRange({
         min: 0,
         max: totalValue - nums.reduce((a, b) => a + b, 0),
