@@ -45,6 +45,10 @@ export function randAggregation<
     throw new Error('Values must be bigger than 1');
   }
 
+  if (totalValue < 0) {
+    throw new Error('TotalValue must be positive');
+  }
+
   type TupleReturn = number extends T ? number[] : Tuple<number, T>;
   return fake((): TupleReturn => {
     const nums: number[] = new Array(values).fill(0);
