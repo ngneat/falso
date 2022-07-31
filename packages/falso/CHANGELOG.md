@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [6.1.0](https://github.com/ngneat/falso/compare/falso-6.0.3...falso-6.1.0) (2022-07-31)
+
+### Bug Fixes
+
+- add error checking ([20a412f](https://github.com/ngneat/falso/commit/20a412ff5b9a05c4840e6c210aa962781ecbc3ad))
+- change error message ([3e76555](https://github.com/ngneat/falso/commit/3e76555a5e91d36bd316077c63bd8998cea8cb51))
+
+### Features
+
+- 🔥 Add more latam food ([81d33d8](https://github.com/ngneat/falso/commit/81d33d86134b670242fe15fbd4c91474f334c386))
+- add noZeros option ([43177ea](https://github.com/ngneat/falso/commit/43177eae227326f9d88d365fde491612ef714750))
+- add percentages function ([275f005](https://github.com/ngneat/falso/commit/275f00540d6e498b4e6bd9b31139d04ab0b7d669))
+- implement new random function ([25d9177](https://github.com/ngneat/falso/commit/25d91771838618277a0899c33f6971e36485c53b))
+- more random seeming output ([c61e2a4](https://github.com/ngneat/falso/commit/c61e2a428697e0e0cdd5698a83c121eb90cbb5f0))
+- update name and add more advanced types ([c6d9caa](https://github.com/ngneat/falso/commit/c6d9caa84ee1fa2cf68f5ba704861c6abb0d830b))
+
 ## [6.0.3](https://github.com/ngneat/falso/compare/falso-6.0.2...falso-6.0.3) (2022-07-02)
 
 ### Bug Fixes
