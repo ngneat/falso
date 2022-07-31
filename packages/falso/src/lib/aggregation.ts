@@ -45,11 +45,36 @@ export function randAggregation<
     throw new Error('Amount must be bigger than 1');
   }
 
+  /*
+
+    To make this function appear more random / have more distributed numbers the function is ran in 3 steps
+
+    * First add random value between 0 and totalValue / (values * 2)
+    * Then fill the remainder
+    * Then shuffle the array
+
+
+  */
+
   type TupleReturn = number extends T ? number[] : Tuple<number, T>;
-
   return fake((): TupleReturn => {
-    const nums: number[] = [];
+    const nums: number[] = new Array(values).fill(0);
 
+    // Only run this step if values is over two
+    // Since this step tries to correct for an issue that occurs
+    // When the amount of values are over 2
+    if (values > 2) {
+      // Add some values into all of them
+      for (let i = 0; i < nums.length; i++) {
+        nums[i] += getRandomInRange({
+          min: 0,
+          max: totalValue / (values * 2),
+          fraction: options?.fraction,
+        });
+      }
+    }
+
+    // Fill the remainder
     for (let i = 0; i < values - 1; i++) {
       const num = getRandomInRange({
         min: 0,
@@ -57,12 +82,26 @@ export function randAggregation<
         fraction: options?.fraction,
       });
 
-      nums.push(num);
+      nums[i] += num;
     }
 
-    return [
-      ...nums,
-      totalValue - nums.reduce((a, b) => a + b, 0),
-    ] as unknown as TupleReturn;
+    nums[nums.length - 1] += totalValue - nums.reduce((a, b) => a + b, 0);
+
+    // Shuffle the array
+    const shuffled: number[] = [];
+
+    // nums is guaranteed to have a length over 1 so this can't cause an infinite loop
+    while (nums.length !== 0) {
+      const i = getRandomInRange({
+        min: 0,
+        max: nums.length - 1,
+        fraction: 0,
+      });
+
+      const [val] = nums.splice(i, 1);
+      shuffled.push(val);
+    }
+
+    return shuffled as unknown as TupleReturn;
   }, options);
 }
