@@ -9,14 +9,52 @@ describe('randPercentages', () => {
     [30, 20],
     [99, 99],
     [2, 150000],
-  ])('should return %p random numbers that add up to %p', () => {
-    const nums = randAggregation({
-      totalValue: 1500,
-      values: 4,
-    });
+    [2, 0],
+  ])(
+    'should return %p random numbers that add up to %p',
+    (values, totalValue) => {
+      const nums = randAggregation({
+        totalValue: totalValue,
+        values: values,
+      });
 
-    expect(nums.reduce((a, b) => a + b)).toBe(1500);
-    expect(nums.length).toBe(4);
+      expect(nums.reduce((a, b) => a + b)).toBe(totalValue);
+      expect(nums.length).toBe(values);
+    }
+  );
+
+  it('should work after 1000 loops', () => {
+    for (let i = 0; i < 1000; i++) {
+      const nums = randAggregation({
+        totalValue: 10_000,
+        values: 30,
+      });
+
+      expect(nums.reduce((a, b) => a + b)).toBe(10_000);
+      expect(nums.length).toBe(30);
+    }
+  });
+
+  it.each([
+    [2, 2],
+    [40, 1000],
+    [10, 10],
+    [50, 100000],
+  ])('should not include zeros', (values, totalValue) => {
+    for (let i = 0; i < 1000; i++) {
+      const nums = randAggregation({
+        totalValue: totalValue,
+        values: values,
+        noZeros: true,
+      });
+
+      expect(nums.reduce((a, b) => a + b)).toBe(totalValue);
+      expect(nums.length).toBe(values);
+
+      for (const num of nums) {
+        expect(num).not.toBe(0);
+      }
+    }
   });
 
   it('should use default values', () => {
@@ -28,5 +66,9 @@ describe('randPercentages', () => {
 
   it('should throw', () => {
     expect(() => randAggregation({ values: 1 })).toThrow();
+    expect(() => randAggregation({ totalValue: -1 })).toThrow();
+    expect(() =>
+      randAggregation({ values: 40, totalValue: 39, noZeros: true })
+    ).toThrow();
   });
 });
