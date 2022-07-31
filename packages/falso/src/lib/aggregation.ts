@@ -45,46 +45,20 @@ export function randAggregation<
     throw new Error('Amount must be bigger than 1');
   }
 
-  /*
-
-    To make this function appear more random / have more distributed numbers the function is ran in 3 steps
-
-    * First add random value between 0 and totalValue / (values * 2)
-    * Then fill the remainder
-    * Then shuffle the array
-
-
-  */
-
   type TupleReturn = number extends T ? number[] : Tuple<number, T>;
   return fake((): TupleReturn => {
     const nums: number[] = new Array(values).fill(0);
 
-    // Only run this step if values is over two
-    // Since this step tries to correct for an issue that occurs
-    // When the amount of values are over 2
-    if (values > 2) {
-      // Add some values into all of them
-      for (let i = 0; i < nums.length; i++) {
-        nums[i] += getRandomInRange({
-          min: 0,
-          max: totalValue / (values * 2),
-          fraction: options?.fraction,
-        });
-      }
-    }
-
-    // Fill the remainder
+    let max = totalValue;
     for (let i = 0; i < values - 1; i++) {
       const num = getRandomInRange({
         min: 0,
-        max: totalValue - nums.reduce((a, b) => a + b, 0),
-        fraction: options?.fraction,
+        max: getRandomInRange({ min: 0, max }),
       });
 
-      nums[i] += num;
+      max -= num;
+      nums[i] = num;
     }
-
     nums[nums.length - 1] += totalValue - nums.reduce((a, b) => a + b, 0);
 
     // Shuffle the array
