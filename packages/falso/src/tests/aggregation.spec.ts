@@ -1,7 +1,15 @@
 import { randAggregation } from '../lib/aggregation';
 
 describe('randPercentages', () => {
-  it('should return 4 random numbers', () => {
+  it.each([
+    [2, 1500],
+    [4, 1500],
+    [100, 10000],
+    [40, 100],
+    [30, 20],
+    [99, 99],
+    [2, 150000],
+  ])('should return %p random numbers that add up to %p', () => {
     const nums = randAggregation({
       totalValue: 1500,
       values: 4,
