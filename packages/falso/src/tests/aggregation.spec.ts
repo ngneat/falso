@@ -35,6 +35,20 @@ describe('randPercentages', () => {
     }
   });
 
+  it('should work after 1000 loops with fraction', () => {
+    for (let i = 0; i < 1000; i++) {
+      const nums = randAggregation({
+        totalValue: 10_000,
+        values: 30,
+        fraction: 1,
+      });
+
+      // To avoid floating point errors
+      expect(Math.round(nums.reduce((a, b) => a + b))).toBe(10_000);
+      expect(nums.length).toBe(30);
+    }
+  });
+
   it.each([
     [2, 2],
     [40, 1000],
