@@ -56,7 +56,8 @@ describe('randCollection', () => {
         })
       ).toEqual([{ data: 1 }, { data: 1 }]);
       expect(generatorFunction).toHaveBeenCalledTimes(2);
-      expect(generatorFunction).toHaveBeenCalledWith({ length: 2 });
+      expect(generatorFunction).toHaveBeenNthCalledWith(1, { length: 2 }, 0);
+      expect(generatorFunction).toHaveBeenNthCalledWith(2, { length: 2 }, 1);
     });
   });
   describe('with call external random function', () => {
