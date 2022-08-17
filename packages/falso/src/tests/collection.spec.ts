@@ -21,7 +21,7 @@ describe('randCollection', () => {
     const expectedData: fakeData = { data: 1 };
     expect(toCollection<fakeData>(() => expectedData)).toEqual(expectedData);
     expect(
-      toCollection<fakeData, { length: number }>(() => expectedData, {
+      toCollection(() => expectedData, {
         length: 1,
       })
     ).toEqual([expectedData]);
@@ -30,7 +30,7 @@ describe('randCollection', () => {
   it('should return a collection of 2 elements if length=2 specified', () => {
     const expectedData: fakeData = { data: 1 };
     expect(
-      toCollection<fakeData, { length: number }>(() => expectedData, {
+      toCollection(() => expectedData, {
         length: 2,
       })
     ).toEqual([expectedData, expectedData]);
@@ -51,7 +51,7 @@ describe('randCollection', () => {
     it('should return a collection of 2 elements that call another function', () => {
       const expectedData: fakeData = { data: 1 };
       expect(
-        toCollection<fakeData, { length: number }>(generatorFunction, {
+        toCollection(generatorFunction, {
           length: 2,
         })
       ).toEqual([{ data: 1 }, { data: 1 }]);
@@ -74,7 +74,7 @@ describe('randCollection', () => {
       const expectedData: fakeData = { data: 1 };
       randNumberSpy.mockReturnValueOnce(1).mockReturnValueOnce(2);
       expect(
-        toCollection<fakeData, { length: number }>(
+        toCollection(
           () => {
             return { data: randNumber() };
           },

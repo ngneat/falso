@@ -18,7 +18,10 @@ import { FakeOptions, fake } from './core/core';
  * }, { length: 10 }) // default is no length.
  *
  */
-export function toCollection<Collection, Options extends FakeOptions = never>(
+export function toCollection<
+  Collection = never,
+  Options extends FakeOptions = never
+>(
   generateCollection: (options?: Options) => Collection,
   options?: Options
 ): Collection | Collection[] {
