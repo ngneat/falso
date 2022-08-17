@@ -13,6 +13,7 @@ const functionModifiers = {
   randRecentDate: 'randRecentDate().toString()',
   randSoonDate: 'randSoonDate().toString()',
   randTextRange: 'randTextRange({ min: 10, max: 100 })',
+  toCollection: 'toCollection(() => { return { data: randNumber() }}, {length: 10})',
 }
 
 const skipLivePreview = ['seed'];
