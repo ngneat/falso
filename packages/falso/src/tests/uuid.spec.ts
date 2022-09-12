@@ -1,4 +1,5 @@
-import { randUuid, seed } from '@ngneat/falso';
+import { randUuid } from '../lib/uuid';
+import { seed } from '../lib/random';
 
 describe('uuid', () => {
   afterAll(() => {

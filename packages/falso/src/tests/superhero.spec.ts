@@ -1,8 +1,4 @@
-import {
-  ComicBookCompany,
-  randSuperhero,
-  SuperheroEntity,
-} from '../lib/superhero';
+import { ComicBookCompany, randSuperhero } from '../lib/superhero';
 
 describe('randSuperhero', () => {
   it('should return a random super superhero entity', () => {

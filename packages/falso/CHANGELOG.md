@@ -2,6 +2,53 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [6.1.0](https://github.com/ngneat/falso/compare/falso-6.0.3...falso-6.1.0) (2022-07-31)
+
+### Bug Fixes
+
+- add error checking ([20a412f](https://github.com/ngneat/falso/commit/20a412ff5b9a05c4840e6c210aa962781ecbc3ad))
+- change error message ([3e76555](https://github.com/ngneat/falso/commit/3e76555a5e91d36bd316077c63bd8998cea8cb51))
+
+### Features
+
+- 🔥 Add more latam food ([81d33d8](https://github.com/ngneat/falso/commit/81d33d86134b670242fe15fbd4c91474f334c386))
+- add noZeros option ([43177ea](https://github.com/ngneat/falso/commit/43177eae227326f9d88d365fde491612ef714750))
+- add percentages function ([275f005](https://github.com/ngneat/falso/commit/275f00540d6e498b4e6bd9b31139d04ab0b7d669))
+- implement new random function ([25d9177](https://github.com/ngneat/falso/commit/25d91771838618277a0899c33f6971e36485c53b))
+- more random seeming output ([c61e2a4](https://github.com/ngneat/falso/commit/c61e2a428697e0e0cdd5698a83c121eb90cbb5f0))
+- update name and add more advanced types ([c6d9caa](https://github.com/ngneat/falso/commit/c6d9caa84ee1fa2cf68f5ba704861c6abb0d830b))
+
+## [6.0.3](https://github.com/ngneat/falso/compare/falso-6.0.2...falso-6.0.3) (2022-07-02)
+
+### Bug Fixes
+
+- 🐞 incremental functions typing ([ec8f053](https://github.com/ngneat/falso/commit/ec8f053539a50ebb90fd4b03869a58d3cd606079))
+- 🐞 randNumber options resolution ([a0e5a4c](https://github.com/ngneat/falso/commit/a0e5a4c197a8685a5ce200a7392a4ecdaca93759)), closes [#289](https://github.com/ngneat/falso/issues/289)
+
+## [6.0.2](https://github.com/ngneat/falso/compare/falso-6.0.1...falso-6.0.2) (2022-06-30)
+
+### Bug Fixes
+
+- 🐞 randNumber is ignoring fraction ([b9bec6d](https://github.com/ngneat/falso/commit/b9bec6d4a2b2e9e4de4dae5e91eacde0ace925b9))
+
+## [6.0.1](https://github.com/ngneat/falso/compare/falso-6.0.0...falso-6.0.1) (2022-06-27)
+
+### Bug Fixes
+
+- 🐞 remove inappropriate word ([c1ef85a](https://github.com/ngneat/falso/commit/c1ef85a0bed24031ed39b9a1a17fba3fc8843f91)), closes [#285](https://github.com/ngneat/falso/issues/285)
+
+# [6.0.0](https://github.com/ngneat/falso/compare/falso-5.7.0...falso-6.0.0) (2022-06-26)
+
+### Bug Fixes
+
+- 🐞 ammount shoud return number by default ([eff0fda](https://github.com/ngneat/falso/commit/eff0fda70c66130ecc4c1ce9121a4d265dad7040))
+- fix max port number ([c96533c](https://github.com/ngneat/falso/commit/c96533c0dc882e790d3b9905eb79e5bc331e3150))
+
+### BREAKING CHANGES
+
+- 🧨 randAmmount will now return numbers by default and strings when passing
+  the symbol option.
+
 # [5.7.0](https://github.com/ngneat/falso/compare/falso-5.6.1...falso-5.7.0) (2022-06-07)
 
 ### Features

@@ -1,6 +1,5 @@
 import * as randAddressFunctions from '../lib/address';
 import { randFullAddress } from '../lib/full-address';
-import { randAddress } from '../lib/address';
 
 describe('randFullAddress', () => {
   let randAddressSpy: jest.SpyInstance;

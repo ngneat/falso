@@ -1,4 +1,4 @@
-import { isNotNil } from '../core/isNotNil';
+import { isNil } from '../core/validators';
 
 export interface IncrementalNumberOptions {
   from: number;
@@ -26,6 +26,12 @@ export interface IncrementalNumberOptions {
  *
  */
 export function incrementalNumber(
+  options: Required<IncrementalNumberOptions>
+): () => number | undefined;
+export function incrementalNumber(
+  options?: IncrementalNumberOptions
+): () => number;
+export function incrementalNumber(
   options: IncrementalNumberOptions = { from: 1, step: 1 }
 ): () => number | undefined {
   if (options.step === 0) {
@@ -38,7 +44,7 @@ export function incrementalNumber(
     throw new Error('`from` should be a number greater than 0');
   }
 
-  if (isNotNil(options.to)) {
+  if (!isNil(options.to)) {
     if (options.to < 0) {
       throw new Error(
         '`to` should be a number greater than from and greater than 0'
@@ -61,7 +67,7 @@ export function incrementalNumber(
   let currentValue = options.from;
 
   return () => {
-    if (isNotNil(options.to)) {
+    if (!isNil(options.to)) {
       if (options.step > 0 && currentValue > options.to) return undefined;
       if (options.step < 0 && currentValue < options.to) return undefined;
     }

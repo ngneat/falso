@@ -75,14 +75,10 @@ describe('randTextRange', () => {
     });
 
     describe('length is 3', () => {
-      let length: number;
+      const length = 3;
 
-      beforeEach(() => {
-        length = 3;
-      });
-
-      it('should return an array length of 3, each with string legnth between min and max', () => {
-        const [text1, text2, text3] = randTextRange({ min, max, length: 3 });
+      it('should return an array length of 3, each with string length between min and max', () => {
+        const [text1, text2, text3] = randTextRange({ min, max, length });
 
         expect(text1.length).toBeGreaterThanOrEqual(min);
         expect(text1.length).toBeLessThanOrEqual(max);
