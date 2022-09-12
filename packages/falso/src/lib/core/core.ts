@@ -26,7 +26,7 @@ export type Return<T, O extends FakeOptions> = [O] extends [never]
   ? T[]
   : T;
 
-type FactoryFunction<T> = (i: number) => T;
+export type FactoryFunction<T> = (i: number) => T;
 
 export function fake<T, Options extends FakeOptions>(
   data: Readonly<T[]> | FactoryFunction<T>,
@@ -69,7 +69,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   while (items.length < options.length && attempts < maxAttempts) {
     const item = data(0);
 
-    if (!config.uniqueComparer(item, items, config.comparisonKeys)) {
+    if (config.uniqueComparer(item, items, config.comparisonKeys)) {
       items.push(item);
     }
 
