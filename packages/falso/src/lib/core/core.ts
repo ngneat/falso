@@ -7,6 +7,10 @@ export interface FakeOptions {
   locale?: any | string[];
 }
 
+export type markRequired<Type, Key extends keyof Type> = Type & {
+  [Property in Key]-?: Type[Property];
+};
+
 export interface FakeConfig<T> {
   uniqueComparer: (
     item: T,
