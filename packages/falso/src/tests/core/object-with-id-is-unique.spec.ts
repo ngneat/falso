@@ -28,19 +28,15 @@ describe('objectWithIdIsUnique', () => {
     objects = [object1, object2];
   });
 
-  describe('object id is unique', () => {
-    it('should return true', () => {
-      const result = objectWithIdIsUnique(object3, objects);
+  it('should pass when object ids are unique', () => {
+    const result = objectWithIdIsUnique(object3, objects);
 
-      expect(result).toEqual(true);
-    });
+    expect(result).toEqual(true);
   });
 
-  describe('object id is not unique', () => {
-    it('should return false', () => {
-      const result = objectWithIdIsUnique(object2, objects);
+  it('should fail when object ids are not unique', () => {
+    const result = objectWithIdIsUnique(object2, objects);
 
-      expect(result).toEqual(false);
-    });
+    expect(result).toEqual(false);
   });
 });

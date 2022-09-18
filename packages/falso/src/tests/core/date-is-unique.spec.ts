@@ -14,19 +14,15 @@ describe('dateIsUnique', () => {
     dates = [date1, date2];
   });
 
-  describe('date is unique', () => {
-    it('should return true', () => {
-      const result = dateIsUnique(date3, dates);
+  it('should pass when date is unique', () => {
+    const result = dateIsUnique(date3, dates);
 
-      expect(result).toEqual(true);
-    });
+    expect(result).toEqual(true);
   });
 
-  describe('date is not unique', () => {
-    it('should return false', () => {
-      const result = dateIsUnique(date2, dates);
+  it('should not pass when date is not unique', () => {
+    const result = dateIsUnique(date2, dates);
 
-      expect(result).toEqual(false);
-    });
+    expect(result).toEqual(false);
   });
 });

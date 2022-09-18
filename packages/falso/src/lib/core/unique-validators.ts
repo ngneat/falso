@@ -6,7 +6,7 @@ export const primitiveValueIsUnique: <T>(item: T, items: T[]) => boolean = (
 export const dateIsUnique: (date: Date, dates: Date[]) => boolean = (
   date,
   dates
-) => !dates.some((d) => d.valueOf() === date.valueOf());
+) => !dates.some((d) => d.getTime() === date.getTime());
 
 export const objectWithIdIsUnique: <T extends { id: string }>(
   item: T,

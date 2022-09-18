@@ -14,19 +14,15 @@ describe('primitiveValueIsUnique', () => {
     items = [item1, item2];
   });
 
-  describe('item is unique', () => {
-    it('should return true', () => {
-      const result = primitiveValueIsUnique(item3, items);
+  it('should pass when item is unique', () => {
+    const result = primitiveValueIsUnique(item3, items);
 
-      expect(result).toEqual(true);
-    });
+    expect(result).toEqual(true);
   });
 
-  describe('item is not unique', () => {
-    it('should return false', () => {
-      const result = primitiveValueIsUnique(item2, items);
+  it('should fail when item is not unique', () => {
+    const result = primitiveValueIsUnique(item2, items);
 
-      expect(result).toEqual(false);
-    });
+    expect(result).toEqual(false);
   });
 });
