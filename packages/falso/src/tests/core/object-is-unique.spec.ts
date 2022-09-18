@@ -4,20 +4,10 @@ import { randFirstName } from '../../lib/first-name';
 import { objectIsUnique } from '../../lib/core/unique-validators';
 
 describe('objectIsUnique', () => {
-  it("should throw error when keys contains a key that doesn't exist", () => {
-    const array = randUser({ length: 3 });
-    const newItem = randUser();
-    const keys = ['id', 'noExistentKey', 'firstName'];
-
-    expect(() =>
-      objectIsUnique(newItem, array, keys)
-    ).toThrowErrorMatchingSnapshot();
-  });
-
   describe('1 key is passed', () => {
     let array: User[];
     let newItem: User;
-    let keys: string[];
+    let keys: (keyof User)[];
 
     beforeEach(() => {
       array = randUser({ length: 3 });
@@ -50,7 +40,7 @@ describe('objectIsUnique', () => {
   describe('multiple keys are passed', () => {
     let array: User[];
     let newItem: User;
-    let keys: string[];
+    let keys: (keyof User)[];
 
     beforeEach(() => {
       array = randUser({ length: 3 });

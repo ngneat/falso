@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`objectIsUnique should throw error when keys contains a key that doesn't exist 1`] = `"noExistentKey does not exist in this array value type"`;

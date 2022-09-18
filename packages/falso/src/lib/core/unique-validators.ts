@@ -1,3 +1,5 @@
+import { User } from '@ngneat/falso';
+
 export function primitiveValueIsUnique<T>(item: T, items: T[]): boolean {
   return !items.includes(item);
 }
@@ -16,13 +18,9 @@ export function objectWithIdIsUnique<T extends { id: string }>(
 export function objectIsUnique<T extends Record<string, any>>(
   item: T,
   items: T[],
-  keys: string[]
+  keys: (keyof T)[]
 ): boolean {
   for (const key of keys) {
-    if (!(key in item)) {
-      throw new Error(`${key} does not exist in this array value type`);
-    }
-
     if (items.some((arrayItem) => arrayItem[key] === item[key])) {
       return false;
     }
