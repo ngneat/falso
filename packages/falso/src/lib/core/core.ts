@@ -15,9 +15,9 @@ export interface FakeConfig<T> {
   uniqueComparer: (
     item: T,
     items: T[],
-    comparisonKeys?: string[]
+    comparisonKeys?: (keyof T)[]
   ) => boolean | ((item: T, items: T[]) => boolean);
-  comparisonKeys?: string[];
+  comparisonKeys?: (keyof T)[];
 }
 
 export type Return<T, O extends FakeOptions> = [O] extends [never]
