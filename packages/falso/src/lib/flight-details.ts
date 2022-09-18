@@ -79,8 +79,6 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
   return fake(factory, options, { uniqueComparer: checkUnique });
 }
 
-const checkUnique: (
-  flight: FlightDetails,
-  flights: FlightDetails[]
-) => boolean = (flight: FlightDetails, flights: FlightDetails[]) =>
-  objectIsUnique(flight, flights, ['passenger', 'flightNumber', 'date']);
+function checkUnique(flight: FlightDetails, flights: FlightDetails[]): boolean {
+  return objectIsUnique(flight, flights, ['passenger', 'flightNumber', 'date']);
+}

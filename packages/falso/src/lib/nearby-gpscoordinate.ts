@@ -28,8 +28,6 @@ export function randNearbyGPSCoordinate<Options extends FakeOptions = never>(
   });
 }
 
-const checkUnique: (
-  coordinate: number[],
-  coordinates: number[][]
-) => boolean = (coordinate, coordinates) =>
-  coordinates.some((c) => c.join('') === c.join(''));
+function checkUnique(coordinate: number[], coordinates: number[][]): boolean {
+  return coordinates.some((c) => c.join('') === c.join(''));
+}

@@ -72,7 +72,6 @@ export function randAddress<Options extends AddressOptions = never>(
   return fake(factory, options, { uniqueComparer: checkUnique });
 }
 
-const checkUnique: (address: Address, addresses: Address[]) => boolean = (
-  address: Address,
-  addresses: Address[]
-) => objectIsUnique(address, addresses, ['street', 'zipCode']);
+function checkUnique(address: Address, addresses: Address[]): boolean {
+  return objectIsUnique(address, addresses, ['street', 'zipCode']);
+}

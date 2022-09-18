@@ -1,25 +1,25 @@
-export const primitiveValueIsUnique: <T>(item: T, items: T[]) => boolean = (
-  item,
-  items
-) => !items.includes(item);
+export function primitiveValueIsUnique<T>(item: T, items: T[]): boolean {
+  return !items.includes(item);
+}
 
-export const dateIsUnique: (date: Date, dates: Date[]) => boolean = (
-  date,
-  dates
-) => !dates.some((d) => d.getTime() === date.getTime());
+export function dateIsUnique(date: Date, dates: Date[]): boolean {
+  return !dates.some((d) => d.getTime() === date.getTime());
+}
 
-export const objectWithIdIsUnique: <T extends { id: string }>(
+export function objectWithIdIsUnique<T extends { id: string }>(
   item: T,
   items: T[]
-) => boolean = (item, items) => objectIsUnique(item, items, ['id']);
+): boolean {
+  return objectIsUnique(item, items, ['id']);
+}
 
-export const objectIsUnique: (
-  item: any,
-  items: any[],
+export function objectIsUnique<T extends Record<string, any>>(
+  item: T,
+  items: T[],
   keys: string[]
-) => boolean = (item: any, items: any[], keys: string[]) => {
+): boolean {
   for (const key of keys) {
-    if (!item[key]) {
+    if (!(key in item)) {
       throw new Error(`${key} does not exist in this array value type`);
     }
 
@@ -29,4 +29,4 @@ export const objectIsUnique: (
   }
 
   return true;
-};
+}

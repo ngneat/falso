@@ -87,7 +87,7 @@ export function randJSON<Options extends RandomJSONOptions = never>(
     });
 
   const factory = () => {
-    const generatedObject: { [key: string]: any } = {};
+    const generatedObject: Record<string, unknown> = {};
 
     for (let index = 0; index < objectSize; index++) {
       generatedObject[randUuid().replace(/-/g, '')] = generateRandomValue();
@@ -99,7 +99,6 @@ export function randJSON<Options extends RandomJSONOptions = never>(
   return fake(factory, options, { uniqueComparer: checkUnique });
 }
 
-const checkUnique: (item: object, items: object[]) => boolean = (
-  item: object,
-  items: object[]
-) => items.some((i) => JSON.stringify(i) === JSON.stringify(item));
+function checkUnique(item: object, items: object[]): boolean {
+  return items.some((i) => JSON.stringify(i) === JSON.stringify(item));
+}
