@@ -58,7 +58,7 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   const priority = options?.priority ?? 'length';
 
   if (priority === 'length') {
-    return Array.from({ length: options.length }, (_, index) => data(0));
+    return Array.from({ length: options.length }, (_, index) => data(index));
   }
 
   const items: T[] = [];
