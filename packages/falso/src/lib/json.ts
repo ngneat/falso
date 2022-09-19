@@ -99,6 +99,6 @@ export function randJSON<Options extends RandomJSONOptions = never>(
   return fake(factory, options, { uniqueComparer: checkUnique });
 }
 
-function checkUnique(item: object, items: object[]): boolean {
-  return items.some((i) => JSON.stringify(i) === JSON.stringify(item));
+export function checkUnique(item: object, items: object[]): boolean {
+  return !items.some((i) => JSON.stringify(i) === JSON.stringify(item));
 }

@@ -28,6 +28,9 @@ export function randNearbyGPSCoordinate<Options extends FakeOptions = never>(
   });
 }
 
-function checkUnique(coordinate: number[], coordinates: number[][]): boolean {
-  return coordinates.some((c) => c.join('') === c.join(''));
+export function checkUnique(
+  coordinate: number[],
+  coordinates: number[][]
+): boolean {
+  return !coordinates.some((c) => c.join('') === coordinate.join(''));
 }

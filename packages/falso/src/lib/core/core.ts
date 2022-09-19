@@ -35,10 +35,6 @@ export function fake<T, Options extends FakeOptions>(
     uniqueComparer: primitiveValueIsUnique,
   }
 ): Return<T, Options> {
-  if (options?.length === 0) {
-    return [] as any;
-  }
-
   if (Array.isArray(data)) {
     return fakeFromArray(data, options) as any;
   }
@@ -51,6 +47,10 @@ export function fakeFromFunction<T, Options extends FakeOptions>(
   config: FakeConfig<T>,
   options?: Options
 ): T | T[] {
+  if (options?.length === 0) {
+    return [];
+  }
+
   if (!options?.length) {
     return data(0);
   }
@@ -83,6 +83,10 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   data: T[],
   options?: Options
 ): T | T[] {
+  if (options?.length === 0) {
+    return [];
+  }
+
   if (!options?.length) {
     return randElement(data);
   }
@@ -110,7 +114,7 @@ export function fakeFromArray<T, Options extends FakeOptions>(
   return newArray;
 }
 
-export function randElement<T>(arr: T[]): T {
+export function randElement<T>(arr: Readonly<T[]>) {
   return arr[Math.floor(random() * arr.length)];
 }
 
