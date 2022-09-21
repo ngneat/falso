@@ -202,3 +202,4 @@ export {
   IncrementalDateOptions,
 } from './lib/factories/incremental-date';
 export { randAggregation } from './lib/aggregation';
+export { randChanceBoolean } from './lib/chance-boolean';
