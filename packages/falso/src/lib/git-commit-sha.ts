@@ -16,6 +16,10 @@ const commitShaLen = 40;
  *
  * randGitCommitSha({ length: 10 })
  *
+ * @example
+ *
+ * randGitCommitSha({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randGitCommitSha<Options extends FakeOptions = never>(
   options?: Options

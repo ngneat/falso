@@ -7,6 +7,7 @@ import { randPhoneNumber } from './phone-number';
 import { randUserName } from './user-name';
 import { randAvatar } from './avatar';
 import { randAddress } from './address';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export interface User {
   id: string;
@@ -36,11 +37,15 @@ export interface User {
  *
  * randUser({ length: 10 })
  *
+ * @example
+ *
+ * randUser({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randUser<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
+  const factory = () => {
     const firstName = randFirstName({ withAccents: false });
     const lastName = randLastName({ withAccents: false });
 
@@ -56,5 +61,7 @@ export function randUser<Options extends FakeOptions = never>(
     };
 
     return user;
-  }, options);
+  };
+
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

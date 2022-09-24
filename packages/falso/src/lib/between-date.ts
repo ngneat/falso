@@ -1,5 +1,6 @@
 import { fake, FakeOptions } from './core/core';
 import { randNumber } from './number';
+import { dateIsUnique } from './core/unique-validators';
 
 interface BetweenOptions extends FakeOptions {
   from: Date | string;
@@ -18,6 +19,10 @@ interface BetweenOptions extends FakeOptions {
  * @example
  *
  * randBetweenDate({ from: new Date('10/07/2020'), to: new Date(), length: 10 })
+ *
+ * @example
+ *
+ * randBetweenDate({ from: new Date('10/07/2020'), to: new Date(), length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randBetweenDate<Options extends BetweenOptions = never>(
@@ -39,5 +44,5 @@ export function randBetweenDate<Options extends BetweenOptions = never>(
     );
   };
 
-  return fake(generator, options);
+  return fake(generator, options, { uniqueComparer: dateIsUnique });
 }

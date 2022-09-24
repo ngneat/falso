@@ -1,5 +1,6 @@
 import { randBetweenDate } from './between-date';
 import { fake, FakeOptions } from './core/core';
+import { dateIsUnique } from './core/unique-validators';
 
 interface FutureOptions extends FakeOptions {
   years?: number;
@@ -16,11 +17,15 @@ interface FutureOptions extends FakeOptions {
  *
  * @example
  *
+ * randFutureDate({ years: 10 }) // default is 1
+ *
+ * @example
+ *
  * randFutureDate({ length: 10 })
  *
  * @example
  *
- * randFutureDate({ years: 10 }) // default is 1
+ * randFutureDate({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randFutureDate<Options extends FutureOptions = never>(
@@ -35,5 +40,7 @@ export function randFutureDate<Options extends FutureOptions = never>(
   const yearsInMilliseconds = years * 365 * 24 * 60 * 60 * 1000;
   const from = new Date();
   const to = new Date(from.getTime() + yearsInMilliseconds);
-  return fake(() => randBetweenDate({ from, to }), options);
+  const factory: () => Date = () => randBetweenDate({ from, to });
+
+  return fake(factory, options, { uniqueComparer: dateIsUnique });
 }

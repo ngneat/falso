@@ -18,15 +18,20 @@ export interface RandomFloatOptions extends RandomInRangeOptions, FakeOptions {}
  *
  * @example
  *
- * randFloat({ length: 10 })
- *
- * @example
- *
  * randFloat({ min: 10, max: 20, fraction: 1 }) // 12.5
  *
  * @example
  *
  * randFloat({ min: 10, max: 20, fraction: 2 }) // 12.52
+ *
+ * @example
+ *
+ * randFloat({ length: 10 })
+ *
+ * @example
+ *
+ * randFloat({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randFloat<Options extends RandomFloatOptions = never>(
   options?: Options

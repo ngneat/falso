@@ -5,6 +5,7 @@ import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
 import { randSeatNumber } from './seat-number';
 import { Airport, randAirport } from './airport';
+import { objectIsUnique } from './core/unique-validators';
 
 export interface FlightDetailsOptions extends FakeOptions {
   airline?: Airline;
@@ -49,6 +50,10 @@ function generateFlightLength(): number {
  *
  * randFlightDetails({ length: 10 })
  *
+ * @example
+ *
+ * randFlightDetails({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randFlightDetails<Options extends FlightDetailsOptions = never>(
   options?: Options
@@ -71,5 +76,9 @@ export function randFlightDetails<Options extends FlightDetailsOptions = never>(
     };
   };
 
-  return fake(factory, options);
+  return fake(factory, options, { uniqueComparer: checkUnique });
+}
+
+function checkUnique(flight: FlightDetails, flights: FlightDetails[]): boolean {
+  return objectIsUnique(flight, flights, ['passenger', 'flightNumber', 'date']);
 }

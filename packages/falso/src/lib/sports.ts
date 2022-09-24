@@ -25,6 +25,10 @@ const categoriesCount = Object.keys(data)?.length;
  *
  * randSports({ length: 10 })
  *
+ * @example
+ *
+ * randSports({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randSports<Options extends SportCategories = never>(
   options?: Options
@@ -33,7 +37,7 @@ export function randSports<Options extends SportCategories = never>(
   const category: string | undefined = options?.category;
 
   if (!categoriesCount) {
-    throw 'No Sport Categories found';
+    throw Error('No Sport Categories found');
   }
 
   if (category && !sportsData[category]) {

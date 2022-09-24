@@ -4,6 +4,7 @@ import { randProductName } from './product-name';
 import { randProductDescription } from './product-description';
 import { randProductCategory } from './product-category';
 import { randImg } from './img';
+import { objectWithIdIsUnique } from './core/unique-validators';
 
 export interface Product {
   id: string;
@@ -31,23 +32,26 @@ export interface Product {
  *
  * randProduct({ length: 10 })
  *
+ * @example
+ *
+ * randProduct({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randProduct<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(
-    () => ({
-      id: randUuid(),
-      title: randProductName(),
-      description: randProductDescription(),
-      price: getRandomInRange({ fraction: 2 }).toString(),
-      category: randProductCategory(),
-      image: randImg(),
-      rating: {
-        rate: getRandomInRange({ min: 0.1, max: 5.0, fraction: 1 }).toString(),
-        count: getRandomInRange({ min: 0, max: 10000 }).toString(),
-      },
-    }),
-    options
-  );
+  const factory = () => ({
+    id: randUuid(),
+    title: randProductName(),
+    description: randProductDescription(),
+    price: getRandomInRange({ fraction: 2 }).toString(),
+    category: randProductCategory(),
+    image: randImg(),
+    rating: {
+      rate: getRandomInRange({ min: 0.1, max: 5.0, fraction: 1 }).toString(),
+      count: getRandomInRange({ min: 0, max: 10000 }).toString(),
+    },
+  });
+
+  return fake(factory, options, { uniqueComparer: objectWithIdIsUnique });
 }

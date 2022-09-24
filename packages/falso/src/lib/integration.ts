@@ -14,6 +14,10 @@ import { data } from './integration.json';
  *
  * randIntegrations({ length: 10 })
  *
+ * @example
+ *
+ * randIntegrations({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randIntegration<Options extends FakeOptions = never>(
   options?: Options

@@ -4,6 +4,7 @@ import { randStreetAddress } from './street-address';
 import { randZipCode } from './zip-code';
 import { randCounty } from './county';
 import { randCountry } from './country';
+import { objectIsUnique } from './core/unique-validators';
 
 export interface AddressOptions extends FakeOptions {
   includeCounty?: boolean;
@@ -39,6 +40,10 @@ export interface Address {
  *
  * randAddress({ length: 10 })
  *
+ * @example
+ *
+ * randAddress({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randAddress<Options extends AddressOptions = never>(
   options?: Options
@@ -64,5 +69,9 @@ export function randAddress<Options extends AddressOptions = never>(
     return address;
   };
 
-  return fake(factory, options);
+  return fake(factory, options, { uniqueComparer: checkUnique });
+}
+
+function checkUnique(address: Address, addresses: Address[]): boolean {
+  return objectIsUnique(address, addresses, ['street', 'zipCode']);
 }

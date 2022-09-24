@@ -1,5 +1,5 @@
-import { randNumber } from '../lib/number';
 import { randJSON } from '../lib/json';
+import { randNumber } from '../lib/number';
 
 describe('randJSON', () => {
   describe('when it returns the expected values', () => {
@@ -42,11 +42,13 @@ describe('randJSON', () => {
       });
     });
 
-    describe('length is 100', () => {
-      it('should return an array length of 100', () => {
-        const result = randJSON({ length: 100 });
+    describe('length is 3', () => {
+      it('should return an array length of 3, each with a random json', () => {
+        const [json1, json2, json3] = randJSON({ length: 3 });
 
-        expect(result?.length).toEqual(100);
+        expect(typeof json1).toEqual('object');
+        expect(typeof json2).toEqual('object');
+        expect(typeof json3).toEqual('object');
       });
     });
   });

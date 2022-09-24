@@ -14,6 +14,10 @@ import { fake, FakeOptions } from './core/core';
  *
  * randAwsRequestId({ length: 10 })
  *
+ * @example
+ *
+ * randAwsRequestId({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randAwsRequestId<Options extends FakeOptions = never>(
   options?: Options

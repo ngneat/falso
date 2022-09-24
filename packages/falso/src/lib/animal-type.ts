@@ -14,6 +14,10 @@ import { data } from './animal-type.json';
  *
  * randAnimalType({ length: 10 })
  *
+ * @example
+ *
+ * randAnimalType({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randAnimalType<Options extends FakeOptions = never>(
   options?: Options

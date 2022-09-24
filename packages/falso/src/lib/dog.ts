@@ -14,6 +14,10 @@ import { data } from './dog.json';
  *
  * randDog({ length: 10 })
  *
+ * @example
+ *
+ * randDog({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randDog<Options extends FakeOptions = never>(
   options?: Options

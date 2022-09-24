@@ -14,6 +14,10 @@ import { data } from './cardinal-direction.json';
  *
  * randCardinalDirection({ length: 10 })
  *
+ * @example
+ *
+ * randCardinalDirection({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randCardinalDirection<Options extends FakeOptions = never>(
   options?: Options

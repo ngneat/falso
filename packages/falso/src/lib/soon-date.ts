@@ -1,5 +1,6 @@
 import { randBetweenDate } from './between-date';
 import { fake, FakeOptions } from './core/core';
+import { dateIsUnique } from './core/unique-validators';
 
 interface SoonOptions extends FakeOptions {
   days?: number;
@@ -22,6 +23,10 @@ interface SoonOptions extends FakeOptions {
  *
  * randSoonDate({ length: 10 })
  *
+ * @example
+ *
+ * randSoonDate({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randSoonDate<Options extends SoonOptions = never>(
   options?: Options
@@ -35,5 +40,7 @@ export function randSoonDate<Options extends SoonOptions = never>(
   const daysInMilliseconds = days * 24 * 60 * 60 * 1000;
   const from = new Date();
   const to = new Date(from.getTime() + daysInMilliseconds);
-  return fake(() => randBetweenDate({ from, to }), options);
+  return fake(() => randBetweenDate({ from, to }), options, {
+    uniqueComparer: dateIsUnique,
+  });
 }

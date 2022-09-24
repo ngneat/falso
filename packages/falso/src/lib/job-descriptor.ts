@@ -14,6 +14,10 @@ import { data } from './job-descriptor.json';
  *
  * randJobDescriptor({ length: 10 })
  *
+ * @example
+ *
+ * randJobDescriptor({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randJobDescriptor<Options extends FakeOptions = never>(
   options?: Options

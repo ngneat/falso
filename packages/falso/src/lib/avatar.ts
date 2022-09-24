@@ -15,11 +15,15 @@ interface AvatarOptions extends FakeOptions {
  *
  * @example
  *
+ * randAvatar({ size: 200 }) // default is 100
+ *
+ * @example
+ *
  * randAvatar({ length: 10 })
  *
  * @example
  *
- * randAvatar({ size: 200 }) // default is 100
+ * randAvatar({ length: 10, priority: 'unique' }) // default priority is 'length'
  *
  */
 export function randAvatar<Options extends AvatarOptions = never>(

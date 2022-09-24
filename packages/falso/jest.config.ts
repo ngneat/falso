@@ -13,4 +13,5 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/packages/falso',
   preset: '../../jest.preset.ts',
+  snapshotResolver: './snapshot-resolver.js',
 };

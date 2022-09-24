@@ -252,6 +252,10 @@ type CountryCode =
  *
  * randPhoneNumber({ length: 10 })
  *
+ * @example
+ *
+ * randPhoneNumber({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randPhoneNumber<
   Options extends FakeOptions & {

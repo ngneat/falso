@@ -14,7 +14,7 @@ describe('randTextRange', () => {
     it('should return string of length between min and max', () => {
       const result = randTextRange({ min, max });
 
-      expect(result.length).toBeGreaterThan(min);
+      expect(result.length).toBeGreaterThanOrEqual(min);
       expect(result.length).toBeLessThanOrEqual(max);
     });
   });

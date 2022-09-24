@@ -22,6 +22,10 @@ import { AddressOptions, randAddress } from './address';
  *
  * randFullAddress({ length: 10 })
  *
+ * @example
+ *
+ * randFullAddress({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randFullAddress<Options extends AddressOptions = never>(
   options?: Options
@@ -29,7 +33,7 @@ export function randFullAddress<Options extends AddressOptions = never>(
   const includeCounty: boolean = options?.includeCounty ?? true;
   const includeCountry: boolean = options?.includeCountry ?? true;
 
-  const factory = () => {
+  const factory: () => string = () => {
     const { street, city, county, country, zipCode } = randAddress({
       includeCounty,
       includeCountry,

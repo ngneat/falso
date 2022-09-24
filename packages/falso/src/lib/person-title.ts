@@ -14,6 +14,10 @@ import { data } from './person-title.json';
  *
  * randPersonTitle({ length: 10 })
  *
+ * @example
+ *
+ * randPersonTitle({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randPersonTitle<Options extends FakeOptions = never>(
   options?: Options

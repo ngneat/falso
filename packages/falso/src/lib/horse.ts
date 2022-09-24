@@ -14,6 +14,10 @@ import { data } from './horse.json';
  *
  * randHorse({ length: 10 })
  *
+ * @example
+ *
+ * randHorse({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randHorse<Options extends FakeOptions = never>(
   options?: Options

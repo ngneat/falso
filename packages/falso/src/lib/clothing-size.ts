@@ -14,6 +14,10 @@ import { data } from './clothing-size.json';
  *
  * randClothingSize({ length: 10 })
  *
+ * @example
+ *
+ * randClothingSize({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randClothingSize<Options extends FakeOptions = never>(
   options?: Options

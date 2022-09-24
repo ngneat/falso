@@ -14,6 +14,10 @@ import { data } from './catch-phrase.json';
  *
  * randCatchPhrase({ length: 10 })
  *
+ * @example
+ *
+ * randCatchPhrase({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randCatchPhrase<Options extends FakeOptions = never>(
   options?: Options

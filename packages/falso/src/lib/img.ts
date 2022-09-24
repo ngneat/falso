@@ -15,6 +15,10 @@ type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
  *
  * randImg({ length: 10 })
  *
+ * @example
+ *
+ * randImg({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randImg<
   Options extends FakeOptions & {

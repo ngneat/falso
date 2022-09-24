@@ -13,6 +13,10 @@ import { fake, FakeOptions, getRandomInRange } from './core/core';
  *
  * randCreditCardCVV({ length: 10 })
  *
+ * @example
+ *
+ * randCreditCardCVV({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randCreditCardCVV<Options extends FakeOptions = never>(
   options?: Options

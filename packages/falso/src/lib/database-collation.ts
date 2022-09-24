@@ -14,6 +14,10 @@ import { data } from './database-collation.json';
  *
  * randDatabaseCollation({ length: 10 })
  *
+ * @example
+ *
+ * randDatabaseCollation({ length: 10, priority: 'unique' }) // default priority is 'length'
+ *
  */
 export function randDatabaseCollation<Options extends FakeOptions = never>(
   options?: Options
