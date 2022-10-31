@@ -8,11 +8,11 @@ import { data } from './paragraph.json';
  *
  * @example
  *
- * randJobTitle()
+ * randParagraph()
  *
  * @example
  *
- * randJobTitle({ length: 10 })
+ * randParagraph({ length: 10 })
  *
  */
 export function randParagraph<Options extends FakeOptions = never>(

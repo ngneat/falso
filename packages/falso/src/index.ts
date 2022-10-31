@@ -104,6 +104,7 @@ export { randMac } from './lib/mac';
 export { randMask } from './lib/mask';
 export { randMimeType } from './lib/mime-type';
 export { randMonth } from './lib/month';
+export { randMotorcylceManufacturer } from './lib/motorcycle-manufacturer';
 export { randMovie } from './lib/movie';
 export { randMovieCharacter } from './lib/movie-character';
 export { randMusicGenre } from './lib/music-genre';
@@ -203,3 +204,4 @@ export {
 } from './lib/factories/incremental-date';
 export { randAggregation } from './lib/aggregation';
 export { randChanceBoolean } from './lib/chance-boolean';
+export { toCollection } from './lib/collection';
