@@ -19,9 +19,11 @@ import { randNumber } from './number';
 export function randUuid<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  const v4options: V4Options = {
-    random: randNumber({ min: 0, max: 255, length: 16 }),
-  };
-
-  return fake(() => uuidv4(v4options), options);
+  return fake(
+    () =>
+      uuidv4({
+        random: randNumber({ min: 0, max: 255, length: 16 }),
+      }),
+    options
+  );
 }
