@@ -6,6 +6,11 @@ describe('uuid', () => {
     seed();
   });
 
+  it('should generate different uuids when length option is passed', () => {
+    const arr = randUuid({ length: 2 });
+    expect(arr[0]).not.toEqual(arr[1]);
+  });
+
   it('should generate uuid from seed', () => {
     seed('🙃🔥😊');
     expect(randUuid()).toEqual('02c11a83-1678-4638-9e55-39d543c31599');
