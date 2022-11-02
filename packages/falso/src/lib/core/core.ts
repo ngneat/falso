@@ -49,5 +49,8 @@ export function getRandomInRange({
   max = 9999.99,
   fraction = 0,
 }: RandomInRangeOptions = {}) {
+  if (max < min) {
+    throw new Error('Max must be bigger than min');
+  }
   return Number((random() * (max - min) + min).toFixed(fraction));
 }
