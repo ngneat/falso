@@ -25,7 +25,10 @@ const categoriesCount = Object.keys(data)?.length;
  *
  * randSports({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randSports<Options extends SportCategories = never>(
   options?: Options
 ) {

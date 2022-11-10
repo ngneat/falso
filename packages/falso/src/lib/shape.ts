@@ -14,7 +14,14 @@ import { data } from './shape.json';
  *
  * randShape({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Triangle'
+ * 'Circle'
+ * 'Square'
  */
+
 export function randShape<Options extends FakeOptions = never>(
   options?: Options
 ) {

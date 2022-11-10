@@ -14,7 +14,14 @@ import { data } from './file-name.json';
  *
  * randFileName({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'markets'
+ * 'solid_backing_strategist'
+ * 'granite'
  */
+
 export function randFileName<
   Options extends FakeOptions & { extension?: string } = never
 >(options?: Options) {

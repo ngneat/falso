@@ -14,7 +14,14 @@ import { data } from './music-genre.json';
  *
  * randMusicGenre({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Classical'
+ * 'Reggae'
+ * 'Blues'
  */
+
 export function randMusicGenre<Options extends FakeOptions = never>(
   options?: Options
 ) {

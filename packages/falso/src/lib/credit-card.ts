@@ -46,7 +46,10 @@ export interface CreditCard {
  *
  * randCreditCard({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randCreditCard<Options extends CreditCardOptions = never>(
   options?: Options
 ) {

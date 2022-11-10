@@ -14,7 +14,14 @@ import { data } from './american-football-team.json';
  *
  * randAmericanFootballTeam({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Arizona Cardinals'
+ * 'Atlanta Falcons'
+ * 'Baltimore Ravens'
  */
+
 export function randAmericanFootballTeam<Options extends FakeOptions = never>(
   options?: Options
 ) {

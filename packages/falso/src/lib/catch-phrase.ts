@@ -14,7 +14,14 @@ import { data } from './catch-phrase.json';
  *
  * randCatchPhrase({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Persevering encompassing middleware'
+ * 'Multi-layered zero administration system engine'
+ * 'Digitized attitude-oriented implementation'
  */
+
 export function randCatchPhrase<Options extends FakeOptions = never>(
   options?: Options
 ) {

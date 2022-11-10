@@ -35,7 +35,14 @@ export interface RandomAmountOptions extends RandomInRangeOptions, FakeOptions {
  * @example
  *
  * randAmount({ length: 10 })
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 8672.63
+ * 3284.82
+ * 9879.79
  */
+
 export function randAmount<
   Options extends markRequired<RandomAmountOptions, 'symbol'>
 >(options: Options): Return<string, Options>;

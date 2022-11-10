@@ -14,7 +14,10 @@ import { data } from './bird.i18n.json';
  *
  * randBird({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randBird<Options extends FakeOptions = never>(
   options?: Options
 ) {

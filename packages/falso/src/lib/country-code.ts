@@ -14,7 +14,14 @@ import { data } from './country-code.json';
  *
  * randCountryCode({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'MS'
+ * 'TW'
+ * 'LR'
  */
+
 export function randCountryCode<Options extends FakeOptions = never>(
   options?: Options
 ) {

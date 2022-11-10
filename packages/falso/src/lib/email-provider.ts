@@ -14,7 +14,14 @@ import { data } from './email-provider.json';
  *
  * randEmailProvider({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'aim'
+ * 'alice'
+ * 'aliceadsl'
  */
+
 export function randEmailProvider<Options extends FakeOptions = never>(
   options?: Options
 ) {

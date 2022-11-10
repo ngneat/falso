@@ -13,7 +13,14 @@ import { FakeOptions, fake, getRandomInRange } from './core/core';
  *
  * randLatitude({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 30.204
+ * 34.253
+ * -31.506
  */
+
 export function randLatitude<Options extends FakeOptions = never>(
   options?: Options
 ) {

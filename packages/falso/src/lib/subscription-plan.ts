@@ -14,7 +14,14 @@ import { data } from './subscription-plan.json';
  *
  * randSubscriptionPlan({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Basic'
+ * 'Premium'
+ * 'Free'
  */
+
 export function randSubscriptionPlan<Options extends FakeOptions = never>(
   options?: Options
 ) {

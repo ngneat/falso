@@ -14,7 +14,14 @@ import { data } from './database-type.json';
  *
  * randDatabaseType({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'tinyint'
+ * 'date'
+ * 'timestamp'
  */
+
 export function randDatabaseType<Options extends FakeOptions = never>(
   options?: Options
 ) {

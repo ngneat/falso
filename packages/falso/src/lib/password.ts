@@ -22,7 +22,14 @@ export interface PasswordOptions extends FakeOptions {
  *
  * randPassword({ size: 10 }) // default is 15
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * igPbPzb0NCpuQpB
+ * MD8iRRoiUmpGq6F
+ * OyYuahySZicMxdg
  */
+
 export function randPassword<Options extends PasswordOptions = never>(
   options?: Options
 ) {

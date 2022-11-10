@@ -15,7 +15,14 @@ import { randBoolean } from './boolean';
  *
  * randZipCode({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 29992-1740
+ * 39128-5620
+ * 50624
  */
+
 export function randZipCode<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -14,7 +14,14 @@ import { data } from './directory-path.json';
  *
  * randDirectoryPath({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * '/usr/X11R6'
+ * '/sys'
+ * '/mnt'
  */
+
 export function randDirectoryPath<Options extends FakeOptions = never>(
   options?: Options
 ) {

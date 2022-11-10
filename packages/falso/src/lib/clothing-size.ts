@@ -14,7 +14,14 @@ import { data } from './clothing-size.json';
  *
  * randClothingSize({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'XXS'
+ * 'XS'
+ * 'S'
  */
+
 export function randClothingSize<Options extends FakeOptions = never>(
   options?: Options
 ) {

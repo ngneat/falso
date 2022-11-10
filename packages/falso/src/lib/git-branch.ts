@@ -14,7 +14,14 @@ import { data } from './git-branch.json';
  *
  * randGitBranch({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'protocol-navigate'
+ * 'array-quantify'
+ * 'transmitter-override'
  */
+
 export function randGitBranch<Options extends FakeOptions = never>(
   options?: Options
 ) {

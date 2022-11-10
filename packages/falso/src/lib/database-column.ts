@@ -14,7 +14,14 @@ import { data } from './database-column.json';
  *
  * randDatabaseColumn({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'comment'
+ * 'group'
+ * 'password'
  */
+
 export function randDatabaseColumn<Options extends FakeOptions = never>(
   options?: Options
 ) {

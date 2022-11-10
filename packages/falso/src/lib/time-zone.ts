@@ -14,7 +14,14 @@ import { data } from './time-zone.json';
  *
  * randTimeZone({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'America/Lima'
+ * 'America/Juneau'
+ * 'Pacific/Auckland'
  */
+
 export function randTimeZone<Options extends FakeOptions = never>(
   options?: Options
 ) {

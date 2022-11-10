@@ -14,7 +14,14 @@ import { data } from './currency-symbol.json';
  *
  * randCurrencySymbol({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'B/.'
+ * '£'
+ * 'Ls'
  */
+
 export function randCurrencySymbol<Options extends FakeOptions = never>(
   options?: Options
 ) {

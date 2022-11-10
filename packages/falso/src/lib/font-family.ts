@@ -14,7 +14,14 @@ import { data } from './font-family.json';
  *
  * randFontFamily({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Inter'
+ * 'DM Sans'
+ * 'Space Mono'
  */
+
 export function randFontFamily<Options extends FakeOptions = never>(
   options?: Options
 ) {

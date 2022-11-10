@@ -37,7 +37,36 @@ export type Brand =
  *
  * randCreditCardNumber({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * {
+  brand: 'American Express',
+  formats: [ '34## ###### #####', '37## ###### #####' ]
+}
+ * {
+  brand: 'UnionPay',
+  formats: [ '62## #### #### ####', '62#### #############' ]
+}
+ * {
+  brand: 'Diners Club',
+  formats: [
+    '300# ###### ####',
+    '301# ###### ####',
+    '302# ###### ####',
+    '303# ###### ####',
+    '304# ###### ####',
+    '305# ###### ####',
+    '309# ###### ####',
+    '36## ###### ####',
+    '38## ###### ####',
+    '39## ###### ####',
+    '54## #### #### ####',
+    '55## #### #### ####'
+  ]
+}
  */
+
 export function randCreditCardNumber<
   Options extends CreditCardNumberOptions = never
 >(options?: Options) {

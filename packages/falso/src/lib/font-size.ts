@@ -28,7 +28,14 @@ export interface FontSizeOptions extends FakeOptions {
  *
  * randFontSize({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 1253px
+ * 525px
+ * 1735px
  */
+
 export function randFontSize<Options extends FontSizeOptions = never>(
   options?: Options
 ) {

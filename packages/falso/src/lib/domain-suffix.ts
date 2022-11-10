@@ -14,7 +14,14 @@ import { data } from './domain-suffix.json';
  *
  * randDomainSuffix({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'org'
+ * 'biz'
+ * 'com'
  */
+
 export function randDomainSuffix<Options extends FakeOptions = never>(
   options?: Options
 ) {

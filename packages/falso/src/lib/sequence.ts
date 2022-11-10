@@ -51,7 +51,14 @@ type RandomSequenceOptions2 = {
  *
  * randSequence({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 95vctFi3
+ * AI9cNHN7
+ * g2YAKyLq
  */
+
 export function randSequence<Options extends RandomSequenceOptions = never>(
   options?: RandomSequenceOptions
 ): Return<string, Options>;

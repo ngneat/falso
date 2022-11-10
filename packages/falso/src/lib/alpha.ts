@@ -14,7 +14,14 @@ import { alphaChars } from './sequence';
  *
  * randAlpha({ length: 3 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * g
+ * g
+ * l
  */
+
 export function randAlpha<Options extends FakeOptions = never>(
   options?: Options
 ) {

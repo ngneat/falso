@@ -14,7 +14,14 @@ import { data } from './accessory.json';
  *
  * randAccessory({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'Sunglasses'
+ * 'Apron'
+ * 'Necklace'
  */
+
 export function randAccessory<Options extends FakeOptions = never>(
   options?: Options
 ) {

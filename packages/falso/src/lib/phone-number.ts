@@ -252,7 +252,17 @@ type CountryCode =
  *
  * randPhoneNumber({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * { formats: [ '+247 ####' ], countryCode: [ 'AC' ] }
+ * { formats: [ '+376 ### ###' ], countryCode: [ 'AD' ] }
+ * {
+  formats: [ '+971 ## ### ####', '+971 # ### ####' ],
+  countryCode: [ 'AE' ]
+}
  */
+
 export function randPhoneNumber<
   Options extends FakeOptions & {
     countryCode?: CountryCode;

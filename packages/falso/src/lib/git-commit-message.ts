@@ -15,7 +15,10 @@ import { randWord } from './word';
  *
  * randGitCommitMessage({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
  */
+
 export function randGitCommitMessage<Options extends FakeOptions = never>(
   options?: Options
 ) {

@@ -18,7 +18,14 @@ import { randAlpha } from './alpha';
  *
  * randMask({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * c05a4
+ * q52u2
+ * p13u3
  */
+
 export function randMask<
   Options extends FakeOptions & {
     mask?: string;

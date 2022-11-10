@@ -22,7 +22,14 @@ export interface MonthOptions extends FakeOptions {
  *
  * randMonth({ length: 10 })
  *
+ *
+ * @automaticallyGeneratedExamples
+ * @example
+ * 'January'
+ * 'February'
+ * 'March'
  */
+
 export function randMonth<Options extends MonthOptions = never>(
   options?: Options
 ) {
