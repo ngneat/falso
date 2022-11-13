@@ -161,6 +161,19 @@ html[data-theme='dark'] {
   font-size: 14px;
 }
 
+@media (max-width: 996px) {
+  .header-sponsor-link {
+    position: absolute;
+    right: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-sponsor-link {
+    right: 50px;
+  }
+}
+
 .header-sponsor-link::before {
   transform: scale(1);
   transition: transform .15s cubic-bezier(0.2, 0, 0.13, 2);
