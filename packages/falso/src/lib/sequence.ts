@@ -44,7 +44,7 @@ type RandomSequenceOptions2 = {
  *
  * @example
  *
- * randSequence({ charType: 'numeric' }) // numeric | alpha | alphaNumeric
+ * randSequence({ charType: 'numeric' }) // numeric | alpha | alphaNumeric | special
  *
  * @example
  *
