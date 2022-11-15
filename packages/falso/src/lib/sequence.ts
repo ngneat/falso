@@ -3,8 +3,7 @@ import { random } from './random';
 
 export const numericChars = '0123456789';
 export const alphaChars = 'abcdefghijklmnopqrstuvwxyz';
-// TODO
-export const specialChars = 'TODO';
+export const specialChars = '<>@!#$%^&*()_+[]{}?:;|\'"\\,./~`-=';
 export const numericAlphaChars = `${numericChars}${alphaChars}${alphaChars.toUpperCase()}`;
 
 function generator(size = 8, chars = numericAlphaChars) {
@@ -23,7 +22,7 @@ type RandomSequenceOptions = {
 
 type RandomSequenceOptions2 = {
   size?: number;
-  charType?: 'numeric' | 'alpha' | 'alphaNumeric'; // TODO | 'special'
+  charType?: 'numeric' | 'alpha' | 'alphaNumeric' | 'special';
 } & FakeOptions;
 
 /**
@@ -76,8 +75,16 @@ export function randSequence<
         return fake(() => generator(options?.size, numericAlphaChars), options);
       case 'numeric':
         return fake(() => generator(options?.size, numericChars), options);
+      case 'special':
+        return fake(() => generator(options?.size, specialChars), options);
+      default:
+        return neverChecker(options.charType);
     }
   } else {
     return fake(() => generator(options?.size, options?.chars), options);
   }
+}
+
+function neverChecker(value: never) {
+  throw new Error(`you didn't all condition ${value}`);
 }
