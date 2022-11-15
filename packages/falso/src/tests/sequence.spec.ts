@@ -3,6 +3,7 @@ import { randSequence } from '../lib/sequence';
 describe('randSequence', () => {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const specials = '<>@!#$%^&*()_+[]{}?:;|\'"\\,./~`-=';
 
   it('should create one sequence', () => {
     expect(typeof randSequence()).toBe('string');
@@ -49,5 +50,16 @@ describe('randSequence', () => {
     expect(result.length).toBe(8);
     expect(typeof result).toBe('string');
     expect(result.split('').some((char) => letters.includes(char))).toBe(false);
+  });
+
+  it('should create sequence with charType: special', () => {
+    const result = randSequence({ charType: 'special' });
+
+    expect(result.length).toBe(8);
+    expect(typeof result).toBe('string');
+    expect(result.split('').some((char) => letters.includes(char))).toBe(false);
+    expect(result.split('').every((char) => specials.includes(char))).toBe(
+      true
+    );
   });
 });
