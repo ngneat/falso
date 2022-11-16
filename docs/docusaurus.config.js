@@ -48,7 +48,7 @@ module.exports = {
                 className: 'header-icon-link header-sponsor-link',
               },
               {
-                href: 'https://github.com/ngneat/false/',
+                href: 'https://github.com/ngneat/falso/',
                 label: ' ',
                 position: 'right',
                 className: 'header-icon-link header-github-link',
@@ -77,7 +77,7 @@ module.exports = {
                   items: [
                     {
                       label: 'GitHub',
-                      href: 'https://github.com/ngneat/false',
+                      href: 'https://github.com/ngneat/falso',
                     },
                     {
                       label: 'Twitter',
