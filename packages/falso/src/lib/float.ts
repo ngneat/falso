@@ -35,5 +35,20 @@ export function randFloat<Options extends RandomFloatOptions = never>(
     ...options,
     fraction: options?.fraction ?? 2,
   };
-  return fake(() => getRandomInRange(o), options);
+
+  function factory(): number {
+    const result = getRandomInRange(o);
+    const stringfiedResult = String(result);
+
+    if (
+      stringfiedResult.includes('.') &&
+      stringfiedResult.split('.')[1].length === o.fraction
+    ) {
+      return result;
+    } else {
+      return factory();
+    }
+  }
+
+  return fake(factory, options);
 }
