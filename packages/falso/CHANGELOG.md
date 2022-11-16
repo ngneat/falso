@@ -2,6 +2,24 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [6.2.0](https://github.com/ngneat/falso/compare/falso-6.1.0...falso-6.2.0) (2022-11-16)
+
+### Bug Fixes
+
+- 🐞 randFloat somtime didn't adhere fraction strictly ([9886a8e](https://github.com/ngneat/falso/commit/9886a8e25ff8ff7b4428b46a65b76400a9ab80bb))
+- 🐞 randUuid returned same id with length parameter ([601b070](https://github.com/ngneat/falso/commit/601b070d9b3842228feeace2ebd9067cc85a34ca))
+- **random:** throw error when max is smaller than min ([28284cf](https://github.com/ngneat/falso/commit/28284cf9900a8763823fded765d8c5c50aa17c69))
+
+### Features
+
+- 🔥 Add motorcycle manufacturers ([f5a61e2](https://github.com/ngneat/falso/commit/f5a61e271a73ef65cb0271cab095f04f940adf37))
+- 🔥 add movies ([450dc74](https://github.com/ngneat/falso/commit/450dc74022ddc298fed89c669e7cfe6b061555bd))
+- 🔥 Add movies sorted alphabetically ([87c7f51](https://github.com/ngneat/falso/commit/87c7f5133aa1ae5bcd277f0ec3b0d5b92f139754))
+- 🔥 add specialChars in charType ([f799fa9](https://github.com/ngneat/falso/commit/f799fa962c44b06ea966c99fbe4aae36bc7054c0))
+- 🔥 randDatabase which create database top25 ([84db08a](https://github.com/ngneat/falso/commit/84db08ac44c11c86606107dfcd6b6d96716bff6f))
+- 🔥 write aws-service test code & remove duplicated service ([e699ad0](https://github.com/ngneat/falso/commit/e699ad066d9c60df8eca5fa1c2742768965a7451))
+- **toCollection:** add a new generators to generate collection from a generator function ([158ef52](https://github.com/ngneat/falso/commit/158ef52e4d9e97890337de43a20d526bceba4aab)), closes [#301](https://github.com/ngneat/falso/issues/301)
+
 # [6.1.0](https://github.com/ngneat/falso/compare/falso-6.0.3...falso-6.1.0) (2022-07-31)
 
 ### Bug Fixes
