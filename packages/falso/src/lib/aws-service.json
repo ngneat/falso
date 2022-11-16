@@ -16,7 +16,6 @@
     "ElastiCache",
     "CloudWatch",
     "Cognito",
-    "Cognito",
     "API Gateway",
     "AppSync",
     "Athena"
