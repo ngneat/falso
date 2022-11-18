@@ -8,10 +8,8 @@ export type ObjectKeys<T extends Record<PropertyKey, unknown>> = Exclude<
  * [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
  * It preserves type strictly
  */
-const objectKeys = <Type extends Record<PropertyKey, unknown>>(
+export const objectKeys = <Type extends Record<PropertyKey, unknown>>(
   obj: Type
 ): Array<ObjectKeys<Type>> => {
   return Object.keys(obj) as Array<ObjectKeys<Type>>;
 };
-
-export default objectKeys;

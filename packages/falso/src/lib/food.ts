@@ -1,6 +1,6 @@
 import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
 import { data } from './food.json';
-import objectKeys from './utils/objectKeys';
+import { objectKeys } from './utils/objectKeys';
 
 export type FoodOrigin = keyof typeof data;
 
