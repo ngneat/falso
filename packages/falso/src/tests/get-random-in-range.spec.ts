@@ -8,7 +8,7 @@ describe('getRandomInRange', () => {
   });
 
   it('should return number in range', () => {
-    expect(getRandomInRange({ min: 1, max: 10 })).toBeGreaterThan(1);
+    expect(getRandomInRange({ min: 1, max: 10 })).toBeGreaterThanOrEqual(1);
     expect(getRandomInRange({ min: 1, max: 10 })).toBeLessThan(11);
   });
 });
