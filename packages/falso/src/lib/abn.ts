@@ -12,7 +12,7 @@ export interface AbnOptions extends FakeOptions {
 /**
  * Generate a random abn.
  *
- * @category TODO
+ * @category Company
  *
  * @example
  *
