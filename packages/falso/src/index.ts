@@ -204,3 +204,4 @@ export {
 } from './lib/factories/incremental-date';
 export { randAggregation } from './lib/aggregation';
 export { toCollection } from './lib/collection';
+export { randPick } from './lib/pick';
