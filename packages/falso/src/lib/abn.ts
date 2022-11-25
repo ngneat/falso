@@ -12,7 +12,7 @@ export interface AbnOptions extends FakeOptions {
 /**
  * Generate a random abn.
  *
- * @category Company
+ * @category Finance
  *
  * @example
  *
@@ -24,7 +24,7 @@ export interface AbnOptions extends FakeOptions {
  *
  * @example
  *
- * randAbnd({ onlyValid: false }) //default is true
+ * randAbn({ onlyValid: false }) //default is true
  */
 export function randAbn<Options extends AbnOptions = never>(options?: Options) {
   const factory = () => {
