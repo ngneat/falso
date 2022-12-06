@@ -14,6 +14,7 @@
         "project": "packages/falso/package.json",
         "entryFile": "packages/falso/src/index.ts",
         "format": ["esm", "cjs"],
+        "rollupConfig": "packages/falso/rollup.config.js",
         "assets": [
           {
             "glob": "logo.png",
