@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { data } from './book.json';
 
 interface BookOptions extends FakeOptions {
@@ -40,8 +40,8 @@ export function randBook<Options extends BookOptions = never>(
   options?: Options
 ) {
   const bookData = options?.category
-    ? data.filter(({ category }) => category === options.category)
-    : data;
+    ? (data as Book[]).filter(({ category }) => category === options.category)
+    : (data as Book[]);
 
   return fake(bookData, options);
 }
