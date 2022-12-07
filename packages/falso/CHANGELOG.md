@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [6.3.0](https://github.com/ngneat/falso/compare/falso-6.2.0...falso-6.3.0) (2022-12-07)
+
+### Bug Fixes
+
+- 🐞 randBook return type ([5001cb1](https://github.com/ngneat/falso/commit/5001cb1a53a9e03ca137b5c8eed493f30fa03402))
+- randAbn category to finance and spelling mistake in example code ([e52186f](https://github.com/ngneat/falso/commit/e52186f05882bcb89020b7c2b9d5af8ca7705d91))
+- updated category ([d69f221](https://github.com/ngneat/falso/commit/d69f22138ecb995c94c5ce9051d9eb9783e1e7fc))
+
+### Features
+
+- added random Australian Business Number (ABN) ([32c817e](https://github.com/ngneat/falso/commit/32c817ec29aacaeb9d575c1774a66f058df97eb1))
+
 # [6.2.0](https://github.com/ngneat/falso/compare/falso-6.1.0...falso-6.2.0) (2022-11-16)
 
 ### Bug Fixes
