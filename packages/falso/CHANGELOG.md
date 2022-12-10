@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [6.3.1](https://github-personal/ngneat/falso/compare/falso-6.3.0...falso-6.3.1) (2022-12-10)
+
+### Bug Fixes
+
+- 🐞 export randDatabase() ([b3c517f](https://github-personal/ngneat/falso/commit/b3c517f56829bd046d81f8db9676cbca419fbc82))
+
 # [6.3.0](https://github.com/ngneat/falso/compare/falso-6.2.0...falso-6.3.0) (2022-12-07)
 
 ### Bug Fixes
