@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [6.3.2](https://github-personal/ngneat/falso/compare/falso-6.3.1...falso-6.3.2) (2022-12-15)
+
+### Bug Fixes
+
+- 🐞 export randDatabase() ([b3c517f](https://github-personal/ngneat/falso/commit/b3c517f56829bd046d81f8db9676cbca419fbc82))
+- 🐞 remove json file deps ([e92745f](https://github-personal/ngneat/falso/commit/e92745f7c9924504cd28c1192325b0c91df462cb)), closes [#334](https://github-personal/ngneat/falso/issues/334)
+
 ## [6.3.1](https://github-personal/ngneat/falso/compare/falso-6.3.0...falso-6.3.1) (2022-12-10)
 
 ### Bug Fixes
