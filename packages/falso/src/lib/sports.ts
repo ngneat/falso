@@ -1,7 +1,7 @@
 import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
 import { data } from './sports.json';
 
-export type Category = keyof typeof data;
+export type Category = 'olympic' | 'winterOlympic' | 'outdoor';
 
 export interface SportCategories extends FakeOptions {
   // This categories can be extended in the future

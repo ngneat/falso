@@ -2,7 +2,26 @@ import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
 import { data } from './food.json';
 import { objectKeys } from './utils/objectKeys';
 
-export type FoodOrigin = keyof typeof data;
+export type FoodOrigin =
+  | 'china'
+  | 'italy'
+  | 'india'
+  | 'mexico'
+  | 'japan'
+  | 'france'
+  | 'lebanon'
+  | 'thailand'
+  | 'greece'
+  | 'turkey'
+  | 'spain'
+  | 'venezuela'
+  | 'chile'
+  | 'argentina'
+  | 'colombia'
+  | 'ecuador'
+  | 'peru'
+  | 'el salvador'
+  | 'romania';
 
 export interface FoodOptions extends FakeOptions {
   origin?: FoodOrigin;
