@@ -204,5 +204,6 @@ export {
   IncrementalDateOptions,
 } from './lib/factories/incremental-date';
 export { randAggregation } from './lib/aggregation';
+export { randChanceBoolean } from './lib/chance-boolean';
 export { toCollection } from './lib/collection';
 export { randAbn } from './lib/abn';
