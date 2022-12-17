@@ -16,12 +16,16 @@ module.exports = {
         require.resolve('./src/consolePlayground/index.js'),
     ],
     themeConfig: {
+      metadata: [{
+        name: 'google-site-verification',
+        content: 'zLIQAxOp2sGFy10UE51HAMtWTqg7J8z1hpTxZR9G1WA'
+      }],
         colorMode: {
             respectPrefersColorScheme: true,
         },
         algolia: {
             appId: '4MDX7BPF21',
-            apiKey: '464a7197abc1659dd1b9be9e70cb3e1c',
+            apiKey: 'd3ffc5b0d4a149aed5a9941218893db7',
             indexName: 'falso',
         },
         navbar: {
@@ -35,12 +39,20 @@ module.exports = {
                     activeBasePath: 'docs',
                     label: 'Docs',
                     position: 'left',
+              className: "first-nav-element"
                 },
-                {
-                    href: 'https://github.com/ngneat/falso',
-                    label: 'GitHub',
-                    position: 'right',
-                },
+              {
+                href: 'https://github.com/sponsors/ngneat',
+                label: 'Sponsor',
+                position: 'right',
+                className: 'header-icon-link header-sponsor-link',
+              },
+              {
+                href: 'https://github.com/ngneat/falso/',
+                label: ' ',
+                position: 'right',
+                className: 'header-icon-link header-github-link',
+              },
             ],
         },
         footer: {
@@ -57,19 +69,29 @@ module.exports = {
                     items: [{
                             label: 'Discussions',
                             href: 'https://github.com/ngneat/falso/discussions',
-                        },
-                        {
-                            label: 'Twitter',
-                            href: 'https://twitter.com/NetanelBasal',
-                        },
+                        }
                     ],
                 },
                 {
-                    title: 'More',
-                    items: [{
-                        label: 'GitHub',
-                        href: 'https://github.com/ngneat/falso',
-                    }, ],
+                  title: 'More',
+                  items: [
+                    {
+                      label: 'GitHub',
+                      href: 'https://github.com/ngneat/falso',
+                    },
+                    {
+                      label: 'Twitter',
+                      href: 'https://twitter.com/ngneat_org',
+                    },
+                    {
+                      label: 'YouTube',
+                      href: 'https://youtube.com/@ngneat',
+                    },
+                    {
+                      label: 'Official site',
+                      href: 'https://ngneat.com/',
+                    },
+                  ],
                 },
             ],
             copyright: `Copyright © ${new Date().getFullYear()} NgNeat, Inc.`,

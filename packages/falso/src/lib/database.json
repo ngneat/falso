@@ -1,0 +1,29 @@
+{
+  "data": [
+    "Oracle",
+    "MySQL",
+    "Microsoft SQL Server",
+    "PostgreSQL",
+    "MongoDB",
+    "IBM Db2",
+    "Redis",
+    "Elasticsearch",
+    "Microsoft Access",
+    "SQLite",
+    "Cassandra",
+    "Splunk",
+    "MariaDB",
+    "Teradata",
+    "Hive",
+    "Solr",
+    "HBase",
+    "FileMaker",
+    "SAP HANA",
+    "Amazon DynamoDB",
+    "SAP Adaptive Server",
+    "Neo4j",
+    "Couchbase",
+    "Memcached",
+    "Microsoft Azure SQL Database"
+  ]
+}

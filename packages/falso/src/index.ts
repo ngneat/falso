@@ -46,6 +46,7 @@ export { randDatabaseCollation } from './lib/database-collation';
 export { randDatabaseColumn } from './lib/database-column';
 export { randDatabaseEngine } from './lib/database-engine';
 export { randDatabaseType } from './lib/database-type';
+export { randDatabase } from './lib/database';
 export { randDepartment } from './lib/department';
 export { randDirection } from './lib/direction';
 export { randDirectoryPath } from './lib/directory-path';
@@ -205,3 +206,4 @@ export {
 export { randAggregation } from './lib/aggregation';
 export { randChanceBoolean } from './lib/chance-boolean';
 export { toCollection } from './lib/collection';
+export { randAbn } from './lib/abn';
