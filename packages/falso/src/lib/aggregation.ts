@@ -72,7 +72,7 @@ export function randAggregation<
     for (let i = 0; i < values - 1; i++) {
       const num = getRandomInRange({
         min: 0,
-        max: getRandomInRange({ min: 0, max }),
+        max: getRandomInRange({ min: 0, max: Math.max(max, 0) }),
         fraction: options?.fraction,
       });
 

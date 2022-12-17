@@ -24,7 +24,7 @@ describe('randPercentages', () => {
   );
 
   it('should work after 1000 loops', () => {
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 100; i++) {
       const nums = randAggregation({
         totalValue: 10_000,
         values: 30,
@@ -36,7 +36,7 @@ describe('randPercentages', () => {
   });
 
   it('should work after 1000 loops with fraction', () => {
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 100; i++) {
       const nums = randAggregation({
         totalValue: 10_000,
         values: 30,
@@ -55,7 +55,7 @@ describe('randPercentages', () => {
     [10, 10],
     [50, 100000],
   ])('should not include zeros', (values, totalValue) => {
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 100; i++) {
       const nums = randAggregation({
         totalValue: totalValue,
         values: values,
