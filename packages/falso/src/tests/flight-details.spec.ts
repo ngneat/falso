@@ -1,10 +1,10 @@
 import { randFlightDetails } from '../lib/flight-details';
 import * as randFlightNumberFunctions from '../lib/flight-number';
-import * as randAirlineFunctions from '../lib/airline';
-import * as randAirportFunctions from '../lib/airport';
+import * as randAirlineFunctions from '../lib/airline/airline';
+import * as randAirportFunctions from '../lib/airport/airport';
 import * as randFutureDateFunctions from '../lib/future-date';
 import * as randFullNameFunctions from '../lib/full-name';
-import { randAirport } from '../lib/airport';
+import { randAirport } from '../lib/airport/airport';
 
 describe('flightDetails', () => {
   afterAll(() => {

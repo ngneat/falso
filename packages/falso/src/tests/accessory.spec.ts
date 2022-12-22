@@ -1,4 +1,4 @@
-import { randAccessory } from '../lib/accessory';
+import { randAccessory } from '../lib/accessory/accessory';
 
 describe('accessory', () => {
   it('should create', () => {

@@ -1,5 +1,5 @@
 import { fake } from './core/core';
-import { AddressOptions, randAddress } from './address';
+import { AddressOptions, randAddress } from './address/address';
 
 /**
  * Generate a random full address.

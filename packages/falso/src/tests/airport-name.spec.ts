@@ -1,5 +1,5 @@
-import { data } from '../lib/airport.json';
-import { randAirportName } from '../lib/airport-name';
+import { data } from '../lib/airport/airport.json';
+import { randAirportName } from '../lib/airport-name/airport-name';
 
 describe('airportName', () => {
   it('should return an airport name', () => {

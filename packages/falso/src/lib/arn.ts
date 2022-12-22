@@ -1,4 +1,4 @@
-import { randAccount } from './account';
+import { randAccount } from './account/account';
 import { randAwsRegion } from './aws-region';
 import { fake, FakeOptions } from './core/core';
 import { randDirectoryPath } from './directory-path';

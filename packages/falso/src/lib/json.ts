@@ -8,7 +8,7 @@ import { randSnake } from './snake';
 import { randUuid } from './uuid';
 import { randWord } from './word';
 import { randUser } from './user';
-import { randAddress } from './address';
+import { randAddress } from './address/address';
 import { randProduct } from './product';
 import { randFlightDetails } from './flight-details';
 import { randCreditCard } from './credit-card';

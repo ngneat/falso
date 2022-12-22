@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { FakeOptions, fake } from '../core/core';
 import { data } from './airport.json';
 
 export interface Airport {

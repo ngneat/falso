@@ -1,6 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { isValidAbn } from './core/validators';
-import { randNumber } from './number';
+import { FakeOptions, fake } from '../core/core';
+import { isValidAbn } from '../core/validators';
+import { randNumber } from '../number';
 
 export interface AbnOptions extends FakeOptions {
   /**

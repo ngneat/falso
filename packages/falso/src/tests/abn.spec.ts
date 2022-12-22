@@ -1,4 +1,4 @@
-import { randAbn } from '../lib/abn';
+import { randAbn } from '../lib/abn/abn';
 import { isValidAbn } from '../lib/core/validators';
 
 describe('randAbn', () => {

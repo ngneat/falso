@@ -3,7 +3,7 @@ import {
   FakeOptions,
   getRandomInRange,
   RandomInRangeOptions,
-} from './core/core';
+} from '../core/core';
 
 export interface RandomAggregationOptions
   extends RandomInRangeOptions,

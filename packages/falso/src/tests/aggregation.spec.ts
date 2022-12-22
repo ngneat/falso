@@ -1,4 +1,4 @@
-import { randAggregation } from '../lib/aggregation';
+import { randAggregation } from '../lib/aggregation/aggregation';
 
 describe('randPercentages', () => {
   it.each([

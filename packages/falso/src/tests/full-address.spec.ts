@@ -1,4 +1,4 @@
-import * as randAddressFunctions from '../lib/address';
+import * as randAddressFunctions from '../lib/address/address';
 import { randFullAddress } from '../lib/full-address';
 
 describe('randFullAddress', () => {

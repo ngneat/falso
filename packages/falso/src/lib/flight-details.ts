@@ -1,10 +1,10 @@
 import { fake, FakeOptions, getRandomInRange } from './core/core';
 import { randFutureDate } from './future-date';
-import { randAirline } from './airline';
+import { randAirline } from './airline/airline';
 import { Airline, randFlightNumber } from './flight-number';
 import { randFullName } from './full-name';
 import { randSeatNumber } from './seat-number';
-import { Airport, randAirport } from './airport';
+import { Airport, randAirport } from './airport/airport';
 
 export interface FlightDetailsOptions extends FakeOptions {
   airline?: Airline;

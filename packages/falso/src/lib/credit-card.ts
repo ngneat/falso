@@ -2,7 +2,7 @@ import { fake, FakeOptions } from './core/core';
 import { randCreditCardCVV } from './credit-card-cvv';
 import { randCreditCardBrand } from './credit-card-brand';
 import { Brand, randCreditCardNumber } from './credit-card-number';
-import { randAccount } from './account';
+import { randAccount } from './account/account';
 import { randFullName } from './full-name';
 import { rand } from './rand';
 import { randPastDate } from './past-date';

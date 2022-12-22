@@ -1,6 +1,6 @@
 import { fake, FakeOptions, getRandomInRange } from './core/core';
 import { rand } from './rand';
-import * as airlines from './airline.json';
+import * as airlines from './airline/airline.json';
 
 export type Airline =
   | 'RyanAir'

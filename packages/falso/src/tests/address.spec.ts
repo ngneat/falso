@@ -3,7 +3,7 @@ import * as randCityFunctions from '../lib/city';
 import * as randCountyFunctions from '../lib/county';
 import * as randCountryFunctions from '../lib/country';
 import * as randZipCodeFunctions from '../lib/zip-code';
-import { randAddress } from '../lib/address';
+import { randAddress } from '../lib/address/address';
 
 describe('randAddress', () => {
   let randStreetAddressSpy: jest.SpyInstance;

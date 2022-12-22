@@ -1,5 +1,5 @@
-import { randAirportCode } from '../lib/airport-code';
-import { data } from '../lib/airport.json';
+import { randAirportCode } from '../lib/airport-code/airport-code';
+import { data } from '../lib/airport/airport.json';
 
 describe('airportCode', () => {
   it('should return an airport code', () => {

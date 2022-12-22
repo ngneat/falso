@@ -1,4 +1,4 @@
-import { randAccount } from '../lib/account';
+import { randAccount } from '../lib/account/account';
 
 describe('account', () => {
   it('should create default account', () => {

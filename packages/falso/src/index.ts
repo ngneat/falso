@@ -1,6 +1,6 @@
-export { randAbbreviation } from './lib/abbreviation';
-export { randAccessory } from './lib/accessory';
-export { randAccount } from './lib/account';
+export { randAbbreviation } from './lib/abbreviation/abbreviation';
+export { randAccessory } from './lib/accessory/accessory';
+export { randAccount } from './lib/account/account';
 export { randAlpha } from './lib/alpha';
 export { randAlphaNumeric } from './lib/alpha-numeric';
 export { randAmericanFootballTeam } from './lib/american-football-team';
@@ -182,18 +182,18 @@ export { randWord } from './lib/word';
 export { randZipCode } from './lib/zip-code';
 export { randSinger } from './lib/singer';
 export { randSong } from './lib/song';
-export { randAddress, Address } from './lib/address';
+export { randAddress, Address } from './lib/address/address';
 export { randFullAddress } from './lib/full-address';
 export { randJSON } from './lib/json';
 export { randCodeSnippet } from './lib/code-snippet';
 export { randTextRange } from './lib/text-range';
 export { randFlightNumber } from './lib/flight-number';
-export { randAirline } from './lib/airline';
+export { randAirline } from './lib/airline/airline';
 export { randFlightDetails, FlightDetails } from './lib/flight-details';
 export { randSeatNumber } from './lib/seat-number';
-export { randAirport } from './lib/airport';
-export { randAirportName } from './lib/airport-name';
-export { randAirportCode } from './lib/airport-code';
+export { randAirport } from './lib/airport/airport';
+export { randAirportName } from './lib/airport-name/airport-name';
+export { randAirportCode } from './lib/airport-code/airport-code';
 export { randCreditCard } from './lib/credit-card';
 export {
   incrementalNumber,
@@ -203,7 +203,7 @@ export {
   incrementalDate,
   IncrementalDateOptions,
 } from './lib/factories/incremental-date';
-export { randAggregation } from './lib/aggregation';
+export { randAggregation } from './lib/aggregation/aggregation';
 export { randChanceBoolean } from './lib/chance-boolean';
 export { toCollection } from './lib/collection';
-export { randAbn } from './lib/abn';
+export { randAbn } from './lib/abn/abn';

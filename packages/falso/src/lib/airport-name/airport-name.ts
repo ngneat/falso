@@ -1,6 +1,6 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './airport.json';
-import { rand } from './rand';
+import { FakeOptions, fake } from '../core/core';
+import { data } from '../airport/airport.json';
+import { rand } from '../rand';
 
 /**
  * Generate a random airport name.

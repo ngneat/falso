@@ -6,7 +6,7 @@ import { randLastName } from './last-name';
 import { randPhoneNumber } from './phone-number';
 import { randUserName } from './user-name';
 import { randAvatar } from './avatar';
-import { randAddress } from './address';
+import { randAddress } from './address/address';
 
 export interface User {
   id: string;
