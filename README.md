@@ -47,6 +47,12 @@ const user = { email: randEmail(), name: randFullName() };
 const emails = randEmail({ length: 10 });
 ```
 
+You can specify the length of elements you want to generate. Below is an example of generating 10 emails with length equal or smaller than 20 characters.
+
+```ts
+const emails = randEmail({ length: 10, maxCharCount: 20 });
+```
+
 ### Setting a Randomness Seed
 
 You can set your own seed if you want consistent results:

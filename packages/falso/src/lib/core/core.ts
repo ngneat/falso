@@ -1,8 +1,10 @@
 import { random } from '../random';
+import { isString } from '../utils/validators.utils';
 
 export interface FakeOptions {
   length?: number;
   locale?: any | string[];
+  maxCharCount?: number;
 }
 
 export type markRequired<Type, Key extends keyof Type> = Type & {
@@ -21,9 +23,16 @@ export function fake<T, Options extends FakeOptions>(
   data: Readonly<T[]> | FactoryFunction<T>,
   options?: Options
 ): Return<T, Options> {
-  const dataSource = Array.isArray(data)
-    ? () => randElement(data)
-    : (data as FactoryFunction<T>);
+  let dataSource = data as FactoryFunction<T>;
+  if (Array.isArray(data)) {
+    let resolvedData = data;
+    if (options?.maxCharCount && isString(data[0])) {
+      resolvedData = data.filter(
+        (item) => item.length <= options.maxCharCount!
+      );
+    }
+    dataSource = () => randElement(resolvedData);
+  }
 
   if (options?.length === undefined) {
     return dataSource(0) as any;
