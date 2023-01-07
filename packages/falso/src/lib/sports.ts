@@ -1,5 +1,6 @@
-import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
+import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './sports.json';
+import { rand } from './rand';
 
 export type Category = 'olympic' | 'winterOlympic' | 'outdoor';
 
@@ -7,8 +8,6 @@ export interface SportCategories extends FakeOptions {
   // This categories can be extended in the future
   category?: Category;
 }
-
-const categoriesCount = Object.keys(data)?.length;
 
 /**
  * Generate a random sports.
@@ -31,31 +30,10 @@ const categoriesCount = Object.keys(data)?.length;
 export function randSports<Options extends SportCategories = never>(
   options?: Options
 ) {
-  const sportsData: { [category: string]: string[] } = data;
-  const category: string | undefined = options?.category;
+  const category =
+    options?.category ?? rand(['olympic', 'outdoor', 'winterOlympic'] as const);
 
-  if (!categoriesCount) {
-    throw 'No Sport Categories found';
-  }
-
-  if (category && !sportsData[category]) {
-    throw `No Sports found for selected category (${category})`;
-  }
-
-  const factory: () => string = () => {
-    if (category) {
-      return randElement(sportsData[category]);
-    }
-
-    const randIndex = getRandomInRange({
-      min: 0,
-      max: categoriesCount - 1,
-      fraction: 0,
-    });
-    const randomOrigin = Object.keys(sportsData)[randIndex];
-
-    return randElement(sportsData[randomOrigin]);
-  };
+  const factory = () => randElement(data[category]);
 
   return fake(factory, options);
 }

@@ -7,7 +7,7 @@ import {
   Return,
 } from './core/core';
 
-export interface RandomAmountOptions extends RandomInRangeOptions, FakeOptions {
+interface RandomAmountOptions extends RandomInRangeOptions, FakeOptions {
   symbol?: string;
 }
 

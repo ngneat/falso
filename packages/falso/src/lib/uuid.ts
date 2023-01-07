@@ -1,4 +1,4 @@
-import { v4 as uuidv4, V4Options } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { fake, FakeOptions } from './core/core';
 import { randNumber } from './number';
 

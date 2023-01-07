@@ -4,6 +4,7 @@ import { fake, FakeOptions } from './core/core';
 interface FutureOptions extends FakeOptions {
   years?: number;
 }
+const millisecondsInYear = 365 * 24 * 60 * 60 * 1000;
 
 /**
  * Generate a random future.
@@ -32,7 +33,7 @@ export function randFutureDate<Options extends FutureOptions = never>(
     throw new Error('Years must be positive, use past() instead');
   }
 
-  const yearsInMilliseconds = years * 365 * 24 * 60 * 60 * 1000;
+  const yearsInMilliseconds = years * millisecondsInYear;
   const from = new Date();
   const to = new Date(from.getTime() + yearsInMilliseconds);
   return fake(() => randBetweenDate({ from, to }), options);

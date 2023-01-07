@@ -1,5 +1,8 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
+import { AZ } from './core/types';
 import { data } from './country-code.json';
+
+export type CountryCode = `${AZ}${AZ}`;
 
 /**
  * Generate a random country code.
@@ -18,5 +21,5 @@ import { data } from './country-code.json';
 export function randCountryCode<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(data, options);
+  return fake(data as CountryCode[], options);
 }

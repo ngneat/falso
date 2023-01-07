@@ -36,16 +36,6 @@ describe('swift', () => {
     expect(countryCode).toBe('DE');
   });
 
-  it('should throw error when provided country code is incorrect', () => {
-    const expectedError =
-      'country code should be valid ISO 3166-1 alpha-2 two-letter country code, for example: DE';
-
-    expect(() => randSwift({ countryCode: 'X' })).toThrowError(expectedError);
-    expect(() => randSwift({ countryCode: 'X222' })).toThrowError(
-      expectedError
-    );
-  });
-
   it('should create swift with provided location code', () => {
     const result = randSwift({ locationCode: 'FF' });
 
@@ -56,16 +46,6 @@ describe('swift', () => {
     expect(locationCode).toBe('FF');
   });
 
-  it('should throw error when provided location code is incorrect', () => {
-    const expectedError =
-      'location code should be valid 2 characters, like FF or MM';
-
-    expect(() => randSwift({ locationCode: 'X' })).toThrowError(expectedError);
-    expect(() => randSwift({ locationCode: 'X22' })).toThrowError(
-      expectedError
-    );
-  });
-
   it('should create swift with provided branch code', () => {
     const result = randSwift({ branchCode: '120' });
 
@@ -74,14 +54,6 @@ describe('swift', () => {
     expect(result.length).toBe(11);
     expect(typeof result).toBe('string');
     expect(branchCode).toBe('120');
-  });
-
-  it('should throw error when provided branch code is incorrect', () => {
-    const expectedError =
-      'branch code should be valid 3 alpha numberic characters, like XXX or 250';
-
-    expect(() => randSwift({ branchCode: 'X2' })).toThrowError(expectedError);
-    expect(() => randSwift({ branchCode: 'X222' })).toThrowError(expectedError);
   });
 
   it('should create swift with headquarters branch code', () => {

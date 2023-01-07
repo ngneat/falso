@@ -1,6 +1,18 @@
 import { fake, FakeOptions } from './core/core';
 import { randHexaDecimal } from './hexa-decimal';
 
+export function gitShaGenerator(len: number) {
+  return () => {
+    let sha = '';
+
+    for (let i = 0; i < len; i++) {
+      sha += randHexaDecimal();
+    }
+
+    return sha;
+  };
+}
+
 const commitShaLen = 40;
 
 /**
@@ -20,13 +32,5 @@ const commitShaLen = 40;
 export function randGitCommitSha<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
-    let sha = '';
-
-    for (let i = 0; i < commitShaLen; i++) {
-      sha += randHexaDecimal();
-    }
-
-    return sha;
-  }, options);
+  return fake(gitShaGenerator(commitShaLen), options);
 }

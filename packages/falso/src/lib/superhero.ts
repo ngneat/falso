@@ -39,11 +39,11 @@ export interface SuperheroEntity extends Superhero {
 export function randSuperhero<Options extends SuperheroOptions = never>(
   options?: Options
 ) {
-  const factory: () => SuperheroEntity = () => {
-    const heroes: Superhero[] = options?.company
-      ? data.filter(({ company }) => company === options.company)
-      : data;
+  const heroes: Superhero[] = options?.company
+    ? data.filter(({ company }) => company === options.company)
+    : data;
 
+  const factory: () => SuperheroEntity = () => {
     return {
       ...randElement(heroes),
       id: randUuid(),

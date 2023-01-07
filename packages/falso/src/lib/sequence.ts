@@ -86,5 +86,5 @@ export function randSequence<
 }
 
 function neverChecker(value: never) {
-  throw new Error(`you didn't all condition ${value}`);
+  throw new Error(`Invalid charType: ${value}`);
 }

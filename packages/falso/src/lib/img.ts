@@ -1,5 +1,11 @@
 import { fake, FakeOptions } from './core/core';
 
+interface ImgOptions extends FakeOptions {
+  width?: number;
+  height?: number;
+  category?: Category;
+}
+
 type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
 
 /**
@@ -16,13 +22,7 @@ type Category = 'animals' | 'arch' | 'nature' | 'people' | 'tech';
  * randImg({ length: 10 })
  *
  */
-export function randImg<
-  Options extends FakeOptions & {
-    width?: number;
-    height?: number;
-    category?: Category;
-  } = never
->(options?: Options) {
+export function randImg<Options extends ImgOptions = never>(options?: Options) {
   const [width, height, category] = [
     options?.width ?? 500,
     options?.height ?? 500,

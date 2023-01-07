@@ -1,6 +1,12 @@
 import { fake, FakeOptions, getRandomInRange } from './core/core';
 import { randAlpha } from './alpha';
 
+interface MaskOptions extends FakeOptions {
+  mask?: string;
+  char?: string;
+  digit?: string;
+}
+
 /**
  * Generate a random mask.
  *
@@ -19,13 +25,9 @@ import { randAlpha } from './alpha';
  * randMask({ length: 10 })
  *
  */
-export function randMask<
-  Options extends FakeOptions & {
-    mask?: string;
-    char?: string;
-    digit?: string;
-  } = never
->(options?: Options) {
+export function randMask<Options extends MaskOptions = never>(
+  options?: Options
+) {
   return fake(() => {
     const [mask, char, digit] = [
       options?.mask ?? '@##@#',

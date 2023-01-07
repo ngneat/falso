@@ -1,6 +1,10 @@
 import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './file-name.json';
 
+interface FileNameOptions extends FakeOptions {
+  extension?: string;
+}
+
 /**
  * Generate a random file name.
  *
@@ -15,9 +19,9 @@ import { data } from './file-name.json';
  * randFileName({ length: 10 })
  *
  */
-export function randFileName<
-  Options extends FakeOptions & { extension?: string } = never
->(options?: Options) {
+export function randFileName<Options extends FileNameOptions = never>(
+  options?: Options
+) {
   const ext = options?.extension ?? 'pdf';
 
   return fake(() => `${randElement(data)}.${ext}`, options);

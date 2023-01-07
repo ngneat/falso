@@ -1,4 +1,4 @@
-import { FakeOptions, fake } from './core/core';
+import { fake, FakeOptions } from './core/core';
 import { randCity } from './city';
 import { randStreetAddress } from './street-address';
 import { randZipCode } from './zip-code';

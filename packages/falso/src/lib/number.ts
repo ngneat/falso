@@ -5,7 +5,6 @@ import {
   markRequired,
   RandomInRangeOptions,
 } from './core/core';
-import { isNil } from './core/validators';
 
 export interface RandomNumberOptions extends RandomInRangeOptions, FakeOptions {
   precision?: number;
@@ -48,8 +47,8 @@ export function randNumber<Options extends RandomNumberOptions = never>(
   options?: Options
 ) {
   const normalized: markRequired<RandomNumberOptions, 'min' | 'max'> = {
-    min: isNil(options?.min) ? 0 : options!.min,
-    max: isNil(options?.max) ? 999_999 : options!.max,
+    min: options?.min ?? 0,
+    max: options?.max ?? 999_999,
     precision: options?.precision,
     fraction: options?.fraction,
   };

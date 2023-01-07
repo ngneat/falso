@@ -9,7 +9,7 @@ import { randPastDate } from './past-date';
 import { randFutureDate } from './future-date';
 import { randPersonTitle } from './person-title';
 
-export interface CreditCardOptions extends FakeOptions {
+interface CreditCardOptions extends FakeOptions {
   fullName?: string;
   brand?: Brand;
 }

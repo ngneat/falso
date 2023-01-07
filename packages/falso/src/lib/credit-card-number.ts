@@ -1,8 +1,8 @@
 import { fake, FakeOptions, getRandomInRange, randElement } from './core/core';
-import { rand } from './rand';
 import { data } from './credit-card-number.json';
+import { randCreditCardBrand } from './credit-card-brand';
 
-export interface CreditCardNumberOptions extends FakeOptions {
+interface CreditCardNumberOptions extends FakeOptions {
   brand?: Brand;
 }
 
@@ -41,7 +41,7 @@ export type Brand =
 export function randCreditCardNumber<
   Options extends CreditCardNumberOptions = never
 >(options?: Options) {
-  const brand: Brand | string = options?.brand ?? rand(Object.keys(data));
+  const brand = options?.brand ?? randCreditCardBrand();
 
   const formats = data.find((card) => card.brand === brand)?.formats;
   const fallBackFormat = ['#### #### #### ####'];

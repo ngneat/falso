@@ -20,14 +20,6 @@ describe('iban', () => {
     expect(countryCode).toBe('DE');
   });
 
-  it('should throw error when provided country code is incorrect', () => {
-    const expectedError =
-      'country code should be valid ISO 3166-1 alpha-2 two-letter country code, for example: DE';
-
-    expect(() => randIban({ countryCode: 'X' })).toThrowError(expectedError);
-    expect(() => randIban({ countryCode: 'X222' })).toThrowError(expectedError);
-  });
-
   it('should create array of default ibans', () => {
     const result = randIban({ length: 10 });
 

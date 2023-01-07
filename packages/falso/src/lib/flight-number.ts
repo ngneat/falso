@@ -1,6 +1,6 @@
 import { fake, FakeOptions, getRandomInRange } from './core/core';
 import { rand } from './rand';
-import * as airlines from './airline.json';
+import { data } from './airline.json';
 
 export type Airline =
   | 'RyanAir'
@@ -78,7 +78,7 @@ function generateStandardFlightNumber({
 export function randFlightNumber<Options extends FlightNumberOptions = never>(
   options?: Options
 ) {
-  const airline = options?.airline ?? (rand(airlines.data) as Airline);
+  const airline = options?.airline ?? (rand(data) as Airline);
 
   const factory: () => string = () => {
     if (flightNumberInfo[airline]) {
