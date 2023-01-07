@@ -2,6 +2,26 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [6.4.0](https://github.com/ngneat/falso/compare/falso-6.3.2...falso-6.4.0) (2023-01-07)
+
+### Bug Fixes
+
+- 🐞 export randAnimal ([7e3f13a](https://github.com/ngneat/falso/commit/7e3f13a8ff089f5cc9a9a1e4bda674e0953a2471))
+- add fraction to getRandomInRange ([1cec014](https://github.com/ngneat/falso/commit/1cec0149afd07007b048b3269c23b3518017bb4e))
+- add UTs ([74fb213](https://github.com/ngneat/falso/commit/74fb21344537159a064baac401650eedcd7a5a24))
+- clean data ([15bf9de](https://github.com/ngneat/falso/commit/15bf9de0b61e38aca3cca86b1b49109d7162e5cb))
+
+### Features
+
+- accessories ([e3bd3c5](https://github.com/ngneat/falso/commit/e3bd3c5e224eac0cc168b84f6d6437b8d5e39465))
+- add animals ([c4eec49](https://github.com/ngneat/falso/commit/c4eec493a19eedc03d0bcebe132436200a46a673))
+- add randChangeBoolean ([3603760](https://github.com/ngneat/falso/commit/360376043f73900ec563cc5d90bbbec3123b2acf))
+- airlines ([4cb0ec6](https://github.com/ngneat/falso/commit/4cb0ec6b9a0f357f710a61f6beb4fc46f29999a5))
+- i18n birds in german ([2a89c15](https://github.com/ngneat/falso/commit/2a89c1594b13204790693e5f0c5e18f859b4332e))
+- **i18n-DE:** city ([6308b76](https://github.com/ngneat/falso/commit/6308b767fd37559306793ac8ae08d1494a75804e))
+- **i18n-DE:** city ([4f5ae42](https://github.com/ngneat/falso/commit/4f5ae4207e31f3dfd9811459396e9f194b75acc1))
+- **i18n-DE:** state and state-abbr ([7c11661](https://github.com/ngneat/falso/commit/7c11661c4b572812ddb57ea5771c8fd91abc210f))
+
 ## [6.3.2](https://github-personal/ngneat/falso/compare/falso-6.3.1...falso-6.3.2) (2022-12-15)
 
 ### Bug Fixes
