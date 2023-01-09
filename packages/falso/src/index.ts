@@ -6,6 +6,7 @@ export { randAlphaNumeric } from './lib/alpha-numeric';
 export { randAmericanFootballTeam } from './lib/american-football-team';
 export { randAmount } from './lib/amount';
 export { randAnimalType } from './lib/animal-type';
+export { randAnimal } from './lib/animal';
 export { randArn } from './lib/arn';
 export { randAvatar } from './lib/avatar';
 export { randAwsRegion } from './lib/aws-region';
