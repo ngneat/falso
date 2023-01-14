@@ -1,4 +1,4 @@
-import { randBook } from '../lib/book';
+import { randBook } from '../lib/book/book';
 
 describe('book', () => {
   it('should retrieve a book', () => {

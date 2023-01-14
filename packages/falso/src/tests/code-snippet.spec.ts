@@ -1,4 +1,7 @@
-import { CODE_SNIPPET_LANGUAGES, randCodeSnippet } from '../lib/code-snippet';
+import {
+  CODE_SNIPPET_LANGUAGES,
+  randCodeSnippet,
+} from '../lib/code-snippet/code-snippet';
 
 describe('code-snippet', () => {
   it('should create one code snippet', () => {

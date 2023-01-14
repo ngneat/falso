@@ -1,4 +1,4 @@
-import { randBrand } from '../lib/brand';
+import { randBrand } from '../lib/brand/brand';
 
 describe('brand', () => {
   it('should create one brand', () => {

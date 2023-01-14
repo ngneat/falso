@@ -1,4 +1,4 @@
-import { randBrowser } from '../lib/browser';
+import { randBrowser } from '../lib/browser/browser';
 
 describe('browser', () => {
   it('should create one browser', () => {

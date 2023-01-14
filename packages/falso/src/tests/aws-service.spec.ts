@@ -1,4 +1,4 @@
-import { randAwsService } from '../lib/aws-service';
+import { randAwsService } from '../lib/aws-service/aws-service';
 
 describe('randAwsService', () => {
   it('should create a service', () => {

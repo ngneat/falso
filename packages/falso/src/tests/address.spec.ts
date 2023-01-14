@@ -1,7 +1,7 @@
 import * as randStreetAddressFunctions from '../lib/street-address';
 import * as randCityFunctions from '../lib/city';
-import * as randCountyFunctions from '../lib/county';
-import * as randCountryFunctions from '../lib/country';
+import * as randCountyFunctions from '../lib/county/county';
+import * as randCountryFunctions from '../lib/country/country';
 import * as randZipCodeFunctions from '../lib/zip-code';
 import { randAddress } from '../lib/address/address';
 
