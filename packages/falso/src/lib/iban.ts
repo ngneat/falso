@@ -1,5 +1,5 @@
 import { FakeOptions, fake } from './core/core';
-import { randCountryCode } from './country-code';
+import { randCountryCode } from './country-code/country-code';
 import { randNumber } from './number';
 import { randAlphaNumeric } from './alpha-numeric';
 

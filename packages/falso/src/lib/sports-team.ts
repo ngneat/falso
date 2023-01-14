@@ -1,6 +1,6 @@
-import { randAmericanFootballTeam } from './american-football-team';
-import { randBaseballTeam } from './baseball-team';
-import { randBasketballTeam } from './basketball-team';
+import { randAmericanFootballTeam } from './american-football-team/american-football-team';
+import { randBaseballTeam } from './baseball-team/baseball-team';
+import { randBasketballTeam } from './basketball-team/basketball-team';
 import { fake, FakeOptions, randElement } from './core/core';
 import { randFootballTeam } from './football-team';
 import { randIceHockeyTeam } from './ice-hockey-team';

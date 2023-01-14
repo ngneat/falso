@@ -1,5 +1,5 @@
 import { randAccount } from './account/account';
-import { randAwsRegion } from './aws-region';
+import { randAwsRegion } from './aws-region/aws-region';
 import { fake, FakeOptions } from './core/core';
 import { randDirectoryPath } from './directory-path';
 import { randFileName } from './file-name';
