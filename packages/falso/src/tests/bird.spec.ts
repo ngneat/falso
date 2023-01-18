@@ -7,6 +7,9 @@ import { data as deData } from '../../src/lib/i18n/de/bird.i18n.json';
 import { randBird as esRandBird } from '../../src/lib/i18n/es';
 import { data as esData } from '../../src/lib/i18n/es/bird.i18n.json';
 
+import { randBird as koRandBird } from '../../src/lib/i18n/ko';
+import { data as koData } from '../../src/lib/i18n/ko/bird.i18n.json';
+
 describe('randBird', () => {
   describe('EN', () => {
     it('should create one random bird', () => {
@@ -35,6 +38,16 @@ describe('randBird', () => {
       expect(randomBird).toBeTruthy();
       expect(typeof randomBird).toEqual('string');
       expect(esData).toEqual(expect.arrayContaining([randomBird]));
+    });
+  });
+
+  describe('KO', () => {
+    it('should create one random bird', () => {
+      const randomBird = koRandBird();
+
+      expect(randomBird).toBeTruthy();
+      expect(typeof randomBird).toEqual('string');
+      expect(koData).toEqual(expect.arrayContaining([randomBird]));
     });
   });
 });
