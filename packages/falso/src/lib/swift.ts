@@ -1,13 +1,15 @@
-import { FakeOptions, fake } from './core/core';
-import { randCountryCode } from './country-code';
+import { fake, FakeOptions } from './core/core';
+import { CountryCode, randCountryCode } from './country-code';
 import { randAlphaNumeric } from './alpha-numeric';
 import { randAlpha } from './alpha';
+import { AZ09 } from './core/types';
 
 export interface SwiftOptions extends FakeOptions {
+  // TODO limit this to 4 chars via typescript
   bankCode?: string; // [A-Z]{4}
-  countryCode?: string; // [A-Z]{2}
-  locationCode?: string; // [A-Z0-9]{2}
-  branchCode?: string; // [A-Z0-9]{3} optional
+  countryCode?: CountryCode; // [A-Z]{2}
+  locationCode?: `${AZ09}${AZ09}`; // [A-Z0-9]{2}
+  branchCode?: `${AZ09}${AZ09}${AZ09}`; // [A-Z0-9]{3} optional
   fillBranchCode?: boolean; // fill branchCode using XXX symbols
 }
 
@@ -52,24 +54,6 @@ export function randSwift<Options extends SwiftOptions = never>(
     throw new Error('bank code should be valid 4 letters. For example DEUT');
   }
 
-  if (options?.countryCode && options?.countryCode?.length !== 2) {
-    throw new Error(
-      'country code should be valid ISO 3166-1 alpha-2 two-letter country code, for example: DE'
-    );
-  }
-
-  if (options?.locationCode && options?.locationCode?.length !== 2) {
-    throw new Error(
-      'location code should be valid 2 characters, like FF or MM'
-    );
-  }
-
-  if (options?.branchCode && options?.branchCode?.length !== 3) {
-    throw new Error(
-      'branch code should be valid 3 alpha numberic characters, like XXX or 250'
-    );
-  }
-
   const factory: () => string = () => {
     const bankCode: string =
       options?.bankCode ??
@@ -77,7 +61,7 @@ export function randSwift<Options extends SwiftOptions = never>(
         return randAlpha();
       });
 
-    const countryCode: string = options?.countryCode ?? randCountryCode();
+    const countryCode = options?.countryCode ?? randCountryCode();
 
     const locationCode: string =
       options?.locationCode ??

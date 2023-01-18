@@ -22,13 +22,17 @@ import { randIceHockeyTeam } from './ice-hockey-team';
 export function randSportsTeam<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  const teamNameFunctions = [
-    randAmericanFootballTeam(),
-    randBaseballTeam(),
-    randBasketballTeam(),
-    randFootballTeam(),
-    randIceHockeyTeam(),
-  ];
+  const factory = () => {
+    const teamNameFunctions = [
+      randAmericanFootballTeam,
+      randBaseballTeam,
+      randBasketballTeam,
+      randFootballTeam,
+      randIceHockeyTeam,
+    ];
 
-  return fake(() => randElement(teamNameFunctions), options);
+    return randElement(teamNameFunctions)();
+  };
+
+  return fake(factory, options);
 }

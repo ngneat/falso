@@ -1,5 +1,6 @@
 import { fake, FakeOptions, randElement } from './core/core';
 import { data } from './month.json';
+
 export interface MonthOptions extends FakeOptions {
   abbreviation?: boolean;
 }

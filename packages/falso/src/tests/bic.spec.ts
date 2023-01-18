@@ -36,14 +36,6 @@ describe('bic', () => {
     expect(countryCode).toBe('DE');
   });
 
-  it('should throw error when provided country code is incorrect', () => {
-    const expectedError =
-      'country code should be valid ISO 3166-1 alpha-2 two-letter country code, for example: DE';
-
-    expect(() => randBic({ countryCode: 'X' })).toThrowError(expectedError);
-    expect(() => randBic({ countryCode: 'X222' })).toThrowError(expectedError);
-  });
-
   it('should create bic with provided location code', () => {
     const result = randBic({ locationCode: 'FF' });
 
@@ -54,14 +46,6 @@ describe('bic', () => {
     expect(locationCode).toBe('FF');
   });
 
-  it('should throw error when provided location code is incorrect', () => {
-    const expectedError =
-      'location code should be valid 2 characters, like FF or MM';
-
-    expect(() => randBic({ locationCode: 'X' })).toThrowError(expectedError);
-    expect(() => randBic({ locationCode: 'X22' })).toThrowError(expectedError);
-  });
-
   it('should create bic with provided branch code', () => {
     const result = randBic({ branchCode: '120' });
 
@@ -70,14 +54,6 @@ describe('bic', () => {
     expect(result.length).toBe(11);
     expect(typeof result).toBe('string');
     expect(branchCode).toBe('120');
-  });
-
-  it('should throw error when provided branch code is incorrect', () => {
-    const expectedError =
-      'branch code should be valid 3 alpha numberic characters, like XXX or 250';
-
-    expect(() => randBic({ branchCode: 'X2' })).toThrowError(expectedError);
-    expect(() => randBic({ branchCode: 'X222' })).toThrowError(expectedError);
   });
 
   it('should create bic with headquarters branch code', () => {

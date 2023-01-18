@@ -23,11 +23,10 @@ import { data } from './superhero.json';
 export function randSuperheroName<Options extends SuperheroOptions = never>(
   options?: Options
 ) {
+  const heroes: Superhero[] = options?.company
+    ? data.filter(({ company }) => company === options.company)
+    : data;
   const factory: () => string = () => {
-    const heroes: Superhero[] = options?.company
-      ? data.filter(({ company }) => company === options.company)
-      : data;
-
     return randElement(heroes).alterEgo;
   };
 

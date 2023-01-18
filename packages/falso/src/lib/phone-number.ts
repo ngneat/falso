@@ -1,6 +1,11 @@
 import { fake, FakeOptions, randElement } from './core/core';
 import { randMask } from './mask';
 import { data } from './phone-number.json';
+import { randCountryCode } from './country-code';
+
+interface PhoneNumberOptions extends FakeOptions {
+  countryCode?: CountryCode;
+}
 
 type CountryCode =
   | 'AC'
@@ -253,26 +258,19 @@ type CountryCode =
  * randPhoneNumber({ length: 10 })
  *
  */
-export function randPhoneNumber<
-  Options extends FakeOptions & {
-    countryCode?: CountryCode;
-  } = never
->(options?: Options) {
-  let formats: string[];
-
-  if (options?.countryCode) {
-    formats =
-      data.find((country) => {
-        return country.countryCode.includes(options.countryCode!);
-      })?.formats || [];
-  } else {
-    formats = data.map(({ formats }) => formats).flat();
-  }
+export function randPhoneNumber<Options extends PhoneNumberOptions = never>(
+  options?: Options
+) {
+  const countryCode = options?.countryCode ?? randCountryCode();
+  const formats =
+    data.find((country) => country.countryCode.includes(countryCode))
+      ?.formats || data.map(({ formats }) => formats).flat();
 
   const phoneNumber = Array.from({ length: options?.length || 1 }, () =>
     randMask({
       mask: randElement(formats),
     })
   );
+
   return fake(phoneNumber, options);
 }

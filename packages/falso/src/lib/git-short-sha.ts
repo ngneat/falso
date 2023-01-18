@@ -1,5 +1,5 @@
-import { FakeOptions, fake } from './core/core';
-import { randHexaDecimal } from './hexa-decimal';
+import { fake, FakeOptions } from './core/core';
+import { gitShaGenerator } from './git-commit-sha';
 
 const commitShortShaLen = 7;
 
@@ -20,13 +20,5 @@ const commitShortShaLen = 7;
 export function randGitShortSha<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(() => {
-    let sha = '';
-
-    for (let i = 0; i < commitShortShaLen; i++) {
-      sha += randHexaDecimal();
-    }
-
-    return sha;
-  }, options);
+  return fake(gitShaGenerator(commitShortShaLen), options);
 }
