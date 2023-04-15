@@ -28,7 +28,6 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 
 🤓 Learn about it on the [docs site](https://ngneat.github.io/falso/) <br>
 🔥 Run it on [Stackblitz](https://stackblitz.com/edit/typescript-pjao1u?file=index.ts) <br>
-🎁 Generate data using [Fako](https://fako.microkit.co/)
 
 ## Installation
 
