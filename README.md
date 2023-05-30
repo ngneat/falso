@@ -27,7 +27,10 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 ✅ &nbsp;Single and Array Result
 
 🤓 Learn about it on the [docs site](https://ngneat.github.io/falso/) <br>
-🔥 Run it on [Stackblitz](https://stackblitz.com/edit/typescript-pjao1u?file=index.ts) <br>
+
+## StackBlitz
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/edit/typescript-pj5epp?file=index.ts)
 
 ## Installation
 
