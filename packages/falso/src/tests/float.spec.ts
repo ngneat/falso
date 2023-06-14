@@ -39,4 +39,8 @@ describe('float', () => {
     expect(typeof num).toBe('number');
     expect(String(num)).toMatch(/^\d+\.\d?\d$/);
   });
+
+  it('should not explode if min and max are equal', () => {
+    expect(randFloat({ min: 1, max: 1 })).toBe(1);
+  });
 });
