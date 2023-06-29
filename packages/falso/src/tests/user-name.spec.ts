@@ -30,4 +30,34 @@ describe('username', () => {
       expect(result).toContain(lastName);
     });
   });
+
+  describe('withAccents is passed', () => {
+    let withAccents: boolean;
+    const specialCharRegex =
+      /[āĀàÀáÁâÂãÃäÄÅåæÆçÇčČćĆðÐēĒèÈéÉêÊĚěëËėĖìÌíÍîÎïÏłŁñÑńŃōŌøØòÒóÓôÔõÕöÖőŐœŒřŘšŠßÞþùÙúÚûÛūŪüÜýÝÿŸžŽżŻ]/;
+
+    describe('withAccents is true', () => {
+      beforeEach(() => {
+        withAccents = true;
+      });
+
+      it('should return a string containing accents', () => {
+        const result = randUserName({ withAccents });
+
+        expect(result).toMatch(specialCharRegex);
+      });
+    });
+
+    describe('withAccents is false', () => {
+      beforeEach(() => {
+        withAccents = false;
+      });
+
+      it('should not return a string containing accents', () => {
+        const result = randUserName({ withAccents });
+
+        expect(result).not.toMatch(specialCharRegex);
+      });
+    });
+  });
 });
