@@ -7,6 +7,7 @@ import { randLastName } from './last-name';
 export interface UserNameOptions extends FakeOptions {
   firstName?: string;
   lastName?: string;
+  withAccents?: boolean;
 }
 
 /**
@@ -30,13 +31,21 @@ export interface UserNameOptions extends FakeOptions {
  *
  * randUserName({ lastName: 'Smee' })
  *
+ * @example
+ *
+ * randUserName({ withAccents: false }) // return username without special symbols like â, î or ô and etc
+ *
  */
 export function randUserName<Options extends UserNameOptions = never>(
   options?: Options
 ) {
+  const nameOptions = {
+    withAccents: options?.withAccents,
+  };
+
   return fake(() => {
-    const firstName = options?.firstName ?? randFirstName();
-    const lastName = options?.lastName ?? randLastName();
+    const firstName = options?.firstName ?? randFirstName(nameOptions);
+    const lastName = options?.lastName ?? randLastName(nameOptions);
     let userName = `${firstName} ${lastName}`.replace(' ', fake(['.', '_']));
 
     if (randBoolean()) {
