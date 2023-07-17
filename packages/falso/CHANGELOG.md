@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [7.0.0](https://github.com/ngneat/falso/compare/falso-6.4.0...falso-7.0.0) (2023-07-17)
+
+### Bug Fixes
+
+- 🐞 change random image service ([dbcaf14](https://github.com/ngneat/falso/commit/dbcaf144e62ec0f43dfa233d1b8f979870f087f4))
+- 🐞 Fix randFloat infinite recursion and logical issue ([df84cfe](https://github.com/ngneat/falso/commit/df84cfefe2b36f76876206dce462e05685797411)), closes [#354](https://github.com/ngneat/falso/issues/354)
+
+### Features
+
+- 🔥 add withAccents option to randUserName() ([fc87c30](https://github.com/ngneat/falso/commit/fc87c305f1c047bbd04bf75e595d5dc4c6a90534))
+- add i18n birds in korean ([cdd9937](https://github.com/ngneat/falso/commit/cdd9937266229f5ac24180bafc6de6db47490759))
+
+### BREAKING CHANGES
+
+- 🧨 "category" option will not work anymore
+
 # [6.4.0](https://github.com/ngneat/falso/compare/falso-6.3.2...falso-6.4.0) (2023-01-07)
 
 ### Bug Fixes
