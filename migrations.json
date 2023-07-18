@@ -1,220 +1,92 @@
 {
   "migrations": [
     {
+      "version": "15.7.0-beta.0",
+      "description": "Split global configuration files into individual project.json files. This migration has been added automatically to the beginning of your migration set to retroactively make them work with the new version of Nx.",
       "cli": "nx",
-      "version": "14.2.0-beta.0",
-      "description": "Add JSON Schema to Nx configuration files",
-      "implementation": "./src/migrations/update-14-2-0/add-json-schema",
+      "implementation": "./src/migrations/update-15-7-0/split-configuration-into-project-json-files",
+      "package": "@nrwl/workspace",
+      "name": "15-7-0-split-configuration-into-project-json-files"
+    },
+    {
+      "cli": "nx",
+      "version": "15.8.2-beta.0",
+      "description": "Updates the nx wrapper.",
+      "implementation": "./src/migrations/update-15-8-2/update-nxw",
       "package": "nx",
-      "name": "14-2-0-add-json-schema"
+      "name": "15.8.2-update-nx-wrapper"
     },
     {
       "cli": "nx",
-      "version": "14.2.0-beta.0",
-      "description": "Remove default collection from configuration to switch to prompts for collection",
-      "implementation": "./src/migrations/update-14-2-0/remove-default-collection",
-      "package": "nx",
-      "name": "14-2-0-remove-default-collection"
-    },
-    {
-      "cli": "nx",
-      "version": "14.2.0-beta.5",
-      "description": "Replace all ./ and ../ in outputs with absolute paths",
-      "implementation": "./src/migrations/update-14-2-0/replace-all-relative-outputs-with-absolute",
-      "package": "nx",
-      "name": "14-2-0-replace-relative-outputs-with-absolute"
-    },
-    {
-      "cli": "nx",
-      "version": "14.3.4-beta.1",
-      "description": "Replace targetDependencies with targetDefaults",
-      "implementation": "./src/migrations/update-14-3-4/create-target-defaults",
-      "package": "nx",
-      "name": "14.3.4-create-target-defaults"
-    },
-    {
-      "cli": "nx",
-      "version": "15.0.0-beta.1",
-      "description": "Replace implicitDependencies with namedInputs + target inputs",
-      "implementation": "./src/migrations/update-15-0-0/migrate-to-inputs",
-      "package": "nx",
-      "name": "15.0.0-migrate-to-inputs"
-    },
-    {
-      "cli": "nx",
-      "version": "15.0.0-beta.1",
-      "description": "Prefix outputs with {workspaceRoot}/{projectRoot} if needed",
-      "implementation": "./src/migrations/update-15-0-0/prefix-outputs",
-      "package": "nx",
-      "name": "15.0.0-prefix-outputs"
-    },
-    {
-      "cli": "nx",
-      "version": "15.0.12-beta.1",
-      "description": "Set project names in project.json files",
-      "implementation": "./src/migrations/update-15-1-0/set-project-names",
-      "package": "nx",
-      "name": "15.1.0-set-project-names"
-    },
-    {
-      "cli": "nx",
-      "version": "14.2.0-beta.0",
-      "description": "Adjusts calls to createTreeWithEmptyWorkspace to reflect new API",
-      "factory": "./src/migrations/update-14-2-0/split-create-empty-tree",
-      "package": "@nrwl/devkit",
-      "name": "split-create-tree"
-    },
-    {
-      "version": "14.1.5-beta.0",
-      "cli": "nx",
-      "description": "Update to export default in jest config and revert jest.preset.ts to jest.preset.js",
-      "factory": "./src/migrations/update-14-1-5/update-exports-jest-config",
-      "package": "@nrwl/jest",
-      "name": "update-to-export-default"
-    },
-    {
-      "version": "14.5.5-beta.0",
-      "cli": "nx",
-      "description": "Exclude jest.config.ts from tsconfig where missing.",
-      "factory": "./src/migrations/update-14-0-0/update-jest-config-ext",
-      "package": "@nrwl/jest",
-      "name": "exclude-jest-config-from-ts-config"
-    },
-    {
-      "version": "14.6.0-beta.0",
-      "cli": "nx",
-      "description": "Update jest configs to support jest 28 changes (https://jestjs.io/docs/upgrading-to-jest28#configuration-options)",
-      "factory": "./src/migrations/update-14-6-0/update-configs-jest-28",
-      "package": "@nrwl/jest",
-      "name": "update-configs-jest-28"
-    },
-    {
-      "version": "14.6.0-beta.0",
-      "cli": "nx",
-      "description": "Update jest test files to support jest 28 changes (https://jestjs.io/docs/upgrading-to-jest28)",
-      "factory": "./src/migrations/update-14-6-0/update-tests-jest-28",
-      "package": "@nrwl/jest",
-      "name": "update-tests-jest-28"
-    },
-    {
-      "version": "15.0.0-beta.0",
-      "cli": "nx",
-      "description": "Stop hashing jest spec files and config files for build targets and dependent tasks",
-      "factory": "./src/migrations/update-15-0-0/add-jest-inputs",
-      "package": "@nrwl/jest",
-      "name": "add-jest-inputs"
-    },
-    {
-      "cli": "nx",
-      "version": "14.1.5-beta.0",
-      "description": "Rename option swcrcPath to swcrc, and resolve relative to workspace root",
-      "factory": "./src/migrations/update-14-1-5/update-swcrc-path",
+      "version": "15.8.0-beta.0",
+      "description": "Rename .lib.swcrc to .swcrc for better SWC support throughout the workspace",
+      "factory": "./src/migrations/update-15-8-0/rename-swcrc-config",
       "package": "@nrwl/js",
-      "name": "update-swcrc-path"
+      "name": "rename-swcrc-config"
     },
     {
+      "version": "15.7.0-beta.0",
+      "description": "Split global configuration files (e.g., workspace.json) into individual project.json files.",
       "cli": "nx",
-      "version": "14.1.9-beta.0",
-      "description": "Adds @swc/core and @swc-node as a dev dep if you are using them",
-      "factory": "./src/migrations/update-14-1-9/add-swc-deps-if-needed",
-      "package": "@nrwl/linter",
-      "name": "add-swc-deps"
-    },
-    {
-      "cli": "nx",
-      "version": "14.2.3-beta.0",
-      "description": "Adds @swc/core and @swc-node as a dev dep if you are using them (repeated due to prior mistake)",
-      "factory": "./src/migrations/update-14-1-9/add-swc-deps-if-needed",
-      "package": "@nrwl/linter",
-      "name": "add-swc-deps-again"
-    },
-    {
-      "cli": "nx",
-      "version": "14.4.4",
-      "description": "Adds @typescript-eslint/utils as a dev dep",
-      "factory": "./src/migrations/update-14-4-4/experimental-to-utils-deps",
-      "package": "@nrwl/linter",
-      "name": "experimental-to-utils-deps"
-    },
-    {
-      "cli": "nx",
-      "version": "14.4.4",
-      "description": "Switch from  @typescript-eslint/experimental-utils to @typescript-eslint/utils in all rules and rules.spec files",
-      "factory": "./src/migrations/update-14-4-4/experimental-to-utils-rules",
-      "package": "@nrwl/linter",
-      "name": "experimental-to-utils-rules"
-    },
-    {
-      "cli": "nx",
-      "version": "15.0.0-beta.0",
-      "description": "Stop hashing eslint config files for build targets and dependent tasks",
-      "factory": "./src/migrations/update-15-0-0/add-eslint-inputs",
-      "package": "@nrwl/linter",
-      "name": "add-eslint-inputs"
-    },
-    {
-      "cli": "nx",
-      "version": "14.1.9-beta.0",
-      "description": "Adds @swc/core and @swc-node as a dev dep if you are using them",
-      "factory": "./src/migrations/update-14-1-9/add-swc-deps-if-needed",
-      "package": "@nrwl/nx-plugin",
-      "name": "add-swc-deps"
-    },
-    {
-      "cli": "nx",
-      "version": "14.2.3-beta.0",
-      "description": "Adds @swc/core and @swc-node as a dev dep if you are using them (repeated due to bad version on earlier migration)",
-      "factory": "./src/migrations/update-14-1-9/add-swc-deps-if-needed",
-      "package": "@nrwl/nx-plugin",
-      "name": "add-swc-deps-again"
-    },
-    {
-      "cli": "nx",
-      "version": "15.0.0-beta.0",
-      "description": "Migrates executor schema files to v2",
-      "factory": "./src/migrations/update-15-0-0/specify-output-capture",
-      "package": "@nrwl/nx-plugin",
-      "name": "update-15-0-0"
-    },
-    {
-      "cli": "nx",
-      "version": "14.7.6-beta.1",
-      "description": "Update usages of webpack executors to @nrwl/webpack",
-      "factory": "./src/migrations/update-14-7-6/update-webpack-executor",
-      "package": "@nrwl/web",
-      "name": "update-webpack-executor"
-    },
-    {
-      "cli": "nx",
-      "version": "15.0.0-beta.0",
-      "description": "Adds babel.config.json to the hash of all tasks",
-      "factory": "./src/migrations/update-15-0-0/add-babel-inputs",
-      "package": "@nrwl/web",
-      "name": "add-babel-inputs"
-    },
-    {
-      "cli": "nx",
-      "version": "15.0.0-beta.1",
-      "description": "Update usages of rollup executors to @nrwl/rollup",
-      "factory": "./src/migrations/update-15-0-0/update-rollup-executor",
-      "package": "@nrwl/web",
-      "name": "update-rollup-executor"
-    },
-    {
-      "version": "14.2.0",
-      "description": "Explicitly enable sourceAnalysis for all workspaces extending from npm.json or core.json (this was default behavior prior to 14.2)",
-      "cli": "nx",
-      "implementation": "./src/migrations/update-14-2-0/enable-source-analysis",
+      "implementation": "./src/migrations/update-15-7-0/split-configuration-into-project-json-files",
       "package": "@nrwl/workspace",
-      "name": "14-2-0-enable-source-analysis"
+      "name": "15-7-0-split-configuration-into-project-json-files"
     },
     {
-      "version": "14.8.0-beta.0",
-      "description": "Migrates from @nrwl/workspace:run-commands to nx:run-commands",
+      "version": "15.8.0-beta.0",
       "cli": "nx",
-      "implementation": "./src/migrations/update-14-8-0/change-run-commands-executor",
-      "package": "@nrwl/workspace",
-      "name": "14-8-0-change-run-commands-executor"
+      "description": "Update jest configs to support jest 29 changes (https://jestjs.io/docs/upgrading-to-jest29)",
+      "factory": "./src/migrations/update-15-8-0/update-configs-jest-29",
+      "package": "@nrwl/jest",
+      "name": "update-configs-jest-29"
+    },
+    {
+      "version": "15.8.0-beta.0",
+      "cli": "nx",
+      "description": "Update jest test files to support jest 29 changes (https://jestjs.io/docs/upgrading-to-jest29)",
+      "factory": "./src/migrations/update-15-8-0/update-tests-jest-29",
+      "package": "@nrwl/jest",
+      "name": "update-tests-jest-29"
+    },
+    {
+      "cli": "nx",
+      "version": "15.5.4-beta.0",
+      "description": "Update `@nrwl/web/babel` preset to `@nrwl/js/babel` for projects that have a .babelrc file.",
+      "factory": "./src/migrations/update-15-5-4/update-babel-preset",
+      "package": "@nrwl/web",
+      "name": "update-babel-preset"
+    },
+    {
+      "cli": "nx",
+      "version": "15.9.1",
+      "description": "Add @nrwl/linter, @nrwl/cypress, @nrwl/jest, @nrwl/rollup if they are used",
+      "factory": "./src/migrations/update-15-9-1/add-dropped-dependencies",
+      "package": "@nrwl/web",
+      "name": "add-dropped-dependencies"
+    },
+    {
+      "cli": "nx",
+      "version": "15.7.1-beta.0",
+      "description": "Add node_modules to root eslint ignore",
+      "factory": "./src/migrations/update-15-7-1/add-eslint-ignore",
+      "package": "@nrwl/linter",
+      "name": "add-eslint-ignore"
+    },
+    {
+      "version": "15.9.0-beta.0",
+      "cli": "nx",
+      "description": "Update nx plugin jest configs to support jest 29 changes (https://jestjs.io/docs/upgrading-to-jest29)",
+      "factory": "./src/migrations/update-15-9-0/jest-29-configs",
+      "package": "@nrwl/nx-plugin",
+      "name": "update-configs-jest-29"
+    },
+    {
+      "version": "15.9.0-beta.0",
+      "cli": "nx",
+      "description": "Update nx plugin jest test files to support jest 29 changes (https://jestjs.io/docs/upgrading-to-jest29)",
+      "factory": "./src/migrations/update-15-9-0/jest-29-tests",
+      "package": "@nrwl/nx-plugin",
+      "name": "update-tests-jest-29"
     }
   ]
 }

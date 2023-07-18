@@ -1,7 +1,0 @@
-{
-  "version": 2,
-  "projects": {
-    "falso": "packages/falso"
-  },
-  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
-}
