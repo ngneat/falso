@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nrwl/devkit';
+import { ExecutorContext } from '@nx/devkit';
 import { Project, QuoteKind, ScriptTarget } from 'ts-morph';
 import { sync } from 'glob';
 import { readFileSync, writeFileSync } from 'fs';

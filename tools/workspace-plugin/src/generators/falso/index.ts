@@ -1,4 +1,4 @@
-import { Tree, getProjects, formatFiles, names } from '@nrwl/devkit';
+import { Tree, getProjects, formatFiles, names } from '@nx/devkit';
 import { join } from 'path';
 import { appendFile } from 'fs/promises';
 

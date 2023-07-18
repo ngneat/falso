@@ -133,7 +133,7 @@ var __generator =
     }
   };
 exports.__esModule = true;
-var devkit_1 = require('@nrwl/devkit');
+var devkit_1 = require('@nx/devkit');
 var ts_morph_1 = require('ts-morph');
 var glob_1 = require('glob');
 var path_1 = require('path');

@@ -1,4 +1,4 @@
-import { ExecutorContext, runExecutor } from '@nrwl/devkit';
+import { ExecutorContext, runExecutor } from '@nx/devkit';
 import { sync } from 'glob';
 import { renameSync, rmSync, writeFileSync } from 'fs';
 import * as path from 'path';
