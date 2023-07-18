@@ -62,7 +62,7 @@ jsdoc2md.getTemplateData({
     fs.writeFileSync(path.join(docsOutputPath, `${category.toLowerCase()}.mdx`), md, { encoding: 'utf8' });
   }
 
-  const [falsoESMPath] = glob.sync('dist/packages/falso/index.esm.js');
+  const [falsoESMPath] = glob.sync('dist/packages/falso/index.js');
   minify(fs.readFileSync(falsoESMPath, "utf8")).then((minified) => {
     fs.writeFileSync(path.join('docs', 'src', 'theme', 'ReactLiveScope', 'falso.min.js'), minified.code);
   });
