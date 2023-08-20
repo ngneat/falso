@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [7.1.0](https://github.com/ngneat/falso/compare/falso-7.0.1...falso-7.1.0) (2023-08-20)
+
+### Features
+
+- **size:** allow to specify string length of random values ([aa72a6e](https://github.com/ngneat/falso/commit/aa72a6ed758a569c6c080ae6fc249da751b20bb3))
+
 ## [7.0.1](https://github.com/ngneat/falso/compare/falso-7.0.0...falso-7.0.1) (2023-07-18)
 
 # [7.0.0](https://github.com/ngneat/falso/compare/falso-6.4.0...falso-7.0.0) (2023-07-17)
