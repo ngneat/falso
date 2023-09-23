@@ -1,7 +1,7 @@
 import { ExecutorContext, runExecutor } from '@nx/devkit';
-import { sync } from 'glob';
-import { renameSync, rmSync, writeFileSync } from 'fs';
-import * as path from 'path';
+import { sync as globSync } from 'glob';
+import { renameSync, rmSync, writeFileSync } from 'node:fs';
+import * as path from 'node:path';
 
 interface BuildLocalesOptions {
   localesOutputPath: string;
@@ -73,7 +73,7 @@ function createLocaleBuildConfigs({
   localesSourcePath,
   falsoSourcePath,
 }: BuildLocalesOptions): LocaleBuildConfig[] {
-  return sync(
+  return globSync(
     path.join(falsoSourcePath, localesSourcePath, `*`, `index.ts`)
   ).map((entryFile: string) => {
     const language = path.dirname(entryFile).split(path.sep).pop();
@@ -168,12 +168,23 @@ function tearDownLocaleBuild(buildConfig: LocaleBuildConfig): void {
  * @param buildConfig
  */
 function cleanupBuildArtifacts(buildConfig: LocaleBuildConfig): void {
-  sync(`${buildConfig.outputPath}/index_*`).forEach((indexFilePath) =>
-    renameSync(indexFilePath, indexFilePath.replace(/_[a-z]+./g, '.'))
+  [
+    ...globSync(`${buildConfig.outputPath}/index_*`),
+    ...globSync(`${buildConfig.outputPath}/src/index_*`),
+  ].forEach((indexFilePath) =>
+    renameSync(indexFilePath, indexFilePath.replace(/_[a-z]+\./g, '.'))
   );
 
   writeFileSync(
     `${buildConfig.outputPath}/package.json`,
-    `{"main": "./index.cjs","module": "./index.esm.js","typings": "./index.d.ts"}`
+    JSON.stringify(
+      {
+        main: './index.cjs',
+        module: './index.js',
+        typings: './src/index.d.ts',
+      },
+      null,
+      2
+    )
   );
 }
