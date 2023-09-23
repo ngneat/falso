@@ -4,14 +4,26 @@ const path = require('path');
 const glob = require('glob');
 const { minify } = require("terser");
 
+function imageModifier(generator) {
+  // we chain the query param to trigger refetching of the image.
+  return '<img src={`${'+generator+'()}?${Math.random()}}`} alt="Random image"/>';
+}
+
+function stringModifier(generator) {
+  return `${generator}().toString()`;
+}
+
 const functionModifiers = {
+  randBoolean: stringModifier,
+  randFutureDate: stringModifier,
+  randPastDate: stringModifier,
+  randRecentDate: stringModifier,
+  randSoonDate: stringModifier,
+  randAvatar: imageModifier,
+  randImg: imageModifier,
+  randChanceBoolean: 'randChanceBoolean({chanceTrue: 0.78}).toString()',
   rand: 'rand([1,2,3])',
-  randBoolean: 'randBoolean().toString()',
-  randFutureDate: 'randFutureDate().toString()',
   randBetweenDate: 'randBetweenDate({ from: new Date(\'10/07/2020\'), to: new Date(\'10/07/2025\') }).toString()',
-  randPastDate: 'randPastDate().toString()',
-  randRecentDate: 'randRecentDate().toString()',
-  randSoonDate: 'randSoonDate().toString()',
   randTextRange: 'randTextRange({ min: 10, max: 100 })',
 }
 
@@ -88,7 +100,11 @@ function getDocsSection({ name, description, examples }) {
   let section = `### \`\`\`${name}\`\`\`\n\n${description}\n\n\`\`\`ts\nimport { ${name} } from '@ngneat/falso';\n\n${examples.join('\n')}\n\`\`\`\n\n`;
 
   if (!skipLivePreview.includes(name)) {
-    const funcCall = functionModifiers[name] ? functionModifiers[name] : `${name}()`;
+    let funcCall = `${name}()`;
+    const modifier = functionModifiers[name];
+    if (modifier) {
+      funcCall = typeof modifier === 'function' ? modifier(name) : modifier;
+    }
     const source = `() => ${funcCall}`;
 
     section += `\`\`\`jsx live\nfunction Demo(props) {\n  return <Preview source={${source}}/>;\n}\n\`\`\`\n\n`;

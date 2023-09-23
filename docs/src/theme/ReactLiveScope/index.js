@@ -58,10 +58,14 @@ function Preview({source}) {
 
       return (<>
         <ChangeDataBtn onClick={() => setData(source())}/>
-        {typeof data === 'object' ? <ReactJson style={reactJsonStyle} name={false} enableClipboard={false} src={data} /> : <div>{data}</div>}
+        {!React.isValidElement(data) && isObject(data) ? <ReactJson style={reactJsonStyle} name={false} enableClipboard={false} src={data} /> : <div>{data}</div>}
       </>);
     }}
   </BrowserOnly>;
+}
+
+function isObject(v) {
+  return typeof v === 'object';
 }
 
 // Add react-live imports you need here
