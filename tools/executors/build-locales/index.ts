@@ -174,6 +174,6 @@ function cleanupBuildArtifacts(buildConfig: LocaleBuildConfig): void {
 
   writeFileSync(
     `${buildConfig.outputPath}/package.json`,
-    `{"main": "./index.cjs.js","module": "./index.esm.js","typings": "./index.d.ts"}`
+    `{"main": "./index.cjs","module": "./index.esm.js","typings": "./index.d.ts"}`
   );
 }
