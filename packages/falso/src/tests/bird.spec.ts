@@ -10,6 +10,9 @@ import { data as esData } from '../../src/lib/i18n/es/bird.i18n.json';
 import { randBird as koRandBird } from '../../src/lib/i18n/ko';
 import { data as koData } from '../../src/lib/i18n/ko/bird.i18n.json';
 
+import { randBird as ptBrRandBird } from '../../src/lib/i18n/pt-br';
+import { data as ptBrData } from '../../src/lib/i18n/pt-br/bird.i18n.json';
+
 describe('randBird', () => {
   describe('EN', () => {
     it('should create one random bird', () => {
@@ -48,6 +51,16 @@ describe('randBird', () => {
       expect(randomBird).toBeTruthy();
       expect(typeof randomBird).toEqual('string');
       expect(koData).toEqual(expect.arrayContaining([randomBird]));
+    });
+  });
+
+  describe('PT-BR', () => {
+    it('should create one random bird', () => {
+      const randomBird = ptBrRandBird();
+
+      expect(randomBird).toBeTruthy();
+      expect(typeof randomBird).toEqual('string');
+      expect(ptBrData).toEqual(expect.arrayContaining([randomBird]));
     });
   });
 });
