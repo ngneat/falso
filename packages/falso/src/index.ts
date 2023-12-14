@@ -142,6 +142,7 @@ export { randRabbit } from './lib/rabbit';
 export { rand } from './lib/rand';
 export { random, seed } from './lib/random';
 export { randRecentDate } from './lib/recent-date';
+export { randResolution } from './lib/resolution';
 export { randRgb } from './lib/rgb';
 export { randRole } from './lib/role';
 export { randRoutingNumber } from './lib/routing-number';
