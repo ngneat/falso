@@ -33,8 +33,8 @@ export function randFirstName<Options extends NameOptions = never>(
   const data = options?.locale || localeDefault;
 
   const names: string[] = withAccents
-    ? data?.withAccents[gender]
-    : data?.withoutAccents[gender];
+    ? data.withAccents[gender]
+    : data.withoutAccents[gender];
 
   return fake(names, options);
 }
