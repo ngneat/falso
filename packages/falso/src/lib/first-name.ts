@@ -1,5 +1,5 @@
 import { fake } from './core/core';
-import { data } from './first-name.json';
+import { data as localeDefault } from './first-name.json';
 import { NameOptions } from './full-name';
 import { rand } from './rand';
 
@@ -30,14 +30,10 @@ export function randFirstName<Options extends NameOptions = never>(
 ) {
   const withAccents = options?.withAccents ?? false;
   const gender = options?.gender ?? rand(['male', 'female']);
-  const locale = options?.locale;
+  const data = options?.locale || localeDefault;
 
   const names: string[] = withAccents
-    ? locale
-      ? locale?.withAccents[gender]
-      : data.withAccents[gender]
-    : locale
-    ? locale?.withoutAccents[gender]
+    ? data.withAccents[gender]
     : data.withoutAccents[gender];
 
   return fake(names, options);
