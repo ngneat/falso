@@ -1,10 +1,14 @@
-import { fake } from '../../core/core';
+import { FakeOptions, fake } from '../../core/core';
 import { randFirstName } from '../../first-name';
-import { NameOptions } from '../../full-name';
 import { randLastName } from '../../last-name';
 
 import { data as localeFirstName } from './first-name.i18n.json';
 import { data as localeLastName } from './last-name.i18n.json';
+
+export interface NameOptions extends FakeOptions {
+  withAccents?: boolean;
+  gender?: 'male' | 'female';
+}
 
 /**
  * Generate a random full name.
