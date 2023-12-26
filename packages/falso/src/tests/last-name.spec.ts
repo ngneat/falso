@@ -1,8 +1,9 @@
 import { randLastName } from '../lib/last-name';
-import { NameOptions } from '../lib/full-name';
 import * as randBooleanFunctions from '../lib/boolean';
 
 import { data } from '../lib/last-name.json';
+
+import { randLastName as randLastNamePtBr } from '../lib/i18n/pt-br/last-name';
 import { data as locale_ptBR } from '../lib/i18n/pt-br/last-name.i18n.json';
 
 describe('lastName', () => {
@@ -114,29 +115,16 @@ describe('lastName', () => {
 
   describe('with provided locale PT-BR data', () => {
     const data = locale_ptBR;
-    let options: NameOptions;
-
-    beforeEach(() => {
-      options = {
-        locale: data,
-      };
-    });
 
     it('should return a lastName with at least 1 accented character', () => {
-      const result = randLastName({
-        ...options,
-        withAccents: true,
-      });
+      const result = randLastNamePtBr({ withAccents: true });
 
       expect(result.match(specialCharRegex)).toBeTruthy();
       expect(data.withAccents.includes(result)).toBe(true);
     });
 
     it('should return a lastName with only non-accented characters', () => {
-      const result = randLastName({
-        ...options,
-        withAccents: false,
-      });
+      const result = randLastNamePtBr({ withAccents: false });
 
       expect(result.match(specialCharRegex)).toBeFalsy();
       expect(data.withoutAccents.includes(result)).toBe(true);

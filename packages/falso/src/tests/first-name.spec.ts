@@ -1,9 +1,11 @@
 import { randFirstName } from '../lib/first-name';
 import { data } from '../lib/first-name.json';
+import { NameOptions } from '../lib/full-name';
+
+import { randFirstName as randFirstNamePtBR } from '../lib/i18n/pt-br/first-name';
+import { data as locale_ptBR } from '../lib/i18n/pt-br/first-name.i18n.json';
 
 import { data as locale_ru } from '../lib/i18n/ru/first-name.i18n.json';
-import { data as locale_ptBR } from '../lib/i18n/pt-br/first-name.i18n.json';
-import { NameOptions } from '../lib/full-name';
 
 describe('firstName', () => {
   let specialCharRegex: RegExp;
@@ -170,12 +172,11 @@ describe('firstName', () => {
       beforeEach(() => {
         options = {
           gender: 'female',
-          locale: data,
         };
       });
 
       it('should return a firstName with at least 1 accented character', () => {
-        const result = randFirstName({
+        const result = randFirstNamePtBR({
           ...options,
           withAccents: true,
         });
@@ -185,7 +186,7 @@ describe('firstName', () => {
       });
 
       it('should return a firstName with only non-accented characters', () => {
-        const result = randFirstName({
+        const result = randFirstNamePtBR({
           ...options,
           withAccents: false,
         });
@@ -199,12 +200,11 @@ describe('firstName', () => {
       beforeEach(() => {
         options = {
           gender: 'male',
-          locale: data,
         };
       });
 
       it('should return a firstName with at least 1 accented character', () => {
-        const result = randFirstName({
+        const result = randFirstNamePtBR({
           ...options,
           withAccents: true,
         });
@@ -214,7 +214,7 @@ describe('firstName', () => {
       });
 
       it('should return a firstName with only non-accented characters', () => {
-        const result = randFirstName({
+        const result = randFirstNamePtBR({
           ...options,
           withAccents: false,
         });
