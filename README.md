@@ -26,6 +26,8 @@ Create massive amounts of fake data in the browser and NodeJS. Tree Shakeable & 
 ✅ &nbsp;Entity Functions  
 ✅ &nbsp;Single and Array Result
 
+🤓 Learn about it on the [docs site](https://ngneat.github.io/falso/) <br>
+
 ## Sponsoring ngneat
 
 [Sponsorships](https://github.com/sponsors/ngneat) aid in the continued development and maintenance of ngneat libraries. Consider asking your company to sponsor ngneat as its core to their business and application development.
@@ -45,8 +47,6 @@ Boost your backing by becoming a Gold Sponsor and enjoy the spotlight with your 
 </a>
 
 Become a bronze sponsor and get your logo on our README on GitHub.
-
-🤓 Learn about it on the [docs site](https://ngneat.github.io/falso/) <br>
 
 ## StackBlitz
 
