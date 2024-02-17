@@ -25,6 +25,7 @@ const functionModifiers = {
   rand: 'rand([1,2,3])',
   randBetweenDate: 'randBetweenDate({ from: new Date(\'10/07/2020\'), to: new Date(\'10/07/2025\') }).toString()',
   randTextRange: 'randTextRange({ min: 10, max: 100 })',
+  toCollection: 'toCollection(() => { return { data: randNumber() }}, {length: 10})',
 }
 
 const skipLivePreview = ['seed'];
