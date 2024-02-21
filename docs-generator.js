@@ -2,11 +2,13 @@ const jsdoc2md = require('jsdoc-to-markdown');
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-const { minify } = require("terser");
+const { minify } = require('terser');
 
 function imageModifier(generator) {
   // we chain the query param to trigger refetching of the image.
-  return '<img src={`${'+generator+'()}?${Math.random()}}`} alt="Random image"/>';
+  return (
+    '<img src={`${' + generator + '()}?${Math.random()}}`} alt="Random image"/>'
+  );
 }
 
 function stringModifier(generator) {
@@ -23,62 +25,77 @@ const functionModifiers = {
   randImg: imageModifier,
   randChanceBoolean: 'randChanceBoolean({chanceTrue: 0.78}).toString()',
   rand: 'rand([1,2,3])',
-  randBetweenDate: 'randBetweenDate({ from: new Date(\'10/07/2020\'), to: new Date(\'10/07/2025\') }).toString()',
+  randBetweenDate:
+    "randBetweenDate({ from: new Date('10/07/2020'), to: new Date('10/07/2025') }).toString()",
   randTextRange: 'randTextRange({ min: 10, max: 100 })',
-}
+};
 
 const skipLivePreview = ['seed'];
 
-jsdoc2md.getTemplateData({
-  files: glob.sync('packages/falso/src/lib/*.ts'),
-  configure: 'jsdoc.json'
-}).then(res => {
-  const categories = res.reduce((acc, current) => {
-    const category = current.category.toLowerCase();
+jsdoc2md
+  .getTemplateData({
+    files: glob.sync('packages/falso/src/lib/*.ts'),
+    configure: 'jsdoc.json',
+  })
+  .then((res) => {
+    const categories = res.reduce((acc, current) => {
+      const category = current.category.toLowerCase();
 
-    // Handle multiple categories
-    if (category.includes(',')) {
-      const categories = category.split(', ');
-      categories.forEach((c) => {
-        if (!acc[c]) {
-          acc[c] = [];
+      // Handle multiple categories
+      if (category.includes(',')) {
+        const categories = category.split(', ');
+        categories.forEach((c) => {
+          if (!acc[c]) {
+            acc[c] = [];
+          }
+
+          acc[c].push({
+            ...current,
+            category: c,
+          });
+        });
+      } else {
+        if (!acc[category]) {
+          acc[category] = [];
         }
 
-        acc[c].push({
-          ...current,
-          category: c,
-        });
-      });
-    }
-    else {
-      if (!acc[category]) {
-        acc[category] = [];
+        acc[category].push(current);
       }
 
-      acc[category].push(current);
+      return acc;
+    }, {});
+
+    const docsOutputPath = path.join('docs', 'docs', 'auto-generated');
+    if (!fs.existsSync(docsOutputPath)) {
+      fs.mkdirSync(docsOutputPath);
     }
 
-    return acc;
-  }, {});
+    for (let [category, items] of Object.entries(categories)) {
+      let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(
+        category
+      )}\n\n`;
 
-  const docsOutputPath = path.join('docs', 'docs', 'auto-generated');
-  if (!fs.existsSync(docsOutputPath)) {
-    fs.mkdirSync(docsOutputPath);
-  }
+      md += items
+        .sort((funcA, funcB) => sortFunctions(funcA, funcB))
+        .map(getDocsSection)
+        .join('');
 
-  for (let [category, items] of Object.entries(categories)) {
-    let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(category)}\n\n`;
+      fs.writeFileSync(
+        path.join(docsOutputPath, `${category.toLowerCase()}.mdx`),
+        md,
+        { encoding: 'utf8' }
+      );
+    }
 
-    md += items.sort((funcA, funcB) => sortFunctions(funcA, funcB)).map(getDocsSection).join('');
+    const [falsoESMPath] = glob.sync('dist/packages/falso/index.esm.js');
 
-    fs.writeFileSync(path.join(docsOutputPath, `${category.toLowerCase()}.mdx`), md, { encoding: 'utf8' });
-  }
-
-  const [falsoESMPath] = glob.sync('dist/packages/falso/index.js');
-  minify(fs.readFileSync(falsoESMPath, "utf8")).then((minified) => {
-    fs.writeFileSync(path.join('docs', 'src', 'theme', 'ReactLiveScope', 'falso.min.js'), minified.code);
+    minify(fs.readFileSync(falsoESMPath, 'utf8')).then((minified) => {
+      fs.writeFileSync(
+        path.join('docs', 'src', 'theme', 'ReactLiveScope', 'falso.min.js'),
+        minified.code
+      );
+    });
   });
-});
 
 function sortFunctions(funcA, funcB) {
   if (funcA.name < funcB.name) {
@@ -97,7 +114,9 @@ function capitalize(string) {
 }
 
 function getDocsSection({ name, description, examples }) {
-  let section = `### \`\`\`${name}\`\`\`\n\n${description}\n\n\`\`\`ts\nimport { ${name} } from '@ngneat/falso';\n\n${examples.join('\n')}\n\`\`\`\n\n`;
+  let section = `### \`\`\`${name}\`\`\`\n\n${description}\n\n\`\`\`ts\nimport { ${name} } from '@ngneat/falso';\n\n${examples.join(
+    '\n'
+  )}\n\`\`\`\n\n`;
 
   if (!skipLivePreview.includes(name)) {
     let funcCall = `${name}()`;
@@ -111,5 +130,4 @@ function getDocsSection({ name, description, examples }) {
   }
 
   return section;
-
 }
