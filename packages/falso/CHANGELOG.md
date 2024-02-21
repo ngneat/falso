@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [7.2.0](https://github-personal/ngneat/falso/compare/falso-7.1.1...falso-7.2.0) (2024-02-21)
+
+### Features
+
+- 🔥 add randResolution ([59a3261](https://github-personal/ngneat/falso/commit/59a32618d78f42ca1f1cc37c84d328baa9768265))
+- **i18n-ptBR:** 🔥 add support for last name generation with locale ([6e4c23a](https://github-personal/ngneat/falso/commit/6e4c23a8df90d7c59772769782f84234c0c4ad41))
+- **i18n:** 🔥 add new language support for pt-BR ([2690931](https://github-personal/ngneat/falso/commit/2690931bf881195aa139ddee46f8feba25d0b557))
+
 ## [7.1.1](https://github.com/ngneat/falso/compare/falso-7.1.0...falso-7.1.1) (2023-09-23)
 
 # [7.1.0](https://github.com/ngneat/falso/compare/falso-7.0.1...falso-7.1.0) (2023-08-20)
