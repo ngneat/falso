@@ -1,5 +1,5 @@
-import { FakeOptions, fake } from './core/core';
-import { data } from './accessory.json';
+import { FakeOptions, fake } from '../../core/core';
+import { data } from './accessory.i18n.json';
 
 /**
  * Generate a random accessory.
