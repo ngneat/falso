@@ -7,3 +7,6 @@ export { randAnimalType } from './animal-type';
 export { randAnimal } from './animal';
 export { randBaseballTeam } from './baseball-team';
 export { randBear } from './bear';
+export { randBook } from './book';
+export { randBrand } from './brand';
+export { randCardinalDirection } from './cardinal-direction';
