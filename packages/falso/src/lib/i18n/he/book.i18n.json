@@ -1,0 +1,656 @@
+{
+  "data": [
+    {
+      "title": "הרפתקאותיו של אוגי מארץ'",
+      "author": "סול בלו",
+      "category": "Comedy"
+    },
+    {
+      "title": "הקורא הלא שגרתי",
+      "author": "אלן בנט",
+      "category": "Comedy"
+    },
+    {
+      "title": "דון קיחוטה",
+      "author": "מיגל דה סרוונטס",
+      "category": "Comedy"
+    },
+    { "title": "טום ג'ונס", "author": "הנרי פילדינג", "category": "Comedy" },
+    { "title": "נפשות מתות", "author": "ניקולאי גוגול", "category": "Comedy" },
+    {
+      "title": "הרוח בערבי הנחל",
+      "author": "קנת גרהם",
+      "category": "Comedy"
+    },
+    {
+      "title": "האיש שלנו בהוואנה",
+      "author": "גרהם גרין",
+      "category": "Comedy"
+    },
+    { "title": "מלכוד 22", "author": "ג'וזף הלר", "category": "Comedy" },
+    { "title": "נאמנות גבוהה", "author": "ניק הורנבי", "category": "Comedy" },
+    {
+      "title": "שלושה בסירה אחת",
+      "author": "ג'רום ק. ג'רום",
+      "category": "Comedy"
+    },
+    {
+      "title": "פיניגנס וייק",
+      "author": "ג'יימס ג'ויס",
+      "category": "Comedy"
+    },
+    { "title": "פוקון", "author": "ספייק מיליגן", "category": "Comedy" },
+    {
+      "title": "תלונתו של פורטנוי",
+      "author": "פיליפ רות",
+      "category": "Comedy"
+    },
+    { "title": "קופים גדולים", "author": "וויל סלף", "category": "Comedy" },
+    {
+      "title": "חייו ודעותיו של טריסטרם שנדי, ג'נטלמן",
+      "author": "לורנס סטרן",
+      "category": "Comedy"
+    },
+    {
+      "title": "קשר של טיפשים",
+      "author": "ג'ון קנדי טול",
+      "category": "Comedy"
+    },
+    {
+      "title": "ארוחת בוקר של אלופים",
+      "author": "קורט וונגוט",
+      "category": "Comedy"
+    },
+    {
+      "title": "בדיחה אינסופית",
+      "author": "דייוויד פוסטר וואלאס",
+      "category": "Comedy"
+    },
+    {
+      "title": "מולסוורת",
+      "author": "ג'פרי ווילאנס ורונלד סרל",
+      "category": "Comedy"
+    },
+    {
+      "title": "תודה לך, ג'יבס",
+      "author": "פ.ג. וודהאוס",
+      "category": "Comedy"
+    },
+    {
+      "title": "שלושים ותשעה הצעדים",
+      "author": "ג'ון בוכאן",
+      "category": "Crime"
+    },
+    {
+      "title": "השינה הגדולה",
+      "author": "ריימונד צ'נדלר",
+      "category": "Crime"
+    },
+    {
+      "title": "ואז לא נותר אף אחד",
+      "author": "אגתה כריסטי",
+      "category": "Crime"
+    },
+    {
+      "title": "כלב הבסקרווילים",
+      "author": "ארתור קונן דויל",
+      "category": "Crime"
+    },
+    {
+      "title": "המועמד המנצ'ורי",
+      "author": "ריצ'רד קונדון",
+      "category": "Crime"
+    },
+    {
+      "title": "זן אנדרומדה",
+      "author": "מייקל קרייטון",
+      "category": "Crime"
+    },
+    {
+      "title": "תיק איפקרס",
+      "author": "לן דייטון",
+      "category": "Crime"
+    },
+    {
+      "title": "החטא ועונשו",
+      "author": "פיודור דוסטויבסקי",
+      "category": "Crime"
+    },
+    {
+      "title": "הרוזן ממונטה כריסטו",
+      "author": "אלכסנדר דיומא",
+      "category": "Crime"
+    },
+    {
+      "title": "יום התן",
+      "author": "פרדריק פורסיית",
+      "category": "Crime"
+    },
+    {
+      "title": "האיש השלישי",
+      "author": "גרהם גרין",
+      "category": "Crime"
+    },
+    {
+      "title": "זמן להרוג",
+      "author": "ג'ון גרישם",
+      "category": "Crime"
+    },
+    {
+      "title": "האיש הרזה",
+      "author": "דשיל האמט",
+      "category": "Crime"
+    },
+    {
+      "title": "מר ריפלי המוכשר",
+      "author": "פטרישיה הייסמית",
+      "category": "Crime"
+    },
+    {
+      "title": "חייט, חייל, מרגל",
+      "author": "ג'ון לה קארה",
+      "category": "Crime"
+    },
+    {
+      "title": "אל תיגע בזמיר",
+      "author": "הרפר לי",
+      "category": "Crime"
+    },
+    {
+      "title": "אין ארץ לזקנים",
+      "author": "קורמאק מקארתי",
+      "category": "Crime"
+    },
+    { "title": "הסנדק", "author": "מריו פוזו", "category": "Crime" },
+    {
+      "title": "מכירה פומבית של חלקה 49",
+      "author": "תומאס פינצ'ון",
+      "category": "Crime"
+    },
+    {
+      "title": "משפט באבן",
+      "author": "רות רנדל",
+      "category": "Crime"
+    },
+    {
+      "title": "נשים קטנות",
+      "author": "לואיזה מיי אלקוט",
+      "category": "Family and Self"
+    },
+    {
+      "title": "אבא גוריו",
+      "author": "אונורה דה בלזק",
+      "category": "Family and Self"
+    },
+    {
+      "title": "הזר",
+      "author": "אלבר קאמי",
+      "category": "Family and Self"
+    },
+    {
+      "title": "תקוות גדולות",
+      "author": "צ'רלס דיקנס",
+      "category": "Family and Self"
+    },
+    {
+      "title": "הקול והזעם",
+      "author": "ויליאם פוקנר",
+      "category": "Family and Self"
+    },
+    {
+      "title": "הווארדס אנד",
+      "author": "א.מ. פורסטר",
+      "category": "Family and Self"
+    },
+    {
+      "title": "הכוח והתהילה",
+      "author": "גרהם גרין",
+      "category": "Family and Self"
+    },
+    {
+      "title": "זאב הערבות",
+      "author": "הרמן הסה",
+      "category": "Family and Self"
+    },
+    {
+      "title": "תפילה לאוון מיני",
+      "author": "ג'ון אירווינג",
+      "category": "Family and Self"
+    },
+    {
+      "title": "יוליסס",
+      "author": "ג'יימס ג'ויס",
+      "category": "Family and Self"
+    },
+    {
+      "title": "קן הקוקיה",
+      "author": "קן קיזי",
+      "category": "Family and Self"
+    },
+    {
+      "title": "כמה ירוק היה עמקי",
+      "author": "ריצ'רד לואלין",
+      "category": "Family and Self"
+    },
+    {
+      "title": "העין הכי כחולה",
+      "author": "טוני מוריסון",
+      "category": "Family and Self"
+    },
+    {
+      "title": "מי את חושבת שאת?",
+      "author": "אליס מונרו",
+      "category": "Family and Self"
+    },
+    {
+      "title": "פעמון הזכוכית",
+      "author": "סילביה פלאת",
+      "category": "Family and Self"
+    },
+    {
+      "title": "בעקבות הזמן האבוד",
+      "author": "מרסל פרוסט",
+      "category": "Family and Self"
+    },
+    {
+      "title": "התפסן בשדה השיפון",
+      "author": "ג'.ד. סלינג'ר",
+      "category": "Family and Self"
+    },
+    {
+      "title": "הצבע ארגמן",
+      "author": "אליס ווקר",
+      "category": "Family and Self"
+    },
+    {
+      "title": "ג'ימי קוריגן, הילד החכם ביותר בעולם",
+      "author": "כריס וור",
+      "category": "Family and Self"
+    },
+    {
+      "title": "תמונתו של דוריאן גריי",
+      "author": "אוסקר ויילד",
+      "category": "Family and Self"
+    },
+    {
+      "title": "גאווה ודעה קדומה",
+      "author": "ג'יין אוסטן",
+      "category": "Love"
+    },
+    { "title": "ג'יין אייר", "author": "שרלוט ברונטה", "category": "Love" },
+    {
+      "title": "אנקת גבהים",
+      "author": "אמילי ברונטה",
+      "category": "Love"
+    },
+    {
+      "title": "ארוחת בוקר בטיפאני",
+      "author": "טרומן קפוטה",
+      "category": "Love"
+    },
+    { "title": "רבקה", "author": "דפנה דו מורייה", "category": "Love" },
+    { "title": "דניאל דרונדה", "author": "ג'ורג' אליוט", "category": "Love" },
+    {
+      "title": "גטסבי הגדול",
+      "author": "פ. סקוט פיצג'רלד",
+      "category": "Love"
+    },
+    {
+      "title": "מאדאם בובארי",
+      "author": "גוסטב פלובר",
+      "category": "Love"
+    },
+    {
+      "title": "חדר עם נוף",
+      "author": "א.מ. פורסטר",
+      "category": "Love"
+    },
+    {
+      "title": "ייסורי ורתר הצעיר",
+      "author": "יוהאן וולפגנג גתה",
+      "category": "Love"
+    },
+    {
+      "title": "הרחק מההמון הסואן",
+      "author": "תומאס הרדי",
+      "category": "Love"
+    },
+    {
+      "title": "האות השנית",
+      "author": "נתניאל הות'ורן",
+      "category": "Love"
+    },
+    {
+      "title": "שארית היום",
+      "author": "קאזואו אישיגורו",
+      "category": "Love"
+    },
+    {
+      "title": "יחסים מסוכנים",
+      "author": "פייר שודרלו דה לאקלו",
+      "category": "Love"
+    },
+    {
+      "title": "עבדות אנושית",
+      "author": "סומרסט מוהם",
+      "category": "Love"
+    },
+    { "title": "כפרה", "author": "איאן מקיואן", "category": "Love" },
+    {
+      "title": "חלף עם הרוח",
+      "author": "מרגרט מיטשל",
+      "category": "Love"
+    },
+    {
+      "title": "יער נורווגי",
+      "author": "הרוקי מורקמי",
+      "category": "Love"
+    },
+    {
+      "title": "ד''ר ז'יוואגו",
+      "author": "בוריס פסטרנק",
+      "category": "Love"
+    },
+    { "title": "מרחב ים הסרגסו", "author": "ג'ין ריס", "category": "Love" },
+    {
+      "title": "מדריך הטרמפיסט לגלקסיה",
+      "author": "דאגלס אדמס",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "המוסד",
+      "author": "אייזק אסימוב",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "פרנהייט 451",
+      "author": "ריי ברדבורי",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "הרפתקאות אליס בארץ הפלאות",
+      "author": "לואיס קרול",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "האיש שהיה יום חמישי",
+      "author": "ג.ק. צ'סטרטון",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "סוף הילדות",
+      "author": "ארתור ס. קלארק",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "האם חולמים אנדרואידים על כבשים חשמליות?",
+      "author": "פיליפ ק. דיק",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "אלים אמריקאים",
+      "author": "ניל גיימן",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "נוירומנסר",
+      "author": "ויליאם גיבסון",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "חולית",
+      "author": "פרנק הרברט",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "סיבוב הבורג",
+      "author": "הנרי ג'יימס",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "הניצוץ",
+      "author": "סטיבן קינג",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "סדרת ארץ ים",
+      "author": "אורסולה ק. לה גווין",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "דברי ימי נרניה",
+      "author": "ק.ס. לואיס",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "1984",
+      "author": "ג'ורג' אורוול",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "סדרת עולם הדיסק",
+      "author": "טרי פראצ'ט",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "פרנקנשטיין",
+      "author": "מרי שלי",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "המקרה המוזר של ד''ר ג'קיל ומר הייד",
+      "author": "רוברט לואיס סטיבנסון",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "דרקולה",
+      "author": "ברם סטוקר",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "שר הטבעות",
+      "author": "ג'.ר.ר. טולקין",
+      "category": "Science Fiction and Fantasy"
+    },
+    {
+      "title": "הכל מתפרק",
+      "author": "צ'ינואה אצ'בה",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "לך ספר זאת בהר",
+      "author": "ג'יימס בולדווין",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "בקתת הדוד תום",
+      "author": "הרייט ביצ'ר סטו",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "מול פלנדרס",
+      "author": "דניאל דפו",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "סיפור שתי ערים",
+      "author": "צ'רלס דיקנס",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "צפון ודרום",
+      "author": "אליזבת גאסקל",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "עלובי החיים",
+      "author": "ויקטור הוגו",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "נערה בחורף",
+      "author": "פיליפ לארקין",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "הר הקסמים",
+      "author": "תומאס מאן",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "יפה נפש",
+      "author": "גי דה מופסן",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "חוות החיות",
+      "author": "ג'ורג' אורוול",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "בכי, ארץ אהובה",
+      "author": "אלן פטון",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "הג'ונגל",
+      "author": "אפטון סינקלר",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "שיניים לבנות",
+      "author": "זיידי סמית",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "ענבי זעם",
+      "author": "ג'ון סטיינבק",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "יריד ההבלים",
+      "author": "ויליאם מייקפיס תקרי",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "הדרך שבה אנו חיים עכשיו",
+      "author": "אנתוני טרולופ",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "הרפתקאותיו של טום סויר",
+      "author": "מארק טוויין",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "מדורת ההבלים",
+      "author": "טום וולף",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "ז'רמינל",
+      "author": "אמיל זולא",
+      "category": "State of the Nation"
+    },
+    {
+      "title": "אימפריית השמש",
+      "author": "ג'.ג'. בלארד",
+      "category": "War and Travel"
+    },
+    {
+      "title": "לב האפלה",
+      "author": "ג'וזף קונרד",
+      "category": "War and Travel"
+    },
+    {
+      "title": "רובינזון קרוזו",
+      "author": "דניאל דפו",
+      "category": "War and Travel"
+    },
+    {
+      "title": "שלושת המוסקטרים",
+      "author": "אלכסנדר דיומא",
+      "category": "War and Travel"
+    },
+    {
+      "title": "מכרות המלך שלמה",
+      "author": "ה. ריידר הגארד",
+      "category": "War and Travel"
+    },
+    {
+      "title": "אניגמה",
+      "author": "רוברט האריס",
+      "category": "War and Travel"
+    },
+    {
+      "title": "החייל האמיץ שווייק",
+      "author": "ירוסלב האשק",
+      "category": "War and Travel"
+    },
+    {
+      "title": "למי צלצלו הפעמונים",
+      "author": "ארנסט המינגוויי",
+      "category": "War and Travel"
+    },
+    {
+      "title": "בדרכים",
+      "author": "ג'ק קרואק",
+      "category": "War and Travel"
+    },
+    {
+      "title": "קריאת הבר",
+      "author": "ג'ק לונדון",
+      "category": "War and Travel"
+    },
+    {
+      "title": "מאה שנים של בדידות",
+      "author": "גבריאל גרסיה מארקס",
+      "category": "War and Travel"
+    },
+    {
+      "title": "מובי דיק",
+      "author": "הרמן מלוויל",
+      "category": "War and Travel"
+    },
+    {
+      "title": "זן ואמנות אחזקת האופנוע",
+      "author": "רוברט מ. פירסיג",
+      "category": "War and Travel"
+    },
+    {
+      "title": "במערב אין כל חדש",
+      "author": "אריך מריה רמרק",
+      "category": "War and Travel"
+    },
+    {
+      "title": "איוונהו",
+      "author": "סר וולטר סקוט",
+      "category": "War and Travel"
+    },
+    {
+      "title": "אי המטמון",
+      "author": "רוברט לואיס סטיבנסון",
+      "category": "War and Travel"
+    },
+    {
+      "title": "מסעי גוליבר",
+      "author": "ג'ונתן סוויפט",
+      "category": "War and Travel"
+    },
+    {
+      "title": "מלחמה ושלום",
+      "author": "לב טולסטוי",
+      "category": "War and Travel"
+    },
+    {
+      "title": "מסביב לעולם בשמונים יום",
+      "author": "ז'ול ורן",
+      "category": "War and Travel"
+    },
+    {
+      "title": "מרד הקיין",
+      "author": "הרמן ווק",
+      "category": "War and Travel"
+    }
+  ]
+}
