@@ -4,6 +4,7 @@ interface ImgOptions extends FakeOptions {
   width?: number;
   height?: number;
   grayscale?: boolean;
+  random?: boolean;
 }
 
 /**
@@ -30,20 +31,32 @@ interface ImgOptions extends FakeOptions {
  * @example
  *
  * randImg({ grayscale: true }) // return a grayscale image (default is false)
+ * 
+ * @example
+ * 
+ * randImg({ random: true }) // default is true, prevent the image from being cached
  *
  */
 export function randImg<Options extends ImgOptions = never>(options?: Options) {
-  const [width, height, grayscale] = [
+  const [width, height, grayscale, random] = [
     options?.width ?? options?.height ?? 500,
     options?.height ?? options?.width ?? 500,
     options?.grayscale ?? false,
+    options?.random ?? true,
   ];
 
+  const query = new URLSearchParams();
+
+  if (grayscale) {
+    query.append('grayscale', '');
+  }
+
+  if (random) {
+    query.append('random', '1');
+  }
+
   return fake(
-    () =>
-      `https://picsum.photos/${width}/${height}${
-        grayscale ? '?grayscale' : ''
-      }`,
+    () => `https://picsum.photos/${width}/${height}${query.toString()}`,
     options
   );
 }
