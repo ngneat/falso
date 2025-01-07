@@ -1,5 +1,8 @@
 import { randSequence } from '../lib/sequence';
 
+const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const specials = '<>@!#$%^&*()_+[]{}?:;|\'"\\,./~`-=';
+
 describe('randSequence', () => {
   // Test Default Behavior
   it('should generate a string of default length 8 with default chars', () => {
@@ -33,7 +36,10 @@ describe('randSequence', () => {
   it('should generate a string with special characters when charType is "special"', () => {
     const result = randSequence({ charType: 'special' });
     expect(result).toHaveLength(8); // Default size
-    expect(result).toMatch(/^[<>@!#$%^&*()_+\[\]{}?:;|'"\\,./~-]+$/); // Result should only contain special characters
+    expect(result.split('').some((char) => letters.includes(char))).toBe(false);
+    expect(result.split('').every((char) => specials.includes(char))).toBe(
+      true
+    );
   });
 
   // Test with custom 'chars' value
