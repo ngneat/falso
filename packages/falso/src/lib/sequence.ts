@@ -35,8 +35,7 @@ type ReturnTypeFromCharType<CharType extends CharTypes | undefined> =
     : string[];
 
 /**
- * Simulating the `fake` function (for this example, it's a simple wrapper).
- * You should ensure the actual `fake` function returns the correct type based on your implementation.
+ * Simulating the `fake` function.
  */
 function fake<T>(generatorFn: () => T, options?: any): T {
   return generatorFn(); // Assuming `fake` returns the value produced by generatorFn
