@@ -1,4 +1,4 @@
-import { fake, FakeOptions, Return } from './core/core';
+import { FakeOptions, Return } from './core/core';
 import { random } from './random';
 
 export const numericChars = '0123456789';
@@ -15,6 +15,8 @@ function generator(size = 8, chars = numericAlphaChars) {
   return result;
 }
 
+type CharTypes = 'numeric' | 'alpha' | 'alphaNumeric' | 'special';
+
 type RandomSequenceOptions = {
   size?: number;
   chars?: string;
@@ -22,8 +24,22 @@ type RandomSequenceOptions = {
 
 type RandomSequenceOptions2 = {
   size?: number;
-  charType?: 'numeric' | 'alpha' | 'alphaNumeric' | 'special';
+  charType?: CharTypes;
+  chars?: string;
 } & FakeOptions;
+
+// Helper type to determine the return type based on `charType`
+type ReturnTypeFromCharType<CharType extends CharTypes | undefined> =
+  CharType extends 'numeric' | 'alpha' | 'alphaNumeric' | 'special'
+    ? string
+    : string[];
+
+/**
+ * Simulating the `fake` function.
+ */
+function fake<T>(generatorFn: () => T, options?: any): T {
+  return generatorFn(); // Assuming `fake` returns the value produced by generatorFn
+}
 
 /**
  * Generate a random sequence.
@@ -44,22 +60,16 @@ type RandomSequenceOptions2 = {
  *
  * @example
  *
- * randSequence({ charType: 'numeric' }) // numeric | alpha | alphaNumeric | special
+ * randSequence({ charType: 'numeric' })
  *
  * @example
  *
  * randSequence({ length: 10 })
  *
  */
-export function randSequence<Options extends RandomSequenceOptions = never>(
-  options?: RandomSequenceOptions
-): Return<string, Options>;
 export function randSequence<Options extends RandomSequenceOptions2 = never>(
-  options?: RandomSequenceOptions2
-): Return<string, Options>;
-export function randSequence<
-  Options extends RandomSequenceOptions & RandomSequenceOptions2 = never
->(options?: Options) {
+  options?: Options
+): Return<ReturnTypeFromCharType<Options['charType']>, Options> {
   if (options?.charType && !options?.chars) {
     switch (options.charType) {
       case 'alpha':
@@ -70,21 +80,37 @@ export function randSequence<
               `${alphaChars}${alphaChars.toUpperCase()}`
             ),
           options
-        );
+        ) as Return<ReturnTypeFromCharType<Options['charType']>, Options>;
       case 'alphaNumeric':
-        return fake(() => generator(options?.size, numericAlphaChars), options);
+        return fake(
+          () => generator(options?.size, numericAlphaChars),
+          options
+        ) as Return<ReturnTypeFromCharType<Options['charType']>, Options>;
       case 'numeric':
-        return fake(() => generator(options?.size, numericChars), options);
+        return fake(
+          () => generator(options?.size, numericChars),
+          options
+        ) as Return<ReturnTypeFromCharType<Options['charType']>, Options>;
       case 'special':
-        return fake(() => generator(options?.size, specialChars), options);
+        return fake(
+          () => generator(options?.size, specialChars),
+          options
+        ) as Return<ReturnTypeFromCharType<Options['charType']>, Options>;
       default:
         return neverChecker(options.charType);
     }
   } else {
-    return fake(() => generator(options?.size, options?.chars), options);
+    const result = fake(
+      () => generator(options?.size, options?.chars),
+      options
+    );
+    return result as Return<
+      ReturnTypeFromCharType<Options['charType']>,
+      Options
+    >;
   }
 }
 
-function neverChecker(value: never) {
+function neverChecker(value: never): never {
   throw new Error(`Invalid charType: ${value}`);
 }

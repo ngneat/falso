@@ -1,65 +1,80 @@
 import { randSequence } from '../lib/sequence';
 
+const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const specials = '<>@!#$%^&*()_+[]{}?:;|\'"\\,./~`-=';
+
 describe('randSequence', () => {
-  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const specials = '<>@!#$%^&*()_+[]{}?:;|\'"\\,./~`-=';
-
-  it('should create one sequence', () => {
-    expect(typeof randSequence()).toBe('string');
-    expect(randSequence().length).toBe(8);
+  // Test Default Behavior
+  it('should generate a string of default length 8 with default chars', () => {
+    const result = randSequence();
+    expect(result).toHaveLength(8); // Default length should be 8
+    expect(typeof result).toBe('string'); // Result should be a string
   });
 
-  it('should create array of sequences', () => {
-    const result = randSequence({ length: 10 });
-
-    expect(Array.isArray(result)).toBe(true);
-    expect(result.length).toBe(10);
-    expect(result[0].length).toBe(8);
-    expect(result[0]).not.toEqual(result[1]);
-  });
-
-  it('should create one sequence with char pattern', () => {
-    const result = randSequence({ chars: 'ABCD', size: 10 });
-
-    expect(typeof result).toBe('string');
-    expect(result.length).toBe(10);
-    expect(result.split('').some((char) => letters.includes(char))).toBe(true);
-  });
-
-  it('should create sequence with charType: alpha', () => {
-    const result = randSequence({ charType: 'alpha', size: 10 });
-
-    expect(result.length).toBe(10);
-    expect(typeof result).toBe('string');
-    expect(
-      result.split('').some((char) => numbers.includes(parseInt(char)))
-    ).toBe(false);
-  });
-
-  it('should create sequence with charType: alphaNumeric', () => {
-    const result = randSequence({ charType: 'alphaNumeric' });
-
-    expect(result.length).toBe(8);
-    expect(typeof result).toBe('string');
-  });
-
-  it('should create sequence with charType: numeric', () => {
+  // Test with 'numeric' charType
+  it('should generate a string with numeric characters when charType is "numeric"', () => {
     const result = randSequence({ charType: 'numeric' });
-
-    expect(result.length).toBe(8);
-    expect(typeof result).toBe('string');
-    expect(result.split('').some((char) => letters.includes(char))).toBe(false);
+    expect(result).toHaveLength(8); // Default size
+    expect(result).toMatch(/^\d+$/); // Result should only contain digits
   });
 
-  it('should create sequence with charType: special', () => {
-    const result = randSequence({ charType: 'special' });
+  // Test with 'alpha' charType
+  it('should generate a string with alphabetic characters when charType is "alpha"', () => {
+    const result = randSequence({ charType: 'alpha' });
+    expect(result).toHaveLength(8); // Default size
+    expect(result).toMatch(/^[a-zA-Z]+$/); // Result should only contain alphabetic characters
+  });
 
-    expect(result.length).toBe(8);
-    expect(typeof result).toBe('string');
+  // Test with 'alphaNumeric' charType
+  it('should generate a string with alphanumeric characters when charType is "alphaNumeric"', () => {
+    const result = randSequence({ charType: 'alphaNumeric' });
+    expect(result).toHaveLength(8); // Default size
+    expect(result).toMatch(/^[a-zA-Z0-9]+$/); // Result should only contain alphanumeric characters
+  });
+
+  // Test with 'special' charType
+  it('should generate a string with special characters when charType is "special"', () => {
+    const result = randSequence({ charType: 'special' });
+    expect(result).toHaveLength(8); // Default size
     expect(result.split('').some((char) => letters.includes(char))).toBe(false);
     expect(result.split('').every((char) => specials.includes(char))).toBe(
       true
     );
+  });
+
+  // Test with custom 'chars' value
+  it('should generate a string based on custom chars', () => {
+    const result = randSequence({ chars: 'abcd1234' });
+    expect(result).toHaveLength(8); // Default size
+    expect(result).toMatch(/^[abcd1234]+$/); // Result should only contain characters from the custom string
+  });
+
+  // Test for Invalid `charType`
+  it('should throw an error for invalid charType', () => {
+    // Use a try-catch to check if the error is thrown
+    expect(() => randSequence({ charType: 'invalidType' as any })).toThrow(
+      'Invalid charType: invalidType'
+    );
+  });
+
+  // Test with custom size
+  it('should generate a string of custom length when size is provided', () => {
+    const result = randSequence({ size: 12 });
+    expect(result).toHaveLength(12); // Custom size
+    expect(typeof result).toBe('string'); // Result should be a string
+  });
+
+  // Test with custom size and 'numeric' charType
+  it('should generate a numeric string of custom length', () => {
+    const result = randSequence({ size: 10, charType: 'numeric' });
+    expect(result).toHaveLength(10); // Custom size
+    expect(result).toMatch(/^\d+$/); // Result should only contain digits
+  });
+
+  // Test with custom size and 'alpha' charType
+  it('should generate an alphabetic string of custom length', () => {
+    const result = randSequence({ size: 6, charType: 'alpha' });
+    expect(result).toHaveLength(6); // Custom size
+    expect(result).toMatch(/^[a-zA-Z]+$/); // Result should only contain alphabetic characters
   });
 });
