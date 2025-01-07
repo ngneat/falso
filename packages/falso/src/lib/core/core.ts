@@ -22,7 +22,7 @@ type FactoryFunction<T> = (i: number) => T;
 export function fake<T, Options extends FakeOptions>(
   data: Readonly<T[]> | FactoryFunction<T>,
   options?: Options
-): Return<T, Options> {
+): Return<T | T[], Options> {
   let dataSource = data as FactoryFunction<T>;
   if (Array.isArray(data)) {
     let resolvedData = data;

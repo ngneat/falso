@@ -53,36 +53,46 @@ type RandomSequenceOptions2 = {
  */
 export function randSequence<Options extends RandomSequenceOptions = never>(
   options?: RandomSequenceOptions
-): Return<string, Options>;
+): Return<string | string[], Options>;
 export function randSequence<Options extends RandomSequenceOptions2 = never>(
   options?: RandomSequenceOptions2
-): Return<string, Options>;
+): Return<string | string[], Options>;
 export function randSequence<
   Options extends RandomSequenceOptions & RandomSequenceOptions2 = never
 >(options?: Options) {
-  if (options?.charType && !options?.chars) {
-    switch (options.charType) {
-      case 'alpha':
-        return fake(
-          () =>
-            generator(
-              options?.size,
-              `${alphaChars}${alphaChars.toUpperCase()}`
-            ),
-          options
-        );
-      case 'alphaNumeric':
-        return fake(() => generator(options?.size, numericAlphaChars), options);
-      case 'numeric':
-        return fake(() => generator(options?.size, numericChars), options);
-      case 'special':
-        return fake(() => generator(options?.size, specialChars), options);
-      default:
-        return neverChecker(options.charType);
+  const generateSequence = () => {
+    if (options?.charType && !options?.chars) {
+      switch (options.charType) {
+        case 'alpha':
+          return generator(
+            options?.size,
+            `${alphaChars}${alphaChars.toUpperCase()}`
+          );
+        case 'alphaNumeric':
+          return generator(options?.size, numericAlphaChars);
+        case 'numeric':
+          return generator(options?.size, numericChars);
+        case 'special':
+          return generator(options?.size, specialChars);
+        default:
+          return neverChecker(options.charType);
+      }
+    } else {
+      return generator(options?.size, options?.chars);
     }
-  } else {
-    return fake(() => generator(options?.size, options?.chars), options);
+  };
+
+  if (options?.length && options.length > 1) {
+    return fake(
+      () =>
+        Array.from({ length: options.length ?? 0 }, () =>
+          generateSequence()
+        ) as string[],
+      options
+    );
   }
+
+  return fake(generateSequence, options);
 }
 
 function neverChecker(value: never) {

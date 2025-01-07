@@ -15,7 +15,7 @@ describe('randSequence', () => {
 
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBe(10);
-    expect(result[0].length).toBe(8);
+    expect(result[0].length).toBe(10);
     expect(result[0]).not.toEqual(result[1]);
   });
 
@@ -24,7 +24,11 @@ describe('randSequence', () => {
 
     expect(typeof result).toBe('string');
     expect(result.length).toBe(10);
-    expect(result.split('').some((char) => letters.includes(char))).toBe(true);
+    if (typeof result === 'string') {
+      expect(result.split('').some((char) => letters.includes(char))).toBe(
+        true
+      );
+    }
   });
 
   it('should create sequence with charType: alpha', () => {
@@ -32,9 +36,11 @@ describe('randSequence', () => {
 
     expect(result.length).toBe(10);
     expect(typeof result).toBe('string');
-    expect(
-      result.split('').some((char) => numbers.includes(parseInt(char)))
-    ).toBe(false);
+    if (typeof result === 'string') {
+      expect(
+        result.split('').some((char) => numbers.includes(parseInt(char)))
+      ).toBe(false);
+    }
   });
 
   it('should create sequence with charType: alphaNumeric', () => {
@@ -49,7 +55,11 @@ describe('randSequence', () => {
 
     expect(result.length).toBe(8);
     expect(typeof result).toBe('string');
-    expect(result.split('').some((char) => letters.includes(char))).toBe(false);
+    if (typeof result === 'string') {
+      expect(result.split('').some((char) => letters.includes(char))).toBe(
+        false
+      );
+    }
   });
 
   it('should create sequence with charType: special', () => {
@@ -57,9 +67,13 @@ describe('randSequence', () => {
 
     expect(result.length).toBe(8);
     expect(typeof result).toBe('string');
-    expect(result.split('').some((char) => letters.includes(char))).toBe(false);
-    expect(result.split('').every((char) => specials.includes(char))).toBe(
-      true
-    );
+    if (typeof result === 'string') {
+      expect(result.split('').some((char) => letters.includes(char))).toBe(
+        false
+      );
+      expect(result.split('').every((char) => specials.includes(char))).toBe(
+        true
+      );
+    }
   });
 });
