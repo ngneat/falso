@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [7.3.0](https://github-personal/ngneat/falso/compare/falso-7.2.0...falso-7.3.0) (2025-01-07)
+
+### Bug Fixes
+
+- **typing:** randSequence ([#388](https://github-personal/ngneat/falso/issues/388)) ([6f1919f](https://github-personal/ngneat/falso/commit/6f1919f5387eb7248e8ca28908e2a91d5a320de9))
+
+### Features
+
+- **i18n:** add Hebrew translations for bird names ([#380](https://github-personal/ngneat/falso/issues/380)) ([4aeb71e](https://github-personal/ngneat/falso/commit/4aeb71e7174d8d6db032c22fef411b6c4c8a7845))
+- **img:** allow and returning random image by default ([#385](https://github-personal/ngneat/falso/issues/385)) ([e89b27b](https://github-personal/ngneat/falso/commit/e89b27b7c28044eb7affaf35c5e24e9002036368))
+
 # [7.2.0](https://github-personal/ngneat/falso/compare/falso-7.1.1...falso-7.2.0) (2024-02-21)
 
 ### Features
