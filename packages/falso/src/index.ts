@@ -1,6 +1,7 @@
 export { randAbbreviation } from './lib/abbreviation';
 export { randAccessory } from './lib/accessory';
 export { randAccount } from './lib/account';
+export { randAdjective } from './lib/adjective';
 export { randAlpha } from './lib/alpha';
 export { randAlphaNumeric } from './lib/alpha-numeric';
 export { randAmericanFootballTeam } from './lib/american-football-team';
@@ -116,6 +117,7 @@ export { randMovieCharacter } from './lib/movie-character';
 export { randMusicGenre } from './lib/music-genre';
 export { randNearbyGPSCoordinate } from './lib/nearby-gpscoordinate';
 export { randNumber } from './lib/number';
+export { randNoun } from './lib/noun';
 export { randOAuthProvider } from './lib/oauth-provider';
 export { randOctal } from './lib/octal';
 export { randOrdinalDirection } from './lib/ordinal-direction';
