@@ -39,30 +39,40 @@ jsdoc2md
   })
   .then((res) => {
     const categories = res.reduce((acc, current) => {
-      const category = current.category.toLowerCase();
+      try {
+        const category = current.category.toLowerCase();
 
-      // Handle multiple categories
-      if (category.includes(',')) {
-        const categories = category.split(', ');
-        categories.forEach((c) => {
-          if (!acc[c]) {
-            acc[c] = [];
-          }
+        // Handle multiple categories
+        if (category.includes(',')) {
+          const categories = category.split(', ');
+          categories.forEach((c) => {
+            if (!acc[c]) {
+              acc[c] = [];
+            }
 
-          acc[c].push({
-            ...current,
-            category: c,
+            acc[c].push({
+              ...current,
+              category: c,
+            });
           });
-        });
-      } else {
-        if (!acc[category]) {
-          acc[category] = [];
+        } else {
+          // verify if the acc is not null and is not an empty object
+          if (
+            acc &&
+            Object.keys(acc).length === 0 &&
+            acc.constructor === Object
+          ) {
+            if (!acc[category]) {
+              acc[category] = [];
+            }
+
+            acc[category].push(current);
+          }
         }
-
-        acc[category].push(current);
+        return acc;
+      } catch (error) {
+        //no category found. just exit here
       }
-
-      return acc;
     }, {});
 
     const docsOutputPath = path.join('docs', 'docs', 'auto-generated');
@@ -70,21 +80,23 @@ jsdoc2md
       fs.mkdirSync(docsOutputPath);
     }
 
-    for (let [category, items] of Object.entries(categories)) {
-      let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(
-        category
-      )}\n\n`;
+    if (categories) {
+      for (let [category, items] of Object.entries(categories)) {
+        let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(
+          category
+        )}\n\n`;
 
-      md += items
-        .sort((funcA, funcB) => sortFunctions(funcA, funcB))
-        .map(getDocsSection)
-        .join('');
+        md += items
+          .sort((funcA, funcB) => sortFunctions(funcA, funcB))
+          .map(getDocsSection)
+          .join('');
 
-      fs.writeFileSync(
-        path.join(docsOutputPath, `${category.toLowerCase()}.mdx`),
-        md,
-        { encoding: 'utf8' }
-      );
+        fs.writeFileSync(
+          path.join(docsOutputPath, `${category.toLowerCase()}.mdx`),
+          md,
+          { encoding: 'utf8' }
+        );
+      }
     }
 
     const [falsoESMPath] = glob.sync('dist/packages/falso/index.esm.js');
