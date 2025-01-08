@@ -6,9 +6,7 @@ const { minify } = require('terser');
 
 function imageModifier(generator) {
   // we chain the query param to trigger refetching of the image.
-  return (
-    '<img src={`${' + generator + '()}?${Math.random()}}`} alt="Random image"/>'
-  );
+  return `<img src={\`\${${generator}()}?\${Math.random()}\`} alt="Random image"/>`;
 }
 
 function stringModifier(generator) {
@@ -40,48 +38,32 @@ jsdoc2md
   .then((res) => {
     const categories = res.reduce((acc, current) => {
       try {
+        if (!current.category) throw new Error('No category found');
         const category = current.category.toLowerCase();
 
         // Handle multiple categories
         if (category.includes(',')) {
-          const categories = category.split(', ');
-          categories.forEach((c) => {
-            if (!acc[c]) {
-              acc[c] = [];
-            }
-
-            acc[c].push({
-              ...current,
-              category: c,
-            });
+          const categoryList = category.split(', ');
+          categoryList.forEach((c) => {
+            acc[c] = acc[c] || [];
+            acc[c].push({ ...current, category: c });
           });
         } else {
-          // verify if the acc is not null and is not an empty object
-          if (
-            acc &&
-            Object.keys(acc).length === 0 &&
-            acc.constructor === Object
-          ) {
-            if (!acc[category]) {
-              acc[category] = [];
-            }
-
-            acc[category].push(current);
-          }
+          acc[category] = acc[category] || [];
+          acc[category].push(current);
         }
         return acc;
       } catch (error) {
-        //no category found. just exit here
+        console.warn(`Skipping entry due to error: ${error.message}`);
+        return acc;
       }
     }, {});
 
     const docsOutputPath = path.join('docs', 'docs', 'auto-generated');
-    if (!fs.existsSync(docsOutputPath)) {
-      fs.mkdirSync(docsOutputPath);
-    }
+    fs.mkdirSync(docsOutputPath, { recursive: true });
 
-    if (categories) {
-      for (let [category, items] of Object.entries(categories)) {
+    if (Object.keys(categories).length > 0) {
+      for (const [category, items] of Object.entries(categories)) {
         let md = `---\nslug: /${category.toLowerCase()}\n---\n\n# ${capitalize(
           category
         )}\n\n`;
@@ -97,36 +79,41 @@ jsdoc2md
           { encoding: 'utf8' }
         );
       }
+    } else {
+      console.warn('No categories found in the documentation data.');
     }
 
     const [falsoESMPath] = glob.sync('dist/packages/falso/index.esm.js');
-
-    minify(fs.readFileSync(falsoESMPath, 'utf8')).then((minified) => {
-      fs.writeFileSync(
-        path.join('docs', 'src', 'theme', 'ReactLiveScope', 'falso.min.js'),
-        minified.code
-      );
-    });
+    if (falsoESMPath) {
+      const fileContent = fs.readFileSync(falsoESMPath, 'utf8');
+      minify(fileContent).then((minified) => {
+        const minifiedPath = path.join(
+          'docs',
+          'src',
+          'theme',
+          'ReactLiveScope',
+          'falso.min.js'
+        );
+        fs.writeFileSync(minifiedPath, minified.code);
+      });
+    } else {
+      console.warn('falso ESM file not found.');
+    }
+  })
+  .catch((err) => {
+    console.error(`Error generating documentation: ${err.message}`);
   });
 
 function sortFunctions(funcA, funcB) {
-  if (funcA.name < funcB.name) {
-    return -1;
-  }
-
-  if (funcA.name > funcB.name) {
-    return 1;
-  }
-
-  return 0;
+  return funcA.name.localeCompare(funcB.name);
 }
 
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function getDocsSection({ name, description, examples }) {
-  let section = `### \`\`\`${name}\`\`\`\n\n${description}\n\n\`\`\`ts\nimport { ${name} } from '@ngneat/falso';\n\n${examples.join(
+function getDocsSection({ name, description = '', examples = [] }) {
+  let section = `### \`${name}\`\n\n${description}\n\n\`\`\`ts\nimport { ${name} } from '@ngneat/falso';\n\n${examples.join(
     '\n'
   )}\n\`\`\`\n\n`;
 
@@ -138,7 +125,7 @@ function getDocsSection({ name, description, examples }) {
     }
     const source = `() => ${funcCall}`;
 
-    section += `\`\`\`jsx live\nfunction Demo(props) {\n  return <Preview source={${source}}/>;\n}\n\`\`\`\n\n`;
+    section += `\`\`\`jsx live\nfunction Demo(props) {\n  return <Preview source={${source}} />;\n}\n\`\`\`\n\n`;
   }
 
   return section;
