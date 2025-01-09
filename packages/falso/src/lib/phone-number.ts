@@ -269,7 +269,7 @@ export function randPhoneNumber<Options extends PhoneNumberOptions = never>(
 
   const generateValidPhoneNumber = (): string => {
     let validNumber: string | null = null;
-    const maxRetries = 100; // Set a limit to prevent infinite loops
+    const maxRetries = 1000; // Set a limit to prevent infinite loops
     let attempts = 0;
 
     while (!validNumber && attempts < maxRetries) {
