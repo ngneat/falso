@@ -269,8 +269,11 @@ export function randPhoneNumber<Options extends PhoneNumberOptions = never>(
 
   const generateValidPhoneNumber = (): string => {
     let validNumber: string | null = null;
+    const maxRetries = 100; // Set a limit to prevent infinite loops
+    let attempts = 0;
 
-    while (!validNumber) {
+    while (!validNumber && attempts < maxRetries) {
+      attempts++;
       const phoneNumber = randMask({
         mask: randElement(formats),
       });
@@ -279,6 +282,12 @@ export function randPhoneNumber<Options extends PhoneNumberOptions = never>(
       if (result.isValid) {
         validNumber = result.phoneNumber; // Store the valid formatted phone number
       }
+    }
+
+    if (!validNumber) {
+      throw new Error(
+        `Failed to generate a valid phone number after ${maxRetries} attempts.`
+      );
     }
 
     return validNumber;
@@ -290,3 +299,4 @@ export function randPhoneNumber<Options extends PhoneNumberOptions = never>(
 
   return fake(phoneNumber, options);
 }
+
