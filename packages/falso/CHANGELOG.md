@@ -509,7 +509,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-- 🔥 add randSubsriptionPlan ([2b82748](https://github.com/ngneat/falso/commit/2b82748ecf5476493f752cb8f6769ef0f47317c6)), closes [#111](https://github.com/ngneat/falso/issues/111)
+- 🔥 add randSubscriptionPlan ([2b82748](https://github.com/ngneat/falso/commit/2b82748ecf5476493f752cb8f6769ef0f47317c6)), closes [#111](https://github.com/ngneat/falso/issues/111)
 - 🔥 generate random slug ([511e682](https://github.com/ngneat/falso/commit/511e682cbad8dc6d39cb97df434496fc2cb7acc1)), closes [#118](https://github.com/ngneat/falso/issues/118)
 
 # [2.13.0](https://github.com/ngneat/falso/compare/falso-2.12.0...falso-2.13.0) (2022-01-23)
