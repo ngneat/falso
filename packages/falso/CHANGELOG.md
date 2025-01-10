@@ -2,24 +2,24 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-# [7.3.0](https://github-personal/ngneat/falso/compare/falso-7.2.0...falso-7.3.0) (2025-01-07)
+# [7.3.0](https://github.com/ngneat/falso/compare/falso-7.2.0...falso-7.3.0) (2025-01-07)
 
 ### Bug Fixes
 
-- **typing:** randSequence ([#388](https://github-personal/ngneat/falso/issues/388)) ([6f1919f](https://github-personal/ngneat/falso/commit/6f1919f5387eb7248e8ca28908e2a91d5a320de9))
+- **typing:** randSequence ([#388](https://github.com/ngneat/falso/issues/388)) ([6f1919f](https://github.com/ngneat/falso/commit/6f1919f5387eb7248e8ca28908e2a91d5a320de9))
 
 ### Features
 
-- **i18n:** add Hebrew translations for bird names ([#380](https://github-personal/ngneat/falso/issues/380)) ([4aeb71e](https://github-personal/ngneat/falso/commit/4aeb71e7174d8d6db032c22fef411b6c4c8a7845))
-- **img:** allow and returning random image by default ([#385](https://github-personal/ngneat/falso/issues/385)) ([e89b27b](https://github-personal/ngneat/falso/commit/e89b27b7c28044eb7affaf35c5e24e9002036368))
+- **i18n:** add Hebrew translations for bird names ([#380](https://github.com/ngneat/falso/issues/380)) ([4aeb71e](https://github.com/ngneat/falso/commit/4aeb71e7174d8d6db032c22fef411b6c4c8a7845))
+- **img:** allow and returning random image by default ([#385](https://github.com/ngneat/falso/issues/385)) ([e89b27b](https://github.com/ngneat/falso/commit/e89b27b7c28044eb7affaf35c5e24e9002036368))
 
-# [7.2.0](https://github-personal/ngneat/falso/compare/falso-7.1.1...falso-7.2.0) (2024-02-21)
+# [7.2.0](https://github.com/ngneat/falso/compare/falso-7.1.1...falso-7.2.0) (2024-02-21)
 
 ### Features
 
-- 🔥 add randResolution ([59a3261](https://github-personal/ngneat/falso/commit/59a32618d78f42ca1f1cc37c84d328baa9768265))
-- **i18n-ptBR:** 🔥 add support for last name generation with locale ([6e4c23a](https://github-personal/ngneat/falso/commit/6e4c23a8df90d7c59772769782f84234c0c4ad41))
-- **i18n:** 🔥 add new language support for pt-BR ([2690931](https://github-personal/ngneat/falso/commit/2690931bf881195aa139ddee46f8feba25d0b557))
+- 🔥 add randResolution ([59a3261](https://github.com/ngneat/falso/commit/59a32618d78f42ca1f1cc37c84d328baa9768265))
+- **i18n-ptBR:** 🔥 add support for last name generation with locale ([6e4c23a](https://github.com/ngneat/falso/commit/6e4c23a8df90d7c59772769782f84234c0c4ad41))
+- **i18n:** 🔥 add new language support for pt-BR ([2690931](https://github.com/ngneat/falso/commit/2690931bf881195aa139ddee46f8feba25d0b557))
 
 ## [7.1.1](https://github.com/ngneat/falso/compare/falso-7.1.0...falso-7.1.1) (2023-09-23)
 
@@ -67,17 +67,17 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - **i18n-DE:** city ([4f5ae42](https://github.com/ngneat/falso/commit/4f5ae4207e31f3dfd9811459396e9f194b75acc1))
 - **i18n-DE:** state and state-abbr ([7c11661](https://github.com/ngneat/falso/commit/7c11661c4b572812ddb57ea5771c8fd91abc210f))
 
-## [6.3.2](https://github-personal/ngneat/falso/compare/falso-6.3.1...falso-6.3.2) (2022-12-15)
+## [6.3.2](https://github.com/ngneat/falso/compare/falso-6.3.1...falso-6.3.2) (2022-12-15)
 
 ### Bug Fixes
 
-- 🐞 remove json file deps ([e92745f](https://github-personal/ngneat/falso/commit/e92745f7c9924504cd28c1192325b0c91df462cb)), closes [#334](https://github-personal/ngneat/falso/issues/334)
+- 🐞 remove json file deps ([e92745f](https://github.com/ngneat/falso/commit/e92745f7c9924504cd28c1192325b0c91df462cb)), closes [#334](https://github.com/ngneat/falso/issues/334)
 
-## [6.3.1](https://github-personal/ngneat/falso/compare/falso-6.3.0...falso-6.3.1) (2022-12-10)
+## [6.3.1](https://github.com/ngneat/falso/compare/falso-6.3.0...falso-6.3.1) (2022-12-10)
 
 ### Bug Fixes
 
-- 🐞 export randDatabase() ([b3c517f](https://github-personal/ngneat/falso/commit/b3c517f56829bd046d81f8db9676cbca419fbc82))
+- 🐞 export randDatabase() ([b3c517f](https://github.com/ngneat/falso/commit/b3c517f56829bd046d81f8db9676cbca419fbc82))
 
 # [6.3.0](https://github.com/ngneat/falso/compare/falso-6.2.0...falso-6.3.0) (2022-12-07)
 
