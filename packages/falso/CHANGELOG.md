@@ -95,7 +95,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Bug Fixes
 
-- 🐞 randFloat somtime didn't adhere fraction strictly ([9886a8e](https://github.com/ngneat/falso/commit/9886a8e25ff8ff7b4428b46a65b76400a9ab80bb))
+- 🐞 randFloat sometime didn't adhere fraction strictly ([9886a8e](https://github.com/ngneat/falso/commit/9886a8e25ff8ff7b4428b46a65b76400a9ab80bb))
 - 🐞 randUuid returned same id with length parameter ([601b070](https://github.com/ngneat/falso/commit/601b070d9b3842228feeace2ebd9067cc85a34ca))
 - **random:** throw error when max is smaller than min ([28284cf](https://github.com/ngneat/falso/commit/28284cf9900a8763823fded765d8c5c50aa17c69))
 
