@@ -280,7 +280,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 - 🐞 prevent key overwritten when looping ([a039e10](https://github.com/ngneat/falso/commit/a039e1078aa6cbdd0565d8d4c02df9bd1ab039b7)), closes [#180](https://github.com/ngneat/falso/issues/180)
 - 🐞 Remove reliance on seed from json based tests ([b03a99e](https://github.com/ngneat/falso/commit/b03a99e7118995c32a249c9094a30309a635cbf6))
-- 🐞 removed unecessary array variable ([f1315c2](https://github.com/ngneat/falso/commit/f1315c2644d4433a33ab6d82e810092f09954e7a))
+- 🐞 removed unnecessary array variable ([f1315c2](https://github.com/ngneat/falso/commit/f1315c2644d4433a33ab6d82e810092f09954e7a))
 
 ### Features
 
