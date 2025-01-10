@@ -66,7 +66,7 @@
     {
       "cli": "nx",
       "version": "16.9.0-beta.1",
-      "description": "Replace imports of Module Federation utils frm @nx/devkit to @nx/webpack",
+      "description": "Replace imports of Module Federation utils @nx/devkit with @nx/webpack",
       "implementation": "./src/migrations/update-16-9-0/migrate-mf-util-usage",
       "package": "@nx/devkit",
       "name": "update-16-9-0-migrate-mf-usage-to-webpack"
