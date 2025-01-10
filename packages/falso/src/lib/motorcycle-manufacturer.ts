@@ -39,5 +39,5 @@ export function randMotorcycleManufacturer<Options extends FakeOptions = never>(
 export function randMotorcylceManufacturer<Options extends FakeOptions = never>(
   options?: Options
 ) {
-  return fake(data, options);
+  return randMotorcycleManufacturer(options);
 }
