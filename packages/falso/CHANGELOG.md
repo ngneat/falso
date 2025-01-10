@@ -589,7 +589,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 - 🔥 add generator for brands ([89a9cbc](https://github.com/ngneat/falso/commit/89a9cbc94975a6b474c4595e429d0d120a1d178f)), closes [#79](https://github.com/ngneat/falso/issues/79)
 - 🔥 add generator for browsers ([cf5eb22](https://github.com/ngneat/falso/commit/cf5eb22f8ba21b4eb1cc53d509ecac6d24ae4d9c)), closes [#77](https://github.com/ngneat/falso/issues/77)
-- 🔥 add generator for priorty ([5fcb4d1](https://github.com/ngneat/falso/commit/5fcb4d182cdf06157c8516e31e660aee5e1fb9a0)), closes [#78](https://github.com/ngneat/falso/issues/78)
+- 🔥 add generator for priority ([5fcb4d1](https://github.com/ngneat/falso/commit/5fcb4d182cdf06157c8516e31e660aee5e1fb9a0)), closes [#78](https://github.com/ngneat/falso/issues/78)
 - 🔥 Add more customisation to randEmail function ([8470d71](https://github.com/ngneat/falso/commit/8470d71d00af56075c2668355e8a8bb16d684bda)), closes [#89](https://github.com/ngneat/falso/issues/89)
 - 🔥 Add random email provider function ([79eb552](https://github.com/ngneat/falso/commit/79eb5523871d179621a027e3bf1ad0ff92796797))
 - 🔥 Add test suite for randEmail ([2eeba1d](https://github.com/ngneat/falso/commit/2eeba1d3bd8a9b0b0c1737b7f8dcb49235046bdc)), closes [#89](https://github.com/ngneat/falso/issues/89)
