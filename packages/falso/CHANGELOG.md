@@ -428,7 +428,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - 🔥 Add tests and tweak logic ([0026f67](https://github.com/ngneat/falso/commit/0026f679ce6875112c370ec6a3b38d46c1f762ba)), closes [#181](https://github.com/ngneat/falso/issues/181)
 - 🔥 Added song falso ([7f6aa86](https://github.com/ngneat/falso/commit/7f6aa86771412e5ccc9b3ca432af835f16c402e2)), closes [#132](https://github.com/ngneat/falso/issues/132)
 - 🔥 expose entities types ([ea9f80d](https://github.com/ngneat/falso/commit/ea9f80d1b1a45aa4d7df567503d68daeb877aeb3)), closes [#183](https://github.com/ngneat/falso/issues/183)
-- 🔥 Made county & country optional for address & fullAddres ([2160106](https://github.com/ngneat/falso/commit/2160106364093135e5264bee6d432e2bef789444))
+- 🔥 Made county & country optional for address & fullAddress ([2160106](https://github.com/ngneat/falso/commit/2160106364093135e5264bee6d432e2bef789444))
 
 # [2.22.0](https://github.com/ngneat/falso/compare/falso-2.21.0...falso-2.22.0) (2022-02-02)
 
