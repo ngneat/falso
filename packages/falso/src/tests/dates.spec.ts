@@ -58,7 +58,7 @@ describe('future', () => {
 });
 
 describe('soon', () => {
-  it('should be higher than now', () => {
+  it('should be greater than now', () => {
     const nowInMilliseconds = new Date().getTime();
     const expected = randSoonDate().getTime();
     expect(expected).toBeGreaterThanOrEqual(nowInMilliseconds);
@@ -114,7 +114,7 @@ describe('recent', () => {
     expect(expected).toBeLessThanOrEqual(nowInMilliseconds);
   });
 
-  it('should be higher than 2 days earlier', () => {
+  it('should be greater than 2 days earlier', () => {
     const recentInMilliseconds = new Date(
       Date.now() - 2 * 24 * 60 * 60 * 1000
     ).getTime();
@@ -122,7 +122,7 @@ describe('recent', () => {
     expect(expected).toBeGreaterThanOrEqual(recentInMilliseconds);
   });
 
-  it('should be higher than 5 days earlier', () => {
+  it('should be greater than 5 days earlier', () => {
     const recentInMilliseconds = new Date(
       Date.now() - 5 * 24 * 60 * 60 * 1000
     ).getTime();
