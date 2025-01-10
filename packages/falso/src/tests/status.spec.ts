@@ -5,7 +5,7 @@ describe('status', () => {
     expect(randStatus).toBeTruthy();
   });
 
-  it('should create radom status', () => {
+  it('should create random status', () => {
     expect(randStatus()).toBeTruthy();
   });
 
