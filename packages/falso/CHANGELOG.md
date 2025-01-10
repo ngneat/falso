@@ -148,7 +148,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Bug Fixes
 
-- 🐞 amount shoud return number by default ([eff0fda](https://github.com/ngneat/falso/commit/eff0fda70c66130ecc4c1ce9121a4d265dad7040))
+- 🐞 amount should return number by default ([eff0fda](https://github.com/ngneat/falso/commit/eff0fda70c66130ecc4c1ce9121a4d265dad7040))
 - fix max port number ([c96533c](https://github.com/ngneat/falso/commit/c96533c0dc882e790d3b9905eb79e5bc331e3150))
 
 ### BREAKING CHANGES
