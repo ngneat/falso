@@ -2,24 +2,24 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-# [7.3.0](https://github-personal/ngneat/falso/compare/falso-7.2.0...falso-7.3.0) (2025-01-07)
+# [7.3.0](https://github.com/ngneat/falso/compare/falso-7.2.0...falso-7.3.0) (2025-01-07)
 
 ### Bug Fixes
 
-- **typing:** randSequence ([#388](https://github-personal/ngneat/falso/issues/388)) ([6f1919f](https://github-personal/ngneat/falso/commit/6f1919f5387eb7248e8ca28908e2a91d5a320de9))
+- **typing:** randSequence ([#388](https://github.com/ngneat/falso/issues/388)) ([6f1919f](https://github.com/ngneat/falso/commit/6f1919f5387eb7248e8ca28908e2a91d5a320de9))
 
 ### Features
 
-- **i18n:** add Hebrew translations for bird names ([#380](https://github-personal/ngneat/falso/issues/380)) ([4aeb71e](https://github-personal/ngneat/falso/commit/4aeb71e7174d8d6db032c22fef411b6c4c8a7845))
-- **img:** allow and returning random image by default ([#385](https://github-personal/ngneat/falso/issues/385)) ([e89b27b](https://github-personal/ngneat/falso/commit/e89b27b7c28044eb7affaf35c5e24e9002036368))
+- **i18n:** add Hebrew translations for bird names ([#380](https://github.com/ngneat/falso/issues/380)) ([4aeb71e](https://github.com/ngneat/falso/commit/4aeb71e7174d8d6db032c22fef411b6c4c8a7845))
+- **img:** allow and returning random image by default ([#385](https://github.com/ngneat/falso/issues/385)) ([e89b27b](https://github.com/ngneat/falso/commit/e89b27b7c28044eb7affaf35c5e24e9002036368))
 
-# [7.2.0](https://github-personal/ngneat/falso/compare/falso-7.1.1...falso-7.2.0) (2024-02-21)
+# [7.2.0](https://github.com/ngneat/falso/compare/falso-7.1.1...falso-7.2.0) (2024-02-21)
 
 ### Features
 
-- 🔥 add randResolution ([59a3261](https://github-personal/ngneat/falso/commit/59a32618d78f42ca1f1cc37c84d328baa9768265))
-- **i18n-ptBR:** 🔥 add support for last name generation with locale ([6e4c23a](https://github-personal/ngneat/falso/commit/6e4c23a8df90d7c59772769782f84234c0c4ad41))
-- **i18n:** 🔥 add new language support for pt-BR ([2690931](https://github-personal/ngneat/falso/commit/2690931bf881195aa139ddee46f8feba25d0b557))
+- 🔥 add randResolution ([59a3261](https://github.com/ngneat/falso/commit/59a32618d78f42ca1f1cc37c84d328baa9768265))
+- **i18n-ptBR:** 🔥 add support for last name generation with locale ([6e4c23a](https://github.com/ngneat/falso/commit/6e4c23a8df90d7c59772769782f84234c0c4ad41))
+- **i18n:** 🔥 add new language support for pt-BR ([2690931](https://github.com/ngneat/falso/commit/2690931bf881195aa139ddee46f8feba25d0b557))
 
 ## [7.1.1](https://github.com/ngneat/falso/compare/falso-7.1.0...falso-7.1.1) (2023-09-23)
 
@@ -67,17 +67,17 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - **i18n-DE:** city ([4f5ae42](https://github.com/ngneat/falso/commit/4f5ae4207e31f3dfd9811459396e9f194b75acc1))
 - **i18n-DE:** state and state-abbr ([7c11661](https://github.com/ngneat/falso/commit/7c11661c4b572812ddb57ea5771c8fd91abc210f))
 
-## [6.3.2](https://github-personal/ngneat/falso/compare/falso-6.3.1...falso-6.3.2) (2022-12-15)
+## [6.3.2](https://github.com/ngneat/falso/compare/falso-6.3.1...falso-6.3.2) (2022-12-15)
 
 ### Bug Fixes
 
-- 🐞 remove json file deps ([e92745f](https://github-personal/ngneat/falso/commit/e92745f7c9924504cd28c1192325b0c91df462cb)), closes [#334](https://github-personal/ngneat/falso/issues/334)
+- 🐞 remove json file deps ([e92745f](https://github.com/ngneat/falso/commit/e92745f7c9924504cd28c1192325b0c91df462cb)), closes [#334](https://github.com/ngneat/falso/issues/334)
 
-## [6.3.1](https://github-personal/ngneat/falso/compare/falso-6.3.0...falso-6.3.1) (2022-12-10)
+## [6.3.1](https://github.com/ngneat/falso/compare/falso-6.3.0...falso-6.3.1) (2022-12-10)
 
 ### Bug Fixes
 
-- 🐞 export randDatabase() ([b3c517f](https://github-personal/ngneat/falso/commit/b3c517f56829bd046d81f8db9676cbca419fbc82))
+- 🐞 export randDatabase() ([b3c517f](https://github.com/ngneat/falso/commit/b3c517f56829bd046d81f8db9676cbca419fbc82))
 
 # [6.3.0](https://github.com/ngneat/falso/compare/falso-6.2.0...falso-6.3.0) (2022-12-07)
 
@@ -95,7 +95,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Bug Fixes
 
-- 🐞 randFloat somtime didn't adhere fraction strictly ([9886a8e](https://github.com/ngneat/falso/commit/9886a8e25ff8ff7b4428b46a65b76400a9ab80bb))
+- 🐞 randFloat sometime didn't adhere fraction strictly ([9886a8e](https://github.com/ngneat/falso/commit/9886a8e25ff8ff7b4428b46a65b76400a9ab80bb))
 - 🐞 randUuid returned same id with length parameter ([601b070](https://github.com/ngneat/falso/commit/601b070d9b3842228feeace2ebd9067cc85a34ca))
 - **random:** throw error when max is smaller than min ([28284cf](https://github.com/ngneat/falso/commit/28284cf9900a8763823fded765d8c5c50aa17c69))
 
@@ -148,12 +148,12 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Bug Fixes
 
-- 🐞 ammount shoud return number by default ([eff0fda](https://github.com/ngneat/falso/commit/eff0fda70c66130ecc4c1ce9121a4d265dad7040))
+- 🐞 amount should return number by default ([eff0fda](https://github.com/ngneat/falso/commit/eff0fda70c66130ecc4c1ce9121a4d265dad7040))
 - fix max port number ([c96533c](https://github.com/ngneat/falso/commit/c96533c0dc882e790d3b9905eb79e5bc331e3150))
 
 ### BREAKING CHANGES
 
-- 🧨 randAmmount will now return numbers by default and strings when passing
+- 🧨 randAmount will now return numbers by default and strings when passing
   the symbol option.
 
 # [5.7.0](https://github.com/ngneat/falso/compare/falso-5.6.1...falso-5.7.0) (2022-06-07)
@@ -280,7 +280,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 - 🐞 prevent key overwritten when looping ([a039e10](https://github.com/ngneat/falso/commit/a039e1078aa6cbdd0565d8d4c02df9bd1ab039b7)), closes [#180](https://github.com/ngneat/falso/issues/180)
 - 🐞 Remove reliance on seed from json based tests ([b03a99e](https://github.com/ngneat/falso/commit/b03a99e7118995c32a249c9094a30309a635cbf6))
-- 🐞 removed unecessary array variable ([f1315c2](https://github.com/ngneat/falso/commit/f1315c2644d4433a33ab6d82e810092f09954e7a))
+- 🐞 removed unnecessary array variable ([f1315c2](https://github.com/ngneat/falso/commit/f1315c2644d4433a33ab6d82e810092f09954e7a))
 
 ### Features
 
@@ -428,7 +428,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - 🔥 Add tests and tweak logic ([0026f67](https://github.com/ngneat/falso/commit/0026f679ce6875112c370ec6a3b38d46c1f762ba)), closes [#181](https://github.com/ngneat/falso/issues/181)
 - 🔥 Added song falso ([7f6aa86](https://github.com/ngneat/falso/commit/7f6aa86771412e5ccc9b3ca432af835f16c402e2)), closes [#132](https://github.com/ngneat/falso/issues/132)
 - 🔥 expose entities types ([ea9f80d](https://github.com/ngneat/falso/commit/ea9f80d1b1a45aa4d7df567503d68daeb877aeb3)), closes [#183](https://github.com/ngneat/falso/issues/183)
-- 🔥 Made county & country optional for address & fullAddres ([2160106](https://github.com/ngneat/falso/commit/2160106364093135e5264bee6d432e2bef789444))
+- 🔥 Made county & country optional for address & fullAddress ([2160106](https://github.com/ngneat/falso/commit/2160106364093135e5264bee6d432e2bef789444))
 
 # [2.22.0](https://github.com/ngneat/falso/compare/falso-2.21.0...falso-2.22.0) (2022-02-02)
 
@@ -509,7 +509,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ### Features
 
-- 🔥 add randSubsriptionPlan ([2b82748](https://github.com/ngneat/falso/commit/2b82748ecf5476493f752cb8f6769ef0f47317c6)), closes [#111](https://github.com/ngneat/falso/issues/111)
+- 🔥 add randSubscriptionPlan ([2b82748](https://github.com/ngneat/falso/commit/2b82748ecf5476493f752cb8f6769ef0f47317c6)), closes [#111](https://github.com/ngneat/falso/issues/111)
 - 🔥 generate random slug ([511e682](https://github.com/ngneat/falso/commit/511e682cbad8dc6d39cb97df434496fc2cb7acc1)), closes [#118](https://github.com/ngneat/falso/issues/118)
 
 # [2.13.0](https://github.com/ngneat/falso/compare/falso-2.12.0...falso-2.13.0) (2022-01-23)
@@ -589,7 +589,7 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 - 🔥 add generator for brands ([89a9cbc](https://github.com/ngneat/falso/commit/89a9cbc94975a6b474c4595e429d0d120a1d178f)), closes [#79](https://github.com/ngneat/falso/issues/79)
 - 🔥 add generator for browsers ([cf5eb22](https://github.com/ngneat/falso/commit/cf5eb22f8ba21b4eb1cc53d509ecac6d24ae4d9c)), closes [#77](https://github.com/ngneat/falso/issues/77)
-- 🔥 add generator for priorty ([5fcb4d1](https://github.com/ngneat/falso/commit/5fcb4d182cdf06157c8516e31e660aee5e1fb9a0)), closes [#78](https://github.com/ngneat/falso/issues/78)
+- 🔥 add generator for priority ([5fcb4d1](https://github.com/ngneat/falso/commit/5fcb4d182cdf06157c8516e31e660aee5e1fb9a0)), closes [#78](https://github.com/ngneat/falso/issues/78)
 - 🔥 Add more customisation to randEmail function ([8470d71](https://github.com/ngneat/falso/commit/8470d71d00af56075c2668355e8a8bb16d684bda)), closes [#89](https://github.com/ngneat/falso/issues/89)
 - 🔥 Add random email provider function ([79eb552](https://github.com/ngneat/falso/commit/79eb5523871d179621a027e3bf1ad0ff92796797))
 - 🔥 Add test suite for randEmail ([2eeba1d](https://github.com/ngneat/falso/commit/2eeba1d3bd8a9b0b0c1737b7f8dcb49235046bdc)), closes [#89](https://github.com/ngneat/falso/issues/89)

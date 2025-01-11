@@ -19,7 +19,7 @@
   --json-colon-color: rgb(153, 76, 195);
   --json-key-color: rgb(64, 63, 83);
   --json-value-color: rgb(72, 118, 214);
-  --json-intelicense-color: rgb(12, 150, 155);
+  --json-intellisense-color: rgb(12, 150, 155);
   --json-indent-guide-color: rgba(64, 63, 83, 0.25);
 }
 
@@ -74,7 +74,7 @@ html[data-theme='dark'] {
   --json-colon-color: rgb(141, 200, 145);
   --json-key-color: rgb(121, 182, 242);
   --json-value-color: rgb(255, 255, 255);
-  --json-intelicense-color: rgb(197, 165, 197);
+  --json-intellisense-color: rgb(197, 165, 197);
   --json-indent-guide-color: rgba(255, 255, 255, 0.25);
 }
 
@@ -94,7 +94,7 @@ html[data-theme='dark'] {
 .data-type-label,
 .object-size,
 .array-key {
-  color: var(--json-intelicense-color)!important;
+  color: var(--json-intellisense-color)!important;
 }
 
 .string-value,
