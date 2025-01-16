@@ -66,7 +66,8 @@
     "ts-jest": "29.1.1",
     "ts-morph": "13.0.2",
     "ts-node": "10.9.1",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "phone": "^3.1.57"
   },
   "engines": {
     "npm": ">=8.11.0",
