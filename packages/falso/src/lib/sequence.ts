@@ -1,4 +1,4 @@
-import { FakeOptions, Return } from './core/core';
+import { fake, FakeOptions, Return } from './core/core';
 import { random } from './random';
 
 export const numericChars = '0123456789';
@@ -33,13 +33,6 @@ type ReturnTypeFromCharType<CharType extends CharTypes | undefined> =
   CharType extends 'numeric' | 'alpha' | 'alphaNumeric' | 'special'
     ? string
     : string[];
-
-/**
- * Simulating the `fake` function.
- */
-function fake<T>(generatorFn: () => T, options?: any): T {
-  return generatorFn(); // Assuming `fake` returns the value produced by generatorFn
-}
 
 /**
  * Generate a random sequence.

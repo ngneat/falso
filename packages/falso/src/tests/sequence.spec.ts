@@ -77,4 +77,10 @@ describe('randSequence', () => {
     expect(result).toHaveLength(6); // Custom size
     expect(result).toMatch(/^[a-zA-Z]+$/); // Result should only contain alphabetic characters
   });
+
+  // Test with length
+  it('should generate an alphabetic string of custom length', () => {
+    const result = randSequence({ length: 10 });
+    expect(result.length).toBe(10); // Custom size
+  });
 });
