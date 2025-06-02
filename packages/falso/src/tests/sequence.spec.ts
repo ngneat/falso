@@ -79,8 +79,8 @@ describe('randSequence', () => {
   });
 
   // Test with length
-  it('should generate an alphabetic string of custom length', () => {
+  it('should generate an array of strings', () => {
     const result = randSequence({ length: 10 });
-    expect(result.length).toBe(10); // Custom size
+    expect(result.length).toBe(10);
   });
 });
