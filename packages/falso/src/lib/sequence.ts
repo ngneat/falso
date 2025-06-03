@@ -31,8 +31,8 @@ type RandomSequenceOptions2 = {
 // Helper type to determine the return type based on `charType`
 type ReturnTypeFromCharType<CharType extends CharTypes | undefined> =
   CharType extends 'numeric' | 'alpha' | 'alphaNumeric' | 'special'
-    ? string
-    : string[];
+    ? CharType
+    : string;
 
 /**
  * Generate a random sequence.
