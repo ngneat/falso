@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [7.4.0](https://github-personal/ngneat/falso/compare/falso-7.3.0...falso-7.4.0) (2025-06-03)
+
+### Bug Fixes
+
+- broken randImg ([#404](https://github-personal/ngneat/falso/issues/404)) ([893c452](https://github-personal/ngneat/falso/commit/893c452952ade2aa62cf08b85c0d6d8192c1f6e7))
+- broken sequence ([#402](https://github-personal/ngneat/falso/issues/402)) ([6fad252](https://github-personal/ngneat/falso/commit/6fad2528b32a4b029fa461de53c58738f15f0244))
+- validate phone number ([#394](https://github-personal/ngneat/falso/issues/394)) ([d76fbaa](https://github-personal/ngneat/falso/commit/d76fbaabd24e04ea8f8bfba9a2a26ed3772f93d3))
+- wrong returned type ([#403](https://github-personal/ngneat/falso/issues/403)) ([c8a6827](https://github-personal/ngneat/falso/commit/c8a6827ae35cd0bb06f14385e0a72e1dd9a66874))
+
+### Features
+
+- add randNoun and randAdjective ([#392](https://github-personal/ngneat/falso/issues/392)) ([c4f4ffc](https://github-personal/ngneat/falso/commit/c4f4ffc8da1b252525832109b7e8ee7ef5edfc44))
+
 # [7.3.0](https://github.com/ngneat/falso/compare/falso-7.2.0...falso-7.3.0) (2025-01-07)
 
 ### Bug Fixes
