@@ -15,4 +15,10 @@ describe('productCategory', () => {
     expect(typeof product.rating.rate).toEqual('string');
     expect(typeof product.rating.count).toEqual('string');
   });
+
+  it('should return a proper randImg link', () => {
+    const product = randProduct();
+
+    expect(product.image).toContain('?');
+  });
 });
