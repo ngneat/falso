@@ -31,9 +31,9 @@ interface ImgOptions extends FakeOptions {
  * @example
  *
  * randImg({ grayscale: true }) // return a grayscale image (default is false)
- * 
+ *
  * @example
- * 
+ *
  * randImg({ random: true }) // default is true, prevent the image from being cached
  *
  */
@@ -56,7 +56,7 @@ export function randImg<Options extends ImgOptions = never>(options?: Options) {
   }
 
   return fake(
-    () => `https://picsum.photos/${width}/${height}${query.toString()}`,
+    () => `https://picsum.photos/${width}/${height}?${query.toString()}`,
     options
   );
 }
