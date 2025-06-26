@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [8.0.1](https://github-personal/ngneat/falso/compare/falso-8.0.0...falso-8.0.1) (2025-06-26)
+
+### Bug Fixes
+
+- 🐞 make options in toCollection optional ([35aea5d](https://github-personal/ngneat/falso/commit/35aea5df49a5b408bac9fcf6089f7955664ee241))
+
 # [8.0.0](https://github-personal/ngneat/falso/compare/falso-7.4.0...falso-8.0.0) (2025-06-26)
 
 ### Bug Fixes
