@@ -3,7 +3,7 @@ import { randNumber } from '../lib/number';
 
 describe('toCollection', () => {
   it('should return an array of 5 items by default', () => {
-    const result = toCollection(() => ({ data: 1 }), {});
+    const result = toCollection(() => ({ data: 1 }));
     expect(Array.isArray(result)).toBe(true);
     expect(result).toHaveLength(5);
     result.forEach((item) => expect(item).toEqual({ data: 1 }));
