@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [8.0.0](https://github-personal/ngneat/falso/compare/falso-7.4.0...falso-8.0.0) (2025-06-26)
+
+### Bug Fixes
+
+- 🐞 toCollection returns an array ([58e8eba](https://github-personal/ngneat/falso/commit/58e8eba76cf293edbefbbf235fe039e42c3b48f3)), closes [#366](https://github-personal/ngneat/falso/issues/366)
+
+### BREAKING CHANGES
+
+- 🧨 toCollection now always returns an array
+
 # [7.4.0](https://github-personal/ngneat/falso/compare/falso-7.3.0...falso-7.4.0) (2025-06-03)
 
 ### Bug Fixes
