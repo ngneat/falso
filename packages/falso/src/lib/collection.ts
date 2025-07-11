@@ -14,7 +14,7 @@ import { FakeOptions, fake } from './core/core';
  *
  */
 
-export function toCollection<Collection, Options extends FakeOptions = never>(
+export function toCollection<Collection, Options extends FakeOptions = {length: number}>(
   generator: () => Collection,
   options: Options = { length: 5 } as Options
 ): Collection[] {
