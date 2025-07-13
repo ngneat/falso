@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [8.0.2](https://github-personal/ngneat/falso/compare/falso-8.0.1...falso-8.0.2) (2025-07-13)
+
 ## [8.0.1](https://github-personal/ngneat/falso/compare/falso-8.0.0...falso-8.0.1) (2025-06-26)
 
 ### Bug Fixes
