@@ -42,4 +42,16 @@ describe('toCollection', () => {
     expect(result).toHaveLength(7);
     expect(mockGen).toHaveBeenCalledTimes(7);
   });
+
+  it('should return an array of 5 items matching the expected structure when a type is provided', () => {
+    type City = { id: number; name: string };
+    const result = toCollection<City>(() => ({ id: 1, name: 'London' }));
+    expect(result).toHaveLength(5);
+    result.forEach((item) => {
+      expect(item).toHaveProperty('id');
+      expect(typeof item.id).toBe('number');
+      expect(item).toHaveProperty('name');
+      expect(typeof item.name).toBe('string');
+    });
+  });
 });
