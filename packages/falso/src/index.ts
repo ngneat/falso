@@ -1,3 +1,4 @@
+export { Falso, falso } from './falso-class';
 export { randAbbreviation } from './lib/abbreviation';
 export { randAccessory } from './lib/accessory';
 export { randAccount } from './lib/account';
