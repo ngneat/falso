@@ -4,6 +4,7 @@ import * as randCountyFunctions from '../lib/county';
 import * as randCountryFunctions from '../lib/country';
 import * as randZipCodeFunctions from '../lib/zip-code';
 import { randAddress } from '../lib/address';
+import { Falso } from '../falso-class';
 
 describe('randAddress', () => {
   let randStreetAddressSpy: jest.SpyInstance;
@@ -46,6 +47,25 @@ describe('randAddress', () => {
       county: 'Surrey',
       country: 'United Kingdom',
       zipCode: 'CR3 0AA',
+    });
+  });
+
+  it('should create address entity using Falso instance', () => {
+    randStreetAddressSpy.mockReturnValue('221B Baker Street');
+    randCitySpy.mockReturnValue('London');
+    randCountySpy.mockReturnValue('Greater London');
+    randCountrySpy.mockReturnValue('United Kingdom');
+    randZipCodeSpy.mockReturnValue('NW1 6XE');
+
+    const falso = new Falso();
+    const result = falso.randAddress();
+
+    expect(result).toEqual({
+      street: '221B Baker Street',
+      city: 'London',
+      county: 'Greater London',
+      country: 'United Kingdom',
+      zipCode: 'NW1 6XE',
     });
   });
 

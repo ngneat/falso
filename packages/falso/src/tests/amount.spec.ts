@@ -1,9 +1,18 @@
 import { randAmount } from '../lib/amount';
+import { Falso } from '../falso-class';
 
 describe('amount', () => {
   it('should return a random amount between min and max default values', () => {
     const [min, max] = [1.0, 9999.99];
     const res = randAmount();
+    expect(res).toBeGreaterThanOrEqual(min);
+    expect(res).toBeLessThanOrEqual(max);
+  });
+
+  it('should return a random amount using Falso instance', () => {
+    const [min, max] = [1.0, 9999.99];
+    const falso = new Falso();
+    const res = falso.randAmount();
     expect(res).toBeGreaterThanOrEqual(min);
     expect(res).toBeLessThanOrEqual(max);
   });
